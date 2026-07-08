@@ -7,8 +7,8 @@ const caseStudies = [
     title: "Retail Store Protection",
     location: "Chesterfield Town Centre",
     challenge: "Repeated break-in attempts at night",
-    solution: "8-camera CCTV system + Ajax alarm + 24/7 monitoring",
-    result: "Zero incidents in 18 months. Police response in under 5 minutes.",
+    solution: "8-camera CCTV system + Ajax alarm + Professional alarm monitoring",
+    result: "Clearer coverage, quicker awareness and a more practical escalation process when alarms trigger.",
     image: "/images/cctv-systems-image.png",
   },
   {
@@ -24,7 +24,7 @@ const caseStudies = [
     location: "Derbyshire Industrial Estate",
     challenge: "Large perimeter to secure with limited budget",
     solution: "16-camera system + motion detection + remote monitoring",
-    result: "Complete coverage. Theft attempts down 100%.",
+    result: "Stronger site coverage with clearer alerts and better visibility across vulnerable areas.",
     image: "/images/AjaxDualcurtain.jpg",
   },
 ]

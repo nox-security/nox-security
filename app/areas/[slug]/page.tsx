@@ -43,9 +43,9 @@ areaData['chesterfield'] = {
   name: "Chesterfield",
   county: "Derbyshire",
   description: "As our home base, Chesterfield receives our fastest response times and most comprehensive coverage. From the town centre to Brimington, Hasland, Brampton, Newbold, and Whittington Moor — we protect homes and businesses across every postcode.",
-  intro: "NOX Fire & Security is proudly based in Chesterfield, Derbyshire. We provide expert CCTV installation, intruder alarm systems, fire safety solutions, and 24/7 monitoring to homes and businesses across the town and all surrounding villages.",
+  intro: "NOX Fire & Security is proudly based in Chesterfield, Derbyshire. We provide expert CCTV installation, intruder alarm systems, fire safety solutions, and Professional alarm monitoring to homes and businesses across the town and all surrounding villages.",
   metaTitle: "CCTV & Alarm Installation Chesterfield | NOX Fire & Security",
-  metaDescription: "Professional CCTV, intruder alarms & fire safety in Chesterfield. Based locally. Ajax & Hikvision authorised installers. Free site survey. Call 07882 959 297.",
+  metaDescription: "Professional CCTV, intruder alarms & fire safety in Chesterfield. Based locally. Ajax authorised installers · Hikvision CCTV installers. Free site survey. Call 07882 959 297.",
 };
 
 areaData['sheffield'] = {
@@ -54,7 +54,7 @@ areaData['sheffield'] = {
   description: "Sheffield is one of our primary coverage areas, just 12 miles from our Chesterfield base. We regularly install intruder alarms, CCTV, fire alarms, and smart automation throughout Sheffield — from Hillsborough and Crookes to Woodseats, Dore, Beauchief, and the city centre.",
   intro: "NOX Fire & Security serves homes and businesses across Sheffield with professional-grade security installation. Based in Chesterfield, our engineers provide fast, reliable CCTV, Ajax alarm, and fire safety installations across Sheffield and its suburbs.",
   metaTitle: "CCTV & Alarm Installation Sheffield | NOX Fire & Security",
-  metaDescription: "Professional CCTV, intruder alarms & fire safety across Sheffield. Ajax & Hikvision authorised. Chesterfield-based engineers — fast response. Free site survey. Call 07882 959 297.",
+  metaDescription: "Professional CCTV, intruder alarms & fire safety across Sheffield. Ajax authorised · Hikvision CCTV systems. Chesterfield-based engineers — fast response. Free site survey. Call 07882 959 297.",
 };
 
 areaData['derbyshire'] = {
@@ -63,7 +63,7 @@ areaData['derbyshire'] = {
   description: "Derbyshire is our home county. Based in Chesterfield, we cover the full county — from the Peak District towns of Bakewell and Matlock to Bolsover, Clay Cross, Eckington, Wirksworth, Buxton, Belper, and all points in between. Both residential and commercial projects welcome across the county.",
   intro: "NOX Fire & Security is a Derbyshire-based security installer serving the county's homes, businesses, and commercial properties. From CCTV and intruder alarms to fire alarm systems and smart automation — installed by local engineers who know the area.",
   metaTitle: "CCTV, Alarms & Fire Safety Derbyshire | NOX Fire & Security",
-  metaDescription: "Local Derbyshire security installer. CCTV, intruder alarms, fire alarms & smart automation across Derbyshire. Ajax & Hikvision authorised. Free site survey. Call 07882 959 297.",
+  metaDescription: "Local Derbyshire security installer. CCTV, intruder alarms, fire alarms & smart automation across Derbyshire. Ajax authorised · Hikvision CCTV systems. Free site survey. Call 07882 959 297.",
 };
 
 areaData['dronfield'] = {
@@ -81,7 +81,7 @@ areaData['rotherham'] = {
   description: "We cover Rotherham for both residential and commercial security projects. Our Ajax-certified engineers install intruder alarms, CCTV systems, and fire detection throughout Rotherham and surrounding areas — including Wickersley, Maltby, Wath-upon-Dearne, and Rawmarsh.",
   intro: "NOX Fire & Security provides professional security installation across Rotherham — CCTV, intruder alarms, fire safety, and smart automation. Available for residential and larger commercial projects across South Yorkshire.",
   metaTitle: "CCTV & Alarm Installation Rotherham | NOX Fire & Security",
-  metaDescription: "Professional CCTV, intruder alarms & fire safety across Rotherham. Ajax & Hikvision authorised. Free site survey. No-obligation quote. Call 07882 959 297.",
+  metaDescription: "Professional CCTV, intruder alarms & fire safety across Rotherham. Ajax authorised · Hikvision CCTV systems. Free site survey. No-obligation quote. Call 07882 959 297.",
 };
 
 areaData['matlock'] = {
@@ -90,7 +90,7 @@ areaData['matlock'] = {
   description: "Matlock and the Derwent Valley is well within our coverage area. We install intruder alarms, CCTV, and fire safety systems for homes and businesses across Matlock, Matlock Bath, Darley Dale, and the wider Amber Valley area.",
   intro: "NOX Fire & Security covers Matlock and the Derwent Valley with professional CCTV, alarm, and fire safety installation. Local Chesterfield-based engineers who respond fast and install to the highest standard.",
   metaTitle: "CCTV & Alarm Installation Matlock | NOX Fire & Security",
-  metaDescription: "Professional CCTV, alarms & fire safety in Matlock & Derbyshire. Local engineers. Ajax & Hikvision authorised. Free site survey. Call 07882 959 297.",
+  metaDescription: "Professional CCTV, alarms & fire safety in Matlock & Derbyshire. Local engineers. Ajax authorised · Hikvision CCTV systems. Free site survey. Call 07882 959 297.",
 };
 
 areaData['bakewell'] = {
@@ -115,9 +115,9 @@ areaData['mansfield'] = {
   name: "Mansfield",
   county: "Nottinghamshire",
   description: "We cover Mansfield and the wider Nottinghamshire area for residential installations and commercial security projects. Our team is available for larger contracts including commercial CCTV, fire alarm systems, and monitored alarm installations.",
-  intro: "NOX Fire & Security covers Mansfield and Nottinghamshire for professional security installation. Available for commercial and residential projects — CCTV, intruder alarms, fire safety, and 24/7 monitoring.",
+  intro: "NOX Fire & Security covers Mansfield and Nottinghamshire for professional security installation. Available for commercial and residential projects — CCTV, intruder alarms, fire safety, and Professional alarm monitoring.",
   metaTitle: "CCTV & Alarm Installation Mansfield | NOX Fire & Security",
-  metaDescription: "Professional CCTV, alarms & fire safety in Mansfield & Nottinghamshire. Commercial & residential. Ajax & Hikvision authorised. Free site survey. Call 07882 959 297.",
+  metaDescription: "Professional CCTV, alarms & fire safety in Mansfield & Nottinghamshire. Commercial & residential. Ajax authorised · Hikvision CCTV systems. Free site survey. Call 07882 959 297.",
 };
 
 areaData['worksop'] = {
@@ -126,7 +126,7 @@ areaData['worksop'] = {
   description: "We serve Worksop and the Bassetlaw area for security installation projects. Whether residential or commercial, our team delivers professional CCTV, intruder alarms, and fire safety across the area.",
   intro: "NOX Fire & Security serves Worksop and Bassetlaw with professional security systems. Available for commercial and residential projects — CCTV, alarms, fire detection, and smart automation.",
   metaTitle: "CCTV & Alarm Installation Worksop | NOX Fire & Security",
-  metaDescription: "Professional CCTV, alarms & fire safety in Worksop & Bassetlaw. Ajax & Hikvision authorised. Free site survey. No-obligation quote. Call 07882 959 297.",
+  metaDescription: "Professional CCTV, alarms & fire safety in Worksop & Bassetlaw. Ajax authorised · Hikvision CCTV systems. Free site survey. No-obligation quote. Call 07882 959 297.",
 };
 
 // Generate static params for all areas
@@ -162,7 +162,7 @@ const services = [
   "Intruder Alarm Installation",
   "CCTV Systems & Installation",
   "Fire Safety & Detection",
-  "24/7 Monitoring (Farsight)",
+  "24/7 Alarm Monitoring Options",
   "Smart Home Security & Automation",
   "Fire Alarm Servicing",
   "Emergency Lighting (EEL)",
@@ -253,7 +253,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/get-quote">
                 <Button size="lg" className="h-14 px-10 bg-white text-black hover:bg-gray-100 font-bold text-lg">
-                  Request Your Free Security Survey <ArrowRight className="h-5 w-5 ml-2" />
+                  Request a Free Security Survey <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:07882959297">

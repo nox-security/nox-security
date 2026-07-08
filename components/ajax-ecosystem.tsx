@@ -6,7 +6,7 @@ const categories = [
     {
         icon: Bell,
         label: "Intruder",
-        desc: "Grade 2 & 3 wireless alarms with photo verification and app control.",
+        desc: "Smart wireless alarm options with photo verification and app control.",
         href: "/systems/intrusion-alarms",
     },
     {
@@ -18,7 +18,7 @@ const categories = [
     {
         icon: Flame,
         label: "Fire",
-        desc: "EN54-certified wireless fire detection with instant app alerts.",
+        desc: "Fire detection options with instant app alerts and suitable devices specified where required.",
         href: "/systems/fire-safety",
     },
     {
@@ -40,13 +40,13 @@ export default function AjaxEcosystem() {
                             alt="Ajax Authorised Installation Company"
                             className="h-4"
                         />
-                        Ajax Authorised · 4,500,000+ Protected Worldwide
+                        Ajax Authorised · Smart Security Platform
                     </div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                         The Ajax Smart Security Platform
                     </h2>
                     <p className="text-lg text-gray-300 leading-relaxed">
-                        Ajax is our premium partner for smart, wireless security — covering intruder alarms, CCTV, fire protection, and automation in one app. We also install Hikvision, Texecom, Pyronix, Honeywell, and other leading brands where required.
+                        Ajax is our preferred smart security platform — covering intruder alarms, CCTV, fire protection and automation in one app where suitable. We also install Hikvision, Texecom, Pyronix, Honeywell and other professional systems when they are the better fit for the property.
                     </p>
                 </div>
 
@@ -96,8 +96,8 @@ export default function AjaxEcosystem() {
                                 <Shield className="h-5 w-5" />
                             </div>
                             <div>
-                                <h3 className="font-bold mb-1">Grade 2 & 3 Certified</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">Ajax systems are EN50131 Grade 2 & 3 certified — recognised by insurers and police forces across the UK and Europe.</p>
+                                <h3 className="font-bold mb-1">Risk-Based Design</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">We specify equipment around the property, risk and any insurer requirements. Where a graded system is needed, we confirm suitable options before quoting.</p>
                             </div>
                         </div>
                     </div>

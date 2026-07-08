@@ -20,7 +20,7 @@ const steps = [
     number: "03",
     title: "Professional Install",
     description:
-      "Certified engineers install your system with minimal disruption. We test everything and train you on operation.",
+      "Trained engineers install your system with minimal disruption. We test everything properly and show you how to use it before we leave.",
   },
 ]
 

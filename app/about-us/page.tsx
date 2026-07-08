@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Why Choose NOX Fire & Security | Chesterfield & Derbyshire",
-    description: "No contracts, you own your system, local engineers, honest advice, clean installs, premium Ajax & Hikvision equipment. Serving Chesterfield, Sheffield & Derbyshire.",
+    description: "No contracts, you own your system, local engineers, honest advice, clean installs, premium Ajax, Hikvision & professional security equipment. Serving Chesterfield, Sheffield & Derbyshire.",
     alternates: { canonical: "https://nox-security.co.uk/about-us" },
 }
 
@@ -29,7 +29,7 @@ const reasons = [
     {
         icon: MapPin,
         title: "Genuinely Local",
-        desc: "Based in Chesterfield. We know the area, we respond fast, and we're always nearby.",
+        desc: "Based in Chesterfield. We know the area, respond quickly where we can and stay close enough to support our customers properly.",
     },
     {
         icon: HeartHandshake,
@@ -43,15 +43,15 @@ const reasons = [
     },
     {
         icon: Star,
-        title: "Premium Equipment Only",
-        desc: "Ajax alarms and Hikvision CCTV — the best in the industry. We don't cut corners.",
+        title: "Quality Equipment Only",
+        desc: "Ajax alarms, professional CCTV and fire safety equipment specified properly around the building — not chosen because it is cheapest.",
     },
 ]
 
 const testimonials = [
     { name: "James H.", location: "Chesterfield", text: "Absolutely superb service. The Ajax alarm installation was carried out to an excellent standard. Neat, tidy, and they explained everything on the app.", rating: 5 },
     { name: "Mark T.", location: "Sheffield", text: "Very professional from survey to installation. The CCTV works brilliantly. Highly recommend for any home security needs.", rating: 5 },
-    { name: "Sarah W.", location: "Derbyshire", text: "Clear quote, no hidden extras. Engineers arrived on time and left no mess. Total peace of mind.", rating: 5 },
+    { name: "Sarah W.", location: "Derbyshire", text: "Clear quote, no hidden extras. Engineers arrived on time and left no mess. A proper job from start to finish.", rating: 5 },
 ]
 
 export default function WhyNOXPage() {
@@ -90,7 +90,7 @@ export default function WhyNOXPage() {
                                 Together, we combine modern security technology with a more personal and flexible approach. No pressure selling. No unnecessary contracts. Just reliable protection tailored to each customer, property and budget.
                             </p>
                             <p>
-                                From dual-camera residential systems to larger commercial installations, every project is approached with the same level of care, professionalism and attention to detail. From flexible self-managed systems to police monitored security, we focus on delivering modern protection that is reliable, compliant, tailored to the property and built around what genuinely works best for the customer.
+                                From residential alarm upgrades to larger commercial installations, every project is approached with the same level of care, professionalism and attention to detail. We focus on practical protection that is reliable, compliant where required, tailored to the property and built around what genuinely works best for the customer.
                             </p>
                             <p className="text-white font-bold text-xl md:text-2xl pt-4">
                                 We're not trying to be the biggest national company.<br />
@@ -118,7 +118,7 @@ export default function WhyNOXPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-2xl mx-auto mb-14">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">What Makes Us Different</h2>
-                        <p className="text-gray-300">Six things that separate NOX from every other security company in Chesterfield and Derbyshire.</p>
+                        <p className="text-gray-300">A clear, local approach to fire and security for homes, landlords and businesses across Chesterfield and Derbyshire.</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -140,11 +140,11 @@ export default function WhyNOXPage() {
 
                     {/* Free installation banner */}
                     <div className="mt-12 bg-white text-black rounded-2xl p-8 text-center max-w-4xl mx-auto">
-                        <div className="text-2xl font-bold mb-2">🎁 Free Installation with Any Service Plan</div>
-                        <p className="text-gray-700 mb-4">Sign up to any ongoing service plan and we'll install your new system completely free. No catches.</p>
+                        <div className="text-2xl font-bold mb-2">🎁 Free Standard Installation with Selected Service Plans</div>
+                        <p className="text-gray-700 mb-4">Choose a suitable ongoing service plan and standard installation may be included. We’ll explain the equipment, plan and costs clearly before you commit.</p>
                         <Link href="/get-quote">
                             <Button size="lg" className="bg-black text-white hover:bg-gray-800 font-bold h-12">
-                                Claim This Offer
+                                Ask About This Offer
                             </Button>
                         </Link>
                     </div>

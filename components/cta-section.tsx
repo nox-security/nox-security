@@ -10,15 +10,15 @@ export default function CTASection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">Ready to Protect What Matters?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">Let's Design the Right System for Your Property</h2>
           <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            Get a free security survey — no pressure, no obligation. Our local team responds within 2 hours.
+            Tell us what you need protecting and we'll recommend the right alarm, CCTV, fire or maintenance solution without the sales pressure.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link href="/get-quote">
               <Button size="lg" className="h-14 bg-white text-black hover:bg-gray-100 px-10 text-base font-bold">
-                Request Your Free Security Survey <ArrowRight className="h-5 w-5 ml-2" />
+                Request a Free Security Survey <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
             <a href="tel:07882959297">

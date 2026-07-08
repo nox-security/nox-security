@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle2, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Service Plans | Alarm & CCTV Maintenance, Fire Servicing, Monitoring | NOX Fire & Security",
-    description: "Alarm maintenance, CCTV servicing, fire alarm testing, emergency lighting compliance, and 24/7 police monitoring across Chesterfield & Derbyshire. Free installation with any plan.",
-    keywords: "alarm service plan Chesterfield, CCTV maintenance Derbyshire, fire alarm servicing, police monitoring Chesterfield, emergency lighting servicing, NOX service plans",
+    title: "Service Plans | Alarm & CCTV Maintenance, Fire Servicing & Monitoring | NOX Fire & Security",
+    description: "Service plans for alarm maintenance, CCTV maintenance, fire alarm servicing, emergency lighting testing and alarm monitoring across Chesterfield, Sheffield and Derbyshire.",
+    keywords: "alarm service plan Chesterfield, alarm maintenance Derbyshire, CCTV maintenance Sheffield, fire alarm servicing Chesterfield, emergency lighting testing Derbyshire, monitored alarm plan, Ajax maintenance, commercial security maintenance",
     alternates: { canonical: "https://nox-security.co.uk/service-plans" },
 }
 
@@ -30,7 +30,7 @@ const plans = [
     },
     {
         title: "Fire Alarm Servicing",
-        desc: "BS 5839-compliant servicing with full certificate. Required for most commercial premises.",
+        desc: "BS 5839-aligned servicing with a clear service record. Often required for commercial premises and responsible persons.",
         href: "/service-plans/fire-alarm-servicing",
         icon: "🔥",
     },
@@ -41,10 +41,10 @@ const plans = [
         icon: "💡",
     },
     {
-        title: "Police Monitoring",
-        desc: "24/7 Farsight monitoring with visual verification and confirmed police response.",
-        href: "/service-plans/police-monitoring",
-        icon: "🚔",
+        title: "Alarm Monitoring",
+        desc: "Professional alarm monitoring with visual verification where available, keyholder contact and agreed escalation procedures.",
+        href: "/service-plans/alarm-monitoring",
+        icon: "📡",
     },
 ]
 
@@ -57,13 +57,13 @@ export default function ServicePlansPage() {
             <section className="py-20 md:py-28 text-center">
                 <div className="container mx-auto px-4 max-w-3xl">
                     <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm text-gray-300 font-medium mb-6">
-                        🎁 Free installation with any service plan
+                        🎁 Free install with selected service plans
                     </div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                         Service Plans
                     </h1>
                     <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                        Keep your security and fire systems in peak condition. From alarm maintenance to 24/7 police monitoring — we have the right plan for every property across Chesterfield, Sheffield, and Derbyshire.
+                        Keep your alarm, CCTV, fire and emergency lighting systems working properly after installation. NOX service plans are built for residential and commercial customers who want clean installs, reliable equipment, clear aftercare and no misleading promises.
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center">
                         <Link href="/get-quote">
@@ -95,14 +95,14 @@ export default function ServicePlansPage() {
 
                     {/* Free installation CTA */}
                     <div className="bg-white text-black rounded-2xl p-8 text-center max-w-4xl mx-auto">
-                        <div className="text-2xl font-bold mb-2">🎁 Free Installation with Any Service Plan</div>
-                        <p className="text-gray-700 mb-6">Sign up to any ongoing service plan and we'll install your new system completely free. No catches, no hidden costs.</p>
+                        <div className="text-2xl font-bold mb-2">🎁 Free Standard Installation with Selected Service Plans</div>
+                        <p className="text-gray-700 mb-6">Choose a suitable ongoing service plan and standard installation may be included. Clear pricing, no hidden costs and no pressure.</p>
                         <div className="flex flex-wrap gap-3 justify-center">
                             {[
                                 "No unnecessary contracts",
                                 "You own the equipment",
                                 "Local Chesterfield engineers",
-                                "Premium Ajax & Hikvision only",
+                                "Quality Ajax, Hikvision & professional security equipment",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm font-medium">
                                     <CheckCircle2 className="h-4 w-4 text-black" />
@@ -112,7 +112,7 @@ export default function ServicePlansPage() {
                         </div>
                         <Link href="/get-quote" className="mt-6 inline-block">
                             <Button size="lg" className="bg-black text-white hover:bg-gray-800 font-bold h-12 px-8">
-                                Claim Free Installation →
+                                Ask About Free Installation →
                             </Button>
                         </Link>
                     </div>

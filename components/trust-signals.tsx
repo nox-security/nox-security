@@ -3,33 +3,33 @@ import { ShieldCheck, Home, Package, Wrench, Bell, MessageSquare, BadgeCheck } f
 const signals = [
     {
         icon: ShieldCheck,
-        title: "No Contracts",
-        desc: "You own your system outright. No lock-in, no monthly tie-in.",
+        title: "No Unnecessary Contracts",
+        desc: "You own your system outright. We only recommend ongoing plans when they genuinely add value.",
     },
     {
         icon: Home,
         title: "Local Company",
-        desc: "Chesterfield-based engineers. Fast response, community reputation.",
+        desc: "Chesterfield-based engineers with a reputation built on neat work, honest advice and reliable aftercare.",
     },
     {
         icon: Package,
-        title: "Premium Equipment",
-        desc: "Ajax & Hikvision only. Proven, warranted, insurance-recognised.",
+        title: "Quality Equipment",
+        desc: "We install equipment we would trust in our own homes and businesses: reliable, proven and built to last.",
     },
     {
         icon: Wrench,
-        title: "Professional Installation",
-        desc: "Clean, hidden cables. Every job done properly the first time.",
+        title: "Installed Properly",
+        desc: "Clean installations, attention to detail and systems designed to work reliably from day one.",
     },
     {
         icon: Bell,
-        title: "Farsight Monitoring",
-        desc: "24/7 monitoring with police response available via Farsight.",
+        title: "Alarm Monitoring",
+        desc: "Optional professional monitoring for customers who want alarms handled quickly when they cannot respond themselves.",
     },
     {
         icon: MessageSquare,
         title: "Honest Advice",
-        desc: "No upselling. We recommend only what you actually need.",
+        desc: "No pressure and no padding. We recommend what genuinely suits the property, risk and budget.",
     },
     {
         icon: BadgeCheck,
@@ -44,7 +44,7 @@ export default function TrustSignals() {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-10">
                     <h2 className="text-2xl md:text-3xl font-bold mb-2">Why Customers Choose NOX</h2>
-                    <p className="text-gray-400">No pressure. No unnecessary contracts. Just honest, professional security.</p>
+                    <p className="text-gray-400">Straight advice, proper installation and systems built around the way your property actually works.</p>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                     {signals.slice(0, 4).map((s, i) => {

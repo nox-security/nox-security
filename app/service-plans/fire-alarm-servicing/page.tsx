@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Fire Alarm Servicing Chesterfield & Derbyshire | NOX Fire & Security",
-    description: "BS 5839 compliant fire alarm servicing across Chesterfield, Sheffield & Derbyshire. Regular testing keeps you legally compliant. Free installation with any plan. Call 07882 959 297.",
-    keywords: "fire alarm servicing Chesterfield, fire alarm maintenance Derbyshire, BS 5839 compliance, fire alarm service Sheffield, fire alarm testing Derbyshire",
+    description: "Fire alarm servicing and maintenance across Chesterfield, Sheffield and Derbyshire. BS 5839 testing, fire alarm service records, commercial fire systems, HMOs, shops, offices and industrial units.",
+    keywords: "fire alarm servicing Chesterfield, fire alarm maintenance Derbyshire, BS 5839 fire alarm service, fire alarm testing Sheffield, commercial fire alarm servicing, HMO fire alarm maintenance, fire safety packages",
     alternates: { canonical: "https://nox-security.co.uk/service-plans/fire-alarm-servicing" },
 }
 
@@ -45,13 +45,13 @@ export default function FireAlarmServicingPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm text-gray-300 font-medium">
-                                🔧 Free installation with any service plan
+                                🔧 Free install with selected service plans
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 Fire Alarm Servicing in Chesterfield & Derbyshire
                             </h1>
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                BS 5839-compliant fire alarm servicing for businesses, landlords, and commercial properties across Chesterfield, Sheffield, and Derbyshire. Keep your system legally compliant and your people safe.
+                                Fire alarm servicing for businesses, landlords, HMOs and commercial properties across Chesterfield, Sheffield and Derbyshire. We help keep testing, records and maintenance organised so your fire system is looked after properly.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-2">
                                 <Link href="/get-quote">
@@ -105,7 +105,7 @@ export default function FireAlarmServicingPage() {
                                 <h3 className="text-xl font-bold mb-4">Benefits</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "BS 5839 compliant — legally required for most commercial premises",
+                                        "BS 5839-aligned servicing record for commercial premises and responsible persons",
                                         "Certificate and service record provided",
                                         "Reduces risk of false alarms",
                                         "Maintains insurance validity",

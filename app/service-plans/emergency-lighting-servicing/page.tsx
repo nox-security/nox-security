@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Emergency Lighting Servicing Chesterfield & Derbyshire | NOX Fire & Security",
-    description: "Annual emergency lighting testing and servicing across Chesterfield, Sheffield & Derbyshire. BS 5266 compliant certificates provided. Free installation with any plan. Call 07882 959 297.",
+    description: "Annual emergency lighting testing and servicing across Chesterfield, Sheffield & Derbyshire. BS 5266 compliant certificates provided. Call 07882 959 297.",
     keywords: "emergency lighting servicing Chesterfield, emergency lighting maintenance Derbyshire, BS 5266 testing, emergency light annual test Sheffield",
     alternates: { canonical: "https://nox-security.co.uk/service-plans/emergency-lighting-servicing" },
 }
@@ -44,7 +44,7 @@ export default function EmergencyLightingServicingPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm text-gray-300 font-medium">
-                                🔧 Free installation with any service plan
+                                🔧 Free install with selected service plans
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 Emergency Lighting Servicing in Chesterfield & Derbyshire
@@ -105,7 +105,7 @@ export default function EmergencyLightingServicingPage() {
                                 <ul className="space-y-3">
                                     {[
                                         "BS 5266 compliant certificate for your records",
-                                        "Avoids fines from fire authority inspections",
+                                        "Supports responsible-person duties and compliance records",
                                         "Ensures lights work in a real emergency",
                                         "Maintains building insurance validity",
                                         "Suitable for offices, retail, HMOs, care homes",

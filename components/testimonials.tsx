@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Rory Stirland",
     rating: 5,
-    text: "We had NOX Fire & Security install our commercial fire alarm system alongside an intruder alarm, and the whole experience was spot on from start to finish. Clean, professional installation, everything clearly explained, and the system is easy to manage through the app with instant alerts. The fire system is EN54 compliant and gives real peace of mind. No pushy sales, no contracts — just honest advice and proper workmanship. You can tell they care about doing things right. Highly recommend NOX for any business looking for fire or security systems in Chesterfield / Sheffield.",
+    text: "We had NOX Fire & Security install our commercial fire alarm system alongside an intruder alarm, and the whole experience was spot on from start to finish. Clean, professional installation, everything clearly explained, and the system is easy to manage through the app with instant alerts. The fire system is clear, reliable and easy for the team to manage without overcomplicating things. No pushy sales, no unnecessary contracts — just honest advice and proper workmanship. You can tell they care about doing things right. Highly recommend NOX for any business looking for fire or security systems in Chesterfield / Sheffield.",
     service: "Commercial Fire Alarm & Intruder Alarm",
   },
   {

@@ -18,13 +18,13 @@ export default function Hero() {
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-sm text-gray-300 font-medium">
                   <Shield className="h-4 w-4" />
-                  Chesterfield & Derbyshire's Trusted Security Specialists
+                  Fire & Security Specialists Across Chesterfield & Derbyshire
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
-                  Alarms, CCTV, Fire Safety Across Chesterfield &amp; Derbyshire
+                  Professional Fire & Security Systems Designed Around Your Property
                 </h1>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium">
-                  Residential &amp; Commercial | No pressure | No unnecessary contracts | Installed properly
+                  Designed properly. Installed properly. Supported properly.
                 </p>
               </div>
 
@@ -96,7 +96,7 @@ export default function Hero() {
               <div className="p-2 rounded-full bg-white/10 border border-white/20">
                 <Shield className="h-5 w-5 text-white" />
               </div>
-              <span className="text-gray-200 font-medium text-base">Professional installation</span>
+              <span className="text-gray-200 font-medium text-base">Designed around your property</span>
             </div>
             <div className="hidden xl:block w-px h-8 bg-white/10 mx-4"></div>
             <div className="flex items-center gap-3 whitespace-nowrap">
@@ -110,21 +110,21 @@ export default function Hero() {
               <div className="p-2 rounded-full bg-white/10 border border-white/20">
                 <Zap className="h-5 w-5 text-white" />
               </div>
-              <span className="text-gray-200 font-medium text-base">Instant alerts & app control</span>
+              <span className="text-gray-200 font-medium text-base">Smart alerts & app control</span>
             </div>
             <div className="hidden xl:block w-px h-8 bg-white/10 mx-4"></div>
             <div className="flex items-center gap-3 whitespace-nowrap">
               <div className="p-2 rounded-full bg-white/10 border border-white/20">
                 <Building2 className="h-5 w-5 text-white" />
               </div>
-              <span className="text-gray-200 font-medium text-base">Home & business solutions</span>
+              <span className="text-gray-200 font-medium text-base">Homes, businesses & commercial sites</span>
             </div>
             <div className="hidden xl:block w-px h-8 bg-white/10 mx-4"></div>
             <div className="flex items-center gap-3 whitespace-nowrap">
               <div className="p-2 rounded-full bg-white/10 border border-white/20">
                 <Award className="h-5 w-5 text-white" />
               </div>
-              <span className="text-gray-200 font-medium text-base">Free installation with any service plan</span>
+              <span className="text-gray-200 font-medium text-base">Free install with selected service plans</span>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function Hero() {
             <div className="hidden md:block w-px h-12 bg-white/10"></div>
             <div className="text-center">
               <div className="text-white font-bold text-xl">Sarah W. — Derbyshire</div>
-              <div className="text-gray-400 text-sm max-w-sm">"Clear quote, no hidden extras. Engineers arrived on time and left no mess. Total peace of mind."</div>
+              <div className="text-gray-400 text-sm max-w-sm">"Clear quote, no hidden extras. Engineers arrived on time and left no mess. A proper job from start to finish."</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-white/10"></div>
             <Link href="/reviews" className="flex-shrink-0">

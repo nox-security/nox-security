@@ -19,7 +19,7 @@ export default function Footer() {
               className="h-10 w-auto brightness-0 invert"
             />
             <p className="text-sm text-gray-300 leading-relaxed">
-              Smart security systems for homes and businesses across Chesterfield, Sheffield & Derbyshire. Free installation with any service plan.
+              Smart security systems for homes and businesses across Chesterfield, Sheffield & Derbyshire. Free install with selected service plans.
             </p>
             <div className="flex items-start gap-2 text-sm text-gray-400">
               <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -63,7 +63,7 @@ export default function Footer() {
               <li><Link href="/service-plans/cctv-maintenance" className="text-gray-300 hover:text-white transition-colors">CCTV Maintenance</Link></li>
               <li><Link href="/service-plans/fire-alarm-servicing" className="text-gray-300 hover:text-white transition-colors">Fire Alarm Servicing</Link></li>
               <li><Link href="/service-plans/emergency-lighting-servicing" className="text-gray-300 hover:text-white transition-colors">Emergency Lighting Servicing</Link></li>
-              <li><Link href="/service-plans/police-monitoring" className="text-gray-300 hover:text-white transition-colors">Police Monitoring</Link></li>
+              <li><Link href="/service-plans/alarm-monitoring" className="text-gray-300 hover:text-white transition-colors">Alarm Monitoring</Link></li>
             </ul>
           </div>
 
@@ -90,8 +90,8 @@ export default function Footer() {
 
             {/* Free install promo */}
             <div className="mt-8 bg-white/10 border border-white/20 rounded-lg p-4">
-              <div className="text-sm font-bold text-white mb-1">🎁 Free Installation</div>
-              <div className="text-xs text-gray-300">With any service plan. No catches.</div>
+              <div className="text-sm font-bold text-white mb-1">🎁 Free Standard Installation</div>
+              <div className="text-xs text-gray-300">Available with selected service plans.</div>
               <Link href="/get-quote" className="text-xs text-white underline mt-2 block hover:text-gray-300 transition-colors">
                 Claim this offer →
               </Link>
@@ -172,15 +172,6 @@ export default function Footer() {
                 alt="Ajax Authorized Installation Company"
                 className="h-16 w-auto object-contain p-2 rounded"
               />
-            </div>
-            <div className="text-center">
-              <a href="https://www.farsight.co.uk/" target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity">
-                <img
-                  src="/images/farshight-logo.png"
-                  alt="Farsight Monitoring Partner"
-                  className="h-16 w-auto object-contain p-2 rounded bg-white"
-                />
-              </a>
             </div>
           </div>
         </div>

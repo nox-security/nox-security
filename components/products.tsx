@@ -7,13 +7,13 @@ const products = [
   {
     name: "Ajax MotionProtect",
     category: "Intruder",
-    description: "Advanced wireless PIR motion detector with pet immunity up to 20kg. Minimal false alarms, reliable detection.",
+    description: "Advanced wireless PIR motion detector with pet immunity up to 20kg, helping reduce unwanted activations while keeping detection reliable.",
     image: "MotionProtect.png",
   },
   {
     name: "Ajax MotionCam",
     category: "Intruder",
-    description: "Motion sensor with photo verification. Takes a photo on trigger — visual proof before police respond.",
+    description: "Motion sensor with photo verification. Takes a photo on trigger so you can quickly see what caused the alarm.",
     image: "MotionCam.jpeg",
   },
   {
@@ -52,7 +52,7 @@ const products = [
   {
     name: "Hikvision Dome",
     category: "CCTV",
-    description: "4K–8K ColorVu pan-tilt-zoom camera. Full colour night vision and AI human & vehicle detection.",
+    description: "Professional Hikvision CCTV options including dome, turret and ColourVu cameras with full-colour night vision and smart human and vehicle detection.",
     image: "HikvisionDome.jpg",
     link: "https://youtu.be/Mwxe-dN9QeM?si=ornNrce-emvseoNH"
   },
@@ -66,7 +66,7 @@ const products = [
   {
     name: "Ajax WaterStop",
     category: "Automation",
-    description: "Wireless remotely-controlled water shutoff valve. Automatically prevents flood damage on leak detection.",
+    description: "Wireless remotely controlled water shutoff valve that can help limit water damage when used with Ajax leak detection.",
     image: "AjaxWaterstop.png",
     link: "https://youtu.be/a8jo0k222Qk?si=67RB5H7Zdx5ZQq4X"
   },
@@ -81,11 +81,11 @@ export default function Products() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised" className="h-4" />
-            Ajax Authorised · Hikvision Accredited
+            Ajax Authorised · Hikvision & Other CCTV Systems
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Premium Security Products</h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            We only install equipment we trust. Ajax systems for intruder, fire, and smart automation. Hikvision for industry-leading CCTV.
+            We only install equipment we trust. Ajax is our preferred platform for smart intruder, fire and automation systems, with Hikvision, Ajax and other professional CCTV options specified around the property.
           </p>
         </div>
 

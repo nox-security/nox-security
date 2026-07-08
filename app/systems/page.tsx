@@ -4,12 +4,12 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import CTASection from "@/components/cta-section"
 import StickyContactButtons from "@/components/sticky-contact-buttons"
-import { Bell, Camera, Flame, Lightbulb, ClipboardCheck, ArrowRight, Zap } from "lucide-react"
+import { Bell, Camera, Flame, Lightbulb, ClipboardCheck, ArrowRight, Zap, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Security Systems Chesterfield & Derbyshire | Alarms, CCTV, Fire & Smart Automation | NOX Fire & Security",
-    description: "Professional Ajax intruder alarms, CCTV, fire safety, emergency lighting, smart automation and fire risk assessments across Chesterfield, Sheffield & Derbyshire. Ajax Authorised.",
-    keywords: "security systems Chesterfield, CCTV Derbyshire, intruder alarms Sheffield, fire alarms Chesterfield, emergency lighting Derbyshire, fire risk assessment Chesterfield",
+    title: "Security Systems Chesterfield & Derbyshire | Alarms, CCTV, Fire & Automation | NOX Fire & Security",
+    description: "Alarm, CCTV and fire security systems for residential and commercial properties across Chesterfield, Sheffield and Derbyshire. Ajax alarms, CCTV cameras, fire alarms, emergency lighting, monitoring and service plans.",
+    keywords: "security systems Chesterfield, alarm installation Derbyshire, CCTV installation Sheffield, Ajax alarms Chesterfield, commercial security systems, residential security systems, fire alarm systems Derbyshire, CCTV maintenance, alarm monitoring, emergency lighting servicing",
     alternates: { canonical: "https://nox-security.co.uk/systems" },
 }
 
@@ -17,21 +17,21 @@ const systems = [
     {
         icon: Bell,
         title: "Intruder Alarms",
-        desc: "Grade 2 & 3 wireless Ajax systems with app control, photo verification, pet immunity, and 4G SIM backup. Police & insurer recognised.",
+        desc: "Wireless Ajax intruder alarms with app control, photo verification, pet immunity and 4G SIM backup, designed around your home or business.",
         href: "/systems/intrusion-alarms",
         image: "/images/intrusion-alarms.png",
     },
     {
         icon: Camera,
         title: "CCTV Systems",
-        desc: "4K–8K Hikvision & Ajax cameras with full colour night vision, AI smart detection, Ajax DoorBell & NVR — all in one app.",
+        desc: "Hikvision and Ajax camera systems with clear image quality, smart detection, NVR storage and remote viewing from one app.",
         href: "/systems/cctv",
         image: "/images/cctv-systems-image.png",
     },
     {
         icon: Flame,
         title: "Fire Alarm Systems",
-        desc: "EN54-certified wireless Ajax fire detection. Interlinked smoke, heat, and CO detectors with instant app alerts for homes and businesses.",
+        desc: "Wired, wireless and compliant fire detection options, including interlinked smoke, heat and CO protection for homes, HMOs and businesses.",
         href: "/systems/fire-safety",
         image: "/images/fire-life-safety.png",
     },
@@ -67,14 +67,14 @@ export default function SystemsIndexPage() {
                 <div className="container mx-auto px-4 max-w-3xl">
                     <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
                         <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised" className="h-4" />
-                        Ajax Authorised · Hikvision Accredited
+                        Ajax Authorised · Hikvision & Other CCTV Systems
                     </div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Security Systems</h1>
                     <p className="text-xl text-gray-300 leading-relaxed mb-4">
-                        Professional security and fire safety systems for homes, businesses, and commercial properties across Chesterfield, Sheffield, and Derbyshire. Ajax authorised. Hikvision accredited. Installed properly.
+                        Professional alarm, CCTV and fire safety systems for homes, businesses and commercial properties across Chesterfield, Sheffield and Derbyshire. Designed properly, installed cleanly and supported afterwards.
                     </p>
                     <p className="text-gray-400 leading-relaxed">
-                        Intruder alarms, CCTV, fire protection, smart automation, and emergency lighting — all in one place, all from one trusted installer.
+                        Intruder alarms, CCTV cameras, fire alarm packages, emergency lighting, monitoring options and ongoing service plans — designed around the property rather than sold as a one-size-fits-all package.
                     </p>
                 </div>
             </section>
@@ -108,6 +108,36 @@ export default function SystemsIndexPage() {
                                 </Link>
                             )
                         })}
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-16 bg-white/5 border-y border-white/10">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <div className="text-center max-w-3xl mx-auto mb-10">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Built Around How NOX Works</h2>
+                        <p className="text-gray-300 leading-relaxed">
+                            NOX is built around long-term residential and commercial security: design the right system, install it cleanly, support it afterwards and make clear exactly what is included. Alarm, CCTV and fire packages can be kept separate or combined into one joined-up security plan.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {[
+                            { title: "Residential Packages", items: ["Ajax intruder alarms", "Driveway and perimeter CCTV", "Doorbell, app control and family users", "Optional maintenance and monitoring"] },
+                            { title: "Commercial Packages", items: ["Alarm, CCTV and fire system design", "Warehouses, shops, offices, HMOs and yards", "NVR recording, keyholder access and handover", "Service plans for ongoing support"] },
+                            { title: "Fire & Compliance Support", items: ["Fire alarm installation and servicing", "Emergency lighting testing", "Fire risk assessment support", "Clear records and practical recommendations"] },
+                        ].map((card) => (
+                            <div key={card.title} className="bg-black border border-white/10 rounded-xl p-6">
+                                <h3 className="text-xl font-bold mb-4">{card.title}</h3>
+                                <ul className="space-y-3 text-sm text-gray-300">
+                                    {card.items.map((item) => (
+                                        <li key={item} className="flex items-start gap-3">
+                                            <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

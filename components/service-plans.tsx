@@ -6,7 +6,7 @@ import { Check } from "lucide-react"
 const plans = [
   {
     name: "Essential Protect",
-    headline: "Entry-level self monitoring and maintenance",
+    headline: "A simple aftercare plan for homes and smaller businesses that want the system kept reliable, connected and looked after.",
     featured: false,
     features: [
       "4G SIM connectivity",
@@ -20,31 +20,31 @@ const plans = [
   },
   {
     name: "Advanced Shield",
-    headline: "24/7 professionally monitored protection with verified response",
+    headline: "Professional alarm handling and extra support for customers who want more than app alerts when they cannot respond themselves.",
     featured: true,
     features: [
       "All Essential Protect benefits",
-      "24/7 monitoring",
-      "Image verification",
-      "Police notification",
+      "Professional alarm monitoring",
+      "Image verification where available",
+      "Keyholder notification",
       "Unlimited app access",
-      "No false alarms",
-      "Lifetime warranty",
+      "Helps reduce unwanted alarm activations",
+      "Extended warranty support",
       "Unlimited battery replacements",
     ],
   },
   {
     name: "Total Guard",
-    headline: "Maximum-level security with elite verification and post-incident cover",
+    headline: "A higher level of aftercare for commercial sites, higher-risk properties and customers who want stronger support across alarm and CCTV.",
     featured: false,
     features: [
       "All Advanced Shield benefits",
-      "Video & audio verification",
+      "Video verification where suitable",
       "Post-burglary maintenance",
       "Grade 3 anti-snap lock replacement",
-      "Police notification",
+      "Keyholder notification",
       "Priority support",
-      "Encrypted cloud storage",
+      "Cloud storage options where suitable",
       "AI smart technology",
     ],
   },
@@ -55,9 +55,9 @@ export default function ServicePlans() {
     <section className="bg-black py-16 md:py-24 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-balance">Choose Your Protection Level</h2>
+          <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-balance">Choose the Right Support Level</h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-pretty">
-            From self-monitoring to 24/7 professional surveillance, we have a security solution that fits your needs
+            From simple maintenance to professional alarm monitoring, we help you choose the level of support that suits your property and how you want to manage it.
           </p>
         </div>
 
@@ -106,13 +106,13 @@ export default function ServicePlans() {
 
         <div className="mt-12 text-center">
           <p className="text-gray-300 font-regular mb-6">
-            Not sure which plan is right for you? Our security experts can help.
+            Not sure which plan is right? We'll explain the options clearly and only recommend what makes sense for your property.
           </p>
           <Link href="/contact">
             <button
               className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
             >
-              Speak to an Expert
+              Speak to NOX
             </button>
           </Link>
         </div>

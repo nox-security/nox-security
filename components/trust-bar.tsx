@@ -29,31 +29,31 @@ export default function TrustBar() {
             <Clock className="h-6 w-6 text-white" />
             <div>
               <div className="text-sm font-medium text-white">24/7 Monitoring</div>
-              <div className="text-xs text-gray-400">via Farsight</div>
+              <div className="text-xs text-gray-400">optional support</div>
             </div>
           </div>
           <div className="hidden md:block w-px h-8 bg-white/10"></div>
           <div className="flex items-center gap-3">
             <Shield className="h-6 w-6 text-white" />
             <div>
-              <div className="text-sm font-medium text-white">Grade 2 & 3</div>
-              <div className="text-xs text-gray-400">System standards</div>
+              <div className="text-sm font-medium text-white">Risk-Based Design</div>
+              <div className="text-xs text-gray-400">homes & businesses</div>
             </div>
           </div>
           <div className="hidden md:block w-px h-8 bg-white/10"></div>
           <div className="flex items-center gap-3">
             <CheckCircle2 className="h-6 w-6 text-white" />
             <div>
-              <div className="text-sm font-medium text-white">Free Installation</div>
-              <div className="text-xs text-gray-400">With any service plan</div>
+              <div className="text-sm font-medium text-white">Free Standard Install</div>
+              <div className="text-xs text-gray-400">selected service plans</div>
             </div>
           </div>
           <div className="hidden md:block w-px h-8 bg-white/10"></div>
           <div className="flex items-center gap-3">
             <Award className="h-6 w-6 text-white" />
             <div>
-              <div className="text-sm font-medium text-white">Accredited Installers</div>
-              <div className="text-xs text-gray-400">Ajax · Hikvision · &amp; more</div>
+              <div className="text-sm font-medium text-white">Authorised Installers</div>
+              <div className="text-xs text-gray-400">Ajax · CCTV · Fire</div>
             </div>
           </div>
         </div>

@@ -11,8 +11,8 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "CCTV Installation Chesterfield & Derbyshire | NOX Fire & Security",
-    description: "4K Ajax & Hikvision CCTV with full colour night vision, AI detection, Ajax DoorBell & NVR. Professional installation across Chesterfield, Sheffield & Derbyshire. Free site survey.",
-    keywords: "CCTV installation Chesterfield, CCTV systems Derbyshire, Hikvision CCTV Sheffield, Ajax CCTV, Ajax doorbell, NVR Derbyshire, 4K CCTV Chesterfield, security cameras",
+    description: "CCTV installation for homes and businesses across Chesterfield, Sheffield and Derbyshire. Ajax, Hikvision, ColourVu, PoE, NVR, 4K cameras, smart detection, remote viewing and maintenance plans.",
+    keywords: "CCTV installation Chesterfield, CCTV systems Derbyshire, security camera installation Sheffield, Ajax CCTV, Hikvision CCTV, ColourVu CCTV, 4K CCTV Chesterfield, PoE CCTV, NVR installation, commercial CCTV Derbyshire, home CCTV Chesterfield, CCTV maintenance",
     alternates: { canonical: "https://nox-security.co.uk/systems/cctv" },
 }
 
@@ -20,7 +20,7 @@ export default function CCTVPage() {
     const productBreakdown = [
         { icon: Monitor, label: "4K Ultra HD", desc: "Crystal-clear 4K resolution. Every plate, face, and detail captured — day or night." },
         { icon: Sun, label: "Colour Night Vision", desc: "ColourVu delivers full-colour footage in complete darkness. No washed-out IR." },
-        { icon: Cpu, label: "AI Detection", desc: "Human & vehicle-only smart alerts. Zero false alarms from animals, leaves, or shadows." },
+        { icon: Cpu, label: "AI Detection", desc: "Human and vehicle smart alerts designed to reduce unwanted notifications from animals, leaves and shadows." },
         { icon: Camera, label: "PTZ Cameras", desc: "Pan-tilt-zoom coverage for large areas, car parks, yards, and wide open perimeters." },
         { icon: Car, label: "ANPR", desc: "Automatic number plate recognition for entrances, driveways & commercial car parks." },
         { icon: HardDrive, label: "NVR Systems", desc: "Network Video Recorder with encrypted local storage and optional cloud backup." },
@@ -55,21 +55,21 @@ export default function CCTVPage() {
         },
         {
             icon: Shield,
-            title: "Farsight Visual Verification",
-            desc: "Our monitoring partner reviews triggered footage in real-time and dispatches police or keyholders when an intrusion is confirmed.",
+            title: "Professional Visual Verification",
+            desc: "Where suitable, camera events can support alarm verification and agreed keyholder escalation, without overpromising a response that has not been approved for the site.",
         },
         {
             icon: Bell,
             title: "Smart Alert Filtering",
-            desc: "AI detection filters false alarms — only genuine human and vehicle events trigger your notifications. No more sleepless nights.",
+            desc: "AI detection helps filter unwanted alerts so genuine human and vehicle events are easier to spot.",
         },
     ]
 
     const features = [
-        { icon: Eye, title: "24/7 Recording", desc: "Continuous or motion-triggered recording — never miss a moment." },
-        { icon: Sun, title: "Full Colour Night Vision", desc: "ColourVu technology delivers full colour footage even in total darkness." },
-        { icon: Smartphone, title: "Smart Alerts", desc: "Human and vehicle detection only — no false alerts from animals or leaves." },
-        { icon: HardDrive, title: "Encrypted Storage", desc: "NIST-certified AES-128 encryption protects your footage from tampering." },
+        { icon: Eye, title: "24/7 Recording", desc: "Continuous or motion-triggered recording planned around what you actually need to see." },
+        { icon: Sun, title: "Full Colour Night Vision", desc: "ColourVu and low-light camera options for usable footage after dark." },
+        { icon: Smartphone, title: "Smart Alerts", desc: "Human and vehicle detection to reduce pointless notifications." },
+        { icon: HardDrive, title: "Reliable Storage", desc: "NVR storage, playback setup and retention configured properly during installation." },
     ]
 
     const whatWeInstall = [
@@ -87,7 +87,7 @@ export default function CCTVPage() {
     const benefits = [
         "Deters break-ins before they happen",
         "Full colour evidence day and night",
-        "Insurance discount with verified CCTV",
+        "Useful evidence for incidents, deliveries, vehicles and attempted break-ins",
         "Monitor your property from anywhere",
         "Human & vehicle detection — fewer false alerts",
         "Suitable for homes, businesses, car parks, and warehouses",
@@ -95,7 +95,7 @@ export default function CCTVPage() {
 
     const testimonials = [
         { name: "Mark T.", location: "Sheffield", text: "Very professional from survey to installation. The CCTV works brilliantly and the picture quality is outstanding. Highly recommend.", rating: 5 },
-        { name: "Sarah W.", location: "Derbyshire", text: "Fantastic experience! Clear quote, no hidden extras. Left no mess. Total peace of mind.", rating: 5 },
+        { name: "Sarah W.", location: "Derbyshire", text: "Fantastic experience! Clear quote, no hidden extras. Left no mess. A proper job from start to finish.", rating: 5 },
     ]
 
     return (
@@ -118,13 +118,13 @@ export default function CCTVPage() {
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-medium">
                                 <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised" className="h-4" />
-                                Ajax Authorised · Hikvision Accredited
+                                Ajax Authorised · Hikvision & Other CCTV Systems
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 CCTV Installation in Chesterfield & Derbyshire
                             </h1>
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                4K Ultra HD cameras with full colour night vision, AI smart detection, Ajax DoorBell, and NVR storage. One app. Total control. Serving Chesterfield, Sheffield, and across Derbyshire.
+                                Clear CCTV coverage designed around your property, with smart detection, reliable recording, remote viewing and neatly planned camera positions across Chesterfield, Sheffield and Derbyshire.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-2">
                                 <Link href="/get-quote">
@@ -182,7 +182,7 @@ export default function CCTVPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-2xl mx-auto mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">CCTV Technology Breakdown</h2>
-                        <p className="text-gray-300 leading-relaxed">Industry-leading technology installed by local engineers who know how to get the best from every system.</p>
+                        <p className="text-gray-300 leading-relaxed">Good CCTV is not just about the camera. We plan the angles, recording, alerts and remote access so the system works properly in real life.</p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {productBreakdown.map((item, i) => {
@@ -275,7 +275,7 @@ export default function CCTVPage() {
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> ColourVu full colour night vision upgrade</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> AI-powered human & vehicle detection</li>
-                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Farsight visual verification monitoring</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Alarm-linked visual verification where suitable</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Ajax DoorBell with two-way audio</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Cloud backup storage</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> ANPR (number plate recognition)</li>
@@ -291,7 +291,7 @@ export default function CCTVPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-2xl mx-auto mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">Monitoring Options</h2>
-                        <p className="text-gray-300">From self-monitoring to 24/7 professional visual verification — we have an option to suit every budget.</p>
+                        <p className="text-gray-300">From self-monitoring to alarm-linked visual verification, we set up the right alert and recording options for how the site is used.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         {monitoringOptions.map((opt, i) => {
@@ -390,8 +390,8 @@ export default function CCTVPage() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Multi-camera business systems</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> PTZ cameras for car parks & large areas</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> ANPR for vehicle tracking & evidence</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> NVR with encrypted local & cloud storage</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Farsight 24/7 professional monitoring</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> NVR recording, remote viewing and staff/keyholder access</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> CCTV can be combined with intruder alarms, fire systems and service plans</li>
                             </ul>
                         </div>
                     </div>
@@ -407,7 +407,7 @@ export default function CCTVPage() {
                             "No unnecessary contracts — you own the system",
                             "Local Chesterfield-based engineers",
                             "Clean, hidden cable installs — always",
-                            "Ajax & Hikvision authorised installers",
+                            "Ajax authorised installers · Hikvision CCTV installers",
                             "Free site survey and no-obligation quote",
                             "Free installation with any CCTV maintenance plan",
                         ].map((item, i) => (
@@ -444,7 +444,7 @@ export default function CCTVPage() {
             <section className="py-12 text-center">
                 <div className="container mx-auto px-4">
                     <h2 className="text-2xl font-bold mb-4">Ready to Get CCTV Installed in Chesterfield or Derbyshire?</h2>
-                    <p className="text-gray-300 mb-6">Free site survey. No-obligation quote. Response within 2 hours.</p>
+                    <p className="text-gray-300 mb-6">Free site survey, clear advice and a no-obligation quote from a local NOX engineer.</p>
                     <div className="flex flex-wrap gap-3 justify-center">
                         <Link href="/get-quote">
                             <Button size="lg" className="h-14 px-8 bg-white text-black hover:bg-gray-200 font-bold">
@@ -463,12 +463,12 @@ export default function CCTVPage() {
             <CommercialSectors />
             <ServiceFAQ faqs={[
                 { q: "How much does CCTV installation cost?", a: "A typical home CCTV system with 4 cameras and an NVR starts from around £600–£1,000 installed. Commercial systems with more cameras, PTZ, or ANPR vary in price. We provide free site surveys and transparent quotes — no hidden costs." },
-                { q: "What's the difference between Hikvision and Ajax cameras?", a: "Hikvision cameras (ColourVu, AcuSense) are industry-leading for resolution, night vision, and AI detection — ideal for most CCTV installs. Ajax cameras integrate directly with your Ajax alarm system in one app. We advise which is right for your situation." },
+                { q: "What's the difference between Hikvision and Ajax cameras?", a: "Hikvision cameras such as ColourVu and AcuSense are strong options for resolution, night vision and smart detection — ideal for many CCTV installs. Ajax cameras integrate directly with your Ajax alarm system in one app. We advise which is right for your situation." },
                 { q: "Will I be able to view cameras on my phone?", a: "Yes. Hikvision cameras use the Hik-Connect app (iOS and Android) for remote live viewing, playback, and alerts. Ajax cameras are managed within the Ajax Security System app alongside your alarm. We set everything up and brief you fully on install day." },
                 { q: "How long is footage kept?", a: "Storage duration depends on your NVR capacity and the number of cameras. A typical 2TB NVR with 4 cameras in motion-trigger mode stores 4–8 weeks of footage. We can configure motion-only or continuous recording based on your preference." },
                 { q: "Do CCTV cameras work at night?", a: "Yes. All our ColourVu cameras deliver full-colour footage in near-darkness using advanced low-light sensors — no washed-out black-and-white IR images. Ajax cameras also support night vision. We always match the right camera to the environment." },
                 { q: "Can you install CCTV in a commercial property?", a: "Absolutely. We install CCTV across warehouses, offices, retail units, industrial premises, car parks, and farms. We provide multi-camera NVR systems with PTZ and ANPR where required. Commercial surveying is available — contact us." },
-                { q: "Is CCTV footage legally compliant?", a: "CCTV installations in the UK must comply with GDPR and the ICO guidelines. For commercial systems we advise on signage, data retention policies, and notification requirements. We ensure every install is compliant." },
+                { q: "Is CCTV footage legally compliant?", a: "CCTV installations in the UK must comply with GDPR and the ICO guidelines. For commercial systems we advise on signage, data retention policies, and notification requirements. We help you set the system up correctly and advise on the key points you need to consider." },
             ]} />
             <CTASection />
             <Footer />

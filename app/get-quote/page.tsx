@@ -40,9 +40,9 @@ export default function GetQuotePage() {
                                         "Local Chesterfield-based team — fast response",
                                         "No pressure, no unnecessary contracts",
                                         "You own your system outright",
-                                        "Premium Ajax & Hikvision equipment",
+                                        "Premium Ajax, Hikvision & professional security equipment",
                                         "Clean, tidy installs — always",
-                                        "Free installation with any service plan",
+                                        "Free install with selected service plans",
                                         "Professional monitoring available",
                                         "5-star Google rated",
                                     ].map((item, i) => (
@@ -80,7 +80,7 @@ export default function GetQuotePage() {
                                 <div className="bg-white/5 border border-white/10 rounded-lg p-4">
                                     <Shield className="h-6 w-6 mx-auto mb-2 text-white" />
                                     <div className="text-sm font-semibold text-white">Monitoring Available</div>
-                                    <div className="text-xs text-gray-400 mt-1">Certified engineers</div>
+                                    <div className="text-xs text-gray-400 mt-1">Trained engineers</div>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-lg p-4">
                                     <Clock className="h-6 w-6 mx-auto mb-2 text-white" />

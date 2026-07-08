@@ -148,7 +148,7 @@ export default function QuoteForm() {
           <option value="Fire Risk Assessment" className="bg-black">Fire Risk Assessment</option>
           <option value="Alarm Maintenance Plan" className="bg-black">Alarm Maintenance Plan</option>
           <option value="CCTV Maintenance Plan" className="bg-black">CCTV Maintenance Plan</option>
-          <option value="Police Monitoring" className="bg-black">Police Monitoring</option>
+          <option value="Alarm Monitoring" className="bg-black">Alarm Monitoring</option>
           <option value="Multiple Services" className="bg-black">Multiple Services</option>
           <option value="Other / Not Sure" className="bg-black">Other / Not Sure</option>
         </select>
@@ -172,7 +172,7 @@ export default function QuoteForm() {
         ) : (
           <>
             <Send className="h-5 w-5 mr-2" />
-            Request Your Free Security Survey
+            Request a Free Security Survey
           </>
         )}
       </Button>

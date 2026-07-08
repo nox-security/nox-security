@@ -11,17 +11,17 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Intruder Alarm Installation Chesterfield, Sheffield & Derbyshire | NOX Fire & Security",
-    description: "Advanced wireless Ajax intruder alarms with photo verification, pet immunity & app control. Grade 2 & 3 certified. Serving Chesterfield, Sheffield & Derbyshire. Free site survey.",
-    keywords: "intruder alarm Chesterfield, alarm installation Derbyshire, Ajax alarm Sheffield, wireless alarm system Chesterfield, Grade 2 alarm Derbyshire, home alarm installation",
+    description: "Ajax intruder alarm installation for homes and businesses across Chesterfield, Sheffield and Derbyshire. Wireless alarms, app control, photo verification, external detection, maintenance plans and monitoring options.",
+    keywords: "intruder alarm installation Chesterfield, Ajax alarm Derbyshire, wireless burglar alarm Sheffield, home alarm system Chesterfield, commercial alarm system Derbyshire, alarm maintenance Chesterfield, monitored alarm system, Ajax installer Chesterfield",
     alternates: { canonical: "https://nox-security.co.uk/systems/intrusion-alarms" },
 }
 
 export default function IntrusionAlarmsPage() {
     const features = [
-        { icon: Shield, title: "Grade 2 & 3 Certified", desc: "Recognised by insurers and police for the highest security standards." },
+        { icon: Shield, title: "Designed Around the Risk", desc: "Residential and commercial alarm designs built around the property, the layout and any insurance requirements you tell us about." },
         { icon: Zap, title: "Wireless Technology", desc: "No messy cables. Fast, clean installation with reliable wireless sensors." },
         { icon: Smartphone, title: "App Control", desc: "Arm, disarm, and get instant alerts from anywhere in the world." },
-        { icon: CheckCircle2, title: "Image Verification", desc: "MotionCam sensors capture a photo on trigger — confirmation before police respond." },
+        { icon: CheckCircle2, title: "Image Verification", desc: "MotionCam sensors capture a photo on trigger so you can see what caused the alarm quickly." },
     ]
 
     const whatWeInstall = [
@@ -38,17 +38,17 @@ export default function IntrusionAlarmsPage() {
     ]
 
     const benefits = [
-        "Deters intruders before entry — 80% of burglars avoid alarmed properties",
+        "Deters intruders before entry with visible warning devices and properly placed detection",
         "App alerts the moment a sensor triggers",
-        "Pet immunity — no false alarms from animals",
-        "No landline needed — 4G SIM backup",
-        "Insurance-recognised Grade 2 & 3 standard",
+        "Pet immunity to help reduce unwanted activations from animals",
+        "No landline needed, with 4G SIM backup options",
+        "Designed with insurance requirements in mind where needed",
         "Suitable for homes, businesses, commercial units, and rental properties",
     ]
 
     const productBreakdown = [
         { icon: Shield, label: "Ajax Hub 2 Plus", desc: "Central control panel. Wi-Fi, Ethernet & dual SIM 4G backup. Supports up to 100 devices." },
-        { icon: Smartphone, label: "MotionCam", desc: "PIR sensor with built-in camera. Takes a photo on trigger — visual proof before police respond." },
+        { icon: Smartphone, label: "MotionCam", desc: "PIR sensor with built-in camera. Takes a photo on trigger so you can quickly check what caused the alarm." },
         { icon: CheckCircle2, label: "DoorProtect", desc: "Wireless reed-switch sensor for doors and windows. Instant alert on opening. Ultra-thin design." },
         { icon: Zap, label: "KeyPad TouchScreen", desc: "Touch-screen keypad with proximity card reader. Arm/disarm with PIN, card, or key fob." },
         { icon: Volume2, label: "StreetSiren", desc: "110dB external siren with tamper detection and built-in backup battery. Visible deterrent." },
@@ -63,8 +63,8 @@ export default function IntrusionAlarmsPage() {
         },
         {
             icon: Shield,
-            title: "Farsight Police Monitoring",
-            desc: "24/7 professional monitoring with Farsight visual verification. MotionCam photos confirm genuine intrusion before police dispatch — no false call-outs.",
+            title: "Professional Alarm Monitoring",
+            desc: "Optional monitoring with visual verification where available, keyholder contact and agreed escalation support when an alarm needs attention.",
         },
         {
             icon: Bell,
@@ -100,7 +100,7 @@ export default function IntrusionAlarmsPage() {
                                 Intruder Alarm Installation in Chesterfield & Derbyshire
                             </h1>
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                Advanced wireless Ajax alarm systems with instant photo verification, pet immunity, and total smartphone control. Professional, Grade 2 & 3 installation across Chesterfield, Sheffield, and Derbyshire.
+                                Ajax intruder alarms designed around your property, with app control, photo verification, pet-friendly options, perimeter protection, service plans and clean professional installation across Chesterfield, Sheffield and Derbyshire.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-2">
                                 <Link href="/get-quote">
@@ -189,7 +189,7 @@ export default function IntrusionAlarmsPage() {
                                 <h3 className="text-xl font-bold mb-3">Upgrades Available</h3>
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> App control (Ajax app — iOS & Android)</li>
-                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> 24/7 police monitoring via Farsight</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Professional alarm monitoring options</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Video doorbell integration</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Smart home automation (lights, plugs, heating)</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Perimeter protection (outdoor beams)</li>
@@ -209,7 +209,7 @@ export default function IntrusionAlarmsPage() {
                             Ajax Authorised Installation
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">Ajax System Components</h2>
-                        <p className="text-gray-300 leading-relaxed">Every component is purpose-built, encrypted, and tamper-proof. Grade 2 & 3 certified — recognised by insurers and police forces across the UK.</p>
+                        <p className="text-gray-300 leading-relaxed">Every component is purpose-built, encrypted and tamper-protected, with reliable equipment selected to suit the property, risk and usage.</p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {productBreakdown.map((item, i) => {
@@ -240,7 +240,7 @@ export default function IntrusionAlarmsPage() {
                             <h3 className="text-2xl font-bold mb-2">Hub 2 Plus</h3>
                             <div className="text-sm font-semibold text-[#FBBC05] mb-4 uppercase tracking-wider">Control Panel</div>
                             <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-                                The brain of the system. Controls all devices, collects data, and communicates with your smartphone and monitoring station via Ethernet, Wi-Fi, and dual 4G SIM cards.
+                                The brain of the system. Controls all devices, collects data, and communicates with your smartphone and, where used, the monitoring provider via Ethernet, Wi-Fi and dual 4G SIM cards.
                             </p>
                         </div>
 
@@ -251,7 +251,7 @@ export default function IntrusionAlarmsPage() {
                             <h3 className="text-2xl font-bold mb-2">MotionCam</h3>
                             <div className="text-sm font-semibold text-[#FBBC05] mb-4 uppercase tracking-wider">Photo Verification</div>
                             <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-                                Detects human motion and immediately takes an animated series of photos. Gives you visual confirmation of what triggered the alarm, preventing false police dispatch. Pet-immune up to 20kg.
+                                Detects human motion and immediately takes an animated series of photos. Gives you visual confirmation of what triggered the alarm and helps reduce false alarms. Pet-immune up to 20kg.
                             </p>
                         </div>
 
@@ -295,7 +295,7 @@ export default function IntrusionAlarmsPage() {
                             <h3 className="text-2xl font-bold mb-2">Ajax Video DoorBell</h3>
                             <div className="text-sm font-semibold text-[#FBBC05] mb-4 uppercase tracking-wider">Smart Access</div>
                             <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-                                See and speak to visitors from anywhere via the Ajax app. Features built-in AI to distinguish humans from animals, reducing false notifications. Integrates flawlessly with the alarm system.
+                                See and speak to visitors from anywhere via the Ajax app. Features built-in AI to help distinguish people from animals, reducing unwanted notifications. Integrates cleanly with the Ajax alarm system.
                             </p>
                         </div>
                     </div>
@@ -307,7 +307,7 @@ export default function IntrusionAlarmsPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-2xl mx-auto mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">Monitoring Options</h2>
-                        <p className="text-gray-300">From app self-monitoring to 24/7 police-response monitoring — choose the level of protection that suits you.</p>
+                        <p className="text-gray-300">From app self-monitoring to professional alarm handling, choose the level of support that suits how you use the property.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         {monitoringOptions.map((opt, i) => {
@@ -364,7 +364,7 @@ export default function IntrusionAlarmsPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-2xl mx-auto mb-12">
                         <h2 className="text-3xl font-bold mb-4">Residential & Commercial Alarms</h2>
-                        <p className="text-gray-300">Ajax systems are Grade 2 & 3 certified — suitable for homes, businesses, and commercial properties.</p>
+                        <p className="text-gray-300">Ajax alarm systems are flexible enough for homes, shops, offices, warehouses, HMOs, yards and commercial units — with the design matched to the risk and how the property is used.</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <div className="bg-black border border-white/10 rounded-xl p-8">
@@ -375,8 +375,8 @@ export default function IntrusionAlarmsPage() {
                                 <h3 className="text-xl font-bold">Residential</h3>
                             </div>
                             <ul className="space-y-3 text-sm text-gray-300">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Grade 2 wireless systems for homes</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Pet immunity up to 20kg — no false alarms</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Wireless Ajax systems for homes, flats and rental properties</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Pet immunity up to 20kg to help reduce unwanted activations</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> App control for arm/disarm/alerts</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Suitable for houses, flats & rental properties</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Integrates with CCTV & smart automation</li>
@@ -390,11 +390,11 @@ export default function IntrusionAlarmsPage() {
                                 <h3 className="text-xl font-bold">Commercial</h3>
                             </div>
                             <ul className="space-y-3 text-sm text-gray-300">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Grade 3 systems for high-risk premises</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Insurance & police-recognised certification</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> 24/7 Farsight police monitoring</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Stronger commercial alarm designs where the risk is higher</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Insurance-conscious system design</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Professional monitoring options</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Suitable for offices, warehouses & retail</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> CCTV + fire + alarm in single platform</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Alarm, CCTV, fire detection and maintenance support from one company</li>
                             </ul>
                         </div>
                     </div>
@@ -467,8 +467,8 @@ export default function IntrusionAlarmsPage() {
             {/* Mid CTA */}
             <section className="py-12 text-center">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-2xl font-bold mb-4">Ready to Get an Alarm Installed in Chesterfield or Derbyshire?</h2>
-                    <p className="text-gray-300 mb-6">Free site survey. No-obligation quote. Response within 2 hours.</p>
+                    <h2 className="text-2xl font-bold mb-4">Ready to Get the Right Alarm System Designed?</h2>
+                    <p className="text-gray-300 mb-6">Free site survey, clear advice and a no-obligation quote from a local NOX engineer.</p>
                     <div className="flex flex-wrap gap-3 justify-center">
                         <Link href="/get-quote">
                             <Button size="lg" className="h-14 px-8 bg-white text-black hover:bg-gray-200 font-bold">
@@ -490,9 +490,9 @@ export default function IntrusionAlarmsPage() {
                 { q: "How long does installation take?", a: "Most domestic Ajax alarm installations take 4–6 hours for a standard 3–4 bedroom property. Larger or commercial systems may take a full day. We leave no mess and fully brief you on the app and system operation before we leave." },
                 { q: "Do I need a contract?", a: "No. You own your system outright from day one. We offer optional ongoing service plans for monitoring, maintenance, and warranty extension — but these are entirely your choice. No lock-ins." },
                 { q: "Is the app easy to use?", a: "Yes. The Ajax Security System app (iOS and Android) is extremely intuitive. You can arm, disarm, check sensor status, view event history, and receive instant push alerts. We walk you through it fully on install day." },
-                { q: "Can you monitor my alarm 24/7?", a: "Yes. Through our partner Farsight, we can provide 24/7 professionally monitored protection with police response. MotionCam photo verification means only genuine events trigger a police call-out — no false alarms." },
+                { q: "Can you provide professional monitoring?", a: "Yes. Where required, we can provide professional monitoring through our monitoring partner. Photo verification can help confirm what has triggered the alarm and reduce unnecessary call-outs." },
                 { q: "Can you take over an existing alarm system?", a: "In many cases yes — especially if it's already an Ajax system. For non-Ajax systems, we assess the existing installation and advise whether to retrofit, upgrade, or replace. We'll always give you honest advice." },
-                { q: "Are Ajax systems suitable for commercial properties?", a: "Absolutely. Ajax Grade 2 and Grade 3 systems are fully compliant for commercial use and recognised by UK insurers. We install across warehouses, offices, shops, industrial units, HMOs, and farms. Contact us for a commercial survey." },
+                { q: "Are Ajax systems suitable for commercial properties?", a: "Yes, Ajax can be a strong option for many commercial properties when the system is designed correctly. We install across warehouses, offices, shops, industrial units, HMOs and farms, and we always ask about insurance requirements before recommending the final design." },
             ]} />
             <CTASection />
             <Footer />

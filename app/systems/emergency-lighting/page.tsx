@@ -18,7 +18,7 @@ const features = [
     {
         icon: Lightbulb,
         title: "BS 5266 Compliant",
-        desc: "All installations fully compliant with BS 5266 emergency lighting standards — legally required for commercial and business properties.",
+        desc: "Emergency lighting designed and installed in line with BS 5266 requirements for commercial and business properties.",
     },
     {
         icon: Building2,
@@ -43,7 +43,7 @@ const features = [
     {
         icon: Zap,
         title: "Integrated Testing Systems",
-        desc: "Self-test luminaires and automated test systems eliminate manual testing time and automatically log compliance data.",
+        desc: "Self-test luminaires and automated test systems can reduce manual testing time and help keep clearer records.",
     },
 ]
 
@@ -86,7 +86,7 @@ export default function EmergencyLightingPage() {
                                 Emergency Lighting Installation in Chesterfield & Derbyshire
                             </h1>
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                Legal compliance, clean installs, and full certification. We design and install BS 5266-compliant emergency lighting systems for businesses, landlords, and commercial properties across Chesterfield, Sheffield, and Derbyshire.
+                                Clean installs, certification and practical compliance support. We design and install emergency lighting systems in line with BS 5266 requirements for businesses, landlords and commercial properties across Chesterfield, Sheffield and Derbyshire.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-2">
                                 <Link href="/get-quote">
@@ -161,7 +161,7 @@ export default function EmergencyLightingPage() {
                                 <h3 className="text-xl font-bold mb-4">Benefits</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Full legal compliance — avoids fines and enforcement notices",
+                                        "Supports compliance records and responsible-person duties",
                                         "Protects building occupants during power failures",
                                         "Clear evacuation routes in an emergency",
                                         "Documentation & certification supplied",
@@ -242,7 +242,7 @@ export default function EmergencyLightingPage() {
                             "Clean, professional installs — always",
                             "Premium equipment only",
                             "Full certification and documentation",
-                            "Free installation with any service plan",
+                            "Free install with selected service plans",
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3 bg-black border border-white/10 rounded-lg p-4">
                                 <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0" />

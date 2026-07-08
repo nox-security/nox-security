@@ -84,8 +84,8 @@ export default function Header() {
                 <Link href="/service-plans/emergency-lighting-servicing" className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 text-left">
                   Emergency Lighting Servicing
                 </Link>
-                <Link href="/service-plans/police-monitoring" className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 text-left">
-                  Police Monitoring
+                <Link href="/service-plans/alarm-monitoring" className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 text-left">
+                  Alarm Monitoring
                 </Link>
               </div>
             </div>
@@ -181,8 +181,8 @@ export default function Header() {
                     <Link href="/service-plans/emergency-lighting-servicing" onClick={handleMobileLinkClick} className="block py-2 text-sm text-gray-300 hover:text-white">
                       Emergency Lighting Servicing
                     </Link>
-                    <Link href="/service-plans/police-monitoring" onClick={handleMobileLinkClick} className="block py-2 text-sm text-gray-300 hover:text-white">
-                      Police Monitoring
+                    <Link href="/service-plans/alarm-monitoring" onClick={handleMobileLinkClick} className="block py-2 text-sm text-gray-300 hover:text-white">
+                      Alarm Monitoring
                     </Link>
                   </div>
                 )}

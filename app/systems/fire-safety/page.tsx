@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Fire Alarm Systems Chesterfield, Sheffield & Derbyshire | NOX Fire & Security",
-    description: "Interlinked fire & CO detection with instant app alerts. EN54-compliant wireless Ajax systems for homes & businesses across Chesterfield, Sheffield & Derbyshire. Free site survey.",
+    description: "Interlinked fire & CO detection with instant app alerts. Wired, wireless and EN54 options for homes and businesses across Chesterfield, Sheffield & Derbyshire. Free site survey.",
     keywords: "fire alarm installation Chesterfield, fire alarm systems Derbyshire, Ajax fire alarm Sheffield, smoke detector installation Chesterfield, fire safety systems Derbyshire",
     alternates: { canonical: "https://nox-security.co.uk/systems/fire-safety" },
 }
@@ -21,7 +21,7 @@ export default function FireSafetyPage() {
         {
             name: "FireProtect",
             type: "Smoke & Heat Detector",
-            desc: "Wireless optical smoke detector with heat sensor. Distinguishes real fire from cooking steam. EN54 certified. Instant app alert on detection.",
+            desc: "Wireless optical smoke detector with heat sensor. Correct detector selection helps reduce unwanted activations from steam. EN54 certified. Instant app alert on detection.",
             image: "/images/FireProtect.jpeg",
         },
         {
@@ -53,7 +53,7 @@ export default function FireSafetyPage() {
         {
             icon: Shield,
             title: "24/7 Monitoring",
-            desc: "Professional monitoring centre receives immediate alerts and can dispatch the fire service or keyholders when a genuine alarm is triggered.",
+            desc: "Professional monitoring options with agreed escalation steps, keyholder contact and clear response procedures for the premises.",
         },
         {
             icon: Bell,
@@ -63,8 +63,8 @@ export default function FireSafetyPage() {
     ]
 
     const features = [
-        { icon: Flame, title: "Early Detection", desc: "Sensors distinguish cooking steam from real smoke, preventing false alarms." },
-        { icon: Thermometer, title: "Smoke, Heat & Carbon Dioxide", desc: "Built-in smoke, heat sensors, and carbon dioxide (CO) detection for full coverage." },
+        { icon: Flame, title: "Early Detection", desc: "Correct detector selection helps reduce unwanted activations from cooking steam while maintaining reliable fire detection." },
+        { icon: Thermometer, title: "Smoke, Heat & Carbon Monoxide", desc: "Smoke, heat and carbon monoxide detection options specified around the risk and layout of the property." },
         { icon: Smartphone, title: "Instant App Alerts", desc: "Know exactly which room triggered the alarm, from anywhere in the world." },
         { icon: Wifi, title: "Wired or Wireless Ajax Systems", desc: "Ajax fire systems can be wired or wireless depending on building requirements." },
     ]
@@ -85,8 +85,8 @@ export default function FireSafetyPage() {
         "Early warning saves lives — every second counts",
         "App alerts even when you're not home",
         "Interlinked system — all sounders activate together",
-        "Pet immunity and kitchen-smart sensors (fewer false alarms)",
-        "EN54 compliant — suitable for commercial and rented properties",
+        "Correct detector selection to help reduce unwanted activations",
+        "EN54 options available where the building or specification requires them",
         "Suitable for homes, offices, care homes, retail, and warehouses",
     ]
 
@@ -115,7 +115,7 @@ export default function FireSafetyPage() {
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-medium">
                                 <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised" className="h-4" />
-                                Ajax Authorised · EN54 Compliant
+                                Ajax Authorised · Fire Alarm Options
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 Fire Alarm Systems in Chesterfield & Derbyshire
@@ -182,8 +182,8 @@ export default function FireSafetyPage() {
                             <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax" className="h-4" />
                             Ajax Fire & Life Safety
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">EN54-Certified Ajax Fire Devices</h2>
-                        <p className="text-gray-300 leading-relaxed">Every device is EN54-certified, available in wired or wireless configurations depending on your building requirements, and managed from the Ajax Security System app. No messy cables where wireless is used, no outdated panels — just reliable fire protection with instant alerts.</p>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ajax Fire Detection Options</h2>
+                        <p className="text-gray-300 leading-relaxed">Where EN54 equipment is required, we can specify suitable Ajax Fire devices in wired, wireless or hybrid configurations depending on the building requirements. The aim is simple: reliable fire detection, clear alerts and a system that suits the premises.</p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                         {ajaxFireProducts.map((p, i) => (
@@ -262,7 +262,7 @@ export default function FireSafetyPage() {
                                 <h3 className="text-xl font-bold mb-3">Upgrades Available</h3>
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> App-based control and real-time alerts</li>
-                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> 24/7 monitoring and professional response</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Professional monitoring with agreed escalation steps</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Integration with intruder alarm system</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Emergency lighting integration</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Annual fire alarm servicing plan</li>
@@ -290,7 +290,7 @@ export default function FireSafetyPage() {
                             </div>
                             <ul className="space-y-3 text-sm text-gray-300">
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Interlinked smoke & CO detectors</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Kitchen-smart heat detection (no false alarms)</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Kitchen-suitable heat detection to help reduce unwanted activations</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> App alerts even when you're not home</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Suitable for houses, flats & HMOs</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Integrates with Ajax intruder alarm</li>
@@ -306,7 +306,7 @@ export default function FireSafetyPage() {
                             <ul className="space-y-3 text-sm text-gray-300">
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> EN54 addressable systems</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Manual call points & visual alarms</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> 24/7 monitoring & professional response</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Professional monitoring with agreed escalation steps</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Suitable for offices, care homes & retail</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" /> Linked to emergency lighting system</li>
                             </ul>
@@ -336,10 +336,10 @@ export default function FireSafetyPage() {
                         {[
                             "No unnecessary contracts — you own your system",
                             "Local Chesterfield-based fire safety engineers",
-                            "EN54-compliant installations",
+                            "EN54 options where required",
                             "Ajax-authorised installers",
                             "Linked to fire alarm servicing plans",
-                            "Free installation with any service plan",
+                            "Free install with selected service plans",
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3 bg-black border border-white/10 rounded-lg p-4">
                                 <Shield className="h-5 w-5 text-white flex-shrink-0" />
@@ -391,10 +391,10 @@ export default function FireSafetyPage() {
             <CommercialSectors />
             <ServiceFAQ faqs={[
                 { q: "Is a fire alarm legally required for my property?", a: "Commercial premises, HMOs, houses of multiple occupation, and most businesses legally require a fire detection system under the Regulatory Reform (Fire Safety) Order 2005. Domestic properties don't have a strict legal requirement, but landlords and rental properties have their own obligations. We advise you honestly on what's required." },
-                { q: "What is an EN54-certified fire alarm?", a: "EN54 is the European standard for fire detection and alarm system components. Ajax FireProtect sensors and their professional fire hubs are EN54-certified — meaning they meet the highest reliability standards and are suitable for commercial and regulatory-compliant installations." },
+                { q: "What is an EN54-certified fire alarm?", a: "EN54 is the European standard for fire detection and alarm system components. Ajax FireProtect sensors and professional fire hubs include EN54-certified options. Where compliance requirements apply, we specify the correct devices and confirm suitability during the survey." },
                 { q: "How much does a fire alarm system cost?", a: "A domestic wireless fire alarm system starts from around £400–£700 installed. Commercial systems depend heavily on property size and type. We provide free site surveys and clear, itemised quotes — no surprises." },
-                { q: "What is the difference between smoke, heat, and CO detectors?", a: "Smoke detectors detect airborne particles from smouldering or flaming fires. Heat detectors are better for kitchens where smoke detectors would false-trigger. CO (carbon monoxide) detectors protect against silent gas leaks from boilers and appliances. Best systems use a combination — we specify the right mix for your property." },
-                { q: "Can I have my fire alarm monitored 24/7?", a: "Yes. We can connect your fire alarm to our Farsight monitoring centre who will alert the fire brigade on your behalf if the system triggers and you cannot be reached. Essential for commercial premises, especially when unoccupied overnight." },
+                { q: "What is the difference between smoke, heat, and CO detectors?", a: "Smoke detectors detect airborne particles from smouldering or flaming fires. Heat detectors are better for kitchens where smoke detectors would false-trigger. CO (carbon monoxide) detectors protect against silent gas leaks from boilers and appliances. A suitable system often uses a combination — we specify the right mix for your property." },
+                { q: "Can I have my fire alarm monitored 24/7?", a: "Where appropriate, we can discuss monitored fire alarm options and the correct escalation route for your premises. We keep this clear during the survey so the response plan matches the system, the property and any insurer or responsible-person requirements." },
                 { q: "Do you service existing fire alarms?", a: "Yes. We offer annual fire alarm servicing and can take over maintenance of your existing system. We'll assess the current installation, carry out testing to BS 5839, and provide a full service report. Contact us for a takeover quote." },
             ]} />
             <CTASection />

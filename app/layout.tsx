@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "NOX Fire & Security | CCTV, Alarms & Fire Safety | Chesterfield, Sheffield, Derbyshire",
   description:
-    "Professional CCTV installation, intruder alarms, fire safety systems & 24/7 monitoring. Serving Chesterfield, Sheffield, Matlock, Bakewell, Buxton, Mansfield, Worksop, Nottingham & Derbyshire. Free surveys. Free surveys.",
+    "Professional CCTV installation, intruder alarms, fire safety systems & Professional alarm monitoring. Serving Chesterfield, Sheffield, Matlock, Bakewell, Buxton, Mansfield, Worksop, Nottingham & Derbyshire. Free surveys. Free surveys.",
   keywords:
     "CCTV installation Chesterfield, alarm systems Sheffield, security systems Derbyshire, fire alarms Chesterfield, intruder alarms Sheffield, CCTV Matlock, security Bakewell, CCTV Buxton, alarm installation Mansfield, CCTV Worksop, security systems Nottingham, CCTV Derby, alarm installation Rotherham, CCTV Barnsley, security Doncaster, smart home security, Ajax alarm systems, Hikvision CCTV, fire risk assessment, emergency lighting, monitored alarms Derbyshire, NOX Security",
   generator: 'v0.app',

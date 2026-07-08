@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "CCTV Maintenance & Servicing Chesterfield & Derbyshire | NOX Fire & Security",
-    description: "Professional CCTV maintenance and servicing plans across Chesterfield, Sheffield & Derbyshire. Keep your cameras working 24/7. Free installation with any plan. Call 07882 959 297.",
-    keywords: "CCTV maintenance Chesterfield, CCTV servicing Derbyshire, camera maintenance Sheffield, CCTV service plan, Hikvision maintenance Derbyshire",
+    description: "CCTV maintenance and servicing across Chesterfield, Sheffield and Derbyshire. Camera cleaning, NVR health checks, remote viewing, recording checks, smart detection and commercial CCTV support.",
+    keywords: "CCTV maintenance Chesterfield, CCTV servicing Derbyshire, security camera maintenance Sheffield, NVR maintenance, Hikvision maintenance, Ajax CCTV maintenance, commercial CCTV servicing, camera cleaning",
     alternates: { canonical: "https://nox-security.co.uk/service-plans/cctv-maintenance" },
 }
 
@@ -45,7 +45,7 @@ export default function CCTVMaintenancePage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm text-gray-300 font-medium">
-                                🔧 Free installation with any service plan
+                                🔧 Free install with selected service plans
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 CCTV Maintenance in Chesterfield & Derbyshire
@@ -88,7 +88,7 @@ export default function CCTVMaintenancePage() {
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">What's Included in Our CCTV Maintenance Plan</h2>
                             <p className="text-gray-300 leading-relaxed mb-8">
-                                We maintain Hikvision, Dahua, and other leading CCTV systems across Chesterfield, Dronfield, Sheffield, Matlock, Bakewell, Buxton, and throughout Derbyshire.
+                                We maintain Ajax, Hikvision, Dahua and other professional CCTV systems across Chesterfield, Dronfield, Sheffield, Matlock, Bakewell, Buxton and Derbyshire, including NVRs, PoE cameras, remote viewing and smart detection settings.
                             </p>
                             <ul className="space-y-3">
                                 {included.map((item, i) => (
@@ -107,8 +107,8 @@ export default function CCTVMaintenancePage() {
                                     {[
                                         "Cameras that actually work when you need them",
                                         "Longer equipment lifespan",
-                                        "Insurance compliance — often required for claims",
-                                        "Evidence quality maintained for police",
+                                        "Clear service records for customers who need maintenance evidence",
+                                        "Evidence quality maintained for incidents and insurance",
                                         "Faults caught early before full failure",
                                         "Priority support for plan customers",
                                     ].map((b, i) => (
@@ -126,8 +126,8 @@ export default function CCTVMaintenancePage() {
                                     <Link href="/service-plans/alarm-maintenance" className="block text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
                                         <ArrowRight className="h-4 w-4" /> Alarm Maintenance
                                     </Link>
-                                    <Link href="/service-plans/police-monitoring" className="block text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
-                                        <ArrowRight className="h-4 w-4" /> Police Monitoring
+                                    <Link href="/service-plans/alarm-monitoring" className="block text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
+                                        <ArrowRight className="h-4 w-4" /> Alarm Monitoring
                                     </Link>
                                 </div>
                             </div>

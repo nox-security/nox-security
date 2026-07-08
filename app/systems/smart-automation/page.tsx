@@ -25,7 +25,7 @@ export default function SmartAutomationPage() {
         {
             name: "Ajax WaterStop",
             type: "Water Shutoff Valve",
-            desc: "Wireless remotely-controlled water shutoff valve. Paired with LeaksProtect detectors, it automatically cuts off your water supply the moment a leak is detected — preventing flood damage.",
+            desc: "Wireless remotely controlled water shutoff valve. Paired with LeaksProtect detectors, it can close the water supply when a leak is detected to help limit damage.",
             image: "/images/AjaxWaterstop.png",
         },
         {
@@ -57,7 +57,7 @@ export default function SmartAutomationPage() {
     const features = [
         { icon: Wifi, title: "One App Control", desc: "Manage your entire home — security, lighting, water, and access — from the Ajax Security System app on iOS or Android." },
         { icon: Zap, title: "Automation Scenarios", desc: "Set intelligent if/then rules. Lights on when disarming. Water off when alarm triggers. Heating off when you leave." },
-        { icon: Droplets, title: "Flood Prevention", desc: "LeaksProtect detectors and WaterStop valves automatically prevent flood damage before it happens." },
+        { icon: Droplets, title: "Water Leak Protection", desc: "LeaksProtect detectors and WaterStop valves help reduce the risk of serious water damage by reacting quickly to leaks." },
         { icon: Bell, title: "Instant Smart Alerts", desc: "Real-time push notifications for every event — motion, leak, door opened, device triggered. Know everything, instantly." },
     ]
 
@@ -283,7 +283,7 @@ export default function SmartAutomationPage() {
                             <div className="bg-white/5 border border-white/10 rounded-xl p-8">
                                 <h3 className="text-xl font-bold mb-3">Benefits</h3>
                                 <ul className="space-y-2 text-sm text-gray-300">
-                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Prevent costly flood damage automatically</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Help limit costly water damage</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Reduce energy waste with smart lighting</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Deter intruders with automated lighting scenarios</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-white" /> Everything managed from one app</li>
@@ -341,7 +341,7 @@ export default function SmartAutomationPage() {
             <section className="py-12 text-center">
                 <div className="container mx-auto px-4">
                     <h2 className="text-2xl font-bold mb-4">Ready to Automate Your Home or Business?</h2>
-                    <p className="text-gray-300 mb-6">Free site survey. No-obligation quote. Response within 2 hours.</p>
+                    <p className="text-gray-300 mb-6">Free site survey, clear advice and a no-obligation quote from a local NOX engineer.</p>
                     <div className="flex flex-wrap gap-3 justify-center">
                         <Link href="/get-quote">
                             <Button size="lg" className="h-14 px-8 bg-white text-black hover:bg-gray-200 font-bold">

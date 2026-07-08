@@ -31,7 +31,7 @@ export default function ContactPage() {
                         {/* Quote Form */}
                         <div>
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-                                <h2 className="text-2xl font-bold mb-2">Request Your Free Security Survey</h2>
+                                <h2 className="text-2xl font-bold mb-2">Request a Free Security Survey</h2>
                                 <p className="text-gray-300 mb-6">No obligation. Honest advice. Response within 2 hours.</p>
                                 <QuoteForm />
                             </div>

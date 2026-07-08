@@ -15,8 +15,8 @@ import Footer from "@/components/footer"
 import StickyContactButtons from "@/components/sticky-contact-buttons"
 
 export const metadata: Metadata = {
-  title: "NOX Fire & Security | Alarms, CCTV & Fire Safety | Chesterfield, Sheffield & Derbyshire",
-  description: "Chesterfield-based security specialists. Ajax alarms, Hikvision CCTV, fire safety & smart automation across Chesterfield, Sheffield & Derbyshire. No contracts. Installed properly. Free site survey. Call 07882 959 297.",
+  title: "NOX Fire & Security | Fire & Security Systems | Chesterfield, Sheffield & Derbyshire",
+  description: "Professional fire and security systems designed around homes and businesses across Chesterfield, Sheffield and Derbyshire. Intruder alarms, CCTV, fire safety and ongoing support from NOX Fire & Security.",
   keywords: "CCTV installation Chesterfield, alarm systems Sheffield, security systems Derbyshire, fire alarms Chesterfield, intruder alarms Sheffield, CCTV Matlock, security Bakewell, CCTV Buxton, alarm installation Mansfield, CCTV Worksop, Ajax alarm systems Chesterfield, Hikvision CCTV Sheffield, fire risk assessment Derbyshire, emergency lighting Chesterfield, monitored alarms Derbyshire, NOX Security Chesterfield",
   alternates: { canonical: "https://nox-security.co.uk" },
 }

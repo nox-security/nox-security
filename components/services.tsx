@@ -7,63 +7,63 @@ const services = [
   {
     icon: Bell,
     title: "Intruder Alarms",
-    description: "Grade 2 & 3 wireless or hybrid systems. Smart app control with no monthly contracts necessary.",
+    description: "Ajax intruder alarms designed around the way your property is used, with smart app control, clean installation and optional ongoing support.",
     image: "/images/intrusion-alarms.png",
     link: "/systems/intrusion-alarms"
   },
   {
     icon: Camera,
     title: "CCTV",
-    description: "4K ColorVu technology. Full color night vision with smart human and vehicle detection.",
+    description: "Clear CCTV coverage for homes and businesses, using reliable cameras, smart detection and properly planned camera positions.",
     image: "/images/cctv-systems-image.png",
     link: "/systems/cctv"
   },
   {
     icon: Shield,
     title: "Fire Safety",
-    description: "Professional fire detection for homes and businesses. Interlinked smoke, heat, and CO sensors.",
+    description: "Fire detection systems installed and maintained for homes, HMOs, commercial premises and businesses that need reliable protection.",
     image: "/images/fire-life-safety.png",
     link: "/systems/fire-safety"
   },
   {
     icon: Eye,
     title: "Monitoring",
-    description: "Farsight monitored systems with visual verification for police response.",
+    description: "Professional alarm monitoring with rapid alarm handling, keyholder support and clear escalation when it matters.",
     image: "/images/Monitoring.png",
     link: "/service-plans"
   },
   {
     icon: Lock,
     title: "Perimeter Protection",
-    description: "Stop intruders before they reach the building. Outdoor motion sensors, beams, and external sirens for early detection.",
+    description: "Protect vulnerable areas before someone reaches the building with external detection, perimeter sensors and visible warning devices.",
     image: "/images/AjaxDualcurtain.jpg",
     link: "/systems/intrusion-alarms"
   },
   {
     icon: Wrench,
     title: "Fire Alarm Servicing",
-    description: "Routine maintenance and testing to ensure your fire systems comply with all regulations.",
+    description: "Planned servicing and testing to keep your fire alarm system reliable, documented and ready when needed.",
     image: "/images/FireAlaramServicingImage.jpeg",
     link: "/service-plans/fire-alarm-servicing"
   },
   {
     icon: Lightbulb,
     title: "Emergency Lighting (EEL)",
-    description: "Installation and testing of emergency lighting systems to guide safe evacuation.",
+    description: "Emergency lighting installation and scheduled testing for safe evacuation and clear compliance records.",
     image: "/images/EmergencyLighting.jpeg",
     link: "/systems/emergency-lighting"
   },
   {
     icon: ClipboardCheck,
     title: "Fire Risk Assessments",
-    description: "Comprehensive risk assessments to identify hazards and ensure full legal compliance.",
+    description: "Clear fire risk assessments with practical actions, written reports and advice that helps you stay on top of your responsibilities.",
     image: "/images/FireAlaramServicingImage.jpeg",
     link: "/systems/fire-risk-assessment"
   },
   {
     icon: Settings,
     title: "Maintenance / Takeover",
-    description: "We can take over, fix, and maintain existing security and fire systems smoothly.",
+    description: "We can take over, service and improve existing systems so they stay reliable without starting again unnecessarily.",
     image: "/images/Maintenence.png",
     link: "/service-plans"
   },
@@ -74,9 +74,9 @@ export default function Services() {
     <section id="services" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Everything We Install &amp; Maintain</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Complete Fire & Security Solutions</h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Residential &amp; commercial security across Chesterfield, Sheffield &amp; Derbyshire. CCTV · Intruder Alarms · Fire Alarms · Emergency Lighting · Fire Risk Assessments · Monitoring · Maintenance.
+            Whether you're protecting a family home, a retail unit or a commercial premises, we design, install and maintain systems around your property — not a one-size-fits-all package.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function Services() {
         <div className="text-center">
           <Link href="/get-quote">
             <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-8">
-              Free Security Servey
+              Free Security Survey
             </Button>
           </Link>
         </div>

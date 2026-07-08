@@ -9,8 +9,7 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Fire Risk Assessment Chesterfield, Sheffield & Derbyshire | NOX Fire & Security",
-    description: "Professional fire risk assessments for businesses, landlords & commercial premises across Chesterfield, Sheffield & Derbyshire. Fully compliant, documented, affordable.",
-    description: "Professional fire risk assessments for businesses across Chesterfield, Sheffield & Derbyshire. Legally required for most commercial premises. Call 07882 959 297.",
+    description: "Professional fire risk assessments for businesses, landlords and commercial premises across Chesterfield, Sheffield and Derbyshire. Clear reports, practical actions and support from NOX Fire & Security.",
     keywords: "fire risk assessment Chesterfield, fire risk assessment Derbyshire, fire safety assessment Sheffield, commercial fire risk, legal fire assessment, Regulatory Reform Fire Safety Order",
     alternates: { canonical: "https://nox-security.co.uk/systems/fire-risk-assessment" },
 }
@@ -105,7 +104,7 @@ export default function FireRiskAssessmentPage() {
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">What's Covered in Our Assessment</h2>
                             <p className="text-gray-300 leading-relaxed mb-8">
-                                Our qualified fire risk assessors conduct a thorough on-site inspection and produce a comprehensive written report, including an action plan with prioritised recommendations to bring your premises into full compliance.
+                                Our qualified fire risk assessors conduct a thorough on-site inspection and produce a comprehensive written report, including an action plan with prioritised recommendations to help you understand the risks, actions and priorities for your premises.
                             </p>
                             <ul className="space-y-3">
                                 {whatsCovered.map((item, i) => (
@@ -141,7 +140,7 @@ export default function FireRiskAssessmentPage() {
                                 <h3 className="text-xl font-bold mb-3">Benefits</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Legal compliance — avoids prosecution",
+                                        "Supports responsible-person duties and compliance records",
                                         "Protects employees, tenants, and visitors",
                                         "May reduce insurance premiums",
                                         "Identifies hazards before they cause harm",

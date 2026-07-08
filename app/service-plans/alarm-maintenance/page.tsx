@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Alarm Maintenance Chesterfield & Derbyshire | NOX Fire & Security",
-    description: "Intruder alarm maintenance and servicing across Chesterfield, Sheffield & Derbyshire. Keep your system in peak condition. Free installation with any plan. Call 07882 959 297.",
-    keywords: "alarm maintenance Chesterfield, intruder alarm servicing Derbyshire, alarm service plan Sheffield, Ajax alarm maintenance, alarm takeover Chesterfield",
+    description: "Intruder alarm maintenance and Ajax alarm servicing across Chesterfield, Sheffield and Derbyshire. Annual checks, batteries, app support, takeovers, fault finding and service plans for homes and businesses.",
+    keywords: "alarm maintenance Chesterfield, intruder alarm servicing Derbyshire, Ajax alarm maintenance Sheffield, alarm takeover Chesterfield, burglar alarm service plan, commercial alarm maintenance, wireless alarm servicing",
     alternates: { canonical: "https://nox-security.co.uk/service-plans/alarm-maintenance" },
 }
 
@@ -28,7 +28,7 @@ const included = [
 
 const testimonials = [
     { name: "James H.", location: "Chesterfield", text: "Absolutely superb service. The Ajax alarm installation was carried out to an excellent standard. Neat, tidy, and they explained everything on the app.", rating: 5 },
-    { name: "Sarah W.", location: "Derbyshire", text: "Clear quote, no hidden extras. Engineers arrived on time and left no mess. Total peace of mind.", rating: 5 },
+    { name: "Sarah W.", location: "Derbyshire", text: "Clear quote, no hidden extras. Engineers arrived on time and left no mess. A proper job from start to finish.", rating: 5 },
 ]
 
 export default function AlarmMaintenancePage() {
@@ -51,13 +51,13 @@ export default function AlarmMaintenancePage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm text-gray-300 font-medium">
-                                🔧 Free installation with any service plan
+                                🔧 Free install with selected service plans
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 Intruder Alarm Maintenance in Chesterfield & Derbyshire
                             </h1>
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                Keep your alarm system performing at its best. Regular servicing from our local engineers ensures your system stays reliable, up to date, and covered — with no nasty surprises.
+                                Keep your intruder alarm reliable after installation. We service Ajax and other alarm systems, check batteries and connectivity, tidy up user access, deal with faults and make sure your system still suits the way the property is used.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-2">
                                 <Link href="/get-quote">
@@ -95,7 +95,7 @@ export default function AlarmMaintenancePage() {
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">What's Included</h2>
                             <p className="text-gray-300 leading-relaxed mb-8">
-                                Our alarm maintenance plan covers everything needed to keep your intruder alarm running perfectly across Chesterfield, Dronfield, Eckington, Clay Cross, Bolsover, and all of Derbyshire.
+                                Our alarm maintenance plan is designed for real homes and businesses: annual checks, practical fault finding, app support, battery checks and a clear service record across Chesterfield, Sheffield, Dronfield, Matlock, Buxton and Derbyshire.
                             </p>
                             <ul className="space-y-3">
                                 {included.map((item, i) => (
@@ -112,12 +112,12 @@ export default function AlarmMaintenancePage() {
                                 <h3 className="text-xl font-bold mb-4">Benefits</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Keeps your insurance valid — insurers often require annual servicing",
-                                        "Extends the life of your equipment",
-                                        "Catches issues before they become failures",
-                                        "Priority callout support for plan customers",
-                                        "Peace of mind that your system works when it matters",
-                                        "Works with existing Ajax, Texecom, Pyronix, and other systems",
+                                        "Helps keep service records clear for customers who need maintenance evidence",
+                                        "Extends the life of your equipment and batteries",
+                                        "Catches weak batteries, signal issues and app problems before they become bigger faults",
+                                        "Priority support for plan customers",
+                                        "Keeps the system practical as staff, keyholders or property use changes",
+                                        "Works with Ajax and many existing Texecom, Pyronix and other alarm systems",
                                     ].map((b, i) => (
                                         <li key={i} className="flex items-start gap-3 text-gray-300 text-sm">
                                             <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
@@ -130,8 +130,8 @@ export default function AlarmMaintenancePage() {
                             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                                 <h3 className="font-bold text-lg mb-3">Also Consider</h3>
                                 <div className="space-y-2">
-                                    <Link href="/service-plans/police-monitoring" className="block text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
-                                        <ArrowRight className="h-4 w-4" /> Police Monitoring
+                                    <Link href="/service-plans/alarm-monitoring" className="block text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
+                                        <ArrowRight className="h-4 w-4" /> Alarm Monitoring
                                     </Link>
                                     <Link href="/service-plans/cctv-maintenance" className="block text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
                                         <ArrowRight className="h-4 w-4" /> CCTV Maintenance

@@ -31,8 +31,8 @@ const reasons = [
   },
   {
     icon: Star,
-    title: "Premium Equipment Only",
-    description: "Ajax alarms and Hikvision CCTV. Industry-leading equipment — we don't cut corners.",
+    title: "Quality Equipment Only",
+    description: "Ajax alarms, professional CCTV and fire safety equipment specified properly around the building — not chosen because it is cheapest.",
   },
 ]
 
@@ -68,10 +68,10 @@ export default function WhyChooseUs() {
         <div className="mt-16 bg-white text-black rounded-2xl p-8 md:p-10 text-center max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-3">
             <Gift className="h-8 w-8" />
-            <h3 className="text-2xl md:text-3xl font-bold">Free Installation with Any Service Plan</h3>
+            <h3 className="text-2xl md:text-3xl font-bold">Free Standard Installation with Selected Service Plans</h3>
           </div>
           <p className="text-gray-700 mb-6 text-lg">
-            Sign up to any ongoing service plan and we'll install your new system completely free. No catches, no small print.
+            Choose a suitable ongoing service plan and standard installation may be included. We'll explain the plan, equipment and monthly costs clearly before you commit.
           </p>
           <Link href="/get-quote">
             <Button size="lg" className="bg-black text-white hover:bg-gray-800 font-bold h-12 px-8">
