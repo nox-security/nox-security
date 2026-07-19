@@ -1,6 +1,8 @@
 export type LinkItem = { href: string; label: string }
 export type TextItem = { title: string; text: string }
 export type FAQItem = { q: string; a: string }
+export type ProductItem = { name: string; description: string; image: string; imageAlt: string }
+export type VideoItem = { title: string; text: string; youtubeId: string }
 
 export type ServicePageData = {
   slug: string
@@ -20,6 +22,10 @@ export type ServicePageData = {
   faq: FAQItem[]
   related: LinkItem[]
   caseStudySlugs: string[]
+  products?: ProductItem[]
+  videos?: VideoItem[]
+  platformTitle?: string
+  platformText?: string
 }
 
 export type PlanPageData = {
@@ -363,105 +369,187 @@ export const areas = {
 export const systemPages: Record<string, ServicePageData> = {
   "intrusion-alarms": {
     slug: "intrusion-alarms",
-    eyebrow: "Intruder alarm installation",
-    title: "Intruder alarms designed around the property",
-    metaTitle: "Intruder Alarm Installation Chesterfield | Ajax Alarm Installer",
-    metaDescription: "Tailored intruder alarm installation in Chesterfield, Sheffield and Derbyshire. Ajax wireless alarms, external detection, app control, monitoring, maintenance and takeovers.",
-    intro: "Professional wired, wireless and hybrid intruder alarm systems for homes and businesses across Chesterfield, Sheffield and Derbyshire. Ajax is our preferred smart platform, but the property and risk come first.",
+    eyebrow: "Ajax intruder alarm installation",
+    title: "Intruder alarms that put you in control of your space",
+    metaTitle: "Ajax Intruder Alarm Installation Chesterfield | NOX",
+    metaDescription: "Ajax intruder alarm installation across Chesterfield, Sheffield and Derbyshire with MotionCam, app control, keypads, sirens, monitoring, maintenance and system takeovers.",
+    intro: "Rule Your Space with a professionally designed intruder alarm for your home or business. NOX is an Ajax Authorised Installation Company, using Ajax as our preferred smart security platform while still designing every system around the property first.",
     image: "/images/intrusion-alarms.png",
-    imageAlt: "Black Ajax wireless intruder alarm equipment installed by NOX in Chesterfield",
-    problemTitle: "A useful alarm must protect the right areas and remain simple to live with",
-    problemText: "NOX assesses entrances, movement routes, outbuildings, external approaches and how the property is occupied. The final design can include door protection, internal and external detection, perimeter devices, keypads, fobs, app control and photo verification where suitable.",
-    benefits: ["Ajax wireless alarm options", "Wired and hybrid solutions where appropriate", "Internal and external detection", "Perimeter and outbuilding protection", "App, keypad and fob control", "Photo verification where suitable", "Professional monitoring options", "Maintenance and system takeovers"],
-    suitableFor: ["Homes and driveways", "Garages and outbuildings", "Landlords and HMOs", "Retail and offices", "Warehouses and industrial units", "Hospitality and multi-site businesses"],
+    imageAlt: "Black Ajax intruder alarm system with hub keypad and detectors installed by NOX",
+    problemTitle: "The right alarm is more than a hub and a few sensors",
+    problemText: "A useful system needs the correct mix of door protection, internal detection, photo verification, sirens, control devices and carefully selected external protection. NOX assesses entrances, movement routes, bedrooms, garages, outbuildings and daily routines before recommending equipment.",
+    benefits: ["Ajax wireless and hybrid alarm options", "MotionCam photo verification where suitable", "DoorProtect and internal movement detection", "KeyPad TouchScreen, KeyPad Plus, fobs and tags", "StreetSiren and internal siren options", "Night mode and part-setting", "Professional alarm monitoring", "Maintenance for new and suitable existing systems"],
+    suitableFor: ["Homes and family properties", "Garages and outbuildings", "Landlords and HMOs", "Retail and offices", "Warehouses and industrial units", "Hospitality and multi-site businesses"],
     process: [
-      { title: "Security survey", text: "We assess entry points, property use, risks and the way you want to control the alarm." },
-      { title: "Clear design and quotation", text: "Equipment, installation and optional monitoring or maintenance are explained without forcing a fixed package." },
-      { title: "Professional installation", text: "Devices are positioned carefully, the system is tested fully and the working area is left clean and tidy." },
-      { title: "Handover and support", text: "We set up users, app access and operating modes, then remain available for servicing, monitoring and future changes." }
+      { title: "Security survey", text: "We assess entry points, routines, risks, existing equipment and how you want to control the alarm." },
+      { title: "System design", text: "The quotation explains each recommended Ajax or alternative device, installation position and optional ongoing service." },
+      { title: "Professional installation", text: "Devices are positioned carefully, communication is tested and the system is configured around the property." },
+      { title: "Handover and support", text: "Users, app access, night mode, notifications and practical operation are explained before monitoring or maintenance is activated." }
     ],
     details: [
-      { title: "Residential protection", text: "Night mode, pet-aware layouts, driveway approaches, garages and detached outbuildings can be considered as part of one clear design." },
-      { title: "Commercial alarms", text: "Area control, staff access, opening and closing routines and visual verification can be considered for shops, offices and operational sites." },
-      { title: "Monitoring and maintenance", text: "Professional alarm monitoring, keyholder contact, health checks, battery checks, firmware updates and annual service records are available." },
-      { title: "Existing-system takeovers", text: "Suitable existing systems can be inspected, faulted, serviced and upgraded only where the condition and compatibility make sense." }
+      { title: "MotionCam and visual verification", text: "Ajax MotionCam can provide a sequence of still images following an alarm event, helping authorised users or monitoring operators understand what triggered the system where the chosen device and service support it." },
+      { title: "Control that fits the customer", text: "Use the Ajax app, keypad, tags or fobs depending on the people using the property. Individual users and operating modes can be configured during handover." },
+      { title: "Monitoring and maintenance", text: "Professional alarm handling, keyholder contact, system health checks, battery review, firmware updates and annual service records are available." },
+      { title: "Traditional and existing systems", text: "NOX also services and assesses suitable wired, hybrid and established alarm systems. A takeover inspection confirms condition, access and the sensible route forward." }
     ],
     faq: [
-      { q: "Do you only install Ajax alarms?", a: "Ajax is NOX's preferred smart security platform, but the property, existing equipment and customer requirement are assessed before the correct system is recommended." },
-      { q: "How do I arrange a security survey?", a: "Start with the NOX website enquiry form. The team will review the property and arrange a survey where it is needed before quotation." },
-      { q: "Can an alarm cover garages and outbuildings?", a: "Yes, subject to survey, layout and reliable communication range. Internal, external and perimeter protection can be combined where suitable." },
-      { q: "Do I have to take monitoring?", a: "No. Monitoring and annual maintenance are optional services and are explained separately in the quotation." }
+      { q: "Are you Ajax authorised installers?", a: "NOX operates as an Ajax Authorised Installation Company and uses Ajax as its preferred smart security platform. The property and requirement still come before the product choice." },
+      { q: "What is Ajax MotionCam?", a: "MotionCam is an Ajax motion detector with a built-in camera for photo verification. The exact photo features depend on the selected model, hub, permissions and system configuration." },
+      { q: "Can the alarm include external protection?", a: "Yes. External detection can be added where the site layout and survey support it, but perimeter protection is designed as its own layer rather than copied from the internal alarm layout." },
+      { q: "Can you maintain an older alarm?", a: "Yes. NOX can inspect many traditional wired, wireless and hybrid systems, subject to condition, access, parts availability and compatibility." }
     ],
-    related: [{ href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/commercial/intruder-alarms", label: "Commercial intruder alarms" }],
-    caseStudySlugs: ["dronfield-timber-perimeter", "peak-electronic-security", "sheffield-residential-security"]
+    related: [{ href: "/systems/perimeter-protection", label: "Perimeter protection" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/commercial/intruder-alarms", label: "Commercial intruder alarms" }],
+    caseStudySlugs: ["peak-electronic-security", "sheffield-residential-security", "chesterfield-residential-ajax"],
+    platformTitle: "Rule Your Space with Ajax",
+    platformText: "Ajax brings the alarm, visual verification, sirens, user controls, automation and selected video devices into one connected platform where suitable. NOX handles the survey, design, installation, configuration and ongoing support.",
+    products: [
+      { name: "Ajax Hub", description: "The control centre that connects devices, users, communication channels and the Ajax app. The hub is selected around the system size and required features.", image: "/images/Ajax-Hub-2-Plus.webp", imageAlt: "Ajax Hub 2 Plus smart alarm control panel" },
+      { name: "MotionCam", description: "Indoor motion detection with photo verification capabilities on suitable Ajax systems, helping provide visual context after an alarm event.", image: "/images/MotionCam.jpeg", imageAlt: "Ajax MotionCam detector with photo verification" },
+      { name: "DoorProtect", description: "Opening detection for doors and windows, positioned around the actual entry routes and part-setting requirements of the property.", image: "/images/Doorprotect.jpeg", imageAlt: "Ajax DoorProtect door and window detector" },
+      { name: "KeyPad & user controls", description: "Touchscreen or button keypads, tags, fobs and app control make the system straightforward for families, staff and authorised users.", image: "/images/Ajax-KeyPad.jpeg", imageAlt: "Ajax KeyPad for controlling an intruder alarm" },
+      { name: "StreetSiren", description: "An external audible and visual deterrent configured as part of the alarm design, with placement considered during the survey.", image: "/images/StreetSiren.jpeg", imageAlt: "Ajax StreetSiren external alarm sounder" },
+      { name: "Monitoring-ready design", description: "Where monitoring is selected, the system can support professional alarm handling, keyholder contact and agreed escalation procedures.", image: "/images/monitoring.png", imageAlt: "Professional alarm monitoring and keyholder support" }
+    ],
+    videos: [
+      { title: "Ajax intruder protection", text: "See how the Ajax platform brings detection, control and app management together.", youtubeId: "9ffQhBwXUDg" },
+      { title: "Perimeter protection", text: "See how external detection can add an earlier layer around the building.", youtubeId: "Nm0HIK8vjso" }
+    ]
+  },
+  "perimeter-protection": {
+    slug: "perimeter-protection",
+    eyebrow: "Ajax perimeter and external detection",
+    title: "Perimeter protection that detects movement before the building is entered",
+    metaTitle: "Ajax Perimeter Protection Chesterfield | Outdoor Detection",
+    metaDescription: "Ajax perimeter protection across Chesterfield, Sheffield and Derbyshire with Curtain Outdoor, MotionCam Outdoor, external sirens, photo verification and maintenance.",
+    intro: "External protection is a separate security layer for driveways, side access, yards, boundaries, windows, doors and outbuildings. NOX designs it around the approach routes and environment rather than copying the internal alarm system outside.",
+    image: "/images/perimeter.jpg",
+    imageAlt: "Ajax outdoor perimeter detector protecting a property boundary",
+    problemTitle: "Outdoor detection needs precise design and testing",
+    problemText: "Sunlight, vegetation, animals, traffic, gates, paths, installation height and the direction of travel can all influence performance. The survey identifies where an early warning layer adds value and which device pattern suits each approach.",
+    benefits: ["Curtain Outdoor narrow-beam detection", "MotionCam Outdoor photo verification", "High-mount outdoor detection options", "Driveway and side-access coverage", "External sirens and app alerts", "Protection for yards and outbuildings", "Integration with Ajax intruder alarms", "Ongoing maintenance and adjustment"],
+    suitableFor: ["Driveways and side access", "Detached garages and outbuildings", "Rural properties", "Commercial yards", "Industrial boundaries", "Timber, storage and operational sites"],
+    process: [
+      { title: "Perimeter survey", text: "We walk the external approaches, identify likely routes and consider environmental movement or obstructions." },
+      { title: "Device and detection pattern", text: "Curtain, wide-area, camera-assisted or high-mount detection is chosen around the exact approach." },
+      { title: "Installation and testing", text: "Mounting height, angle, range, signal and detection zones are tested and adjusted on site." },
+      { title: "Handover and maintenance", text: "Users are shown external zones, notifications and operating modes, with periodic cleaning and testing available." }
+    ],
+    details: [
+      { title: "Curtain Outdoor", text: "A narrow curtain-style detection pattern can protect windows, doors, passages and boundary lines without treating the whole outside area as one zone." },
+      { title: "MotionCam Outdoor", text: "Wide-area outdoor detection with photo verification options can provide visual context following a detected event on suitable systems." },
+      { title: "High-mount detection", text: "Selected high-mount devices can protect wider commercial or residential approaches where the correct mounting position and field of view are available." },
+      { title: "Separate from the internal alarm", text: "The external layer can be armed, zoned and managed around how the property is used rather than simply mirroring internal movement detectors." }
+    ],
+    faq: [
+      { q: "Is perimeter protection the same as an intruder alarm?", a: "It connects to the wider security system, but it is designed as a separate external layer with its own devices, detection patterns and environmental considerations." },
+      { q: "Can it protect a driveway or side path?", a: "Yes, subject to survey. Curtain or wider-area detectors can be selected around the route, mounting positions and surrounding movement." },
+      { q: "Can outdoor detectors take photos?", a: "Selected Ajax MotionCam Outdoor and CurtainCam models can support photo verification features when paired with compatible equipment and correctly configured permissions." },
+      { q: "Does external detection need maintenance?", a: "Yes. Outdoor devices benefit from periodic testing, cleaning, battery checks, firmware review and adjustment if the environment changes." }
+    ],
+    related: [{ href: "/systems/intrusion-alarms", label: "Intruder alarms" }, { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }],
+    caseStudySlugs: ["dronfield-timber-perimeter", "chesterfield-residential-ajax"],
+    platformTitle: "An earlier warning layer around the property",
+    platformText: "Ajax external detection can protect approaches, windows, doors, yards and outbuildings before an intruder reaches the internal alarm zones. Device selection and positioning are confirmed through a dedicated perimeter survey.",
+    products: [
+      { name: "Curtain Outdoor", description: "Narrow curtain-style outdoor detection for windows, doorways, passages and selected boundary lines.", image: "/images/SingleCurtain.jpeg", imageAlt: "Ajax Curtain Outdoor perimeter detector" },
+      { name: "DualCurtain Outdoor", description: "Two opposing detection curtains can cover longer boundary runs or approaches from a central mounting point where suitable.", image: "/images/DualCurtain.jpeg", imageAlt: "Ajax DualCurtain Outdoor detector" },
+      { name: "MotionCam Outdoor", description: "Outdoor motion detection with camera-assisted verification options, anti-masking features and adjustable detection on suitable Ajax systems.", image: "/images/AjaxDualcurtain.jpg", imageAlt: "Ajax outdoor detector for perimeter protection" },
+      { name: "StreetSiren", description: "External audible and visual indication can reinforce the perimeter layer and wider intruder alarm system.", image: "/images/StreetSiren.jpeg", imageAlt: "Ajax external StreetSiren" },
+      { name: "Outbuilding protection", description: "Garages, workshops, stores and detached buildings can be brought into the wider Ajax system subject to survey and communication range.", image: "/images/perimeter.jpg", imageAlt: "External security protecting a garage and outbuilding" },
+      { name: "Maintenance and adjustment", description: "Outdoor systems need cleaning, signal checks, battery review, firmware updates and retesting as the environment changes.", image: "/images/maintenance.png", imageAlt: "Outdoor security detector maintenance" }
+    ],
+    videos: [{ title: "Ajax outdoor protection", text: "See how external detection can create an earlier warning layer around a property.", youtubeId: "Nm0HIK8vjso" }]
   },
   cctv: {
     slug: "cctv",
-    eyebrow: "CCTV installation",
-    title: "CCTV designed to capture useful detail",
-    metaTitle: "CCTV Installation Chesterfield & Derbyshire | Commercial CCTV Sheffield",
-    metaDescription: "Professional CCTV installation in Chesterfield, Sheffield and Derbyshire. Ajax CCTV, Hikvision ColourVu, NVR recording, smart detection, remote viewing and maintenance.",
-    intro: "High-resolution CCTV for homes, businesses, yards, industrial sites and rural properties. NOX plans every view around entrances, vehicles, boundaries, working areas and the evidence the customer may actually need.",
+    eyebrow: "Ajax and professional CCTV installation",
+    title: "CCTV planned around the view, detail and evidence you need",
+    metaTitle: "CCTV Installation Chesterfield & Derbyshire | Ajax & Hikvision",
+    metaDescription: "Professional CCTV installation in Chesterfield, Sheffield and Derbyshire with Ajax cameras, NVR recording, Hikvision ColourVu, smart detection, remote viewing and maintenance.",
+    intro: "NOX installs Ajax CCTV, Hikvision ColourVu and other professional systems for homes and businesses. Camera choice follows the scene, lighting, recording requirement and network — not a fixed camera package.",
     image: "/images/cctv-systems.png",
-    imageAlt: "Professional black CCTV camera supplied for a Chesterfield property",
-    problemTitle: "More cameras do not automatically create better coverage",
-    problemText: "Camera height, lens choice, lighting, overlap, recording quality and playback all matter. We plan the system around the scene each camera must cover, then configure recording, remote viewing and smart detection properly.",
-    benefits: ["Ajax CCTV systems", "Hikvision ColourVu and other professional options", "NVR and PoE recording", "High-resolution camera choices", "Full-colour night viewing options", "Smart human and vehicle detection", "Secure remote viewing", "CCTV maintenance and takeovers"],
+    imageAlt: "Professional Ajax and CCTV camera system installed by NOX",
+    problemTitle: "Useful CCTV starts with the image you need to recover later",
+    problemText: "Camera height, lens choice, lighting, overlap, network design, recorder capacity and playback all matter. NOX plans what each view must show, then configures recording, remote access and smart event detection properly.",
+    benefits: ["Ajax 5MP and 8MP camera options", "Ajax NVR integration", "Hikvision ColourVu and other professional cameras", "NVR and PoE recording", "Human and vehicle event filtering", "Full-colour night viewing options", "Secure app and remote viewing", "Maintenance, takeovers and recorder upgrades"],
     suitableFor: ["Homes and driveways", "Retail and showrooms", "Hospitality venues", "Garages and yards", "Warehouses and industrial sites", "Rural and multi-site properties"],
     process: [
-      { title: "Coverage survey", text: "We review views, lighting, mounting positions, cable routes, recording needs and remote access." },
-      { title: "Camera plan", text: "The quotation explains what each camera is intended to capture rather than simply listing equipment." },
-      { title: "Clean installation", text: "Cables are routed carefully, cameras are aligned properly and the recorder is configured for useful playback." },
-      { title: "Handover", text: "We demonstrate live view, playback, event search, notifications and secure remote access." }
+      { title: "Coverage survey", text: "We review required views, lighting, mounting positions, cable routes, network access and recording needs." },
+      { title: "Camera and recorder plan", text: "The quotation explains camera positions, intended views, recorder size and optional monitoring or maintenance." },
+      { title: "Clean installation", text: "Cables are routed carefully, cameras are aligned properly and the recorder or NVR is configured for practical playback." },
+      { title: "Handover and aftercare", text: "We demonstrate live view, playback, event search and remote access, then offer annual maintenance for new or suitable existing systems." }
     ],
     details: [
-      { title: "Residential CCTV", text: "Driveways, entrances, side access and outbuildings can be covered with a system that remains straightforward to use." },
-      { title: "Commercial CCTV", text: "Larger camera counts, yards, stock areas, vehicle movements and multiple access points can be coordinated through a suitable recorder and network." },
-      { title: "Maintenance", text: "Annual service options can include camera cleaning, recorder and hard-drive health checks, playback tests, firmware and remote-viewing checks." },
-      { title: "Takeovers and upgrades", text: "Existing coax, IP and networked CCTV can be assessed for repair, remote-access recovery, recorder replacement or phased upgrade." }
+      { title: "Ajax CCTV", text: "Ajax cameras and NVRs can bring video into the wider Ajax ecosystem, giving suitable customers one app for alarms, cameras and selected automation." },
+      { title: "Hikvision ColourVu", text: "ColourVu and other professional camera options remain available where they better suit the lighting, required image or existing infrastructure." },
+      { title: "CCTV maintenance", text: "Camera cleaning, image checks, recorder and hard-drive review, playback testing, firmware and remote-viewing checks help keep systems useful." },
+      { title: "Traditional and existing CCTV", text: "NOX can assess suitable coax, IP and networked systems for faults, lost access, camera replacement, recorder upgrades or phased improvement." }
     ],
     faq: [
       { q: "Do you install Ajax CCTV and Hikvision?", a: "Yes. NOX works with Ajax CCTV, Hikvision ColourVu and other professional systems, selecting equipment around the site and required coverage." },
-      { q: "Can I view the cameras remotely?", a: "Remote viewing can be configured where a suitable internet connection and secure app access are available." },
-      { q: "Can you take over an existing CCTV system?", a: "Yes. We can inspect suitable existing systems, test cameras and recording, resolve faults and recommend sensible upgrades." },
-      { q: "Do commercial systems need a survey?", a: "A survey is strongly recommended for commercial CCTV so views, lighting, cabling, recorder capacity and storage requirements can be assessed properly." }
+      { q: "What does an Ajax NVR do?", a: "An Ajax NVR records compatible IP camera footage and can integrate suitable video into the Ajax platform. Channel capacity and storage are selected around the project." },
+      { q: "Can you maintain an older CCTV system?", a: "Yes. Suitable analogue, coax, IP and networked CCTV can be inspected and serviced, subject to condition, access, compatibility and parts availability." },
+      { q: "Do commercial systems need a survey?", a: "A survey is strongly recommended so views, lighting, cabling, network capacity, recorder channels and storage can be assessed properly." }
     ],
     related: [{ href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/commercial/cctv", label: "Commercial CCTV" }, { href: "/case-studies", label: "CCTV case studies" }],
-    caseStudySlugs: ["chesterfield-scrapyard-cctv", "buxton-industrial-security", "chatsworth-estate-cctv-upgrade"]
+    caseStudySlugs: ["chesterfield-scrapyard-cctv", "buxton-industrial-security", "chatsworth-estate-cctv-upgrade"],
+    platformTitle: "Ajax CCTV inside the wider security platform",
+    platformText: "For suitable projects, Ajax cameras and NVR recording can sit alongside the intruder alarm in one platform. NOX also continues to specify Hikvision ColourVu and other professional CCTV where they are the better technical fit.",
+    products: [
+      { name: "Ajax cameras", description: "Professional IP cameras available in different resolutions and formats, selected around the view and lighting requirement.", image: "/images/Ajax Cameras.jpg", imageAlt: "Ajax professional CCTV cameras" },
+      { name: "Ajax NVR", description: "Network video recording for compatible IP cameras, with channel and storage options selected around the system size.", image: "/images/AjaxNVR.jpeg", imageAlt: "Ajax NVR network video recorder" },
+      { name: "Hikvision ColourVu", description: "Full-colour night imaging options for suitable scenes where useful detail after dark is a key requirement.", image: "/images/HikvisionDome.jpg", imageAlt: "Hikvision ColourVu CCTV dome camera" },
+      { name: "PoE network design", description: "Power and data through structured cabling, planned around recorder location, switch capacity, cable routes and future expansion.", image: "/images/cctv-systems-image.png", imageAlt: "Professional PoE CCTV installation equipment" },
+      { name: "Remote viewing", description: "Secure app access for live view, playback and event search, configured and demonstrated during handover.", image: "/images/Ajax camera.webp", imageAlt: "Ajax camera viewed through a mobile security app" },
+      { name: "Annual maintenance", description: "Cleaning, image review, recording checks, playback tests and system-health checks for new and suitable traditional CCTV systems.", image: "/images/maintenance.png", imageAlt: "CCTV servicing and maintenance by NOX" }
+    ]
   },
   "fire-safety": {
     slug: "fire-safety",
-    eyebrow: "Fire alarm installation and servicing",
-    title: "Fire safety systems with the property requirements in mind",
-    metaTitle: "Fire Alarm Installation & Servicing Chesterfield",
-    metaDescription: "Fire alarm installation and fire alarm servicing in Chesterfield, Sheffield and Derbyshire, plus emergency lighting, risk assessments and commercial compliance support.",
-    intro: "NOX supports commercial premises, landlords, HMOs and suitable residential properties with fire alarm installation, servicing, system takeovers and coordinated fire safety support.",
-    image: "/images/fire-safety.png",
-    imageAlt: "Commercial fire alarm equipment for installation and servicing in Chesterfield",
-    problemTitle: "Fire systems need clear design, testing, records and ongoing attention",
-    problemText: "The correct approach depends on the building, use, occupancy, existing equipment and relevant requirements. NOX keeps installation, servicing and defect reporting clear, with emergency lighting and risk assessment support available where needed.",
-    benefits: ["Fire alarm installation", "Fire alarm servicing", "Wireless and wired options", "Existing-system takeovers", "Fault resolution and remedial work", "Emergency lighting support", "Fire risk assessments", "Commercial fire compliance packages"],
+    eyebrow: "Fire alarm installation, EN54 systems and servicing",
+    title: "Fire alarm systems supported from installation through annual maintenance",
+    metaTitle: "Fire Alarm Installation & Servicing Chesterfield | EN54",
+    metaDescription: "Fire alarm installation and servicing in Chesterfield, Sheffield and Derbyshire, including Ajax EN54 Fire Hub systems, traditional fire alarms, takeovers and maintenance.",
+    intro: "NOX installs and services modern wireless and traditional fire alarm systems for commercial premises, landlords and HMOs. The service includes new Ajax EN54 options, established conventional or addressable systems, takeovers, defect reporting and planned maintenance.",
+    image: "/images/Ajax-EN54-Fire .webp",
+    imageAlt: "Ajax EN54 fire alarm system including Fire Hub and wireless devices",
+    problemTitle: "A fire alarm needs ongoing attention, not just an installation date",
+    problemText: "The building, occupancy, fire strategy, existing equipment, records and ongoing testing requirements all influence the right solution. NOX separates new installation, routine servicing, faults and remedial work clearly so the responsible person knows what has been completed and what needs attention next.",
+    benefits: ["Ajax EN54 wireless fire alarm options", "EN54 Fire Hub and compatible line devices", "Conventional and addressable fire alarm servicing", "Existing-system takeovers", "Panel, detector and sounder testing", "Fault finding and remedial quotations", "Emergency lighting coordination", "Annual Fire Compliance Packages"],
     suitableFor: ["Shops and retail", "Offices", "Warehouses and industrial units", "Hospitality", "HMOs and landlords", "Multi-site property portfolios"],
     process: [
-      { title: "Assess the building", text: "We review the property type, occupancy, existing records, system condition and the stated project requirement." },
-      { title: "Define the work", text: "The quotation separates installation, service, defects, takeover work and optional ongoing support clearly." },
-      { title: "Complete and test", text: "Installation or servicing is completed with the relevant standards and property requirements in mind." },
-      { title: "Document and support", text: "Records and defect information are issued for the work completed, with recurring servicing available." }
+      { title: "Building and system review", text: "We review the premises, use, available fire information, existing panel, device quantities, records and access." },
+      { title: "Clear installation or service scope", text: "New installation, routine service, takeover work and defects are separated clearly in the quotation." },
+      { title: "Engineer attendance", text: "The agreed installation or maintenance is completed with the relevant standards and property requirements in mind." },
+      { title: "Records and recurring support", text: "Service information and identified defects are issued, with the next inspection and any remedials explained clearly." }
     ],
     details: [
-      { title: "Installation", text: "New fire alarm work is designed around the property type, use and the agreed specification rather than a generic package." },
-      { title: "Servicing", text: "Existing systems can be inspected and serviced, with device testing, panel checks and defects recorded for the work completed." },
-      { title: "Takeovers", text: "NOX can assess suitable existing fire alarm systems and create a clearer route for service, remedial work and future maintenance." },
-      { title: "Joined-up compliance support", text: "Commercial customers can coordinate fire alarm servicing, emergency lighting, extinguisher servicing and fire risk assessment support where included in the agreed package." }
+      { title: "Ajax EN54 Fire Hub", text: "The EN54 Fire Hub is the control and indicating equipment for Ajax EN54 fire systems and can support a joined-up Ajax environment on suitable commercial projects." },
+      { title: "Traditional fire alarm servicing", text: "NOX services many conventional, addressable, wired and established fire alarm systems, subject to access, condition, documentation and device compatibility." },
+      { title: "Takeovers and defect resolution", text: "An initial inspection can establish panel access, system condition, device quantities, outstanding faults and the sensible maintenance route." },
+      { title: "Fire Compliance Packages", text: "Fire alarm servicing can be coordinated with emergency lighting and other agreed fire-safety services under a clearer annual arrangement." }
     ],
     faq: [
-      { q: "Do you service existing fire alarms?", a: "Yes. NOX can inspect and service many existing systems, subject to access, condition, documentation and compatibility." },
-      { q: "Can fire servicing be combined with emergency lighting?", a: "Yes. Commercial packages can coordinate fire alarm servicing and emergency lighting, with other agreed fire safety services added where required." },
-      { q: "Do you provide service records?", a: "Records, test information and identified defects are issued for the work completed." },
-      { q: "Do you make blanket compliance guarantees?", a: "No. Work is described against the agreed scope, relevant standards and property requirements. Any limitations or defects are recorded clearly." }
+      { q: "What is the Ajax EN54 Fire Hub?", a: "It is Ajax control and indicating equipment for its EN54 fire line, with a touchscreen interface and support for compatible wireless fire devices. The full system design still depends on the building and agreed fire requirements." },
+      { q: "Do you service traditional fire alarms?", a: "Yes. NOX can service many conventional, addressable and established systems, subject to condition, access, records and parts availability." },
+      { q: "Can you take over an existing fire alarm?", a: "Yes. A takeover inspection can establish the system condition, access, documentation, faults and future service scope." },
+      { q: "Can servicing include emergency lighting?", a: "Yes. Fire alarm servicing and emergency lighting can be coordinated where included in the written service package." }
     ],
-    related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessments" }],
-    caseStudySlugs: ["banana-industries-fire-security", "chesterfield-kitchen-showroom"]
+    related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessments" }],
+    caseStudySlugs: ["banana-industries-fire-security", "chesterfield-kitchen-showroom"],
+    platformTitle: "Modern Ajax EN54 fire protection and traditional-system expertise",
+    platformText: "NOX can introduce Ajax EN54 wireless fire technology where it suits the building while continuing to service and support established wired, conventional and addressable fire alarm systems.",
+    products: [
+      { name: "EN54 Fire Hub Jeweller", description: "Touchscreen control and indicating equipment for the Ajax EN54 fire line, selected and configured as part of a complete fire-system design.", image: "/images/EN54FireHub.jpeg", imageAlt: "Ajax EN54 Fire Hub Jeweller touchscreen fire alarm panel" },
+      { name: "EN54 fire detection", description: "Compatible wireless detection devices are selected around rooms, risks, zones and the agreed fire-alarm design.", image: "/images/Ajax-EN54-Fire .webp", imageAlt: "Ajax EN54 wireless fire alarm detectors and devices" },
+      { name: "Manual call points", description: "Manual activation devices are positioned within the fire-alarm design and included in routine testing and service records.", image: "/images/ManualCallPointFireAlarm.jpeg", imageAlt: "Fire alarm manual call point" },
+      { name: "Traditional fire panels", description: "NOX also services suitable conventional, addressable and established systems rather than limiting maintenance to new Ajax installations.", image: "/images/FireAlaramServicingImage.jpeg", imageAlt: "Engineer servicing a traditional commercial fire alarm panel" },
+      { name: "Routine servicing", description: "Panel checks, detector and sounder testing, battery review, logbook information and defect reporting within the agreed service scope.", image: "/images/fire-servicing.jpeg", imageAlt: "Professional fire alarm servicing and testing" },
+      { name: "Compliance support", description: "Fire-alarm maintenance can be coordinated with emergency lighting and agreed annual fire-safety services.", image: "/images/fire-safety.png", imageAlt: "Commercial fire safety and compliance support" }
+    ],
+    videos: [
+      { title: "Ajax fire protection", text: "Explore how Ajax fire devices and control equipment can support a modern connected fire system.", youtubeId: "XZDNd3ud-ck" }
+    ]
   },
   "emergency-lighting": {
     slug: "emergency-lighting",

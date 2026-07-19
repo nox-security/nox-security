@@ -7,7 +7,7 @@ const residential = [
   ["Residential Overview", "/residential"],
   ["Intruder Alarms", "/systems/intrusion-alarms"],
   ["CCTV Systems", "/systems/cctv"],
-  ["Perimeter Protection", "/systems/intrusion-alarms"],
+  ["Perimeter Protection", "/systems/perimeter-protection"],
   ["Monitoring & Maintenance", "/service-plans"]
 ]
 
@@ -59,7 +59,7 @@ export default function Header() {
           <Link href="/contact">Contact</Link>
         </nav>
         <div className="header-actions">
-          <Link className="button button-light button-small" href="/get-quote">Get a Free Quote</Link>
+          <Link className="button button-light button-small" href="/get-quote">Request Your Survey</Link>
         </div>
         <button className="menu-button" aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span></span><span></span><span></span>
@@ -80,7 +80,7 @@ export default function Header() {
           <Link onClick={() => setOpen(false)} href="/about-us">About Us</Link>
           <Link onClick={() => setOpen(false)} href="/contact">Contact</Link>
           <div className="mobile-nav-actions">
-            <Link onClick={() => setOpen(false)} className="button button-light" href="/get-quote">Get a Free Quote</Link>
+            <Link onClick={() => setOpen(false)} className="button button-light" href="/get-quote">Request Your Survey</Link>
           </div>
         </nav>
       )}

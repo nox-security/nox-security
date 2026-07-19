@@ -6,12 +6,12 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-conversion">
         <div>
-          <span className="eyebrow">One clear next step</span>
-          <h2>Tell us about the property and what you need.</h2>
-          <p>Use the same enquiry route for residential, commercial, installation, servicing, repairs and system takeovers.</p>
+          <span className="eyebrow">Request your security survey</span>
+          <h2>Tell us what you want to protect and the NOX team will guide the next step.</h2>
+          <p>Use one simple route for a new system, servicing, repairs, monitoring or a takeover — with phone and WhatsApp available too.</p>
         </div>
         <div className="button-row">
-          <Link className="button button-light" href="/get-quote">Get a Free Quote</Link>
+          <Link className="button button-light" href="/get-quote">Request Your Security Survey</Link>
         </div>
       </div>
       <div className="footer-grid">
@@ -25,6 +25,7 @@ export default function Footer() {
           <Link href="/residential">Residential Overview</Link>
           <Link href="/systems/intrusion-alarms">Intruder Alarms</Link>
           <Link href="/systems/cctv">CCTV Systems</Link>
+          <Link href="/systems/perimeter-protection">Perimeter Protection</Link>
           <Link href="/service-plans/alarm-monitoring">Alarm Monitoring</Link>
           <Link href="/service-plans">Aftercare & Service Plans</Link>
         </div>
