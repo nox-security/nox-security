@@ -1,34 +1,26 @@
-# NOX Fire & Security Website v2.6
+# NOX Fire & Security Website v3.0
 
-Premium Next.js website for NOX Fire & Security, built around one clear customer journey:
+The v3.0 website is an evolution of the approved v2.6 working base. It preserves the existing premium black-and-white design and main page structure while strengthening conversion, local SEO, real-project proof and the separation between new installations and ongoing service plans.
 
-- **Get a Free Quote** — one GoHighLevel Website Enquiry form using ID `8FchnjOrpZ4ufh1TiW8k`
-- The NOX team reviews the enquiry and arranges a property survey where it is required before quotation.
+## Primary customer journey
 
-## Main sections
+The website directs residential and commercial visitors towards one clear conversion route: **Request Your Free Security Survey**. The GoHighLevel Website Enquiry form is embedded using form ID `8FchnjOrpZ4ufh1TiW8k`.
 
-- Homepage customer journey with residential and commercial positioning
-- Intruder alarm, CCTV, fire alarm, emergency lighting and fire risk assessment pages
-- Monitoring, maintenance, takeover and annual service-plan pages
-- Commercial CCTV, intruder, fire and multi-system support pages
-- Factual NOX case-study examples
-- Verified customer review content
-- Advice and blog guides
-- Chesterfield, Sheffield, Derbyshire and surrounding local SEO pages
-- About, Contact, Reviews, Privacy, Terms and Cookie pages
-- LocalBusiness, Service, Article and visible FAQ structured data
-- Sitemap, robots, canonical metadata and descriptive image alt text
+## Main positioning
 
-## Local development
+- Residential intruder alarms and CCTV for family homes, semi-detached properties and larger homes.
+- Commercial Fire & Security systems for shops, offices, warehouses, hospitality, industrial units, HMOs and multi-system sites.
+- Ongoing revenue routes through monitoring, maintenance, takeovers, Fire alarm servicing, emergency-lighting servicing and compliance packages.
+- Real NOX installations and case studies used throughout instead of generic stock imagery wherever suitable.
+
+## Development
 
 ```bash
 npm ci
 npm run dev
-```
-
-## Verification
-
-```bash
 npm run typecheck
 npm run build
+npm run start
 ```
+
+The project uses the public npm registry through `.npmrc`. Do not replace the public registry URLs in `package-lock.json` with machine-specific or private registry URLs.

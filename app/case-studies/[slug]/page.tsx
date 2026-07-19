@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { caseStudies } from "@/lib/content"
-import { ContactActions, ConversionPanel, JsonLd, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { Breadcrumbs, ContactActions, ConversionPanel, JsonLd, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
 
 export function generateStaticParams() {
@@ -38,8 +38,19 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     mainEntityOfPage: `${site.url}/case-studies/${project.slug}`
   }
 
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      { "@type": "ListItem", position: 2, name: "Case Studies", item: `${site.url}/case-studies` },
+      { "@type": "ListItem", position: 3, name: project.title, item: `${site.url}/case-studies/${project.slug}` }
+    ]
+  }
   return <>
-    <JsonLd data={schema}/>
+    <JsonLd data={schema}/><JsonLd data={breadcrumbSchema}/>
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Case Studies", href: "/case-studies" }, { label: project.title }]} />
     <section className="project-hero">
       <div className="project-hero-media"><img src={project.image} alt={project.alt}/></div>
       <div className="project-hero-overlay"/>

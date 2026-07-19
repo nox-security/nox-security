@@ -24,8 +24,8 @@ export function pageMetadata(title: string, description: string, path: string): 
       siteName: site.name,
       locale: "en_GB",
       type: "website",
-      images: [{ url: `${site.url}/images/hero-house.webp`, width: 1024, height: 602, alt: "NOX Fire & Security installation in Derbyshire" }]
+      images: [{ url: `${site.url}/images/nox-og-v3.jpg`, width: 1200, height: 630, alt: "NOX Fire & Security systems and real local installations" }]
     },
-    twitter: { card: "summary_large_image", title, description, images: [`${site.url}/images/hero-house.webp`] }
+    twitter: { card: "summary_large_image", title, description, images: [`${site.url}/images/nox-og-v3.jpg`] }
   }
 }

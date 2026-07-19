@@ -2,12 +2,13 @@ import type { MetadataRoute } from "next"
 import { areas, caseStudies, planPages, systemPages } from "@/lib/content"
 import { blogPosts } from "@/lib/blog"
 import { site } from "@/lib/site"
+import { landingPageList } from "@/lib/landing"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
   const core = [
     "", "/residential", "/systems", "/service-plans", "/commercial", "/commercial/cctv", "/commercial/intruder-alarms", "/commercial/fire-compliance",
-    "/areas-we-serve", "/about-us", "/contact", "/get-quote", "/case-studies", "/reviews", "/blog",
+    "/areas-we-serve", "/about-us", "/contact", "/get-quote", "/case-studies", "/reviews", "/blog", "/services",
     "/privacy-policy", "/terms-conditions", "/cookie-policy"
   ]
   const urls = [
@@ -16,7 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...Object.keys(planPages).map(slug => `/service-plans/${slug}`),
     ...Object.keys(areas).map(slug => `/areas/${slug}`),
     ...blogPosts.map(post => `/blog/${post.slug}`),
-    ...caseStudies.map(project => `/case-studies/${project.slug}`)
+    ...caseStudies.map(project => `/case-studies/${project.slug}`),
+    ...landingPageList.map(page => `/services/${page.slug}`)
   ]
   return urls.map((path, index) => ({
     url: `${site.url}${path}`,

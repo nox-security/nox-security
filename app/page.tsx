@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { BlogGrid, CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, JsonLd, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip, VideoShowcase } from "@/components/marketing"
+import { BlogGrid, CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, JsonLd, LocalSearchLinks, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip, VideoShowcase } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
@@ -22,12 +22,12 @@ const keyAreas = [
 ]
 
 const ajaxProducts = [
-  { name: "MotionCam", text: "Motion detection with photo verification capability for suitable homes, businesses and monitored systems.", image: "/images/MotionCam.jpeg" },
-  { name: "Curtain Outdoor", text: "Focused detection for windows, passages, side access and selected external approaches.", image: "/images/SingleCurtain.jpeg" },
-  { name: "DualCurtain Outdoor", text: "Two-direction perimeter detection for longer façades, boundaries and access routes.", image: "/images/DualCurtain.jpeg" },
-  { name: "KeyPad TouchScreen", text: "A modern interface for users, groups, arming modes and clear on-site system control.", image: "/images/KeypadPlus.jpeg" },
-  { name: "StreetSiren", text: "Visible and audible external warning, positioned as part of the wider security design.", image: "/images/StreetSiren.jpeg" },
-  { name: "Ajax DoorBell & NVR", text: "Video entry, Ajax cameras and recording brought into one connected environment where suitable.", image: "/images/AjaxDoorbell.jpeg" }
+  { name: "MotionCam", text: "Motion detection with photo verification on compatible systems, selected around room layout, permissions and the way the property is used.", image: "/images/2Motioncam.jpg" },
+  { name: "KeyPad TouchScreen", text: "A clear 5-inch control interface for arming, groups and scenarios, with compatible access by smartphone, Pass, Tag or code.", image: "/images/projects/chesterfield-home-keypad.jpg" },
+  { name: "Hub 2 Plus", text: "The control centre connecting detectors, users, communication channels, app control and compatible visual-verification devices.", image: "/images/Ajax-Hub-2-Plus.webp" },
+  { name: "DoorProtect", text: "Opening detection for doors and windows, positioned around real entry routes, night mode and household routines.", image: "/images/2Doorprotect.jpg" },
+  { name: "Curtain Outdoor", text: "Narrow-beam external detection for selected approaches, side access and boundary routes where the survey supports it.", image: "/images/SingleCurtain.jpeg" },
+  { name: "StreetSiren", text: "A visible external warning device, professionally positioned and available with NOX branding as part of a complete alarm design.", image: "/images/projects/chesterfield-home-bellbox.jpg" }
 ]
 
 export default function HomePage() {
@@ -35,7 +35,7 @@ export default function HomePage() {
   return <>
     <JsonLd data={serviceSchema}/>
     <section className="home-hero home-hero-premium">
-      <div className="home-hero-bg"><img src="/images/hero-house.webp" alt="Residential property protected by NOX Fire & Security" /></div>
+      <div className="home-hero-bg"><img src="/images/projects/chesterfield-home-exterior.jpg" alt="Chesterfield home protected by a NOX Ajax alarm and CCTV system" /></div>
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/nox-logo-dark.png" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
@@ -51,7 +51,7 @@ export default function HomePage() {
     <section className="section premium-client-section"><div className="container">
       <SectionHeading eyebrow="Who we protect" title="A more considered standard for homes and businesses" text="NOX is built for customers who value proper design, clean installation and reliable ongoing support rather than a rushed, off-the-shelf package." />
       <div className="premium-client-grid">
-        <article className="premium-client-card residential-card"><img src="/images/projects/chesterfield-home-exterior.jpg" alt="NOX residential Ajax intruder and CCTV installation at a Chesterfield home"/><div><span className="eyebrow">Premium residential</span><h2>Security designed to belong in the property.</h2><p>Discreet Ajax alarms, CCTV, perimeter protection, app control, monitoring and annual maintenance for homes, garages, gates, driveways and outbuildings.</p><Link className="text-link" href="/residential">Explore Residential Security →</Link></div></article>
+        <article className="premium-client-card residential-card"><img src="/images/projects/chesterfield-home-exterior.jpg" alt="NOX residential Ajax intruder and CCTV installation at a Chesterfield home"/><div><span className="eyebrow">Residential security</span><h2>Security designed to belong in the property.</h2><p>Discreet Ajax alarms, professional CCTV, app control, monitoring and annual maintenance for semi-detached homes, family properties, larger houses, garages, gates, driveways and outbuildings.</p><Link className="text-link" href="/residential">Explore Residential Security →</Link></div></article>
         <article className="premium-client-card commercial-card"><img src="/images/projects/tan-station-exterior.jpg" alt="The Tan Station commercial Fire and Security project in Brimington"/><div><span className="eyebrow">Commercial & compliance</span><h2>Joined-up Fire & Security support.</h2><p>Commercial alarms, CCTV, Ajax EN54 fire systems, servicing, emergency lighting and coordinated compliance packages for operational premises and portfolios.</p><Link className="text-link" href="/commercial">Explore Commercial Systems →</Link></div></article>
       </div>
     </div></section>
@@ -63,24 +63,28 @@ export default function HomePage() {
     </div></section>
 
     <section className="section service-path-section"><div className="container">
-      <SectionHeading eyebrow="Fire & Security through one local team" title="Start with the property, then follow the right route" text="Residential protection and commercial Fire & Security are the two main routes. Monitoring, maintenance and compliance support follow naturally from the system and the customer requirement." />
+      <SectionHeading eyebrow="New system design" title="Residential security and commercial Fire & Security — kept clear from ongoing support" text="Choose the property route first. NOX then designs the right new installation before monitoring, maintenance or a compliance package is introduced as a separate ongoing service." />
       <div className="service-path-primary">
-        <article><img src="/images/House-Full-HD-1024x602.webp" alt="Ajax residential alarm and app-control technology"/><div><span>Residential</span><h3>Ajax alarms, perimeter protection and CCTV</h3><p>Smart, discreet protection for homes, garages, driveways and outbuildings, with MotionCam, Curtain Outdoor, app control, video and optional professional monitoring.</p><div className="service-path-links"><Link href="/systems/intrusion-alarms">Intruder alarms</Link><Link href="/systems/perimeter-protection">Perimeter protection</Link><Link href="/systems/cctv">Professional CCTV</Link><Link href="/systems/smart-home-cctv">Smart Home CCTV</Link></div></div></article>
-        <article><img src="/images/ajax-en54-fire.webp" alt="Ajax EN54 commercial fire alarm system"/><div><span>Commercial</span><h3>Fire alarms, CCTV, intruder and compliance support</h3><p>Installation, servicing and coordinated annual support for shops, hospitality, offices, warehouses, industrial units, landlords and larger sites.</p><div className="service-path-links"><Link href="/commercial/fire-compliance">Commercial fire systems</Link><Link href="/commercial/cctv">Commercial CCTV</Link><Link href="/commercial">Commercial overview</Link></div></div></article>
+        <article><img src="/images/projects/chesterfield-home-exterior.jpg" alt="Chesterfield home protected by a NOX Ajax alarm and CCTV system"/><div><span>Residential installations</span><h3>Ajax intruder alarms, CCTV and smart-home security</h3><p>For semi-detached homes, family properties, larger houses, renovations, garages, gates and outbuildings. The premium element is the design, installation and aftercare — not a minimum property size.</p><div className="service-path-links"><Link href="/residential">Residential system design</Link><Link href="/systems/intrusion-alarms">Ajax intruder alarms</Link><Link href="/systems/cctv">Residential CCTV</Link><Link href="/systems/smart-home-cctv">Smart Home CCTV</Link></div></div></article>
+        <article><img src="/images/projects/tan-station-exterior.jpg" alt="Commercial Fire and Security project completed by NOX in Brimington"/><div><span>Commercial installations</span><h3>Fire alarms, CCTV, intruder and emergency lighting</h3><p>New system design for shops, hospitality, offices, landlords, HMOs, warehouses, industrial units, garages, yards and larger sites — with Fire installation and servicing as a central NOX route.</p><div className="service-path-links"><Link href="/commercial">Commercial system design</Link><Link href="/commercial/fire-compliance">Fire alarm installation</Link><Link href="/commercial/cctv">Commercial CCTV</Link><Link href="/commercial/intruder-alarms">Commercial intruder</Link></div></div></article>
       </div>
       <div className="service-path-support">
-        <article><span>01</span><h3>Professional Monitoring</h3><p>Alarm handling, keyholder contact and visual or image verification where the selected system and service support it.</p><Link href="/service-plans/alarm-monitoring">Explore monitoring →</Link></article>
-        <article><span>02</span><h3>Maintenance & Takeovers</h3><p>Annual servicing for new systems and suitable traditional alarms, CCTV and fire systems, plus fault review and phased upgrades.</p><Link href="/service-plans">Explore servicing →</Link></article>
-        <article><span>03</span><h3>Fire Compliance Packages</h3><p>Coordinate fire alarm servicing, emergency lighting and agreed compliance support under one clearer annual arrangement.</p><Link href="/service-plans/fire-compliance">Explore compliance support →</Link></article>
+        <article><span>01</span><h3>Residential Service Plans</h3><p>Alarm maintenance from £225/year, monitoring from £595/year, CCTV maintenance from £225/year and the Total Security Package from £795/year.</p><Link href="/service-plans">Compare residential plans →</Link></article>
+        <article><span>02</span><h3>Commercial Maintenance</h3><p>Alarm and CCTV servicing from confirmed annual prices, with monitoring, takeover inspections, repairs and phased upgrades available separately.</p><Link href="/service-plans">Compare commercial support →</Link></article>
+        <article><span>03</span><h3>Fire & Compliance Packages</h3><p>Fire alarm servicing, emergency-lighting visits and agreed compliance support quoted consistently to the system, site and included services.</p><Link href="/service-plans/fire-compliance">Explore Fire compliance support →</Link></article>
       </div>
     </div></section>
 
     <section className="section ajax-editorial-section"><div className="container">
       <div className="ajax-editorial-grid">
         <div className="ajax-editorial-media ajax-property-media"><img src="/images/projects/chesterfield-home-cameras.jpg" alt="Black residential security cameras installed by NOX on a Chesterfield home"/></div>
-        <div className="ajax-home-copy"><span className="eyebrow">Rule Your Space</span><img className="ajax-authorised-logo" src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/><h2>Ajax technology, designed into the property rather than added as a package</h2><p>Ajax is our preferred smart-security platform for premium intruder protection, photo verification, external detection, CCTV, video entry and suitable commercial fire systems. NOX selects the equipment after the property, risks, routines and required response have been understood.</p><div className="button-row"><Link className="button button-light" href="/systems/intrusion-alarms">Explore Ajax Alarms</Link><Link className="button button-outline" href="/systems/perimeter-protection">Explore Perimeter Protection</Link></div></div>
+        <div className="ajax-home-copy"><span className="eyebrow">Rule Your Space</span><img className="ajax-authorised-logo" src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/><h2>Ajax technology selected around the home — not sold as a fixed kit</h2><p>Ajax is NOX's preferred residential intruder platform for app control, MotionCam photo verification, door and window protection, user-friendly keypads, sirens and suitable external detection. CCTV, NVR and video-entry options can be brought into the wider system where they are the right technical fit.</p><div className="button-row"><Link className="button button-light" href="/systems/intrusion-alarms">Explore Ajax Intruder Alarms</Link><Link className="button button-outline" href="/residential">View Residential System Design</Link></div></div>
       </div>
-      <div className="ajax-product-rail">{ajaxProducts.map(product => <article key={product.name}><div><img src={product.image} alt={`Ajax ${product.name}`}/></div><h3>{product.name}</h3><p>{product.text}</p></article>)}</div>
+      <div className="ajax-product-rail ajax-product-rail-clean">{ajaxProducts.map(product => <article key={product.name}><div><img loading="lazy" src={product.image} alt={`Ajax ${product.name}`}/></div><h3>{product.name}</h3><p>{product.text}</p></article>)}</div>
+      <div className="ajax-video-integration-panel">
+        <div className="ajax-video-integration-media"><img src="/images/projects/bottle-thyme-monitor-wide.jpg" alt="Professional CCTV recording and live viewing installed by NOX in Chesterfield"/></div>
+        <div><span className="eyebrow">Video, recording and entry</span><h3>Ajax video devices, NVR recording and DoorBell options — introduced only where they suit the design</h3><p>NOX can integrate Ajax cameras, compatible third-party IP cameras, network video recording and video entry into the wider security platform. Recording capacity, Wi-Fi, network condition, user permissions and the actual coverage requirement are confirmed before equipment is specified.</p><div className="button-row"><Link className="button button-outline" href="/systems/cctv">Explore CCTV Systems</Link><Link className="button button-light" href="/services/cctv-installation-chesterfield">CCTV Installation Chesterfield</Link></div></div>
+      </div>
     </div></section>
 
     <VideoShowcase videos={homeVideos} eyebrow="Ajax technology in motion" title="See how Ajax protection works around the property" />
@@ -112,6 +116,7 @@ export default function HomePage() {
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Areas we cover" title="Local service from Chesterfield across Derbyshire and Sheffield" text="Residential and commercial support across our core area, with wider travel for suitable commercial, industrial and multi-system projects."/><div className="home-area-grid">{keyAreas.map(([name, href]) => <Link href={href} key={name}><span>{name}</span><small>View local services →</small></Link>)}</div><div className="button-row"><Link className="button button-outline" href="/areas-we-serve">See Every Area We Cover</Link></div></div></section>
 
+    <LocalSearchLinks slugs={["security-systems-chesterfield","cctv-installation-chesterfield","ajax-alarm-installer-chesterfield","fire-alarm-installation-chesterfield","alarm-maintenance-chesterfield","commercial-fire-security-systems"]} title="Find the exact NOX service you are searching for"/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Practical advice" title="Clear information before and after installation" text="Maintenance, system takeovers, CCTV planning and fire-safety support explained in plain English."/><BlogGrid limit={3}/></div></section>
     <ConversionPanel title="Request your free security survey" text="Tell us about the property and what you need. NOX will review the details, contact you directly and arrange the right survey or quotation route." />
   </>

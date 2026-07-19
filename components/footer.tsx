@@ -22,20 +22,22 @@ export default function Footer() {
         </div>
         <div>
           <h3>Residential</h3>
-          <Link href="/residential">Residential Overview</Link>
-          <Link href="/systems/intrusion-alarms">Intruder Alarms</Link>
-          <Link href="/systems/cctv">CCTV Systems</Link>
-          <Link href="/systems/perimeter-protection">Perimeter Protection</Link>
+          <Link href="/residential">Residential System Design</Link>
+          <Link href="/systems/intrusion-alarms">Ajax Intruder Alarms</Link>
+          <Link href="/systems/cctv">Residential CCTV</Link>
+          <Link href="/systems/smart-home-cctv">Smart Home CCTV</Link>
           <Link href="/service-plans/alarm-monitoring">Alarm Monitoring</Link>
-          <Link href="/service-plans">Aftercare & Service Plans</Link>
+          <Link href="/service-plans">Residential Service Plans</Link>
         </div>
         <div>
           <h3>Commercial</h3>
-          <Link href="/commercial">Commercial Overview</Link>
+          <Link href="/commercial">Commercial System Design</Link>
+          <Link href="/commercial/fire-compliance">Fire Alarm Installation</Link>
+          <Link href="/systems/emergency-lighting">Emergency Lighting</Link>
+          <Link href="/systems/fire-risk-assessment">Fire Risk Assessments</Link>
           <Link href="/commercial/cctv">Commercial CCTV</Link>
-          <Link href="/commercial/intruder-alarms">Commercial Alarms</Link>
-          <Link href="/commercial/fire-compliance">Fire & Compliance</Link>
-          <Link href="/service-plans">Maintenance & Annual Support</Link>
+          <Link href="/commercial/intruder-alarms">Commercial Intruder Alarms</Link>
+          <Link href="/service-plans">Commercial Service Plans</Link>
         </div>
         <div>
           <h3>Company</h3>
@@ -44,6 +46,7 @@ export default function Footer() {
           <Link href="/reviews">Customer Reviews</Link>
           <Link href="/blog">Advice & Guides</Link>
           <Link href="/areas-we-serve">Areas We Cover</Link>
+          <Link href="/services">Local Service Pages</Link>
         </div>
         <div>
           <h3>Contact</h3>
@@ -62,6 +65,8 @@ export default function Footer() {
         <Link href="/areas/dronfield">Dronfield</Link>
         <Link href="/areas/matlock">Matlock</Link>
         <Link href="/areas/buxton">Buxton</Link>
+        <Link href="/services/cctv-installation-chesterfield">CCTV Chesterfield</Link>
+        <Link href="/services/fire-alarm-servicing-chesterfield">Fire Servicing Chesterfield</Link>
       </div>
       <div className="footer-bottom">
         <span>© 2026 NOX Fire & Security. All rights reserved.</span>
