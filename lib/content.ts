@@ -488,8 +488,8 @@ export const systemPages: Record<string, ServicePageData> = {
     metaTitle: "Ajax Intruder Alarm Installation Chesterfield | NOX",
     metaDescription: "Ajax intruder alarm installation across Chesterfield, Sheffield and Derbyshire with MotionCam, app control, keypads, sirens, monitoring, maintenance and system takeovers.",
     intro: "Rule Your Space with a professionally designed intruder alarm for your home or business. NOX is an Ajax Authorised Installation Company, using Ajax as our preferred smart security platform while still designing every system around the property first.",
-    image: "/images/intrusion-alarms.png",
-    imageAlt: "Black Ajax intruder alarm system with hub keypad and detectors installed by NOX",
+    image: "/images/projects/chesterfield-home-exterior.jpg",
+    imageAlt: "Chesterfield family home protected by a professionally installed Ajax intruder alarm and CCTV system",
     problemTitle: "The right alarm is more than a hub and a few sensors",
     problemText: "A useful system needs the correct mix of door protection, internal detection, photo verification, sirens, control devices and carefully selected external protection. NOX assesses entrances, movement routes, bedrooms, garages, outbuildings and daily routines before recommending equipment.",
     benefits: ["Ajax wireless and hybrid alarm options", "MotionCam photo verification where suitable", "DoorProtect and internal movement detection", "KeyPad TouchScreen, KeyPad Plus, fobs and tags", "StreetSiren and internal siren options", "Night mode and part-setting", "Professional alarm monitoring", "Maintenance for new and suitable existing systems"],
@@ -501,7 +501,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { title: "Handover and support", text: "Users, app access, night mode, notifications and practical operation are explained before monitoring or maintenance is activated." }
     ],
     details: [
-      { title: "MotionCam and visual verification", text: "Ajax MotionCam can provide a sequence of still images following an alarm event, helping authorised users or monitoring operators understand what triggered the system where the chosen device and service support it." },
+      { title: "MotionCam and visual verification", text: "Suitable Ajax MotionCam models combine motion detection with photo verification, helping authorised users or a monitoring service understand what caused an alarm. Device choice, permissions and image features are confirmed during system design." },
       { title: "Control that fits the customer", text: "Use the Ajax app, keypad, tags or fobs depending on the people using the property. Individual users and operating modes can be configured during handover." },
       { title: "Monitoring and maintenance", text: "Professional alarm handling, keyholder contact, system health checks, battery review, firmware updates and annual service records are available." },
       { title: "Traditional and existing systems", text: "NOX also services and assesses suitable wired, hybrid and established alarm systems. A takeover inspection confirms condition, access and the sensible route forward." }
@@ -517,12 +517,12 @@ export const systemPages: Record<string, ServicePageData> = {
     platformTitle: "Rule Your Space with Ajax",
     platformText: "Ajax brings the alarm, visual verification, sirens, user controls, automation and selected video devices into one connected platform where suitable. NOX handles the survey, design, installation, configuration and ongoing support.",
     products: [
-      { name: "Ajax Hub", description: "The control centre that connects devices, users, communication channels and the Ajax app. The hub is selected around the system size and required features.", image: "/images/Ajax-Hub-2-Plus.webp", imageAlt: "Ajax Hub 2 Plus smart alarm control panel" },
-      { name: "MotionCam", description: "Indoor motion detection with photo verification capabilities on suitable Ajax systems, helping provide visual context after an alarm event.", image: "/images/MotionCam.jpeg", imageAlt: "Ajax MotionCam detector with photo verification" },
-      { name: "DoorProtect", description: "Opening detection for doors and windows, positioned around the actual entry routes and part-setting requirements of the property.", image: "/images/Doorprotect.jpeg", imageAlt: "Ajax DoorProtect door and window detector" },
-      { name: "KeyPad & user controls", description: "Touchscreen or button keypads, tags, fobs and app control make the system straightforward for families, staff and authorised users.", image: "/images/Ajax-KeyPad.jpeg", imageAlt: "Ajax KeyPad for controlling an intruder alarm" },
-      { name: "StreetSiren", description: "An external audible and visual deterrent configured as part of the alarm design, with placement considered during the survey.", image: "/images/StreetSiren.jpeg", imageAlt: "Ajax StreetSiren external alarm sounder" },
-      { name: "Monitoring-ready design", description: "Where monitoring is selected, the system can support professional alarm handling, keyholder contact and agreed escalation procedures.", image: "/images/editorial/home-monitoring.jpg", imageAlt: "Real NOX CCTV display and system equipment supporting professional alarm monitoring" }
+      { name: "Ajax Hub", description: "The control centre connecting detectors, users, communication channels, app control and compatible visual-verification devices. The hub is selected around the property and system size.", image: "/images/Ajax-Hub-2-Plus.webp", imageAlt: "Ajax Hub smart alarm control panel in black and white" },
+      { name: "MotionCam", description: "Wireless motion detection with photo verification on suitable systems. Selected models offer detection coverage of up to 12 metres, with the final device chosen around room layout and risk.", image: "/images/2Motioncam.jpg", imageAlt: "Official black Ajax MotionCam detector with photo verification" },
+      { name: "DoorProtect", description: "Opening detection for doors and windows, positioned around real entry routes, night mode and the way the household or business uses the property.", image: "/images/2Doorprotect.jpg", imageAlt: "Black and white Ajax DoorProtect opening detectors" },
+      { name: "KeyPad TouchScreen", description: "A 5-inch touch interface for arming, groups and scenarios, with compatible authentication by smartphone, Pass, Tag or code.", image: "/images/projects/chesterfield-home-keypad.jpg", imageAlt: "Official black Ajax KeyPad TouchScreen" },
+      { name: "Internal & external detection", description: "MotionProtect, MotionCam and selected outdoor detectors are combined only where the survey shows they add useful protection.", image: "/images/2Motioncam.jpg", imageAlt: "Black and white Ajax MotionCam detectors" },
+      { name: "NOX warning siren & aftercare", description: "A professionally positioned external siren provides a visible deterrent, while monitoring and annual maintenance can be added after handover.", image: "/images/projects/chesterfield-home-bellbox.jpg", imageAlt: "NOX branded external Ajax alarm siren installed on a Chesterfield home" }
     ],
     videos: [
       { title: "Ajax intruder protection", text: "See how the Ajax platform brings detection, control and app management together.", youtubeId: "9ffQhBwXUDg" },
@@ -581,8 +581,8 @@ export const systemPages: Record<string, ServicePageData> = {
     metaTitle: "CCTV Installation Chesterfield & Derbyshire | Ajax & Hikvision",
     metaDescription: "Professional CCTV installation in Chesterfield, Sheffield and Derbyshire with Ajax cameras, NVR recording, Hikvision ColourVu, smart detection, remote viewing and maintenance.",
     intro: "NOX installs Ajax CCTV, Hikvision ColourVu and other professional systems for homes and businesses. Camera choice follows the scene, lighting, recording requirement and network — not a fixed camera package.",
-    image: "/images/cctv-systems.png",
-    imageAlt: "Professional Ajax and CCTV camera system installed by NOX",
+    image: "/images/projects/bottle-thyme-monitor-wide.jpg",
+    imageAlt: "Commercial CCTV live-view system installed by NOX at Bottle and Thyme in Chesterfield",
     problemTitle: "Useful CCTV starts with the image you need to recover later",
     problemText: "Camera height, lens choice, lighting, overlap, network design, recorder capacity and playback all matter. NOX plans what each view must show, then configures recording, remote access and smart event detection properly.",
     benefits: ["Ajax 5MP and 8MP camera options", "Ajax NVR integration", "Hikvision ColourVu and other professional cameras", "NVR and PoE recording", "Human and vehicle event filtering", "Full-colour night viewing options", "Secure app and remote viewing", "Maintenance, takeovers and recorder upgrades"],
@@ -601,7 +601,7 @@ export const systemPages: Record<string, ServicePageData> = {
     ],
     faq: [
       { q: "Do you install Ajax CCTV and Hikvision?", a: "Yes. NOX works with Ajax CCTV, Hikvision ColourVu and other professional systems, selecting equipment around the site and required coverage." },
-      { q: "What does an Ajax NVR do?", a: "An Ajax NVR records compatible IP camera footage and can integrate suitable video into the Ajax platform. Channel capacity and storage are selected around the project." },
+      { q: "What does an Ajax NVR do?", a: "An Ajax NVR records compatible IP camera footage and integrates suitable video into the Ajax platform. Ajax offers 8- and 16-channel options, with compatible storage selected around the project and recorder specification." },
       { q: "Can you maintain an older CCTV system?", a: "Yes. Suitable analogue, coax, IP and networked CCTV can be inspected and serviced, subject to condition, access, compatibility and parts availability." },
       { q: "Do commercial systems need a survey?", a: "A survey is strongly recommended so views, lighting, cabling, network capacity, recorder channels and storage can be assessed properly." }
     ],
@@ -610,12 +610,12 @@ export const systemPages: Record<string, ServicePageData> = {
     platformTitle: "Ajax CCTV inside the wider security platform",
     platformText: "For suitable projects, Ajax cameras and NVR recording can sit alongside the intruder alarm in one platform. NOX also continues to specify Hikvision ColourVu and other professional CCTV where they are the better technical fit.",
     products: [
-      { name: "Ajax cameras", description: "Professional IP cameras available in different resolutions and formats, selected around the view and lighting requirement.", image: "/images/ajax-cameras.jpg", imageAlt: "Ajax professional CCTV cameras" },
-      { name: "Ajax NVR", description: "Network video recording for compatible IP cameras, with channel and storage options selected around the system size.", image: "/images/AjaxNVR.jpeg", imageAlt: "Ajax NVR network video recorder" },
-      { name: "Hikvision ColourVu", description: "Full-colour night imaging options for suitable scenes where useful detail after dark is a key requirement.", image: "/images/HikvisionDome.jpg", imageAlt: "Hikvision ColourVu CCTV dome camera" },
-      { name: "PoE network design", description: "Power and data through structured cabling, planned around recorder location, switch capacity, cable routes and future expansion.", image: "/images/cctv-systems-image.png", imageAlt: "Professional PoE CCTV installation equipment" },
-      { name: "Remote viewing", description: "Secure app access for live view, playback and event search, configured and demonstrated during handover.", image: "/images/ajax-camera.webp", imageAlt: "Ajax camera viewed through a mobile security app" },
-      { name: "Annual maintenance", description: "Cleaning, image review, recording checks, playback tests and system-health checks for new and suitable traditional CCTV systems.", image: "/images/editorial/home-maintenance.jpg", imageAlt: "Real CCTV and security system maintenance by NOX" }
+      { name: "Ajax cameras", description: "Professional IP cameras in different resolutions and formats, selected around the required view, lighting, mounting position and evidence standard.", image: "/images/ajax-cameras.jpg", imageAlt: "White and black Ajax professional CCTV cameras" },
+      { name: "Ajax NVR", description: "An 8- or 16-channel network video recorder for compatible IP cameras, with storage selected around recording duration, resolution and project size.", image: "/images/projects/bottle-thyme-nvr.jpg", imageAlt: "Official black Ajax NVR network video recorder" },
+      { name: "Ajax DoorBell", description: "Video entry with built-in AI, PIR detection, two-way voice and recording through a compatible Ajax NVR where included in the system design.", image: "/images/AjaxDoorbell.jpeg", imageAlt: "Official black Ajax DoorBell video entry device" },
+      { name: "Hikvision ColourVu", description: "Full-colour night-imaging options for suitable scenes where useful detail after dark is a central requirement.", image: "/images/projects/retford-camera-close-1.jpg", imageAlt: "Hikvision ColourVu camera installed at a former bank in Retford" },
+      { name: "Recorder & remote viewing", description: "NVR or DVR recording, secure app access, playback and event search are configured and demonstrated during handover.", image: "/images/projects/retford-monitor-final.jpg", imageAlt: "Ten-camera CCTV recorder and live-view display at a Retford commercial property" },
+      { name: "Annual CCTV maintenance", description: "Camera cleaning, image review, recorder and hard-drive checks, playback tests, firmware review and remote-access checks for new and suitable existing systems.", image: "/images/projects/bottle-thyme-nvr.jpg", imageAlt: "CCTV NVR and system equipment maintained by NOX in Chesterfield" }
     ]
   },
   "smart-home-cctv": {
