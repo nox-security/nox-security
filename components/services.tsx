@@ -109,7 +109,7 @@ export default function Services() {
         <div className="text-center">
           <Link href="/get-quote">
             <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-8">
-              Free Security Survey
+              Get a Free Quote
             </Button>
           </Link>
         </div>

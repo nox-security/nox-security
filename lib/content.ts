@@ -42,110 +42,184 @@ export type PlanPageData = {
   related: LinkItem[]
 }
 
-export const reviewThemes = [
+export type VerifiedReview = {
+  name: string
+  rating: number
+  service: string
+  text: string
+}
+
+export const verifiedReviews: VerifiedReview[] = [
   {
-    title: "Verified customer feedback",
-    text: "The website points visitors towards NOX's verified review profiles rather than publishing invented names, quotes or project outcomes."
+    name: "Rory Stirland",
+    rating: 5,
+    service: "Commercial Fire Alarm & Intruder Alarm",
+    text: "We had NOX Fire & Security install our commercial fire alarm system alongside an intruder alarm, and the whole experience was spot on from start to finish. Clean, professional installation, everything clearly explained, and the system is easy to manage through the app with instant alerts. The fire system is clear, reliable and easy for the team to manage without overcomplicating things. No pushy sales, no unnecessary contracts — just honest advice and proper workmanship. You can tell they care about doing things right. Highly recommend NOX for any business looking for fire or security systems in Chesterfield / Sheffield."
   },
   {
-    title: "Clear advice before installation",
-    text: "NOX starts with the property, the risks and the customer's priorities, then explains the proposed system in plain English."
+    name: "Ryan Hargreaves",
+    rating: 5,
+    service: "Ajax Alarm System",
+    text: "Brilliant service from NOX. Super professional, knowledgeable, and they went out of their way to be helpful. Everything was explained clearly and in detail. The install was tidy, and the whole process was smooth from start to finish. We were thinking about getting a security system for a while and now we're so glad we went with NOX. Would 100% recommend to anyone."
   },
   {
-    title: "Proper handover and support",
-    text: "Every installation includes testing, setup and a clear handover, with monitoring, servicing and future support available where required."
+    name: "Nathan De La Rosa",
+    rating: 5,
+    service: "Commercial CCTV, Alarms & Smoke Screens",
+    text: "We recently had NOX install cameras, smoke screens, and alarms at our office and the whole experience has been spot on from start to finish. From the very first phone call with Isaac, everything felt straightforward and reassuring. He took the time to explain our options, answered all our questions, and helped design a system that made sense for our building and our budget. No pushy sales tactics at all, which was refreshing. The installation was smooth, the team were professional, and even after everything was fitted, Isaac has been on hand to help with any follow-up questions. A really great service and a company I'd happily recommend."
+  },
+  {
+    name: "Sasha Brailsford",
+    rating: 5,
+    service: "Ajax Smart Security & Automation",
+    text: "Really impressed with NOX Fire & Security. Isaac, Joe and James made everything super easy from start to finish — no pressure, just honest advice and a system tailored exactly to what I needed. Love how personalised it is, and being able to control my heating, washing machine and lights all from the same security app is a game changer. The lads were friendly, tidy, and took the time to show me how everything worked before they left. Feels good knowing it's all been done properly. Would definitely recommend."
+  },
+  {
+    name: "Jeremy Bunting",
+    rating: 5,
+    service: "Security System Installation",
+    text: "Seamless journey from start to finish! I filled in the simple form and was soon contacted by the team. They were very knowledgeable, professional and really listened to my needs. I have since had a system installed. The price was much less than I had expected and so far the aftercare has been great. I can't recommend them enough!"
+  },
+  {
+    name: "Jez S",
+    rating: 5,
+    service: "Commercial CCTV",
+    text: "Professional, friendly and sensible pricing. From first contact to completion the process was smooth and stress-free. The team clearly know their stuff and the system is exactly what we needed. Would have no hesitation recommending NOX to other businesses."
   }
 ]
 
-export const caseStudies = [
+export type CaseStudy = {
+  slug: string
+  title: string
+  location: string
+  category: string
+  image: string
+  alt: string
+  summary: string
+  requirement: string
+  delivery: string
+  systems: string[]
+}
+
+export const caseStudies: CaseStudy[] = [
   {
     slug: "buxton-industrial-security",
     title: "Industrial alarm and nine-camera CCTV system",
     location: "Buxton, Derbyshire",
+    category: "Industrial fire & security",
     image: "/images/case-studies/install-2.png",
     alt: "NOX commercial CCTV installation at an industrial site in Buxton",
-    summary: "NOX installed an Ajax intruder alarm and a nine-camera CCTV system at an industrial site in Buxton.",
+    summary: "A joined-up intruder and CCTV installation for an industrial premises in Buxton.",
+    requirement: "Provide intruder protection and a nine-camera CCTV system for the industrial site.",
+    delivery: "NOX installed an Ajax intruder alarm together with the confirmed nine-camera CCTV system.",
     systems: ["Ajax intruder alarm", "Nine-camera CCTV system", "Industrial premises"]
   },
   {
     slug: "chesterfield-scrapyard-cctv",
     title: "Thirteen-camera commercial CCTV installation",
     location: "Chesterfield, Derbyshire",
+    category: "Commercial CCTV",
     image: "/images/case-studies/install-3.png",
     alt: "8MP AI turret CCTV cameras installed at a Chesterfield scrapyard",
-    summary: "A Chesterfield scrapyard was equipped with thirteen 8MP AI turret cameras for wider commercial site coverage.",
+    summary: "A higher-camera-count CCTV installation across a commercial yard in Chesterfield.",
+    requirement: "Install wider CCTV coverage using thirteen cameras across the scrapyard site.",
+    delivery: "NOX installed thirteen 8MP AI turret cameras as the confirmed project scope.",
     systems: ["Thirteen CCTV cameras", "8MP AI turret cameras", "Commercial yard"]
   },
   {
     slug: "peak-electronic-security",
     title: "Intruder and CCTV installation for Peak Electronic",
     location: "Derbyshire",
+    category: "Commercial alarm & CCTV",
     image: "/images/case-studies/install-2.png",
     alt: "Ajax intruder alarm and CCTV installation for Peak Electronic",
-    summary: "NOX installed an Ajax intruder system together with nine CCTV cameras for Peak Electronic.",
+    summary: "A combined Ajax intruder and CCTV installation for a commercial property.",
+    requirement: "Provide intruder protection and nine CCTV cameras for Peak Electronic.",
+    delivery: "NOX installed the Ajax intruder system and nine-camera CCTV system within the agreed project.",
     systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"]
   },
   {
     slug: "dronfield-timber-perimeter",
     title: "External detection at a timber site",
     location: "Dronfield, Derbyshire",
+    category: "Perimeter protection",
     image: "/images/perimeter.jpg",
     alt: "External Ajax detection protecting a timber site in Dronfield",
-    summary: "A Dronfield timber site was protected with external Ajax detection and external sirens.",
+    summary: "External detection and sirens for a timber site in Dronfield.",
+    requirement: "Add external protection around the working timber site.",
+    delivery: "NOX installed external Ajax detection and external sirens as the confirmed scope.",
     systems: ["External Ajax detection", "External sirens", "Perimeter protection"]
   },
   {
     slug: "sheffield-residential-security",
     title: "Residential CCTV and intruder protection",
     location: "Sheffield, South Yorkshire",
+    category: "Residential security",
     image: "/images/case-studies/install-1.png",
     alt: "Residential CCTV and intruder alarm installation in Sheffield",
-    summary: "NOX installed CCTV and intruder alarm protection at a residential property in Sheffield.",
+    summary: "CCTV and intruder protection installed for a Sheffield home.",
+    requirement: "Provide a combined CCTV and intruder alarm system for the residential property.",
+    delivery: "NOX installed the confirmed CCTV and intruder protection and completed the system handover.",
     systems: ["Residential CCTV", "Intruder alarm", "Home security"]
   },
   {
     slug: "chesterfield-residential-ajax",
     title: "Five-camera Ajax CCTV and intruder protection",
     location: "Chesterfield, Derbyshire",
+    category: "Residential security",
     image: "/images/case-studies/install-1.png",
     alt: "Five Ajax 8MP cameras and intruder protection at a Chesterfield home",
-    summary: "A Chesterfield residential property was protected with five Ajax 8MP cameras and an intruder alarm system.",
+    summary: "Five Ajax 8MP cameras and intruder protection at a Chesterfield residential property.",
+    requirement: "Install five cameras together with intruder protection for the home.",
+    delivery: "NOX installed five Ajax 8MP cameras and the confirmed intruder alarm system.",
     systems: ["Five Ajax 8MP cameras", "Intruder protection", "Residential property"]
   },
   {
     slug: "retford-former-bank-cctv",
     title: "Ten-camera CCTV system at a former bank",
     location: "Retford, Nottinghamshire",
+    category: "Commercial CCTV",
     image: "/images/case-studies/install-3.png",
     alt: "Ten-camera commercial CCTV system installed at a former bank in Retford",
-    summary: "NOX installed a ten-camera CCTV system at a former bank building in Retford.",
+    summary: "A ten-camera CCTV installation at a former bank building in Retford.",
+    requirement: "Provide a ten-camera CCTV system for the commercial building.",
+    delivery: "NOX installed the confirmed ten-camera CCTV system across the former bank property.",
     systems: ["Ten-camera CCTV system", "Commercial property", "Retford installation"]
   },
   {
     slug: "chesterfield-kitchen-showroom",
     title: "Showroom intruder alarm and CCTV",
     location: "Chesterfield, Derbyshire",
+    category: "Retail security",
     image: "/images/case-studies/install-2.png",
     alt: "Intruder alarm and CCTV installed at a Chesterfield kitchen showroom",
-    summary: "A kitchen showroom in Chesterfield received a combined intruder alarm and CCTV installation.",
+    summary: "A combined intruder alarm and CCTV installation for a Chesterfield showroom.",
+    requirement: "Provide intruder and CCTV protection for the kitchen showroom.",
+    delivery: "NOX installed the confirmed intruder alarm and CCTV systems for the premises.",
     systems: ["Intruder alarm", "CCTV system", "Retail showroom"]
   },
   {
     slug: "banana-industries-fire-security",
     title: "Combined intruder and fire protection",
     location: "Derbyshire",
+    category: "Commercial fire & security",
     image: "/images/fire-safety.png",
     alt: "Commercial intruder and fire protection installed for Banana Industries",
-    summary: "NOX delivered intruder and fire protection for Banana Industries.",
+    summary: "Intruder and fire protection delivered for Banana Industries.",
+    requirement: "Provide both intruder and fire protection for the commercial premises.",
+    delivery: "NOX delivered the confirmed intruder and fire protection scope.",
     systems: ["Intruder protection", "Fire protection", "Commercial premises"]
   },
   {
     slug: "chatsworth-estate-cctv-upgrade",
     title: "Ten-camera CCTV upgrade",
     location: "Chatsworth Estate, Derbyshire",
+    category: "CCTV upgrade",
     image: "/images/case-studies/install-3.png",
     alt: "Ten-camera CCTV upgrade completed at Chatsworth Estate",
-    summary: "NOX completed a ten-camera CCTV upgrade at Chatsworth Estate.",
+    summary: "A ten-camera CCTV upgrade at Chatsworth Estate.",
+    requirement: "Upgrade the existing CCTV arrangement with a confirmed ten-camera scope.",
+    delivery: "NOX completed the ten-camera CCTV upgrade at the estate property.",
     systems: ["Ten-camera CCTV upgrade", "Existing-system upgrade", "Estate property"]
   }
 ]
@@ -314,7 +388,7 @@ export const systemPages: Record<string, ServicePageData> = {
     ],
     faq: [
       { q: "Do you only install Ajax alarms?", a: "Ajax is NOX's preferred smart security platform, but the property, existing equipment and customer requirement are assessed before the correct system is recommended." },
-      { q: "Can I book a survey without completing an enquiry form?", a: "Yes. The Book a Free Security Survey route opens the live booking calendar directly." },
+      { q: "How do I arrange a security survey?", a: "Start with the NOX website enquiry form. The team will review the property and arrange a survey where it is needed before quotation." },
       { q: "Can an alarm cover garages and outbuildings?", a: "Yes, subject to survey, layout and reliable communication range. Internal, external and perimeter protection can be combined where suitable." },
       { q: "Do I have to take monitoring?", a: "No. Monitoring and annual maintenance are optional services and are explained separately in the quotation." }
     ],

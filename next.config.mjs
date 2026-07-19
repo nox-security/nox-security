@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: { cpus: 2 },
   async redirects() {
     return [
       { source: '/service-plans/intruder-maintenance', destination: '/service-plans/alarm-maintenance', permanent: true },

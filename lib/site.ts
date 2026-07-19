@@ -8,8 +8,7 @@ export const site = {
   whatsapp: "https://wa.me/447882959297",
   email: "info@nox-security.co.uk",
   base: "Chesterfield, Derbyshire",
-  formId: "8FchnjOrpZ4ufh1TiW8k",
-  surveyUrl: "https://api.leadconnectorhq.com/widget/booking/B5fG9AjxC9oRHpsTTzuF"
+  formId: "8FchnjOrpZ4ufh1TiW8k"
 }
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {

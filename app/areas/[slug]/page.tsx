@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = areas[slug as keyof typeof areas]
   if (!area) return {}
   const title = `Security Systems ${area.name} | Alarms, CCTV & Fire`
-  const description = `${area.intro} Request a quote or book a free security survey with NOX Fire & Security.`
+  const description = `${area.intro} Request a tailored quote from NOX Fire & Security.`
   return pageMetadata(title, description, `/areas/${slug}`)
 }
 
@@ -25,7 +25,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     <JsonLd data={schema}/>
     <PageHero eyebrow={`${area.name}, ${area.county}`} title={`Alarm, CCTV and fire security services in ${area.name}`} intro={area.intro} image="/images/hero-house.webp" imageAlt={`Home and business security systems in ${area.name}`}/>
     <TrustStrip/>
-    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Local system design" title={`Security surveys and installations around ${area.name}`} text={area.focus}/><p className="lead">Nearby coverage includes {area.nearby}.</p></div><aside className="dark-panel"><h3>Direct conversion routes</h3><p>Send the initial project details for a tailored quotation, or book a survey directly without completing the enquiry form first.</p><div className="button-row"><Link className="button button-light" href="/get-quote">Request a Free Quote</Link><Link className="button button-outline" href="/book-security-survey">Book a Free Survey</Link></div></aside></div></section>
+    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Local system design" title={`Security surveys and installations around ${area.name}`} text={area.focus}/><p className="lead">Nearby coverage includes {area.nearby}.</p></div><aside className="dark-panel"><h3>One clear enquiry route</h3><p>Send the initial project details for a tailored quotation. The NOX team will arrange a survey when the property needs to be assessed first.</p><div className="button-row"><Link className="button button-light" href="/get-quote">Get a Free Quote</Link></div></aside></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Residential services" title={`Home security in ${area.name}`} text="Systems are designed around the property, access points, daily routines and the customer's preferred level of control."/><FeatureGrid columns={4} items={[
       { title:"Intruder alarms", text:"Ajax wireless, wired or hybrid alarm options with app, keypad, fob and suitable verification features." },
       { title:"CCTV", text:"Driveway, entrance, garden and outbuilding coverage with professional recording and remote viewing." },
@@ -38,7 +38,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       { title:"Fire and emergency lighting", text:"Installation, servicing, testing, takeover and coordinated annual support within the agreed scope." },
       { title:"Monitoring and maintenance", text:"Professional monitoring, keyholder contact, planned servicing, records and renewal support." }
     ]}/></div></section>
-    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Useful local searches" title={`Find the right NOX service in ${area.name}`}/><div className="related-links"><Link href="/systems/intrusion-alarms">Intruder alarm installation →</Link><Link href="/systems/cctv">CCTV installation →</Link><Link href="/systems/fire-safety">Fire alarm installation and servicing →</Link><Link href="/service-plans">Monitoring and maintenance →</Link></div></div><aside className="dark-panel"><h3>Existing system?</h3><p>NOX can inspect suitable existing alarms, CCTV and fire systems, identify faults and recommend a practical takeover or upgrade route.</p><Link className="button button-light" href="/contact">Discuss a System Takeover</Link></aside></div></section>
-    <ConversionPanel title={`Request a quote or book a survey in ${area.name}`} text="Choose the route that suits the project. The booking calendar opens directly and does not require an enquiry form first."/>
+    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Useful local searches" title={`Find the right NOX service in ${area.name}`}/><div className="related-links"><Link href="/systems/intrusion-alarms">Intruder alarm installation →</Link><Link href="/systems/cctv">CCTV installation →</Link><Link href="/systems/fire-safety">Fire alarm installation and servicing →</Link><Link href="/service-plans">Monitoring and maintenance →</Link></div></div><aside className="dark-panel"><h3>Existing system?</h3><p>NOX can inspect suitable existing alarms, CCTV and fire systems, identify faults and recommend a practical takeover or upgrade route.</p><Link className="button button-light" href="/get-quote">Discuss a System Takeover</Link></aside></div></section>
+    <ConversionPanel title={`Request a tailored quote in ${area.name}`} text="Use one enquiry route for residential, commercial, installation, servicing or existing-system support."/>
   </>
 }

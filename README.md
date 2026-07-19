@@ -1,27 +1,28 @@
 # NOX Fire & Security Website v2.6
 
-Premium black-and-white Next.js website for NOX Fire & Security, built around two clear conversion routes:
+Premium Next.js website for NOX Fire & Security, built around one clear customer journey:
 
-- **Request a Free Quote** — GoHighLevel Website Enquiry form ID `8FchnjOrpZ4ufh1TiW8k`
-- **Book a Free Security Survey** — direct GoHighLevel calendar `B5fG9AjxC9oRHpsTTzuF`
+- **Get a Free Quote** — one GoHighLevel Website Enquiry form using ID `8FchnjOrpZ4ufh1TiW8k`
+- The NOX team reviews the enquiry and arranges a property survey where it is required before quotation.
 
 ## Main sections
 
-- Homepage conversion journey
+- Homepage customer journey with residential and commercial positioning
 - Intruder alarm, CCTV, fire alarm, emergency lighting and fire risk assessment pages
-- Residential and commercial positioning
 - Monitoring, maintenance, takeover and annual service-plan pages
-- Commercial CCTV, intruder and fire-support pages
+- Commercial CCTV, intruder, fire and multi-system support pages
 - Factual NOX case-study examples
+- Verified customer review content
+- Advice and blog guides
 - Chesterfield, Sheffield, Derbyshire and surrounding local SEO pages
 - About, Contact, Reviews, Privacy, Terms and Cookie pages
-- LocalBusiness, Service and visible FAQ structured data
+- LocalBusiness, Service, Article and visible FAQ structured data
 - Sitemap, robots, canonical metadata and descriptive image alt text
 
 ## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 

@@ -18,7 +18,7 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link href="/get-quote">
               <Button size="lg" className="h-14 bg-white text-black hover:bg-gray-100 px-10 text-base font-bold">
-                Request a Free Security Survey <ArrowRight className="h-5 w-5 ml-2" />
+                Get a Free Quote <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
             <a href="tel:07882959297">
@@ -42,7 +42,7 @@ export default function CTASection() {
             </a>
           </div>
 
-          <p className="text-sm text-gray-400 pt-4">Available Mon-Fri 8am-6pm, Sat 9am-4pm • Emergency callouts 24/7</p>
+          <p className="text-sm text-gray-400 pt-4">Local support from the NOX team during normal business hours</p>
         </div>
       </div>
     </section>
