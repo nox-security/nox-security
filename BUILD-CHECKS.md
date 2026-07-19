@@ -1,13 +1,18 @@
-# Build checks
+# NOX v2.6 Build Checks
 
-Completed on the packaged project:
+- Base: current v2.6 working website
+- Portfolio upgrade: Bottle & Thyme, The Tan Station, Retford former bank, Chesterfield residential Ajax/CCTV and Eufy smart-home CCTV
+- SEO case-study routes, local landing pages, metadata, structured data and sitemap updates included
+- GoHighLevel Website Enquiry form ID: 8FchnjOrpZ4ufh1TiW8k
 
-- `npm ci` — passed
-- `npm run build` — passed
-- TypeScript validation as part of the Next.js production build — passed
-- 59 generated routes — passed
-- 54 sitemap URLs requested from a local production server — all returned HTTP 200
-- Homepage, Contact, Case Studies, Intruder Alarms, Commercial Fire and Quote pages — HTTP 200
-- 73 referenced local images — all files present
-- Prohibited wording scan — passed
-- GoHighLevel Website Enquiry form remains integrated through form ID `8FchnjOrpZ4ufh1TiW8k`
+## Verified in this build
+- `npm ci --no-audit --no-fund` completed successfully
+- `npm run build` completed successfully
+- Next.js compiled successfully
+- TypeScript validation passed as part of the production build
+- 73 static/SSG routes generated
+- Sitemap, robots and case-study routes generated
+- Project imagery copied into `public/images/projects`
+- Final ZIP integrity checked
+
+Build date: 19 July 2026

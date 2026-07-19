@@ -7,7 +7,8 @@ const residential = [
   ["Residential Overview", "/residential", "Premium alarms, CCTV and external protection for homes"],
   ["Ajax Intruder Alarms", "/systems/intrusion-alarms", "MotionCam, app control, keypads and sirens"],
   ["Perimeter Protection", "/systems/perimeter-protection", "Curtain and outdoor detection around approaches"],
-  ["Residential CCTV", "/systems/cctv", "Ajax, Hikvision ColourVu and professional recording"]
+  ["Residential CCTV", "/systems/cctv", "Ajax, Hikvision ColourVu and professional recording"],
+  ["Smart Home CCTV", "/systems/smart-home-cctv", "Solar, floodlight and app-controlled camera options"]
 ]
 
 const commercial = [

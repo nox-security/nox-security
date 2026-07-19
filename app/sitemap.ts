@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { areas, planPages, systemPages } from "@/lib/content"
+import { areas, caseStudies, planPages, systemPages } from "@/lib/content"
 import { blogPosts } from "@/lib/blog"
 import { site } from "@/lib/site"
 
@@ -15,7 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...Object.keys(systemPages).map(slug => `/systems/${slug}`),
     ...Object.keys(planPages).map(slug => `/service-plans/${slug}`),
     ...Object.keys(areas).map(slug => `/areas/${slug}`),
-    ...blogPosts.map(post => `/blog/${post.slug}`)
+    ...blogPosts.map(post => `/blog/${post.slug}`),
+    ...caseStudies.map(project => `/case-studies/${project.slug}`)
   ]
   return urls.map((path, index) => ({
     url: `${site.url}${path}`,

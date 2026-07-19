@@ -62,7 +62,7 @@ export default function QuoteForm() {
         <CheckCircle2 className="h-16 w-16 text-green-400 mx-auto" />
         <h3 className="text-2xl font-bold text-white">Quote Request Received!</h3>
         <p className="text-gray-300 max-w-md mx-auto">
-          Thanks {formData.name || ""}! We'll be in touch within 2 hours during business hours.
+          Thanks {formData.name || ""}! We'll review your enquiry and respond during business hours.
           Prefer faster? WhatsApp us directly.
         </p>
         <a

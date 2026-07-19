@@ -106,9 +106,144 @@ export type CaseStudy = {
   requirement: string
   delivery: string
   systems: string[]
+  gallery?: { src: string; alt: string }[]
+  metaTitle?: string
+  metaDescription?: string
+  searchKeywords?: string[]
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "bottle-and-thyme-commercial-cctv-chesterfield",
+    title: "Commercial CCTV installation at Bottle & Thyme",
+    location: "Chesterfield, Derbyshire",
+    category: "Hospitality CCTV",
+    image: "/images/projects/bottle-thyme-exterior-2.jpg",
+    alt: "Bottle and Thyme in Chesterfield protected by a NOX commercial CCTV system",
+    summary: "A professional CCTV installation for a distinctive hospitality venue in Chesterfield town centre.",
+    story: "Bottle & Thyme is a prominent hospitality property in Chesterfield. NOX installed and commissioned a professional recorded CCTV system, configured the live-view display and completed a clear customer handover. The project demonstrates how commercial security can be designed around a working venue without detracting from the character of the building.",
+    requirement: "Provide dependable recorded CCTV coverage for a busy hospitality premises, with practical live viewing for the customer.",
+    delivery: "NOX completed the camera, recorder and viewing setup, tested the system and handed it over to the customer.",
+    systems: ["Commercial CCTV", "Network video recorder", "Live viewing", "Hospitality security"],
+    gallery: [
+      { src: "/images/projects/bottle-thyme-exterior-1.jpg", alt: "Exterior of Bottle and Thyme in Chesterfield" },
+      { src: "/images/projects/bottle-thyme-bellbox.jpg", alt: "NOX Fire and Security warning device at Bottle and Thyme" },
+      { src: "/images/projects/bottle-thyme-nvr.jpg", alt: "Commercial CCTV recorder installed at Bottle and Thyme" },
+      { src: "/images/projects/bottle-thyme-monitor-wide.jpg", alt: "Bottle and Thyme CCTV live-view monitor" },
+      { src: "/images/projects/bottle-thyme-vehicles.jpg", alt: "NOX Fire and Security vehicles outside a Chesterfield commercial project" }
+    ],
+    metaTitle: "Commercial CCTV Installation Chesterfield | Bottle & Thyme",
+    metaDescription: "See NOX Fire & Security's commercial CCTV installation at Bottle & Thyme in Chesterfield, including recording, live viewing and professional handover.",
+    searchKeywords: ["commercial CCTV installation Chesterfield", "hospitality CCTV Chesterfield", "CCTV installer Chesterfield", "business security systems Derbyshire"]
+  },
+  {
+    slug: "tan-station-fire-security-brimington",
+    title: "Black CCTV and fire first-fix at The Tan Station",
+    location: "Brimington, Chesterfield",
+    category: "Commercial Fire & Security",
+    image: "/images/projects/tan-station-exterior.jpg",
+    alt: "The Tan Station in Brimington during a NOX Fire and Security installation",
+    summary: "A coordinated commercial project combining discreet black CCTV equipment with fire-alarm first-fix work.",
+    story: "The Tan Station was developed around a modern, premium interior and exterior finish. NOX coordinated black CCTV equipment with the property design and completed fire-alarm first-fix work during the fit-out stage, helping the different systems sit naturally within the wider project.",
+    requirement: "Plan CCTV and fire infrastructure around an active commercial fit-out while keeping the visible equipment consistent with the black interior and exterior design.",
+    delivery: "NOX completed fire-alarm first-fix work and installed black internal and external CCTV cameras in positions selected around the premises.",
+    systems: ["Commercial CCTV", "Black turret cameras", "Fire alarm first fix", "Commercial fit-out"],
+    gallery: [
+      { src: "/images/projects/tan-station-fire-first-fix.jpg", alt: "Fire alarm cable first fix at The Tan Station in Brimington" },
+      { src: "/images/projects/tan-station-camera-internal-1.jpg", alt: "Black internal CCTV camera at The Tan Station" },
+      { src: "/images/projects/tan-station-camera-external-1.jpg", alt: "Black external CCTV camera at The Tan Station" },
+      { src: "/images/projects/tan-station-camera-internal-2.jpg", alt: "Discreet black CCTV camera inside The Tan Station" },
+      { src: "/images/projects/tan-station-camera-external-2.jpg", alt: "Commercial CCTV camera installed on the black exterior of The Tan Station" }
+    ],
+    metaTitle: "Commercial Fire & CCTV Installation Brimington | NOX",
+    metaDescription: "Commercial CCTV and fire-alarm first-fix project at The Tan Station in Brimington, Chesterfield, delivered by NOX Fire & Security.",
+    searchKeywords: ["commercial CCTV Brimington", "fire alarm installation Chesterfield", "commercial fire and security systems", "CCTV installation Derbyshire"]
+  },
+  {
+    slug: "retford-former-bank-cctv",
+    title: "Ten-camera Hikvision CCTV system at a former bank",
+    location: "Retford, DN22",
+    category: "Commercial CCTV",
+    image: "/images/projects/retford-building.jpg",
+    alt: "Former bank in Retford fitted with a ten-camera Hikvision CCTV system",
+    summary: "A ten-camera Hikvision CCTV upgrade covering the internal and external areas of a former bank in Retford.",
+    story: "This substantial commercial property required recorded coverage across entrances, corridors, internal rooms and the external approach. NOX installed ten Hikvision cameras and a new recorder, configured the viewing monitor and commissioned the system for straightforward day-to-day use.",
+    requirement: "Replace and improve the CCTV coverage across a multi-room former bank premises in Retford.",
+    delivery: "NOX installed ten Hikvision cameras, a Hikvision recorder and a dedicated live-view display before testing and handing over the system.",
+    systems: ["Ten Hikvision cameras", "Hikvision recorder", "Commercial live viewing", "Internal and external CCTV"],
+    gallery: [
+      { src: "/images/projects/retford-equipment.jpg", alt: "Hikvision ColorVu cameras and AcuSense recorder prepared for the Retford installation" },
+      { src: "/images/projects/retford-camera-close-1.jpg", alt: "Hikvision ColorVu turret camera installed at the former bank" },
+      { src: "/images/projects/retford-camera-fire-bell.jpg", alt: "Hikvision camera positioned inside the Retford commercial property" },
+      { src: "/images/projects/retford-monitor-grid.jpg", alt: "Ten-camera CCTV coverage displayed at the Retford former bank" },
+      { src: "/images/projects/retford-monitor-detail.jpg", alt: "Detailed CCTV image from the Retford Hikvision system" }
+    ],
+    metaTitle: "Hikvision CCTV Installation Retford | 10-Camera Project",
+    metaDescription: "A ten-camera Hikvision CCTV installation for a former bank in Retford DN22, including ColorVu cameras, recording and live viewing.",
+    searchKeywords: ["CCTV installation Retford", "Hikvision installer Retford", "commercial CCTV DN22", "business CCTV Nottinghamshire", "ColorVu CCTV installation"]
+  },
+  {
+    slug: "chesterfield-home-ajax-cctv-intruder",
+    title: "Ajax intruder and black CCTV for a Chesterfield home",
+    location: "Chesterfield, Derbyshire",
+    category: "Residential Fire & Security",
+    image: "/images/projects/chesterfield-home-exterior.jpg",
+    alt: "Chesterfield home protected by a NOX Ajax intruder alarm and black CCTV cameras",
+    summary: "A property-led residential installation combining Ajax intruder protection, black CCTV cameras and a NOX external warning device.",
+    story: "The property was being renovated and needed a modern security system that would remain discreet against the finished brickwork. NOX combined app-controlled intruder protection with black external CCTV cameras, a keypad and a branded external warning device.",
+    requirement: "Protect the home, garage and external approaches with equipment that suited the appearance of the renovated property.",
+    delivery: "NOX installed the intruder controls, external warning device, recording equipment and black CCTV cameras, then configured the system for the customer.",
+    systems: ["Ajax intruder alarm", "Black CCTV cameras", "Ajax keypad", "NOX external warning device"],
+    gallery: [
+      { src: "/images/projects/chesterfield-home-cameras.jpg", alt: "Two black external CCTV cameras installed on a Chesterfield home" },
+      { src: "/images/projects/chesterfield-home-camera-close.jpg", alt: "Black Ajax-style CCTV camera installed beneath the roofline" },
+      { src: "/images/projects/chesterfield-home-bellbox.jpg", alt: "NOX branded external alarm warning device on a Chesterfield home" },
+      { src: "/images/projects/chesterfield-home-recorder.jpg", alt: "Residential CCTV recorder installed at the Chesterfield property" },
+      { src: "/images/projects/chesterfield-home-keypad.jpg", alt: "Black Ajax keypad installed inside a Chesterfield home" }
+    ],
+    metaTitle: "Ajax Alarm & CCTV Installation Chesterfield | Residential",
+    metaDescription: "Residential Ajax intruder alarm and black CCTV installation in Chesterfield, including keypad, recording and external warning device.",
+    searchKeywords: ["Ajax alarm installation Chesterfield", "home security Chesterfield", "intruder alarm installer Chesterfield", "residential CCTV Derbyshire", "smart home security Chesterfield"]
+  },
+  {
+    slug: "eufy-smart-home-cctv-chesterfield",
+    title: "Solar and floodlight smart-home CCTV",
+    location: "Chesterfield, Derbyshire",
+    category: "Smart-home CCTV",
+    image: "/images/projects/eufy-home-exterior.jpg",
+    alt: "Chesterfield home with smart solar and floodlight CCTV installed by NOX",
+    summary: "A residential smart-camera project using solar and floodlight camera options around the property.",
+    story: "Not every home requires a full wired CCTV recorder. For this Chesterfield property, NOX installed a selection of Eufy solar and floodlight cameras around key external areas, providing a practical smart-home CCTV option based on the customer's property and requirements.",
+    requirement: "Add external camera coverage around the home using a lower-disruption smart-camera approach.",
+    delivery: "NOX positioned and configured the solar and floodlight cameras, completed the associated smart setup and demonstrated the system to the customer.",
+    systems: ["Eufy solar CCTV", "Floodlight cameras", "Smart-home app", "Residential external coverage"],
+    gallery: [
+      { src: "/images/projects/eufy-solar-camera-1.jpg", alt: "Eufy solar security camera installed in Chesterfield" },
+      { src: "/images/projects/eufy-solar-camera-2.jpg", alt: "Solar-powered smart CCTV camera on a Chesterfield home" },
+      { src: "/images/projects/eufy-equipment.jpg", alt: "Eufy smart-home CCTV equipment prepared for installation" },
+      { src: "/images/projects/eufy-floodlight-camera-1.jpg", alt: "Eufy floodlight CCTV camera installed above a rear entrance" },
+      { src: "/images/projects/eufy-roof-camera.jpg", alt: "Smart CCTV camera installed at roof level on a Chesterfield property" }
+    ],
+    metaTitle: "Solar & Smart Home CCTV Chesterfield | Eufy Installation",
+    metaDescription: "Smart-home CCTV installation in Chesterfield using Eufy solar and floodlight cameras, professionally positioned and configured by NOX.",
+    searchKeywords: ["solar CCTV Chesterfield", "wireless CCTV installation Chesterfield", "Eufy installer Chesterfield", "smart home security cameras Derbyshire"]
+  },
+  {
+    slug: "dronfield-timber-perimeter",
+    title: "External Ajax detection at a Dronfield industrial site",
+    location: "Dronfield, Derbyshire",
+    category: "Industrial perimeter protection",
+    image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png",
+    alt: "External Ajax detection protecting an industrial timber site in Dronfield",
+    summary: "Five outdoor Ajax detectors and external sirens creating an earlier warning layer around a working industrial site.",
+    story: "The Dronfield site needed protection around its external approaches rather than relying only on detection inside the building. NOX designed a perimeter layer using five outdoor Ajax detectors and external sirens around the key routes into the premises.",
+    requirement: "Provide external warning around a working industrial site with valuable stock and several vulnerable approaches.",
+    delivery: "NOX installed five Ajax outdoor detectors and external warning sirens, then tested the detection zones and completed the system handover.",
+    systems: ["Five Ajax outdoor detectors", "External sirens", "Industrial perimeter protection", "Dronfield installation"],
+    metaTitle: "Industrial Perimeter Protection Dronfield | Ajax Detection",
+    metaDescription: "External Ajax perimeter protection for an industrial site in Dronfield, using five outdoor detectors and external warning sirens.",
+    searchKeywords: ["industrial security Dronfield", "Ajax perimeter protection Dronfield", "commercial intruder alarm Derbyshire", "outdoor detection Dronfield"]
+  },
   {
     slug: "buxton-industrial-security",
     title: "Industrial alarm and nine-camera CCTV system",
@@ -116,11 +251,12 @@ export const caseStudies: CaseStudy[] = [
     category: "Industrial Fire & Security",
     image: "/images/resent-installation/F5B46861-7E5F-416A-BD90-69C544691E7A.png",
     alt: "NOX commercial CCTV installation at an industrial site in Buxton",
-    summary: "A joined-up intruder and CCTV installation for an industrial premises in Buxton.",
-    story: "A busy industrial site in Buxton needed more than a standard camera package. NOX delivered one connected commercial security project, combining an Ajax intruder alarm with a nine-camera CCTV system planned around the premises and its working areas.",
+    summary: "A joined-up intruder and nine-camera CCTV installation for an industrial premises in Buxton.",
+    story: "A busy industrial site in Buxton required one joined-up security approach. NOX combined an Ajax intruder alarm with a nine-camera CCTV system planned around the premises and its working areas.",
     requirement: "Provide intruder protection and a nine-camera CCTV system for the industrial site.",
-    delivery: "NOX installed an Ajax intruder alarm together with the confirmed nine-camera CCTV system.",
-    systems: ["Ajax intruder alarm", "Nine-camera CCTV system", "Industrial premises"]
+    delivery: "NOX installed the Ajax intruder alarm and nine-camera CCTV system within the confirmed project scope.",
+    systems: ["Ajax intruder alarm", "Nine-camera CCTV system", "Industrial premises"],
+    searchKeywords: ["industrial CCTV Buxton", "commercial alarm installation Buxton", "security systems Derbyshire"]
   },
   {
     slug: "chesterfield-scrapyard-cctv",
@@ -130,36 +266,25 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/5565AAD0-9F37-4C18-9E4A-1147A4389378.png",
     alt: "8MP AI turret CCTV cameras installed at a Chesterfield scrapyard",
     summary: "A higher-camera-count CCTV installation across a commercial yard in Chesterfield.",
-    story: "Commercial CCTV installation in Chesterfield on a larger scale: thirteen 8MP AI turret cameras positioned across a working scrapyard to cover vehicle routes, operational areas and the wider site with a clearer recorded view.",
+    story: "Thirteen 8MP AI turret cameras were positioned across a working scrapyard to cover vehicle routes, operational areas and the wider site with a clearer recorded view.",
     requirement: "Install wider CCTV coverage using thirteen cameras across the scrapyard site.",
     delivery: "NOX installed thirteen 8MP AI turret cameras as the confirmed project scope.",
-    systems: ["Thirteen CCTV cameras", "8MP AI turret cameras", "Commercial yard"]
+    systems: ["Thirteen CCTV cameras", "8MP AI turret cameras", "Commercial yard"],
+    searchKeywords: ["commercial CCTV Chesterfield", "scrapyard CCTV", "13 camera CCTV installation"]
   },
   {
     slug: "peak-electronic-security",
-    title: "Intruder and CCTV installation for Peak Electronic",
+    title: "Intruder and nine-camera CCTV installation",
     location: "Derbyshire",
     category: "Commercial alarm & CCTV",
     image: "/images/resent-installation/7A22DFA9-C5DE-4E26-8B68-52E8E3CAB865.png",
     alt: "Ajax intruder alarm and CCTV installation for Peak Electronic",
-    summary: "A combined Ajax intruder and CCTV installation for a commercial property.",
-    story: "Ajax intruder protection and nine CCTV cameras brought together for Peak Electronic, giving the commercial property one joined-up security approach with recording and live viewing available from the office.",
+    summary: "A combined Ajax intruder and nine-camera CCTV installation for Peak Electronic.",
+    story: "Ajax intruder protection and nine CCTV cameras were brought together for Peak Electronic, giving the commercial property one joined-up security approach with recording and live viewing.",
     requirement: "Provide intruder protection and nine CCTV cameras for Peak Electronic.",
     delivery: "NOX installed the Ajax intruder system and nine-camera CCTV system within the agreed project.",
-    systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"]
-  },
-  {
-    slug: "dronfield-timber-perimeter",
-    title: "External detection at a timber site",
-    location: "Dronfield, Derbyshire",
-    category: "Perimeter protection",
-    image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png",
-    alt: "External Ajax detection protecting a timber site in Dronfield",
-    summary: "External detection and sirens for a timber site in Dronfield.",
-    story: "A timber site in Dronfield needed protection before movement reached the main building. External Ajax detection and sirens were positioned around key approaches to create an earlier warning layer for the working premises.",
-    requirement: "Add external protection around the working timber site.",
-    delivery: "NOX installed external Ajax detection and external sirens as the confirmed scope.",
-    systems: ["External Ajax detection", "External sirens", "Perimeter protection"]
+    systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"],
+    searchKeywords: ["commercial CCTV Derbyshire", "Ajax intruder alarm business", "nine camera CCTV system"]
   },
   {
     slug: "sheffield-residential-security",
@@ -167,77 +292,55 @@ export const caseStudies: CaseStudy[] = [
     location: "Sheffield, South Yorkshire",
     category: "Residential security",
     image: "/images/resent-installation/B17CAA16-7E26-4342-BD6F-B777359E2BEB.png",
-    alt: "Residential CCTV and intruder alarm installation in Sheffield",
-    summary: "CCTV and intruder protection installed for a Sheffield home.",
-    story: "A Sheffield home protected through one joined-up residential installation, combining CCTV and intruder protection while keeping arming, viewing and everyday control straightforward for the household.",
-    requirement: "Provide a combined CCTV and intruder alarm system for the residential property.",
-    delivery: "NOX installed the confirmed CCTV and intruder protection and completed the system handover.",
-    systems: ["Residential CCTV", "Intruder alarm", "Home security"]
-  },
-  {
-    slug: "chesterfield-residential-ajax",
-    title: "Five-camera Ajax CCTV and intruder protection",
-    location: "Chesterfield, Derbyshire",
-    category: "Residential security",
-    image: "/images/resent-installation/5076E57A-3580-4C83-A1EB-090B7AF05D14.png",
-    alt: "Five Ajax 8MP cameras and intruder protection at a Chesterfield home",
-    summary: "Five Ajax 8MP cameras and intruder protection at a Chesterfield residential property.",
-    story: "Five Ajax 8MP cameras and intruder protection designed around a Chesterfield home, its driveway and the way the property is used. A modern residential security system without forcing the customer into a standard package.",
-    requirement: "Install five cameras together with intruder protection for the home.",
-    delivery: "NOX installed five Ajax 8MP cameras and the confirmed intruder alarm system.",
-    systems: ["Five Ajax 8MP cameras", "Intruder protection", "Residential property"]
-  },
-  {
-    slug: "retford-former-bank-cctv",
-    title: "Ten-camera CCTV system at a former bank",
-    location: "Retford, Nottinghamshire",
-    category: "Commercial CCTV",
-    image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
-    alt: "Ten-camera commercial CCTV system installed at a former bank in Retford",
-    summary: "A ten-camera CCTV installation at a former bank building in Retford.",
-    story: "A former bank building in Retford brought up to date with a ten-camera commercial CCTV system, planned around the existing layout, key views and the way the property is now used.",
-    requirement: "Provide a ten-camera CCTV system for the commercial building.",
-    delivery: "NOX installed the confirmed ten-camera CCTV system across the former bank property.",
-    systems: ["Ten-camera CCTV system", "Commercial property", "Retford installation"]
+    alt: "Residential CCTV and Ajax intruder alarm installed in Sheffield",
+    summary: "A combined CCTV and intruder installation for a residential property in Sheffield.",
+    story: "A Sheffield home received both CCTV and intruder protection, planned as one residential project and configured for straightforward everyday control.",
+    requirement: "Provide CCTV and intruder protection for the residential property.",
+    delivery: "NOX installed the confirmed CCTV and intruder alarm systems and completed the customer handover.",
+    systems: ["Residential CCTV", "Intruder alarm", "Sheffield installation"],
+    searchKeywords: ["home CCTV Sheffield", "intruder alarm Sheffield", "residential security South Yorkshire"]
   },
   {
     slug: "chesterfield-kitchen-showroom",
-    title: "Showroom intruder alarm and CCTV",
+    title: "Intruder alarm and CCTV for a kitchen showroom",
     location: "Chesterfield, Derbyshire",
-    category: "Retail security",
-    image: "/images/resent-installation/0C77818F-3EB9-4DD9-8ECA-6003107DBA59.png",
-    alt: "Intruder alarm and CCTV installed at a Chesterfield kitchen showroom",
-    summary: "A combined intruder alarm and CCTV installation for a Chesterfield showroom.",
-    story: "A modern Chesterfield kitchen showroom secured with intruder protection and CCTV installed as one coordinated project, keeping the finished equipment in line with the clean presentation of the premises.",
-    requirement: "Provide intruder and CCTV protection for the kitchen showroom.",
-    delivery: "NOX installed the confirmed intruder alarm and CCTV systems for the premises.",
-    systems: ["Intruder alarm", "CCTV system", "Retail showroom"]
+    category: "Retail & showroom security",
+    image: "/images/resent-installation/54AC9D7E-E96B-4E59-AE60-11E901A196D9.png",
+    alt: "Ajax intruder alarm and CCTV in a Chesterfield kitchen showroom",
+    summary: "A joined-up intruder and CCTV installation for a premium kitchen showroom.",
+    story: "The showroom required security that supported the property without disrupting its customer-facing design. NOX combined intruder protection and CCTV within one coordinated installation.",
+    requirement: "Protect the showroom with CCTV and intruder detection.",
+    delivery: "NOX installed and configured the intruder and CCTV systems within the confirmed scope.",
+    systems: ["Ajax intruder alarm", "Commercial CCTV", "Showroom security"],
+    searchKeywords: ["retail security Chesterfield", "showroom CCTV", "commercial alarm Chesterfield"]
   },
   {
     slug: "banana-industries-fire-security",
-    title: "Combined intruder and fire protection",
+    title: "Intruder and fire protection for Banana Industries",
     location: "Derbyshire",
     category: "Commercial Fire & Security",
-    image: "/images/resent-installation/68645CDC-8A63-4436-AB11-64ED41EF816D.jpeg",
-    alt: "Commercial intruder and fire protection installed for Banana Industries",
-    summary: "Intruder and fire protection delivered for Banana Industries.",
-    story: "Commercial intruder and fire protection delivered together for Banana Industries, showing how NOX can coordinate essential Fire & Security systems through one local team.",
-    requirement: "Provide both intruder and fire protection for the commercial premises.",
-    delivery: "NOX delivered the confirmed intruder and fire protection scope.",
-    systems: ["Intruder protection", "Fire protection", "Commercial premises"]
+    image: "/images/fire-safety.png",
+    alt: "NOX intruder and fire protection installation for Banana Industries",
+    summary: "A commercial project bringing intruder and fire protection together.",
+    story: "NOX delivered a coordinated intruder and fire project for Banana Industries, keeping the installation and handover within one local team.",
+    requirement: "Provide intruder and fire protection for the commercial premises.",
+    delivery: "NOX installed the confirmed intruder and fire systems.",
+    systems: ["Commercial intruder alarm", "Fire protection", "Joined-up installation"],
+    searchKeywords: ["commercial fire and security Derbyshire", "fire alarm installation", "business intruder alarm"]
   },
   {
     slug: "chatsworth-estate-cctv-upgrade",
     title: "Ten-camera CCTV upgrade",
     location: "Chatsworth Estate, Derbyshire",
-    category: "CCTV upgrade",
-    image: "/images/resent-installation/E11ABC2F-17E7-4198-A85F-872CDFDAFEA8.png",
+    category: "Estate CCTV",
+    image: "/images/resent-installation/0AED4F55-020E-40A5-8823-5BC499AA2015.png",
     alt: "Ten-camera CCTV upgrade completed at Chatsworth Estate",
-    summary: "A ten-camera CCTV upgrade at Chatsworth Estate.",
-    story: "A ten-camera CCTV upgrade at Chatsworth Estate, improving the existing arrangement while working carefully around the needs and presentation of an established Derbyshire estate property.",
-    requirement: "Upgrade the existing CCTV arrangement with a confirmed ten-camera scope.",
-    delivery: "NOX completed the ten-camera CCTV upgrade at the estate property.",
-    systems: ["Ten-camera CCTV upgrade", "Existing-system upgrade", "Estate property"]
+    summary: "A ten-camera CCTV upgrade with a new recorder at Chatsworth Estate.",
+    story: "NOX upgraded a ten-camera system and installed a new recorder, retaining a clear focus on practical recording and ongoing access.",
+    requirement: "Upgrade the existing ten-camera CCTV system and recorder.",
+    delivery: "NOX completed the confirmed ten-camera upgrade and new recorder installation.",
+    systems: ["Ten-camera CCTV upgrade", "New recorder", "Estate security"],
+    searchKeywords: ["CCTV upgrade Derbyshire", "estate CCTV", "commercial CCTV recorder replacement"]
   }
 ]
 
@@ -410,7 +513,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Can you maintain an older alarm?", a: "Yes. NOX can inspect many traditional wired, wireless and hybrid systems, subject to condition, access, parts availability and compatibility." }
     ],
     related: [{ href: "/systems/perimeter-protection", label: "Perimeter protection" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/commercial/intruder-alarms", label: "Commercial intruder alarms" }],
-    caseStudySlugs: ["peak-electronic-security", "sheffield-residential-security", "chesterfield-residential-ajax"],
+    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "peak-electronic-security", "sheffield-residential-security"],
     platformTitle: "Rule Your Space with Ajax",
     platformText: "Ajax brings the alarm, visual verification, sirens, user controls, automation and selected video devices into one connected platform where suitable. NOX handles the survey, design, installation, configuration and ongoing support.",
     products: [
@@ -503,7 +606,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Do commercial systems need a survey?", a: "A survey is strongly recommended so views, lighting, cabling, network capacity, recorder channels and storage can be assessed properly." }
     ],
     related: [{ href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/commercial/cctv", label: "Commercial CCTV" }, { href: "/case-studies", label: "CCTV case studies" }],
-    caseStudySlugs: ["chesterfield-scrapyard-cctv", "buxton-industrial-security", "chatsworth-estate-cctv-upgrade"],
+    caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "retford-former-bank-cctv", "tan-station-fire-security-brimington", "chesterfield-scrapyard-cctv"],
     platformTitle: "Ajax CCTV inside the wider security platform",
     platformText: "For suitable projects, Ajax cameras and NVR recording can sit alongside the intruder alarm in one platform. NOX also continues to specify Hikvision ColourVu and other professional CCTV where they are the better technical fit.",
     products: [
@@ -513,6 +616,48 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "PoE network design", description: "Power and data through structured cabling, planned around recorder location, switch capacity, cable routes and future expansion.", image: "/images/cctv-systems-image.png", imageAlt: "Professional PoE CCTV installation equipment" },
       { name: "Remote viewing", description: "Secure app access for live view, playback and event search, configured and demonstrated during handover.", image: "/images/ajax-camera.webp", imageAlt: "Ajax camera viewed through a mobile security app" },
       { name: "Annual maintenance", description: "Cleaning, image review, recording checks, playback tests and system-health checks for new and suitable traditional CCTV systems.", image: "/images/editorial/home-maintenance.jpg", imageAlt: "Real CCTV and security system maintenance by NOX" }
+    ]
+  },
+  "smart-home-cctv": {
+    slug: "smart-home-cctv",
+    eyebrow: "Solar, wireless and app-controlled cameras",
+    title: "Smart-home CCTV for properties that need a simpler camera solution",
+    metaTitle: "Smart Home & Solar CCTV Installation Chesterfield | NOX",
+    metaDescription: "Professional smart-home, solar and wireless CCTV installation in Chesterfield and Derbyshire, including Eufy camera positioning, setup and app handover.",
+    intro: "Some homes need a professionally planned smart-camera system rather than a full recorder-based CCTV installation. NOX can install and configure suitable solar, wireless and floodlight cameras around the property while keeping the main premium CCTV route available for customers who need continuous recording and larger coverage.",
+    image: "/images/projects/eufy-solar-camera-1.jpg",
+    imageAlt: "Eufy solar smart-home CCTV camera professionally installed in Chesterfield",
+    problemTitle: "Smart cameras still need the right position, power strategy and app setup",
+    problemText: "A wireless camera is only useful when the view, detection zone, mounting height, charging or solar exposure and notification settings all suit the property. NOX surveys the requirement and explains when a smart camera is suitable and when a professional NVR system is the better route.",
+    benefits: ["Solar and battery camera options", "Floodlight cameras", "App alerts and live viewing", "Professional positioning", "HomeBase and network setup", "Lower-disruption installation", "Clear customer handover", "Upgrade path to professional CCTV"],
+    suitableFor: ["Homes and bungalows", "Garages and gardens", "Rear access and side passages", "Properties with limited cable routes", "Customers wanting app-led viewing", "Selected outbuildings"],
+    process: [
+      { title: "Property review", text: "We review the entrances, approaches, Wi-Fi coverage, available sunlight and the image the customer needs." },
+      { title: "Honest system choice", text: "NOX explains whether smart cameras will meet the requirement or whether a recorder-based Ajax or Hikvision system is more appropriate." },
+      { title: "Installation and setup", text: "Cameras, solar panels or floodlights are positioned and the supporting app or HomeBase is configured." },
+      { title: "Handover", text: "Notifications, live view, charging expectations, privacy zones and everyday operation are demonstrated." }
+    ],
+    details: [
+      { title: "Solar camera positioning", text: "Solar exposure and the required camera view both matter. Panels and cameras are positioned to balance charging performance with useful coverage." },
+      { title: "Floodlight cameras", text: "A combined light and camera can suit entrances, gardens and external working areas where active illumination is useful." },
+      { title: "When to choose an NVR", text: "For continuous recording, larger properties, multiple users or commercial evidence requirements, NOX will normally recommend a professional recorder-based CCTV system." },
+      { title: "One local installer", text: "Customers can start with smart-home CCTV and return to NOX for alarms, perimeter protection, servicing or a future professional CCTV upgrade." }
+    ],
+    faq: [
+      { q: "Do you install Eufy cameras?", a: "Yes. NOX can install and configure suitable Eufy solar, battery and floodlight cameras where they match the property and customer requirement." },
+      { q: "Are wireless cameras the same as professional CCTV?", a: "No. Smart cameras are useful for selected residential applications, while professional NVR systems generally provide stronger continuous recording, storage and larger-system capability." },
+      { q: "Can you improve my existing smart-camera layout?", a: "Yes. NOX can review positioning, detection zones, network coverage and app setup, although compatibility and account access need to be confirmed." },
+      { q: "Can smart cameras work with an Ajax alarm?", a: "They remain separate platforms in most cases. NOX can explain the practical options and recommend a more integrated Ajax CCTV route when one-app control is important." }
+    ],
+    related: [{ href: "/systems/cctv", label: "Professional CCTV" }, { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" }, { href: "/residential", label: "Residential security" }],
+    caseStudySlugs: ["eufy-smart-home-cctv-chesterfield", "chesterfield-home-ajax-cctv-intruder"],
+    platformTitle: "A practical alternative where a full CCTV recorder is not required",
+    platformText: "NOX does not force every property onto one brand or one system type. Smart-home CCTV is offered where it is genuinely suitable, with professional Ajax and Hikvision CCTV available for more demanding requirements.",
+    products: [
+      { name: "Solar smart cameras", description: "Battery-powered cameras supported by solar charging for suitable external areas and lower-disruption residential installations.", image: "/images/projects/eufy-solar-camera-2.jpg", imageAlt: "Solar smart security camera installed on a Chesterfield home" },
+      { name: "Floodlight cameras", description: "Combined lighting, detection and video for selected entrances, gardens and rear access points.", image: "/images/projects/eufy-floodlight-camera-2.jpg", imageAlt: "Smart floodlight CCTV camera installed in Chesterfield" },
+      { name: "HomeBase and app setup", description: "Connection, user access, notification settings and practical app operation configured and explained during handover.", image: "/images/projects/eufy-equipment.jpg", imageAlt: "Eufy smart-home CCTV equipment prepared for installation" },
+      { name: "Professional CCTV upgrade", description: "Where continuous recording or broader coverage is needed, NOX can design an Ajax, Hikvision or other professional NVR-based system.", image: "/images/projects/retford-monitor-final.jpg", imageAlt: "Professional multi-camera CCTV system configured by NOX" }
     ]
   },
   "fire-safety": {
@@ -547,7 +692,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Can servicing include emergency lighting?", a: "Yes. Fire alarm servicing and emergency lighting can be coordinated where included in the written service package." }
     ],
     related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessments" }],
-    caseStudySlugs: ["banana-industries-fire-security", "chesterfield-kitchen-showroom"],
+    caseStudySlugs: ["tan-station-fire-security-brimington", "banana-industries-fire-security", "chesterfield-kitchen-showroom"],
     platformTitle: "Modern Ajax EN54 fire protection and traditional-system expertise",
     platformText: "NOX can introduce Ajax EN54 wireless fire technology where it suits the building while continuing to service and support established wired, conventional and addressable fire alarm systems.",
     products: [

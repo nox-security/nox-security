@@ -6,7 +6,7 @@ const steps = [
     number: "01",
     title: "Call or Book Online",
     description:
-      "Get in touch via phone, WhatsApp, or our quick quote form. We respond within 2 hours during business hours.",
+      "Get in touch via phone, WhatsApp, or our quick quote form. We review enquiries and respond during business hours.",
   },
   {
     icon: CalendarCheck,
