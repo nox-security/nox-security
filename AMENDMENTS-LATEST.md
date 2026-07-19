@@ -13,3 +13,11 @@
 - Restored Joseph and James's original colour photographs in wider editorial profiles rather than narrow vertical image columns.
 - Expanded the About story, founder roles and NOX journey with longer professional paragraphs and fewer bullet points.
 - Updated key service and service-plan imagery so monitoring, maintenance, perimeter protection and takeover pages relate more closely to the service described.
+
+## GoHighLevel Website Enquiry form update
+- Replaced the website form embed with the exact current GoHighLevel inline configuration supplied by Joseph.
+- Added all trigger, activation, deactivation, layout, form name and `data-height="806"` attributes.
+- Updated the iframe title to `Website Enquiry`.
+- Kept one safely loaded GoHighLevel embed script across the website.
+- Matched the form shell to the supplied 806px embed height and 8px corner radius.
+- The same form component remains positioned above telephone, WhatsApp and email options on mobile quote/contact pages.

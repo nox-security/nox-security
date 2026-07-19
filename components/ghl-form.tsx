@@ -3,40 +3,51 @@
 import { useEffect } from "react"
 import { site } from "@/lib/site"
 
+const EMBED_SCRIPT_ID = "ghl-form-embed-script"
+const EMBED_SCRIPT_SRC = "https://link.msgsndr.com/js/form_embed.js"
+
 export default function GHLForm({ compact = false }: { compact?: boolean }) {
   useEffect(() => {
-    const id = "ghl-embed-script"
-    if (!document.getElementById(id)) {
-      const script = document.createElement("script")
-      script.id = id
-      script.src = "https://link.msgsndr.com/js/form_embed.js"
-      script.async = true
-      script.defer = true
-      document.body.appendChild(script)
-    }
+    if (document.getElementById(EMBED_SCRIPT_ID)) return
+
+    const script = document.createElement("script")
+    script.id = EMBED_SCRIPT_ID
+    script.src = EMBED_SCRIPT_SRC
+    script.async = true
+    document.body.appendChild(script)
   }, [])
 
   const formUrl = `https://api.leadconnectorhq.com/widget/form/${site.formId}`
+  const iframeId = `inline-${site.formId}`
 
   return (
     <div className={`embed-shell ${compact ? "embed-compact" : ""}`}>
       <iframe
         src={formUrl}
-        id={`inline-${site.formId}`}
+        style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
+        id={iframeId}
         className="ghl-frame"
-        title="NOX Fire & Security website enquiry form"
+        data-layout='{"id":"INLINE"}'
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Website Enquiry"
+        data-height="806"
+        data-layout-iframe-id={iframeId}
+        data-form-id={site.formId}
+        title="Website Enquiry"
         loading="eager"
         allow="clipboard-write"
         referrerPolicy="strict-origin-when-cross-origin"
-        data-layout='{"id":"INLINE"}'
-        data-trigger-type="alwaysShow"
-        data-activation-type="alwaysActivated"
-        data-deactivation-type="neverDeactivate"
-        data-form-name="Website Enquiry"
-        data-layout-iframe-id={`inline-${site.formId}`}
-        data-form-id={site.formId}
       />
-      <noscript><p className="embed-fallback">The form requires JavaScript. <a href={formUrl}>Open the Website Enquiry form directly.</a></p></noscript>
+      <noscript>
+        <p className="embed-fallback">
+          The form requires JavaScript. <a href={formUrl}>Open the Website Enquiry form directly.</a>
+        </p>
+      </noscript>
     </div>
   )
 }

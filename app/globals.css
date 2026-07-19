@@ -162,9 +162,9 @@ p { color: var(--muted); }
 .embed-section { padding: 80px 0 110px; }
 .embed-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 38px; align-items: start; }
 .embed-intro { position: sticky; top: 120px; }
-.embed-shell { background: white; min-height: 840px; border: 1px solid var(--line-strong); overflow: hidden; }
+.embed-shell { background: white; height: 806px; min-height: 806px; border: 1px solid var(--line-strong); border-radius: 8px; overflow: hidden; }
 .embed-compact { min-height: 700px; }
-.ghl-frame { width: 100%; height: 900px; border: 0; background: white; }
+.ghl-frame { width: 100%; height: 100%; min-height: 806px; border: 0; border-radius: 8px; background: white; display: block; }
 .calendar-shell { min-height: 850px; }
 .calendar-frame { width: 100%; height: 900px; border: 0; background: white; }
 .contact-cards { display: grid; gap: 12px; margin-top: 28px; }
@@ -251,7 +251,8 @@ p { color: var(--muted); }
   .mobile-conversion-bar a { display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; }
   .mobile-conversion-bar a { background: white; color: black; }
   .embed-shell, .calendar-shell { margin-left: -14px; margin-right: -14px; border-left: 0; border-right: 0; }
-  .ghl-frame, .calendar-frame { height: 960px; }
+  .ghl-frame { height: 100%; min-height: 806px; }
+  .calendar-frame { height: 960px; }
 }
 
 /* v2.6 marketing-system additions */
