@@ -102,6 +102,7 @@ export type CaseStudy = {
   image: string
   alt: string
   summary: string
+  story?: string
   requirement: string
   delivery: string
   systems: string[]
@@ -116,6 +117,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/F5B46861-7E5F-416A-BD90-69C544691E7A.png",
     alt: "NOX commercial CCTV installation at an industrial site in Buxton",
     summary: "A joined-up intruder and CCTV installation for an industrial premises in Buxton.",
+    story: "What began as a security requirement developed into one connected system: an Ajax intruder alarm and nine-camera CCTV installation designed around a busy industrial site.",
     requirement: "Provide intruder protection and a nine-camera CCTV system for the industrial site.",
     delivery: "NOX installed an Ajax intruder alarm together with the confirmed nine-camera CCTV system.",
     systems: ["Ajax intruder alarm", "Nine-camera CCTV system", "Industrial premises"]
@@ -128,6 +130,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/5565AAD0-9F37-4C18-9E4A-1147A4389378.png",
     alt: "8MP AI turret CCTV cameras installed at a Chesterfield scrapyard",
     summary: "A higher-camera-count CCTV installation across a commercial yard in Chesterfield.",
+    story: "Thirteen 8MP AI turret cameras were positioned across this Chesterfield scrapyard to create a clearer view of the wider working site, vehicle routes and key areas.",
     requirement: "Install wider CCTV coverage using thirteen cameras across the scrapyard site.",
     delivery: "NOX installed thirteen 8MP AI turret cameras as the confirmed project scope.",
     systems: ["Thirteen CCTV cameras", "8MP AI turret cameras", "Commercial yard"]
@@ -140,6 +143,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/7A22DFA9-C5DE-4E26-8B68-52E8E3CAB865.png",
     alt: "Ajax intruder alarm and CCTV installation for Peak Electronic",
     summary: "A combined Ajax intruder and CCTV installation for a commercial property.",
+    story: "One app, one connected security approach and a live office display overlooking the wider perimeter: Ajax intruder protection paired with nine CCTV cameras.",
     requirement: "Provide intruder protection and nine CCTV cameras for Peak Electronic.",
     delivery: "NOX installed the Ajax intruder system and nine-camera CCTV system within the agreed project.",
     systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"]
@@ -152,6 +156,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png",
     alt: "External Ajax detection protecting a timber site in Dronfield",
     summary: "External detection and sirens for a timber site in Dronfield.",
+    story: "A working timber site needs protection before an intruder reaches the building. External Ajax detection and sirens added an earlier warning layer around the premises.",
     requirement: "Add external protection around the working timber site.",
     delivery: "NOX installed external Ajax detection and external sirens as the confirmed scope.",
     systems: ["External Ajax detection", "External sirens", "Perimeter protection"]
@@ -164,6 +169,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/B17CAA16-7E26-4342-BD6F-B777359E2BEB.png",
     alt: "Residential CCTV and intruder alarm installation in Sheffield",
     summary: "CCTV and intruder protection installed for a Sheffield home.",
+    story: "A residential system designed as one joined-up installation, combining CCTV with intruder protection while keeping everyday control straightforward for the household.",
     requirement: "Provide a combined CCTV and intruder alarm system for the residential property.",
     delivery: "NOX installed the confirmed CCTV and intruder protection and completed the system handover.",
     systems: ["Residential CCTV", "Intruder alarm", "Home security"]
@@ -176,6 +182,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/5076E57A-3580-4C83-A1EB-090B7AF05D14.png",
     alt: "Five Ajax 8MP cameras and intruder protection at a Chesterfield home",
     summary: "Five Ajax 8MP cameras and intruder protection at a Chesterfield residential property.",
+    story: "A premium Chesterfield home protected with five Ajax 8MP cameras and intruder detection, designed around the property rather than fitted as a standard package.",
     requirement: "Install five cameras together with intruder protection for the home.",
     delivery: "NOX installed five Ajax 8MP cameras and the confirmed intruder alarm system.",
     systems: ["Five Ajax 8MP cameras", "Intruder protection", "Residential property"]
@@ -188,6 +195,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
     alt: "Ten-camera commercial CCTV system installed at a former bank in Retford",
     summary: "A ten-camera CCTV installation at a former bank building in Retford.",
+    story: "A former bank building brought up to date with a ten-camera CCTV system, planned around the layout and the way the commercial property is now used.",
     requirement: "Provide a ten-camera CCTV system for the commercial building.",
     delivery: "NOX installed the confirmed ten-camera CCTV system across the former bank property.",
     systems: ["Ten-camera CCTV system", "Commercial property", "Retford installation"]
@@ -200,6 +208,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/0C77818F-3EB9-4DD9-8ECA-6003107DBA59.png",
     alt: "Intruder alarm and CCTV installed at a Chesterfield kitchen showroom",
     summary: "A combined intruder alarm and CCTV installation for a Chesterfield showroom.",
+    story: "Modern security for a modern showroom: intruder protection and CCTV installed together so the finished system matched the standard of the premises.",
     requirement: "Provide intruder and CCTV protection for the kitchen showroom.",
     delivery: "NOX installed the confirmed intruder alarm and CCTV systems for the premises.",
     systems: ["Intruder alarm", "CCTV system", "Retail showroom"]
@@ -212,6 +221,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/68645CDC-8A63-4436-AB11-64ED41EF816D.jpeg",
     alt: "Commercial intruder and fire protection installed for Banana Industries",
     summary: "Intruder and fire protection delivered for Banana Industries.",
+    story: "Two essential systems brought together for one commercial customer, with intruder and fire protection planned as part of the same wider project.",
     requirement: "Provide both intruder and fire protection for the commercial premises.",
     delivery: "NOX delivered the confirmed intruder and fire protection scope.",
     systems: ["Intruder protection", "Fire protection", "Commercial premises"]
@@ -224,6 +234,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/E11ABC2F-17E7-4198-A85F-872CDFDAFEA8.png",
     alt: "Ten-camera CCTV upgrade completed at Chatsworth Estate",
     summary: "A ten-camera CCTV upgrade at Chatsworth Estate.",
+    story: "An existing CCTV arrangement upgraded through a confirmed ten-camera scope, improving the system while working with the needs of an established estate property.",
     requirement: "Upgrade the existing CCTV arrangement with a confirmed ten-camera scope.",
     delivery: "NOX completed the ten-camera CCTV upgrade at the estate property.",
     systems: ["Ten-camera CCTV upgrade", "Existing-system upgrade", "Estate property"]
@@ -408,7 +419,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "DoorProtect", description: "Opening detection for doors and windows, positioned around the actual entry routes and part-setting requirements of the property.", image: "/images/Doorprotect.jpeg", imageAlt: "Ajax DoorProtect door and window detector" },
       { name: "KeyPad & user controls", description: "Touchscreen or button keypads, tags, fobs and app control make the system straightforward for families, staff and authorised users.", image: "/images/Ajax-KeyPad.jpeg", imageAlt: "Ajax KeyPad for controlling an intruder alarm" },
       { name: "StreetSiren", description: "An external audible and visual deterrent configured as part of the alarm design, with placement considered during the survey.", image: "/images/StreetSiren.jpeg", imageAlt: "Ajax StreetSiren external alarm sounder" },
-      { name: "Monitoring-ready design", description: "Where monitoring is selected, the system can support professional alarm handling, keyholder contact and agreed escalation procedures.", image: "/images/monitoring.png", imageAlt: "Professional alarm monitoring and keyholder support" }
+      { name: "Monitoring-ready design", description: "Where monitoring is selected, the system can support professional alarm handling, keyholder contact and agreed escalation procedures.", image: "/images/editorial/home-monitoring.jpg", imageAlt: "Real NOX CCTV display and system equipment supporting professional alarm monitoring" }
     ],
     videos: [
       { title: "Ajax intruder protection", text: "See how the Ajax platform brings detection, control and app management together.", youtubeId: "9ffQhBwXUDg" },
@@ -422,7 +433,7 @@ export const systemPages: Record<string, ServicePageData> = {
     metaTitle: "Ajax Perimeter Protection Chesterfield | Outdoor Detection",
     metaDescription: "Ajax perimeter protection across Chesterfield, Sheffield and Derbyshire with Curtain Outdoor, MotionCam Outdoor, external sirens, photo verification and maintenance.",
     intro: "External protection is a separate security layer for driveways, side access, yards, boundaries, windows, doors and outbuildings. NOX designs it around the approach routes and environment rather than copying the internal alarm system outside.",
-    image: "/images/perimeter.jpg",
+    image: "/images/editorial/home-perimeter.jpg",
     imageAlt: "Ajax outdoor perimeter detector protecting a property boundary",
     problemTitle: "Outdoor detection needs precise design and testing",
     problemText: "Sunlight, vegetation, animals, traffic, gates, paths, installation height and the direction of travel can all influence performance. The survey identifies where an early warning layer adds value and which device pattern suits each approach.",
@@ -453,10 +464,10 @@ export const systemPages: Record<string, ServicePageData> = {
     products: [
       { name: "Curtain Outdoor", description: "Narrow curtain-style outdoor detection for windows, doorways, passages and selected boundary lines.", image: "/images/SingleCurtain.jpeg", imageAlt: "Ajax Curtain Outdoor perimeter detector" },
       { name: "DualCurtain Outdoor", description: "Two opposing detection curtains can cover longer boundary runs or approaches from a central mounting point where suitable.", image: "/images/DualCurtain.jpeg", imageAlt: "Ajax DualCurtain Outdoor detector" },
-      { name: "MotionCam Outdoor", description: "Outdoor motion detection with camera-assisted verification options, anti-masking features and adjustable detection on suitable Ajax systems.", image: "/images/AjaxDualcurtain.jpg", imageAlt: "Ajax outdoor detector for perimeter protection" },
+      { name: "MotionCam Outdoor", description: "Outdoor motion detection with camera-assisted verification options, anti-masking features and adjustable detection on suitable Ajax systems.", image: "/images/2Motioncam.jpg", imageAlt: "Ajax MotionCam outdoor detector for perimeter protection" },
       { name: "StreetSiren", description: "External audible and visual indication can reinforce the perimeter layer and wider intruder alarm system.", image: "/images/StreetSiren.jpeg", imageAlt: "Ajax external StreetSiren" },
-      { name: "Outbuilding protection", description: "Garages, workshops, stores and detached buildings can be brought into the wider Ajax system subject to survey and communication range.", image: "/images/perimeter.jpg", imageAlt: "External security protecting a garage and outbuilding" },
-      { name: "Maintenance and adjustment", description: "Outdoor systems need cleaning, signal checks, battery review, firmware updates and retesting as the environment changes.", image: "/images/maintenance.png", imageAlt: "Outdoor security detector maintenance" }
+      { name: "Outbuilding protection", description: "Garages, workshops, stores and detached buildings can be brought into the wider Ajax system subject to survey and communication range.", image: "/images/editorial/home-perimeter.jpg", imageAlt: "External security protecting a garage and outbuilding" },
+      { name: "Maintenance and adjustment", description: "Outdoor systems need cleaning, signal checks, battery review, firmware updates and retesting as the environment changes.", image: "/images/editorial/home-maintenance.jpg", imageAlt: "Real security system maintenance and panel inspection by NOX" }
     ],
     videos: [{ title: "Ajax outdoor protection", text: "See how external detection can create an earlier warning layer around a property.", youtubeId: "Nm0HIK8vjso" }]
   },
@@ -501,7 +512,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "Hikvision ColourVu", description: "Full-colour night imaging options for suitable scenes where useful detail after dark is a key requirement.", image: "/images/HikvisionDome.jpg", imageAlt: "Hikvision ColourVu CCTV dome camera" },
       { name: "PoE network design", description: "Power and data through structured cabling, planned around recorder location, switch capacity, cable routes and future expansion.", image: "/images/cctv-systems-image.png", imageAlt: "Professional PoE CCTV installation equipment" },
       { name: "Remote viewing", description: "Secure app access for live view, playback and event search, configured and demonstrated during handover.", image: "/images/ajax-camera.webp", imageAlt: "Ajax camera viewed through a mobile security app" },
-      { name: "Annual maintenance", description: "Cleaning, image review, recording checks, playback tests and system-health checks for new and suitable traditional CCTV systems.", image: "/images/maintenance.png", imageAlt: "CCTV servicing and maintenance by NOX" }
+      { name: "Annual maintenance", description: "Cleaning, image review, recording checks, playback tests and system-health checks for new and suitable traditional CCTV systems.", image: "/images/editorial/home-maintenance.jpg", imageAlt: "Real CCTV and security system maintenance by NOX" }
     ]
   },
   "fire-safety": {
@@ -626,8 +637,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Alarm Maintenance Chesterfield | Annual Intruder Alarm Service",
     metaDescription: "Annual alarm maintenance in Chesterfield, Sheffield and Derbyshire. Engineer servicing, device tests, battery checks, cleaning, firmware updates and service records.",
     intro: "Keep a NOX installation or suitable existing intruder alarm healthy, current and ready to use with planned annual engineer servicing.",
-    image: "/images/resent-installation/6D03473F-95E6-4883-91F2-C24367A665B2.jpeg",
-    imageAlt: "NOX engineer completing intruder alarm maintenance in Chesterfield",
+    image: "/images/editorial/home-maintenance.jpg",
+    imageAlt: "Real alarm panels inspected during NOX maintenance and takeover work",
     residentialPrice: "£225 per year",
     commercialPrice: "From £295 per year",
     priceNote: "Final commercial pricing depends on system size, access, device count and condition.",
@@ -658,8 +669,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Alarm Monitoring Derbyshire | Professional Keyholder Contact",
     metaDescription: "Professional alarm monitoring across Chesterfield, Sheffield and Derbyshire, including alarm handling, keyholder contact and agreed escalation procedures.",
     intro: "Add professional alarm handling to a suitable intruder alarm, with keyholder contact, system supervision and visual or image verification where available.",
-    image: "/images/resent-installation/0AED4F55-020E-40A5-8823-5BC499AA2015.png",
-    imageAlt: "Professional intruder alarm monitoring service for Derbyshire properties",
+    image: "/images/editorial/home-monitoring.jpg",
+    imageAlt: "Real NOX CCTV display and installed equipment supporting a monitored security system",
     residentialPrice: "£595 per year",
     commercialPrice: "From £695 per year",
     priceNote: "Compatibility, signalling equipment and the agreed monitoring setup are confirmed before activation.",
@@ -690,8 +701,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "CCTV Maintenance Chesterfield | Camera & Recorder Servicing",
     metaDescription: "Annual CCTV maintenance in Chesterfield, Sheffield and Derbyshire. Camera cleaning, recorder and hard-drive checks, playback tests, firmware and remote-viewing checks.",
     intro: "Keep cameras clean, recording healthy and remote access working with an annual CCTV maintenance visit for NOX installations and suitable existing systems.",
-    image: "/images/cctv-systems.png",
-    imageAlt: "Professional CCTV camera being maintained in Chesterfield",
+    image: "/images/editorial/blog-servicing.jpg",
+    imageAlt: "Real CCTV and alarm servicing work completed by NOX",
     residentialPrice: "£225 per year",
     commercialPrice: "From £295 per year",
     priceNote: "Final commercial pricing depends on camera count, access, recorder configuration and site size.",

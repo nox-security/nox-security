@@ -37,8 +37,14 @@ export function DualButtons({ quoteLabel = "Request Your Free Security Survey" }
 }
 
 export function TrustStrip() {
-  const items = ["Chesterfield-based team", "Residential & commercial", "Ajax Authorised Installation Company", "Fire, Security & aftercare", "Verified customer reviews"]
-  return <section className="trust-strip"><div className="container trust-strip-grid">{items.map(item => <span key={item}>✓ {item}</span>)}</div></section>
+  const items = [
+    { kicker: "Local accountability", title: "Chesterfield based", text: "Direct contact with the team responsible for the work." },
+    { kicker: "Premium residential", title: "Designed around the home", text: "Discreet alarms, CCTV and external protection." },
+    { kicker: "Commercial support", title: "Fire & Security together", text: "Installation, servicing and compliance packages." },
+    { kicker: "Preferred platform", title: "Ajax authorised", text: "Modern technology designed and installed professionally." },
+    { kicker: "Customer confidence", title: "Verified reviews", text: "Real feedback on advice, workmanship and aftercare." }
+  ]
+  return <section className="trust-strip trust-strip-premium"><div className="container trust-strip-grid">{items.map(item => <article key={item.title}><span>{item.kicker}</span><strong>{item.title}</strong><small>{item.text}</small></article>)}</div></section>
 }
 
 export function ReviewSummaryStrip() {
@@ -68,15 +74,15 @@ export function ProductShowcase({ data }: { data: ServicePageData }) {
   </div></section>
 }
 
-export function VideoShowcase({ videos, title = "See the technology in action", eyebrow = "Product videos" }: { videos?: { title: string; text: string; youtubeId: string }[]; title?: string; eyebrow?: string }) {
+export function VideoShowcase({ videos, title = "See the technology in action", eyebrow = "Product videos" }: { videos?: { title: string; text: string; youtubeId?: string; videoUrl?: string }[]; title?: string; eyebrow?: string }) {
   if (!videos?.length) return null
-  return <section className="section section-alt video-showcase"><div className="container"><SectionHeading eyebrow={eyebrow} title={title} text="Short product videos provide a useful introduction. The final design and device selection still follow the property survey."/><div className={`video-grid video-columns-${Math.min(videos.length, 3)}`}>{videos.map(video => <article className="video-card" key={video.youtubeId}><div className="video-frame"><iframe src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`} title={video.title} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div><div><h3>{video.title}</h3><p>{video.text}</p></div></article>)}</div></div></section>
+  return <section className="section section-alt video-showcase"><div className="container"><SectionHeading eyebrow={eyebrow} title={title} text="Explore the Ajax platform and individual products in motion. Final device selection still follows the property survey and the way the site will be used."/><div className={`video-grid video-columns-${Math.min(videos.length, 3)}`}>{videos.map((video, index) => <article className="video-card" key={video.youtubeId ?? video.videoUrl ?? index}><div className="video-frame">{video.youtubeId ? <iframe src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`} title={video.title} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <video controls playsInline preload="metadata" aria-label={video.title}><source src={video.videoUrl} type="video/mp4"/></video>}</div><div><h3>{video.title}</h3><p>{video.text}</p></div></article>)}</div></div></section>
 }
 
 export function CaseStudyGrid({ limit, slugs }: { limit?: number; slugs?: string[] }) {
   let list = slugs?.length ? caseStudies.filter(item => slugs.includes(item.slug)) : caseStudies
   if (typeof limit === "number") list = list.slice(0, limit)
-  return <div className="case-grid">{list.map(item => <article id={item.slug} className="case-card" key={item.slug}><img src={item.image} alt={item.alt} /><div className="case-card-body"><span className="micro-label">{item.category} · {item.location}</span><h3>{item.title}</h3><p>{item.summary}</p><div className="case-scope"><strong>Project scope</strong><span>{item.requirement}</span></div><ul>{item.systems.map(system => <li key={system}>{system}</li>)}</ul><Link href={`/case-studies#project-${item.slug}`}>View project details →</Link></div></article>)}</div>
+  return <div className="case-grid">{list.map(item => <article id={item.slug} className="case-card" key={item.slug}><img src={item.image} alt={item.alt} /><div className="case-card-body"><span className="micro-label">{item.category} · {item.location}</span><h3>{item.title}</h3><p>{item.story ?? item.summary}</p><div className="case-scope"><strong>Installed by NOX</strong><span>{item.systems.join(" · ")}</span></div><Link href={`/case-studies#project-${item.slug}`}>Read the project story →</Link></div></article>)}</div>
 }
 
 export function CaseStudyDetails() {

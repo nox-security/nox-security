@@ -21,8 +21,8 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A practical guide to alarm and CCTV maintenance, system health checks and annual servicing for homes and businesses across Derbyshire.",
     category: "Maintenance",
     excerpt: "Why regular servicing matters, what an engineer should check and how annual support helps prevent avoidable faults.",
-    image: "/images/maintenance.png",
-    imageAlt: "NOX engineer maintenance support for alarm and CCTV systems",
+    image: "/images/editorial/blog-servicing.jpg",
+    imageAlt: "Real NOX alarm and CCTV servicing work on an existing system",
     sections: [
       {
         heading: "Servicing keeps the system useful, not just switched on",
@@ -86,8 +86,8 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A guide to taking over existing alarm, CCTV and fire systems, including inspection, access recovery, fault review, servicing and phased upgrades.",
     category: "Takeovers & upgrades",
     excerpt: "Existing equipment does not always need replacing. A proper inspection can identify what can be retained, repaired or upgraded.",
-    image: "/images/Maintenence.png",
-    imageAlt: "Existing security system inspection and takeover support",
+    image: "/images/editorial/blog-takeover.jpg",
+    imageAlt: "Existing wired security panel inspected during a NOX takeover assessment",
     sections: [
       {
         heading: "A takeover begins with understanding what is already there",

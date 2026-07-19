@@ -1,16 +1,15 @@
-# Latest Premium Amendments
+# Latest NOX v2.6 Refinements
 
-- More premium NOX-led homepage hero and visual hierarchy
-- Stronger positioning for high-value residential properties and commercial Fire & Security customers
-- One clear free-security-survey journey across the site
-- Form moved before telephone, WhatsApp and email options on mobile
-- Black-and-white pill-style website CTA system
-- NOX padlock/brand mark introduced as a subtle hero and About-page element
-- Premium residential/commercial visual split
-- More detailed Ajax product presentation
-- Expanded commercial Ajax EN54 Fire Hub, detection, manual call point and FireProtect content
-- More prominent servicing, Fire maintenance and compliance package positioning
-- Real NOX installation photography used across case studies and selected service-plan heroes
-- Rebuilt About page with a fuller founder journey, leadership and company-positioning sections
-- Areas We Cover restored prominently to the homepage and desktop navigation
-- Improved case-study card presentation and project imagery
+- Reworked the homepage trust strip into a premium five-part proof rail rather than basic horizontal tick labels.
+- Simplified the desktop navigation by combining Residential and Commercial services under one Solutions menu and removing Guides from the top navigation.
+- Added five Ajax technology videos to the homepage, including MotionCam and KeyPad TouchScreen product clips.
+- Replaced homepage Intruder, Perimeter, Monitoring and Maintenance visuals with more relevant Ajax and real NOX installation imagery.
+- Expanded the homepage Ajax section to feature MotionCam, Curtain Outdoor, DualCurtain Outdoor, KeyPad, StreetSiren, DoorBell and NVR positioning.
+- Added a new editorial project-story section near the top of the homepage plus further case studies lower down.
+- Reworked case-study cards to use more natural, story-led NOX wording inspired by previous project captions, with fewer bullet lists.
+- Replaced maintenance and takeover guide images with real NOX system-inspection photography.
+- Replaced the Contact-page bell-box visual with a real NOX vehicle attending a residential property.
+- Rebuilt the About hero around the NOX brand mark, removing James's photograph from the top-right hero position.
+- Restored Joseph and James's original colour photographs in wider editorial profiles rather than narrow vertical image columns.
+- Expanded the About story, founder roles and NOX journey with longer professional paragraphs and fewer bullet points.
+- Updated key service and service-plan imagery so monitoring, maintenance, perimeter protection and takeover pages relate more closely to the service described.

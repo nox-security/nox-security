@@ -14,7 +14,7 @@ const order = ["alarm-maintenance", "alarm-monitoring", "cctv-maintenance", "fir
 
 export default function ServicePlansPage() {
   return <>
-    <PageHero eyebrow="Monitoring, maintenance and compliance" title="Local aftercare that keeps systems useful after installation" intro="NOX supports new NOX installations and suitable traditional alarms, CCTV and fire systems with annual servicing, professional monitoring, emergency lighting, takeovers and coordinated packages." image="/images/maintenance.png" imageAlt="NOX annual security system maintenance and monitoring services"/>
+    <PageHero eyebrow="Monitoring, maintenance and compliance" title="Local aftercare that keeps systems useful after installation" intro="NOX supports new NOX installations and suitable traditional alarms, CCTV and fire systems with annual servicing, professional monitoring, emergency lighting, takeovers and coordinated packages." image="/images/editorial/home-maintenance.jpg" imageAlt="Real alarm system maintenance and takeover work completed by NOX"/>
     <TrustStrip/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Why ongoing support matters" title="Protection should remain reliable, current and easy to manage" text="A system can appear operational while batteries, camera views, recording health, remote access or device condition are beginning to deteriorate. Planned servicing gives customers a clearer route for testing, records, defects and future support."/><FeatureGrid columns={4} items={[
       { title:"Annual engineer servicing", text:"System-health checks, device testing, cleaning, battery review, updates and service records within the agreed scope." },

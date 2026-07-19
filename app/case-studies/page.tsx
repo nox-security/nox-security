@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMetadata(
 
 export default function CaseStudiesPage() {
   return <>
-    <PageHero eyebrow="Real NOX installations" title="Fire and security projects designed around real properties" intro="Residential and commercial examples covering CCTV, intruder alarms, perimeter protection, fire systems and upgrades. Every project below uses confirmed locations and installation scopes without invented outcomes." image="/images/case-studies/install-3.png" imageAlt="NOX commercial CCTV installation in Derbyshire"/>
+    <PageHero eyebrow="Real NOX installations" title="Fire and security projects designed around real properties" intro="Residential and commercial examples covering CCTV, intruder alarms, perimeter protection, fire systems and upgrades. Every project below uses confirmed locations and installation scopes without invented outcomes." image="/images/editorial/case-study-montage.jpg" imageAlt="Montage of real NOX CCTV installations and monitoring displays"/>
     <TrustStrip/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Project portfolio" title="The property and requirement come before the equipment" text="Each project is presented with the confirmed requirement, NOX delivery and installed systems. No customer names, results or technical claims have been added beyond the available project facts."/><CaseStudyDetails/></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer reviews" title="The same focus on advice, workmanship and handover"/><ReviewGrid limit={3}/></div></section>
