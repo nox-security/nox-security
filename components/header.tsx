@@ -3,35 +3,30 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const residentialSystems = [
-  ["Residential System Design", "/residential", "Ajax alarms, CCTV and smart-home security designed around the home"],
-  ["Ajax Intruder Alarms", "/systems/intrusion-alarms", "MotionCam, DoorProtect, keypads, sirens and app control"],
+const residential = [
+  ["Residential Overview", "/residential", "Premium alarms, CCTV and external protection for homes"],
+  ["Ajax Intruder Alarms", "/systems/intrusion-alarms", "MotionCam, app control, keypads and sirens"],
+  ["Perimeter Protection", "/systems/perimeter-protection", "Curtain and outdoor detection around approaches"],
   ["Residential CCTV", "/systems/cctv", "Ajax, Hikvision ColourVu and professional recording"],
-  ["Smart Home CCTV", "/systems/smart-home-cctv", "Solar, floodlight, wireless and video-doorbell options"]
+  ["Smart Home CCTV", "/systems/smart-home-cctv", "Solar, floodlight and app-controlled camera options"]
 ]
 
-const commercialSystems = [
-  ["Commercial System Design", "/commercial", "Joined-up Fire & Security for operational premises"],
-  ["Fire Alarm Installation", "/commercial/fire-compliance", "Ajax EN54 and suitable traditional commercial fire systems"],
-  ["Commercial CCTV", "/commercial/cctv", "Multi-camera systems, NVR recording and remote viewing"],
-  ["Commercial Intruder Alarms", "/commercial/intruder-alarms", "Internal and external protection for business premises"],
-  ["Emergency Lighting & FRA", "/systems/emergency-lighting", "Emergency lighting, testing and fire-risk-assessment routes"]
+const commercial = [
+  ["Commercial Overview", "/commercial", "Joined-up Fire & Security for operational premises"],
+  ["Commercial Fire Systems", "/commercial/fire-compliance", "Installation, servicing and compliance packages"],
+  ["Commercial CCTV", "/commercial/cctv", "Cameras, NVR, remote viewing and larger sites"],
+  ["Commercial Intruder Alarms", "/commercial/intruder-alarms", "Intruder protection, monitoring and maintenance"]
 ]
 
-const residentialPlans = [
-  ["Alarm Maintenance", "/service-plans/alarm-maintenance", "£225/year residential"],
-  ["Alarm Monitoring", "/service-plans/alarm-monitoring", "£595/year residential"],
-  ["CCTV Maintenance", "/service-plans/cctv-maintenance", "£225/year residential"],
-  ["Total Security Package", "/service-plans/total-security", "From £795/year residential"]
-]
-
-const commercialPlans = [
-  ["Commercial Alarm Maintenance", "/service-plans/alarm-maintenance", "From £295/year"],
-  ["Commercial Alarm Monitoring", "/service-plans/alarm-monitoring", "From £695/year"],
-  ["Commercial CCTV Maintenance", "/service-plans/cctv-maintenance", "From £295/year"],
-  ["Fire Alarm Servicing", "/service-plans/fire-alarm-servicing", "Quoted to system and site"],
-  ["Emergency Lighting Servicing", "/service-plans/emergency-lighting-servicing", "Quoted to fitting quantities"],
-  ["Fire Compliance Package", "/service-plans/fire-compliance", "Quoted to site and included services"]
+const plans = [
+  ["Service Plan Overview", "/service-plans"],
+  ["Alarm Maintenance", "/service-plans/alarm-maintenance"],
+  ["Alarm Monitoring", "/service-plans/alarm-monitoring"],
+  ["CCTV Maintenance", "/service-plans/cctv-maintenance"],
+  ["Fire Alarm Servicing", "/service-plans/fire-alarm-servicing"],
+  ["Emergency Lighting", "/service-plans/emergency-lighting-servicing"],
+  ["Total Security Package", "/service-plans/total-security"],
+  ["Fire Compliance Package", "/service-plans/fire-compliance"]
 ]
 
 export default function Header() {
@@ -44,34 +39,17 @@ export default function Header() {
           <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <Link href="/">Home</Link>
           <div className="nav-dropdown nav-dropdown-wide">
-            <Link href="/systems">Systems</Link>
+            <Link href="/systems">Solutions</Link>
             <div className="dropdown-panel solutions-dropdown grouped-solutions-dropdown">
-              <div className="solution-menu-group">
-                <span className="solution-menu-heading">Residential installations</span>
-                {residentialSystems.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}
-              </div>
-              <div className="solution-menu-group">
-                <span className="solution-menu-heading">Commercial installations</span>
-                {commercialSystems.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}
-              </div>
-              <div className="solution-menu-footer"><Link href="/systems"><strong>View all system-design routes</strong><span>Choose residential or commercial first, then the relevant system</span></Link></div>
+              <div className="solution-menu-group"><span className="solution-menu-heading">Residential</span>{residential.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}</div>
+              <div className="solution-menu-group"><span className="solution-menu-heading">Commercial</span>{commercial.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}</div>
+              <div className="solution-menu-footer"><Link href="/service-plans"><strong>Monitoring, maintenance and compliance</strong><span>Continue into the right annual support or service-plan route</span></Link></div>
             </div>
           </div>
-          <div className="nav-dropdown nav-dropdown-plans">
+          <div className="nav-dropdown">
             <Link href="/service-plans">Service Plans</Link>
-            <div className="dropdown-panel plan-menu-panel">
-              <div className="solution-menu-group">
-                <span className="solution-menu-heading">Residential aftercare</span>
-                {residentialPlans.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}
-              </div>
-              <div className="solution-menu-group">
-                <span className="solution-menu-heading">Commercial & compliance</span>
-                {commercialPlans.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}
-              </div>
-              <div className="solution-menu-footer"><Link href="/service-plans"><strong>Compare every plan and package</strong><span>Clear annual pricing where confirmed; site-specific services quoted consistently</span></Link></div>
-            </div>
+            <div className="dropdown-panel">{plans.map(([label, href]) => <Link key={`${label}-${href}`} href={href}>{label}</Link>)}</div>
           </div>
           <Link href="/case-studies">Case Studies</Link>
           <Link href="/areas-we-serve">Areas</Link>
@@ -88,14 +66,13 @@ export default function Header() {
       {open && (
         <nav className="mobile-nav" aria-label="Mobile navigation">
           <Link onClick={() => setOpen(false)} href="/">Home</Link>
-          <span className="mobile-nav-heading">Residential installations</span>
-          {residentialSystems.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
-          <span className="mobile-nav-heading">Commercial installations</span>
-          {commercialSystems.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
-          <span className="mobile-nav-heading">Residential service plans</span>
-          {residentialPlans.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
-          <span className="mobile-nav-heading">Commercial & fire support</span>
-          {commercialPlans.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
+          <span className="mobile-nav-heading">Residential</span>
+          {residential.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
+          <span className="mobile-nav-heading">Commercial</span>
+          {commercial.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
+          <span className="mobile-nav-heading">Ongoing support</span>
+          <Link onClick={() => setOpen(false)} href="/service-plans">Service Plans</Link>
+          <Link onClick={() => setOpen(false)} href="/service-plans/fire-alarm-servicing">Fire Alarm Servicing</Link>
           <Link onClick={() => setOpen(false)} href="/areas-we-serve">Areas We Cover</Link>
           <Link onClick={() => setOpen(false)} href="/case-studies">Case Studies</Link>
           <Link onClick={() => setOpen(false)} href="/reviews">Reviews</Link>

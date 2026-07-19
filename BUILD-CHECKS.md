@@ -1,15 +1,18 @@
 # NOX v2.6 Build Checks
 
-Completed against the packaged project on 19 July 2026:
+- Base: current v2.6 working website
+- Portfolio upgrade: Bottle & Thyme, The Tan Station, Retford former bank, Chesterfield residential Ajax/CCTV and Eufy smart-home CCTV
+- SEO case-study routes, local landing pages, metadata, structured data and sitemap updates included
+- GoHighLevel Website Enquiry form ID: 8FchnjOrpZ4ufh1TiW8k
 
-- Dependency installation: `npm ci` passed.
-- TypeScript: `npm run typecheck` passed.
-- Production build: `npm run build` passed using Next.js 16.2.10.
-- Next.js generated 73 routes.
-- XML sitemap: 68 URLs returned HTTP 200 in a local production-server crawl.
-- Internal crawl: 145 linked routes and local assets checked with no failures.
-- Local image-reference scan: 99 referenced images checked with none missing.
-- Prohibited-claim source scan: no Farsight, police-response, URN, SSAIB, SSIAB, NACOSS, NSI, false-alarm guarantee, lifetime-warranty or unsupported response-time wording found in application source.
-- ZIP integrity: checked after packaging.
+## Verified in this build
+- `npm ci --no-audit --no-fund` completed successfully
+- `npm run build` completed successfully
+- Next.js compiled successfully
+- TypeScript validation passed as part of the production build
+- 73 static/SSG routes generated
+- Sitemap, robots and case-study routes generated
+- Project imagery copied into `public/images/projects`
+- Final ZIP integrity checked
 
-Dependency note: `npm audit --omit=dev` reported no critical or high-severity issues. It reported three moderate advisories associated with the current stable Next.js dependency chain. No forced downgrade or unstable canary dependency was applied.
+Build date: 19 July 2026

@@ -1,97 +1,22 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CaseStudyGrid, ConversionPanel, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { ConversionPanel, DualButtons, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { systemPages } from "@/lib/content"
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "Security System Design Chesterfield | Residential & Commercial",
-  "Choose residential security or commercial Fire & Security system design in Chesterfield, Sheffield and Derbyshire, followed by the right monitoring, maintenance or compliance plan.",
+  "Security Systems Chesterfield | Alarms, CCTV & Fire",
+  "Explore tailored intruder alarms, CCTV, fire alarms, emergency lighting and fire risk assessment services across Chesterfield, Sheffield and Derbyshire.",
   "/systems"
 )
 
-const residentialSystems = [
-  {
-    title: "Ajax Intruder Alarms",
-    text: "Wireless or hybrid alarm design with MotionCam photo verification, DoorProtect, user controls, sirens, app access and external detection where the survey supports it.",
-    href: "/systems/intrusion-alarms",
-    image: "/images/projects/chesterfield-home-keypad.jpg",
-    alt: "Ajax keypad installed in a Chesterfield home"
-  },
-  {
-    title: "Residential CCTV",
-    text: "Professional camera coverage for entrances, driveways, vehicles, garages, gardens and outbuildings using Ajax, Hikvision ColourVu or another suitable platform.",
-    href: "/systems/cctv",
-    image: "/images/projects/chesterfield-home-cameras.jpg",
-    alt: "Residential CCTV cameras installed by NOX in Chesterfield"
-  },
-  {
-    title: "Smart Home CCTV",
-    text: "Solar, floodlight, wireless and video-doorbell options for selected homes where lower disruption and app-led operation are the right fit.",
-    href: "/systems/smart-home-cctv",
-    image: "/images/projects/eufy-solar-camera-2.jpg",
-    alt: "Solar smart-home CCTV camera installed in Chesterfield"
-  }
-]
-
-const commercialSystems = [
-  {
-    title: "Commercial Fire Alarm Systems",
-    text: "New Ajax EN54 and suitable traditional fire-alarm installations, followed by testing, servicing, records and coordinated compliance support.",
-    href: "/commercial/fire-compliance",
-    image: "/images/ajax-en54-fire.webp",
-    alt: "Ajax EN54 commercial fire alarm system"
-  },
-  {
-    title: "Commercial CCTV",
-    text: "Multi-camera systems for shops, offices, hospitality, yards, warehouses and industrial premises with NVR recording, playback and remote viewing.",
-    href: "/commercial/cctv",
-    image: "/images/projects/retford-monitor-final.jpg",
-    alt: "Ten-camera commercial CCTV system in Retford"
-  },
-  {
-    title: "Commercial Intruder Alarms",
-    text: "Internal and external detection planned around access, staff use, opening hours, valuable areas and the agreed monitoring or keyholder process.",
-    href: "/commercial/intruder-alarms",
-    image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png",
-    alt: "External Ajax detection at an industrial site in Dronfield"
-  },
-  {
-    title: "Emergency Lighting & Fire Risk Support",
-    text: "Emergency-lighting installation and testing, plus fire-risk-assessment routes for landlords, HMOs, hospitality and operational commercial sites.",
-    href: "/systems/emergency-lighting",
-    image: "/images/EmergencyLighting.jpeg",
-    alt: "Emergency lighting fitting for commercial installation and testing"
-  }
-]
-
 export default function SystemsPage() {
   return <>
-    <PageHero eyebrow="System design" title="Choose residential or commercial first — then build the right system" intro="NOX separates new installations from ongoing support. Start with the property type and system requirement, then continue into monitoring, maintenance or a compliance package after the installation scope is clear." image="/images/editorial/ajax-technology.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
+    <PageHero eyebrow="NOX solutions" title="Alarm, CCTV and Fire systems designed around the property" intro="Choose the service you need and use one clear enquiry route. NOX will review the property and arrange a survey where the system needs to be designed on site." image="/images/editorial/ajax-technology.jpg" imageAlt="Ajax alarm, perimeter, video and control products used by NOX"><DualButtons/></PageHero>
     <TrustStrip/>
-
-    <section className="section"><div className="container">
-      <SectionHeading eyebrow="Residential installations" title="Smart protection for everyday homes, larger properties and everything between" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. Premium design means the system is considered and installed properly — not that the property has to be a mansion."/>
-      <div className="system-route-grid residential-system-grid">
-        {residentialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential system</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
-      </div>
-      <div className="button-row"><Link className="button button-outline" href="/residential">View Residential System Design</Link></div>
-    </div></section>
-
-    <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Commercial installations" title="Fire, CCTV and intruder systems for operational premises" text="Commercial work is led by fire-alarm installation and servicing, CCTV, intruder protection, emergency lighting and property-specific risk or compliance requirements."/>
-      <div className="system-route-grid commercial-system-route-grid">
-        {commercialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Commercial system</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
-      </div>
-      <div className="button-row"><Link className="button button-outline" href="/commercial">View Commercial System Design</Link></div>
-    </div></section>
-
-    <section className="section ongoing-support-bridge"><div className="container split-grid"><div>
-      <SectionHeading eyebrow="After installation" title="Move into the right service plan, monitoring or compliance package" text="Recurring support is kept separate from the new-system design so the customer can see exactly what they are buying. Residential customers can combine alarm, monitoring and CCTV maintenance; commercial customers can add Fire servicing, emergency lighting and coordinated compliance support."/>
-      <div className="related-links"><Link href="/service-plans/alarm-maintenance">Alarm maintenance →</Link><Link href="/service-plans/alarm-monitoring">Alarm monitoring →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link><Link href="/service-plans/fire-alarm-servicing">Fire alarm servicing →</Link><Link href="/service-plans/fire-compliance">Fire Compliance Package →</Link></div>
-    </div><aside className="dark-panel"><span className="eyebrow">Packages and annual support</span><h3>One point of contact after handover</h3><p>Where the confirmed scope allows, services can be coordinated under one renewal structure with clearer records, planned engineer visits and a direct route for repairs or upgrades.</p><Link className="button button-light" href="/service-plans">Compare All Service Plans</Link></aside></div></section>
-
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Real NOX work" title="Residential and commercial installations in the field"/><CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder","bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","retford-former-bank-cctv"]}/></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Core services" title="Residential and commercial protection through one local team" text="Ajax is the preferred smart security platform for many projects, while CCTV and Fire equipment are selected around the site, the existing system and the agreed requirement."/><div className="solution-grid systems-index-grid">{Object.values(systemPages).map(page => <article className="solution-card" key={page.slug}><img src={page.image} alt={page.imageAlt}/><div className="solution-card-body"><h2>{page.eyebrow}</h2><p>{page.intro}</p><Link className="text-link" href={`/systems/${page.slug}`}>Explore service →</Link></div></article>)}</div></div></section>
+    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Residential" title="Homes, driveways, garages and outbuildings" text="Intruder alarms, CCTV, perimeter protection, app control, monitoring and annual maintenance designed around daily life."/><Link className="button button-outline" href="/residential">Explore Residential Solutions</Link></div><aside className="dark-panel"><span className="eyebrow">Commercial</span><h2>Joined-up fire and security.</h2><p>Alarm, CCTV, fire, emergency lighting, monitoring, maintenance and takeovers for shops, offices, warehouses, hospitality and multi-system sites.</p><Link className="button button-light" href="/commercial">Explore Commercial Solutions</Link></aside></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Professional advice, installation and aftercare"/><ReviewGrid limit={3}/></div></section>
-    <ConversionPanel title="Tell us whether the property is residential or commercial" text="From there, NOX can guide the enquiry into the right new-system design or ongoing support route without sending customers through unnecessary pages."/>
+    <ConversionPanel/>
   </>
 }
