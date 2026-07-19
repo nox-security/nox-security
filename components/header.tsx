@@ -3,13 +3,18 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const solutions = [
-  ["Residential Overview", "/residential", "Alarms, CCTV and perimeter protection for homes"],
-  ["Intruder Alarms", "/systems/intrusion-alarms", "Ajax alarms, MotionCam and app control"],
-  ["CCTV Systems", "/systems/cctv", "Ajax and professional CCTV systems"],
-  ["Perimeter Protection", "/systems/perimeter-protection", "Curtain and external detection"],
-  ["Commercial Overview", "/commercial", "Joined-up Fire & Security for businesses"],
-  ["Commercial Fire Systems", "/commercial/fire-compliance", "Fire alarms, servicing and compliance packages"]
+const residential = [
+  ["Residential Overview", "/residential", "Premium alarms, CCTV and external protection for homes"],
+  ["Ajax Intruder Alarms", "/systems/intrusion-alarms", "MotionCam, app control, keypads and sirens"],
+  ["Perimeter Protection", "/systems/perimeter-protection", "Curtain and outdoor detection around approaches"],
+  ["Residential CCTV", "/systems/cctv", "Ajax, Hikvision ColourVu and professional recording"]
+]
+
+const commercial = [
+  ["Commercial Overview", "/commercial", "Joined-up Fire & Security for operational premises"],
+  ["Commercial Fire Systems", "/commercial/fire-compliance", "Installation, servicing and compliance packages"],
+  ["Commercial CCTV", "/commercial/cctv", "Cameras, NVR, remote viewing and larger sites"],
+  ["Commercial Intruder Alarms", "/commercial/intruder-alarms", "Intruder protection, monitoring and maintenance"]
 ]
 
 const plans = [
@@ -33,10 +38,13 @@ export default function Header() {
           <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <Link href="/">Home</Link>
           <div className="nav-dropdown nav-dropdown-wide">
             <Link href="/systems">Solutions</Link>
-            <div className="dropdown-panel solutions-dropdown">{solutions.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}</div>
+            <div className="dropdown-panel solutions-dropdown grouped-solutions-dropdown">
+              <div className="solution-menu-group"><span className="solution-menu-heading">Residential</span>{residential.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}</div>
+              <div className="solution-menu-group"><span className="solution-menu-heading">Commercial</span>{commercial.map(([label, href, detail]) => <Link key={`${label}-${href}`} href={href}><strong>{label}</strong><span>{detail}</span></Link>)}</div>
+              <div className="solution-menu-footer"><Link href="/service-plans"><strong>Monitoring, maintenance and compliance</strong><span>Continue into the right annual support or service-plan route</span></Link></div>
+            </div>
           </div>
           <div className="nav-dropdown">
             <Link href="/service-plans">Service Plans</Link>
@@ -57,8 +65,10 @@ export default function Header() {
       {open && (
         <nav className="mobile-nav" aria-label="Mobile navigation">
           <Link onClick={() => setOpen(false)} href="/">Home</Link>
-          <span className="mobile-nav-heading">Solutions</span>
-          {solutions.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
+          <span className="mobile-nav-heading">Residential</span>
+          {residential.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
+          <span className="mobile-nav-heading">Commercial</span>
+          {commercial.map(([label, href]) => <Link onClick={() => setOpen(false)} key={`${label}-${href}`} href={href}>{label}</Link>)}
           <span className="mobile-nav-heading">Ongoing support</span>
           <Link onClick={() => setOpen(false)} href="/service-plans">Service Plans</Link>
           <Link onClick={() => setOpen(false)} href="/service-plans/fire-alarm-servicing">Fire Alarm Servicing</Link>

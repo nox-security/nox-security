@@ -38,11 +38,11 @@ export function DualButtons({ quoteLabel = "Request Your Free Security Survey" }
 
 export function TrustStrip() {
   const items = [
-    { kicker: "Local accountability", title: "Chesterfield based", text: "Direct contact with the team responsible for the work." },
-    { kicker: "Premium residential", title: "Designed around the home", text: "Discreet alarms, CCTV and external protection." },
-    { kicker: "Commercial support", title: "Fire & Security together", text: "Installation, servicing and compliance packages." },
-    { kicker: "Preferred platform", title: "Ajax authorised", text: "Modern technology designed and installed professionally." },
-    { kicker: "Customer confidence", title: "Verified reviews", text: "Real feedback on advice, workmanship and aftercare." }
+    { kicker: "Local and founder-led", title: "Chesterfield based", text: "The same local team remains accountable from survey to aftercare." },
+    { kicker: "Residential protection", title: "Designed around the property", text: "Ajax alarms, CCTV and perimeter protection without a fixed package." },
+    { kicker: "Commercial Fire & Security", title: "Installation through compliance", text: "Fire systems, CCTV, servicing and coordinated annual support." },
+    { kicker: "Preferred smart platform", title: "Ajax authorised", text: "MotionCam, external detection, video and modern system control." },
+    { kicker: "Proven customer experience", title: "Verified reviews", text: "Real feedback about advice, installation quality and local support." }
   ]
   return <section className="trust-strip trust-strip-premium"><div className="container trust-strip-grid">{items.map(item => <article key={item.title}><span>{item.kicker}</span><strong>{item.title}</strong><small>{item.text}</small></article>)}</div></section>
 }

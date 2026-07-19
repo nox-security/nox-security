@@ -1,14 +1,13 @@
-# Build Checks
+# Build checks
 
-Completed for this ZIP after the GoHighLevel Website Enquiry form update:
+Completed on the packaged project:
 
-- `npm ci`
-- `npx tsc --noEmit`
-- `npm run build`
-- Next.js generated 59 routes successfully
-- Local production server returned HTTP 200 for `/get-quote` and `/contact`
-- Rendered HTML confirmed `data-height="806"`
-- Rendered HTML confirmed `title="Website Enquiry"`
-- Rendered HTML confirmed form ID `8FchnjOrpZ4ufh1TiW8k`
-- GoHighLevel embed script is loaded once by the shared form component
-- ZIP integrity test completed after packaging
+- `npm ci` — passed
+- `npm run build` — passed
+- TypeScript validation as part of the Next.js production build — passed
+- 59 generated routes — passed
+- 54 sitemap URLs requested from a local production server — all returned HTTP 200
+- Homepage, Contact, Case Studies, Intruder Alarms, Commercial Fire and Quote pages — HTTP 200
+- 73 referenced local images — all files present
+- Prohibited wording scan — passed
+- GoHighLevel Website Enquiry form remains integrated through form ID `8FchnjOrpZ4ufh1TiW8k`

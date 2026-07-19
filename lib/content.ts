@@ -117,7 +117,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/F5B46861-7E5F-416A-BD90-69C544691E7A.png",
     alt: "NOX commercial CCTV installation at an industrial site in Buxton",
     summary: "A joined-up intruder and CCTV installation for an industrial premises in Buxton.",
-    story: "What began as a security requirement developed into one connected system: an Ajax intruder alarm and nine-camera CCTV installation designed around a busy industrial site.",
+    story: "A busy industrial site in Buxton needed more than a standard camera package. NOX delivered one connected commercial security project, combining an Ajax intruder alarm with a nine-camera CCTV system planned around the premises and its working areas.",
     requirement: "Provide intruder protection and a nine-camera CCTV system for the industrial site.",
     delivery: "NOX installed an Ajax intruder alarm together with the confirmed nine-camera CCTV system.",
     systems: ["Ajax intruder alarm", "Nine-camera CCTV system", "Industrial premises"]
@@ -130,7 +130,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/5565AAD0-9F37-4C18-9E4A-1147A4389378.png",
     alt: "8MP AI turret CCTV cameras installed at a Chesterfield scrapyard",
     summary: "A higher-camera-count CCTV installation across a commercial yard in Chesterfield.",
-    story: "Thirteen 8MP AI turret cameras were positioned across this Chesterfield scrapyard to create a clearer view of the wider working site, vehicle routes and key areas.",
+    story: "Commercial CCTV installation in Chesterfield on a larger scale: thirteen 8MP AI turret cameras positioned across a working scrapyard to cover vehicle routes, operational areas and the wider site with a clearer recorded view.",
     requirement: "Install wider CCTV coverage using thirteen cameras across the scrapyard site.",
     delivery: "NOX installed thirteen 8MP AI turret cameras as the confirmed project scope.",
     systems: ["Thirteen CCTV cameras", "8MP AI turret cameras", "Commercial yard"]
@@ -143,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/7A22DFA9-C5DE-4E26-8B68-52E8E3CAB865.png",
     alt: "Ajax intruder alarm and CCTV installation for Peak Electronic",
     summary: "A combined Ajax intruder and CCTV installation for a commercial property.",
-    story: "One app, one connected security approach and a live office display overlooking the wider perimeter: Ajax intruder protection paired with nine CCTV cameras.",
+    story: "Ajax intruder protection and nine CCTV cameras brought together for Peak Electronic, giving the commercial property one joined-up security approach with recording and live viewing available from the office.",
     requirement: "Provide intruder protection and nine CCTV cameras for Peak Electronic.",
     delivery: "NOX installed the Ajax intruder system and nine-camera CCTV system within the agreed project.",
     systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"]
@@ -156,7 +156,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png",
     alt: "External Ajax detection protecting a timber site in Dronfield",
     summary: "External detection and sirens for a timber site in Dronfield.",
-    story: "A working timber site needs protection before an intruder reaches the building. External Ajax detection and sirens added an earlier warning layer around the premises.",
+    story: "A timber site in Dronfield needed protection before movement reached the main building. External Ajax detection and sirens were positioned around key approaches to create an earlier warning layer for the working premises.",
     requirement: "Add external protection around the working timber site.",
     delivery: "NOX installed external Ajax detection and external sirens as the confirmed scope.",
     systems: ["External Ajax detection", "External sirens", "Perimeter protection"]
@@ -169,7 +169,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/B17CAA16-7E26-4342-BD6F-B777359E2BEB.png",
     alt: "Residential CCTV and intruder alarm installation in Sheffield",
     summary: "CCTV and intruder protection installed for a Sheffield home.",
-    story: "A residential system designed as one joined-up installation, combining CCTV with intruder protection while keeping everyday control straightforward for the household.",
+    story: "A Sheffield home protected through one joined-up residential installation, combining CCTV and intruder protection while keeping arming, viewing and everyday control straightforward for the household.",
     requirement: "Provide a combined CCTV and intruder alarm system for the residential property.",
     delivery: "NOX installed the confirmed CCTV and intruder protection and completed the system handover.",
     systems: ["Residential CCTV", "Intruder alarm", "Home security"]
@@ -182,7 +182,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/5076E57A-3580-4C83-A1EB-090B7AF05D14.png",
     alt: "Five Ajax 8MP cameras and intruder protection at a Chesterfield home",
     summary: "Five Ajax 8MP cameras and intruder protection at a Chesterfield residential property.",
-    story: "A premium Chesterfield home protected with five Ajax 8MP cameras and intruder detection, designed around the property rather than fitted as a standard package.",
+    story: "Five Ajax 8MP cameras and intruder protection designed around a Chesterfield home, its driveway and the way the property is used. A modern residential security system without forcing the customer into a standard package.",
     requirement: "Install five cameras together with intruder protection for the home.",
     delivery: "NOX installed five Ajax 8MP cameras and the confirmed intruder alarm system.",
     systems: ["Five Ajax 8MP cameras", "Intruder protection", "Residential property"]
@@ -195,7 +195,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
     alt: "Ten-camera commercial CCTV system installed at a former bank in Retford",
     summary: "A ten-camera CCTV installation at a former bank building in Retford.",
-    story: "A former bank building brought up to date with a ten-camera CCTV system, planned around the layout and the way the commercial property is now used.",
+    story: "A former bank building in Retford brought up to date with a ten-camera commercial CCTV system, planned around the existing layout, key views and the way the property is now used.",
     requirement: "Provide a ten-camera CCTV system for the commercial building.",
     delivery: "NOX installed the confirmed ten-camera CCTV system across the former bank property.",
     systems: ["Ten-camera CCTV system", "Commercial property", "Retford installation"]
@@ -208,7 +208,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/0C77818F-3EB9-4DD9-8ECA-6003107DBA59.png",
     alt: "Intruder alarm and CCTV installed at a Chesterfield kitchen showroom",
     summary: "A combined intruder alarm and CCTV installation for a Chesterfield showroom.",
-    story: "Modern security for a modern showroom: intruder protection and CCTV installed together so the finished system matched the standard of the premises.",
+    story: "A modern Chesterfield kitchen showroom secured with intruder protection and CCTV installed as one coordinated project, keeping the finished equipment in line with the clean presentation of the premises.",
     requirement: "Provide intruder and CCTV protection for the kitchen showroom.",
     delivery: "NOX installed the confirmed intruder alarm and CCTV systems for the premises.",
     systems: ["Intruder alarm", "CCTV system", "Retail showroom"]
@@ -221,7 +221,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/68645CDC-8A63-4436-AB11-64ED41EF816D.jpeg",
     alt: "Commercial intruder and fire protection installed for Banana Industries",
     summary: "Intruder and fire protection delivered for Banana Industries.",
-    story: "Two essential systems brought together for one commercial customer, with intruder and fire protection planned as part of the same wider project.",
+    story: "Commercial intruder and fire protection delivered together for Banana Industries, showing how NOX can coordinate essential Fire & Security systems through one local team.",
     requirement: "Provide both intruder and fire protection for the commercial premises.",
     delivery: "NOX delivered the confirmed intruder and fire protection scope.",
     systems: ["Intruder protection", "Fire protection", "Commercial premises"]
@@ -234,7 +234,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/resent-installation/E11ABC2F-17E7-4198-A85F-872CDFDAFEA8.png",
     alt: "Ten-camera CCTV upgrade completed at Chatsworth Estate",
     summary: "A ten-camera CCTV upgrade at Chatsworth Estate.",
-    story: "An existing CCTV arrangement upgraded through a confirmed ten-camera scope, improving the system while working with the needs of an established estate property.",
+    story: "A ten-camera CCTV upgrade at Chatsworth Estate, improving the existing arrangement while working carefully around the needs and presentation of an established Derbyshire estate property.",
     requirement: "Upgrade the existing CCTV arrangement with a confirmed ten-camera scope.",
     delivery: "NOX completed the ten-camera CCTV upgrade at the estate property.",
     systems: ["Ten-camera CCTV upgrade", "Existing-system upgrade", "Estate property"]
