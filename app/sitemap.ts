@@ -1,115 +1,24 @@
-import type { MetadataRoute } from 'next'
-
-const BASE_URL = 'https://nox-security.co.uk'
-
-const areas = [
-  "Chesterfield", "Sheffield", "Dronfield", "Eckington", "Clay Cross", "Bolsover", 
-  "Matlock", "Darley Dale", "Rowsley", "Wirksworth", "Bakewell", "Baslow", 
-  "Ashford in the Water", "Hassop", "Tideswell", "Buxton", "Hathersage", 
-  "Hope Valley", "Derbyshire", "North Yorkshire", "South Yorkshire", 
-  "Nottinghamshire", "Mansfield", "Worksop", "Rotherham", "Doncaster"
-].map(name => name.toLowerCase().replace(/ /g, '-'))
+import type { MetadataRoute } from "next"
+import { areas, planPages, systemPages } from "@/lib/content"
+import { site } from "@/lib/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
-
-  // Core pages
-  const corePages: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/services`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/about-us`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/contact`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/get-quote`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/reviews`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/service-plans`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/areas-we-serve`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // System pages
-    {
-      url: `${BASE_URL}/systems/intrusion-alarms`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/systems/cctv`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/systems/fire-safety`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // Legal pages
-    {
-      url: `${BASE_URL}/privacy-policy`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms-conditions`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/cookie-policy`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+  const core = [
+    "", "/systems", "/service-plans", "/commercial", "/commercial/cctv", "/commercial/intruder-alarms", "/commercial/fire-compliance",
+    "/areas-we-serve", "/about-us", "/contact", "/get-quote", "/book-security-survey", "/case-studies", "/reviews",
+    "/privacy-policy", "/terms-conditions", "/cookie-policy"
   ]
-
-  // Area pages (high priority for local SEO)
-  const areaPages: MetadataRoute.Sitemap = areas.map((slug) => ({
-    url: `${BASE_URL}/areas/${slug}`,
+  const urls = [
+    ...core,
+    ...Object.keys(systemPages).map(slug => `/systems/${slug}`),
+    ...Object.keys(planPages).map(slug => `/service-plans/${slug}`),
+    ...Object.keys(areas).map(slug => `/areas/${slug}`)
+  ]
+  return urls.map((path, index) => ({
+    url: `${site.url}${path}`,
     lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    changeFrequency: path === "" ? "weekly" : "monthly",
+    priority: path === "" ? 1 : index < 15 ? 0.85 : 0.7
   }))
-
-  return [...corePages, ...areaPages]
 }
