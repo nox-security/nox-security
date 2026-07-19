@@ -54,12 +54,13 @@ export default function Header() {
             <div className="dropdown-panel">{plans.map(([label, href]) => <Link key={`${label}-${href}`} href={href}>{label}</Link>)}</div>
           </div>
           <Link href="/case-studies">Case Studies</Link>
+          <Link href="/areas-we-serve">Areas</Link>
           <Link href="/blog">Guides</Link>
           <Link href="/about-us">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <div className="header-actions">
-          <Link className="button button-light button-small" href="/get-quote">Request Your Survey</Link>
+          <Link className="button button-light button-small" href="/get-quote">Request Free Survey</Link>
         </div>
         <button className="menu-button" aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span></span><span></span><span></span>
@@ -80,7 +81,7 @@ export default function Header() {
           <Link onClick={() => setOpen(false)} href="/about-us">About Us</Link>
           <Link onClick={() => setOpen(false)} href="/contact">Contact</Link>
           <div className="mobile-nav-actions">
-            <Link onClick={() => setOpen(false)} className="button button-light" href="/get-quote">Request Your Survey</Link>
+            <Link onClick={() => setOpen(false)} className="button button-light" href="/get-quote">Request Free Survey</Link>
           </div>
         </nav>
       )}

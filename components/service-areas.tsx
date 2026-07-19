@@ -134,7 +134,7 @@ export default function ServiceAreas() {
             <div className="flex flex-wrap gap-3 justify-center">
               <Link href="/get-quote">
                 <Button size="lg" className="bg-white text-black hover:bg-gray-200 font-bold px-8">
-                  <MapPin className="mr-2 h-4 w-4" /> Request Your Security Survey
+                  <MapPin className="mr-2 h-4 w-4" /> Request Your Free Security Survey
                 </Button>
               </Link>
               <a href="https://wa.me/447882959297?text=Hi%20NOX%20%E2%80%94%20can%20you%20cover%20my%20postcode%3F" target="_blank" rel="noopener noreferrer">

@@ -10,8 +10,8 @@ export function JsonLd({ data }: { data: object }) {
 export function ContactActions({ primaryLabel = "Request Your Free Security Survey", dark = false, compact = false }: { primaryLabel?: string; dark?: boolean; compact?: boolean }) {
   return <div className={`button-row contact-action-row ${compact ? "button-row-compact" : ""}`}>
     <Link className={`button ${dark ? "button-dark" : "button-light"}`} href="/get-quote#quote-form">{primaryLabel}</Link>
-    <a className="button button-whatsapp" href={site.whatsapp}>WhatsApp</a>
-    <a className="button button-outline" href={site.phoneHref}>Call NOX</a>
+    <a className="button button-whatsapp" href={site.whatsapp} aria-label="WhatsApp NOX Fire and Security">WhatsApp NOX</a>
+    <a className="button button-outline" href={site.phoneHref} aria-label={`Call NOX on ${site.phone}`}>Call {site.phone}</a>
   </div>
 }
 
@@ -114,7 +114,7 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     <JsonLd data={serviceSchema} />
     <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt} />
     <TrustStrip />
-    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Designed around the property" title={data.problemTitle} text={data.problemText}/><Checklist items={data.benefits}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={data.suitableFor}/><ContactActions primaryLabel="Request Your Security Survey" compact/></aside></div></section>
+    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Designed around the property" title={data.problemTitle} text={data.problemText}/><Checklist items={data.benefits}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={data.suitableFor}/><ContactActions primaryLabel="Request Your Free Security Survey" compact/></aside></div></section>
     <ProductShowcase data={data}/>
     <VideoShowcase videos={data.videos}/>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="How NOX delivers the project" title="From survey to handover and ongoing support"/><FeatureGrid items={data.process} columns={4}/></div></section>

@@ -6,18 +6,18 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-conversion">
         <div>
-          <span className="eyebrow">Request your security survey</span>
+          <span className="eyebrow">Request your free security survey</span>
           <h2>Tell us what you want to protect and the NOX team will guide the next step.</h2>
           <p>Use one simple route for a new system, servicing, repairs, monitoring or a takeover — with phone and WhatsApp available too.</p>
         </div>
         <div className="button-row">
-          <Link className="button button-light" href="/get-quote">Request Your Security Survey</Link>
+          <Link className="button button-light" href="/get-quote">Request Your Free Security Survey</Link>
         </div>
       </div>
       <div className="footer-grid">
         <div className="footer-brand">
           <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
-          <p>Professional fire and security systems designed around homes, businesses and property portfolios across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
+          <p>Premium Fire & Security systems designed around homes, businesses and property portfolios across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
           <p className="muted">Designed properly · Installed properly · Supported properly</p>
         </div>
         <div>

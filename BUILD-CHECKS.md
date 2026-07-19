@@ -1,14 +1,18 @@
-# NOX v2.6 upgrade checks
+# NOX v2.6 Build Checks
 
-Completed on 19 July 2026.
+Completed on 19 July 2026 for the premium residential, commercial and Ajax refinement.
 
-- npm ci: passed
-- TypeScript (`npm run typecheck`): passed
-- Next.js production build (`npm run build`): passed
-- Static/pre-rendered routes generated: 59
-- Sitemap URLs checked locally: 54, all returned successfully
-- Internal links checked locally: 53, no broken links found
-- Referenced images checked locally: no missing images found
-- GoHighLevel form ID confirmed in rendered quote page
-- New perimeter-protection route confirmed
-- Prohibited wording scan passed for Farsight, police response/monitoring, URN, SSAIB, SSIAB, NACOSS, NSI, false-alarm guarantees, lifetime warranty and unsupported response-time wording
+## Passed
+
+- `npm ci --no-audit --no-fund`
+- `npm run typecheck`
+- `npm run build`
+- Next.js generated 59 static/SSG routes
+- 54 sitemap URLs returned HTTP 200 from the local production server
+- Internal crawler reached 53 linked pages with no page failures
+- No missing locally referenced images were found
+- Prohibited-claim scan returned no matches for police response, URN, Farsight, SSAIB/SSIAB, NACOSS, NSI, lifetime warranty, false-alarm guarantees or unsupported emergency-response promises
+
+## HighLevel form styling
+
+The Website Enquiry form is loaded inside a cross-origin GoHighLevel iframe. Website CSS cannot directly recolour the form's internal submit button. If that submit button remains blue, its colour must be changed inside the HighLevel form builder/theme. All NOX website-owned CTA buttons are styled in the black-and-white website system.
