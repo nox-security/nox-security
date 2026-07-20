@@ -1,12 +1,8 @@
 import Link from "next/link"
-import { companyNavItems, servicePlanNavGroups, systemNavGroups } from "@/lib/navigation"
+import { companyNavItems, servicePlanNavItems, systemNavItems } from "@/lib/navigation"
 import { site } from "@/lib/site"
 
 export default function Footer() {
-  const coreSystems = systemNavGroups[0].items
-  const propertyAndFire = [...systemNavGroups[1].items, ...systemNavGroups[2].items]
-  const plans = servicePlanNavGroups.flatMap(group => group.items)
-
   return (
     <footer className="site-footer">
       <div className="footer-conversion">
@@ -19,7 +15,7 @@ export default function Footer() {
           <Link className="button button-light" href="/get-quote">Request Your Free Security Survey</Link>
         </div>
       </div>
-      <div className="footer-grid footer-grid-matched">
+      <div className="footer-grid footer-grid-matched footer-grid-navigation-aligned">
         <div className="footer-brand">
           <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
           <p>Fire & Security systems designed around homes and businesses across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
@@ -27,15 +23,11 @@ export default function Footer() {
         </div>
         <div>
           <h3>Systems</h3>
-          {coreSystems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-        </div>
-        <div>
-          <h3>Property & Fire</h3>
-          {propertyAndFire.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+          {systemNavItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
           <h3>Service Plans</h3>
-          {plans.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+          {servicePlanNavItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
           <h3>Company</h3>

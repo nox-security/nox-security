@@ -4,55 +4,48 @@ export type NavItem = {
 }
 
 export type NavGroup = {
-  heading: string
+  heading?: string
   items: NavItem[]
 }
 
 export const systemNavGroups: NavGroup[] = [
   {
-    heading: "Core systems",
     items: [
       { label: "Intruder Alarms", href: "/systems/intrusion-alarms" },
-      { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
       { label: "CCTV Systems", href: "/systems/cctv" },
       { label: "Fire Alarm Systems", href: "/systems/fire-safety" },
     ],
   },
   {
-    heading: "Property design",
     items: [
+      { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
       { label: "Residential Security", href: "/residential" },
       { label: "Commercial Fire & Security", href: "/commercial" },
-    ],
-  },
-  {
-    heading: "Fire compliance",
-    items: [
-      { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
-      { label: "Fire Risk Assessments", href: "/systems/fire-risk-assessment" },
     ],
   },
 ]
 
 export const servicePlanNavGroups: NavGroup[] = [
   {
-    heading: "Security support",
     items: [
       { label: "Alarm Maintenance", href: "/service-plans/alarm-maintenance" },
       { label: "Alarm Monitoring", href: "/service-plans/alarm-monitoring" },
-      { label: "CCTV Maintenance & Takeovers", href: "/service-plans/cctv-maintenance" },
-      { label: "Total Security Package", href: "/service-plans/total-security" },
+      { label: "CCTV Maintenance", href: "/service-plans/cctv-maintenance" },
+      { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
     ],
   },
   {
-    heading: "Fire & compliance",
     items: [
-      { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
       { label: "Emergency Lighting Servicing", href: "/service-plans/emergency-lighting-servicing" },
-      { label: "Fire Compliance Package", href: "/service-plans/fire-compliance" },
+      { label: "Fire Compliance Packages", href: "/service-plans/fire-compliance" },
+      { label: "Total Security Packages", href: "/service-plans/total-security" },
+      { label: "System Takeovers", href: "/services/security-system-takeover" },
     ],
   },
 ]
+
+export const systemNavItems: NavItem[] = systemNavGroups.flatMap(group => group.items)
+export const servicePlanNavItems: NavItem[] = servicePlanNavGroups.flatMap(group => group.items)
 
 export const companyNavItems: NavItem[] = [
   { label: "Case Studies", href: "/case-studies" },

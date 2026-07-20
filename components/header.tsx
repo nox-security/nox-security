@@ -18,9 +18,9 @@ export default function Header() {
           <div className="nav-dropdown nav-dropdown-wide">
             <Link href="/systems">Systems</Link>
             <div className="dropdown-panel solutions-dropdown grouped-solutions-dropdown concise-dropdown">
-              {systemNavGroups.map(group => (
-                <div className="solution-menu-group" key={group.heading}>
-                  <span className="solution-menu-heading">{group.heading}</span>
+              {systemNavGroups.map((group, groupIndex) => (
+                <div className="solution-menu-group" key={`systems-${groupIndex}`}>
+                  {group.heading && <span className="solution-menu-heading">{group.heading}</span>}
                   {group.items.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
                 </div>
               ))}
@@ -30,9 +30,9 @@ export default function Header() {
           <div className="nav-dropdown nav-dropdown-plans">
             <Link href="/service-plans">Service Plans</Link>
             <div className="dropdown-panel plan-menu-panel concise-dropdown">
-              {servicePlanNavGroups.map(group => (
-                <div className="solution-menu-group" key={group.heading}>
-                  <span className="solution-menu-heading">{group.heading}</span>
+              {servicePlanNavGroups.map((group, groupIndex) => (
+                <div className="solution-menu-group" key={`plans-${groupIndex}`}>
+                  {group.heading && <span className="solution-menu-heading">{group.heading}</span>}
                   {group.items.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
                 </div>
               ))}
@@ -51,12 +51,12 @@ export default function Header() {
       {open && (
         <nav className="mobile-nav" aria-label="Mobile navigation">
           <Link onClick={() => setOpen(false)} href="/">Home</Link>
-          {systemNavGroups.map(group => <div className="mobile-nav-group" key={group.heading}>
-            <span className="mobile-nav-heading">{group.heading}</span>
+          {systemNavGroups.map((group, groupIndex) => <div className="mobile-nav-group" key={`mobile-systems-${groupIndex}`}>
+            {group.heading && <span className="mobile-nav-heading">{group.heading}</span>}
             {group.items.map(item => <Link onClick={() => setOpen(false)} key={item.href} href={item.href}>{item.label}</Link>)}
           </div>)}
-          {servicePlanNavGroups.map(group => <div className="mobile-nav-group" key={group.heading}>
-            <span className="mobile-nav-heading">{group.heading}</span>
+          {servicePlanNavGroups.map((group, groupIndex) => <div className="mobile-nav-group" key={`mobile-plans-${groupIndex}`}>
+            {group.heading && <span className="mobile-nav-heading">{group.heading}</span>}
             {group.items.map(item => <Link onClick={() => setOpen(false)} key={item.href} href={item.href}>{item.label}</Link>)}
           </div>)}
           {companyNavItems.map(item => <Link onClick={() => setOpen(false)} key={item.href} href={item.href}>{item.label}</Link>)}
