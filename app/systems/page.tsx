@@ -14,7 +14,7 @@ const residentialSystems = [
     title: "Ajax Intruder Alarms",
     text: "Wireless or hybrid alarm design with MotionCam photo verification, DoorProtect, user controls, sirens, app access and external detection where the survey supports it.",
     href: "/systems/intrusion-alarms",
-    image: "/images/projects/chesterfield-home-keypad.jpg",
+    image: "/images/revisions/ajax-intruder-alarm-workbench.jpg",
     alt: "Ajax keypad installed in a Chesterfield home"
   },
   {
@@ -28,14 +28,14 @@ const residentialSystems = [
     title: "Professional Residential CCTV",
     text: "Fixed cameras with a dedicated recorder for stronger whole-property coverage, continuous or scheduled recording, playback and remote viewing across driveways, entrances, gardens, garages and outbuildings.",
     href: "/systems/cctv",
-    image: "/images/projects/chesterfield-home-cameras.jpg",
+    image: "/images/revisions/residential-vigi-cctv-pair.jpg",
     alt: "Residential CCTV cameras installed by NOX in Chesterfield"
   },
   {
-    title: "Smart Home CCTV",
+    title: "Smart Home Security",
     text: "App-led solar, battery, floodlight and doorbell cameras for homes that prioritise convenience, straightforward notifications and a lower-disruption installation.",
     href: "/systems/smart-home-cctv",
-    image: "/images/projects/eufy-solar-camera-1.jpg",
+    image: "/images/revisions/eufy-smart-home-security-camera.jpg",
     alt: "Solar smart-home CCTV camera installed in Chesterfield"
   }
 ]
@@ -45,14 +45,14 @@ const commercialSystems = [
     title: "Commercial Fire Alarm Systems",
     text: "New Ajax EN54 and suitable traditional fire-alarm installations, followed by testing, servicing, records and coordinated compliance support.",
     href: "/commercial/fire-compliance",
-    image: "/images/ajax-en54-fire.webp",
+    image: "/images/revisions/ajax-en54-fire-control-panel.jpg",
     alt: "Ajax EN54 commercial fire alarm system"
   },
   {
     title: "Commercial CCTV",
     text: "Multi-camera systems for shops, offices, hospitality, yards, warehouses and industrial premises with NVR recording, playback and remote viewing.",
     href: "/commercial/cctv",
-    image: "/images/projects/retford-monitor-final.jpg",
+    image: "/images/revisions/commercial-cctv-industrial-building.jpg",
     alt: "Ten-camera commercial CCTV system in Retford"
   },
   {
@@ -66,14 +66,14 @@ const commercialSystems = [
     title: "Emergency Lighting & Fire Risk Support",
     text: "Emergency-lighting installation and testing, plus fire-risk-assessment routes for landlords, HMOs, hospitality and operational commercial sites.",
     href: "/systems/emergency-lighting",
-    image: "/images/EmergencyLighting.jpeg",
+    image: "/images/revisions/emergency-lighting-exit-sign.jpg",
     alt: "Emergency lighting fitting for commercial installation and testing"
   }
 ]
 
 export default function SystemsPage() {
   return <>
-    <PageHero eyebrow="System design" title="Fire & Security systems for homes and businesses" intro="Start with the system you need — intruder, perimeter protection, CCTV or Fire — then see how the design changes for residential and commercial properties. Ongoing monitoring, maintenance and compliance remain available through the Service Plans section." image="/images/editorial/ajax-technology.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
+    <PageHero eyebrow="System design" title="Fire & Security systems for homes and businesses" intro="Start with the system you need — intruder, perimeter protection, CCTV or Fire — then see how the design changes for residential and commercial properties. Ongoing monitoring, maintenance and compliance remain available through the Service Plans section." image="/images/revisions/nox-engineer-cctv-wiring.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
     <TrustStrip/>
 
     <section className="section"><div className="container">

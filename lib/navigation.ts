@@ -19,7 +19,7 @@ export const systemNavGroups: NavGroup[] = [
   {
     items: [
       { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
-      { label: "Residential Security", href: "/residential" },
+      { label: "Smart Home Security", href: "/systems/smart-home-cctv" },
       { label: "Commercial Fire & Security", href: "/commercial" },
     ],
   },

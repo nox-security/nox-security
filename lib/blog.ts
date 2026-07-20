@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A guide to taking over existing alarm, CCTV and fire systems, including inspection, access recovery, fault review, servicing and phased upgrades.",
     category: "Takeovers & upgrades",
     excerpt: "Existing equipment does not always need replacing. A proper inspection can identify what can be retained, repaired or upgraded.",
-    image: "/images/editorial/blog-takeover.jpg",
+    image: "/images/revisions/intruder-maintenance-system-takeover.jpg",
     imageAlt: "Existing wired security panel inspected during a NOX takeover assessment",
     sections: [
       {

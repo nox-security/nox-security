@@ -34,7 +34,7 @@ function PlanCard({ slug }: { slug: string }) {
 
 export default function ServicePlansPage() {
   return <>
-    <PageHero eyebrow="Monitoring, maintenance and compliance" title="Service plans that continue after installation" intro="Choose the system first, then add the annual support that keeps it useful. NOX provides focused maintenance and monitoring plans alongside coordinated Total Security and Fire Compliance Packages." image="/images/editorial/home-maintenance.jpg" imageAlt="Real alarm system maintenance and takeover work completed by NOX"/>
+    <PageHero eyebrow="Monitoring, maintenance and compliance" title="Service plans that continue after installation" intro="Choose the system first, then add the annual support that keeps it useful. NOX provides focused maintenance and monitoring plans alongside coordinated Total Security and Fire Compliance Packages." image="/images/revisions/intruder-maintenance-system-takeover.jpg" imageAlt="Real alarm system maintenance and takeover work completed by NOX"/>
     <TrustStrip/>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Ongoing support" title="Keep systems reliable, records clear and future repairs easier to manage" text="A system can appear operational while batteries, camera views, recording health, remote access or device condition are beginning to deteriorate. Planned servicing creates a clear route for testing, defects, renewal and future upgrades."/><FeatureGrid columns={4} items={[

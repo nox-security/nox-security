@@ -27,7 +27,7 @@ const pages: Record<string, CommercialPage> = {
     intro: "Professional CCTV for shops, showrooms, offices, warehouses, yards, garages, industrial units and larger multi-camera sites.",
     metaTitle: "Commercial CCTV Sheffield | CCTV Installation Derbyshire",
     metaDescription: "Commercial CCTV installation across Sheffield, Chesterfield and Derbyshire, including high-resolution cameras, NVR recording, smart detection, remote viewing and maintenance.",
-    image: "/images/resent-installation/5565AAD0-9F37-4C18-9E4A-1147A4389378.png",
+    image: "/images/revisions/commercial-cctv-industrial-building.jpg",
     alt: "Commercial CCTV camera installed by NOX at an industrial property",
     items: [
       { title: "Coverage with a purpose", text: "Each camera is planned around an entrance, vehicle route, yard, working area, stock location or evidence requirement." },
@@ -36,7 +36,7 @@ const pages: Record<string, CommercialPage> = {
       { title: "Maintenance and takeovers", text: "Existing coax and IP systems can be assessed for faults, recorder upgrades, access recovery and annual service." }
     ],
     aftercare: "Annual CCTV servicing can include camera cleaning, recorder and hard-drive checks, playback testing, firmware review and remote-access checks.",
-    cases: ["chesterfield-scrapyard-cctv","buxton-industrial-security","retford-former-bank-cctv","chatsworth-estate-cctv-upgrade"]
+    cases: ["continue-arcade-commercial-cctv-derby","chesterfield-scrapyard-cctv","buxton-industrial-security","retford-former-bank-cctv"]
   },
   "intruder-alarms": {
     title: "Commercial intruder alarms for premises, yards and working sites",
@@ -61,8 +61,8 @@ const pages: Record<string, CommercialPage> = {
     intro: "Modern Ajax EN54 and suitable traditional fire alarm systems, routine servicing, emergency lighting and coordinated annual support for commercial premises and property portfolios.",
     metaTitle: "Commercial Fire Alarm Systems & Servicing Chesterfield",
     metaDescription: "Commercial Ajax EN54 fire alarm systems, fire alarm servicing, emergency lighting testing and coordinated compliance support across Chesterfield, Sheffield and Derbyshire.",
-    image: "/images/ajax-en54-fire.webp",
-    alt: "Ajax EN54 commercial fire alarm system equipment",
+    image: "/images/revisions/ajax-en54-fire-control-panel.jpg",
+    alt: "Ajax EN54 Fire Hub installed at a commercial premises",
     items: [
       { title: "System design around the premises", text: "The building, occupancy, escape arrangements, risks, zones and property requirements inform the proposed fire-alarm arrangement." },
       { title: "Ajax EN54 and traditional systems", text: "NOX can install modern Ajax EN54 equipment and service suitable conventional, addressable and established wireless fire systems." },
@@ -70,7 +70,7 @@ const pages: Record<string, CommercialPage> = {
       { title: "Coordinated annual support", text: "Fire alarm servicing, emergency lighting and other agreed services can be brought into a clearer annual schedule and renewal structure." }
     ],
     aftercare: "Fire alarm servicing, emergency lighting and other agreed fire-safety services can be coordinated under a clearer annual arrangement, with defects and remedial work stated separately.",
-    cases: ["banana-industries-fire-security"],
+    cases: ["telesis-hitachi-fire-intruder-system","banana-industries-fire-security"],
     products: [
       { name: "Ajax EN54 Fire Hub Jeweller", text: "Touchscreen control and indicating equipment at the centre of a suitable Ajax EN54 fire-alarm design, configured around the premises and required zones.", image: "/images/EN54FireHub.jpeg", alt: "Ajax EN54 Fire Hub Jeweller touchscreen panel" },
       { name: "EN54 manual call points", text: "Manual activation devices positioned as part of the designed fire-alarm arrangement and included in routine testing and service records.", image: "/images/ManualCallPointFireAlarm.jpeg", alt: "Commercial fire alarm manual call point" },

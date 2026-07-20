@@ -20,7 +20,7 @@ const coreSystems = [
     eyebrow: "Intruder alarms",
     title: "Ajax protection designed around how the property is used",
     text: "MotionCam, door and window protection, user-friendly control, sirens, monitoring and optional perimeter detection for homes and commercial premises.",
-    image: "/images/projects/chesterfield-home-keypad.jpg",
+    image: "/images/revisions/ajax-intruder-alarm-workbench.jpg",
     alt: "Ajax keypad professionally installed by NOX in a Chesterfield home",
     href: "/systems/intrusion-alarms",
     secondaryHref: "/systems/perimeter-protection",
@@ -30,7 +30,7 @@ const coreSystems = [
     eyebrow: "CCTV systems",
     title: "Cameras planned around the view and evidence you need",
     text: "Ajax, Hikvision ColourVu and other professional CCTV systems with suitable recording, remote viewing and smart event detection for homes and businesses.",
-    image: "/images/projects/bottle-thyme-monitor-wide.jpg",
+    image: "/images/revisions/ajax-cctv-system-nvr-cameras.jpg",
     alt: "Commercial CCTV system installed by NOX at Bottle and Thyme in Chesterfield",
     href: "/systems/cctv",
     secondaryHref: "/service-plans/cctv-maintenance",
@@ -40,7 +40,7 @@ const coreSystems = [
     eyebrow: "Fire alarm systems",
     title: "Commercial Fire installation with servicing planned from day one",
     text: "Ajax EN54 and suitable traditional fire systems supported by testing, service records, emergency lighting and coordinated compliance packages.",
-    image: "/images/projects/tan-station-fire-first-fix.jpg",
+    image: "/images/revisions/ajax-en54-fire-control-panel.jpg",
     alt: "Fire alarm first-fix cabling and detection installation at The Tan Station in Brimington",
     href: "/systems/fire-safety",
     secondaryHref: "/service-plans/fire-compliance",
@@ -54,10 +54,10 @@ export default function HomePage() {
     <JsonLd data={serviceSchema}/>
     <section className="home-hero home-hero-premium">
       <div className="home-hero-bg home-hero-split">
-        <img src="/images/projects/eufy-home-exterior.jpg" alt="Residential home protected by NOX Fire and Security in Chesterfield" />
-        <img src="/images/projects/bottle-thyme-exterior-1.jpg" alt="Bottle and Thyme commercial premises protected by NOX Fire and Security in Chesterfield" />
+        <img src="/images/revisions/protection-belongs-home.jpg" alt="Residential home protected by NOX Fire and Security in Chesterfield" />
+        <img src="/images/revisions/telesis-hitachi-exterior.jpg" alt="Commercial industrial premises protected by NOX Fire and Security" />
       </div>
-      <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/nox-logo-dark.png" alt="" /></div>
+      <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
         <h1>Fire & Security systems, designed around your property.</h1>
@@ -72,7 +72,7 @@ export default function HomePage() {
     <section className="section premium-client-section"><div className="container">
       <SectionHeading eyebrow="Residential and commercial" title="The same standard of design, shaped around different properties" text="Residential work is led by intruder alarms and CCTV. Commercial work brings Fire, CCTV and intruder protection together with the ongoing support each site needs." />
       <div className="premium-client-grid">
-        <article className="premium-client-card residential-card"><img src="/images/projects/chesterfield-home-bellbox.jpg" alt="NOX branded Ajax alarm siren installed on a Chesterfield home"/><div><span className="eyebrow">Residential security</span><h2>Protection that belongs in the home.</h2><p>For semi-detached houses, family homes, larger properties, garages, gates, driveways and outbuildings — without forcing every customer into the same package.</p><Link className="text-link" href="/residential">Explore Residential Security →</Link></div></article>
+        <article className="premium-client-card residential-card"><img src="/images/revisions/protection-belongs-home.jpg" alt="NOX residential Fire and Security installation at a family home"/><div><span className="eyebrow">Residential security</span><h2>Protection that belongs in the home.</h2><p>For semi-detached houses, family homes, larger properties, garages, gates, driveways and outbuildings — without forcing every customer into the same package.</p><Link className="text-link" href="/residential">Explore Residential Security →</Link></div></article>
         <article className="premium-client-card commercial-card"><img src="/images/projects/bottle-thyme-vehicles.jpg" alt="NOX Fire and Security vehicles outside a commercial project in Chesterfield"/><div><span className="eyebrow">Commercial Fire & Security</span><h2>Joined-up systems and ongoing support.</h2><p>Fire alarms, CCTV, intruder protection, emergency lighting, servicing and compliance support for operational premises and property portfolios.</p><Link className="text-link" href="/commercial">Explore Commercial Fire & Security →</Link></div></article>
       </div>
     </div></section>
@@ -84,13 +84,13 @@ export default function HomePage() {
 
     <section className="section project-story-section"><div className="container">
       <div className="home-project-intro"><SectionHeading eyebrow="Recent NOX projects" title="Real properties, systems and local workmanship" text="A focused selection of residential, hospitality, industrial and larger commercial projects completed by NOX."/><div className="portfolio-logo-panel"><img src="/images/projects/logo-nox-fire-security.jpg" alt="NOX Fire and Security logo"/></div></div>
-      <CaseStudyGrid slugs={["bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","chesterfield-home-ajax-cctv-intruder"]}/>
+      <CaseStudyGrid slugs={["continue-arcade-commercial-cctv-derby","telesis-hitachi-fire-intruder-system","chesterfield-home-ajax-cctv-intruder"]}/>
       <div className="button-row"><Link className="button button-outline" href="/case-studies">Explore the NOX Project Portfolio</Link></div>
     </div></section>
 
     <section className="section ajax-editorial-section"><div className="container">
       <div className="ajax-editorial-grid">
-        <div className="ajax-editorial-media ajax-property-media"><img src="/images/projects/chesterfield-home-keypad.jpg" alt="Ajax keypad installed as part of a tailored residential security system in Chesterfield"/></div>
+        <div className="ajax-editorial-media ajax-property-media"><img src="/images/revisions/property-cctv-overview.jpg" alt="Live CCTV overview selected around the property and its working areas"/></div>
         <div className="ajax-home-copy"><span className="eyebrow">Rule Your Space</span><img className="ajax-authorised-logo" src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/><h2>Ajax technology selected around the property — not sold as a fixed kit</h2><p>NOX uses Ajax as its preferred smart intruder platform while keeping the survey, property and customer requirement at the centre of the design. Detailed product choices sit on the Intruder Alarm and Perimeter Protection pages rather than overwhelming the homepage.</p><div className="button-row"><Link className="button button-light" href="/systems/intrusion-alarms">Explore Ajax Intruder Alarms</Link><Link className="button button-outline" href="/systems/perimeter-protection">View Perimeter Protection</Link></div></div>
       </div>
     </div></section>

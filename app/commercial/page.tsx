@@ -10,15 +10,15 @@ export const metadata: Metadata = pageMetadata(
 )
 
 const newSystems = [
-  { title: "Commercial Fire Alarm Installation", text: "Ajax EN54 and suitable traditional fire-alarm systems designed around the premises, available fire information, occupancy, zones and ongoing service requirements.", href: "/commercial/fire-compliance", image: "/images/ajax-en54-fire.webp", alt: "Ajax EN54 commercial fire alarm system" },
-  { title: "Commercial CCTV", text: "Multi-camera coverage for entrances, stock, vehicles, yards and working areas with NVR recording, playback, remote viewing and maintenance options.", href: "/commercial/cctv", image: "/images/projects/retford-monitor-final.jpg", alt: "Commercial multi-camera CCTV system installed in Retford" },
+  { title: "Commercial Fire Alarm Installation", text: "Ajax EN54 and suitable traditional fire-alarm systems designed around the premises, available fire information, occupancy, zones and ongoing service requirements.", href: "/commercial/fire-compliance", image: "/images/revisions/ajax-en54-fire-control-panel.jpg", alt: "Ajax EN54 commercial fire alarm system" },
+  { title: "Commercial CCTV", text: "Multi-camera coverage for entrances, stock, vehicles, yards and working areas with NVR recording, playback, remote viewing and maintenance options.", href: "/commercial/cctv", image: "/images/revisions/commercial-cctv-industrial-building.jpg", alt: "Commercial multi-camera CCTV system installed in Retford" },
   { title: "Commercial Intruder Alarms", text: "Internal and external detection planned around access, staff use, opening hours, valuable areas and the agreed keyholder or monitoring route.", href: "/commercial/intruder-alarms", image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png", alt: "External Ajax detection at an industrial site in Dronfield" },
-  { title: "Emergency Lighting & Fire Risk Assessment", text: "Emergency-lighting installation and testing, plus fire-risk-assessment support for landlords, HMOs, hospitality, offices and operational commercial sites.", href: "/systems/emergency-lighting", image: "/images/EmergencyLighting.jpeg", alt: "Emergency lighting fitting for commercial testing and installation" }
+  { title: "Emergency Lighting & Fire Risk Assessment", text: "Emergency-lighting installation and testing, plus fire-risk-assessment support for landlords, HMOs, hospitality, offices and operational commercial sites.", href: "/systems/emergency-lighting", image: "/images/revisions/emergency-lighting-exit-sign.jpg", alt: "Emergency lighting fitting for commercial testing and installation" }
 ]
 
 export default function CommercialPage() {
   return <>
-    <PageHero eyebrow="Commercial system design" title="Fire, CCTV and intruder systems with a clear route into ongoing compliance support" intro="NOX supports shops, offices, hospitality, warehouses, industrial units, garages, yards, HMOs, landlords and multi-system sites. New installations are designed first; servicing, monitoring and annual packages follow as a separate, clearly defined scope." image="/images/projects/tan-station-exterior.jpg" imageAlt="The Tan Station commercial Fire and Security project in Brimington"/>
+    <PageHero eyebrow="Commercial system design" title="Fire, CCTV and intruder systems with a clear route into ongoing compliance support" intro="NOX supports shops, offices, hospitality, warehouses, industrial units, garages, yards, HMOs, landlords and multi-system sites. New installations are designed first; servicing, monitoring and annual packages follow as a separate, clearly defined scope." image="/images/revisions/telesis-hitachi-exterior.jpg" imageAlt="The Tan Station commercial Fire and Security project in Brimington"/>
     <TrustStrip/>
 
     <section className="section"><div className="container">

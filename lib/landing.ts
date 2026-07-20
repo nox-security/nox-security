@@ -448,7 +448,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     metaTitle: "Security System Takeover | Alarm & CCTV Repairs and Upgrades",
     metaDescription: "Security-system takeover inspections for existing alarms and CCTV, including access recovery, faults, maintenance, recorder upgrades and phased replacement.",
     intro: "An existing alarm or CCTV system does not always need to be replaced. NOX can inspect suitable systems, identify faults and access issues, and recommend servicing, repair, selective upgrades or replacement only where it makes sense.",
-    image: "/images/editorial/blog-takeover.jpg",
+    image: "/images/revisions/intruder-maintenance-system-takeover.jpg",
     imageAlt: "Existing alarm and CCTV equipment reviewed during a NOX takeover inspection",
     location: "Chesterfield, Sheffield & Derbyshire",
     audience: "Residential & Commercial",
