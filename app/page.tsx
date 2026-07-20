@@ -15,20 +15,13 @@ const keyAreas = [
   ["Hope Valley", "/areas/hope-valley"], ["Hathersage", "/areas/hathersage"]
 ]
 
-const ajaxProducts = [
-  { name: "MotionCam", text: "Motion detection with photo verification on compatible systems, selected around room layout, permissions and the way the property is used.", image: "/images/2Motioncam.jpg" },
-  { name: "KeyPad TouchScreen", text: "A clear control interface for arming, groups and scenarios, with compatible access by smartphone, Pass, Tag or code.", image: "/images/projects/chesterfield-home-keypad.jpg" },
-  { name: "DoorProtect", text: "Opening detection for doors and windows, positioned around real entry routes, night mode and household routines.", image: "/images/2Doorprotect.jpg" },
-  { name: "Curtain Outdoor", text: "Narrow-beam external detection for selected approaches, side access and boundary routes where the survey supports it.", image: "/images/SingleCurtain.jpeg" }
-]
-
 const coreSystems = [
   {
     eyebrow: "Intruder alarms",
     title: "Ajax protection designed around how the property is used",
     text: "MotionCam, door and window protection, user-friendly control, sirens, monitoring and optional perimeter detection for homes and commercial premises.",
-    image: "/images/projects/chesterfield-home-keypad.jpg",
-    alt: "Ajax intruder alarm keypad installed by NOX in a Chesterfield home",
+    image: "/images/resent-installation/8DEEA5A9-CCAA-45D5-AD31-8414923CFB73.png",
+    alt: "Black Ajax keypad installed by NOX as part of a residential intruder alarm",
     href: "/systems/intrusion-alarms",
     secondaryHref: "/systems/perimeter-protection",
     secondaryLabel: "Perimeter Protection"
@@ -47,8 +40,8 @@ const coreSystems = [
     eyebrow: "Fire alarm systems",
     title: "Commercial Fire installation with servicing planned from day one",
     text: "Ajax EN54 and suitable traditional fire systems supported by testing, service records, emergency lighting and coordinated compliance packages.",
-    image: "/images/projects/tan-station-fire-first-fix.jpg",
-    alt: "Commercial fire alarm first-fix installation completed by NOX",
+    image: "/images/projects/tan-station-exterior.jpg",
+    alt: "Commercial premises in Brimington where NOX installed CCTV and completed fire-alarm first-fix work",
     href: "/systems/fire-safety",
     secondaryHref: "/service-plans/fire-compliance",
     secondaryLabel: "Fire Compliance Packages"
@@ -60,7 +53,10 @@ export default function HomePage() {
   return <>
     <JsonLd data={serviceSchema}/>
     <section className="home-hero home-hero-premium">
-      <div className="home-hero-bg"><img src="/images/projects/chesterfield-home-exterior.jpg" alt="Chesterfield home protected by a NOX Ajax alarm and CCTV system" /></div>
+      <div className="home-hero-bg home-hero-split">
+        <img src="/images/resent-installation/B17CAA16-7E26-4342-BD6F-B777359E2BEB.png" alt="NOX Fire and Security completing a residential installation" />
+        <img src="/images/projects/bottle-thyme-vehicles.jpg" alt="NOX Fire and Security vehicles outside a completed commercial project in Chesterfield" />
+      </div>
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/nox-logo-dark.png" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
@@ -76,7 +72,7 @@ export default function HomePage() {
     <section className="section premium-client-section"><div className="container">
       <SectionHeading eyebrow="Residential and commercial" title="The same standard of design, shaped around different properties" text="Residential work is led by intruder alarms and CCTV. Commercial work brings Fire, CCTV and intruder protection together with the ongoing support each site needs." />
       <div className="premium-client-grid">
-        <article className="premium-client-card residential-card"><img src="/images/projects/chesterfield-home-bellbox.jpg" alt="NOX branded Ajax alarm siren installed on a Chesterfield home"/><div><span className="eyebrow">Residential security</span><h2>Protection that belongs in the home.</h2><p>For semi-detached houses, family homes, larger properties, garages, gates, driveways and outbuildings — without forcing every customer into the same package.</p><Link className="text-link" href="/residential">Explore Residential Security →</Link></div></article>
+        <article className="premium-client-card residential-card"><img src="/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png" alt="NOX branded external alarm siren installed on a residential property"/><div><span className="eyebrow">Residential security</span><h2>Protection that belongs in the home.</h2><p>For semi-detached houses, family homes, larger properties, garages, gates, driveways and outbuildings — without forcing every customer into the same package.</p><Link className="text-link" href="/residential">Explore Residential Security →</Link></div></article>
         <article className="premium-client-card commercial-card"><img src="/images/projects/bottle-thyme-vehicles.jpg" alt="NOX Fire and Security vehicles outside a commercial project in Chesterfield"/><div><span className="eyebrow">Commercial Fire & Security</span><h2>Joined-up systems and ongoing support.</h2><p>Fire alarms, CCTV, intruder protection, emergency lighting, servicing and compliance support for operational premises and property portfolios.</p><Link className="text-link" href="/commercial">Explore Commercial Fire & Security →</Link></div></article>
       </div>
     </div></section>
@@ -88,16 +84,15 @@ export default function HomePage() {
 
     <section className="section project-story-section"><div className="container">
       <div className="home-project-intro"><SectionHeading eyebrow="Recent NOX projects" title="Real properties, systems and local workmanship" text="A focused selection of residential, hospitality, industrial and larger commercial projects completed by NOX."/><div className="portfolio-logo-panel"><img src="/images/projects/logo-nox-fire-security.jpg" alt="NOX Fire and Security logo"/></div></div>
-      <CaseStudyGrid slugs={["bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","retford-former-bank-cctv","chesterfield-home-ajax-cctv-intruder"]}/>
+      <CaseStudyGrid slugs={["bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","chesterfield-home-ajax-cctv-intruder"]}/>
       <div className="button-row"><Link className="button button-outline" href="/case-studies">Explore the NOX Project Portfolio</Link></div>
     </div></section>
 
     <section className="section ajax-editorial-section"><div className="container">
       <div className="ajax-editorial-grid">
-        <div className="ajax-editorial-media ajax-property-media"><img src="/images/projects/chesterfield-home-cameras.jpg" alt="Black residential security cameras installed by NOX on a Chesterfield home"/></div>
+        <div className="ajax-editorial-media ajax-property-media"><img src="/images/projects/chesterfield-home-cameras.jpg" alt="Black Ajax cameras installed around a residential property in Chesterfield"/></div>
         <div className="ajax-home-copy"><span className="eyebrow">Rule Your Space</span><img className="ajax-authorised-logo" src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/><h2>Ajax technology selected around the property — not sold as a fixed kit</h2><p>NOX uses Ajax as its preferred smart intruder platform while keeping the survey, property and customer requirement at the centre of the design. Detailed product choices sit on the Intruder Alarm and Perimeter Protection pages rather than overwhelming the homepage.</p><div className="button-row"><Link className="button button-light" href="/systems/intrusion-alarms">Explore Ajax Intruder Alarms</Link><Link className="button button-outline" href="/systems/perimeter-protection">View Perimeter Protection</Link></div></div>
       </div>
-      <div className="ajax-product-rail ajax-product-rail-clean">{ajaxProducts.map(product => <article key={product.name}><div><img loading="lazy" src={product.image} alt={`Ajax ${product.name}`}/></div><h3>{product.name}</h3><p>{product.text}</p></article>)}</div>
     </div></section>
 
     <section className="section service-plan-showcase"><div className="container">

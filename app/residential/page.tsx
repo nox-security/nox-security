@@ -11,8 +11,8 @@ export const metadata: Metadata = pageMetadata(
 
 const newSystems = [
   { title: "Ajax Intruder Alarms", text: "MotionCam photo verification, DoorProtect, internal detection, keypads, sirens, app control and carefully selected external protection.", href: "/systems/intrusion-alarms", image: "/images/projects/chesterfield-home-keypad.jpg", alt: "Ajax keypad installed at a residential property in Chesterfield" },
-  { title: "Residential CCTV", text: "Professional camera coverage for entrances, driveways, vehicles, garages, gardens, gates and outbuildings with suitable recording and remote viewing.", href: "/systems/cctv", image: "/images/projects/chesterfield-home-cameras.jpg", alt: "Residential CCTV cameras installed by NOX in Chesterfield" },
-  { title: "Smart Home CCTV", text: "Solar, floodlight, wireless and app-led camera options where a lower-disruption system suits the home and the recording requirement.", href: "/systems/smart-home-cctv", image: "/images/projects/eufy-solar-camera-2.jpg", alt: "Smart-home solar CCTV camera installed in Chesterfield" }
+  { title: "Professional Residential CCTV", text: "Fixed turret or bullet cameras with a dedicated recorder for dependable whole-property coverage, playback and remote viewing across entrances, driveways, vehicles, garages, gardens, gates and outbuildings.", href: "/systems/cctv", image: "/images/projects/chesterfield-home-cameras.jpg", alt: "Residential CCTV cameras installed by NOX in Chesterfield" },
+  { title: "Smart Home CCTV", text: "App-connected solar, battery, floodlight and doorbell cameras for simpler everyday monitoring, useful alerts and a lower-disruption installation where continuous recorder-based coverage is not required.", href: "/systems/smart-home-cctv", image: "/images/projects/eufy-solar-camera-2.jpg", alt: "Smart-home solar CCTV camera installed in Chesterfield" }
 ]
 
 export default function ResidentialPage() {

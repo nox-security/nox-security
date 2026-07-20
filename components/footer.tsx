@@ -17,36 +17,34 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
-          <p>Premium Fire & Security systems designed around homes, businesses and property portfolios across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
+          <p>Fire & Security systems designed around homes, businesses and property portfolios across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
           <p className="muted">Designed properly · Installed properly · Supported properly</p>
         </div>
         <div>
-          <h3>Residential</h3>
-          <Link href="/residential">Residential System Design</Link>
-          <Link href="/systems/intrusion-alarms">Ajax Intruder Alarms</Link>
-          <Link href="/systems/cctv">Residential CCTV</Link>
-          <Link href="/systems/smart-home-cctv">Smart Home CCTV</Link>
-          <Link href="/service-plans/alarm-monitoring">Alarm Monitoring</Link>
-          <Link href="/service-plans">Residential Service Plans</Link>
+          <h3>Systems</h3>
+          <Link href="/systems/intrusion-alarms">Intruder Alarms</Link>
+          <Link href="/systems/perimeter-protection">Perimeter Protection</Link>
+          <Link href="/systems/cctv">CCTV Systems</Link>
+          <Link href="/systems/fire-safety">Fire Alarm Systems</Link>
+          <Link href="/residential">Residential Security</Link>
+          <Link href="/commercial">Commercial Fire & Security</Link>
         </div>
         <div>
-          <h3>Commercial</h3>
-          <Link href="/commercial">Commercial System Design</Link>
-          <Link href="/commercial/fire-compliance">Fire Alarm Installation</Link>
-          <Link href="/systems/emergency-lighting">Emergency Lighting</Link>
-          <Link href="/systems/fire-risk-assessment">Fire Risk Assessments</Link>
-          <Link href="/commercial/cctv">Commercial CCTV</Link>
-          <Link href="/commercial/intruder-alarms">Commercial Intruder Alarms</Link>
-          <Link href="/service-plans">Commercial Service Plans</Link>
+          <h3>Service Plans</h3>
+          <Link href="/service-plans/alarm-maintenance">Alarm Maintenance</Link>
+          <Link href="/service-plans/alarm-monitoring">Alarm Monitoring</Link>
+          <Link href="/service-plans/cctv-maintenance">CCTV Maintenance & Takeovers</Link>
+          <Link href="/service-plans/fire-alarm-servicing">Fire Alarm Servicing</Link>
+          <Link href="/service-plans/emergency-lighting-servicing">Emergency Lighting Servicing</Link>
+          <Link href="/service-plans">Plans & Packages</Link>
         </div>
         <div>
           <h3>Company</h3>
-          <Link href="/about-us">About NOX</Link>
           <Link href="/case-studies">Case Studies</Link>
-          <Link href="/reviews">Customer Reviews</Link>
-          <Link href="/blog">Advice & Guides</Link>
           <Link href="/areas-we-serve">Areas We Cover</Link>
-          <Link href="/services">Local Service Pages</Link>
+          <Link href="/about-us">About NOX</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/reviews">Customer Reviews</Link>
         </div>
         <div>
           <h3>Contact</h3>

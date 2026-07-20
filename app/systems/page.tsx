@@ -25,15 +25,15 @@ const residentialSystems = [
     alt: "Ajax perimeter protection installed around a residential property"
   },
   {
-    title: "Residential CCTV",
-    text: "Professional camera coverage for entrances, driveways, vehicles, garages, gardens and outbuildings using Ajax, Hikvision ColourVu or another suitable platform.",
+    title: "Professional Residential CCTV",
+    text: "Fixed cameras with a dedicated recorder for stronger whole-property coverage, continuous or scheduled recording, playback and remote viewing across driveways, entrances, gardens, garages and outbuildings.",
     href: "/systems/cctv",
     image: "/images/projects/chesterfield-home-cameras.jpg",
     alt: "Residential CCTV cameras installed by NOX in Chesterfield"
   },
   {
     title: "Smart Home CCTV",
-    text: "Solar, floodlight, wireless and video-doorbell options for selected homes where lower disruption and app-led operation are the right fit.",
+    text: "App-led solar, battery, floodlight and doorbell cameras for homes that prioritise convenience, straightforward notifications and a lower-disruption installation.",
     href: "/systems/smart-home-cctv",
     image: "/images/projects/eufy-solar-camera-2.jpg",
     alt: "Solar smart-home CCTV camera installed in Chesterfield"

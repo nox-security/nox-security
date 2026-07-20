@@ -1178,3 +1178,33 @@ p { color: var(--muted); }
   .product-detail-image { height: 315px; }
   .unified-plan-card { min-height: auto !important; }
 }
+
+/* v3.2 homepage imagery, portfolio balance and CCTV positioning */
+.home-hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #070707;
+}
+.home-hero-split img {
+  min-width: 0;
+  object-fit: cover;
+}
+.home-hero-split img:first-child { object-position: center 48%; }
+.home-hero-split img:last-child { object-position: center 48%; }
+.project-story-section {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+.project-story-section .home-project-intro { margin-bottom: 24px; }
+.project-story-section .case-grid { gap: 14px; }
+.project-story-section .button-row { margin-top: 26px; }
+.ajax-editorial-section .ajax-editorial-grid { margin-bottom: 0; }
+.ajax-property-media img { object-position: center 42%; }
+@media (max-width: 760px) {
+  .home-hero-split { display: block; }
+  .home-hero-split img:first-child { display: block; }
+  .home-hero-split img:last-child { display: none; }
+  .project-story-section { padding-top: 62px; padding-bottom: 62px; }
+  .project-story-section .home-project-intro { margin-bottom: 18px; }
+  .project-story-section .case-grid { gap: 12px; }
+}
