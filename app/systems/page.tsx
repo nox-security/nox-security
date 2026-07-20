@@ -18,6 +18,13 @@ const residentialSystems = [
     alt: "Ajax keypad installed in a Chesterfield home"
   },
   {
+    title: "Perimeter Protection",
+    text: "Ajax external detection for driveways, side access, garages, outbuildings, yards and selected approaches, designed as a separate early-warning layer.",
+    href: "/systems/perimeter-protection",
+    image: "/images/editorial/home-perimeter.jpg",
+    alt: "Ajax perimeter protection installed around a residential property"
+  },
+  {
     title: "Residential CCTV",
     text: "Professional camera coverage for entrances, driveways, vehicles, garages, gardens and outbuildings using Ajax, Hikvision ColourVu or another suitable platform.",
     href: "/systems/cctv",
@@ -66,11 +73,11 @@ const commercialSystems = [
 
 export default function SystemsPage() {
   return <>
-    <PageHero eyebrow="System design" title="Choose residential or commercial first — then build the right system" intro="NOX separates new installations from ongoing support. Start with the property type and system requirement, then continue into monitoring, maintenance or a compliance package after the installation scope is clear." image="/images/editorial/ajax-technology.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
+    <PageHero eyebrow="System design" title="Fire & Security systems for homes and businesses" intro="Start with the system you need — intruder, perimeter protection, CCTV or Fire — then see how the design changes for residential and commercial properties. Ongoing monitoring, maintenance and compliance remain available through the Service Plans section." image="/images/editorial/ajax-technology.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
     <TrustStrip/>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Residential installations" title="Smart protection for everyday homes, larger properties and everything between" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. Premium design means the system is considered and installed properly — not that the property has to be a mansion."/>
+      <SectionHeading eyebrow="Residential systems" title="Intruder alarms, perimeter protection and CCTV designed around the home" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. Premium design means the system is considered and installed properly — not that the property has to be a mansion."/>
       <div className="system-route-grid residential-system-grid">
         {residentialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential system</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>
@@ -78,7 +85,7 @@ export default function SystemsPage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Commercial installations" title="Fire, CCTV and intruder systems for operational premises" text="Commercial work is led by fire-alarm installation and servicing, CCTV, intruder protection, emergency lighting and property-specific risk or compliance requirements."/>
+      <SectionHeading eyebrow="Commercial systems" title="Fire, CCTV and intruder systems for commercial premises" text="Commercial work is led by fire-alarm installation and servicing, CCTV, intruder protection, emergency lighting and property-specific risk or compliance requirements."/>
       <div className="system-route-grid commercial-system-route-grid">
         {commercialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Commercial system</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>
