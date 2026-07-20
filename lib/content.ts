@@ -625,8 +625,8 @@ export const systemPages: Record<string, ServicePageData> = {
     metaTitle: "Smart Home & Solar CCTV Installation Chesterfield | NOX",
     metaDescription: "Professional smart-home, solar and wireless CCTV installation in Chesterfield and Derbyshire, including Eufy camera positioning, setup and app handover.",
     intro: "Smart-home CCTV is the simpler, app-led route for customers who want useful notifications, live viewing, doorbells, floodlight cameras or solar-powered coverage without a full recorder-based system. NOX installs and configures suitable smart cameras while keeping professional residential CCTV available for continuous recording and broader whole-property coverage.",
-    image: "/images/projects/eufy-solar-camera-1.jpg",
-    imageAlt: "Eufy solar smart-home CCTV camera professionally installed in Chesterfield",
+    image: "/images/projects/eufy-solar-camera-2.jpg",
+    imageAlt: "Eufy dual-lens solar smart-home CCTV camera professionally installed in Chesterfield",
     problemTitle: "Convenient smart cameras still need the right position, power strategy and app setup",
     problemText: "A wireless camera is only useful when the view, detection zone, mounting height, charging or solar exposure and notification settings all suit the property. NOX surveys the requirement and explains when a smart camera is suitable and when a professional NVR system is the better route.",
     benefits: ["Solar and battery camera options", "Floodlight cameras", "App alerts and live viewing", "Professional positioning", "HomeBase and network setup", "Lower-disruption installation", "Clear customer handover", "Upgrade path to professional CCTV"],
@@ -654,7 +654,7 @@ export const systemPages: Record<string, ServicePageData> = {
     platformTitle: "A practical alternative where a full CCTV recorder is not required",
     platformText: "NOX does not force every property onto one brand or one system type. Smart-home CCTV is offered where it is genuinely suitable, with professional Ajax and Hikvision CCTV available for more demanding requirements.",
     products: [
-      { name: "Solar smart cameras", description: "Battery-powered cameras supported by solar charging for suitable external areas and lower-disruption residential installations.", image: "/images/projects/eufy-solar-camera-2.jpg", imageAlt: "Solar smart security camera installed on a Chesterfield home" },
+      { name: "Solar smart cameras", description: "Battery-powered cameras supported by solar charging for suitable external areas and lower-disruption residential installations.", image: "/images/projects/eufy-solar-camera-1.jpg", imageAlt: "Eufy dual-lens solar security camera installed on a Chesterfield home" },
       { name: "Floodlight cameras", description: "Combined lighting, detection and video for selected entrances, gardens and rear access points.", image: "/images/projects/eufy-floodlight-camera-2.jpg", imageAlt: "Smart floodlight CCTV camera installed in Chesterfield" },
       { name: "HomeBase and app setup", description: "Connection, user access, notification settings and practical app operation configured and explained during handover.", image: "/images/projects/eufy-equipment.jpg", imageAlt: "Eufy smart-home CCTV equipment prepared for installation" },
       { name: "Professional CCTV upgrade", description: "Where continuous recording or broader coverage is needed, NOX can design an Ajax, Hikvision or other professional NVR-based system.", image: "/images/projects/retford-monitor-final.jpg", imageAlt: "Professional multi-camera CCTV system configured by NOX" }

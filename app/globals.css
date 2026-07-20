@@ -1208,3 +1208,66 @@ p { color: var(--muted); }
   .project-story-section .home-project-intro { margin-bottom: 18px; }
   .project-story-section .case-grid { gap: 12px; }
 }
+
+/* v3.3 premium navigation, homepage separation and image refinements */
+.home-hero-premium,
+.home-hero-split {
+  overflow: hidden;
+  isolation: isolate;
+}
+.home-hero-split img:first-child { object-position: center 46%; }
+.home-hero-split img:last-child { object-position: center 40%; }
+.premium-client-section {
+  position: relative;
+  z-index: 3;
+  background: var(--black);
+  padding-top: 112px;
+}
+.core-system-card > img { object-position: center; }
+.core-system-card:first-child > img { object-position: center 38%; }
+.core-system-card:last-child > img { object-position: center 48%; }
+.ajax-property-media img {
+  object-fit: cover;
+  object-position: center 34%;
+  padding: 0;
+}
+.concise-dropdown .solution-menu-group { padding: 12px; }
+.concise-dropdown .solution-menu-group > a {
+  padding: 10px 11px;
+  font-size: 13px;
+  font-weight: 760;
+  line-height: 1.25;
+}
+.concise-dropdown .solution-menu-footer a { padding: 13px 14px; }
+.grouped-solutions-dropdown.concise-dropdown {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 760px;
+  left: -235px;
+}
+.plan-menu-panel.concise-dropdown {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 620px;
+  left: -245px;
+}
+.mobile-nav-group { border-bottom: 1px solid var(--line); padding: 8px 0 12px; }
+.mobile-nav-group > a { display: block; padding: 9px 4px; color: #dedede; }
+.footer-grid-matched {
+  grid-template-columns: 1.45fr repeat(5, minmax(0, 1fr));
+  gap: 38px;
+}
+.service-plan-grid-compact article { min-height: 250px; }
+.service-plan-grid-compact article > span { margin-bottom: 24px; }
+.service-plan-grid-compact p { max-width: 360px; }
+
+@media (max-width: 1180px) {
+  .footer-grid-matched { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer-grid-matched .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+  .home-hero-premium { min-height: 720px; }
+  .home-hero-premium .home-hero-content { padding: 86px 0 110px; }
+  .premium-client-section { padding-top: 78px; }
+  .home-hero-split img:first-child { object-position: center 44%; }
+  .footer-grid-matched { grid-template-columns: 1fr; }
+}

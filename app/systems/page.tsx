@@ -35,7 +35,7 @@ const residentialSystems = [
     title: "Smart Home CCTV",
     text: "App-led solar, battery, floodlight and doorbell cameras for homes that prioritise convenience, straightforward notifications and a lower-disruption installation.",
     href: "/systems/smart-home-cctv",
-    image: "/images/projects/eufy-solar-camera-2.jpg",
+    image: "/images/projects/eufy-solar-camera-1.jpg",
     alt: "Solar smart-home CCTV camera installed in Chesterfield"
   }
 ]

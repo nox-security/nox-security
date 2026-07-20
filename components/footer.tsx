@@ -1,49 +1,46 @@
 import Link from "next/link"
+import { companyNavItems, servicePlanNavGroups, systemNavGroups } from "@/lib/navigation"
 import { site } from "@/lib/site"
 
 export default function Footer() {
+  const coreSystems = systemNavGroups[0].items
+  const propertyAndFire = [...systemNavGroups[1].items, ...systemNavGroups[2].items]
+  const plans = servicePlanNavGroups.flatMap(group => group.items)
+
   return (
     <footer className="site-footer">
       <div className="footer-conversion">
         <div>
           <span className="eyebrow">Request your free security survey</span>
           <h2>Tell us what you want to protect and the NOX team will guide the next step.</h2>
-          <p>Use one simple route for a new system, servicing, repairs, monitoring or a takeover — with phone and WhatsApp available too.</p>
+          <p>One simple enquiry for a new system, monitoring, maintenance, repairs or a suitable takeover.</p>
         </div>
         <div className="button-row">
           <Link className="button button-light" href="/get-quote">Request Your Free Security Survey</Link>
         </div>
       </div>
-      <div className="footer-grid">
+      <div className="footer-grid footer-grid-matched">
         <div className="footer-brand">
           <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
-          <p>Fire & Security systems designed around homes, businesses and property portfolios across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
+          <p>Fire & Security systems designed around homes and businesses across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
           <p className="muted">Designed properly · Installed properly · Supported properly</p>
         </div>
         <div>
           <h3>Systems</h3>
-          <Link href="/systems/intrusion-alarms">Intruder Alarms</Link>
-          <Link href="/systems/perimeter-protection">Perimeter Protection</Link>
-          <Link href="/systems/cctv">CCTV Systems</Link>
-          <Link href="/systems/fire-safety">Fire Alarm Systems</Link>
-          <Link href="/residential">Residential Security</Link>
-          <Link href="/commercial">Commercial Fire & Security</Link>
+          {coreSystems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+        </div>
+        <div>
+          <h3>Property & Fire</h3>
+          {propertyAndFire.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
           <h3>Service Plans</h3>
-          <Link href="/service-plans/alarm-maintenance">Alarm Maintenance</Link>
-          <Link href="/service-plans/alarm-monitoring">Alarm Monitoring</Link>
-          <Link href="/service-plans/cctv-maintenance">CCTV Maintenance & Takeovers</Link>
-          <Link href="/service-plans/fire-alarm-servicing">Fire Alarm Servicing</Link>
-          <Link href="/service-plans/emergency-lighting-servicing">Emergency Lighting Servicing</Link>
-          <Link href="/service-plans">Plans & Packages</Link>
+          {plans.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
           <h3>Company</h3>
-          <Link href="/case-studies">Case Studies</Link>
-          <Link href="/areas-we-serve">Areas We Cover</Link>
-          <Link href="/about-us">About NOX</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/">Home</Link>
+          {companyNavItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           <Link href="/reviews">Customer Reviews</Link>
         </div>
         <div>
