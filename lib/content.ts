@@ -26,6 +26,13 @@ export type ServicePageData = {
   videos?: VideoItem[]
   platformTitle?: string
   platformText?: string
+  ctaLabel?: string
+  audience?: "Residential" | "Commercial" | "Residential & Commercial"
+  serviceCategory?: string
+  enquiryType?: "Installation" | "Servicing" | "Repair" | "Monitoring" | "Takeover" | "General"
+  pricingFactors?: string[]
+  guide?: LinkItem
+  serviceAreaText?: string
 }
 
 export type PlanPageData = {
@@ -46,6 +53,12 @@ export type PlanPageData = {
   details: TextItem[]
   faq: FAQItem[]
   related: LinkItem[]
+  ctaLabel?: string
+  audience?: "Residential" | "Commercial" | "Residential & Commercial"
+  serviceCategory?: string
+  enquiryType?: "Installation" | "Servicing" | "Repair" | "Monitoring" | "Takeover" | "General"
+  pricingFactors?: string[]
+  guide?: LinkItem
 }
 
 export type VerifiedReview = {
@@ -393,6 +406,21 @@ export const caseStudies: CaseStudy[] = [
     searchKeywords: ["CCTV upgrade Derbyshire", "estate CCTV", "commercial CCTV recorder replacement"]
   }
 ]
+
+const projectTitleUpdates: Record<string, string> = {
+  "bottle-and-thyme-commercial-cctv-chesterfield": "Commercial CCTV Installation for a Chesterfield Hospitality Venue",
+  "continue-arcade-commercial-cctv-derby": "Commercial CCTV Installation for a Derby Retro Gaming Arcade",
+  "telesis-hitachi-fire-intruder-system": "Industrial Fire and Intruder Installation for a Derbyshire Warehouse",
+  "chesterfield-home-ajax-cctv-intruder": "Ajax Alarm and CCTV Installation for a Chesterfield Home",
+  "dronfield-timber-perimeter": "Perimeter Alarm Protection for an Industrial Site near Dronfield",
+  "buxton-industrial-security": "Industrial CCTV and Intruder Protection in Buxton",
+  "banana-industries-fire-security": "Commercial Fire and Intruder Installation for Banana Industries",
+}
+
+for (const project of caseStudies) {
+  project.title = projectTitleUpdates[project.slug] ?? project.title
+}
+
 
 export const areas = {
   chesterfield: {
@@ -821,7 +849,103 @@ export const systemPages: Record<string, ServicePageData> = {
     ],
     related: [{ href: "/systems/fire-safety", label: "Fire alarm systems" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/service-plans/fire-compliance", label: "Fire compliance packages" }],
     caseStudySlugs: ["banana-industries-fire-security"]
+  },
+  "home-cctv": {
+    slug: "home-cctv",
+    eyebrow: "Home CCTV installation",
+    title: "Home CCTV designed around driveways, doors, gardens and outbuildings",
+    metaTitle: "Home CCTV Installation Chesterfield | Residential CCTV",
+    metaDescription: "Professional home CCTV installation across Chesterfield, Sheffield and Derbyshire with driveway, entrance, garden, garage and outbuilding coverage, recording and remote viewing.",
+    intro: "NOX designs residential CCTV around the views that matter, the level of recorded detail required and how the household wants to use the system. Options include professional recorder-based CCTV and carefully selected app-connected solutions.",
+    image: "/images/revisions/residential-vigi-cctv-pair.jpg",
+    imageAlt: "Two professional residential CCTV cameras installed by NOX beneath a roofline",
+    problemTitle: "Useful home CCTV is about evidence quality and coverage, not simply camera count",
+    problemText: "Driveways, doors, side access, vehicles, gardens, garages and outbuildings each need a clear purpose. Camera position, lighting, recording, privacy, network access and the appearance of the installation are considered together.",
+    benefits: ["Driveway and vehicle coverage", "Front and rear entrance views", "Garden, side-access and boundary coverage", "Garage and outbuilding options", "Night image performance considered during design", "Dedicated recording and playback where required", "Remote viewing and user setup", "Combined alarm and CCTV design"],
+    suitableFor: ["Semi-detached and detached homes", "Larger residential properties", "Homes with garages or outbuildings", "Driveways and gated approaches", "Renovations and extensions", "Customers upgrading older CCTV"],
+    process: [
+      { title: "Property survey", text: "We identify the views that need to be captured, likely lighting conditions, cable routes and how footage will be used." },
+      { title: "Camera and recording design", text: "The quotation explains camera positions, image resolution, recorder capacity, remote access and any network work." },
+      { title: "Careful installation", text: "Cameras and cabling are positioned to balance useful coverage, appearance, access and future maintenance." },
+      { title: "Playback handover", text: "Live view, recorded playback, app access, alerts and maintenance options are demonstrated clearly." }
+    ],
+    details: [
+      { title: "Recorder-based CCTV", text: "Professional IP or suitable hybrid systems provide dependable recording, playback and scalable coverage for the whole property." },
+      { title: "Night performance", text: "Lighting, reflections, mounting position and camera technology all affect the detail available after dark." },
+      { title: "Privacy and positioning", text: "The design should focus on the property requirement while avoiding unnecessary views into neighbouring areas." },
+      { title: "Maintenance and upgrades", text: "Camera cleaning, recorder health, storage, playback and remote access can be checked through planned maintenance." }
+    ],
+    faq: [
+      { q: "How many CCTV cameras does a house need?", a: "It depends on the entrances, driveway, gardens, side access, garages and the level of detail required. A survey identifies the minimum useful coverage rather than choosing a number first." },
+      { q: "Can CCTV cover a detached garage or outbuilding?", a: "Often yes. Cable routes, power, network availability, distance and the required recording method need to be checked." },
+      { q: "Do home CCTV cameras record continuously?", a: "A recorder-based system can be configured for continuous, scheduled or event-led recording. App-connected products may use a different recording method depending on the platform." },
+      { q: "Can I view the cameras on my phone?", a: "Yes, suitable systems support remote viewing. The app, user permissions and secure account setup are included in the handover." },
+      { q: "Can you upgrade existing home CCTV?", a: "Yes, where the cameras, cabling, recorder and access can be assessed. NOX will explain what can sensibly be retained and what would improve the system." },
+      { q: "What affects home CCTV cost?", a: "Camera quantity, resolution, recorder and storage, cable routes, access, network work, outbuildings, existing equipment and installation time all affect the quotation." }
+    ],
+    related: [
+      { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" },
+      { href: "/systems/smart-home-cctv", label: "Smart Security" },
+      { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
+      { href: "/service-plans/residential-security-packages", label: "Residential alarm and CCTV packages" }
+    ],
+    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "sheffield-residential-security", "eufy-smart-home-cctv-chesterfield"],
+    ctaLabel: "Get a Home CCTV Recommendation",
+    audience: "Residential",
+    serviceCategory: "Home CCTV",
+    enquiryType: "Installation",
+    pricingFactors: ["Number and position of cameras", "Required image detail and night performance", "Recorder capacity and footage retention", "Cable routes and access", "Network and remote-viewing requirements", "Garages, gates or separate buildings", "Existing cameras, recorder or cabling"],
+    guide: { href: "/blog/how-many-cctv-cameras-does-a-house-need", label: "How many CCTV cameras does a house need?" },
+    serviceAreaText: "Home CCTV installation is available across Chesterfield, Sheffield and Derbyshire, with wider travel for suitable larger residential projects."
+  },
+  "garages-outbuildings": {
+    slug: "garages-outbuildings",
+    eyebrow: "Garage and outbuilding security",
+    title: "Security for garages, outbuildings, gates and detached areas",
+    metaTitle: "Garage & Outbuilding Security Chesterfield | Alarms & CCTV",
+    metaDescription: "Alarm, CCTV and perimeter protection for garages, workshops, gates and outbuildings across Chesterfield, Sheffield and Derbyshire.",
+    intro: "Detached garages, workshops, garden buildings and longer driveways often need more than a standard house-alarm layout. NOX assesses distance, communication, power, access and the value or activity within each area before designing the protection.",
+    image: "/images/revisions/residential-security-nox-van.jpg",
+    imageAlt: "NOX residential security installation for a home with separate external areas",
+    problemTitle: "Separate buildings need reliable communication and the right detection method",
+    problemText: "The design may use door protection, movement detection, MotionCam, external detection, CCTV, sirens or a combination. Signal range, construction, power, weather exposure and how the space is used determine the sensible route.",
+    benefits: ["Detached garage alarm protection", "Workshop and garden-building coverage", "Gate and driveway approaches", "CCTV for vehicles and external areas", "External detection where suitable", "Signal and power assessment", "Night-mode and part-arm options", "One app or joined-up handover where compatible"],
+    suitableFor: ["Detached garages", "Workshops and garden rooms", "Rural and larger properties", "Gated driveways", "Vehicle and tool storage", "Properties with several buildings"],
+    process: [
+      { title: "Site and distance review", text: "We inspect the main house, detached spaces, boundaries, routes, construction and likely communication obstacles." },
+      { title: "Layered design", text: "Alarm detection, CCTV, external protection and control are selected around each area rather than treated as one room." },
+      { title: "Range and installation checks", text: "Power, network, radio range, cable routes, mounting positions and weather exposure are confirmed." },
+      { title: "Handover by area", text: "Users are shown how to arm, view and manage the house and external spaces without making daily use complicated." }
+    ],
+    details: [
+      { title: "Alarm protection", text: "Door contacts, movement detection and photo verification can protect the building before or after entry depending on the design." },
+      { title: "Perimeter warning", text: "Suitable external detectors can identify movement around driveways, gates or approaches before the main building is reached." },
+      { title: "CCTV evidence", text: "Cameras can provide live and recorded views of vehicles, access points, paths and vulnerable external areas." },
+      { title: "Phased expansion", text: "Larger properties can be delivered in stages where the core system, coverage and future capacity are planned properly from the start." }
+    ],
+    faq: [
+      { q: "Can an Ajax alarm protect a detached garage?", a: "Often yes, but distance, construction, signal conditions and hub capacity must be checked at the property." },
+      { q: "Can a garage have its own keypad or controls?", a: "Suitable Ajax systems can use additional control devices, tags or app permissions depending on the final design." },
+      { q: "Can CCTV and an alarm cover the same outbuilding?", a: "Yes. Alarm detection and CCTV solve different parts of the requirement and can be designed together." },
+      { q: "What if there is no internet in the outbuilding?", a: "The answer depends on the system type. Some alarm devices communicate with the main hub, while CCTV may need cabling, wireless bridging or another network solution." },
+      { q: "Can you protect gates and driveways?", a: "Yes, using suitable CCTV, external detection or a combination after the approach, boundaries, animals and normal movement have been considered." }
+    ],
+    related: [
+      { href: "/systems/perimeter-protection", label: "Perimeter protection" },
+      { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" },
+      { href: "/systems/home-cctv", label: "Home CCTV" },
+      { href: "/service-plans/residential-security-packages", label: "Residential security packages" }
+    ],
+    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "dronfield-outdoor-detectors", "buxton-industrial-security"],
+    ctaLabel: "Protect a Garage or Outbuilding",
+    audience: "Residential",
+    serviceCategory: "Garage and outbuilding security",
+    enquiryType: "Installation",
+    pricingFactors: ["Distance from the main property", "Construction and radio conditions", "Power and network availability", "Number of doors, rooms and external areas", "Required CCTV recording", "Gates, boundaries and vehicle approaches"],
+    guide: { href: "/blog/can-an-alarm-protect-a-garage-or-outbuilding", label: "Can an alarm protect a garage or outbuilding?" },
+    serviceAreaText: "NOX designs garage and outbuilding security across Chesterfield, Sheffield, Derbyshire and nearby rural areas."
   }
+
 }
 
 export const planPages: Record<string, PlanPageData> = {
@@ -1041,5 +1165,191 @@ export const planPages: Record<string, PlanPageData> = {
       { q: "Are repairs included in the annual price?", a: "Not unless specifically stated. Defects, parts and remedial work are normally quoted separately." }
     ],
     related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/emergency-lighting-servicing", label: "Emergency lighting servicing" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessment" }]
+  },
+  "residential-security-packages": {
+    slug: "residential-security-packages",
+    eyebrow: "Residential alarm and CCTV packages",
+    title: "Residential security packages built around the property",
+    metaTitle: "Residential Alarm & CCTV Packages | NOX Fire & Security",
+    metaDescription: "Combined Ajax alarm, home CCTV, perimeter and ongoing-support packages designed around homes across Chesterfield, Sheffield and Derbyshire.",
+    intro: "A residential package brings the agreed alarm, CCTV and optional ongoing support into one coordinated design. It is not a fixed equipment bundle: the property, coverage and customer priorities still decide what is included.",
+    image: "/images/revisions/ajax-intruder-alarm-workbench.jpg",
+    imageAlt: "Ajax alarm equipment prepared for a NOX residential security installation",
+    priceNote: "Installation and annual support are quoted separately so the customer can see the equipment, labour and recurring services clearly.",
+    included: ["Property-led Ajax alarm design", "Home CCTV where required", "Garage, gate or outbuilding options", "Perimeter detection where suitable", "App and user setup", "Clear installation handover", "Optional alarm monitoring", "Optional alarm and CCTV maintenance"],
+    suitableFor: ["Homes wanting alarm and CCTV together", "Larger properties", "Garages and outbuildings", "Driveways and gated approaches", "Renovations", "Customers replacing several older systems"],
+    process: [
+      { title: "Whole-property survey", text: "We review the home, external areas, vehicles, access, routines and existing equipment as one requirement." },
+      { title: "Coordinated design", text: "Alarm, CCTV and perimeter options are selected to complement one another without unnecessary duplication." },
+      { title: "Clear installation quotation", text: "Equipment and labour are shown separately from monitoring, servicing or annual package costs." },
+      { title: "Handover and support choice", text: "Users are shown the apps and controls, then choose the ongoing support that suits the systems installed." }
+    ],
+    details: [
+      { title: "One design conversation", text: "The customer does not need separate surveys for each system when the alarm and CCTV are being planned together." },
+      { title: "Consistent coverage", text: "The alarm protects the property and alerts users; CCTV provides visual context and recorded evidence where required." },
+      { title: "Future expansion", text: "Capacity, cable routes and likely future areas can be considered at the start even where the work is delivered in phases." }
+    ],
+    faq: [
+      { q: "Is this a fixed alarm and CCTV kit?", a: "No. The package is a coordinated route, but the devices, cameras and support are still selected around the property." },
+      { q: "Can I install the alarm first and add CCTV later?", a: "Yes. The survey can consider future camera positions, cabling and system capacity even when the project is phased." },
+      { q: "Is monitoring included in the installation price?", a: "No. Installation and recurring monitoring or maintenance are stated separately unless the written quotation says otherwise." },
+      { q: "Can garages and gates be included?", a: "Yes, subject to distance, communication, power, access and the final system design." },
+      { q: "Do you offer packages for normal family homes?", a: "Yes. The package is based on the requirement, not the size or status of the house." }
+    ],
+    related: [
+      { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" },
+      { href: "/systems/home-cctv", label: "Home CCTV" },
+      { href: "/systems/perimeter-protection", label: "Perimeter protection" },
+      { href: "/service-plans/total-security", label: "Total Security Plan" }
+    ],
+    ctaLabel: "Discuss My Property",
+    audience: "Residential",
+    serviceCategory: "Residential alarm and CCTV package",
+    enquiryType: "Installation",
+    pricingFactors: ["Alarm device quantities", "Camera count and recording", "Perimeter and outbuilding coverage", "Cable routes and access", "Monitoring requirements", "Annual maintenance options"],
+    guide: { href: "/blog/how-many-cctv-cameras-does-a-house-need", label: "Plan the CCTV coverage first" }
   }
+
 }
+
+// V3.7 intent-led refinements. The established intrusion-alarm pillar is
+// deliberately excluded from these overrides so its URL, metadata, H1 and
+// main content structure remain protected pending Search Console review.
+Object.assign(systemPages["fire-safety"], {
+  eyebrow: "Commercial fire alarm installation",
+  title: "Fire alarm installation for commercial premises across Chesterfield, Sheffield and Derbyshire",
+  metaTitle: "Commercial Fire Alarm Installation Derbyshire",
+  metaDescription: "Commercial fire alarm installation across Chesterfield, Sheffield and Derbyshire, including conventional, addressable and suitable wireless EN54 systems, commissioning, handover and future servicing.",
+  intro: "NOX designs and installs fire alarm systems for commercial premises, landlords, HMOs, warehouses, hospitality, offices and multi-site customers. New installation is kept separate from annual servicing so the design, commissioning, documentation and future maintenance route are clear from the start.",
+  problemTitle: "The system must reflect the building, use, fire strategy and future maintenance requirement",
+  problemText: "Device types, zones, warning coverage, manual call points, control equipment, cable routes, occupancy and available fire information all influence the design. NOX can provide conventional, addressable and suitable wireless EN54 options where they match the project.",
+  benefits: ["New commercial fire alarm installations", "Replacement of unsuitable or unsupported systems", "Conventional and addressable options", "Suitable Ajax EN54 wireless solutions", "Manual call points, detection and warning devices", "Design and installation planning", "Commissioning and clear handover", "Documentation and future servicing route"],
+  process: [
+    { title: "Site and information review", text: "We review the premises, use, drawings or fire information, existing equipment, access and the customer’s operational requirements." },
+    { title: "System design and quotation", text: "The proposed category, zones, equipment, installation method, exclusions and any required enabling work are explained clearly." },
+    { title: "Installation and commissioning", text: "The system is installed, configured and tested against the agreed design, with disruption planned around the premises." },
+    { title: "Handover and servicing plan", text: "Controls, records, user responsibilities and the recommended future service route are handed over without mixing annual maintenance into the installation price." }
+  ],
+  details: [
+    { title: "Conventional systems", text: "A conventional system can suit smaller or more straightforward premises where zonal indication and a practical wired design meet the requirement." },
+    { title: "Addressable systems", text: "Addressable equipment can provide clearer device identification and flexibility for larger, more complex or expanding sites." },
+    { title: "Suitable wireless EN54 options", text: "Ajax EN54 equipment can reduce installation disruption on appropriate projects, subject to survey, radio design and the complete fire-safety requirement." },
+    { title: "Documentation and future support", text: "The handover should leave the responsible person with clear controls, records and a route into planned servicing, defect resolution and emergency-lighting coordination." }
+  ],
+  ctaLabel: "Request Fire Alarm Pricing",
+  audience: "Commercial",
+  serviceCategory: "Fire alarm installation",
+  enquiryType: "Installation",
+  pricingFactors: ["Building size, layout and use", "System category and available fire information", "Conventional, addressable or wireless design", "Number and type of devices", "Cable routes and access", "Existing equipment and removal", "Out-of-hours or phased work", "Commissioning, documentation and integration requirements"],
+  guide: { href: "/blog/what-information-is-needed-for-a-fire-alarm-quote", label: "What information is needed for a fire alarm quote?" },
+  serviceAreaText: "Commercial fire alarm installation is available across Chesterfield, Sheffield and Derbyshire, with wider travel for suitable industrial and multi-site projects."
+} satisfies Partial<ServicePageData>)
+
+Object.assign(systemPages["emergency-lighting"], {
+  eyebrow: "Emergency lighting installation",
+  title: "Emergency lighting installation and replacement for commercial premises",
+  metaTitle: "Emergency Lighting Installation Chesterfield | NOX",
+  metaDescription: "Emergency lighting installation, replacement and upgrades for commercial premises across Chesterfield, Sheffield and Derbyshire, including escape routes, suitable fittings and handover.",
+  intro: "NOX installs new emergency lighting, replaces failed or unsuitable fittings and upgrades existing arrangements for commercial premises, landlords and HMOs. Routine testing is covered separately so installation and recurring maintenance remain clear.",
+  problemTitle: "Escape routes, changes in level, exits and higher-risk areas need the right fittings in the right positions",
+  problemText: "The property layout, use, available fire information, existing circuits, mounting positions and future testing route all affect the installation. NOX plans the work around the premises rather than simply replacing fittings one for one without review.",
+  benefits: ["New emergency lighting installation", "Replacement of failed or unsuitable fittings", "Escape-route and open-area fittings", "Exit signs and directional indication", "Upgrades during refurbishment", "Installation around operational premises", "Commissioning and handover records", "Future testing and servicing route"],
+  process: [
+    { title: "Layout and existing-system review", text: "We inspect routes, exits, changes in level, existing fittings, circuits, access and any available fire information." },
+    { title: "Fitting and installation design", text: "Suitable maintained or non-maintained fittings, signs, positions and cable routes are proposed for the actual property." },
+    { title: "Installation and testing", text: "The agreed fittings and circuits are installed, labelled where required and tested before handover." },
+    { title: "Records and recurring tests", text: "The customer receives clear next steps for routine checks, annual duration testing and remedial support." }
+  ],
+  ctaLabel: "Request Emergency Lighting Pricing",
+  audience: "Commercial",
+  serviceCategory: "Emergency lighting installation",
+  enquiryType: "Installation",
+  pricingFactors: ["Property layout and escape routes", "Number and type of fittings", "Existing circuits and condition", "Mounting height and access", "Cable routes and decoration", "Operational or out-of-hours working", "Required remedials and replacement fittings"],
+  guide: { href: "/blog/when-should-emergency-lighting-fittings-be-replaced", label: "When should emergency-lighting fittings be replaced?" },
+  serviceAreaText: "Emergency lighting installation is available across Chesterfield, Sheffield and Derbyshire for commercial premises, landlords, HMOs and suitable multi-site portfolios."
+} satisfies Partial<ServicePageData>)
+
+Object.assign(planPages["fire-alarm-servicing"], {
+  title: "Fire alarm servicing and maintenance for commercial premises",
+  metaTitle: "Fire Alarm Servicing Chesterfield & Sheffield",
+  metaDescription: "Planned fire alarm servicing and maintenance across Chesterfield, Sheffield and Derbyshire, including existing-system takeovers, testing, records, defect reporting and remedial quotations.",
+  intro: "NOX services suitable conventional, addressable, wireless and Ajax EN54 fire alarm systems. The visit scope, available records, system condition, faults and future service schedule are reviewed clearly before an ongoing arrangement is accepted.",
+  ctaLabel: "Arrange Fire Alarm Servicing",
+  audience: "Commercial",
+  serviceCategory: "Fire alarm servicing",
+  enquiryType: "Servicing",
+  pricingFactors: ["Panel and system type", "Approximate device quantities and zones", "Number of buildings or sites", "Access and operational restrictions", "Available records and service history", "Known faults or disabled devices", "Required visit frequency", "Remedial work identified during service"],
+  guide: { href: "/blog/how-often-should-a-commercial-fire-alarm-be-serviced", label: "How often should a commercial fire alarm be serviced?" }
+} satisfies Partial<PlanPageData>)
+
+Object.assign(planPages["emergency-lighting-servicing"], {
+  title: "Emergency lighting testing and servicing for commercial premises",
+  metaTitle: "Emergency Lighting Testing Chesterfield | Servicing & Records",
+  metaDescription: "Emergency lighting testing and servicing across Chesterfield, Sheffield and Derbyshire, including functional checks, annual duration testing, records, defect reporting and remedials.",
+  intro: "NOX provides planned emergency-lighting testing for commercial premises, landlords, HMOs and multi-site customers, with failed fittings, battery issues, access limitations and required remedials recorded clearly.",
+  ctaLabel: "Book Emergency Lighting Testing",
+  audience: "Commercial",
+  serviceCategory: "Emergency lighting testing and servicing",
+  enquiryType: "Servicing",
+  pricingFactors: ["Number and type of fittings", "Monthly functional or annual duration testing", "Building access and operating hours", "Available asset records", "Multiple buildings or sites", "Failed fittings and remedial requirements"],
+  guide: { href: "/blog/what-is-a-three-hour-emergency-lighting-test", label: "What is a three-hour emergency-lighting test?" }
+} satisfies Partial<PlanPageData>)
+
+Object.assign(planPages["alarm-maintenance"], {
+  title: "Intruder alarm servicing for wired, wireless and hybrid systems",
+  metaTitle: "Intruder Alarm Servicing Chesterfield",
+  metaDescription: "Intruder alarm servicing across Chesterfield, Sheffield and Derbyshire with device tests, batteries, communication checks, sirens, event history, records and suitable system takeovers.",
+  intro: "NOX services suitable Ajax and established wired, wireless or hybrid intruder alarms. The system health, device condition, communication, batteries, event history and any known faults are reviewed before the ongoing scope is confirmed.",
+  ctaLabel: "Arrange an Alarm Service",
+  audience: "Residential & Commercial",
+  serviceCategory: "Intruder alarm servicing",
+  enquiryType: "Servicing",
+  pricingFactors: ["Panel and system type", "Number of devices and buildings", "Battery quantities and condition", "Communication and monitoring route", "Existing faults or missing access", "Service history and documentation", "Commercial access restrictions"],
+  guide: { href: "/blog/how-often-should-an-intruder-alarm-be-serviced", label: "How often should an intruder alarm be serviced?" }
+} satisfies Partial<PlanPageData>)
+
+Object.assign(planPages["alarm-monitoring"], {
+  title: "Professional intruder alarm monitoring and keyholder signalling",
+  metaTitle: "Alarm Monitoring Chesterfield & Derbyshire | NOX",
+  metaDescription: "Professional intruder alarm monitoring across Chesterfield and Derbyshire with alarm signalling, keyholder communication, system supervision and suitable takeover assessments.",
+  intro: "Professional monitoring is different from receiving an app notification. A suitable alarm sends agreed events through a monitored signalling route so keyholders can be contacted under the confirmed response plan.",
+  ctaLabel: "Request Monitoring Pricing",
+  audience: "Residential & Commercial",
+  serviceCategory: "Intruder alarm monitoring",
+  enquiryType: "Monitoring",
+  pricingFactors: ["Alarm panel and signalling compatibility", "Residential or commercial property", "Required signalling path", "Keyholder and contact requirements", "Initial takeover or communication equipment", "Maintenance requirements", "Number of sites"],
+  guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" }
+} satisfies Partial<PlanPageData>)
+
+Object.assign(planPages["cctv-maintenance"], {
+  title: "CCTV maintenance, recording checks and system upgrades",
+  metaTitle: "CCTV Maintenance Chesterfield | Commercial & Home Systems",
+  metaDescription: "CCTV maintenance across Chesterfield, Sheffield and Derbyshire including camera cleaning, image checks, recorder and storage health, playback, remote access and upgrades.",
+  intro: "NOX maintains suitable residential and commercial CCTV systems, including camera cleaning, image and night-view checks, recorder and storage review, playback testing, remote access and practical upgrade recommendations.",
+  ctaLabel: "Get a CCTV Maintenance Quote",
+  audience: "Residential & Commercial",
+  serviceCategory: "CCTV maintenance",
+  enquiryType: "Servicing",
+  pricingFactors: ["Camera count and site size", "Analogue, hybrid or IP platform", "Recorder and storage configuration", "Access equipment and camera height", "Multiple buildings or sites", "Known image, recording or remote-access faults", "Required visit frequency"],
+  guide: { href: "/blog/how-often-should-cctv-be-maintained", label: "How often should CCTV be maintained?" }
+} satisfies Partial<PlanPageData>)
+
+Object.assign(planPages["total-security"], {
+  eyebrow: "Total Security Plans",
+  title: "Coordinated alarm, monitoring and CCTV support under one plan",
+  ctaLabel: "Request Total Security Plan Pricing",
+  audience: "Residential & Commercial",
+  serviceCategory: "Total Security Plan",
+  enquiryType: "Servicing",
+  pricingFactors: ["Systems included in the plan", "Alarm monitoring compatibility", "Alarm device and CCTV camera quantities", "Site access and number of properties", "Initial takeover or remedial work", "Agreed service frequency and exclusions"]
+} satisfies Partial<PlanPageData>)
+
+Object.assign(planPages["fire-compliance"], {
+  eyebrow: "Fire Compliance Plans",
+  title: "Coordinated fire alarm, emergency lighting and annual compliance support",
+  ctaLabel: "Get a Fire Compliance Quote",
+  audience: "Commercial",
+  serviceCategory: "Fire Compliance Plan",
+  enquiryType: "Servicing",
+  pricingFactors: ["Number of premises and systems", "Fire alarm device quantities", "Emergency-lighting fitting quantities", "Included extinguisher or risk-assessment services", "Visit frequencies and access", "Existing defects and remedial work", "Reporting and portfolio coordination"]
+} satisfies Partial<PlanPageData>)

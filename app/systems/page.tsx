@@ -77,7 +77,7 @@ export default function SystemsPage() {
     <TrustStrip/>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Residential systems" title="Intruder alarms, perimeter protection and CCTV designed around the home" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. Premium design means the system is considered and installed properly — not that the property has to be a mansion."/>
+      <SectionHeading eyebrow="Residential systems" title="Intruder alarms, perimeter protection and CCTV designed around the home" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. A well-designed system is considered and installed properly, whether it protects a semi-detached home, a larger detached property or several external areas."/>
       <div className="system-route-grid residential-system-grid">
         {residentialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential system</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>

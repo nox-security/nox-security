@@ -67,7 +67,7 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <Link className="button button-light button-small" href="/get-quote#quote-form">Request Free Survey</Link>
+          <Link className="button button-light button-small" href="/get-quote#quote-form">Get a Quote</Link>
         </div>
 
         <button
@@ -129,7 +129,7 @@ export default function Header() {
           </div>
 
           <div className="mobile-nav-actions">
-            <Link onClick={closeMobileNavigation} className="button button-light" href="/get-quote#quote-form">Request Free Survey</Link>
+            <Link onClick={closeMobileNavigation} className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>
           </div>
         </nav>
       )}

@@ -64,7 +64,6 @@ export default function WhyChooseUs() {
           })}
         </div>
 
-        {/* Free installation promo */}
         <div className="mt-16 bg-white text-black rounded-2xl p-8 md:p-10 text-center max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-3">
             <Gift className="h-8 w-8" />

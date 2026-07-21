@@ -1,17 +1,41 @@
-# NOX Fire & Security Website v3.0
+# NOX Fire & Security Website v3.7
 
-The v3.0 website is an evolution of the approved v2.6 working base. It preserves the existing premium black-and-white design and main page structure while strengthening conversion, local SEO, real-project proof and the separation between new installations and ongoing service plans.
+Version 3.7 develops the approved NOX website into a clearer residential, Fire & Compliance and commercial-security acquisition platform while preserving the established black-and-white visual identity.
 
 ## Primary customer journey
 
-The website directs residential and commercial visitors towards one clear conversion route: **Request Your Free Security Survey**. The GoHighLevel Website Enquiry form is embedded using form ID `8FchnjOrpZ4ufh1TiW8k`.
+The main navigation is organised around:
+
+1. Residential
+2. Fire & Compliance
+3. Commercial Security
+4. Servicing & Monitoring
+5. Projects
+6. Guides
+7. Get a Quote
+
+The GoHighLevel Website Enquiry form uses form ID `8FchnjOrpZ4ufh1TiW8k`. Contextual enquiry links pass the service, audience, enquiry type and source page into the quote route. The embed also appends page, referrer, traffic-source and UTM context where available.
 
 ## Main positioning
 
-- Residential intruder alarms and CCTV for family homes, semi-detached properties and larger homes.
-- Commercial Fire & Security systems for shops, offices, warehouses, hospitality, industrial units, HMOs and multi-system sites.
-- Ongoing revenue routes through monitoring, maintenance, takeovers, Fire alarm servicing, emergency-lighting servicing and compliance packages.
-- Real NOX installations and case studies used throughout instead of generic stock imagery wherever suitable.
+- Ajax intruder alarms, home CCTV, perimeter protection, gates, garages and outbuildings.
+- Commercial CCTV, intruder alarms, industrial sites, warehouses, yards and multi-site projects.
+- Commercial fire-alarm installation, servicing, repairs and takeovers.
+- Emergency-lighting installation, testing and servicing.
+- Ongoing monitoring, maintenance, repairs, upgrades and service plans.
+- Genuine NOX projects and photography used as proof throughout the website.
+
+## Ranking protection
+
+`/systems/intrusion-alarms` remains the protected benchmark page. Its URL and main content structure were preserved pending review of actual Google Search Console data.
+
+See:
+
+- `IMPLEMENTATION-PLAN-V3.7.md`
+- `SEO-ROUTE-INVENTORY-V3.7.md`
+- `CHANGELOG-V3.7.md`
+- `CLAIMS-AND-DATA-GAPS-V3.7.md`
+- `BUILD-CHECKS-V3.7.md`
 
 ## Development
 

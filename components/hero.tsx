@@ -35,7 +35,7 @@ export default function Hero() {
                     size="lg"
                     className="h-14 px-8 bg-white text-black hover:bg-gray-200 font-bold text-base"
                   >
-                    Request Your Free Security Survey →
+                    Get a Fire & Security Quote →
                   </Button>
                 </Link>
                 <a href="tel:07882959297">

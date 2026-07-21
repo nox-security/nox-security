@@ -10,7 +10,7 @@ export default function QuickQuote() {
         <Card className="max-w-4xl mx-auto border border-white/10 bg-black">
           <CardContent className="p-8 md:p-12">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Request Your Free Security Survey</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get a Fire & Security Quote</h2>
               <p className="text-lg text-gray-300">No obligation. Transparent pricing. Quick response.</p>
             </div>
 

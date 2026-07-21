@@ -4,6 +4,7 @@ import Link from "next/link"
 import { ConversionPanel, FeatureGrid, JsonLd, PageHero, SectionHeading, TrustStrip } from "@/components/marketing"
 import { areas } from "@/lib/content"
 import { pageMetadata, site } from "@/lib/site"
+import { indexableAreaSlugs } from "@/lib/seo"
 
 export function generateStaticParams() { return Object.keys(areas).map(slug => ({ slug })) }
 
@@ -13,7 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!area) return {}
   const title = `Security Systems ${area.name} | Alarms, CCTV & Fire`
   const description = `${area.intro} Request a tailored quote from NOX Fire & Security.`
-  return pageMetadata(title, description, `/areas/${slug}`)
+  const metadata = pageMetadata(title, description, `/areas/${slug}`)
+  if (!indexableAreaSlugs.has(slug)) metadata.robots = { index: false, follow: true }
+  return metadata
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -25,7 +28,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     <JsonLd data={schema}/>
     <PageHero eyebrow={`${area.name}, ${area.county}`} title={`Alarm, CCTV and fire security services in ${area.name}`} intro={area.intro} image="/images/hero-house.webp" imageAlt={`Home and business security systems in ${area.name}`}/>
     <TrustStrip/>
-    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Local system design" title={`Security surveys and installations around ${area.name}`} text={area.focus}/><p className="lead">Nearby coverage includes {area.nearby}.</p></div><aside className="dark-panel"><h3>One clear enquiry route</h3><p>Send the initial project details for a tailored quotation. The NOX team will arrange a survey when the property needs to be assessed first.</p><div className="button-row"><Link className="button button-light" href="/get-quote">Request Your Free Security Survey</Link></div></aside></div></section>
+    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Local system design" title={`Security surveys and installations around ${area.name}`} text={area.focus}/><p className="lead">Nearby coverage includes {area.nearby}.</p></div><aside className="dark-panel"><h3>One clear enquiry route</h3><p>Send the initial project details for a tailored quotation. The NOX team will arrange a survey when the property needs to be assessed first.</p><div className="button-row"><Link className="button button-light" href="/get-quote">Get a Fire & Security Quote</Link></div></aside></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Residential services" title={`Home security in ${area.name}`} text="Systems are designed around the property, access points, daily routines and the customer's preferred level of control."/><FeatureGrid columns={4} items={[
       { title:"Intruder alarms", text:"Ajax wireless, wired or hybrid alarm options with app, keypad, fob and suitable verification features." },
       { title:"CCTV", text:"Driveway, entrance, garden and outbuilding coverage with professional recording and remote viewing." },

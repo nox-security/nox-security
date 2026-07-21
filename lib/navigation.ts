@@ -9,7 +9,7 @@ export type NavGroup = {
 }
 
 export type HeaderNavMenu = {
-  id: "commercial" | "residential" | "servicing"
+  id: "residential" | "fire" | "commercial" | "servicing"
   label: string
   href: string
   featured?: NavItem
@@ -17,48 +17,77 @@ export type HeaderNavMenu = {
 }
 
 /**
- * Header-only navigation structure.
- * Existing URLs are reused so the menu can be reorganised without creating
- * duplicate pages or changing any page metadata.
+ * Primary conversion-led navigation. Existing URLs are reused where they
+ * already match the search intent; new hub/detail routes are only introduced
+ * where the site previously had a genuine content gap.
  */
 export const headerNavMenus: HeaderNavMenu[] = [
   {
-    id: "commercial",
-    label: "Commercial",
-    href: "/commercial",
-    featured: { label: "Commercial Fire & Security", href: "/commercial" },
+    id: "residential",
+    label: "Residential",
+    href: "/residential",
+    featured: { label: "Residential Security", href: "/residential" },
     groups: [
       {
-        heading: "Security",
         items: [
-          { label: "Commercial Intruder Alarms", href: "/commercial/intruder-alarms" },
-          { label: "Commercial CCTV Systems", href: "/commercial/cctv" },
-          { label: "Total Security Packages", href: "/service-plans/total-security" },
-        ],
-      },
-      {
-        heading: "Fire & Compliance",
-        items: [
-          { label: "Fire Alarm Installation", href: "/commercial/fire-compliance" },
-          { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
-          { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
-          { label: "Fire Compliance Packages", href: "/service-plans/fire-compliance" },
+          { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
+          { label: "Home CCTV", href: "/systems/home-cctv" },
+          { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
+          { label: "Garages & Outbuildings", href: "/systems/garages-outbuildings" },
+          { label: "Smart Security", href: "/systems/smart-home-cctv" },
+          { label: "Residential Security Packages", href: "/service-plans/residential-security-packages" },
+          { label: "Existing System Takeovers", href: "/services/security-system-takeover" },
         ],
       },
     ],
   },
   {
-    id: "residential",
-    label: "Residential",
-    href: "/residential",
+    id: "fire",
+    label: "Fire & Compliance",
+    href: "/fire-compliance",
+    featured: { label: "Fire & Compliance Overview", href: "/fire-compliance" },
     groups: [
       {
+        heading: "Fire alarm systems",
         items: [
-          { label: "Premium Intruder Alarms", href: "/systems/intrusion-alarms" },
-          { label: "CCTV Systems", href: "/systems/cctv" },
-          { label: "Smart Home Security", href: "/systems/smart-home-cctv" },
-          { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
-          { label: "Total Security Packages", href: "/service-plans/total-security" },
+          { label: "Fire Alarm Installation", href: "/systems/fire-safety" },
+          { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
+          { label: "Fire Alarm Repairs & Takeovers", href: "/services/fire-alarm-repairs-takeovers" },
+        ],
+      },
+      {
+        heading: "Compliance support",
+        items: [
+          { label: "Emergency Lighting Installation", href: "/systems/emergency-lighting" },
+          { label: "Emergency Lighting Testing & Servicing", href: "/service-plans/emergency-lighting-servicing" },
+          { label: "Fire Risk Assessments", href: "/systems/fire-risk-assessment" },
+          { label: "Fire Extinguisher Servicing", href: "/services/fire-extinguisher-servicing" },
+          { label: "Fire Compliance Plans", href: "/service-plans/fire-compliance" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "commercial",
+    label: "Commercial Security",
+    href: "/commercial",
+    featured: { label: "Commercial Security", href: "/commercial" },
+    groups: [
+      {
+        heading: "Systems",
+        items: [
+          { label: "Commercial CCTV", href: "/commercial/cctv" },
+          { label: "Commercial Intruder Alarms", href: "/commercial/intruder-alarms" },
+          { label: "Industrial & Warehouse Security", href: "/commercial/industrial-warehouse-security" },
+          { label: "Yard & Perimeter Protection", href: "/commercial/yard-perimeter-security" },
+        ],
+      },
+      {
+        heading: "Larger projects",
+        items: [
+          { label: "Multi-Site Security", href: "/commercial/multi-site-security" },
+          { label: "Integrated Fire & Security Projects", href: "/commercial/integrated-fire-security" },
+          { label: "Commercial System Takeovers", href: "/services/security-system-takeover" },
         ],
       },
     ],
@@ -67,13 +96,17 @@ export const headerNavMenus: HeaderNavMenu[] = [
     id: "servicing",
     label: "Servicing & Monitoring",
     href: "/service-plans",
+    featured: { label: "Servicing & Monitoring Overview", href: "/service-plans" },
     groups: [
       {
         items: [
-          { label: "Intruder Alarm Monitoring", href: "/service-plans/alarm-monitoring" },
-          { label: "Intruder Alarm Maintenance", href: "/service-plans/alarm-maintenance" },
+          { label: "Intruder Alarm Servicing", href: "/service-plans/alarm-maintenance" },
+          { label: "Alarm Monitoring", href: "/service-plans/alarm-monitoring" },
           { label: "CCTV Maintenance", href: "/service-plans/cctv-maintenance" },
-          { label: "System Takeovers", href: "/services/security-system-takeover" },
+          { label: "Security System Takeovers", href: "/services/security-system-takeover" },
+          { label: "Repairs & Upgrades", href: "/services/repairs-upgrades" },
+          { label: "Service Plans", href: "/service-plans" },
+          { label: "Total Security Plans", href: "/service-plans/total-security" },
         ],
       },
     ],
@@ -81,56 +114,56 @@ export const headerNavMenus: HeaderNavMenu[] = [
 ]
 
 export const headerDirectNavItems: NavItem[] = [
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Projects", href: "/case-studies" },
+  { label: "Guides", href: "/blog" },
+]
+
+export const residentialFooterItems: NavItem[] = [
+  { label: "Residential Security", href: "/residential" },
+  { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
+  { label: "Home CCTV", href: "/systems/home-cctv" },
+  { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
+  { label: "Garages & Outbuildings", href: "/systems/garages-outbuildings" },
+  { label: "Smart Security", href: "/systems/smart-home-cctv" },
+]
+
+export const fireFooterItems: NavItem[] = [
+  { label: "Fire & Compliance", href: "/fire-compliance" },
+  { label: "Fire Alarm Installation", href: "/systems/fire-safety" },
+  { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
+  { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
+  { label: "Fire Compliance Plans", href: "/service-plans/fire-compliance" },
+]
+
+export const commercialFooterItems: NavItem[] = [
+  { label: "Commercial Security", href: "/commercial" },
+  { label: "Commercial CCTV", href: "/commercial/cctv" },
+  { label: "Commercial Intruder Alarms", href: "/commercial/intruder-alarms" },
+  { label: "Industrial & Warehouse Security", href: "/commercial/industrial-warehouse-security" },
+  { label: "Multi-Site Security", href: "/commercial/multi-site-security" },
+]
+
+export const supportFooterItems: NavItem[] = [
+  { label: "Servicing & Monitoring", href: "/service-plans" },
+  { label: "System Takeovers", href: "/services/security-system-takeover" },
+  { label: "Projects", href: "/case-studies" },
+  { label: "Guides", href: "/blog" },
   { label: "About NOX", href: "/about-us" },
   { label: "Contact", href: "/contact" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Areas We Cover", href: "/areas-we-serve" },
 ]
 
-// Existing shared navigation exports are retained for the footer and all
-// other current website components. This keeps the requested change limited
-// to the header and mobile navigation only.
+// Retained exports keep older components stable while the footer and header
+// use the clearer cluster-specific arrays above.
 export const systemNavGroups: NavGroup[] = [
-  {
-    items: [
-      { label: "Intruder Alarms", href: "/systems/intrusion-alarms" },
-      { label: "CCTV Systems", href: "/systems/cctv" },
-      { label: "Fire Alarm Systems", href: "/systems/fire-safety" },
-    ],
-  },
-  {
-    items: [
-      { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
-      { label: "Smart Home Security", href: "/systems/smart-home-cctv" },
-      { label: "Commercial Fire & Security", href: "/commercial" },
-    ],
-  },
+  { items: residentialFooterItems.slice(1) },
+  { items: commercialFooterItems.slice(1) },
 ]
-
 export const servicePlanNavGroups: NavGroup[] = [
-  {
-    items: [
-      { label: "Alarm Maintenance", href: "/service-plans/alarm-maintenance" },
-      { label: "Alarm Monitoring", href: "/service-plans/alarm-monitoring" },
-      { label: "CCTV Maintenance", href: "/service-plans/cctv-maintenance" },
-      { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
-    ],
-  },
-  {
-    items: [
-      { label: "Emergency Lighting Servicing", href: "/service-plans/emergency-lighting-servicing" },
-      { label: "Fire Compliance Packages", href: "/service-plans/fire-compliance" },
-      { label: "Total Security Packages", href: "/service-plans/total-security" },
-      { label: "System Takeovers", href: "/services/security-system-takeover" },
-    ],
-  },
+  { items: supportFooterItems.slice(0, 2) },
+  { items: fireFooterItems.slice(2) },
 ]
-
 export const systemNavItems: NavItem[] = systemNavGroups.flatMap(group => group.items)
 export const servicePlanNavItems: NavItem[] = servicePlanNavGroups.flatMap(group => group.items)
-
-export const companyNavItems: NavItem[] = [
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Areas We Cover", href: "/areas-we-serve" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Contact", href: "/contact" },
-]
+export const companyNavItems: NavItem[] = supportFooterItems.slice(2)

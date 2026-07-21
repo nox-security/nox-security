@@ -510,7 +510,118 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     ],
     caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "tan-station-fire-security-brimington", "retford-former-bank-cctv", "buxton-industrial-security"],
     searchKeywords: ["commercial fire and security systems", "commercial security company", "fire CCTV intruder systems", "commercial compliance packages"]
+  },
+  "fire-alarm-repairs-takeovers": {
+    slug: "fire-alarm-repairs-takeovers",
+    eyebrow: "Fire alarm repairs and takeovers",
+    title: "Assessment, repair and takeover support for existing fire alarm systems",
+    metaTitle: "Fire Alarm Repairs & Takeovers Chesterfield | NOX",
+    metaDescription: "Fire alarm repair and takeover assessments across Chesterfield, Sheffield and Derbyshire, including faults, access, records, parts availability, remedials and ongoing maintenance.",
+    intro: "NOX can assess suitable existing fire alarm systems where the history is unclear, faults are present or the customer wants to move maintenance from another provider. Acceptance depends on system condition, access, records, compatibility and parts availability.",
+    image: "/images/revisions/fire-alarm-maintenance-panel.jpg",
+    imageAlt: "Existing commercial fire alarm panel assessed for repair and maintenance takeover",
+    location: "Chesterfield, Sheffield & Derbyshire",
+    audience: "Commercial",
+    serviceType: "Fire alarm repairs and takeovers",
+    problemTitle: "A takeover starts with understanding what is installed and what can be supported safely",
+    problemText: "Panel make, programming access, device types, zone information, service history, known faults, disabled equipment, documentation and parts availability all affect the route. NOX will separate the initial assessment, required remedials and future service agreement clearly.",
+    included: ["Existing-system assessment", "Panel, zones and fault-history review", "Access and documentation checks", "Device and warning-circuit assessment", "Repair or replacement options", "Remedial quotation", "Maintenance takeover route", "Emergency-lighting coordination where relevant"],
+    process: [
+      { title: "Send available information", text: "Share the panel make, property type, approximate devices, known faults, service history and photographs where available." },
+      { title: "Takeover assessment", text: "An engineer reviews access, condition, records, faults and whether the system is supportable." },
+      { title: "Repair or remedial plan", text: "Immediate faults, missing information, unsupported equipment and recommended work are explained separately." },
+      { title: "Ongoing maintenance", text: "A suitable system can move into a planned service schedule once the accepted condition and scope are clear." }
+    ],
+    faq: [
+      { q: "Can NOX take over any fire alarm system?", a: "No company can responsibly accept every system without assessment. Condition, access, documentation, compatibility and parts availability must be reviewed first." },
+      { q: "What if the engineer code is missing?", a: "The available access and manufacturer route need to be checked. In some cases access can be recovered; in others a panel or system change may be required." },
+      { q: "Are fire alarm repairs included in a service?", a: "Testing and servicing identify defects. Parts, additional labour and remedial work are normally quoted separately unless the written agreement says otherwise." },
+      { q: "Can you repair a system that shows intermittent faults?", a: "NOX can investigate the reported condition, event history, circuits and devices, but the required time and parts depend on the fault and system supportability." },
+      { q: "Can emergency lighting be reviewed at the same visit?", a: "It can be coordinated where the quotation includes both services and the site information is available." }
+    ],
+    related: [
+      { href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" },
+      { href: "/systems/fire-safety", label: "Fire alarm installation" },
+      { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" },
+      { href: "/blog/can-a-new-company-take-over-an-existing-fire-alarm", label: "Read the fire-alarm takeover guide" }
+    ],
+    caseStudySlugs: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
+    searchKeywords: ["fire alarm takeover", "fire alarm repair Chesterfield", "fire alarm faults", "existing fire alarm maintenance"]
+  },
+  "fire-extinguisher-servicing": {
+    slug: "fire-extinguisher-servicing",
+    eyebrow: "Fire extinguisher servicing",
+    title: "Fire extinguisher servicing coordinated with wider fire-safety support",
+    metaTitle: "Fire Extinguisher Servicing Chesterfield & Derbyshire | NOX",
+    metaDescription: "Fire extinguisher servicing for commercial premises across Chesterfield, Sheffield and Derbyshire, with asset records, defect reporting and coordinated fire-compliance planning.",
+    intro: "NOX can coordinate fire extinguisher servicing as a focused requirement or within a wider fire-compliance arrangement. The service scope, asset quantities, premises and any replacement or remedial requirements are confirmed before attendance.",
+    image: "/images/revisions/fire-safety-logbook.jpg",
+    imageAlt: "Fire safety records used to coordinate commercial compliance servicing",
+    location: "Chesterfield, Sheffield & Derbyshire",
+    audience: "Commercial",
+    serviceType: "Fire extinguisher servicing",
+    problemTitle: "Extinguisher servicing needs accurate asset information and clear responsibility for replacements",
+    problemText: "The number, type, location, condition and history of extinguishers affect the visit. Replacement equipment, missing assets, signage or other remedials should be reported and priced clearly rather than hidden inside a vague annual package.",
+    included: ["Asset quantity confirmation", "Inspection and service of agreed extinguishers", "Condition and location checks", "Service labels and records", "Defect and replacement reporting", "Remedial quotation where required", "Single-site or portfolio planning", "Coordination with other fire services where agreed"],
+    process: [
+      { title: "Asset information", text: "Provide the site, approximate extinguisher quantities and any available service records." },
+      { title: "Confirmed scope", text: "The visit, assets, exclusions and treatment of replacements are agreed in writing." },
+      { title: "Service attendance", text: "The agreed extinguishers are inspected and serviced, with failed or missing assets recorded." },
+      { title: "Records and next date", text: "Documentation, identified remedials and the next planned service date are provided clearly." }
+    ],
+    faq: [
+      { q: "Can extinguisher servicing be combined with fire alarm servicing?", a: "Yes, where the package and engineer scheduling are confirmed in advance." },
+      { q: "Are replacement extinguishers included?", a: "Not automatically. Replacement equipment is normally quoted separately unless specifically included in the written scope." },
+      { q: "Can you service extinguishers across several sites?", a: "Yes, suitable multi-site visits can be coordinated around access, asset information and the agreed renewal schedule." },
+      { q: "Do you provide a record after servicing?", a: "Yes, the agreed service should leave clear asset and defect information for the responsible person." }
+    ],
+    related: [
+      { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" },
+      { href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" },
+      { href: "/service-plans/emergency-lighting-servicing", label: "Emergency lighting testing" },
+      { href: "/systems/fire-risk-assessment", label: "Fire risk assessments" }
+    ],
+    caseStudySlugs: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington"],
+    searchKeywords: ["fire extinguisher servicing Chesterfield", "commercial extinguisher servicing", "fire compliance servicing"]
+  },
+  "repairs-upgrades": {
+    slug: "repairs-upgrades",
+    eyebrow: "Fire and security repairs and upgrades",
+    title: "Fault assessment, repairs and sensible upgrades for existing systems",
+    metaTitle: "Alarm, CCTV & Fire System Repairs and Upgrades | NOX",
+    metaDescription: "Assessment, repairs and upgrades for suitable alarm, CCTV and fire systems across Chesterfield, Sheffield and Derbyshire, including faults, access, recorder upgrades and phased replacement.",
+    intro: "NOX can investigate suitable alarm, CCTV and fire-system faults, recover practical access where possible and explain whether repair, selective upgrade or replacement is the sensible route. Existing equipment is not replaced simply because another company installed it.",
+    image: "/images/revisions/cctv-system-takeover-upgrade.jpg",
+    imageAlt: "Engineer removing older CCTV cameras during a system repair and upgrade",
+    location: "Chesterfield, Sheffield & Derbyshire",
+    audience: "Residential & Commercial",
+    serviceType: "Security and fire system repairs and upgrades",
+    problemTitle: "The correct repair route depends on fault evidence, access and parts support",
+    problemText: "Intermittent faults, failed batteries, damaged devices, lost app access, recorder problems, storage issues and unsupported equipment all require a different approach. An initial inspection prevents unnecessary replacement and unrealistic promises.",
+    included: ["Fault and event-history review", "Panel or recorder assessment", "Device, camera and communication checks", "Access and account review", "Repair feasibility", "Selective equipment upgrades", "Phased replacement planning", "Maintenance options after repair"],
+    process: [
+      { title: "Describe the fault", text: "Send the system make, symptoms, photographs, recent changes and any available access or records." },
+      { title: "Engineer assessment", text: "The condition, fault evidence, access, cabling and compatibility are inspected." },
+      { title: "Clear recommendation", text: "Repair, partial upgrade and replacement options are separated with the reasons for each route." },
+      { title: "Future support", text: "Once stable and supportable, the system can move into the relevant servicing or maintenance plan." }
+    ],
+    faq: [
+      { q: "Do you repair systems installed by another company?", a: "Often yes, subject to make, condition, access, compatibility and parts availability." },
+      { q: "Can an old CCTV recorder be upgraded without replacing every camera?", a: "Sometimes. Camera technology, cabling, resolution and recorder compatibility must be checked first." },
+      { q: "Can you fix lost app access?", a: "The account ownership, installer access, platform and device condition determine whether access can be restored or reconfigured." },
+      { q: "Will you always recommend a complete replacement?", a: "No. NOX explains what can be retained and where repair or partial upgrade provides a reliable route." },
+      { q: "Can repair work be followed by annual maintenance?", a: "Yes, where the system is supportable and the accepted condition is clear after remedial work." }
+    ],
+    related: [
+      { href: "/services/security-system-takeover", label: "Security system takeovers" },
+      { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" },
+      { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
+      { href: "/services/fire-alarm-repairs-takeovers", label: "Fire alarm repairs and takeovers" }
+    ],
+    caseStudySlugs: ["retford-former-bank-cctv", "chatsworth-estate-cctv-upgrade", "chesterfield-kitchen-showroom"],
+    searchKeywords: ["alarm repairs Chesterfield", "CCTV repairs Chesterfield", "security system upgrades", "fire alarm repairs"]
   }
+
 }
 
 export const landingPageList = Object.values(localLandingPages)

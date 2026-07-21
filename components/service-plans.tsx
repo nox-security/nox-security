@@ -41,7 +41,7 @@ const plans = [
       "All Advanced Shield benefits",
       "Video verification where suitable",
       "Post-burglary maintenance",
-      "Grade 3 anti-snap lock replacement",
+      "Existing door and entry security review",
       "Keyholder notification",
       "Priority support",
       "Cloud storage options where suitable",
