@@ -33,7 +33,6 @@ export const headerNavMenus: HeaderNavMenu[] = [
           { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
           { label: "Home CCTV", href: "/systems/home-cctv" },
           { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
-          { label: "Garages & Outbuildings", href: "/systems/garages-outbuildings" },
           { label: "Smart Security", href: "/systems/smart-home-cctv" },
           { label: "Residential Security Packages", href: "/service-plans/residential-security-packages" },
           { label: "Existing System Takeovers", href: "/services/security-system-takeover" },
@@ -78,8 +77,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
         items: [
           { label: "Commercial CCTV", href: "/commercial/cctv" },
           { label: "Commercial Intruder Alarms", href: "/commercial/intruder-alarms" },
-          { label: "Industrial & Warehouse Security", href: "/commercial/industrial-warehouse-security" },
-          { label: "Yard & Perimeter Protection", href: "/commercial/yard-perimeter-security" },
+          { label: "Industrial, Warehouse & Yard Security", href: "/commercial/industrial-warehouse-security" },
         ],
       },
       {
@@ -123,7 +121,6 @@ export const residentialFooterItems: NavItem[] = [
   { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
   { label: "Home CCTV", href: "/systems/home-cctv" },
   { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
-  { label: "Garages & Outbuildings", href: "/systems/garages-outbuildings" },
   { label: "Smart Security", href: "/systems/smart-home-cctv" },
 ]
 
@@ -139,7 +136,7 @@ export const commercialFooterItems: NavItem[] = [
   { label: "Commercial Security", href: "/commercial" },
   { label: "Commercial CCTV", href: "/commercial/cctv" },
   { label: "Commercial Intruder Alarms", href: "/commercial/intruder-alarms" },
-  { label: "Industrial & Warehouse Security", href: "/commercial/industrial-warehouse-security" },
+  { label: "Industrial, Warehouse & Yard Security", href: "/commercial/industrial-warehouse-security" },
   { label: "Multi-Site Security", href: "/commercial/multi-site-security" },
 ]
 

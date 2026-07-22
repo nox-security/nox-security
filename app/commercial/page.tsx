@@ -12,8 +12,7 @@ export const metadata: Metadata = pageMetadata(
 const routes = [
   { title: "Commercial CCTV", text: "Coverage objectives, evidence quality, entrances, working areas, yards, recording duration, night performance and remote access.", href: "/commercial/cctv" },
   { title: "Commercial Intruder Alarms", text: "Internal and external protection around opening hours, staff access, valuable areas, communication and monitoring requirements.", href: "/commercial/intruder-alarms" },
-  { title: "Industrial & Warehouse Security", text: "Several buildings, loading areas, stock, machinery, external routes and larger camera or detector quantities planned as one site.", href: "/commercial/industrial-warehouse-security" },
-  { title: "Yard & Perimeter Protection", text: "External detection, CCTV and layered site protection for vehicle yards, compounds, boundaries and exposed approaches.", href: "/commercial/yard-perimeter-security" },
+  { title: "Industrial, Warehouse & Yard Security", text: "Several buildings, loading areas, stock, machinery, vehicle routes, yards, boundaries and larger camera or detector quantities planned as one site.", href: "/commercial/industrial-warehouse-security" },
   { title: "Multi-Site Security", text: "Consistent system design, rollout planning, user access, records and ongoing support across several premises.", href: "/commercial/multi-site-security" },
   { title: "Integrated Fire & Security", text: "Fire, CCTV and intruder projects coordinated through one local team while each system keeps a clear scope and handover.", href: "/commercial/integrated-fire-security" },
 ]

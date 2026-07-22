@@ -10,17 +10,17 @@ export const metadata: Metadata = pageMetadata(
 )
 
 const installationRoutes = [
-  { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless EN54 systems designed around the building and future maintenance route.", href: "/systems/fire-safety" },
-  { title: "Emergency Lighting Installation", text: "New fittings, replacement projects and upgrades planned around escape routes, exits and the property layout.", href: "/systems/emergency-lighting" },
-  { title: "Fire Risk Assessments", text: "A structured route for understanding risks, priorities and the work the responsible person needs to consider.", href: "/systems/fire-risk-assessment" },
+  { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless EN54 systems designed around the building and future maintenance route.", href: "/systems/fire-safety", image: "/images/revisions/ajax-en54-fire-control-panel.jpg", alt: "Ajax EN54 fire alarm control equipment for a commercial installation" },
+  { title: "Emergency Lighting Installation", text: "New fittings, replacement projects and upgrades planned around escape routes, exits and the property layout.", href: "/systems/emergency-lighting", image: "/images/EmergencyLighting.jpeg", alt: "Commercial emergency lighting installation and escape-route lighting" },
+  { title: "Fire Risk Assessments", text: "A structured route for understanding risks, priorities and the work the responsible person needs to consider.", href: "/systems/fire-risk-assessment", image: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Commercial premises reviewed as part of fire risk and compliance planning" },
 ]
 
 const ongoingRoutes = [
-  { title: "Fire Alarm Servicing", text: "Planned testing, records, defect reporting, existing-system takeovers and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing" },
-  { title: "Fire Alarm Repairs & Takeovers", text: "Assessment of faults, access, documentation, supportability and the sensible repair or replacement route.", href: "/services/fire-alarm-repairs-takeovers" },
-  { title: "Emergency Lighting Testing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedials.", href: "/service-plans/emergency-lighting-servicing" },
-  { title: "Fire Extinguisher Servicing", text: "Asset-led servicing with clear treatment of replacements, defects and multi-site scheduling.", href: "/services/fire-extinguisher-servicing" },
-  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance" },
+  { title: "Fire Alarm Servicing", text: "Planned testing, records, defect reporting, existing-system takeovers and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", alt: "Traditional commercial fire alarm panel during planned servicing" },
+  { title: "Fire Alarm Repairs & Takeovers", text: "Assessment of faults, access, documentation, supportability and the sensible repair or replacement route.", href: "/services/fire-alarm-repairs-takeovers", image: "/images/revisions/telesis-en54-fire-hub-alarm.jpg", alt: "Fire alarm control hub showing an active alarm during fault and takeover testing" },
+  { title: "Emergency Lighting Testing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedials.", href: "/service-plans/emergency-lighting-servicing", image: "/images/revisions/emergency-lighting-exit-sign.jpg", alt: "Emergency exit light checked during commercial testing and servicing" },
+  { title: "Fire Extinguisher Servicing", text: "Asset-led servicing with clear treatment of replacements, defects and multi-site scheduling.", href: "/services/fire-extinguisher-servicing", image: "/images/fire-servicing.jpeg", alt: "Engineer carrying out commercial fire extinguisher servicing" },
+  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire safety logbook and plans used for coordinated compliance support" },
 ]
 
 export default function FireCompliancePage() {
@@ -32,13 +32,13 @@ export default function FireCompliancePage() {
 
     <section className="section"><div className="container">
       <SectionHeading eyebrow="New projects" title="Installation and replacement work designed around the premises" text="The building, occupancy, fire information, existing equipment, access and future service route are considered before a system or fitting schedule is proposed."/>
-      <FeatureGrid columns={3} items={installationRoutes}/>
+      <div className="feature-grid columns-3 media-route-grid">{installationRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
       <div className="commercial-route-links">{installationRoutes.map(item => <Link key={item.href} href={item.href}>{item.title} →</Link>)}</div>
     </div></section>
 
     <section className="section section-alt"><div className="container">
       <SectionHeading eyebrow="Ongoing compliance" title="Servicing, repairs and annual support for existing systems" text="NOX supports suitable existing fire alarms and emergency lighting, including systems installed by another provider, subject to access, condition, records and parts availability."/>
-      <div className="feature-grid columns-3">{ongoingRoutes.map((item, index) => <article className="feature-card" key={item.title}><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></article>)}</div>
+      <div className="feature-grid columns-3 media-route-grid">{ongoingRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
     </div></section>
 
     <section className="section"><div className="container split-grid"><div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata(
 
 export default function BlogPage() {
   return <>
-    <PageHero eyebrow="Fire & Security Guides" title="Fire & Security guides and FAQs" intro="Detailed guidance for homeowners, responsible persons and businesses researching installation, servicing, repairs, monitoring or an existing-system takeover." image="/images/revisions/fire-safety-logbook.jpg" imageAlt="Fire safety logbook and system plans used in NOX guidance">
+    <PageHero eyebrow="Fire & Security Guides" title="Fire & Security guides and FAQs" intro="Detailed guidance for homeowners, responsible persons and businesses researching installation, servicing, repairs, monitoring or an existing-system takeover." image="/images/revisions/nox-commercial-cctv-installation.jpg" imageAlt="NOX engineer and branded van at an industrial security installation">
       <ContactActions primaryLabel="Ask About My Property or System" serviceCategory="Guide enquiry" enquiryType="General" sourceLabel="guides-hub"/>
     </PageHero>
     <TrustStrip/>
