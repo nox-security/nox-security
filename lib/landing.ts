@@ -554,14 +554,14 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     title: "Fire extinguisher servicing coordinated with wider fire-safety support",
     metaTitle: "Fire Extinguisher Servicing Chesterfield & Derbyshire | NOX",
     metaDescription: "Fire extinguisher servicing for commercial premises across Chesterfield, Sheffield and Derbyshire, with asset records, defect reporting and coordinated fire-compliance planning.",
-    intro: "NOX can coordinate fire extinguisher servicing as a focused requirement or within a wider fire-compliance arrangement. The service scope, asset quantities, premises and any replacement or remedial requirements are confirmed before attendance.",
+    intro: "NOX can coordinate fire extinguisher servicing through a competent specialist as a focused requirement or within a wider fire-compliance arrangement. The service scope, asset quantities, premises and any replacement or remedial requirements are confirmed before attendance.",
     image: "/images/fire-servicing.jpeg",
     imageAlt: "Engineer carrying out commercial fire extinguisher servicing",
     location: "Chesterfield, Sheffield & Derbyshire",
     audience: "Commercial",
     serviceType: "Fire extinguisher servicing",
     problemTitle: "Extinguisher servicing needs accurate asset information and clear responsibility for replacements",
-    problemText: "The number, type, location, condition and history of extinguishers affect the visit. Replacement equipment, missing assets, signage or other remedials should be reported and priced clearly rather than hidden inside a vague annual package.",
+    problemText: "The number, type, location, condition and history of extinguishers affect the visit. NOX coordinates the work through a competent specialist, with replacement equipment, missing assets, signage and other remedials reported and priced clearly.",
     included: ["Asset quantity confirmation", "Inspection and service of agreed extinguishers", "Condition and location checks", "Service labels and records", "Defect and replacement reporting", "Remedial quotation where required", "Single-site or portfolio planning", "Coordination with other fire services where agreed"],
     process: [
       { title: "Asset information", text: "Provide the site, approximate extinguisher quantities and any available service records." },
@@ -573,7 +573,8 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { q: "Can extinguisher servicing be combined with fire alarm servicing?", a: "Yes, where the package and engineer scheduling are confirmed in advance." },
       { q: "Are replacement extinguishers included?", a: "Not automatically. Replacement equipment is normally quoted separately unless specifically included in the written scope." },
       { q: "Can you service extinguishers across several sites?", a: "Yes, suitable multi-site visits can be coordinated around access, asset information and the agreed renewal schedule." },
-      { q: "Do you provide a record after servicing?", a: "Yes, the agreed service should leave clear asset and defect information for the responsible person." }
+      { q: "Do you provide a record after servicing?", a: "Yes, the agreed service should leave clear asset and defect information for the responsible person." },
+      { q: "Who carries out the extinguisher servicing?", a: "NOX coordinates the service through a competent specialist and confirms the scope before attendance." }
     ],
     related: [
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" },

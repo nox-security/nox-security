@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata(
 export default function AboutPage() {
   return <>
     <section className="about-hero-premium about-hero-editorial"><div className="container about-hero-grid"><div><span className="eyebrow">The NOX story</span><h1>A local Fire & Security company built around accountability.</h1><p className="lead">NOX was created to offer a more personal, professional alternative: understand the property properly, recommend the right system, deliver a clean installation and remain available after handover.</p><ContactActions primaryLabel="Discuss Your Requirements" /></div><div className="about-brand-panel"><img src="/images/projects/logo-nox-fire-security.jpg" alt="NOX Fire & Security logo mark"/><span>Chesterfield · Sheffield · Derbyshire</span><blockquote>Designed properly.<br/>Installed properly.<br/>Supported properly.</blockquote></div></div></section>
-    <TrustStrip/>
+    <TrustStrip variant="general"/>
 
     <section className="section"><div className="container about-origin-grid">
       <div><span className="eyebrow">Why NOX was started</span><h2>Security should begin with the property, not a sales package.</h2></div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
     </div></div></section>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Real work" title="Residential and commercial installations by NOX" text="A selection of confirmed projects across homes, showrooms, industrial sites, estates and commercial premises."/><CaseStudyGrid limit={6}/><div className="button-row"><Link className="button button-outline" href="/case-studies">View All Case Studies</Link></div></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer reviews" title="What customers say about the NOX experience"/><ReviewGrid limit={3}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read More Reviews</Link></div></div></section>
-    <ConversionPanel title="Discuss your property with NOX" text="Tell us what you want to protect or which system needs attention. We will review the details and guide the survey, quotation or servicing route."/>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer reviews" title="What customers say about the NOX experience"/><ReviewGrid names={["Ryan Hargreaves", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read More Reviews</Link></div></div></section>
+    <ConversionPanel title="Discuss your property with NOX" text="Tell us what you want to protect or which system needs attention. We will review the details and confirm the survey, quotation or servicing next step."/>
   </>
 }

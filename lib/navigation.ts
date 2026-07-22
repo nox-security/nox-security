@@ -17,9 +17,8 @@ export type HeaderNavMenu = {
 }
 
 /**
- * Primary conversion-led navigation. Existing URLs are reused where they
- * already match the search intent; new hub/detail routes are only introduced
- * where the site previously had a genuine content gap.
+ * Primary NOX navigation. Existing customer-facing routes are reused so the
+ * menu remains clear without creating duplicate pages.
  */
 export const headerNavMenus: HeaderNavMenu[] = [
   {
@@ -103,8 +102,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
           { label: "CCTV Maintenance", href: "/service-plans/cctv-maintenance" },
           { label: "Security System Takeovers", href: "/services/security-system-takeover" },
           { label: "Repairs & Upgrades", href: "/services/repairs-upgrades" },
-          { label: "Service Plans", href: "/service-plans" },
-          { label: "Total Security Plans", href: "/service-plans/total-security" },
+          { label: "Total Security Plan", href: "/service-plans/total-security" },
         ],
       },
     ],

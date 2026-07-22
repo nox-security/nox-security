@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { caseStudies } from "@/lib/content"
-import { Breadcrumbs, ContactActions, ConversionPanel, JsonLd, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { Breadcrumbs, ContactActions, ConversionPanel, JsonLd, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
 
 export function generateStaticParams() {
@@ -69,7 +69,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         <ContactActions primaryLabel={related.cta} serviceCategory={project.category} enquiryType="Installation" sourceLabel={project.slug}/>
       </div>
     </section>
-    <TrustStrip/>
+    <TrustStrip variant={project.category.toLowerCase().includes("fire") ? "fire" : project.category.toLowerCase().includes("residential") ? "residential" : "commercial"}/>
 
     <section className="section"><div className="container project-story-grid">
       <div>
@@ -82,7 +82,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <aside className="dark-panel project-scope-panel">
         <h3>Project scope</h3>
         <div className="sector-tags">{project.systems.map(item => <span key={item}>{item}</span>)}</div>
-        <p>The scope shown is based on the confirmed project information available. No crime reduction, response outcome or customer quote has been invented.</p>
+        <p>The scope reflects the confirmed project information available, including the property, equipment and work delivered by NOX.</p>
         <ContactActions primaryLabel={related.cta} compact serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-scope`}/>
       </aside>
     </div></section>
@@ -93,16 +93,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     </div></section>}
 
     <section className="section"><div className="container split-grid"><div>
-      <SectionHeading eyebrow="What mattered in the design" title="Considerations for a similar property or site" text="The same equipment list can perform very differently depending on position, access, lighting, network, daily use and the ongoing support route."/>
+      <SectionHeading eyebrow="What mattered in the design" title="Considerations for a similar property or site" text="The same equipment list can perform very differently depending on position, access, lighting, network, daily use and the support required afterwards."/>
       <div className="feature-grid columns-2">
         <article className="feature-card"><span className="feature-number">01</span><h3>Start with the requirement</h3><p>Identify the entrances, valuable areas, operational constraints, evidence needs or fire-safety information before choosing devices.</p></article>
-        <article className="feature-card"><span className="feature-number">02</span><h3>Plan the installation route</h3><p>Access, cable paths, building construction, network, working hours and other trades affect both the design and the final quotation.</p></article>
+        <article className="feature-card"><span className="feature-number">02</span><h3>Plan the installation</h3><p>Access, cable paths, building construction, network, working hours and other trades affect both the design and the final quotation.</p></article>
         <article className="feature-card"><span className="feature-number">03</span><h3>Make handover usable</h3><p>Users need clear controls, playback, app permissions, records and an understanding of what the system will and will not do.</p></article>
         <article className="feature-card"><span className="feature-number">04</span><h3>Plan ongoing support</h3><p>Servicing, monitoring, faults, replacements and future expansion should remain visible after the initial installation.</p></article>
       </div>
     </div><aside className="dark-panel"><h3>Related information</h3><div className="related-links"><Link href={related.service.href}>{related.service.label} →</Link><Link href={related.guide.href}>{related.guide.label} →</Link><Link href="/case-studies">More NOX projects →</Link></div></aside></div></section>
 
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Advice, workmanship and handover"/><ReviewGrid limit={3}/></div></section>
-    <ConversionPanel title="Discuss a similar project with NOX" text="Tell us about the property, site, existing systems and what the project needs to achieve. We will guide the right survey and quotation route." primaryLabel={related.cta} serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-final`}/>
+    <ConversionPanel title="Discuss a similar project with NOX" text="Tell us about the property, site, existing systems and what the project needs to achieve. We will confirm the right survey and quotation process." primaryLabel={related.cta} serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-final`}/>
   </>
 }

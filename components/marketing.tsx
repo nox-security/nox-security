@@ -46,10 +46,10 @@ export function Breadcrumbs({ items }: { items: { label: string; href?: string }
   return <nav className="breadcrumbs" aria-label="Breadcrumb"><div className="container breadcrumbs-inner">{items.map((item, index) => <span key={`${item.label}-${index}`}>{item.href ? <Link href={item.href}>{item.label}</Link> : <strong aria-current="page">{item.label}</strong>}{index < items.length - 1 && <i aria-hidden="true">/</i>}</span>)}</div></nav>
 }
 
-export function LocalSearchLinks({ slugs, title = "Popular local service pages" }: { slugs: string[]; title?: string }) {
+export function LocalSearchLinks({ slugs, title = "Related local services" }: { slugs: string[]; title?: string }) {
   const pages = slugs.map(slug => localLandingPages[slug]).filter(Boolean)
   if (!pages.length) return null
-  return <section className="section local-search-links-section"><div className="container"><SectionHeading eyebrow="Local search routes" title={title} text="Focused pages for the services customers search for most, connected back to real NOX projects, relevant plans and one simple enquiry route."/><div className="local-search-link-grid">{pages.map(page => <Link href={`/services/${page.slug}`} key={page.slug}><span>{page.audience}</span><strong>{page.title}</strong><small>{page.location}</small></Link>)}</div></div></section>
+  return <section className="section local-search-links-section"><div className="container"><SectionHeading eyebrow="Local services" title={title} text="Find the most relevant NOX installation, servicing and takeover options across our core service area."/><div className="local-search-link-grid">{pages.map(page => <Link href={`/services/${page.slug}`} key={page.slug}><span>{page.audience}</span><strong>{page.title}</strong><small>{page.location}</small></Link>)}</div></div></section>
 }
 
 export function PageHero({ eyebrow, title, intro, image, imageAlt, children }: { eyebrow: string; title: string; intro: string; image?: string; imageAlt?: string; children?: React.ReactNode }) {
@@ -73,19 +73,45 @@ export function DualButtons({ quoteLabel = "Get a Fire & Security Quote" }: { qu
   return <ContactActions primaryLabel={quoteLabel} />
 }
 
-export function TrustStrip() {
-  const items = [
-    { kicker: "Local and founder-led", title: "Chesterfield based", text: "The same local team remains accountable from survey to aftercare." },
-    { kicker: "Residential protection", title: "Designed around the property", text: "Ajax alarms, CCTV and perimeter protection without a fixed package." },
-    { kicker: "Commercial Fire & Security", title: "Installation through compliance", text: "Fire systems, CCTV, servicing and coordinated annual support." },
-    { kicker: "Preferred smart platform", title: "Ajax authorised", text: "MotionCam, external detection, video and modern system control." },
-    { kicker: "Proven customer experience", title: "Verified reviews", text: "Real feedback about advice, installation quality and local support." }
-  ]
+export function TrustStrip({ variant = "general" }: { variant?: "general" | "residential" | "commercial" | "fire" | "servicing" }) {
+  const variants = {
+    general: [
+      { kicker: "Local and founder-led", title: "Chesterfield based", text: "The same local team remains accountable from survey to aftercare." },
+      { kicker: "Preferred smart platform", title: "Ajax authorised", text: "Modern alarm, detection and video options selected around the property." },
+      { kicker: "Proven customer experience", title: "46+ Google reviews", text: "Genuine feedback about advice, installation quality and local support." },
+      { kicker: "Ongoing support", title: "Servicing and monitoring", text: "Support for NOX installations and suitable existing systems." },
+    ],
+    residential: [
+      { kicker: "Home security", title: "Designed around the property", text: "Alarm, CCTV and external protection selected around the home and daily routine." },
+      { kicker: "Preferred smart platform", title: "Ajax authorised", text: "MotionCam, keypads, sirens, app control and external detection where suitable." },
+      { kicker: "Careful workmanship", title: "Tidy installation", text: "Positions and cable routes are planned around performance and the finish of the property." },
+      { kicker: "Local proof", title: "46+ Google reviews", text: "Feedback from homeowners and businesses across the local area." },
+    ],
+    commercial: [
+      { kicker: "Site-specific design", title: "Planned around operations", text: "Coverage, access, evidence and user requirements are agreed before installation." },
+      { kicker: "Existing systems", title: "Takeovers and upgrades", text: "Suitable commercial systems can be assessed, repaired, expanded or replaced." },
+      { kicker: "Project delivery", title: "Coordinated systems", text: "CCTV, intruder and fire requirements can be planned as one joined-up project." },
+      { kicker: "Ongoing support", title: "Maintenance available", text: "Clear handover, planned servicing and future system support." },
+    ],
+    fire: [
+      { kicker: "Fire systems", title: "Installation and servicing", text: "New fire alarms, existing-system assessments and planned maintenance." },
+      { kicker: "Clear records", title: "Defects and remedials", text: "Testing outcomes, defects and recommended remedial work are documented clearly." },
+      { kicker: "Coordinated support", title: "Emergency lighting", text: "Fire alarm and emergency-lighting work can be planned together where appropriate." },
+      { kicker: "Specialist services", title: "Competent partners", text: "Risk assessments and extinguisher servicing are coordinated through competent specialists where required." },
+    ],
+    servicing: [
+      { kicker: "Existing systems", title: "Traditional and modern", text: "Suitable wired, wireless, hybrid, analogue and networked systems can be assessed." },
+      { kicker: "Planned care", title: "Clear service records", text: "Testing, condition, known faults and recommended work are recorded clearly." },
+      { kicker: "Monitoring", title: "Agreed escalation", text: "Professional signalling, keyholder contact and system supervision where available." },
+      { kicker: "Local support", title: "Repairs and takeovers", text: "One team for servicing, faults, upgrades and suitable system takeovers." },
+    ],
+  }
+  const items = variants[variant]
   return <section className="trust-strip trust-strip-premium"><div className="container trust-strip-grid">{items.map(item => <article key={item.title}><span>{item.kicker}</span><strong>{item.title}</strong><small>{item.text}</small></article>)}</div></section>
 }
 
 export function ReviewSummaryStrip() {
-  return <section className="review-summary-strip"><div className="container review-summary-inner"><div><span className="stars" aria-label="5 out of 5 stars">★★★★★</span><strong>Verified customer reviews</strong><span>Real feedback from residential and commercial NOX customers.</span></div><a className="text-link" href="https://g.page/r/CUdyqRh0RFeXEAE/review" target="_blank" rel="noreferrer">View Google reviews →</a></div></section>
+  return <section className="review-summary-strip"><div className="container review-summary-inner"><div><span className="stars" aria-label="5 out of 5 stars">★★★★★</span><strong>46+ Google reviews</strong><span>Genuine feedback from residential and commercial NOX customers.</span></div><a className="text-link" href="https://g.page/r/CUdyqRh0RFeXEAE/review" target="_blank" rel="noreferrer">View Google reviews →</a></div></section>
 }
 
 export function SectionHeading({ eyebrow, title, text }: { eyebrow?: string; title: string; text?: string }) {
@@ -126,8 +152,9 @@ export function CaseStudyDetails() {
   return <div className="case-detail-list">{caseStudies.map((item, index) => <article id={`project-${item.slug}`} className="case-detail" key={item.slug}><div className="case-detail-media"><img src={item.image} alt={item.alt}/><span>{String(index + 1).padStart(2, "0")}</span></div><div className="case-detail-copy"><span className="micro-label">{item.category} · {item.location}</span><h2>{item.title}</h2><p className="lead-small">{item.summary}</p><div className="case-detail-facts"><div><strong>Requirement</strong><p>{item.requirement}</p></div><div><strong>NOX delivery</strong><p>{item.delivery}</p></div></div><div className="sector-tags">{item.systems.map(system => <span key={system}>{system}</span>)}</div><div className="button-row"><Link className="button button-outline" href={`/case-studies/${item.slug}`}>View Full Case Study</Link><Link className="button button-dark" href="/get-quote#quote-form">Discuss a Similar Project</Link></div></div></article>)}</div>
 }
 
-export function ReviewGrid({ limit }: { limit?: number }) {
-  const list = typeof limit === "number" ? verifiedReviews.slice(0, limit) : verifiedReviews
+export function ReviewGrid({ limit, names }: { limit?: number; names?: string[] }) {
+  let list = names?.length ? verifiedReviews.filter(item => names.includes(item.name)) : verifiedReviews
+  if (typeof limit === "number") list = list.slice(0, limit)
   return <div className="review-grid">{list.map(item => <article className="review-card" key={item.name}><span className="stars" aria-label={`${item.rating} out of 5 stars`}>{"★".repeat(item.rating)}</span><blockquote>“{item.text}”</blockquote><strong>{item.name}</strong><span>{item.service}</span></article>)}</div>
 }
 
@@ -138,7 +165,7 @@ export function BlogGrid({ limit }: { limit?: number }) {
 
 export function ConversionPanel({
   title = "Tell NOX what you need",
-  text = "Share the property, site or existing-system details and the NOX team will guide the right survey, service or quotation route.",
+  text = "Share the property, site or existing-system details and the NOX team will confirm the right survey, service or quotation next step.",
   primaryLabel = "Get a Quote",
   audience,
   serviceCategory,
@@ -194,19 +221,19 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt}>
       <ContactActions primaryLabel={data.ctaLabel ?? "Get a Quote"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/>
     </PageHero>
-    <TrustStrip />
+    <TrustStrip variant={data.audience === "Residential" ? "residential" : data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment" ? "fire" : "commercial"} />
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Designed around the property" title={data.problemTitle} text={data.problemText}/><Checklist items={data.benefits}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={data.suitableFor}/><ContactActions primaryLabel={data.ctaLabel ?? "Discuss This System"} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/></aside></div></section>
     <ProductShowcase data={data}/>
     <VideoShowcase videos={data.videos}/>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="How NOX delivers the project" title="From survey to handover and ongoing support"/><FeatureGrid items={data.process} columns={4}/></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="More detail" title="Installation, operation and long-term support"/><FeatureGrid items={data.details} columns={data.details.length === 4 ? 4 : 3}/></div></section>
-    {!!data.pricingFactors?.length && <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the final quotation" text="The correct price depends on the property, system and work required. NOX confirms the scope before presenting equipment and installation costs."/><Checklist items={data.pricingFactors}/></div><aside className="dark-panel"><h3>No invented starting prices</h3><p>The quotation is based on the real survey, existing equipment, access and performance requirement rather than a generic package that may not suit the property.</p>{data.guide && <Link className="text-link" href={data.guide.href}>{data.guide.label} →</Link>}</aside></div></section>}
+    {!!data.pricingFactors?.length && <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the final quotation" text="The correct price depends on the property, system and work required. NOX confirms the scope before presenting equipment and installation costs."/><Checklist items={data.pricingFactors}/></div><aside className="dark-panel"><h3>Pricing based on the real requirement</h3><p>The quotation reflects the survey, existing equipment, access and performance needed for the property.</p>{data.guide && <Link className="text-link" href={data.guide.href}>{data.guide.label} →</Link>}</aside></div></section>}
     <section className="section service-plan-feature"><div className="container split-grid"><div><SectionHeading eyebrow="Servicing, maintenance and aftercare" title={data.slug === "fire-safety" ? "Fire alarm servicing should be planned from day one" : "Keep the system healthy after installation"} text={data.slug === "fire-safety" ? "NOX services modern Ajax EN54 fire systems and suitable traditional conventional, addressable and established wireless systems. Ongoing support can include inspection, testing, records, defect reporting and coordinated emergency-lighting visits." : "NOX supports new installations and suitable traditional or existing systems with health checks, testing, cleaning, battery or recorder review, firmware where supported and clear service records."}/><div className="related-links">{aftercareLinks.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div><aside className="dark-panel"><h3>New and traditional systems</h3><p>Existing systems are assessed for condition, access, compatibility and parts availability before NOX confirms a takeover or annual maintenance scope.</p><ContactActions primaryLabel={data.enquiryType === "Installation" ? "Discuss Ongoing Support" : (data.ctaLabel ?? "Request Servicing Pricing")} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType === "Installation" ? "Servicing" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/></aside></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Relevant NOX work" title="Real installation examples" text="Confirmed project locations and system scopes, with no invented outcomes or customer claims."/><CaseStudyGrid slugs={data.caseStudySlugs}/></div></section>
-    <LocalSearchLinks slugs={localSearchSlugs} title="Related local service searches"/>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Trusted for clear advice, tidy work and proper handover"/><ReviewGrid limit={3}/><div className="related-links"><strong>Related services:</strong>{data.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}{data.guide && <Link href={data.guide.href}>{data.guide.label} →</Link>}<Link href="/reviews">More customer reviews →</Link></div>{data.serviceAreaText && <p className="service-area-note"><strong>Service area:</strong> {data.serviceAreaText}</p>}</div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Relevant NOX work" title="Real installation examples" text="Genuine NOX projects showing the property type, equipment and work delivered."/><CaseStudyGrid slugs={data.caseStudySlugs}/></div></section>
+    <LocalSearchLinks slugs={localSearchSlugs} title="Related services in your area"/>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Trusted for clear advice, tidy work and proper handover"/><ReviewGrid names={data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment" ? ["Rory Stirland"] : data.audience === "Commercial" ? ["Jez S"] : ["Ryan Hargreaves"]}/><div className="related-links"><strong>Related services:</strong>{data.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}{data.guide && <Link href={data.guide.href}>{data.guide.label} →</Link>}<Link href="/reviews">More customer reviews →</Link></div>{data.serviceAreaText && <p className="service-area-note"><strong>Service area:</strong> {data.serviceAreaText}</p>}</div></section>
     <FaqSection faq={data.faq}/>
-    <ConversionPanel title={data.ctaLabel ?? "Discuss the right system with NOX"} text="Tell us about the property, existing equipment and what you need the system to achieve. We will guide the correct survey and quotation route." primaryLabel={data.ctaLabel ?? "Get a Quote"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/>
+    <ConversionPanel title={data.ctaLabel ?? "Discuss the right system with NOX"} text="Tell us about the property, existing equipment and what you need the system to achieve. We will confirm the correct survey and quotation next step." primaryLabel={data.ctaLabel ?? "Get a Quote"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/>
   </>
 }
 
@@ -219,6 +246,7 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
     { "@type": "ListItem", position: 3, name: data.title, item: `${site.url}/service-plans/${data.slug}` }
   ] }
   const isFirePlan = data.slug.includes("fire") || data.slug.includes("emergency")
+  const isInstallationPackage = data.slug === "residential-security-packages"
   const localSearchSlugs = data.slug === "alarm-maintenance"
     ? ["alarm-maintenance-chesterfield", "security-system-takeover", "alarm-monitoring-derbyshire"]
     : data.slug === "alarm-monitoring"
@@ -234,22 +262,35 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
               : ["security-systems-chesterfield", "security-system-takeover"]
   const residentialPrice = isFirePlan ? null : (data.residentialPrice ?? "Quoted after system review")
   const commercialPrice = data.commercialPrice ?? "Quoted to system and site"
+  const trustVariant = isFirePlan ? "fire" : isInstallationPackage ? "residential" : "servicing"
+  const reviewNames = isFirePlan ? ["Rory Stirland"] : isInstallationPackage ? ["Ryan Hargreaves"] : ["Jeremy Bunting"]
+
   return <>
     <JsonLd data={faqSchema}/><JsonLd data={serviceSchema}/><JsonLd data={breadcrumbSchema}/>
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Plans", href: "/service-plans" }, { label: data.title }]} />
     <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt}>
-      <ContactActions primaryLabel={data.ctaLabel ?? "Get a Maintenance Quote"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Servicing"} sourceLabel={data.slug}/>
+      <ContactActions primaryLabel={data.ctaLabel ?? (isInstallationPackage ? "Get a Home Security Quote" : "Get a Maintenance Quote")} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={isInstallationPackage ? "Installation" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/>
     </PageHero>
-    <TrustStrip/>
-    <section className="section"><div className="container plan-intro-grid"><div><SectionHeading eyebrow="What is included" title="A clear annual service scope"/><Checklist items={data.included}/></div><aside className="price-panel"><span className="eyebrow">Annual pricing</span>{residentialPrice && <div className="price-line"><strong>Residential</strong><span>{residentialPrice}</span></div>}<div className="price-line"><strong>Commercial</strong><span>{commercialPrice}</span></div>{data.priceNote && <p>{data.priceNote}</p>}<ContactActions primaryLabel={data.ctaLabel ?? "Request Service Pricing"} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Servicing"} sourceLabel={data.slug}/></aside></div></section>
-    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Suitable systems" title="New installations, traditional systems and suitable takeovers" text={isFirePlan ? "NOX supports modern Ajax EN54 fire systems alongside suitable conventional, addressable and established wireless fire alarms." : "NOX supports new Ajax and professional systems alongside suitable traditional wired, wireless, hybrid, analogue and networked equipment."}/><Checklist items={data.suitableFor}/></div><aside className="dark-panel"><h3>Initial system review</h3><p>Existing systems may need an inspection before the ongoing scope can be confirmed. Parts, repairs and replacement equipment remain separate unless the written agreement includes them.</p></aside></div></section>
-    <section className="section"><div className="container"><SectionHeading eyebrow="How the plan works" title="From system review to annual renewal"/><FeatureGrid items={data.process} columns={4}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="The value" title="Keep systems healthy and support easier to manage"/><FeatureGrid items={data.details}/></div></section>
-    {!!data.pricingFactors?.length && <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the service or maintenance cost" text="NOX prices the actual system, site and visit requirements rather than inventing a starting figure that may not apply."/><Checklist items={data.pricingFactors}/></div><aside className="dark-panel"><h3>Existing-system review</h3><p>Access, faults, documentation, parts availability and system condition may need to be confirmed before an ongoing agreement is accepted.</p>{data.guide && <Link className="text-link" href={data.guide.href}>{data.guide.label} →</Link>}</aside></div></section>}
+    <TrustStrip variant={trustVariant}/>
+
+    {isInstallationPackage ? <>
+      <section className="section"><div className="container plan-intro-grid"><div><SectionHeading eyebrow="Installation package" title="What the new system can include" text="Build the installation around the property, then add monitoring or annual servicing only where it is useful."/><Checklist items={data.included}/></div><aside className="price-panel"><span className="eyebrow">Property-led quotation</span><h3>Alarm, CCTV and external protection</h3><p>The quotation reflects the property, number of cameras and devices, garage or outbuilding coverage, access and installation requirements.</p><ContactActions primaryLabel={data.ctaLabel ?? "Get a Home Security Quote"} compact audience="Residential" serviceCategory={data.serviceCategory ?? data.title} enquiryType="Installation" sourceLabel={data.slug}/></aside></div></section>
+      <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Optional aftercare" title="Monitoring and maintenance remain separate choices" text="A new alarm and CCTV installation can be supported by monitoring, alarm servicing and CCTV maintenance without presenting the installation itself as an annual plan."/><Checklist items={data.suitableFor}/></div><aside className="dark-panel"><h3>One property, one system design</h3><p>NOX can combine the alarm, cameras, perimeter protection, garage and outbuilding security into one clear proposal and handover.</p></aside></div></section>
+      <section className="section"><div className="container"><SectionHeading eyebrow="How it works" title="From property survey to handover"/><FeatureGrid items={data.process} columns={4}/></div></section>
+      <section className="section section-alt"><div className="container"><SectionHeading eyebrow="The result" title="Connected protection without a rigid package"/><FeatureGrid items={data.details}/></div></section>
+    </> : <>
+      <section className="section"><div className="container plan-intro-grid"><div><SectionHeading eyebrow="What is included" title="A clear annual service scope"/><Checklist items={data.included}/></div><aside className="price-panel"><span className="eyebrow">Annual pricing</span>{residentialPrice && <div className="price-line"><strong>Residential</strong><span>{residentialPrice}</span></div>}<div className="price-line"><strong>Commercial</strong><span>{commercialPrice}</span></div>{data.priceNote && <p>{data.priceNote}</p>}<ContactActions primaryLabel={data.ctaLabel ?? "Request Service Pricing"} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Servicing"} sourceLabel={data.slug}/></aside></div></section>
+      <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Suitable systems" title="New installations, traditional systems and suitable takeovers" text={isFirePlan ? "NOX supports modern Ajax EN54 fire systems alongside suitable conventional, addressable and established wireless fire alarms." : "NOX supports new Ajax and professional systems alongside suitable traditional wired, wireless, hybrid, analogue and networked equipment."}/><Checklist items={data.suitableFor}/></div><aside className="dark-panel"><h3>Initial system review</h3><p>Existing systems may need an inspection before the ongoing scope can be confirmed. Parts, repairs and replacement equipment remain separate unless the written agreement includes them.</p></aside></div></section>
+      <section className="section"><div className="container"><SectionHeading eyebrow="How the plan works" title="From system review to annual renewal"/><FeatureGrid items={data.process} columns={4}/></div></section>
+      <section className="section section-alt"><div className="container"><SectionHeading eyebrow="The value" title="Keep systems healthy and support easier to manage"/><FeatureGrid items={data.details}/></div></section>
+    </>}
+
+    {!!data.pricingFactors?.length && <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title={isInstallationPackage ? "What affects the installation cost" : "What affects the service or maintenance cost"} text={isInstallationPackage ? "Property size, equipment, camera coverage, access and installation requirements all shape the final quotation." : "The cost reflects the system, site and visit requirements confirmed before work is agreed."}/><Checklist items={data.pricingFactors}/></div><aside className="dark-panel"><h3>{isInstallationPackage ? "Survey before specification" : "Existing-system review"}</h3><p>{isInstallationPackage ? "The survey confirms the areas to protect, practical device positions, recording needs and any garage, driveway or outbuilding coverage." : "Access, faults, documentation, parts availability and system condition may need to be confirmed before an ongoing agreement is accepted."}</p>{data.guide && <Link className="text-link" href={data.guide.href}>{data.guide.label} →</Link>}</aside></div></section>}
     {isFirePlan && <section className="section fire-service-push"><div className="container split-grid"><div><SectionHeading eyebrow="Fire servicing and maintenance" title="Keep inspection dates, defects and remedial work visible" text="Routine fire alarm and emergency-lighting visits create a clearer record of system condition. NOX can coordinate agreed services for single premises, landlords, HMOs and multi-site customers."/></div><aside className="dark-panel"><h3>Need a takeover inspection?</h3><p>Send the panel make, approximate device count, property type and any known faults. We will confirm the next step.</p><ContactActions primaryLabel="Request a Fire Service Survey" compact/></aside></div></section>}
-    <LocalSearchLinks slugs={localSearchSlugs} title="Related maintenance, monitoring and compliance searches"/>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Local aftercare backed by real customer feedback"/><ReviewGrid limit={3}/><div className="related-links"><strong>Related services:</strong>{data.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}<Link href="/blog/how-often-should-security-systems-be-serviced">Read the maintenance guide →</Link></div></div></section>
+    <LocalSearchLinks slugs={localSearchSlugs} title={isInstallationPackage ? "Related home security services" : "Related maintenance, monitoring and compliance services"}/>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title={isInstallationPackage ? "Residential installation feedback" : "Feedback about local servicing and support"}/><ReviewGrid names={reviewNames}/><div className="related-links"><strong>Related services:</strong>{data.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}<Link href="/blog/how-often-should-security-systems-be-serviced">Read the maintenance guide →</Link></div></div></section>
     <FaqSection faq={data.faq}/>
-    <ConversionPanel title={data.ctaLabel ?? "Request the right ongoing support"} text="Tell us what system is installed, whether it is new or existing and what service history or known faults are available. We will confirm the inspection, takeover or pricing route." primaryLabel={data.ctaLabel ?? "Get a Maintenance Quote"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Servicing"} sourceLabel={data.slug}/>
+    <ConversionPanel title={data.ctaLabel ?? (isInstallationPackage ? "Plan a home alarm and CCTV system" : "Request the right ongoing support")} text={isInstallationPackage ? "Tell us about the property, the areas to protect and whether you are considering an alarm, CCTV, external protection or a combined installation." : "Tell us what system is installed, whether it is new or existing and what service history or known faults are available. We will confirm the correct inspection or pricing next step."} primaryLabel={data.ctaLabel ?? (isInstallationPackage ? "Get a Home Security Quote" : "Get a Maintenance Quote")} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={isInstallationPackage ? "Installation" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/>
   </>
 }
+

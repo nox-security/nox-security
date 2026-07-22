@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { BlogGrid, CaseStudyGrid, ConversionPanel, FeatureGrid, JsonLd, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip } from "@/components/marketing"
+import { CaseStudyGrid, ConversionPanel, FeatureGrid, JsonLd, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
@@ -9,31 +9,22 @@ export const metadata: Metadata = pageMetadata(
   "/"
 )
 
-const keyAreas = [
-  ["Chesterfield", "/areas/chesterfield"], ["Sheffield", "/areas/sheffield"], ["Derbyshire", "/areas/derbyshire"],
-  ["Dronfield", "/areas/dronfield"], ["Matlock", "/areas/matlock"], ["Bakewell", "/areas/bakewell"],
-  ["Buxton", "/areas/buxton"], ["Hope Valley", "/areas/hope-valley"]
-]
-
 const residentialRoutes = [
-  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control, monitoring and carefully selected external detection.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax intruder alarm equipment prepared by NOX" },
+  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax intruder alarm equipment prepared by NOX" },
   { title: "Home CCTV", text: "Recorder-based CCTV for driveways, doors, gardens, garages and outbuildings, with clear playback and remote viewing.", href: "/systems/home-cctv", image: "/images/revisions/residential-vigi-cctv-pair.jpg", alt: "Residential CCTV cameras installed by NOX" },
-  { title: "Perimeter, Garages & Outbuildings", text: "External protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected layer around the home.", href: "/systems/perimeter-protection", image: "/images/revisions/residential-cctv-installation-engineer.jpg", alt: "NOX engineer installing perimeter and outbuilding security at a residential property" },
+  { title: "Perimeter Protection", text: "Protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected system.", href: "/systems/perimeter-protection", image: "/images/revisions/residential-cctv-installation-engineer.jpg", alt: "NOX engineer installing residential perimeter security" },
 ]
 
 const fireRoutes = [
-  { title: "Fire Alarm Installation", text: "Conventional, addressable and suitable wireless EN54 systems designed around the premises and future maintenance route.", href: "/systems/fire-safety", image: "/images/revisions/ajax-en54-fire-control-panel.jpg", alt: "Ajax EN54 fire alarm control panel used for a commercial installation" },
+  { title: "Fire Alarm Installation", text: "Conventional, addressable and suitable wireless systems designed around the premises and future servicing.", href: "/systems/fire-safety", image: "/images/revisions/ajax-en54-fire-control-panel.jpg", alt: "Ajax EN54 fire alarm control panel used for a commercial installation" },
   { title: "Fire Alarm Servicing", text: "Planned testing, existing-system takeovers, records, defect reporting and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", alt: "Commercial fire alarm panel inspected during planned servicing" },
-  { title: "Repairs & Takeovers", text: "Assessment of faults, access, documentation, parts availability and the sensible repair or replacement route.", href: "/services/fire-alarm-repairs-takeovers", image: "/images/revisions/telesis-en54-fire-hub-alarm.jpg", alt: "Fire alarm control hub showing an active alarm during system testing" },
-  { title: "Emergency Lighting", text: "New installations, testing, annual duration checks, failed-fitting reports and coordinated remedials.", href: "/systems/emergency-lighting", image: "/images/revisions/emergency-lighting-exit-sign.jpg", alt: "Emergency exit lighting installed and tested at a commercial premises" },
-  { title: "Fire Compliance Plans", text: "Coordinate agreed fire alarm, emergency-lighting, extinguisher and risk-assessment support under a clearer annual plan.", href: "/service-plans/fire-compliance", image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire safety logbook and site plans used for ongoing compliance support" },
+  { title: "Emergency Lighting", text: "New installations, testing, annual duration checks, failed-fitting reports and coordinated remedials.", href: "/systems/emergency-lighting", image: "/images/revisions/emergency-lighting-exit-sign.jpg", alt: "Emergency exit lighting installed at a commercial premises" },
 ]
 
 const commercialRoutes = [
-  { title: "Commercial CCTV", text: "Coverage, recording, evidence quality and remote access for retail, hospitality, offices, warehouses and industrial sites.", href: "/commercial/cctv", image: "/images/revisions/continue-arcade-cctv-live-view.jpg", alt: "Commercial CCTV live view installed by NOX at a Derby venue" },
+  { title: "Commercial CCTV", text: "Coverage, recording, evidence quality and remote access for hospitality, retail, offices, warehouses and industrial sites.", href: "/commercial/cctv", image: "/images/revisions/continue-arcade-cctv-live-view.jpg", alt: "Commercial CCTV live view installed by NOX at a Derby venue" },
   { title: "Commercial Intruder Alarms", text: "Internal and external detection designed around access, staff use, valuable areas, opening hours and monitoring requirements.", href: "/commercial/intruder-alarms", image: "/images/revisions/tan-station-ajax-keypad.jpg", alt: "NOX branded Ajax keypad installed at a commercial premises" },
-  { title: "Industrial, Warehouse & Yard Security", text: "Several buildings, loading areas, machinery, vehicle routes, yards and boundaries planned as one coordinated security project.", href: "/commercial/industrial-warehouse-security", image: "/images/revisions/nox-commercial-cctv-installation.jpg", alt: "NOX engineer and van during an industrial security installation" },
-  { title: "Multi-Site & Integrated Projects", text: "Coordinated fire, CCTV and intruder systems with clearer records, rollout planning and ongoing support across several premises.", href: "/commercial/multi-site-security", image: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Commercial premises supported by an integrated NOX fire and security project" },
+  { title: "Industrial & Multi-Site Security", text: "Several buildings, yards, loading areas and operational requirements planned as one coordinated security project.", href: "/commercial/industrial-warehouse-security", image: "/images/revisions/nox-commercial-cctv-installation.jpg", alt: "NOX engineer and van during an industrial security installation" },
 ]
 
 export default function HomePage() {
@@ -57,27 +48,26 @@ export default function HomePage() {
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
         <h1>Fire and security systems designed around your home or business.</h1>
-        <p className="lead">Ajax intruder alarms, professional CCTV, commercial fire alarms, emergency lighting, servicing and monitoring — designed around the property, installed carefully and supported by one local team.</p>
+        <p className="lead">Ajax intruder alarms, professional CCTV, commercial fire alarms, emergency lighting, servicing and monitoring — designed, installed and supported by one local team.</p>
         <div className="button-row home-audience-actions home-contact-actions">
-          <Link className="button button-light" href="/get-quote#quote-form">Request a Quote</Link>
-          <a className="button button-outline" href={site.whatsapp}>WhatsApp</a>
+          <Link className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>
           <a className="button button-outline" href={site.phoneHref}>Call</a>
+          <a className="button button-outline" href={site.whatsapp}>WhatsApp</a>
         </div>
-        <div className="hero-secondary-actions home-journey-links">
-          <Link href="/residential">Protect My Home →</Link>
-          <Link href="/commercial">Protect My Business →</Link>
-          <Link href="/fire-compliance">Fire Alarm Enquiry →</Link>
-          <Link href="/service-plans">Servicing or Takeover →</Link>
+        <div className="hero-secondary-actions home-journey-links" aria-label="Choose a service route">
+          <Link href="/residential">Home Security →</Link>
+          <Link href="/commercial">Commercial Security →</Link>
+          <Link href="/fire-compliance">Fire & Compliance →</Link>
+          <Link href="/service-plans">Existing Systems →</Link>
         </div>
-        <div className="hero-proof"><span>Ajax Authorised Installation Company</span><span>Real local installations</span><span>Monitoring & maintenance</span><span>Fire servicing & compliance</span></div>
       </div>
     </section>
 
     <ReviewSummaryStrip />
-    <TrustStrip />
+    <TrustStrip variant="general" />
 
     <section className="section premium-client-section"><div className="container">
-      <SectionHeading eyebrow="Residential Security" title="Protect the home, driveway, garage and everything around it" text="Start with the areas that matter. NOX then designs the alarm, CCTV and external protection around the property rather than forcing it into a fixed kit." />
+      <SectionHeading eyebrow="Residential Security" title="Protect the home, driveway, garage and everything around it" text="NOX designs alarms, CCTV and external protection around the property, the people using it and the areas that matter." />
       <div className="system-route-grid residential-system-grid">
         {residentialRoutes.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>
@@ -85,32 +75,19 @@ export default function HomePage() {
     </div></section>
 
     <section className="section section-alt fire-home-section"><div className="container">
-      <div className="split-grid fire-home-intro"><div><SectionHeading eyebrow="Fire & Compliance" title="From a new fire alarm to the ongoing servicing it creates" text="NOX separates installation, servicing, repairs, emergency lighting and annual support so the responsible person can see what has been completed, what remains and what happens next."/></div><aside className="dark-panel"><h3>Commercial fire support</h3><p>New systems, existing systems, faults, takeovers, planned servicing, emergency lighting, extinguisher servicing and coordinated compliance plans.</p><Link className="button button-light" href="/get-quote?customer_type=Commercial&service_category=Fire%20%26%20Compliance#quote-form">Discuss Your Fire Requirements</Link></aside></div>
+      <div className="split-grid fire-home-intro"><div><SectionHeading eyebrow="Fire & Compliance" title="Installation, servicing and ongoing compliance support" text="New fire alarms, planned servicing, repairs, takeovers, emergency lighting and coordinated annual support for commercial premises."/></div><aside className="dark-panel"><h3>Discuss your fire requirements</h3><p>Tell us about the premises, existing system and work required. Risk assessments and extinguisher servicing can be coordinated through competent specialist partners where needed.</p><Link className="button button-light" href="/get-quote?customer_type=Commercial&service_category=Fire%20%26%20Compliance#quote-form">Discuss Your Fire Requirements</Link></aside></div>
       <div className="feature-grid columns-3 fire-route-grid media-route-grid">{fireRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>View service →</Link></div></article>)}</div>
+      <div className="button-row"><Link className="button button-outline" href="/fire-compliance">Explore Fire & Compliance</Link></div>
     </div></section>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Commercial Security" title="CCTV, intruder protection and coordinated systems for working sites" text="Commercial pages focus on operational requirements, evidence, access, several buildings, larger camera counts and the ongoing support needed after handover."/>
-      <div className="feature-grid columns-4 media-route-grid commercial-media-grid">{commercialRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
+      <SectionHeading eyebrow="Commercial Security" title="CCTV, intruder protection and coordinated systems for working sites" text="Site-specific systems planned around operations, access, evidence requirements, several buildings and ongoing support."/>
+      <div className="feature-grid columns-3 media-route-grid commercial-media-grid">{commercialRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
       <div className="button-row"><Link className="button button-dark" href="/commercial">Explore Commercial Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Book a Commercial Site Survey</Link></div>
     </div></section>
 
-    <section className="section section-alt core-systems-section"><div className="container">
-      <SectionHeading eyebrow="Core systems" title="Intruder. CCTV. Fire." text="Three recognised starting points, connected to the residential, commercial and ongoing-support route that fits the property." />
-      <div className="core-system-grid">
-        <article className="core-system-card"><img src="/images/revisions/ajax-intruder-alarm-workbench.jpg" alt="Ajax intruder alarm equipment prepared by NOX"/><div><span className="eyebrow">Intruder alarms</span><h2>Ajax alarms designed around daily use</h2><p>Door protection, MotionCam, internal detection, keypads, sirens, app control, monitoring and external protection where suitable.</p><div className="related-links"><Link href="/systems/intrusion-alarms">Explore Ajax Intruder Alarms →</Link><Link href="/commercial/intruder-alarms">Commercial Intruder Alarms →</Link></div></div></article>
-        <article className="core-system-card"><img src="/images/revisions/ajax-cctv-system-nvr-cameras.jpg" alt="Ajax CCTV cameras and network video recorder"/><div><span className="eyebrow">CCTV systems</span><h2>Coverage and recording selected for the site</h2><p>Home and commercial CCTV designed around useful views, night performance, evidence quality, storage and remote access.</p><div className="related-links"><Link href="/systems/home-cctv">Home CCTV →</Link><Link href="/commercial/cctv">Commercial CCTV →</Link></div></div></article>
-        <article className="core-system-card"><img src="/images/revisions/ajax-en54-fire-control-panel.jpg" alt="Ajax EN54 fire alarm control equipment"/><div><span className="eyebrow">Fire alarm systems</span><h2>Installation planned with future servicing in mind</h2><p>Conventional, addressable and suitable wireless EN54 systems with commissioning, handover and a clear maintenance route.</p><div className="related-links"><Link href="/systems/fire-safety">Fire Alarm Installation →</Link><Link href="/service-plans/fire-alarm-servicing">Fire Alarm Servicing →</Link></div></div></article>
-      </div>
-    </div></section>
-
-    <section className="section ongoing-support-bridge"><div className="container split-grid"><div>
-      <SectionHeading eyebrow="Servicing, monitoring and takeovers" title="Support for NOX installations and suitable existing systems" text="Planned servicing, professional monitoring, faults, repairs, upgrades and system takeovers remain available for modern and suitable traditional systems."/>
-      <div className="related-links"><Link href="/service-plans/alarm-maintenance">Intruder alarm servicing →</Link><Link href="/service-plans/alarm-monitoring">Alarm monitoring →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link><Link href="/services/security-system-takeover">System takeovers →</Link><Link href="/services/repairs-upgrades">Repairs & upgrades →</Link></div>
-    </div><aside className="dark-panel"><span className="eyebrow">Coordinated annual support</span><h3>Keep service dates, faults and future work easier to manage</h3><p>Eligible services can be placed under a clearer annual plan without hiding parts, remedials or excluded work inside a vague promise.</p><Link className="button button-light" href="/service-plans">Explore Servicing & Monitoring</Link></aside></div></section>
-
     <section className="section project-story-section"><div className="container">
-      <SectionHeading eyebrow="Selected Projects" title="Real properties, real equipment and real NOX workmanship" text="Residential, hospitality, industrial and fire projects using genuine local photography and confirmed installation details."/>
+      <SectionHeading eyebrow="Selected Projects" title="Real properties, real equipment and real NOX workmanship" text="A selection of residential, hospitality, industrial and fire projects using genuine installation photography."/>
       <CaseStudyGrid slugs={["continue-arcade-commercial-cctv-derby","telesis-hitachi-fire-intruder-system","chesterfield-home-ajax-cctv-intruder"]}/>
       <div className="button-row"><Link className="button button-outline" href="/case-studies">View Fire & Security Projects</Link></div>
     </div></section>
@@ -125,12 +102,8 @@ export default function HomePage() {
       ]}/>
     </div></section>
 
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Feedback about advice, workmanship and aftercare" text="Genuine review wording from residential and commercial NOX customers."/><ReviewGrid limit={3}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read Customer Reviews</Link></div></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Feedback from residential and commercial customers" text="Genuine feedback about advice, workmanship, communication and handover."/><ReviewGrid names={["Ryan Hargreaves", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read Customer Reviews</Link></div></div></section>
 
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Latest Guides" title="Useful answers before installation, servicing or a takeover" text="Detailed guidance around fire alarms, emergency lighting, CCTV, intruder systems and ongoing maintenance."/><BlogGrid limit={3}/><div className="button-row"><Link className="button button-outline" href="/blog">Explore Fire & Security Guides</Link></div></div></section>
-
-    <section className="section"><div className="container"><SectionHeading eyebrow="Areas covered" title="Local service from Chesterfield across Sheffield and Derbyshire" text="Strong local support across the core area, with wider travel for suitable commercial, industrial, multi-site and larger residential projects."/><div className="home-area-grid">{keyAreas.map(([name, href]) => <Link href={href} key={name}><span>{name}</span><small>View local services →</small></Link>)}</div><div className="button-row"><Link className="button button-outline" href="/areas-we-serve">See Areas We Cover</Link></div></div></section>
-
-    <ConversionPanel title="Tell us about the property, site or existing system" text="One enquiry can cover a new installation, servicing, monitoring, a fault, a takeover or coordinated annual support. The NOX team will guide the right next step." primaryLabel="Get a Quote" sourceLabel="homepage"/>
+    <ConversionPanel title="Tell us about the property, site or existing system" text="Use one clear enquiry for a new installation, servicing, monitoring, a fault or a takeover. The NOX team will guide the right next step." primaryLabel="Get a Quote" sourceLabel="homepage"/>
   </>
 }

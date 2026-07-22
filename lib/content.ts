@@ -824,11 +824,11 @@ export const systemPages: Record<string, ServicePageData> = {
     title: "Fire risk assessment support for commercial and rented properties",
     metaTitle: "Fire Risk Assessment Chesterfield & Derbyshire",
     metaDescription: "Arrange a fire risk assessment in Chesterfield, Sheffield and Derbyshire for commercial premises, landlords, HMOs and property portfolios.",
-    intro: "Arrange fire risk assessment support for commercial premises, landlords, HMOs and multi-site properties, with findings and priorities presented clearly.",
+    intro: "Arrange fire risk assessment support for commercial premises, landlords, HMOs and multi-site properties, coordinated through a competent specialist where required, with findings and priorities presented clearly.",
     image: "/images/revisions/telesis-hitachi-exterior.jpg",
     imageAlt: "Commercial premises considered during a fire risk assessment",
     problemTitle: "A useful assessment should make responsibilities and priorities clearer",
-    problemText: "The assessment should reflect the building, occupancy, activities and available fire safety arrangements. NOX coordinates the service and can separately support relevant fire alarm, emergency lighting and remedial work where required.",
+    problemText: "The assessment should reflect the building, occupancy, activities and available fire safety arrangements. NOX coordinates the assessment through a competent specialist where required and can separately support relevant fire alarm, emergency lighting and remedial work.",
     benefits: ["Commercial premises", "Landlords and HMOs", "Hospitality", "Warehouses and industrial units", "Multi-site portfolios", "Clear findings and priorities", "Separate remedial quotations", "Ongoing fire service options"],
     suitableFor: ["Shops", "Offices", "Hospitality", "HMOs", "Industrial premises", "Property portfolios"],
     process: [
@@ -845,7 +845,8 @@ export const systemPages: Record<string, ServicePageData> = {
     faq: [
       { q: "Who is a fire risk assessment suitable for?", a: "It is commonly required for commercial premises, landlords, HMOs, hospitality sites and other non-domestic or shared properties." },
       { q: "Does the assessment include remedial work?", a: "No. Any installation, repair or remedial work is quoted separately after the findings are known." },
-      { q: "Can NOX help with actions identified in the report?", a: "NOX can support relevant fire alarm, emergency lighting and agreed fire safety work within its service scope." }
+      { q: "Can NOX help with actions identified in the report?", a: "NOX can support relevant fire alarm, emergency lighting and agreed fire safety work within its service scope." },
+      { q: "Who carries out the fire risk assessment?", a: "NOX coordinates the assessment through a competent specialist where required and keeps any later installation or remedial quotation separate." }
     ],
     related: [{ href: "/systems/fire-safety", label: "Fire alarm systems" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/service-plans/fire-compliance", label: "Fire compliance packages" }],
     caseStudySlugs: ["banana-industries-fire-security"]

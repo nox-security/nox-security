@@ -59,7 +59,7 @@ export default function Testimonials() {
             </div>
             <div className="flex items-center gap-3">
               <div className="text-lg text-gray-300">
-                5.0 · <span className="font-bold text-white">30+ Google Reviews</span>
+                5.0 · <span className="font-bold text-white">46+ Google Reviews</span>
               </div>
             </div>
           </div>

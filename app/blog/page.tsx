@@ -14,8 +14,8 @@ export default function BlogPage() {
     <PageHero eyebrow="Fire & Security Guides" title="Fire & Security guides and FAQs" intro="Detailed guidance for homeowners, responsible persons and businesses researching installation, servicing, repairs, monitoring or an existing-system takeover." image="/images/revisions/nox-commercial-cctv-installation.jpg" imageAlt="NOX engineer and branded van at an industrial security installation">
       <ContactActions primaryLabel="Ask About My Property or System" serviceCategory="Guide enquiry" enquiryType="General" sourceLabel="guides-hub"/>
     </PageHero>
-    <TrustStrip/>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Browse by topic" title="Full guides for larger questions, short FAQs inside the relevant service page" text="The guides below answer research questions in depth and connect to a real NOX service or project. They are not thin articles created only to target a phrase."/><GuideFilter/></div></section>
-    <ConversionPanel title="Need an answer about your own building or system?" text="Use the guide as a starting point, then share the property, existing equipment and the work you are considering. NOX will guide the correct survey, service or quotation route." primaryLabel="Discuss My Requirement" serviceCategory="Guide enquiry" enquiryType="General" sourceLabel="guides-final"/>
+    <TrustStrip variant="general"/>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Browse by topic" title="Full guides for larger questions, short FAQs inside the relevant service page" text="Each guide answers a genuine customer question, explains the practical points to consider and connects you to the most relevant NOX service or project."/><GuideFilter/></div></section>
+    <ConversionPanel title="Need an answer about your own building or system?" text="Use the guide as a starting point, then share the property, existing equipment and the work you are considering. NOX will confirm the most appropriate survey, service or quotation." primaryLabel="Discuss My Requirement" serviceCategory="Guide enquiry" enquiryType="General" sourceLabel="guides-final"/>
   </>
 }

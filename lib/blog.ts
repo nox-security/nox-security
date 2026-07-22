@@ -373,7 +373,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "The direct answer", paragraphs: ["An app alert notifies the people logged into the system. Professional monitoring sends agreed events through a monitored signalling route so an alarm receiving centre can follow the confirmed contact or keyholder process.", "Neither option should be described with vague promises. The customer needs to know which events are transmitted, who is contacted, what supervision is provided and what happens when contacts cannot be reached."] },
       { heading: "App notifications", paragraphs: ["App control is useful for arming, event history, user management and direct alerts. Its effectiveness depends on the user’s phone, data connection, notification settings, availability and willingness to respond.", "It can suit customers who want direct control, but it is not the same service as a monitored signalling route."] },
       { heading: "Professional monitoring", paragraphs: ["A suitable maintained system communicates with the monitoring route and sends agreed alarm events. Keyholder details and the response process are recorded as part of the service."], points: ["Alarm event signalling", "Keyholder contact process", "System or communication supervision where included", "Defined contact records", "Maintenance and compatibility requirements", "Clear renewal and service scope"] },
-      { heading: "What monitoring does not automatically mean", paragraphs: ["Professional monitoring should not be described as guaranteed attendance, guaranteed emergency response or police response unless the exact service and eligibility have been verified and agreed. NOX describes the available route accurately for the individual system."] },
+      { heading: "What monitoring does not automatically mean", paragraphs: ["Professional monitoring follows the signalling, keyholder and escalation arrangements agreed for the individual system. It should not be treated as a guarantee that somebody will attend every activation."] },
       { heading: "Choosing the route", paragraphs: ["Consider who needs to know about an alarm, whether phones can be unavailable, who holds keys, how quickly contacts change and whether the property is residential, commercial or multi-site.", "NOX can assess monitoring compatibility for new Ajax systems and suitable existing alarms, subject to maintenance, communication and takeover requirements."] }
     ],
     related: [{ href: "/service-plans/alarm-monitoring", label: "Request Monitoring Pricing" }, { href: "/service-plans/alarm-maintenance", label: "Intruder Alarm Servicing" }, { href: "/systems/intrusion-alarms", label: "Ajax Intruder Alarms" }]
@@ -527,7 +527,7 @@ const guideFaqs: Record<string, { q: string; a: string }[]> = {
     { q: "Can the same arrangement cover several sites?", a: "Yes, subject to system information, access and a realistic schedule for each premises." },
   ],
   "app-alerts-versus-professional-alarm-monitoring": [
-    { q: "Does professional monitoring guarantee attendance?", a: "No. The exact signalling and keyholder process must be confirmed. Guaranteed attendance or police response should not be assumed." },
+    { q: "Does professional monitoring guarantee attendance?", a: "No. The exact signalling, keyholder and escalation process must be agreed for the individual system, and attendance should not be assumed." },
     { q: "Can an existing alarm be monitored?", a: "Potentially, subject to compatibility, communication equipment, maintenance and a takeover assessment." },
   ],
 }

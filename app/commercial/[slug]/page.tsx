@@ -43,7 +43,7 @@ const pages: Record<string, CommercialPage> = {
       { title: "Site survey", text: "We identify critical views, operational restrictions, existing equipment, network availability and recording expectations." },
       { title: "Camera and storage design", text: "The quotation sets out positions, camera type, recorder, storage, remote access and any enabling work." },
       { title: "Installation around operations", text: "Cabling, access equipment and commissioning are planned to reduce disruption to staff and customers." },
-      { title: "Handover and maintenance", text: "Live view, playback, search, user access and the ongoing maintenance route are explained clearly." }
+      { title: "Handover and maintenance", text: "Live view, playback, search, user access and the ongoing maintenance options are explained clearly." }
     ],
     details: [
       { title: "Evidence quality", text: "A wide overview and a detailed identification view are different requirements. Lens, distance, resolution and lighting must match the purpose." },
@@ -73,7 +73,7 @@ const pages: Record<string, CommercialPage> = {
   "intruder-alarms": {
     title: "Commercial intruder alarms for premises, yards and working sites",
     eyebrow: "Commercial intruder alarm installation",
-    intro: "NOX designs internal, external and perimeter protection around access, staff use, opening hours, valuable areas and the agreed monitoring or keyholder route. Ajax and suitable professional systems are selected around the site rather than sold as a residential kit with extra devices.",
+    intro: "NOX designs internal, external and perimeter protection around access, staff use, opening hours, valuable areas and the agreed monitoring or keyholder process. Ajax and suitable professional systems are selected around the site rather than sold as a residential kit with extra devices.",
     metaTitle: "Commercial Intruder Alarms Chesterfield & Sheffield | NOX",
     metaDescription: "Commercial intruder alarm installation across Chesterfield, Sheffield and Derbyshire with internal detection, perimeter protection, app control, monitoring, maintenance and takeovers.",
     image: "/images/revisions/tan-station-ajax-keypad.jpg",
@@ -92,11 +92,11 @@ const pages: Record<string, CommercialPage> = {
       { title: "Internal protection", text: "Doors, movement routes, offices, stock and vulnerable areas are protected around the way the premises is occupied." },
       { title: "External detection", text: "Suitable perimeter devices can provide earlier warning around approaches, yards or exposed external areas after false-alarm risks are assessed." },
       { title: "Monitoring", text: "Professional monitoring is different from an app notification. Suitable maintained systems can signal agreed events through a confirmed route." },
-      { title: "Takeovers and upgrades", text: "Existing wired, wireless and hybrid systems can be inspected for access, faults, parts availability and a practical maintenance route." }
+      { title: "Takeovers and upgrades", text: "Existing wired, wireless and hybrid systems can be inspected for access, faults, parts availability and a practical maintenance plan." }
     ],
     pricingFactors: ["Number of doors, areas and devices", "Internal, external and perimeter detection", "Building construction and radio coverage", "User, partition and access requirements", "Monitoring and communication equipment", "Existing system and cabling", "Several buildings or sites", "Out-of-hours installation"],
     faq: [
-      { q: "Can a commercial alarm be monitored?", a: "Suitable systems can use professional monitoring, subject to compatibility, communication, maintenance and the agreed keyholder response route." },
+      { q: "Can a commercial alarm be monitored?", a: "Suitable systems can use professional monitoring, subject to compatibility, communication, maintenance and the agreed keyholder response process." },
       { q: "Can an alarm protect a yard or external area?", a: "Yes, where suitable external detection can be positioned around the site and normal movement, animals, vehicles and boundaries have been considered." },
       { q: "Can staff have different access permissions?", a: "Suitable systems can use individual users, tags, app permissions and partitions so access and event history are clearer." },
       { q: "Can NOX take over an existing commercial alarm?", a: "Often yes, subject to system make, access, condition, documentation, compatibility and parts availability." },
@@ -313,14 +313,14 @@ export default async function CommercialDetailPage({ params }: { params: Promise
     <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} image={page.image} imageAlt={page.alt}>
       <ContactActions primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}`}/>
     </PageHero>
-    <TrustStrip/>
+    <TrustStrip variant="commercial"/>
 
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Site requirement" title={page.requirementTitle} text={page.requirementText}/><Checklist items={page.included}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={page.propertyTypes}/><ContactActions primaryLabel={page.ctaLabel} compact audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-property-types`}/></aside></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Project process" title="Survey, design, installation and ongoing support"/><FeatureGrid columns={4} items={page.process}/></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="What the design needs to solve" title="System decisions linked to the operational requirement"/><FeatureGrid columns={4} items={page.details}/></div></section>
-    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price depends on the actual site, system, access and operational requirement. NOX does not invent a starting price that ignores the project."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a clearer proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
+    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a clearer proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Real commercial and industrial work" text="Genuine property and installation photography with confirmed service scopes."/><CaseStudyGrid slugs={page.cases}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid limit={3}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid names={["Jez S"]}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Common questions" title="Answers before a commercial survey"/><div className="faq-list">{page.faq.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>
     <ConversionPanel title={page.ctaLabel} text="Tell us the site type, location, existing systems, approximate project scale and what the new system needs to achieve. NOX will guide the survey and proposal route." primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-final`}/>
   </>

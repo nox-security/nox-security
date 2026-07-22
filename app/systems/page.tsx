@@ -74,7 +74,7 @@ const commercialSystems = [
 export default function SystemsPage() {
   return <>
     <PageHero eyebrow="System design" title="Fire & Security systems for homes and businesses" intro="Start with the system you need — intruder, perimeter protection, CCTV or Fire — then see how the design changes for residential and commercial properties. Ongoing monitoring, maintenance and compliance remain available through the Service Plans section." image="/images/revisions/nox-engineer-cctv-wiring.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
-    <TrustStrip/>
+    <TrustStrip variant="general"/>
 
     <section className="section"><div className="container">
       <SectionHeading eyebrow="Residential systems" title="Intruder alarms, perimeter protection and CCTV designed around the home" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. A well-designed system is considered and installed properly, whether it protects a semi-detached home, a larger detached property or several external areas."/>
@@ -95,11 +95,11 @@ export default function SystemsPage() {
     <section className="section ongoing-support-bridge"><div className="container split-grid"><div>
       <SectionHeading eyebrow="After installation" title="Move into the right service plan, monitoring or compliance package" text="Recurring support is kept separate from the new-system design so the customer can see exactly what they are buying. Residential customers can combine alarm, monitoring and CCTV maintenance; commercial customers can add Fire servicing, emergency lighting and coordinated compliance support."/>
       <div className="related-links"><Link href="/service-plans/alarm-maintenance">Alarm maintenance →</Link><Link href="/service-plans/alarm-monitoring">Alarm monitoring →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link><Link href="/service-plans/fire-alarm-servicing">Fire alarm servicing →</Link><Link href="/service-plans/fire-compliance">Fire Compliance Package →</Link></div>
-    </div><aside className="dark-panel"><span className="eyebrow">Packages and annual support</span><h3>One point of contact after handover</h3><p>Where the confirmed scope allows, services can be coordinated under one renewal structure with clearer records, planned engineer visits and a direct route for repairs or upgrades.</p><Link className="button button-light" href="/service-plans">Compare All Service Plans</Link></aside></div></section>
+    </div><aside className="dark-panel"><span className="eyebrow">Packages and annual support</span><h3>One point of contact after handover</h3><p>Where the confirmed scope allows, services can be coordinated under one renewal structure with clearer records, planned engineer visits and direct support for repairs or upgrades.</p><Link className="button button-light" href="/service-plans">Compare All Service Plans</Link></aside></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Real NOX work" title="Residential and commercial installations in the field"/><CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder","bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","retford-former-bank-cctv"]}/></div></section>
-    <LocalSearchLinks slugs={["security-systems-chesterfield","cctv-installation-chesterfield","ajax-alarm-installer-chesterfield","commercial-fire-security-systems"]} title="Focused routes for high-intent enquiries"/>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Professional advice, installation and aftercare"/><ReviewGrid limit={3}/></div></section>
-    <ConversionPanel title="Tell us whether the property is residential or commercial" text="From there, NOX can guide the enquiry into the right new-system design or ongoing support route without sending customers through unnecessary pages."/>
+    <LocalSearchLinks slugs={["security-systems-chesterfield","cctv-installation-chesterfield","ajax-alarm-installer-chesterfield","commercial-fire-security-systems"]} title="Related services in your area"/>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Professional advice, installation and aftercare"/><ReviewGrid names={["Ryan Hargreaves", "Jez S"]}/></div></section>
+    <ConversionPanel title="Tell us whether the property is residential or commercial" text="NOX will identify the right next step for a new installation, existing system, service plan or takeover."/>
   </>
 }

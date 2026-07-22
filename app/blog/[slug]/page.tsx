@@ -61,12 +61,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <PageHero eyebrow={post.category} title={post.title} intro={post.excerpt} image={post.image} imageAlt={post.imageAlt}>
       <ContactActions primaryLabel={context.label} audience={context.audience} serviceCategory={context.service} enquiryType="General" sourceLabel={post.slug}/>
     </PageHero>
-    <TrustStrip/>
+    <TrustStrip variant="general"/>
     <article className="section blog-article"><div className="container blog-article-inner">
       {post.sections.map(section => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{section.points && <ul>{section.points.map(point => <li key={point}>{point}</li>)}</ul>}</section>)}
       {!!post.faq?.length && <section className="guide-faq"><h2>Common questions</h2><div className="faq-list">{post.faq.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>}
       <div className="related-links"><strong>Related NOX services and projects:</strong>{post.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div>
     </div></article>
-    <ConversionPanel title="Discuss your own property or system" text="This guide provides general information. Share the building, existing equipment and the work you are considering for a property-specific survey, service or quotation route." primaryLabel={context.label} audience={context.audience} serviceCategory={context.service} enquiryType="General" sourceLabel={`${post.slug}-final`}/>
+    <ConversionPanel title="Discuss your own property or system" text="This guide provides general information. Share the building, existing equipment and the work you are considering for property-specific advice, servicing or a quotation." primaryLabel={context.label} audience={context.audience} serviceCategory={context.service} enquiryType="General" sourceLabel={`${post.slug}-final`}/>
   </>
 }
