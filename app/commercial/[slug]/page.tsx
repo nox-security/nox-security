@@ -28,11 +28,11 @@ type CommercialPage = {
 
 const pages: Record<string, CommercialPage> = {
   cctv: {
-    title: "Commercial CCTV systems for Chesterfield, Sheffield and Derbyshire",
+    title: "Commercial CCTV Installation in Chesterfield, Sheffield and Derbyshire",
     eyebrow: "Commercial CCTV installation",
-    intro: "NOX designs CCTV for shops, hospitality, offices, warehouses, yards, garages and industrial premises. Coverage, evidence quality, night performance, storage and remote access are planned around the site rather than selecting a camera count first.",
-    metaTitle: "Commercial CCTV Sheffield & Derbyshire",
-    metaDescription: "Commercial CCTV installation across Chesterfield, Sheffield and Derbyshire with site-specific camera positioning, NVR recording, night performance, remote viewing, upgrades and maintenance.",
+    intro: "NOX provides Commercial CCTV Installation for shops, hospitality, offices, warehouses, yards, garages and industrial premises across Chesterfield, Sheffield, Derbyshire and South Yorkshire. Coverage, evidence quality, night performance, storage and remote access are planned around the site.",
+    metaTitle: "Commercial CCTV Installation Sheffield & Derbyshire | NOX",
+    metaDescription: "Commercial CCTV Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire with site-specific cameras, NVR recording, remote viewing, upgrades and maintenance.",
     image: "/images/revisions/ajax-cctv-system-nvr-cameras.jpg",
     alt: "Ajax commercial CCTV cameras and network video recorder",
     requirementTitle: "Each camera needs a clear operational or evidence purpose",
@@ -71,11 +71,11 @@ const pages: Record<string, CommercialPage> = {
     ctaLabel: "Plan a Commercial CCTV System"
   },
   "intruder-alarms": {
-    title: "Commercial intruder alarms for premises, yards and working sites",
+    title: "Commercial Intruder Alarm Installation in Chesterfield and Sheffield",
     eyebrow: "Commercial intruder alarm installation",
-    intro: "NOX designs internal, external and perimeter protection around access, staff use, opening hours, valuable areas and the agreed monitoring or keyholder process. Ajax and suitable professional systems are selected around the site rather than sold as a residential kit with extra devices.",
-    metaTitle: "Commercial Intruder Alarms Chesterfield & Sheffield | NOX",
-    metaDescription: "Commercial intruder alarm installation across Chesterfield, Sheffield and Derbyshire with internal detection, perimeter protection, app control, monitoring, maintenance and takeovers.",
+    intro: "NOX provides Commercial Intruder Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire, designing internal, external and perimeter protection around access, staff use, opening hours and monitoring requirements.",
+    metaTitle: "Commercial Intruder Alarm Installation | Chesterfield & Sheffield",
+    metaDescription: "Commercial Intruder Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire with internal detection, perimeter protection, monitoring and maintenance.",
     image: "/images/revisions/tan-station-ajax-keypad.jpg",
     alt: "NOX branded Ajax keypad installed at a commercial premises",
     requirementTitle: "The alarm must reflect how the premises opens, closes and operates",

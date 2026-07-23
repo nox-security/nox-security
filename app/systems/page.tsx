@@ -4,8 +4,8 @@ import { CaseStudyGrid, ConversionPanel, LocalSearchLinks, PageHero, ReviewGrid,
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "Security System Design Chesterfield | Residential & Commercial",
-  "Choose residential security or commercial Fire & Security system design in Chesterfield, Sheffield and Derbyshire, followed by the right monitoring, maintenance or compliance plan.",
+  "CCTV, Fire Alarm & Intruder Systems | NOX Fire & Security",
+  "Explore CCTV installation, commercial Fire Alarm systems and Intruder Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
   "/systems"
 )
 
@@ -73,7 +73,7 @@ const commercialSystems = [
 
 export default function SystemsPage() {
   return <>
-    <PageHero eyebrow="System design" title="Fire & Security systems for homes and businesses" intro="Start with the system you need — intruder, perimeter protection, CCTV or Fire — then see how the design changes for residential and commercial properties. Ongoing monitoring, maintenance and compliance remain available through the Service Plans section." image="/images/revisions/nox-engineer-cctv-wiring.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
+    <PageHero eyebrow="System design" title="CCTV, Fire Alarm and Intruder Alarm Systems" intro="Start with the system you need — CCTV, Fire Alarm, Intruder Alarm or perimeter protection — then see how the design changes for residential and commercial properties. Monitoring, maintenance and compliance support remain available through the Servicing & Monitoring section." image="/images/revisions/nox-engineer-cctv-wiring.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
     <TrustStrip variant="general"/>
 
     <section className="section"><div className="container">

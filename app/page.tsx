@@ -4,14 +4,14 @@ import { CaseStudyGrid, ConversionPanel, FeatureGrid, JsonLd, ReviewGrid, Review
 import { pageMetadata, site } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "NOX Fire & Security | Home Security, Commercial Fire & CCTV",
-  "Ajax intruder alarms, home CCTV, commercial CCTV, fire alarm installation, emergency lighting, servicing and monitoring across Chesterfield, Sheffield and Derbyshire.",
+  "CCTV, Fire Alarm & Security Systems | Derbyshire & South Yorkshire",
+  "Professional CCTV installation, commercial Fire Alarm Installation and Servicing, and Intruder Alarm Systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
   "/"
 )
 
 const residentialRoutes = [
-  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax intruder alarm equipment prepared by NOX" },
   { title: "Home CCTV", text: "Recorder-based CCTV for driveways, doors, gardens, garages and outbuildings, with clear playback and remote viewing.", href: "/systems/home-cctv", image: "/images/revisions/residential-vigi-cctv-pair.jpg", alt: "Residential CCTV cameras installed by NOX" },
+  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax intruder alarm equipment prepared by NOX" },
   { title: "Perimeter Protection", text: "Protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected system.", href: "/systems/perimeter-protection", image: "/images/revisions/residential-cctv-installation-engineer.jpg", alt: "NOX engineer installing residential perimeter security" },
 ]
 
@@ -31,10 +31,10 @@ export default function HomePage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Residential and commercial Fire & Security installation and servicing",
+    name: "CCTV, Fire Alarm and Intruder Alarm installation and servicing",
     provider: { "@type": "LocalBusiness", name: site.name },
-    areaServed: ["Chesterfield", "Sheffield", "Derbyshire"],
-    serviceType: ["Ajax intruder alarms", "Home CCTV", "Commercial CCTV", "Commercial fire alarms", "Emergency lighting", "Monitoring", "Maintenance", "System takeovers"]
+    areaServed: ["Chesterfield", "Sheffield", "Derbyshire", "South Yorkshire"],
+    serviceType: ["CCTV installation", "Commercial Fire Alarm Installation and Servicing", "Intruder Alarm Installation", "Emergency lighting", "Monitoring", "Maintenance", "System takeovers"]
   }
 
   return <>
@@ -47,18 +47,18 @@ export default function HomePage() {
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
-        <h1>Fire and security systems designed around your home or business.</h1>
-        <p className="lead">Ajax intruder alarms, professional CCTV, commercial fire alarms, emergency lighting, servicing and monitoring — designed, installed and supported by one local team.</p>
+        <h1>CCTV, Alarm &amp; Fire Systems</h1>
+        <p className="lead">Professional CCTV, commercial Fire Alarm and Intruder Alarm Systems installed and supported across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
         <div className="button-row home-audience-actions home-contact-actions">
           <Link className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>
           <a className="button button-outline" href={site.phoneHref}>Call</a>
           <a className="button button-outline" href={site.whatsapp}>WhatsApp</a>
         </div>
         <div className="hero-secondary-actions home-journey-links" aria-label="Choose a service route">
-          <Link href="/residential">Home Security →</Link>
-          <Link href="/commercial">Commercial Security →</Link>
-          <Link href="/fire-compliance">Fire & Compliance →</Link>
-          <Link href="/service-plans">Existing Systems →</Link>
+          <Link href="/systems/cctv">CCTV Installation →</Link>
+          <Link href="/fire-compliance">Fire Alarm Systems →</Link>
+          <Link href="/systems/intrusion-alarms">Intruder Alarms →</Link>
+          <Link href="/service-plans">Servicing &amp; Monitoring →</Link>
         </div>
       </div>
     </section>
@@ -67,7 +67,7 @@ export default function HomePage() {
     <TrustStrip variant="general" />
 
     <section className="section premium-client-section"><div className="container">
-      <SectionHeading eyebrow="Residential Security" title="Protect the home, driveway, garage and everything around it" text="NOX designs alarms, CCTV and external protection around the property, the people using it and the areas that matter." />
+      <SectionHeading eyebrow="Residential CCTV & Security" title="Professional CCTV, Ajax alarms and external protection for the property" text="NOX starts with the views, access points and external areas that matter, then recommends the right combination of CCTV, intruder detection and perimeter protection." />
       <div className="system-route-grid residential-system-grid">
         {residentialRoutes.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>
@@ -81,7 +81,7 @@ export default function HomePage() {
     </div></section>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Commercial Security" title="CCTV, intruder protection and coordinated systems for working sites" text="Site-specific systems planned around operations, access, evidence requirements, several buildings and ongoing support."/>
+      <SectionHeading eyebrow="Commercial CCTV & Security" title="CCTV, intruder protection and coordinated systems for working sites" text="Commercial CCTV is planned around evidence quality, operations, access, several buildings and ongoing support, with intruder protection added where the site requires it."/>
       <div className="feature-grid columns-3 media-route-grid commercial-media-grid">{commercialRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
       <div className="button-row"><Link className="button button-dark" href="/commercial">Explore Commercial Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Book a Commercial Site Survey</Link></div>
     </div></section>

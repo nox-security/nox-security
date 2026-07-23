@@ -4,8 +4,8 @@ import { CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, PageHero, 
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "Fire & Compliance Chesterfield, Sheffield & Derbyshire",
-  "Commercial fire alarm installation, servicing, repairs, emergency lighting, fire risk assessments, extinguisher servicing and annual compliance support from NOX.",
+  "Commercial Fire Alarm Installation & Servicing | Chesterfield",
+  "Commercial Fire Alarm Installation and Fire Alarm Servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire, including repairs, takeovers and emergency lighting.",
   "/fire-compliance"
 )
 
@@ -25,7 +25,7 @@ const ongoingRoutes = [
 
 export default function FireCompliancePage() {
   return <>
-    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, emergency lighting and coordinated compliance support across Chesterfield, Sheffield and Derbyshire. Each service is kept clear so customers can see the initial project, recurring work and any remedials separately." image="/images/revisions/ajax-en54-fire-control-panel.jpg" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
+    <PageHero eyebrow="Fire & Compliance" title="Commercial Fire Alarm Installation and Servicing" intro="NOX provides commercial Fire Alarm Installation, Fire Alarm Servicing, repairs, takeovers and emergency lighting across Chesterfield, Sheffield, Derbyshire and South Yorkshire. New work and ongoing maintenance remain clearly separated so the required service is easy to understand." image="/images/revisions/ajax-en54-fire-control-panel.jpg" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
       <ContactActions primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-hub"/>
     </PageHero>
     <TrustStrip variant="fire"/>

@@ -40,10 +40,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...landingPageList.map(page => `/services/${page.slug}`),
   ]))
 
+  const priorityRoutes = new Set([
+    "/systems/cctv",
+    "/systems/home-cctv",
+    "/commercial/cctv",
+    "/services/cctv-installation-chesterfield",
+    "/services/commercial-cctv-sheffield",
+    "/services/cctv-installation-derbyshire",
+    "/fire-compliance",
+    "/systems/fire-safety",
+    "/service-plans/fire-alarm-servicing",
+    "/services/fire-alarm-installation-chesterfield",
+    "/services/fire-alarm-servicing-chesterfield",
+    "/systems/intrusion-alarms",
+    "/services/intruder-alarm-installation-chesterfield",
+  ])
+
   return urls.map(path => ({
     url: `${site.url}${path}`,
     lastModified: now,
     changeFrequency: path === "" || path === "/blog" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : ["/residential", "/fire-compliance", "/commercial", "/service-plans"].includes(path) ? 0.9 : 0.7,
+    priority: path === "" ? 1 : priorityRoutes.has(path) ? 0.9 : ["/residential", "/commercial", "/service-plans"].includes(path) ? 0.8 : 0.7,
   }))
 }

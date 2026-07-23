@@ -4,14 +4,14 @@ import { CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, PageHero, 
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "Residential Security Chesterfield | Ajax Alarms & Home CCTV",
-  "Residential Ajax intruder alarms, home CCTV, perimeter protection, garage and outbuilding security, smart cameras, monitoring and maintenance across Chesterfield and Derbyshire.",
+  "Home CCTV & Ajax Alarm Installation | Chesterfield & Sheffield",
+  "Home CCTV installation, Ajax intruder alarms and perimeter protection across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with monitoring and maintenance available.",
   "/residential"
 )
 
 const residentialSystems = [
-  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, internal detection, user-friendly control, sirens, monitoring and future expansion.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax alarm equipment prepared for a NOX home installation" },
   { title: "Home CCTV", text: "Recorder-based CCTV for driveways, entrances, gardens, vehicles, garages and outbuildings with remote viewing and playback.", href: "/systems/home-cctv", image: "/images/revisions/residential-vigi-cctv-pair.jpg", alt: "Home CCTV cameras installed beneath a residential roofline" },
+  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, internal detection, user-friendly control, sirens, monitoring and future expansion.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax alarm equipment prepared for a NOX home installation" },
   { title: "Perimeter Protection", text: "Suitable external detection for approaches, gates, boundaries and areas where earlier warning is useful.", href: "/systems/perimeter-protection", image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png", alt: "External Ajax perimeter detector installed at a property" },
   { title: "Garages & Outbuildings", text: "Protection for detached garages, workshops, garden rooms, gated approaches and properties with several buildings.", href: "/systems/garages-outbuildings", image: "/images/revisions/residential-cctv-installation-engineer.jpg", alt: "NOX engineer installing security on a home with external areas" },
   { title: "Smart Security", text: "Eufy cameras, video doorbells, solar or battery products and app-led security for customers prioritising convenience and subscription-free options.", href: "/systems/smart-home-cctv", image: "/images/revisions/eufy-smart-home-security-camera.jpg", alt: "Eufy smart security camera installed at a home" },
@@ -20,7 +20,7 @@ const residentialSystems = [
 
 export default function ResidentialPage() {
   return <>
-    <PageHero eyebrow="Residential Security" title="Ajax alarms, home CCTV and perimeter protection designed around the property" intro="NOX protects semi-detached homes, family houses, larger properties, renovations, rural sites, garages, gates and outbuildings across Chesterfield, Sheffield and Derbyshire. The system is shaped around the property and daily routine rather than the customer being forced into a fixed kit." image="/images/revisions/protection-belongs-home.jpg" imageAlt="Residential property protected by NOX Fire and Security">
+    <PageHero eyebrow="Residential Security" title="Home CCTV and Ajax alarm systems designed around the property" intro="NOX installs home CCTV, Ajax intruder alarms and perimeter protection for semi-detached homes, family houses, larger properties, renovations, rural sites, garages, gates and outbuildings across Chesterfield, Sheffield, Derbyshire and South Yorkshire. The system is shaped around the property and daily routine rather than the customer being forced into a fixed kit." image="/images/revisions/protection-belongs-home.jpg" imageAlt="Residential property protected by NOX Fire and Security">
       <ContactActions primaryLabel="Get a Home Security Quote" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-hub"/>
     </PageHero>
     <TrustStrip variant="residential"/>

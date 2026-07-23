@@ -10,8 +10,8 @@ const isPreview = process.env.VERCEL_ENV === "preview"
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "NOX Fire & Security | Chesterfield, Sheffield & Derbyshire", template: "%s | NOX Fire & Security" },
-  description: "Ajax intruder alarms, CCTV, commercial fire alarms, emergency lighting, servicing and monitoring across Chesterfield, Sheffield and Derbyshire.",
+  title: { default: "CCTV, Fire Alarm & Security Systems | NOX", template: "%s | NOX Fire & Security" },
+  description: "Professional CCTV installation, commercial Fire Alarm Installation and Servicing, and Intruder Alarm Systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
   icons: { icon: "/images/nox-logo-light.jpeg" },
   robots: isPreview
     ? { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false, noimageindex: true } }
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     url: site.url,
     title: "NOX Fire & Security",
-    description: "Fire and security systems designed, installed and supported by one local team.",
+    description: "Professional CCTV, commercial Fire Alarm and Intruder Alarm Systems installed and supported across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     images: [{ url: "/images/nox-logo-light.jpeg", alt: "NOX Fire & Security" }],
   },
 }

@@ -4,8 +4,8 @@ import { CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, PageHero, 
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "Commercial Security Chesterfield & Sheffield | CCTV & Alarms",
-  "Commercial CCTV, intruder alarms, industrial and warehouse security, yard protection, multi-site systems and integrated Fire & Security projects across Chesterfield and Sheffield.",
+  "Commercial CCTV & Security Systems | Chesterfield & Sheffield",
+  "Commercial CCTV installation, intruder alarms and integrated Fire & Security systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire for operational and multi-site premises.",
   "/commercial"
 )
 
@@ -19,7 +19,7 @@ const routes = [
 
 export default function CommercialPage() {
   return <>
-    <PageHero eyebrow="Commercial Security" title="CCTV, intruder and integrated systems designed around working sites" intro="NOX supports retail, hospitality, offices, garages, warehouses, industrial units, yards and multi-site businesses across Chesterfield, Sheffield and Derbyshire. The design considers the operation, site layout, evidence requirement, access and ongoing support rather than adapting a residential package." image="/images/revisions/commercial-cctv-industrial-building.jpg" imageAlt="Commercial CCTV installed by NOX at an industrial property">
+    <PageHero eyebrow="Commercial Security" title="Commercial CCTV, intruder and integrated systems designed around working sites" intro="NOX installs commercial CCTV and intruder systems for retail, hospitality, offices, garages, warehouses, industrial units, yards and multi-site businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire. The design considers operations, site layout, evidence requirements, access and ongoing support." image="/images/revisions/commercial-cctv-industrial-building.jpg" imageAlt="Commercial CCTV installed by NOX at an industrial property">
       <ContactActions primaryLabel="Book a Commercial Site Survey" audience="Commercial" serviceCategory="Commercial Security" enquiryType="Installation" sourceLabel="commercial-hub"/>
     </PageHero>
     <TrustStrip variant="commercial"/>

@@ -29,8 +29,8 @@ export const headerNavMenus: HeaderNavMenu[] = [
     groups: [
       {
         items: [
-          { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
           { label: "Home CCTV", href: "/systems/home-cctv" },
+          { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
           { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
           { label: "Smart Security", href: "/systems/smart-home-cctv" },
           { label: "Residential Security Packages", href: "/service-plans/residential-security-packages" },
@@ -116,8 +116,8 @@ export const headerDirectNavItems: NavItem[] = [
 
 export const residentialFooterItems: NavItem[] = [
   { label: "Residential Security", href: "/residential" },
-  { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
   { label: "Home CCTV", href: "/systems/home-cctv" },
+  { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
   { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
   { label: "Smart Security", href: "/systems/smart-home-cctv" },
 ]
