@@ -98,7 +98,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     metaTitle: "Ajax Alarm Installer Chesterfield | Authorised Ajax Installation",
     metaDescription: "Ajax alarm installer in Chesterfield for MotionCam, DoorProtect, KeyPad TouchScreen, sirens, app control, monitoring, maintenance and system upgrades.",
     intro: "Ajax is NOX's preferred residential intruder platform because it supports flexible detection, visual verification, simple user control and future expansion. The equipment is selected around the property rather than sold as a standard kit.",
-    image: "/images/2Motioncam.jpg",
+    image: "/images/ajax-products/ajax-motioncam.webp",
     imageAlt: "Ajax MotionCam detectors used in professionally designed alarm systems",
     location: "Chesterfield",
     audience: "Residential",

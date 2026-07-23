@@ -133,7 +133,10 @@ export function ProductShowcase({ data }: { data: ServicePageData }) {
       <div><span className="eyebrow">Products and system options</span><h2>{data.platformTitle ?? "Equipment selected around the property"}</h2><p>{data.platformText}</p></div>
       <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" />
     </div>
-    <div className="product-detail-grid">{data.products.map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image"><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div>
+    <div className="product-detail-grid">{data.products.map(product => {
+      const isProductArtwork = product.image.includes("/images/ajax-products/")
+      return <article className="product-detail-card" key={product.name}><div className={`product-detail-image ${isProductArtwork ? "product-detail-artwork" : "product-detail-photo"}`}><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>
+    })}</div>
   </div></section>
 }
 

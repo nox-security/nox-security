@@ -17,7 +17,7 @@ const caseStudies = [
     challenge: "Needed smart security that's easy for elderly parents",
     solution: "Ajax smart alarm system + mobile app + key fob",
     result: "Simple operation. Parents feel confident and protected.",
-    image: "/images/2Motioncam.jpg",
+    image: "/images/ajax-products/ajax-motioncam.webp",
   },
   {
     title: "Industrial Warehouse",
