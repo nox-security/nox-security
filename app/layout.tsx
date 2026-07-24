@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     url: site.url,
     title: "NOX Fire & Security",
-    description: "Professional CCTV, commercial Fire Alarm and Intruder Alarm Systems installed and supported across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+    description: "Professional CCTV, Fire Alarms and Intruder Systems designed, installed and maintained for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     images: [{ url: "/images/nox-logo-light.jpeg", alt: "NOX Fire & Security" }],
   },
 }

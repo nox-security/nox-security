@@ -740,51 +740,59 @@ export const systemPages: Record<string, ServicePageData> = {
   },
   "fire-safety": {
     slug: "fire-safety",
-    eyebrow: "Fire alarm installation, EN54 systems and servicing",
+    eyebrow: "Commercial fire alarm installation and Ajax EN54 systems",
     title: "Commercial Fire Alarm Installation in Chesterfield, Sheffield and Derbyshire",
     metaTitle: "Commercial Fire Alarm Installation | Chesterfield & Sheffield",
-    metaDescription: "Commercial Fire Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire, including conventional, addressable and suitable Ajax EN54 systems with commissioning and servicing.",
-    intro: "NOX installs commercial fire alarm systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire. Conventional, addressable and suitable wireless EN54 options are specified around the premises, installation requirements and future servicing.",
+    metaDescription: "Commercial Fire Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire, including conventional, addressable and suitable Ajax EN54 wireless systems with commissioning and servicing.",
+    intro: "NOX designs and installs commercial fire alarm systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire. Conventional, addressable and suitable Ajax EN54 wireless solutions are specified around the building, fire strategy, zones, warning coverage, connectivity, standby power and future servicing.",
     image: "/images/revisions/ajax-en54-fire-control-panel.jpg",
     imageAlt: "Ajax EN54 Fire Hub installed as part of a commercial fire alarm system",
-    problemTitle: "A commercial fire alarm must suit the building and future servicing",
-    problemText: "The building, occupancy, fire strategy, existing equipment, records and ongoing testing requirements all influence the right solution. NOX separates new installation, routine servicing, faults and remedial work clearly so the responsible person knows what has been completed and what needs attention next.",
-    benefits: ["Ajax EN54 wireless fire alarm options", "EN54 Fire Hub and compatible line devices", "Conventional and addressable fire alarm servicing", "Existing-system takeovers", "Panel, detector and sounder testing", "Fault finding and remedial quotations", "Emergency lighting coordination", "Annual Fire Compliance Packages"],
-    suitableFor: ["Shops and retail", "Offices", "Warehouses and industrial units", "Hospitality", "HMOs and landlords", "Multi-site property portfolios"],
+    problemTitle: "A commercial fire alarm is a complete life-safety system",
+    problemText: "Control equipment, detection, manual activation, sounders, visual alarm devices, fire zones, communications, standby power and records must work together as one design. NOX reviews the premises and available fire information before recommending Ajax EN54, a wired addressable system or a conventional solution.",
+    benefits: ["New commercial fire alarm installations", "Suitable Ajax EN54 wireless addressable systems", "10.1-inch touchscreen EN54 Fire Hub", "Smoke, heat, sounder and VAD device options", "Manual call points and clearly defined fire zones", "Fire ReX and I/O options for larger sites", "Conventional and wired addressable alternatives", "Commissioning, handover and future servicing route"],
+    suitableFor: ["Shops and retail", "Offices", "Warehouses and industrial units", "Hospitality", "HMOs and landlords", "Multi-site and multi-building premises"],
     process: [
-      { title: "Building and system review", text: "We review the premises, use, available fire information, existing panel, device quantities, records and access." },
-      { title: "Clear installation or service scope", text: "New installation, routine service, takeover work and defects are separated clearly in the quotation." },
-      { title: "Engineer attendance", text: "The agreed installation or maintenance is completed with the relevant standards and property requirements in mind." },
-      { title: "Records and recurring support", text: "Service information and identified defects are issued, with the next inspection and any remedials explained clearly." }
+      { title: "Survey and fire-system brief", text: "We review the building, use, available fire information, escape routes, existing equipment, access and any operational restrictions." },
+      { title: "System design and specification", text: "Control equipment, zones, detectors, manual call points, warning devices, communications and standby power are specified as one system." },
+      { title: "Installation and commissioning", text: "Devices are installed, labelled, configured and tested, with radio and network design confirmed where Ajax EN54 is selected." },
+      { title: "Handover and service planning", text: "The responsible person receives a clear handover, system information and the proposed route for inspection, servicing and remedial work." }
     ],
     details: [
-      { title: "Ajax EN54 Fire Hub", text: "The EN54 Fire Hub is the control and indicating equipment for Ajax EN54 fire systems and can support a joined-up Ajax environment on suitable commercial projects." },
-      { title: "Traditional fire alarm servicing", text: "NOX services many conventional, addressable, wired and established fire alarm systems, subject to access, condition, documentation and device compatibility." },
-      { title: "Takeovers and defect resolution", text: "An initial inspection can establish panel access, system condition, device quantities, outstanding faults and the sensible maintenance route." },
-      { title: "Fire Compliance Packages", text: "Fire alarm servicing can be coordinated with emergency lighting and other agreed fire-safety services under a clearer annual arrangement." }
+      { title: "EN54 Fire Hub control", text: "Ajax EN54 Fire Hub is wireless control and indicating equipment with a 10.1-inch touchscreen. It supports Ethernet, Wi-Fi and two SIM cards for communication, with compatible 24- or 72-hour standby battery options." },
+      { title: "Addressable detection and warning", text: "The EN54 Line includes wireless smoke and heat detection, combined detector and sounder options, separate sounders, visual alarm devices and sounder/VAD units." },
+      { title: "Manual activation and fire zones", text: "Resettable manual call points can be assigned to defined fire zones, with alarms presented clearly at the control equipment and through the agreed notification route." },
+      { title: "Coverage and integration", text: "EN54 Fire ReX and I/O modules can support larger or more complex sites. On suitable projects, the Fire Hub can also support compatible intrusion, automation and video devices while the fire scope remains clearly defined." }
     ],
     faq: [
-      { q: "What is the Ajax EN54 Fire Hub?", a: "It is Ajax control and indicating equipment for its EN54 fire line, with a touchscreen interface and support for compatible wireless fire devices. The full system design still depends on the building and agreed fire requirements." },
-      { q: "Do you service traditional fire alarms?", a: "Yes. NOX can service many conventional, addressable and established systems, subject to condition, access, records and parts availability." },
-      { q: "Can you take over an existing fire alarm?", a: "Yes. A takeover inspection can establish the system condition, access, documentation, faults and future service scope." },
-      { q: "Can servicing include emergency lighting?", a: "Yes. Fire alarm servicing and emergency lighting can be coordinated where included in the written service package." }
+      { q: "Is Ajax EN54 a fully wireless fire alarm system?", a: "The Ajax EN54 Line is a wireless addressable commercial fire system. The Fire Hub still needs mains power and connectivity, and Ethernet may be used for range extension or site design where required. Suitability is confirmed through the survey and system design." },
+      { q: "Can Ajax EN54 combine fire and intruder protection?", a: "EN54 Fire Hub can support compatible intrusion, automation and video devices on suitable projects. The fire alarm design, zones, warning coverage and servicing scope still remain clearly defined as a life-safety system." },
+      { q: "Is Ajax EN54 suitable for every commercial building?", a: "No single platform suits every premises. NOX also installs or supports suitable conventional and wired addressable systems, depending on the building, fire strategy, access and project requirements." },
+      { q: "Can NOX service the system after installation?", a: "Yes. The future inspection and servicing route is planned from the installation stage, with defects and remedial work recorded separately." }
     ],
     related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessments" }],
     caseStudySlugs: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
-    platformTitle: "Modern Ajax EN54 fire protection and traditional-system expertise",
-    platformText: "NOX can introduce Ajax EN54 wireless fire technology where it suits the building while continuing to service and support established wired, conventional and addressable fire alarm systems.",
+    platformTitle: "Ajax EN54 devices selected as one coordinated fire system",
+    platformText: "The Fire Hub, addressable detection, manual call points, sounders, visual alarm devices, range extension and integration modules are selected around the complete fire-system design. NOX also continues to support suitable conventional and wired addressable systems.",
     products: [
-      { name: "EN54 Fire Hub Jeweller", description: "Touchscreen control and indicating equipment for the Ajax EN54 fire line, selected and configured as part of a complete fire-system design.", image: "/images/ajax-products/ajax-en54-firehub.webp", imageAlt: "Official Ajax EN54 Fire Hub touchscreen product image" },
-      { name: "EN54 fire detection", description: "Compatible wireless detection devices are selected around rooms, risks, zones and the agreed fire-alarm design.", image: "/images/ajax-products/ajax-en54-detection.webp", imageAlt: "Official Ajax wireless fire detection product image" },
-      { name: "Manual call points", description: "Manual activation devices are positioned within the fire-alarm design and included in routine testing and service records.", image: "/images/revisions/telesis-fire-call-point-1.jpg", imageAlt: "Fire alarm manual call point installed at an industrial premises" },
-      { name: "Traditional fire panels", description: "NOX also services suitable conventional, addressable and established systems rather than limiting maintenance to new Ajax installations.", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", imageAlt: "Traditional commercial fire alarm panel during maintenance" },
-      { name: "Routine servicing", description: "Panel checks, detector and sounder testing, battery review, logbook information and defect reporting within the agreed service scope.", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", imageAlt: "Professional fire alarm servicing and testing" },
-      { name: "Compliance support", description: "Fire-alarm maintenance can be coordinated with emergency lighting and agreed annual fire-safety services.", image: "/images/revisions/fire-safety-logbook.jpg", imageAlt: "Commercial fire safety logbook and compliance records" }
+      { name: "EN54 Fire Hub Jeweller", description: "Wireless control and indicating equipment with a 10.1-inch touchscreen, multiple communication channels and compatible 24- or 72-hour standby batteries.", image: "/images/ajax-products/ajax-en54-firehub.webp", imageAlt: "Ajax EN54 Fire Hub touchscreen product image" },
+      { name: "Smoke and heat detection", description: "Wireless addressable smoke and heat detectors, including versions with integrated sounders, selected around each space and fire zone.", image: "/images/ajax-products/ajax-en54-detection.webp", imageAlt: "Ajax EN54 smoke heat and warning devices" },
+      { name: "Manual call points", description: "Resettable manual activation devices positioned and assigned within the agreed fire-zone and evacuation strategy.", image: "/images/revisions/telesis-fire-call-point-1.jpg", imageAlt: "Ajax manual fire alarm call point installed at a commercial premises" },
+      { name: "Sounders and visual alarms", description: "Dedicated sounder, VAD and combined sounder/VAD options provide audible and visual warning where the design requires them.", image: "/images/revisions/telesis-fire-visual-indicator.jpg", imageAlt: "Ajax visual fire alarm indicator installed in an industrial unit" },
+      { name: "Range extension and I/O", description: "EN54 Fire ReX and compatible I/O modules support larger sites, difficult building layouts and agreed third-party interfaces.", image: "/images/revisions/telesis-en54-fire-hub-normal.jpg", imageAlt: "Ajax EN54 fire system operating normally at an industrial premises" },
+      { name: "Conventional and addressable options", description: "Where a wireless EN54 solution is not the right fit, NOX can specify or support suitable conventional and wired addressable fire alarm systems.", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", imageAlt: "Traditional commercial fire alarm control panel" }
     ],
     videos: [
-      { title: "Ajax fire protection", text: "Explore how Ajax fire devices and control equipment can support a modern connected fire system.", youtubeId: "XZDNd3ud-ck" }
-    ]
+      { title: "Ajax fire protection", text: "See how Ajax control equipment and line devices can form part of a connected commercial fire system.", youtubeId: "XZDNd3ud-ck" }
+    ],
+    ctaLabel: "Request Fire Alarm Pricing",
+    audience: "Commercial",
+    serviceCategory: "Fire Alarm Installation",
+    enquiryType: "Installation",
+    pricingFactors: ["Building size and use", "Available fire strategy or risk information", "Number of zones and devices", "Detection, sounder and VAD requirements", "Manual call point positions", "Access, working hours and installation method", "Connectivity and standby-power requirement", "Commissioning, records and future service scope"],
+    guide: { href: "/blog/what-information-is-needed-for-a-fire-alarm-quote", label: "What information is needed for a fire alarm quote?" },
+    serviceAreaText: "Commercial fire alarm installation is available across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with wider travel for suitable industrial and multi-site projects."
   },
+  
   "emergency-lighting": {
     slug: "emergency-lighting",
     eyebrow: "Emergency lighting",
@@ -1216,36 +1224,7 @@ export const planPages: Record<string, PlanPageData> = {
 // V3.7 intent-led refinements. The established intrusion-alarm pillar is
 // deliberately excluded from these overrides so its URL, metadata, H1 and
 // main content structure remain protected pending Search Console review.
-Object.assign(systemPages["fire-safety"], {
-  eyebrow: "Commercial fire alarm installation",
-  title: "Fire alarm installation for commercial premises across Chesterfield, Sheffield and Derbyshire",
-  metaTitle: "Commercial Fire Alarm Installation Derbyshire",
-  metaDescription: "Commercial fire alarm installation across Chesterfield, Sheffield and Derbyshire, including conventional, addressable and suitable wireless EN54 systems, commissioning, handover and future servicing.",
-  intro: "NOX designs and installs fire alarm systems for commercial premises, landlords, HMOs, warehouses, hospitality, offices and multi-site customers. New installation is kept separate from annual servicing so the design, commissioning, documentation and future maintenance route are clear from the start.",
-  problemTitle: "The system must reflect the building, use, fire strategy and future maintenance requirement",
-  problemText: "Device types, zones, warning coverage, manual call points, control equipment, cable routes, occupancy and available fire information all influence the design. NOX can provide conventional, addressable and suitable wireless EN54 options where they match the project.",
-  benefits: ["New commercial fire alarm installations", "Replacement of unsuitable or unsupported systems", "Conventional and addressable options", "Suitable Ajax EN54 wireless solutions", "Manual call points, detection and warning devices", "Design and installation planning", "Commissioning and clear handover", "Documentation and future servicing route"],
-  process: [
-    { title: "Site and information review", text: "We review the premises, use, drawings or fire information, existing equipment, access and the customer’s operational requirements." },
-    { title: "System design and quotation", text: "The proposed category, zones, equipment, installation method, exclusions and any required enabling work are explained clearly." },
-    { title: "Installation and commissioning", text: "The system is installed, configured and tested against the agreed design, with disruption planned around the premises." },
-    { title: "Handover and servicing plan", text: "Controls, records, user responsibilities and the recommended future service route are handed over without mixing annual maintenance into the installation price." }
-  ],
-  details: [
-    { title: "Conventional systems", text: "A conventional system can suit smaller or more straightforward premises where zonal indication and a practical wired design meet the requirement." },
-    { title: "Addressable systems", text: "Addressable equipment can provide clearer device identification and flexibility for larger, more complex or expanding sites." },
-    { title: "Suitable wireless EN54 options", text: "Ajax EN54 equipment can reduce installation disruption on appropriate projects, subject to survey, radio design and the complete fire-safety requirement." },
-    { title: "Documentation and future support", text: "The handover should leave the responsible person with clear controls, records and a route into planned servicing, defect resolution and emergency-lighting coordination." }
-  ],
-  ctaLabel: "Request Fire Alarm Pricing",
-  audience: "Commercial",
-  serviceCategory: "Fire alarm installation",
-  enquiryType: "Installation",
-  pricingFactors: ["Building size, layout and use", "System category and available fire information", "Conventional, addressable or wireless design", "Number and type of devices", "Cable routes and access", "Existing equipment and removal", "Out-of-hours or phased work", "Commissioning, documentation and integration requirements"],
-  guide: { href: "/blog/what-information-is-needed-for-a-fire-alarm-quote", label: "What information is needed for a fire alarm quote?" },
-  serviceAreaText: "Commercial fire alarm installation is available across Chesterfield, Sheffield and Derbyshire, with wider travel for suitable industrial and multi-site projects."
-} satisfies Partial<ServicePageData>)
-
+// Fire alarm installation content is defined in the main systemPages object above.
 Object.assign(systemPages["emergency-lighting"], {
   eyebrow: "Emergency lighting installation",
   title: "Emergency lighting installation and replacement for commercial premises",

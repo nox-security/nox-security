@@ -19,7 +19,7 @@ const primarySupport = [
 
 export default function ServicePlansPage() {
   return <>
-    <PageHero eyebrow="Servicing & Monitoring" title="CCTV, alarm and Fire servicing, monitoring and takeovers" intro="NOX maintains CCTV, intruder alarm and fire systems installed by NOX and suitable systems installed by another company. Planned servicing, professional monitoring, faults, repairs, upgrades and takeovers are kept clear so customers understand the visit and next steps." image="/images/revisions/intruder-maintenance-system-takeover.jpg" imageAlt="Engineer maintaining an existing security system">
+    <PageHero eyebrow="Servicing & Monitoring" title="Keep alarm, CCTV and fire systems useful after installation" intro="NOX supports systems installed by NOX and suitable systems installed by another company. Planned servicing, professional monitoring, faults, repairs, upgrades and takeovers are kept clear so customers understand the visit, exclusions and next steps." image="/images/revisions/intruder-maintenance-system-takeover.jpg" imageAlt="Engineer maintaining an existing security system">
       <ContactActions primaryLabel="Get a Maintenance Quote" audience="Residential & Commercial" serviceCategory="Servicing & Monitoring" enquiryType="Servicing" sourceLabel="servicing-hub"/>
     </PageHero>
     <TrustStrip variant="servicing"/>

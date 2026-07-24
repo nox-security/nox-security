@@ -20,7 +20,7 @@ const residentialSystems = [
 
 export default function ResidentialPage() {
   return <>
-    <PageHero eyebrow="Residential Security" title="Home CCTV and Ajax alarm systems designed around the property" intro="NOX installs home CCTV, Ajax intruder alarms and perimeter protection for semi-detached homes, family houses, larger properties, renovations, rural sites, garages, gates and outbuildings across Chesterfield, Sheffield, Derbyshire and South Yorkshire. The system is shaped around the property and daily routine rather than the customer being forced into a fixed kit." image="/images/revisions/protection-belongs-home.jpg" imageAlt="Residential property protected by NOX Fire and Security">
+    <PageHero eyebrow="Residential Security" title="Ajax alarms, home CCTV and perimeter protection designed around the property" intro="NOX protects semi-detached homes, family houses, larger properties, renovations, rural sites, garages, gates and outbuildings across Chesterfield, Sheffield and Derbyshire. The system is shaped around the property and daily routine rather than the customer being forced into a fixed kit." image="/images/revisions/protection-belongs-home.jpg" imageAlt="Residential property protected by NOX Fire and Security">
       <ContactActions primaryLabel="Get a Home Security Quote" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-hub"/>
     </PageHero>
     <TrustStrip variant="residential"/>

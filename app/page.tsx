@@ -47,8 +47,8 @@ export default function HomePage() {
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
-        <h1>CCTV, Alarm &amp; Fire Systems</h1>
-        <p className="lead">Professional CCTV, commercial Fire Alarm and Intruder Alarm Systems installed and supported across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
+        <h1>Fire Alarms, CCTV &amp; Intruder Systems</h1>
+        <p className="lead">Professional CCTV, Fire Alarms and Intruder Systems designed, installed and maintained for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
         <div className="button-row home-audience-actions home-contact-actions">
           <Link className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>
           <a className="button button-outline" href={site.phoneHref}>Call</a>
