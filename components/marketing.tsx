@@ -203,6 +203,46 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     : data.slug === "cctv"
       ? [{ href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/service-plans/total-security", label: "Total Security Package" }]
       : [{ href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/total-security", label: "Total Security Package" }]
+  const serviceVisuals: Record<string, { src: string; alt: string; caption: string; product?: boolean }[]> = {
+    "intrusion-alarms": [
+      { src: "/images/image-refresh/intruder-entry-exit-delay.webp", alt: "Ajax door contact supporting entry and exit delays", caption: "Entry and exit protection configured around the way the property is used." },
+      { src: "/images/image-refresh/intruder-app-alerts.webp", alt: "Ajax security alert on a smartphone", caption: "Clear app notifications provide a useful heads-up when an event occurs." },
+      { src: "/images/image-refresh/intruder-keypad-touchscreen.webp", alt: "Ajax touchscreen keypad", caption: "Visual keypad controls make everyday arming and area selection straightforward." },
+      { src: "/images/image-refresh/intruder-scheduled-arming.webp", alt: "Ajax scheduled arming notification", caption: "Schedules and scenarios help keep protection consistent." }
+    ],
+    "home-cctv": [
+      { src: "/images/image-refresh/home-cctv-live-view.webp", alt: "Home CCTV live view", caption: "Several useful property views brought together for recording and playback." },
+      { src: "/images/image-refresh/home-cctv-vigi-installed.webp", alt: "Professional VIGI home CCTV camera", caption: "A professional fixed camera installed for dependable coverage." },
+      { src: "/images/image-refresh/home-cctv-camera-close.webp", alt: "Home CCTV camera close view", caption: "Careful positioning around the roofline and the required view." },
+      { src: "/images/image-refresh/ajax-black-camera-range.webp", alt: "Black Ajax CCTV camera range", caption: "Premium camera options for customers wanting a darker, discreet finish.", product: true }
+    ],
+    "smart-home-cctv": [
+      { src: "/images/image-refresh/smart-home-eufy-installed.webp", alt: "Eufy smart security camera installed", caption: "Dual-lens app-connected security for everyday remote viewing." },
+      { src: "/images/image-refresh/eufy-floodlight-camera.webp", alt: "Eufy floodlight camera", caption: "Lighting and video combined around an entrance or garden." },
+      { src: "/images/image-refresh/eufy-solar-security-camera.webp", alt: "Solar smart security camera", caption: "Solar-powered coverage for suitable positions with limited cabling." },
+      { src: "/images/image-refresh/ajax-video-doorbell.webp", alt: "Ajax video doorbell", caption: "A premium video doorbell for alerts, conversation and entry-point awareness." }
+    ],
+    "perimeter-protection": [
+      { src: "/images/image-refresh/home-perimeter-motioncam.webp", alt: "Ajax outdoor MotionCam at a home", caption: "External detection positioned around a garden and side approach." },
+      { src: "/images/image-refresh/intruder-outdoor-false-alarm.webp", alt: "Ajax outdoor detector", caption: "Smart external detection helps provide earlier warning while reducing false alarms." },
+      { src: "/images/image-refresh/garages-outbuildings-engineer.webp", alt: "NOX engineer installing security on an outbuilding", caption: "Detached buildings and separate areas planned into the wider system." }
+    ],
+    "fire-safety": [
+      { src: "/images/image-refresh/en54-fire-hub.webp", alt: "Ajax EN54 Fire Hub", caption: "Clear control and indication through the Ajax EN54 Fire Hub." },
+      { src: "/images/image-refresh/en54-manual-call-point.webp", alt: "Ajax EN54 manual call point", caption: "Resettable manual activation positioned around the escape strategy." },
+      { src: "/images/image-refresh/en54-sounder-vad.webp", alt: "Ajax EN54 sounder VAD", caption: "Audible and visual warning devices selected as part of the system design." },
+      { src: "/images/image-refresh/green-manual-call-point.webp", alt: "Green manual release point", caption: "Specialist manual controls can be coordinated where the wider fire strategy requires them." }
+    ],
+    "emergency-lighting": [
+      { src: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Modern emergency exit light", caption: "Modern escape-route lighting installed and positioned around the premises." },
+      { src: "/images/image-refresh/emergency-lighting-existing.webp", alt: "Existing emergency exit light", caption: "Existing fittings can be tested, reported and replaced where required." }
+    ],
+    "fire-risk-assessment": [
+      { src: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire action notice and manual call point", caption: "A practical review of the building, fire arrangements and clear priorities for the responsible person." }
+    ]
+  }
+  const visualGallery = serviceVisuals[data.slug] ?? []
+
   const localSearchSlugs = data.slug === "intrusion-alarms"
     ? ["intruder-alarm-installation-chesterfield", "ajax-alarm-installer-chesterfield", "alarm-monitoring-derbyshire"]
     : data.slug === "cctv"
@@ -225,6 +265,7 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
       <ContactActions primaryLabel={data.ctaLabel ?? "Get a Quote"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/>
     </PageHero>
     <TrustStrip variant={data.audience === "Residential" ? "residential" : data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment" ? "fire" : "commercial"} />
+    {!!visualGallery.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="System in detail" title="Equipment and installations matched to the requirement" text="A selection of the real equipment, installed positions and customer-facing features used across suitable NOX projects."/><div className="system-visual-gallery">{visualGallery.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Designed around the property" title={data.problemTitle} text={data.problemText}/><Checklist items={data.benefits}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={data.suitableFor}/><ContactActions primaryLabel={data.ctaLabel ?? "Discuss This System"} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/></aside></div></section>
     <ProductShowcase data={data}/>
     <VideoShowcase videos={data.videos}/>

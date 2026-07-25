@@ -10,19 +10,20 @@ export const metadata: Metadata = pageMetadata(
 )
 
 const residentialRoutes = [
-  { title: "Home CCTV", text: "Recorder-based CCTV for driveways, doors, gardens, garages and outbuildings, with clear playback and remote viewing.", href: "/systems/home-cctv", image: "/images/revisions/residential-vigi-cctv-pair.jpg", alt: "Residential CCTV cameras installed by NOX" },
-  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/revisions/ajax-intruder-alarm-workbench.jpg", alt: "Ajax intruder alarm equipment prepared by NOX" },
-  { title: "Perimeter Protection", text: "Protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected system.", href: "/systems/perimeter-protection", image: "/images/revisions/residential-cctv-installation-engineer.jpg", alt: "NOX engineer installing residential perimeter security" },
+  { title: "Home CCTV", text: "Recorder-based CCTV for driveways, doors, gardens, garages and outbuildings, with clear playback and remote viewing.", href: "/systems/home-cctv", image: "/images/image-refresh/home-cctv-live-view.webp", alt: "Residential CCTV live view showing full-property coverage" },
+  { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/image-refresh/residential-nox-siren.webp", alt: "NOX branded Ajax external siren for residential intruder protection" },
+  { title: "Perimeter Protection", text: "Protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected system.", href: "/systems/perimeter-protection", image: "/images/image-refresh/home-perimeter-motioncam.webp", alt: "Ajax outdoor MotionCam protecting a residential garden and side access" },
+  { title: "Smart Home Security", text: "App-led cameras, video doorbells, floodlight cameras and subscription-free options designed around convenient everyday use.", href: "/systems/smart-home-cctv", image: "/images/image-refresh/smart-home-eufy-installed.webp", alt: "Eufy dual-lens smart security camera installed at a home" },
 ]
 
 const fireRoutes = [
-  { title: "Fire Alarm Installation", text: "Conventional, addressable and suitable wireless systems designed around the premises and future servicing.", href: "/systems/fire-safety", image: "/images/revisions/ajax-en54-fire-control-panel.jpg", alt: "Ajax EN54 fire alarm control panel used for a commercial installation" },
-  { title: "Fire Alarm Servicing", text: "Planned testing, existing-system takeovers, records, defect reporting and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", alt: "Commercial fire alarm panel inspected during planned servicing" },
-  { title: "Emergency Lighting", text: "New installations, testing, annual duration checks, failed-fitting reports and coordinated remedials.", href: "/systems/emergency-lighting", image: "/images/revisions/emergency-lighting-exit-sign.jpg", alt: "Emergency exit lighting installed at a commercial premises" },
+  { title: "Fire Alarm Installation", text: "Conventional, addressable and suitable wireless systems designed around the premises and future servicing.", href: "/systems/fire-safety", image: "/images/image-refresh/en54-fire-hub.webp", alt: "Ajax EN54 fire alarm control panel used for a commercial installation" },
+  { title: "Fire Alarm Servicing", text: "Planned testing, existing-system takeovers, records, defect reporting and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/image-refresh/fire-system-takeover-panel.webp", alt: "Commercial fire alarm panel inspected during planned servicing" },
+  { title: "Emergency Lighting", text: "New installations, testing, annual duration checks, failed-fitting reports and coordinated remedials.", href: "/systems/emergency-lighting", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Emergency exit lighting installed at a commercial premises" },
 ]
 
 const commercialRoutes = [
-  { title: "Commercial CCTV", text: "Coverage, recording, evidence quality and remote access for hospitality, retail, offices, warehouses and industrial sites.", href: "/commercial/cctv", image: "/images/revisions/continue-arcade-cctv-live-view.jpg", alt: "Commercial CCTV live view installed by NOX at a Derby venue" },
+  { title: "Commercial CCTV", text: "Coverage, recording, evidence quality and remote access for hospitality, retail, offices, warehouses and industrial sites.", href: "/commercial/cctv", image: "/images/image-refresh/commercial-cctv-arcade-monitor.webp", alt: "Commercial CCTV live view installed by NOX at a Derby venue" },
   { title: "Commercial Intruder Alarms", text: "Internal and external detection designed around access, staff use, valuable areas, opening hours and monitoring requirements.", href: "/commercial/intruder-alarms", image: "/images/revisions/tan-station-ajax-keypad.jpg", alt: "NOX branded Ajax keypad installed at a commercial premises" },
   { title: "Industrial & Multi-Site Security", text: "Several buildings, yards, loading areas and operational requirements planned as one coordinated security project.", href: "/commercial/industrial-warehouse-security", image: "/images/revisions/nox-commercial-cctv-installation.jpg", alt: "NOX engineer and van during an industrial security installation" },
 ]
@@ -40,14 +41,13 @@ export default function HomePage() {
   return <>
     <JsonLd data={serviceSchema}/>
     <section className="home-hero home-hero-premium home-hero-choice">
-      <div className="home-hero-bg home-hero-split">
-        <img src="/images/revisions/protection-belongs-home.jpg" alt="NOX residential security installation at a Chesterfield home" />
-        <img src="/images/revisions/nox-commercial-cctv-installation.jpg" alt="NOX engineer and branded van at an industrial security installation" />
+      <div className="home-hero-bg home-hero-single">
+        <img src="/images/image-refresh/homepage-hero-nox-property.webp" alt="NOX Fire and Security van outside a premium residential property" />
       </div>
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
-        <h1>Fire Alarms, CCTV &amp; Intruder Systems</h1>
+        <h1>Fire Alarm, CCTV &amp; Intruder Systems</h1>
         <p className="lead">Professional CCTV, Fire Alarms and Intruder Systems designed, installed and maintained for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
         <div className="button-row home-audience-actions home-contact-actions">
           <Link className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>

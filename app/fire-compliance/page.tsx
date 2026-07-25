@@ -10,24 +10,24 @@ export const metadata: Metadata = pageMetadata(
 )
 
 const installationRoutes = [
-  { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless Ajax EN54 systems designed around the building, fire strategy and future maintenance route.", href: "/systems/fire-safety", image: "/images/ajax-products/ajax-en54-firehub.webp", alt: "Ajax EN54 Fire Hub for a commercial fire alarm installation", artwork: true },
-  { title: "Emergency Lighting Installation", text: "New fittings, replacement projects and upgrades planned around escape routes, final exits and the property layout.", href: "/systems/emergency-lighting", image: "/images/EmergencyLighting.jpeg", alt: "Commercial emergency lighting installation and escape-route lighting", artwork: false },
+  { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless Ajax EN54 systems designed around the building, fire strategy and future maintenance route.", href: "/systems/fire-safety", image: "/images/image-refresh/en54-fire-hub.webp", alt: "Ajax EN54 Fire Hub for a commercial fire alarm installation", artwork: true },
+  { title: "Emergency Lighting Installation", text: "New fittings, replacement projects and upgrades planned around escape routes, final exits and the property layout.", href: "/systems/emergency-lighting", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Commercial emergency lighting installation and escape-route lighting", artwork: false },
 ]
 
 const ongoingRoutes = [
-  { title: "Fire Alarm Servicing", text: "Planned inspection and testing, service records, defect reporting, existing-system takeovers and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/revisions/fire-alarm-maintenance-panel.jpg", alt: "Traditional commercial fire alarm panel during planned servicing" },
+  { title: "Fire Alarm Servicing", text: "Planned inspection and testing, service records, defect reporting, existing-system takeovers and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/image-refresh/fire-system-takeover-panel.webp", alt: "Traditional commercial fire alarm panel during planned servicing" },
   { title: "Fire Alarm Repairs & Takeovers", text: "Assessment of faults, panel access, documentation, supportability and the sensible repair or replacement route.", href: "/services/fire-alarm-repairs-takeovers", image: "/images/revisions/telesis-en54-fire-hub-alarm.jpg", alt: "Ajax EN54 Fire Hub showing an active alarm during system testing" },
-  { title: "Emergency Lighting Testing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedial work.", href: "/service-plans/emergency-lighting-servicing", image: "/images/revisions/emergency-lighting-exit-sign.jpg", alt: "Emergency exit light checked during commercial testing and servicing" },
-  { title: "Fire Risk Assessments", text: "A structured review of fire risks and priorities, coordinated through a competent specialist partner where required.", href: "/systems/fire-risk-assessment", image: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Commercial premises reviewed as part of fire risk and compliance planning" },
+  { title: "Emergency Lighting Testing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedial work.", href: "/service-plans/emergency-lighting-servicing", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Emergency exit light checked during commercial testing and servicing" },
+  { title: "Fire Risk Assessments", text: "A structured review of fire risks and priorities, coordinated through a competent specialist partner where required.", href: "/systems/fire-risk-assessment", image: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire action notice and manual call point reviewed during a fire risk assessment" },
   { title: "Fire Extinguisher Servicing", text: "Inspection and servicing coordinated through a competent specialist, with defects and replacement needs recorded clearly.", href: "/services/fire-extinguisher-servicing", image: "/images/fire-servicing.jpeg", alt: "Engineer carrying out commercial fire extinguisher servicing" },
-  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire safety logbook and plans used for coordinated compliance support" },
+  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire safety logbook and plans used for coordinated compliance support" },
 ]
 
 const en54Highlights = [
   {
     title: "EN54 Fire Hub",
     text: "A 10.1-inch touchscreen control and indicating unit with Ethernet, Wi-Fi and dual-SIM communication options, plus compatible 24- or 72-hour standby batteries.",
-    image: "/images/ajax-products/ajax-en54-firehub.webp",
+    image: "/images/image-refresh/en54-fire-hub.webp",
     alt: "Ajax EN54 Fire Hub touchscreen control and indicating equipment",
     artwork: true,
   },
@@ -41,14 +41,14 @@ const en54Highlights = [
   {
     title: "Manual and visual warning",
     text: "Resettable manual call points, sounders and visual alarm devices form part of the complete warning strategy rather than being treated as isolated products.",
-    image: "/images/revisions/telesis-fire-call-point-1.jpg",
+    image: "/images/image-refresh/en54-manual-call-point.webp",
     alt: "Ajax manual fire alarm call point installed at a commercial premises",
     artwork: false,
   },
   {
     title: "Larger-site coverage",
     text: "EN54 Fire ReX and compatible I/O modules can extend communication and integration options for warehouses, multi-building sites and more complex premises.",
-    image: "/images/revisions/telesis-en54-fire-hub-normal.jpg",
+    image: "/images/image-refresh/en54-sounder-vad.webp",
     alt: "Ajax EN54 fire system operating normally at an industrial site",
     artwork: false,
   },
@@ -56,7 +56,7 @@ const en54Highlights = [
 
 export default function FireCompliancePage() {
   return <>
-    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, emergency lighting and coordinated compliance support across Chesterfield, Sheffield and Derbyshire. Each service is kept clear so customers can see the initial project, recurring work and any remedials separately." image="/images/revisions/ajax-en54-fire-control-panel.jpg" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
+    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, emergency lighting and coordinated compliance support across Chesterfield, Sheffield and Derbyshire. Each service is kept clear so customers can see the initial project, recurring work and any remedials separately." image="/images/image-refresh/en54-fire-hub.webp" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
       <ContactActions primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-hub"/>
     </PageHero>
     <TrustStrip variant="fire"/>
