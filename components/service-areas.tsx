@@ -12,7 +12,7 @@ const coreAreas = [
   { name: "Rotherham", slug: "rotherham" },
   { name: "Alfreton", slug: "alfreton" },
   { name: "Mansfield", slug: "mansfield" },
-  { name: "Worksop", slug: "worksop" },
+  { name: "Ripley", slug: "ripley" },
 ]
 
 const derbyshireAreas = [
@@ -28,14 +28,14 @@ const derbyshireAreas = [
 ]
 
 const widerAreas = [
-  { name: "Doncaster", slug: "doncaster" },
-  { name: "Barnsley", slug: "barnsley" },
   { name: "Derby", slug: "derby" },
   { name: "Nottingham", slug: "nottingham" },
-  { name: "Newark", slug: "newark" },
+  { name: "Doncaster", slug: "doncaster" },
   { name: "Retford", slug: "retford" },
-  { name: "Lincoln", slug: "lincoln" },
-  { name: "Scunthorpe", slug: "scunthorpe" },
+  { name: "Newark-on-Trent", slug: "newark-on-trent" },
+  { name: "Ilkeston", slug: "ilkeston" },
+  { name: "Sutton-in-Ashfield", slug: "sutton-in-ashfield" },
+  { name: "Long Eaton", slug: "long-eaton" },
 ]
 
 export default function ServiceAreas() {
@@ -53,7 +53,7 @@ export default function ServiceAreas() {
               Areas We Cover
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Based in Chesterfield, NOX Fire &amp; Security installs smart intruder alarms, CCTV systems, fire alarms and commercial security systems across Chesterfield, Sheffield, Derbyshire and surrounding areas. We also cover South Yorkshire, Nottinghamshire and wider East Midlands locations for larger residential and commercial projects.
+              Based in Chesterfield, NOX Fire &amp; Security installs smart intruder alarms, CCTV systems, fire alarms and commercial security systems across Chesterfield, Sheffield, Derbyshire and surrounding areas. We also cover the Peak District, Amber Valley, Erewash and selected South Yorkshire and Nottinghamshire locations for suitable commercial and larger residential projects.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export default function ServiceAreas() {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-              <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Wider Coverage — Commercial &amp; Larger Projects</span>
+              <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Wider Growth Areas — Commercial &amp; Larger Projects</span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
               {widerAreas.map((area) => (

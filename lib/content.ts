@@ -123,6 +123,10 @@ export type CaseStudy = {
   metaTitle?: string
   metaDescription?: string
   searchKeywords?: string[]
+  designPriorities?: string[]
+  outcome?: string
+  localContext?: string
+  faq?: FAQItem[]
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -147,7 +151,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Commercial CCTV Installation Chesterfield | Bottle & Thyme",
     metaDescription: "See NOX Fire & Security's commercial CCTV installation at Bottle & Thyme in Chesterfield, including recording, live viewing and professional handover.",
-    searchKeywords: ["commercial CCTV installation Chesterfield", "hospitality CCTV Chesterfield", "CCTV installer Chesterfield", "business security systems Derbyshire"]
+    searchKeywords: ["commercial CCTV installation Chesterfield", "hospitality CCTV Chesterfield", "CCTV installer Chesterfield", "business security systems Derbyshire"],
+    designPriorities: [
+      "Cover customer entrances, circulation areas and operational spaces without making the system feel intrusive inside a character-led hospitality venue.",
+      "Position cameras and recording equipment around lighting, customer movement and the practical need to review footage when the venue is busy.",
+      "Configure a clear live-view display and complete a handover that lets the customer find cameras and recorded events without unnecessary complexity.",
+    ],
+    outcome: "The completed system provided dependable recorded coverage, a practical live view and a clear handover for the customer. The installation was planned around the working hospitality environment and the appearance of the Chesterfield property.",
+    localContext: "Hospitality CCTV in Chesterfield needs to account for customer areas, entrances, variable lighting, opening hours and where staff can safely view or retrieve footage. A site survey confirms the camera count, recorder capacity and installation route for each venue.",
+    faq: [
+      { q: "What should a Chesterfield hospitality venue consider before a CCTV quote?", a: "Useful details include the number of entrances, customer and staff areas, opening hours, current network or recorder, known blind spots and how long footage may need to be retained." },
+      { q: "Can CCTV be installed without spoiling the appearance of a restaurant or bar?", a: "Yes. Camera style, colour, mounting position and cable routes can be planned around the building, although reliable coverage and lawful use must remain the priority." },
+    ]
   },
   {
     slug: "continue-arcade-commercial-cctv-derby",
@@ -167,7 +182,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Arcade CCTV Installation Derby | Continue Arcade Case Study",
     metaDescription: "Commercial Ajax CCTV installation at Continue Arcade in Derby, including multi-camera coverage, NVR recording, live viewing and professional handover.",
-    searchKeywords: ["commercial CCTV installation Derby", "arcade CCTV Derby", "Ajax CCTV installer Derbyshire", "business CCTV systems Derby"]
+    searchKeywords: ["commercial CCTV installation Derby", "arcade CCTV Derby", "Ajax CCTV installer Derbyshire", "business CCTV systems Derby"],
+    designPriorities: [
+      "Plan coverage across gaming areas, customer routes and key entrances rather than treating the arcade as one open room.",
+      "Allow for bright screens, changing light levels and busy movement when selecting camera positions and reviewing the recorded image.",
+      "Give the site team a usable multi-camera live view and straightforward access to the recorder after installation.",
+    ],
+    outcome: "NOX delivered a commissioned Ajax CCTV system with multi-camera recording and live viewing across the Derby arcade. The site team received a practical handover for normal operation and footage review.",
+    localContext: "Commercial CCTV projects in Derby often need to balance customer experience with reliable evidence across several rooms or activity zones. The survey should establish routes, lighting, network availability, recording requirements and how managers will access the system.",
+    faq: [
+      { q: "How many CCTV cameras does a leisure venue in Derby need?", a: "The number depends on entrances, circulation routes, tills, customer areas, blind spots and the level of detail required. A survey is more reliable than estimating from floor area alone." },
+      { q: "Can managers view several cameras on one screen?", a: "Yes. Suitable recorders can provide a multi-camera live view, with user permissions and remote access configured around the business requirement." },
+    ]
   },
   {
     slug: "tan-station-fire-security-brimington",
@@ -192,7 +218,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Commercial Fire & CCTV Installation Brimington | NOX",
     metaDescription: "Commercial CCTV and fire-alarm first-fix project at The Tan Station in Brimington, Chesterfield, delivered by NOX Fire & Security.",
-    searchKeywords: ["commercial CCTV Brimington", "fire alarm installation Chesterfield", "commercial fire and security systems", "CCTV installation Derbyshire"]
+    searchKeywords: ["commercial CCTV Brimington", "fire alarm installation Chesterfield", "commercial fire and security systems", "CCTV installation Derbyshire"],
+    designPriorities: [
+      "Coordinate fire-alarm first-fix work with the commercial fit-out so cable routes and device positions are considered before finishes are complete.",
+      "Use black CCTV equipment in visible areas where it supports the interior and exterior design without compromising the required camera view.",
+      "Keep the fire and CCTV scopes clearly separated while coordinating access, sequencing and communication through one project team.",
+    ],
+    outcome: "The project combined fire-alarm first-fix work with carefully positioned black CCTV equipment, supporting the visual finish of the Brimington premises while keeping each system scope clear.",
+    localContext: "Commercial fit-outs around Chesterfield benefit from early fire and security planning. Confirming ceilings, cable routes, finishes, other trades and the intended use of each area before second fix reduces avoidable changes later.",
+    faq: [
+      { q: "When should fire and CCTV contractors be involved in a commercial fit-out?", a: "As early as practical. Early drawings and site access help coordinate cable routes, ceilings, power, network points, device positions and the programme with other trades." },
+      { q: "Can visible CCTV equipment match a dark interior?", a: "Often yes. Suitable black camera models and considered mounting positions can support the design, provided the selected equipment still delivers the required coverage." },
+    ]
   },
   {
     slug: "telesis-hitachi-fire-intruder-system",
@@ -216,7 +253,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Industrial EN54 Fire Alarm Installation Derbyshire | Telesis",
     metaDescription: "Industrial Ajax EN54 Fire Hub and intruder alarm installation at Telesis Hitachi, with manual call points, warning devices, testing and handover.",
-    searchKeywords: ["industrial fire alarm installation Derbyshire", "Ajax EN54 Fire Hub installer", "warehouse fire alarm system", "commercial intruder alarm Derbyshire"]
+    searchKeywords: ["industrial fire alarm installation Derbyshire", "Ajax EN54 Fire Hub installer", "warehouse fire alarm system", "commercial intruder alarm Derbyshire"],
+    designPriorities: [
+      "Keep the EN54 fire-alarm functions and commercial intruder protection clearly defined while coordinating installation across one industrial premises.",
+      "Position the fire control, manual activation and warning devices so authorised users can understand normal, test and alarm conditions.",
+      "Test activation, warning and evacuation functions and complete a handover suited to an operational industrial environment.",
+    ],
+    outcome: "The industrial premises received a modern Ajax EN54 fire system alongside commercial intruder protection, with normal and alarm functions tested and the controls explained at handover.",
+    localContext: "Industrial fire and security projects in Derbyshire need to consider building use, operating areas, environmental conditions, access, existing records and how staff will respond to an event. Fire and intruder systems can be coordinated without blurring their separate purposes.",
+    faq: [
+      { q: "Can an industrial premises install fire and intruder systems in one project?", a: "Yes. Surveys, access and installation can be coordinated, but the fire alarm and intruder alarm remain separate systems with their own design, commissioning and ongoing service requirements." },
+      { q: "What information helps prepare an industrial fire-alarm quotation?", a: "Building plans, fire-risk information, existing system details, zone or device information, known faults, access restrictions and the intended programme all help define the survey and quotation scope." },
+    ]
   },
   {
     slug: "retford-former-bank-cctv",
@@ -239,7 +287,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Hikvision CCTV Installation Retford | 10-Camera Project",
     metaDescription: "A ten-camera Hikvision CCTV installation for a former bank in Retford DN22, including ColorVu cameras, recording and live viewing.",
-    searchKeywords: ["CCTV installation Retford", "Hikvision installer Retford", "commercial CCTV DN22", "business CCTV Nottinghamshire", "ColorVu CCTV installation"]
+    searchKeywords: ["CCTV installation Retford", "Hikvision installer Retford", "commercial CCTV DN22", "business CCTV Nottinghamshire", "ColorVu CCTV installation"],
+    designPriorities: [
+      "Cover entrances, internal rooms, corridors and the external approach across a substantial former bank rather than relying on a small number of wide views.",
+      "Use a ten-camera layout and new recorder to provide a clearer, more manageable recorded system across the multi-room property.",
+      "Configure a dedicated display and handover so the customer can move between live view and recorded footage confidently.",
+    ],
+    outcome: "The Retford property received ten Hikvision cameras, a new recorder and dedicated live viewing, creating a more practical CCTV system across internal and external areas.",
+    localContext: "Larger commercial properties in Retford can contain several separated rooms, corridors and entrances. A useful CCTV design needs a room-by-room survey, clear evidence objectives and enough recorder capacity for the final camera specification.",
+    faq: [
+      { q: "Can an older commercial CCTV system in Retford be upgraded?", a: "Often yes. The survey checks the existing cameras, cabling, recorder, power, network and image quality before confirming what can be retained and what should be replaced." },
+      { q: "Is ten cameras excessive for a former bank or multi-room building?", a: "Not necessarily. Camera quantity should follow the number of entrances, routes, rooms and external areas that need identifiable coverage rather than a fixed rule for every building." },
+    ]
   },
   {
     slug: "chesterfield-home-ajax-cctv-intruder",
@@ -262,7 +321,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Ajax Alarm & CCTV Installation Chesterfield | Residential",
     metaDescription: "Residential Ajax intruder alarm and black CCTV installation in Chesterfield, including keypad, recording and external warning device.",
-    searchKeywords: ["Ajax alarm installation Chesterfield", "home security Chesterfield", "intruder alarm installer Chesterfield", "residential CCTV Derbyshire", "smart home security Chesterfield"]
+    searchKeywords: ["Ajax alarm installation Chesterfield", "home security Chesterfield", "intruder alarm installer Chesterfield", "residential CCTV Derbyshire", "smart home security Chesterfield"],
+    designPriorities: [
+      "Combine intruder protection and CCTV around the home, garage and external approaches instead of treating each system as a separate afterthought.",
+      "Use black external cameras and considered device positions so the equipment sits naturally against the renovated brickwork.",
+      "Configure app control, keypad use, recording and the external warning device around straightforward everyday operation.",
+    ],
+    outcome: "The Chesterfield home received coordinated Ajax intruder protection and black CCTV, with the equipment selected and positioned around both security performance and the finished appearance of the property.",
+    localContext: "Residential security in Chesterfield should consider driveways, side access, garages, outbuildings, night mode, family routines and how visible equipment will look on the home. A property survey creates a more reliable design than a fixed online package.",
+    faq: [
+      { q: "Can a home alarm and CCTV system work together?", a: "They can be planned together and may share app or user workflows depending on the selected platforms. They still perform different roles: the alarm detects and warns, while CCTV records and helps verify activity." },
+      { q: "Can black CCTV cameras be used on a residential property?", a: "Yes. Black cameras can suit darker frames, soffits or brickwork, but the final model and position must still provide the required image and safe installation route." },
+    ]
   },
   {
     slug: "eufy-smart-home-cctv-chesterfield",
@@ -286,7 +356,18 @@ export const caseStudies: CaseStudy[] = [
     ],
     metaTitle: "Solar & Smart Home CCTV Chesterfield | Eufy Installation",
     metaDescription: "Smart-home CCTV installation in Chesterfield using Eufy solar and floodlight cameras, professionally positioned and configured by NOX.",
-    searchKeywords: ["solar CCTV Chesterfield", "wireless CCTV installation Chesterfield", "Eufy installer Chesterfield", "smart home security cameras Derbyshire"]
+    searchKeywords: ["solar CCTV Chesterfield", "wireless CCTV installation Chesterfield", "Eufy installer Chesterfield", "smart home security cameras Derbyshire"],
+    designPriorities: [
+      "Use a lower-disruption smart-camera approach where the property did not require a conventional wired recorder and full professional CCTV layout.",
+      "Position solar and floodlight cameras around key external areas with attention to charging, wireless communication, lighting and the intended view.",
+      "Complete the app setup and customer demonstration so alerts, live view and normal day-to-day controls are understood.",
+    ],
+    outcome: "The customer received solar and floodlight smart-camera coverage around the Chesterfield property with the devices positioned, configured and demonstrated by NOX.",
+    localContext: "Smart-home CCTV can suit some Chesterfield properties, particularly where lower disruption is important. It still needs realistic planning around Wi-Fi, charging, detection zones, subscriptions or local storage, night performance and the difference between smart cameras and a recorder-based system.",
+    faq: [
+      { q: "Is smart-home CCTV suitable for every house?", a: "No. It can be a good fit for selected homes, but larger properties, poor wireless coverage, continuous recording requirements or higher evidence needs may be better served by a professional recorder-based system." },
+      { q: "Do solar cameras still need careful positioning?", a: "Yes. The camera needs the required view, suitable wireless communication and enough useful light for charging, while avoiding positions that create excessive alerts or poor identification." },
+    ]
   },
   {
     slug: "dronfield-timber-perimeter",
@@ -302,7 +383,18 @@ export const caseStudies: CaseStudy[] = [
     systems: ["Five Ajax outdoor detectors", "External sirens", "Industrial perimeter protection", "Dronfield installation"],
     metaTitle: "Industrial Perimeter Protection Dronfield | Ajax Detection",
     metaDescription: "External Ajax perimeter protection for an industrial site in Dronfield, using five outdoor detectors and external warning sirens.",
-    searchKeywords: ["industrial security Dronfield", "Ajax perimeter protection Dronfield", "commercial intruder alarm Derbyshire", "outdoor detection Dronfield"]
+    searchKeywords: ["industrial security Dronfield", "Ajax perimeter protection Dronfield", "commercial intruder alarm Derbyshire", "outdoor detection Dronfield"],
+    designPriorities: [
+      "Create an earlier warning layer around vulnerable external approaches rather than relying only on detection after someone enters the building.",
+      "Position five outdoor detectors around the working site with detection zones selected for the actual routes, boundaries and operational movement.",
+      "Use external sirens and a clear handover so the perimeter layer supports the wider security response without being misunderstood as a physical barrier.",
+    ],
+    outcome: "Five Ajax outdoor detectors and external sirens were installed and tested around the Dronfield industrial site, providing a dedicated perimeter-warning layer across key approaches.",
+    localContext: "Industrial and yard security around Dronfield often involves open approaches, stock, vehicles and outbuildings. External detection must be surveyed around boundaries, animals, vegetation, public movement and daily operations to reduce avoidable alarms.",
+    faq: [
+      { q: "Can Ajax outdoor detectors protect a commercial yard?", a: "Yes, where the survey confirms suitable positions, communication range and detection routes. External detection should be designed as a separate layer and tested around the way the yard operates." },
+      { q: "Does perimeter detection replace CCTV or physical security?", a: "No. It adds earlier warning. CCTV, lighting, gates, locks, fencing, response procedures and internal detection may still be required as part of the wider site strategy." },
+    ]
   },
   {
     slug: "buxton-industrial-security",
@@ -321,7 +413,18 @@ export const caseStudies: CaseStudy[] = [
     gallery: [
       { src: "/images/image-refresh/commercial-cctv-buxton-monitor.webp", alt: "Nine-camera CCTV live view at an industrial premises in Buxton" }
     ],
-    searchKeywords: ["industrial CCTV Buxton", "commercial alarm installation Buxton", "security systems Derbyshire"]
+    searchKeywords: ["industrial CCTV Buxton", "commercial alarm installation Buxton", "security systems Derbyshire"],
+    designPriorities: [
+      "Plan the nine-camera CCTV layout around working areas and access routes across the industrial premises.",
+      "Coordinate the Ajax intruder alarm with the CCTV project so users receive a clearer joined-up security handover.",
+      "Allow for the site layout, network, operating conditions and future maintenance when selecting positions and recording equipment.",
+    ],
+    outcome: "The Buxton premises received a nine-camera CCTV system and Ajax intruder alarm as one coordinated industrial security project.",
+    localContext: "Industrial security in Buxton and the High Peak can involve larger plots, external approaches, challenging weather and separated working areas. The survey should confirm cable routes, wireless range, lighting, camera detail and access for future servicing.",
+    faq: [
+      { q: "Can CCTV and an intruder alarm be installed together at an industrial site?", a: "Yes. Coordinating the surveys and installation can improve camera coverage, detector planning, user setup and the final handover while keeping each system function clear." },
+      { q: "What affects the cost of industrial CCTV in Buxton?", a: "Camera quantity, image requirement, cable distances, access equipment, network, recorder storage, lighting, working restrictions and any existing equipment all affect the quotation." },
+    ]
   },
   {
     slug: "chesterfield-scrapyard-cctv",
@@ -337,7 +440,18 @@ export const caseStudies: CaseStudy[] = [
     requirement: "Install wider CCTV coverage using thirteen cameras across the scrapyard site.",
     delivery: "NOX installed thirteen 8MP AI turret cameras as the confirmed project scope.",
     systems: ["Thirteen CCTV cameras", "8MP AI turret cameras", "Commercial yard"],
-    searchKeywords: ["commercial CCTV Chesterfield", "scrapyard CCTV", "13 camera CCTV installation"]
+    searchKeywords: ["commercial CCTV Chesterfield", "scrapyard CCTV", "13 camera CCTV installation"],
+    designPriorities: [
+      "Use a higher camera count to cover vehicle routes, operational areas and the wider yard instead of relying on a few cameras with overly broad views.",
+      "Position 8MP AI turret cameras around the real movement and evidence requirements of a working commercial site.",
+      "Plan recording, access and future maintenance around an exposed yard environment and the daily operation of the business.",
+    ],
+    outcome: "NOX installed thirteen 8MP AI turret cameras across the Chesterfield scrapyard, creating wider recorded coverage of the yard and its operational routes.",
+    localContext: "Commercial yards in Chesterfield often need cameras across gates, vehicle routes, stock areas and building approaches. Camera quantity should follow the required evidence and site layout, with attention to lighting, weather, mounting height and recorder storage.",
+    faq: [
+      { q: "How many cameras does a commercial yard need?", a: "There is no fixed number. Gates, vehicle routes, stock areas, buildings, blind spots and the required identification detail determine the design. Larger yards commonly need more cameras than expected from the boundary size alone." },
+      { q: "Are 8MP cameras always the best choice?", a: "Resolution is only one factor. Lens, position, lighting, compression, recorder settings and the distance to the subject all affect whether the footage is useful." },
+    ]
   },
   {
     slug: "peak-electronic-security",
@@ -353,7 +467,18 @@ export const caseStudies: CaseStudy[] = [
     requirement: "Provide intruder protection and nine CCTV cameras for Peak Electronic.",
     delivery: "NOX installed the Ajax intruder system and nine-camera CCTV system within the agreed project.",
     systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"],
-    searchKeywords: ["commercial CCTV Derbyshire", "Ajax intruder alarm business", "nine camera CCTV system"]
+    searchKeywords: ["commercial CCTV Derbyshire", "Ajax intruder alarm business", "nine camera CCTV system"],
+    designPriorities: [
+      "Combine Ajax intruder protection with nine CCTV cameras so detection, recording and user control form one clear commercial security project.",
+      "Plan camera views around the premises and the areas that need live or recorded visibility rather than selecting positions from equipment quantity alone.",
+      "Configure the alarm, CCTV recording and customer handover around the people responsible for operating the systems.",
+    ],
+    outcome: "Peak Electronic received a coordinated Ajax intruder system and nine-camera CCTV installation with recording and live viewing included in the agreed project.",
+    localContext: "Combined commercial alarm and CCTV projects in Derbyshire work best when entrances, staff routes, valuable areas, external approaches, network and response requirements are considered together during the survey.",
+    faq: [
+      { q: "Why combine CCTV and an intruder alarm for a business?", a: "The alarm provides detection and warning while CCTV provides live and recorded visibility. Planning them together can improve coverage, verification and user handover." },
+      { q: "Can NOX maintain the systems after installation?", a: "Yes. Suitable CCTV and intruder systems can move into planned maintenance, monitoring or future upgrade support under a clearly defined service scope." },
+    ]
   },
   {
     slug: "sheffield-residential-security",
@@ -369,7 +494,18 @@ export const caseStudies: CaseStudy[] = [
     requirement: "Provide CCTV and intruder protection for the residential property.",
     delivery: "NOX installed the confirmed CCTV and intruder alarm systems and completed the customer handover.",
     systems: ["Residential CCTV", "Intruder alarm", "Sheffield installation"],
-    searchKeywords: ["home CCTV Sheffield", "intruder alarm Sheffield", "residential security South Yorkshire"]
+    searchKeywords: ["home CCTV Sheffield", "intruder alarm Sheffield", "residential security South Yorkshire"],
+    designPriorities: [
+      "Plan CCTV and intruder protection around one Sheffield home so entrances, external views and internal detection support the same customer requirement.",
+      "Keep normal control straightforward through a clear user setup and practical handover.",
+      "Position equipment around the property itself rather than applying a standard residential kit regardless of layout.",
+    ],
+    outcome: "The Sheffield property received coordinated residential CCTV and intruder protection, configured and handed over for straightforward everyday use.",
+    localContext: "Home security in Sheffield varies considerably between terraces, semis, detached homes and properties with garages or side access. A survey helps identify the right camera views, alarm zones, communication range and control method.",
+    faq: [
+      { q: "Do Sheffield homes need both CCTV and an intruder alarm?", a: "Not every property needs both, but they serve different purposes. The survey considers the risks, entrances, external areas, budget and preferred response before recommending one or both systems." },
+      { q: "Can a home security system send alerts to a phone?", a: "Yes. Suitable alarm and CCTV systems can provide app notifications, subject to the selected equipment, internet or cellular connection, permissions and configuration." },
+    ]
   },
   {
     slug: "chesterfield-kitchen-showroom",
@@ -385,7 +521,18 @@ export const caseStudies: CaseStudy[] = [
     requirement: "Protect the showroom with CCTV and intruder detection.",
     delivery: "NOX installed and configured the intruder and CCTV systems within the confirmed scope.",
     systems: ["Ajax intruder alarm", "Commercial CCTV", "Showroom security"],
-    searchKeywords: ["retail security Chesterfield", "showroom CCTV", "commercial alarm Chesterfield"]
+    searchKeywords: ["retail security Chesterfield", "showroom CCTV", "commercial alarm Chesterfield"],
+    designPriorities: [
+      "Protect the showroom without allowing visible security equipment to dominate the customer-facing design.",
+      "Coordinate intruder detection and CCTV around entrances, display areas and the way staff open, close and use the premises.",
+      "Complete a clear handover so the business can operate both systems confidently after installation.",
+    ],
+    outcome: "The Chesterfield showroom received coordinated Ajax intruder protection and commercial CCTV within a carefully presented customer-facing environment.",
+    localContext: "Retail and showroom security in Chesterfield needs to balance evidence, deterrence and reliable detection with the appearance and daily operation of the premises. Opening routines, public areas, stock, tills and rear access should all be considered.",
+    faq: [
+      { q: "Can CCTV and alarm equipment be discreet in a showroom?", a: "Yes. Equipment colour, position and cable routes can be planned around the interior, while still keeping the required coverage and detector performance." },
+      { q: "What should a showroom security survey include?", a: "Entrances, public and staff areas, valuable displays, stock rooms, tills, opening procedures, network, lighting and the required response should be reviewed." },
+    ]
   },
   {
     slug: "banana-industries-fire-security",
@@ -401,7 +548,18 @@ export const caseStudies: CaseStudy[] = [
     requirement: "Provide intruder and fire protection for the commercial premises.",
     delivery: "NOX installed the confirmed intruder and fire systems.",
     systems: ["Commercial intruder alarm", "Fire protection", "Joined-up installation"],
-    searchKeywords: ["commercial fire and security Derbyshire", "fire alarm installation", "business intruder alarm"]
+    searchKeywords: ["commercial fire and security Derbyshire", "fire alarm installation", "business intruder alarm"],
+    designPriorities: [
+      "Coordinate commercial intruder and fire protection through one project while retaining clear functions and records for each system.",
+      "Plan installation and handover around the operational premises and the people responsible for day-to-day control.",
+      "Create a route from installation into future servicing, faults and support without hiding the separate fire and security requirements.",
+    ],
+    outcome: "Banana Industries received coordinated commercial intruder and fire protection delivered through the same local NOX project team.",
+    localContext: "Businesses across Derbyshire often need fire and security work at the same premises. Coordinated surveys can reduce duplicated access and improve project planning, while fire alarms and intruder alarms remain separate systems with their own testing and service needs.",
+    faq: [
+      { q: "Can one contractor coordinate fire and intruder work?", a: "Yes. NOX can coordinate suitable projects through one team, while keeping the design, commissioning, operation and future servicing of each system clearly defined." },
+      { q: "Can the systems be serviced after installation?", a: "Yes. Fire-alarm servicing, intruder maintenance and monitoring can be quoted as clear ongoing services following handover." },
+    ]
   },
   {
     slug: "chatsworth-estate-cctv-upgrade",
@@ -417,7 +575,18 @@ export const caseStudies: CaseStudy[] = [
     requirement: "Upgrade the existing ten-camera CCTV system and recorder.",
     delivery: "NOX completed the confirmed ten-camera upgrade and new recorder installation.",
     systems: ["Ten-camera CCTV upgrade", "New recorder", "Estate security"],
-    searchKeywords: ["CCTV upgrade Derbyshire", "estate CCTV", "commercial CCTV recorder replacement"]
+    searchKeywords: ["CCTV upgrade Derbyshire", "estate CCTV", "commercial CCTV recorder replacement"],
+    designPriorities: [
+      "Assess the existing ten-camera system and recorder before confirming the practical upgrade scope.",
+      "Install a new recorder and retain a clear route to live view, playback and ongoing access for the customer.",
+      "Plan the upgrade around an established estate environment where existing equipment, cable routes and future support all matter.",
+    ],
+    outcome: "The Chatsworth Estate system was upgraded across ten cameras with a new recorder, improving the ongoing recording and access arrangement within the confirmed project scope.",
+    localContext: "CCTV upgrades at estates and larger Derbyshire properties should begin with an audit of cameras, cabling, power, recorder capacity, network and the evidence required. Replacement is not automatically necessary for every component.",
+    faq: [
+      { q: "Can an existing CCTV system be upgraded without replacing every camera?", a: "Sometimes. Compatibility, image quality, cabling, power and recorder support determine what can be retained. A takeover or upgrade survey should confirm this before quotation." },
+      { q: "What information helps with a CCTV upgrade quote?", a: "The recorder make, camera quantity, sample images, known faults, remote-access requirements, retention period and any plans to add cameras are useful starting details." },
+    ]
   }
 ]
 
@@ -526,14 +695,7 @@ export const areas = {
     intro: "Residential and commercial CCTV, alarm and fire safety projects across Mansfield and nearby Nottinghamshire areas.",
     focus: "NOX provides surveys, tailored quotations, professional installation and ongoing support for suitable projects outside the core Chesterfield area.",
     commercial: "Shops, offices, garages, yards and industrial units can combine security and fire services through one point of contact.",
-    nearby: "Sutton-in-Ashfield, Kirkby-in-Ashfield, Shirebrook and Worksop"
-  },
-  worksop: {
-    name: "Worksop", county: "Nottinghamshire",
-    intro: "Professional CCTV, intruder alarms, servicing and system takeovers for homes and businesses around Worksop.",
-    focus: "NOX can assess existing equipment, resolve faults and recommend a sensible upgrade route where replacement is not automatically required.",
-    commercial: "Commercial services include camera systems, alarms, monitoring, maintenance, fire alarm work and emergency lighting.",
-    nearby: "Retford, Barlborough, Clowne and north Nottinghamshire"
+    nearby: "Sutton-in-Ashfield, Kirkby-in-Ashfield, Shirebrook and Ripley"
   },
   rotherham: {
     name: "Rotherham", county: "South Yorkshire",
@@ -549,27 +711,118 @@ export const areas = {
     commercial: "Joined-up commercial support can cover CCTV, intruder alarms, fire alarms, emergency lighting and recurring service arrangements.",
     nearby: "Balby, Bessacarr, Armthorpe and South Yorkshire"
   },
-  barnsley: {
-    name: "Barnsley", county: "South Yorkshire",
-    intro: "Alarm, CCTV and fire safety services for homes, commercial premises and larger operational sites across Barnsley.",
-    focus: "NOX designs around the building and the customer requirement, selecting appropriate equipment rather than forcing every site onto one platform.",
-    commercial: "Commercial customers can combine installation, monitoring, annual maintenance and fire compliance support.",
-    nearby: "Wombwell, Hoyland, Penistone and Sheffield"
-  },
   retford: {
     name: "Retford", county: "Nottinghamshire",
     intro: "CCTV, intruder alarm and ongoing service support for residential and commercial properties around Retford.",
     focus: "NOX has completed a ten-camera CCTV installation at a former bank in Retford and supports further suitable projects in the area.",
     commercial: "Commercial options include high-coverage CCTV, alarms, takeovers, maintenance and fire safety services.",
-    nearby: "Worksop, Tuxford, Bawtry and north Nottinghamshire"
+    nearby: "Tuxford, Bawtry, Newark-on-Trent and north Nottinghamshire"
   },
   nottinghamshire: {
     name: "Nottinghamshire", county: "Nottinghamshire",
     intro: "Larger residential and commercial CCTV, alarm and fire safety projects across Nottinghamshire where the scope suits the NOX service area.",
     focus: "NOX provides direct communication from survey and quotation through to installation and ongoing support.",
     commercial: "Portfolio and multi-system work can combine CCTV, intruder alarms, fire alarms, emergency lighting, monitoring and maintenance.",
-    nearby: "Mansfield, Worksop, Retford and surrounding Nottinghamshire areas"
-  }
+    nearby: "Mansfield, Retford, Newark-on-Trent and surrounding Nottinghamshire areas"
+  },
+  eckington: {
+    name: "Eckington", county: "Derbyshire",
+    intro: "Local CCTV, intruder alarm and fire-safety support for homes, shops, offices and commercial premises around Eckington.",
+    focus: "NOX surveys entrances, driveways, garages, external approaches and existing equipment before confirming the right installation or takeover route.",
+    commercial: "Businesses can arrange CCTV, alarm, fire-alarm servicing, emergency-lighting testing, monitoring and maintenance from the Chesterfield-based team.",
+    nearby: "Mosborough, Killamarsh, Renishaw, Dronfield and the Sheffield border"
+  },
+  "clay-cross": {
+    name: "Clay Cross", county: "Derbyshire",
+    intro: "Fire and security systems for homes, landlords, shops, offices and commercial sites across Clay Cross and the surrounding villages.",
+    focus: "System design considers the property layout, existing alarms or cameras, driveways, outbuildings and the preferred method of app, keypad or monitored control.",
+    commercial: "Commercial services include CCTV, intruder alarms, fire alarms, emergency lighting, system takeovers and planned annual support.",
+    nearby: "North Wingfield, Tupton, Wingerworth, Ashover and Chesterfield"
+  },
+  bolsover: {
+    name: "Bolsover", county: "Derbyshire",
+    intro: "CCTV, intruder alarms and fire-safety services for homes, retail, industrial units and commercial premises around Bolsover.",
+    focus: "NOX provides surveys for new systems, upgrades and takeovers, with equipment selected around access, external areas, operating routines and future support.",
+    commercial: "Warehouses, workshops, shops and yards can combine recorded CCTV, alarms, fire work, emergency lighting, monitoring and servicing.",
+    nearby: "Clowne, Shirebrook, Staveley, Barlborough and Chesterfield"
+  },
+  alfreton: {
+    name: "Alfreton", county: "Derbyshire",
+    intro: "Professionally installed CCTV, intruder alarms, fire alarms and maintenance for homes and businesses around Alfreton.",
+    focus: "The survey reviews entrances, yards, customer or staff areas, existing systems, network and the ongoing response or service arrangement required.",
+    commercial: "Retail, offices, industrial estates and operational sites can access CCTV, alarms, fire-alarm servicing, emergency lighting and suitable takeovers.",
+    nearby: "Somercotes, Swanwick, South Normanton, Ripley and the Amber Valley"
+  },
+  wirksworth: {
+    name: "Wirksworth", county: "Derbyshire",
+    intro: "CCTV, intruder alarms and fire-safety support for homes, independent businesses, hospitality and rural properties around Wirksworth.",
+    focus: "NOX surveys access, older building construction, outbuildings, connectivity and the appearance of visible equipment before recommending the system.",
+    commercial: "Local businesses can arrange CCTV, alarm, fire-alarm servicing, emergency-lighting testing and suitable system takeovers through one team.",
+    nearby: "Matlock, Cromford, Carsington and the Derbyshire Dales"
+  },
+  belper: {
+    name: "Belper", county: "Derbyshire",
+    intro: "Professionally installed CCTV, intruder alarms and fire-safety systems for homes, retail, hospitality and commercial premises around Belper.",
+    focus: "Property-led surveys consider entrances, driveways, older buildings, customer areas, lighting, network and the preferred method of control.",
+    commercial: "NOX supports shops, offices, hospitality and operational sites with installation, servicing, takeovers, monitoring and planned upgrades.",
+    nearby: "Duffield, Milford, Heage and the Amber Valley"
+  },
+  ashbourne: {
+    name: "Ashbourne", county: "Derbyshire",
+    intro: "Tailored fire and security systems for homes, rural properties, hospitality, retail and commercial premises in and around Ashbourne.",
+    focus: "Surveys can account for longer driveways, detached buildings, older property construction, external approaches and reliable app or monitoring communication.",
+    commercial: "Hospitality and business customers can combine CCTV, alarms, fire-alarm work, emergency lighting and ongoing service support.",
+    nearby: "Hulland Ward, Brailsford, Carsington and the southern Peak District"
+  },
+  ripley: {
+    name: "Ripley", county: "Derbyshire",
+    intro: "CCTV, intruder alarms, fire alarms and ongoing maintenance for homes, shops, offices and industrial premises around Ripley.",
+    focus: "NOX provides a direct survey and quotation route from Chesterfield, with systems designed around access, external areas, existing equipment and everyday use.",
+    commercial: "Commercial support includes CCTV installation, intruder protection, fire-alarm servicing, emergency-lighting testing, monitoring and takeovers.",
+    nearby: "Swanwick, Codnor, Heanor, Alfreton and the Amber Valley"
+  },
+  derby: {
+    name: "Derby", county: "Derbyshire",
+    intro: "Commercial CCTV, intruder alarms, fire alarms and larger residential security projects across Derby and surrounding business areas.",
+    focus: "NOX has delivered a multi-camera Ajax CCTV installation at Continue Arcade in Derby and supports suitable installations, upgrades and service work across the city.",
+    commercial: "Offices, retail, leisure, industrial and multi-site customers can arrange surveys for CCTV, alarms, fire safety, monitoring and planned maintenance.",
+    nearby: "Pride Park, Chaddesden, Mickleover, Allestree and surrounding Derby districts"
+  },
+  nottingham: {
+    name: "Nottingham", county: "Nottinghamshire",
+    intro: "Commercial and larger residential fire and security projects across Nottingham where the site, programme and ongoing support requirements suit the NOX service area.",
+    focus: "Surveys focus on the property, system scale, existing equipment, network, access and the outcome the customer needs rather than a fixed product package.",
+    commercial: "Suitable work includes commercial CCTV, intruder alarms, fire systems, emergency lighting, takeovers, monitoring and coordinated multi-site support.",
+    nearby: "West Bridgford, Arnold, Beeston, Hucknall and wider Nottingham"
+  },
+  "newark-on-trent": {
+    name: "Newark-on-Trent", county: "Nottinghamshire",
+    intro: "CCTV, alarm and fire-safety support for suitable homes, businesses, warehouses and larger commercial premises around Newark-on-Trent.",
+    focus: "NOX can assess new and existing systems, confirm the practical survey route and provide a clear quotation for installation, takeover or recurring support.",
+    commercial: "Commercial services include recorded CCTV, intruder protection, fire-alarm work, emergency lighting, monitoring and planned maintenance.",
+    nearby: "Balderton, Southwell, Tuxford and the A1 corridor"
+  },
+  ilkeston: {
+    name: "Ilkeston", county: "Derbyshire",
+    intro: "Fire and security systems for homes, town-centre businesses, industrial premises and commercial developments around Ilkeston.",
+    focus: "NOX plans CCTV, alarms and fire work around the property, operating routine, existing systems and the level of ongoing support required.",
+    commercial: "Retail, offices, manufacturing and industrial customers can arrange CCTV, intruder alarms, fire alarms, emergency lighting and service takeovers.",
+    nearby: "Kirk Hallam, West Hallam, Sandiacre, Long Eaton and the Erewash area"
+  },
+  "sutton-in-ashfield": {
+    name: "Sutton-in-Ashfield", county: "Nottinghamshire",
+    intro: "CCTV, intruder alarms and fire-safety services for homes, shops, offices and commercial sites around Sutton-in-Ashfield.",
+    focus: "NOX provides property-led surveys for suitable projects, with clear consideration of entrances, public areas, stock, yards, existing equipment and future servicing.",
+    commercial: "Businesses can combine CCTV, alarms, fire-alarm work, emergency lighting, monitoring and planned maintenance through one regional contractor.",
+    nearby: "Kirkby-in-Ashfield, Mansfield, Huthwaite and the wider Ashfield district"
+  },
+  "long-eaton": {
+    name: "Long Eaton", county: "Derbyshire",
+    intro: "Commercial CCTV, intruder alarms and fire-safety support for businesses, landlords and larger residential projects around Long Eaton.",
+    focus: "Surveys establish the building layout, entrances, network, existing systems and the correct route for installation, takeover, repair or servicing.",
+    commercial: "Suitable projects include retail, offices, industrial units, hospitality, landlords and multi-site customers needing coordinated ongoing support.",
+    nearby: "Sandiacre, Sawley, Breaston, Ilkeston and the Nottingham-Derby corridor"
+  },
 } as const
 
 export const systemPages: Record<string, ServicePageData> = {

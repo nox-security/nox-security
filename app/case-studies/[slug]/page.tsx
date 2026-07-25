@@ -18,6 +18,19 @@ function relatedRoute(project: (typeof caseStudies)[number]) {
   return { service: { href: "/commercial", label: "Commercial Security" }, guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" }, cta: "Discuss a Similar Project" }
 }
 
+
+function projectArea(project: (typeof caseStudies)[number]) {
+  const location = project.location.toLowerCase()
+  if (location.includes("chesterfield") || location.includes("brimington")) return { href: "/areas/chesterfield", label: "Fire and security services in Chesterfield" }
+  if (location.includes("sheffield")) return { href: "/areas/sheffield", label: "Fire and security services in Sheffield" }
+  if (location.includes("dronfield")) return { href: "/areas/dronfield", label: "Fire and security services in Dronfield" }
+  if (location.includes("buxton")) return { href: "/areas/buxton", label: "Fire and security services in Buxton" }
+  if (location.includes("retford")) return { href: "/areas/retford", label: "Fire and security services in Retford" }
+  if (location.includes("derby,")) return { href: "/areas/derby", label: "Fire and security services in Derby" }
+  if (location.includes("chatsworth")) return { href: "/areas/bakewell", label: "Fire and security services around Chatsworth and Bakewell" }
+  return { href: "/areas/derbyshire", label: "Fire and security services across Derbyshire" }
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const project = caseStudies.find(item => item.slug === slug)
@@ -35,6 +48,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const project = caseStudies.find(item => item.slug === slug)
   if (!project) notFound()
   const related = relatedRoute(project)
+  const area = projectArea(project)
+  const caseFaqs = project.faq ?? []
 
   const schema = {
     "@context": "https://schema.org",
@@ -45,8 +60,20 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     author: { "@type": "Organization", name: site.name },
     publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: `${site.url}/images/projects/logo-nox-fire-security.jpg` } },
     about: project.systems,
+    keywords: project.searchKeywords?.join(", "),
+    articleSection: project.category,
+    contentLocation: { "@type": "Place", name: project.location },
     mainEntityOfPage: `${site.url}/case-studies/${project.slug}`
   }
+  const faqStructuredData = caseFaqs.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: caseFaqs.map(item => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a }
+    }))
+  } : null
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -58,7 +85,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   }
 
   return <>
-    <JsonLd data={schema}/><JsonLd data={breadcrumbSchema}/>
+    <JsonLd data={schema}/><JsonLd data={breadcrumbSchema}/>{faqStructuredData && <JsonLd data={faqStructuredData}/>}
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Projects", href: "/case-studies" }, { label: project.title }]}/>
     <section className="project-hero">
       <div className="project-hero-media"><img src={project.image} alt={project.alt}/></div>
@@ -93,16 +120,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <div className="project-gallery">{project.gallery.map((image, index) => <figure key={image.src} className={index === 0 ? "project-gallery-feature" : ""}><img src={image.src} alt={image.alt}/></figure>)}</div>
     </div></section>}
 
-    <section className="section"><div className="container split-grid"><div>
-      <SectionHeading eyebrow="What mattered in the design" title="Considerations for a similar property or site" text="The same equipment list can perform very differently depending on position, access, lighting, network, daily use and the support required afterwards."/>
-      <div className="feature-grid columns-2">
-        <article className="feature-card"><span className="feature-number">01</span><h3>Start with the requirement</h3><p>Identify the entrances, valuable areas, operational constraints, evidence needs or fire-safety information before choosing devices.</p></article>
-        <article className="feature-card"><span className="feature-number">02</span><h3>Plan the installation</h3><p>Access, cable paths, building construction, network, working hours and other trades affect both the design and the final quotation.</p></article>
-        <article className="feature-card"><span className="feature-number">03</span><h3>Make handover usable</h3><p>Users need clear controls, playback, app permissions, records and an understanding of what the system will and will not do.</p></article>
-        <article className="feature-card"><span className="feature-number">04</span><h3>Plan ongoing support</h3><p>Servicing, monitoring, faults, replacements and future expansion should remain visible after the initial installation.</p></article>
-      </div>
-    </div><aside className="dark-panel"><h3>Related information</h3><div className="related-links"><Link href={related.service.href}>{related.service.label} →</Link><Link href={related.guide.href}>{related.guide.label} →</Link><Link href="/case-studies">More NOX projects →</Link></div></aside></div></section>
+    <section className="section"><div className="container">
+      <SectionHeading eyebrow="Design and delivery" title={`How NOX approached this ${project.category.toLowerCase()} project`} text="The installed equipment matters, but the positions, property layout, operating routine and handover determine whether the finished system is genuinely useful."/>
+      <div className="feature-grid columns-3">{(project.designPriorities ?? [project.requirement, project.delivery, "Plan clear handover and ongoing support around the people using the property."]).map((item, index) => <article className="feature-card" key={item}><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{index === 0 ? "Coverage and requirement" : index === 1 ? "Installation planning" : "Control and handover"}</h3><p>{item}</p></article>)}</div>
+    </div></section>
 
-    <ConversionPanel title="Discuss a similar project with NOX" text="Tell us about the property, site, existing systems and what the project needs to achieve. We will confirm the right survey and quotation process." primaryLabel={related.cta} serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-final`}/>
+    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Completed outcome" title={`What was delivered at ${project.location}`} text={project.outcome ?? project.delivery}/><p className="lead-small">{project.localContext ?? `A similar project in ${project.location} should begin with a site survey covering access, existing equipment, required coverage and ongoing support.`}</p><div className="related-links"><Link href={area.href}>{area.label} →</Link><Link href={related.service.href}>{related.service.label} →</Link><Link href={related.guide.href}>{related.guide.label} →</Link><Link href="/case-studies">More NOX projects →</Link></div></div><aside className="dark-panel"><h3>Preparing a similar quotation</h3><p>Share the property type, postcode, entrances or areas to cover, existing system details, known faults, approximate scale and preferred timescale. Photographs or plans can help define the correct survey.</p><ContactActions primaryLabel={related.cta} compact serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-outcome`}/></aside></div></section>
+
+    {!!caseFaqs.length && <section className="section"><div className="container"><SectionHeading eyebrow="Project questions" title={`Questions about similar ${project.category.toLowerCase()} work`}/><div className="faq-list">{caseFaqs.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>}
+
+    <ConversionPanel title="Discuss a similar project with NOX" text={`Tell us about the property in ${project.location.split(",")[0]}, the existing systems and what the project needs to achieve. NOX will confirm the right survey and quotation process.`} primaryLabel={related.cta} serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-final`}/>
   </>
 }

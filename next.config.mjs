@@ -19,6 +19,8 @@ const nextConfig = {
       { source: '/commercial/fire-compliance', destination: '/fire-compliance', permanent: true },
       { source: '/areas', destination: '/areas-we-serve', permanent: true },
       { source: '/why-nox', destination: '/about-us', permanent: true },
+      { source: '/areas/worksop', destination: '/areas/retford', permanent: true },
+      { source: '/areas/barnsley', destination: '/areas/rotherham', permanent: true },
     ]
   },
   async headers() {

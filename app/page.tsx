@@ -100,13 +100,16 @@ export default function HomePage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Why NOX" title="Designed properly. Installed properly. Supported properly." text="A local, independent team combining modern technology with property-led advice, careful workmanship, clear handover and direct aftercare."/>
-      <FeatureGrid columns={4} items={[
-        { title: "Property-led design", text: "The building, access, routines, risks and existing equipment are understood before products are selected." },
-        { title: "Careful installation", text: "Device positions, cameras, panels and cable routes are planned around performance and the finish of the property." },
-        { title: "Clear handover", text: "Apps, playback, users, controls and practical next steps are explained without unnecessary jargon." },
-        { title: "Long-term local support", text: "Monitoring, servicing, repairs, takeovers and future upgrades remain connected to the same local team." }
+      <SectionHeading eyebrow="Why NOX" title="Designed properly. Installed properly. Supported properly." text="NOX is a founder-led local Fire & Security company. The advice, quotation, installation standard and ongoing support remain connected, so customers know who is accountable for the finished system."/>
+      <FeatureGrid columns={3} items={[
+        { title: "Property before products", text: "Entrances, routines, risks, appearance, existing equipment and future support are understood before the final device list is selected." },
+        { title: "A quotation with reasons", text: "Important cameras, detectors, panels and service options are explained around the job they need to do rather than hidden inside a fixed package." },
+        { title: "Careful installation finish", text: "Positions, cable routes, equipment colour, communication range and access for future maintenance are considered as part of the finished property." },
+        { title: "Usable handover", text: "Apps, playback, users, operating modes, records and practical limitations are explained clearly before the project is signed off." },
+        { title: "One team after installation", text: "Monitoring, servicing, repairs, takeovers and future upgrades stay connected to the same local business instead of disappearing into separate departments." },
+        { title: "Real evidence, not stock claims", text: "Genuine project photography, detailed case studies and verified customer reviews show the type of work NOX has actually delivered." }
       ]}/>
+      <div className="button-row"><Link className="button button-dark" href="/about-us">Meet NOX</Link><Link className="button button-outline" href="/case-studies">View Real Projects</Link></div>
     </div></section>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Feedback from residential and commercial customers" text="Genuine feedback about advice, workmanship, communication and handover."/><ReviewGrid names={["Ryan Hargreaves", "Rory Stirland", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read Customer Reviews</Link></div></div></section>
