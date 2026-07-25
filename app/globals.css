@@ -2226,3 +2226,9 @@ p { color: var(--muted); }
   .workmanship-gallery figure,
   .workmanship-gallery .workmanship-feature { grid-column: span 12; min-height: 320px; }
 }
+
+/* v4.8 homepage hero camera image */
+.home-hero-camera img { object-position: center 34%; }
+@media (max-width: 760px) {
+  .home-hero-camera img { object-position: center 30%; }
+}

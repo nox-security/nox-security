@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata(
   "CCTV, Fire Alarm & Security Systems | Derbyshire & South Yorkshire",
   "CCTV, fire alarm and intruder alarm installation and servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire for homes and businesses.",
   "/",
-  { image: "/images/image-refresh/homepage-hero-nox-property.webp", imageAlt: "NOX Fire and Security van outside a residential property" },
+  { image: "/images/image-refresh/homepage-hero-cameras.jpg", imageAlt: "NOX CCTV camera range product hero image" },
 )
 
 const residentialRoutes = [
@@ -36,20 +36,20 @@ export default function HomePage() {
     description: "Professional CCTV, fire alarm, intruder alarm and emergency-lighting services for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     path: "/",
     serviceType: ["CCTV installation", "Fire alarm installation and servicing", "Intruder alarm installation", "Emergency lighting", "Monitoring and maintenance"],
-    image: "/images/image-refresh/homepage-hero-nox-property.webp",
+    image: "/images/image-refresh/homepage-hero-cameras.jpg",
   })
   const homepageStructuredData = webPageSchema({
     name: "NOX Fire & Security",
     description: "CCTV, fire alarm, intruder alarm and emergency-lighting installation and servicing across the NOX service area.",
     path: "/",
-    image: "/images/image-refresh/homepage-hero-nox-property.webp",
+    image: "/images/image-refresh/homepage-hero-cameras.jpg",
   })
 
   return <>
     <JsonLd data={serviceStructuredData}/><JsonLd data={homepageStructuredData}/>
     <section className="home-hero home-hero-premium home-hero-choice">
-      <div className="home-hero-bg home-hero-single">
-        <img src="/images/image-refresh/homepage-hero-nox-property.webp" alt="NOX Fire and Security van outside a premium residential property" />
+      <div className="home-hero-bg home-hero-single home-hero-camera">
+        <img src="/images/image-refresh/homepage-hero-cameras.jpg" alt="NOX CCTV camera range displayed as the homepage background hero image" />
       </div>
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
