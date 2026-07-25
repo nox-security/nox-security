@@ -301,7 +301,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Night and operational conditions", paragraphs: ["Lighting, vehicle headlights, reflections, weather, mounting height and changing stock layouts can alter the usefulness of a view. A daytime photograph alone is not enough to design every position.", "Access equipment, production areas and trading hours also affect the installation cost and programme."] },
       { heading: "NOX commercial CCTV surveys", paragraphs: ["NOX plans commercial CCTV across retail, hospitality, offices, warehouses, yards and industrial sites. The proposal sets out camera purposes, recorder and storage, remote access and maintenance rather than presenting a camera count without context."] }
     ],
-    related: [{ href: "/commercial/cctv", label: "Plan a Commercial CCTV System" }, { href: "/commercial/industrial-warehouse-security", label: "Industrial & Warehouse Security" }, { href: "/case-studies/continue-arcade-commercial-cctv-derby", label: "Continue Arcade CCTV project" }]
+    related: [{ href: "/commercial/cctv", label: "Plan a CCTV System" }, { href: "/commercial/industrial-warehouse-security", label: "Industrial & Warehouse Security" }, { href: "/case-studies/continue-arcade-commercial-cctv-derby", label: "Continue Arcade CCTV project" }]
   },
   {
     slug: "how-many-cctv-cameras-does-a-house-need",

@@ -69,7 +69,7 @@ const pages: Record<string, CommercialPage> = {
     ],
     guide: { href: "/blog/how-many-cameras-does-a-commercial-site-need", label: "How many cameras does a commercial site need?" },
     cases: ["continue-arcade-commercial-cctv-derby", "chesterfield-scrapyard-cctv", "buxton-industrial-security", "retford-former-bank-cctv"],
-    ctaLabel: "Plan a Commercial CCTV System"
+    ctaLabel: "Plan a CCTV System"
   },
   "intruder-alarms": {
     title: "Commercial Intruder Alarm Installation in Chesterfield and Sheffield",
@@ -112,7 +112,7 @@ const pages: Record<string, CommercialPage> = {
     ],
     guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" },
     cases: ["telesis-hitachi-fire-intruder-system", "dronfield-timber-perimeter", "buxton-industrial-security", "banana-industries-fire-security"],
-    ctaLabel: "Discuss a Commercial Alarm"
+    ctaLabel: "Discuss an Intruder Alarm"
   },
   "industrial-warehouse-security": {
     title: "Industrial and warehouse security for larger operational sites",

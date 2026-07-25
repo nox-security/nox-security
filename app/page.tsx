@@ -62,7 +62,7 @@ export default function HomePage() {
           <a className="button button-outline" href={site.whatsapp}>WhatsApp</a>
         </div>
         <div className="hero-secondary-actions home-journey-links" aria-label="Choose a service route">
-          <Link href="/systems/cctv">CCTV Installation →</Link>
+          <Link href="/systems/home-cctv">Home CCTV →</Link>
           <Link href="/fire-compliance">Fire Alarm Systems →</Link>
           <Link href="/systems/intrusion-alarms">Intruder Alarms →</Link>
           <Link href="/service-plans">Servicing &amp; Monitoring →</Link>
@@ -90,7 +90,7 @@ export default function HomePage() {
     <section className="section"><div className="container">
       <SectionHeading eyebrow="Commercial CCTV & Security" title="CCTV, intruder protection and coordinated systems for working sites" text="Commercial CCTV is planned around evidence quality, operations, access, several buildings and ongoing support, with intruder protection added where the site requires it."/>
       <div className="feature-grid columns-3 media-route-grid commercial-media-grid">{commercialRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
-      <div className="button-row"><Link className="button button-dark" href="/commercial">Explore Commercial Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Book a Commercial Site Survey</Link></div>
+      <div className="button-row"><Link className="button button-dark" href="/commercial">Explore Commercial Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Book a Site Survey</Link></div>
     </div></section>
 
     <section className="section project-story-section"><div className="container">

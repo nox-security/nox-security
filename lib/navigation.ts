@@ -43,7 +43,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
     id: "fire",
     label: "Fire & Compliance",
     href: "/fire-compliance",
-    featured: { label: "Fire & Compliance Overview", href: "/fire-compliance" },
+    featured: { label: "Fire & Compliance", href: "/fire-compliance" },
     groups: [
       {
         heading: "Fire alarm systems",
