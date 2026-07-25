@@ -5,8 +5,9 @@ import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
   "Home CCTV & Ajax Alarm Installation | Chesterfield & Sheffield",
-  "Home CCTV installation, Ajax intruder alarms and perimeter protection across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with monitoring and maintenance available.",
-  "/residential"
+  "Home CCTV, Ajax intruder alarms and perimeter protection installed across Chesterfield, Sheffield and Derbyshire, with servicing and monitoring available.",
+  "/residential",
+  { image: "/images/image-refresh/home-cctv-live-view.webp", imageAlt: "Residential CCTV and Ajax alarm installation" },
 )
 
 const residentialSystems = [

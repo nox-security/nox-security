@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = systemPages[slug]
   if (!page) return {}
-  return pageMetadata(page.metaTitle, page.metaDescription, `/systems/${slug}`)
+  return pageMetadata(page.metaTitle, page.metaDescription, `/systems/${slug}`, { image: page.image, imageAlt: page.imageAlt })
 }
 
 export default async function SystemPage({ params }: { params: Promise<{ slug: string }> }) {

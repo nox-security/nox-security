@@ -6,7 +6,8 @@ import { pageMetadata } from "@/lib/site"
 export const metadata: Metadata = pageMetadata(
   "CCTV, Fire Alarm & Intruder Systems | NOX Fire & Security",
   "Explore CCTV installation, commercial Fire Alarm systems and Intruder Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
-  "/systems"
+  "/systems",
+  { image: "/images/image-refresh/homepage-hero-nox-property.webp", imageAlt: "NOX CCTV fire alarm and intruder systems" },
 )
 
 const residentialSystems = [

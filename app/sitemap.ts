@@ -3,10 +3,9 @@ import { areas, caseStudies, planPages, systemPages } from "@/lib/content"
 import { blogPosts } from "@/lib/blog"
 import { site } from "@/lib/site"
 import { landingPageList } from "@/lib/landing"
-import { indexableAreaSlugs } from "@/lib/seo"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+  const releaseDate = new Date("2026-07-25T00:00:00.000Z")
   const core = [
     "",
     "/residential",
@@ -34,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...core,
     ...Object.keys(systemPages).map(slug => `/systems/${slug}`),
     ...Object.keys(planPages).map(slug => `/service-plans/${slug}`),
-    ...Object.keys(areas).filter(slug => indexableAreaSlugs.has(slug)).map(slug => `/areas/${slug}`),
+    ...Object.keys(areas).map(slug => `/areas/${slug}`),
     ...blogPosts.map(post => `/blog/${post.slug}`),
     ...caseStudies.map(project => `/case-studies/${project.slug}`),
     ...landingPageList.map(page => `/services/${page.slug}`),
@@ -58,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return urls.map(path => ({
     url: `${site.url}${path}`,
-    lastModified: now,
+    lastModified: releaseDate,
     changeFrequency: path === "" || path === "/blog" ? "weekly" : "monthly",
     priority: path === "" ? 1 : priorityRoutes.has(path) ? 0.9 : ["/residential", "/commercial", "/service-plans"].includes(path) ? 0.8 : 0.7,
   }))

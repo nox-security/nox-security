@@ -6,7 +6,8 @@ import { pageMetadata } from "@/lib/site"
 export const metadata: Metadata = pageMetadata(
   "Fire & Security Projects and Case Studies",
   "Explore genuine NOX residential, fire, commercial CCTV, intruder, industrial, integrated and takeover projects across Chesterfield, Sheffield, Derbyshire and nearby areas.",
-  "/case-studies"
+  "/case-studies",
+  { image: "/images/revisions/commercial-cctv-industrial-building.jpg", imageAlt: "Commercial CCTV and security project by NOX" },
 )
 
 const workmanshipImages = [

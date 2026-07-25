@@ -6,7 +6,8 @@ import { pageMetadata, site } from "@/lib/site"
 export const metadata: Metadata = pageMetadata(
   "Contact NOX Fire & Security | Chesterfield",
   "Contact NOX Fire & Security about residential alarms, CCTV, commercial fire systems, emergency lighting, monitoring, maintenance and system takeovers.",
-  "/contact"
+  "/contact",
+  { image: "/images/projects/bottle-thyme-vehicles.jpg", imageAlt: "NOX Fire and Security vehicles in Chesterfield" },
 )
 
 export default function ContactPage() {

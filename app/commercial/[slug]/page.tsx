@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Breadcrumbs, CaseStudyGrid, Checklist, ContactActions, ConversionPanel, FeatureGrid, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
-import { pageMetadata, site } from "@/lib/site"
+import { AreaLinks, GuideLinks, Breadcrumbs, CaseStudyGrid, Checklist, ContactActions, ConversionPanel, EnquiryPreparation, FeatureGrid, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip, guideSlugsFor } from "@/components/marketing"
+import { pageMetadata } from "@/lib/site"
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema"
 
 type CommercialPage = {
   title: string
@@ -291,7 +292,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = pages[slug]
   if (!page) return {}
-  return pageMetadata(page.metaTitle, page.metaDescription, `/commercial/${slug}`)
+  return pageMetadata(page.metaTitle, page.metaDescription, `/commercial/${slug}`, { image: page.image, imageAlt: page.alt })
 }
 
 export default async function CommercialDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -299,8 +300,15 @@ export default async function CommercialDetailPage({ params }: { params: Promise
   const page = pages[slug]
   if (!page) notFound()
 
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) }
-  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: page.title, description: page.intro, serviceType: page.eyebrow, provider: { "@type": "LocalBusiness", name: site.name, url: site.url }, areaServed: ["Chesterfield", "Sheffield", "Derbyshire"], url: `${site.url}/commercial/${slug}` }
+  const faqStructuredData = faqSchema(page.faq)
+  const serviceStructuredData = serviceSchema({
+    name: page.title,
+    description: page.intro,
+    path: `/commercial/${slug}`,
+    serviceType: page.eyebrow,
+    audience: "Commercial",
+    image: page.image,
+  })
   const commercialReviewNames = slug === "cctv"
     ? ["Jez S", "Nathan De La Rosa", "Jeremy Bunting"]
     : slug === "fire-compliance" || slug === "integrated-fire-security"
@@ -308,14 +316,14 @@ export default async function CommercialDetailPage({ params }: { params: Promise
       : slug === "intruder-alarms" || slug === "yard-perimeter-security"
         ? ["Nathan De La Rosa", "Jez S", "Rory Stirland"]
         : ["Jez S", "Rory Stirland", "Jeremy Bunting"]
-  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Commercial Security", item: `${site.url}/commercial` },
-    { "@type": "ListItem", position: 3, name: page.title, item: `${site.url}/commercial/${slug}` }
-  ] }
+  const breadcrumbStructuredData = breadcrumbSchema([
+    { name: "Home", path: "" },
+    { name: "Commercial Security", path: "/commercial" },
+    { name: page.title, path: `/commercial/${slug}` },
+  ])
 
   return <>
-    <JsonLd data={faqSchema}/><JsonLd data={serviceSchema}/><JsonLd data={breadcrumbSchema}/>
+    <JsonLd data={faqStructuredData}/><JsonLd data={serviceStructuredData}/><JsonLd data={breadcrumbStructuredData}/>
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Commercial Security", href: "/commercial" }, { label: page.title }]}/>
     <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} image={page.image} imageAlt={page.alt}>
       <ContactActions primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}`}/>
@@ -328,6 +336,9 @@ export default async function CommercialDetailPage({ params }: { params: Promise
     <section className="section"><div className="container"><SectionHeading eyebrow="What the design needs to solve" title="System decisions linked to the operational requirement"/><FeatureGrid columns={4} items={page.details}/></div></section>
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a clearer proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Real commercial and industrial work" text="Genuine property and installation photography with confirmed service scopes."/><CaseStudyGrid slugs={page.cases}/></div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial guides" title={`Plan ${page.eyebrow.toLowerCase()} with clearer information`} text="Detailed answers for decision-makers comparing systems, preparing a site survey or planning ongoing servicing."/><GuideLinks slugs={guideSlugsFor(`${slug} ${page.eyebrow}`)}/></div></section>
+    <AreaLinks title={`${page.eyebrow} across Chesterfield, Sheffield and Derbyshire`}/>
+    <EnquiryPreparation topic={page.eyebrow.toLowerCase()} commercial/>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid names={commercialReviewNames}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Common questions" title="Answers before a commercial survey"/><div className="faq-list">{page.faq.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>
     <ConversionPanel title={page.ctaLabel} text="Tell us the site type, location, existing systems, approximate project scale and what the new system needs to achieve. NOX will guide the survey and proposal route." primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-final`}/>

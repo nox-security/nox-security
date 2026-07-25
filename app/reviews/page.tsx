@@ -5,7 +5,8 @@ import { pageMetadata } from "@/lib/site"
 export const metadata: Metadata = pageMetadata(
   "NOX Customer Reviews | Fire & Security Chesterfield",
   "Read verified customer feedback about NOX Fire & Security installations, advice, workmanship, handover and aftercare across Chesterfield, Sheffield and Derbyshire.",
-  "/reviews"
+  "/reviews",
+  { image: "/images/resent-installation/57E4FDA7-0863-4C16-B327-DD248E0E2D9C.png", imageAlt: "NOX Fire and Security customer installation" },
 )
 
 export default function ReviewsPage() {

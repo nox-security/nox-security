@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CaseStudyGrid, ContactActions, ConversionPanel, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { CaseStudyGrid, ContactActions, ConversionPanel, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata } from "@/lib/site"
+import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
   "Commercial Fire Alarm Installation & Servicing | Chesterfield",
-  "Commercial Fire Alarm Installation and Fire Alarm Servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire, including Ajax EN54 systems, repairs, takeovers and emergency lighting.",
-  "/fire-compliance"
+  "Commercial fire alarm installation, servicing, repairs, takeovers and emergency lighting across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+  "/fire-compliance",
+  { image: "/images/image-refresh/en54-fire-hub.webp", imageAlt: "Ajax EN54 commercial fire alarm control equipment" },
 )
 
 const installationRoutes = [
@@ -59,7 +61,13 @@ const en54Highlights = [
 ]
 
 export default function FireCompliancePage() {
+  const description = "Commercial fire alarm installation, servicing, repairs, takeovers and emergency-lighting support across Chesterfield, Sheffield and Derbyshire."
+  const structuredData = [
+    serviceSchema({ name: "Commercial fire alarm installation and servicing", description, path: "/fire-compliance", serviceType: ["Fire alarm installation", "Fire alarm servicing", "Emergency lighting", "Fire alarm takeovers"], audience: "Commercial", image: "/images/image-refresh/en54-fire-hub.webp" }),
+    webPageSchema({ name: "Fire & Compliance", description, path: "/fire-compliance", image: "/images/image-refresh/en54-fire-hub.webp" }),
+  ]
   return <>
+    {structuredData.map((data, index) => <JsonLd data={data} key={index}/>)}
     <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, emergency lighting and coordinated compliance support across Chesterfield, Sheffield and Derbyshire. Each service is kept clear so customers can see the initial project, recurring work and any remedials separately." image="/images/image-refresh/en54-fire-hub.webp" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
       <ContactActions primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-hub"/>
     </PageHero>

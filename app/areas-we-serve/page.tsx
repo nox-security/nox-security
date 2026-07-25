@@ -6,8 +6,9 @@ import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
   "Areas We Cover | Fire & Security Across Derbyshire",
-  "NOX is based in Chesterfield and covers Sheffield, Derbyshire, the Peak District and surrounding South Yorkshire and Nottinghamshire areas for suitable fire and security projects.",
-  "/areas-we-serve"
+  "Fire alarm, CCTV, intruder alarm and emergency-lighting services from Chesterfield across Derbyshire, Sheffield, the Peak District and nearby areas.",
+  "/areas-we-serve",
+  { image: "/images/hero-house.webp", imageAlt: "NOX fire and security service area across Derbyshire" },
 )
 
 const primary = ["chesterfield","sheffield","derbyshire","dronfield","matlock","bakewell","baslow","buxton","hope-valley","hathersage","darley-dale","ashover"]

@@ -5,8 +5,9 @@ import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
   "CCTV, Alarm & Fire Servicing | Chesterfield & Sheffield",
-  "CCTV maintenance, intruder alarm servicing and monitoring, Fire Alarm Servicing, emergency lighting, repairs and system takeovers across Chesterfield, Sheffield and Derbyshire.",
-  "/service-plans"
+  "CCTV maintenance, alarm servicing and monitoring, fire alarm servicing, emergency lighting, repairs and takeovers across Chesterfield, Sheffield and Derbyshire.",
+  "/service-plans",
+  { image: "/images/revisions/intruder-maintenance-system-takeover.jpg", imageAlt: "Security system servicing and maintenance" },
 )
 
 const primarySupport = [

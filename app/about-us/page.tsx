@@ -6,7 +6,8 @@ import { pageMetadata } from "@/lib/site"
 export const metadata: Metadata = pageMetadata(
   "About NOX Fire & Security | Our Story",
   "Meet the people behind NOX Fire & Security and discover the journey from security-industry experience to accountable local installation, servicing and aftercare.",
-  "/about-us"
+  "/about-us",
+  { image: "/images/projects/logo-nox-fire-security.jpg", imageAlt: "NOX Fire and Security logo" },
 )
 
 export default function AboutPage() {

@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return pageMetadata(
     project.metaTitle ?? `${project.title} | NOX Fire & Security`,
     project.metaDescription ?? project.summary,
-    `/case-studies/${project.slug}`
+    `/case-studies/${project.slug}`,
+    { image: project.image, imageAlt: project.alt, type: "article" }
   )
 }
 

@@ -6,7 +6,8 @@ import { pageMetadata } from "@/lib/site"
 export const metadata: Metadata = pageMetadata(
   "Fire & Security Guides and FAQs",
   "Detailed NOX guides covering fire alarms, emergency lighting, CCTV, Ajax intruder alarms, monitoring, maintenance, repairs and system takeovers.",
-  "/blog"
+  "/blog",
+  { image: "/images/image-refresh/fire-system-takeover-panel.webp", imageAlt: "NOX fire and security guides" },
 )
 
 export default function BlogPage() {

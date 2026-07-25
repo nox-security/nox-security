@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = getBlogPost(slug)
   if (!post) return {}
-  return pageMetadata(post.metaTitle, post.metaDescription, `/blog/${post.slug}`)
+  return pageMetadata(post.metaTitle, post.metaDescription, `/blog/${post.slug}`, { image: post.image, imageAlt: post.imageAlt, type: "article" })
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

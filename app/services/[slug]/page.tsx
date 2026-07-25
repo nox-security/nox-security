@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Breadcrumbs, CaseStudyGrid, Checklist, ContactActions, ConversionPanel, FeatureGrid, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { AreaLinks, GuideLinks, Breadcrumbs, CaseStudyGrid, Checklist, ContactActions, ConversionPanel, EnquiryPreparation, FeatureGrid, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip, guideSlugsFor } from "@/components/marketing"
 import { localLandingPages } from "@/lib/landing"
-import { pageMetadata, site } from "@/lib/site"
+import { pageMetadata } from "@/lib/site"
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema"
 
 export function generateStaticParams() {
   return Object.keys(localLandingPages).map(slug => ({ slug }))
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = localLandingPages[slug]
   if (!page) return {}
-  return pageMetadata(page.metaTitle, page.metaDescription, `/services/${page.slug}`)
+  return pageMetadata(page.metaTitle, page.metaDescription, `/services/${page.slug}`, { image: page.image, imageAlt: page.imageAlt })
 }
 
 export default async function LocalServicePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -37,34 +38,24 @@ export default async function LocalServicePage({ params }: { params: Promise<{ s
   if (!page) notFound()
   const context = contextFor(page.slug, page.serviceType, page.audience)
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceStructuredData = serviceSchema({
     name: page.title,
     description: page.metaDescription,
+    path: `/services/${page.slug}`,
     serviceType: page.serviceType,
-    provider: { "@type": "LocalBusiness", name: site.name, url: site.url, telephone: site.phone },
-    areaServed: page.location,
+    areaServed: { "@type": "AdministrativeArea", name: page.location },
     audience: page.audience,
-    url: `${site.url}/services/${page.slug}`
-  }
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: page.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } }))
-  }
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-      { "@type": "ListItem", position: 2, name: "Services", item: `${site.url}/services` },
-      { "@type": "ListItem", position: 3, name: page.title, item: `${site.url}/services/${page.slug}` }
-    ]
-  }
+    image: page.image,
+  })
+  const faqStructuredData = faqSchema(page.faq)
+  const breadcrumbStructuredData = breadcrumbSchema([
+    { name: "Home", path: "" },
+    { name: "Services", path: "/services" },
+    { name: page.title, path: `/services/${page.slug}` },
+  ])
 
   return <>
-    <JsonLd data={serviceSchema}/><JsonLd data={faqSchema}/><JsonLd data={breadcrumbSchema}/>
+    <JsonLd data={serviceStructuredData}/><JsonLd data={faqStructuredData}/><JsonLd data={breadcrumbStructuredData}/>
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: page.title }]}/>
     <PageHero eyebrow={`${page.eyebrow} · ${page.audience}`} title={page.title} intro={page.intro} image={page.image} imageAlt={page.imageAlt}>
       <ContactActions primaryLabel={context.label} audience={page.audience} serviceCategory={page.serviceType} enquiryType={context.type} sourceLabel={page.slug}/>
@@ -74,6 +65,9 @@ export default async function LocalServicePage({ params }: { params: Promise<{ s
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="How the work moves forward" title="Enquiry, assessment, delivery and ongoing support"/><FeatureGrid items={page.process} columns={4}/></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Genuine installation and takeover experience" text="Real work connected to the system, property type or service being researched."/><CaseStudyGrid slugs={page.caseStudySlugs}/></div></section>
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Related routes" title="Continue into the right system, plan or guide"/><div className="related-links">{page.related.map(item => <Link href={item.href} key={item.href}>{item.label} →</Link>)}</div></div><aside className="dark-panel"><h3>What affects the quotation</h3><p>Property or site size, equipment quantities, existing faults, access, cable routes, required recording or monitoring, several buildings and remedial work can all change the scope.</p></aside></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Helpful local guides" title={`Research ${page.serviceType.toLowerCase()} before the next step`} text={`Detailed answers for customers comparing options in ${page.location}, including installation, maintenance and suitable existing-system support.`}/><GuideLinks slugs={guideSlugsFor(`${page.slug} ${page.serviceType}`)}/></div></section>
+    <AreaLinks title={`Fire and security services near ${page.location}`}/>
+    <EnquiryPreparation topic={page.serviceType.toLowerCase()} commercial={page.audience !== "Residential"}/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Advice, workmanship and local support"/><ReviewGrid names={page.serviceType.toLowerCase().includes("fire") || page.serviceType.toLowerCase().includes("emergency")
       ? ["Rory Stirland", "Nathan De La Rosa", "Jez S"]
       : page.serviceType.toLowerCase().includes("cctv")

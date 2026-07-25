@@ -2,11 +2,13 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { CaseStudyGrid, ConversionPanel, FeatureGrid, JsonLd, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
+import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
   "CCTV, Fire Alarm & Security Systems | Derbyshire & South Yorkshire",
-  "Professional CCTV installation, commercial Fire Alarm Installation and Servicing, and Intruder Alarm Systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
-  "/"
+  "CCTV, fire alarm and intruder alarm installation and servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire for homes and businesses.",
+  "/",
+  { image: "/images/image-refresh/homepage-hero-nox-property.webp", imageAlt: "NOX Fire and Security van outside a residential property" },
 )
 
 const residentialRoutes = [
@@ -29,17 +31,22 @@ const commercialRoutes = [
 ]
 
 export default function HomePage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "CCTV, Fire Alarm and Intruder Alarm installation and servicing",
-    provider: { "@type": "LocalBusiness", name: site.name },
-    areaServed: ["Chesterfield", "Sheffield", "Derbyshire", "South Yorkshire"],
-    serviceType: ["CCTV installation", "Commercial Fire Alarm Installation and Servicing", "Intruder Alarm Installation", "Emergency lighting", "Monitoring", "Maintenance", "System takeovers"]
-  }
+  const serviceStructuredData = serviceSchema({
+    name: "CCTV, fire alarm and intruder alarm installation and servicing",
+    description: "Professional CCTV, fire alarm, intruder alarm and emergency-lighting services for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+    path: "/",
+    serviceType: ["CCTV installation", "Fire alarm installation and servicing", "Intruder alarm installation", "Emergency lighting", "Monitoring and maintenance"],
+    image: "/images/image-refresh/homepage-hero-nox-property.webp",
+  })
+  const homepageStructuredData = webPageSchema({
+    name: "NOX Fire & Security",
+    description: "CCTV, fire alarm, intruder alarm and emergency-lighting installation and servicing across the NOX service area.",
+    path: "/",
+    image: "/images/image-refresh/homepage-hero-nox-property.webp",
+  })
 
   return <>
-    <JsonLd data={serviceSchema}/>
+    <JsonLd data={serviceStructuredData}/><JsonLd data={homepageStructuredData}/>
     <section className="home-hero home-hero-premium home-hero-choice">
       <div className="home-hero-bg home-hero-single">
         <img src="/images/image-refresh/homepage-hero-nox-property.webp" alt="NOX Fire and Security van outside a premium residential property" />

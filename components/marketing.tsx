@@ -1,8 +1,9 @@
 import Link from "next/link"
-import { caseStudies, verifiedReviews, type PlanPageData, type ServicePageData, type VerifiedReview } from "@/lib/content"
+import { areas, caseStudies, verifiedReviews, type PlanPageData, type ServicePageData, type VerifiedReview } from "@/lib/content"
 import { blogPosts } from "@/lib/blog"
 import { site } from "@/lib/site"
 import { localLandingPages } from "@/lib/landing"
+import { breadcrumbSchema as buildBreadcrumbSchema, faqSchema as buildFaqSchema, serviceSchema as buildServiceSchema } from "@/lib/schema"
 
 export function JsonLd({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
@@ -35,9 +36,9 @@ export function ContactActions({
   const query = params.toString()
   const quoteHref = `/get-quote${query ? `?${query}` : ""}#quote-form`
   return <div className={`button-row contact-action-row ${compact ? "button-row-compact" : ""}`}>
-    <Link className={`button ${dark ? "button-dark" : "button-light"}`} href={quoteHref}>{primaryLabel}</Link>
-    <a className="button button-whatsapp" href={site.whatsapp} aria-label="WhatsApp NOX Fire and Security">WhatsApp NOX</a>
-    <a className="button button-outline" href={site.phoneHref} aria-label={`Call NOX on ${site.phone}`}>Call {site.phone}</a>
+    <Link className={`button ${dark ? "button-dark" : "button-light"}`} href={quoteHref} data-cta="quote" data-source-page={sourceLabel ?? "sitewide"}>{primaryLabel}</Link>
+    <a className="button button-whatsapp" href={site.whatsapp} aria-label="WhatsApp NOX Fire and Security" data-cta="whatsapp" data-source-page={sourceLabel ?? "sitewide"}>WhatsApp NOX</a>
+    <a className="button button-outline" href={site.phoneHref} aria-label={`Call NOX on ${site.phone}`} data-cta="phone" data-source-page={sourceLabel ?? "sitewide"}>Call {site.phone}</a>
   </div>
 }
 
@@ -163,9 +164,69 @@ export function ReviewGrid({ limit, names }: { limit?: number; names?: string[] 
   return <div className="review-grid">{list.map(item => <article className="review-card" key={item.name}><span className="stars" aria-label={`${item.rating} out of 5 stars`}>{"★".repeat(item.rating)}</span><blockquote>“{item.text}”</blockquote><strong>{item.name}</strong><span>{item.service}</span></article>)}</div>
 }
 
-export function BlogGrid({ limit }: { limit?: number }) {
-  const list = typeof limit === "number" ? blogPosts.slice(0, limit) : blogPosts
+export function BlogGrid({ limit, slugs }: { limit?: number; slugs?: string[] }) {
+  let list = slugs?.length ? blogPosts.filter(post => slugs.includes(post.slug)) : blogPosts
+  if (typeof limit === "number") list = list.slice(0, limit)
   return <div className="blog-grid">{list.map(post => <article className="blog-card" key={post.slug}><img src={post.image} alt={post.imageAlt} style={post.imagePosition ? { objectPosition: post.imagePosition } : undefined}/><div><span className="micro-label">{post.category}</span><h3>{post.title}</h3><p>{post.excerpt}</p><Link className="text-link" href={`/blog/${post.slug}`}>Read guide →</Link></div></article>)}</div>
+}
+
+export function GuideLinks({ slugs }: { slugs: string[] }) {
+  const list = blogPosts.filter(post => slugs.includes(post.slug))
+  return <div className="guide-link-grid">{list.map(post => <Link href={`/blog/${post.slug}`} key={post.slug}><span>{post.category}</span><strong>{post.title}</strong><small>{post.excerpt}</small></Link>)}</div>
+}
+
+export function AreaLinks({ slugs = ["chesterfield", "sheffield", "derbyshire"], title = "Fire and security services in the local area" }: { slugs?: string[]; title?: string }) {
+  const list = slugs.map(slug => ({ slug, area: areas[slug as keyof typeof areas] })).filter(item => Boolean(item.area))
+  return <section className="section local-area-section"><div className="container"><SectionHeading eyebrow="Local coverage" title={title} text="Use the most relevant local page for area-specific services, nearby coverage and genuine NOX project experience."/><div className="area-route-grid">{list.map(({ slug, area }) => <Link href={`/areas/${slug}`} key={slug}><span>{area.county}</span><strong>{area.name}</strong><small>{area.intro}</small></Link>)}</div></div></section>
+}
+
+export function guideSlugsFor(value: string) {
+  const key = value.toLowerCase()
+  if (key.includes("emergency")) return [
+    "how-often-should-emergency-lighting-be-tested",
+    "what-is-a-three-hour-emergency-lighting-test",
+    "can-fire-alarm-and-emergency-lighting-visits-be-combined",
+  ]
+  if (key.includes("fire")) return [
+    "what-information-is-needed-for-a-fire-alarm-quote",
+    "how-often-should-a-commercial-fire-alarm-be-serviced",
+    "can-a-new-company-take-over-an-existing-fire-alarm",
+  ]
+  if (key.includes("cctv") || key.includes("camera")) return [
+    "choosing-cctv-for-home-or-business",
+    "how-many-cctv-cameras-does-a-house-need",
+    "how-often-should-cctv-be-maintained",
+  ]
+  if (key.includes("monitor")) return [
+    "app-alerts-versus-professional-alarm-monitoring",
+    "how-often-should-an-intruder-alarm-be-serviced",
+    "taking-over-an-existing-security-system",
+  ]
+  if (key.includes("alarm") || key.includes("intruder") || key.includes("perimeter") || key.includes("security")) return [
+    "how-much-does-an-ajax-alarm-cost",
+    "can-an-alarm-protect-a-garage-or-outbuilding",
+    "how-often-should-an-intruder-alarm-be-serviced",
+  ]
+  return [
+    "taking-over-an-existing-security-system",
+    "how-often-should-security-systems-be-serviced",
+    "choosing-cctv-for-home-or-business",
+  ]
+}
+
+export function EnquiryPreparation({ topic = "fire or security system", commercial = false }: { topic?: string; commercial?: boolean }) {
+  const items = commercial
+    ? [
+        { title: "Premises and postcode", text: "Include the building use, location, access restrictions and whether the site is occupied while work is planned." },
+        { title: "Existing system details", text: "Share panel, recorder or equipment photographs, approximate device quantities, known faults and available records." },
+        { title: "Required outcome", text: `Explain what the ${topic} needs to achieve, any insurer or compliance requirement and the preferred project timescale.` },
+      ]
+    : [
+        { title: "Property and postcode", text: "Tell us the property type, main entrances, driveway, garage, outbuildings and the areas that matter most." },
+        { title: "Current equipment", text: "Share photographs or details of any existing alarm, cameras, recorder, fire panel or known faults." },
+        { title: "What you want to improve", text: `Explain the concern, the preferred controls and what you need the ${topic} to do in everyday use.` },
+      ]
+  return <section className="section section-alt enquiry-preparation"><div className="container"><SectionHeading eyebrow="A clearer quotation" title="What to include with your enquiry" text="These details help NOX route the enquiry correctly and reduce unnecessary back-and-forth before a survey, service visit or quotation."/><FeatureGrid items={items} columns={3}/></div></section>
 }
 
 export function ConversionPanel({
@@ -193,13 +254,13 @@ function FaqSection({ faq }: { faq: { q: string; a: string }[] }) {
 }
 
 export function ServiceLanding({ data }: { data: ServicePageData }) {
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) }
-  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: data.title, description: data.intro, provider: { "@type": "LocalBusiness", name: site.name, url: site.url }, areaServed: ["Chesterfield", "Sheffield", "Derbyshire"], url: `${site.url}/systems/${data.slug}` }
-  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Systems", item: `${site.url}/systems` },
-    { "@type": "ListItem", position: 3, name: data.title, item: `${site.url}/systems/${data.slug}` }
-  ] }
+  const faqSchema = buildFaqSchema(data.faq)
+  const serviceSchema = buildServiceSchema({ name: data.title, description: data.intro, path: `/systems/${data.slug}`, serviceType: data.serviceCategory ?? data.eyebrow, audience: data.audience, image: data.image })
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", path: "" },
+    { name: "Systems", path: "/systems" },
+    { name: data.title, path: `/systems/${data.slug}` },
+  ])
   const aftercareLinks = data.slug === "fire-safety"
     ? [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" }, { href: "/service-plans/emergency-lighting-servicing", label: "Emergency lighting servicing" }]
     : data.slug === "cctv"
@@ -277,6 +338,9 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     <section className="section service-plan-feature"><div className="container split-grid"><div><SectionHeading eyebrow="Servicing, maintenance and aftercare" title={data.slug === "fire-safety" ? "Fire alarm servicing should be planned from day one" : "Keep the system healthy after installation"} text={data.slug === "fire-safety" ? "NOX services modern Ajax EN54 fire systems and suitable traditional conventional, addressable and established wireless systems. Ongoing support can include inspection, testing, records, defect reporting and coordinated emergency-lighting visits." : "NOX supports new installations and suitable traditional or existing systems with health checks, testing, cleaning, battery or recorder review, firmware where supported and clear service records."}/><div className="related-links">{aftercareLinks.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div><aside className="dark-panel"><h3>New and traditional systems</h3><p>Existing systems are assessed for condition, access, compatibility and parts availability before NOX confirms a takeover or annual maintenance scope.</p><ContactActions primaryLabel={data.enquiryType === "Installation" ? "Discuss Ongoing Support" : (data.ctaLabel ?? "Request a Service Quote")} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType === "Installation" ? "Servicing" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/></aside></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Relevant NOX work" title="Real installation examples" text="Genuine NOX projects showing the property type, equipment and work delivered."/><CaseStudyGrid slugs={data.caseStudySlugs}/></div></section>
     <LocalSearchLinks slugs={localSearchSlugs} title="Related services in your area"/>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Helpful guides" title={`Plan ${data.title.toLowerCase()} with clearer information`} text="Practical answers covering specification, installation, maintenance and existing-system decisions before you request a survey or quotation."/><GuideLinks slugs={guideSlugsFor(`${data.slug} ${data.title} ${data.serviceCategory ?? ""}`)}/></div></section>
+    <AreaLinks title={`${data.title} across Chesterfield, Sheffield and Derbyshire`}/>
+    <EnquiryPreparation topic={data.serviceCategory ?? data.title.toLowerCase()} commercial={data.audience !== "Residential"}/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Trusted for clear advice, tidy work and proper handover"/><ReviewGrid names={data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment"
       ? ["Rory Stirland", "Nathan De La Rosa", "Jez S"]
       : data.slug === "cctv" || data.slug === "home-cctv" || data.slug === "smart-home-cctv"
@@ -290,13 +354,13 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
 }
 
 export function PlanLanding({ data }: { data: PlanPageData }) {
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) }
-  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: data.title, description: data.intro, provider: { "@type": "LocalBusiness", name: site.name, url: site.url }, areaServed: ["Chesterfield", "Sheffield", "Derbyshire"], url: `${site.url}/service-plans/${data.slug}` }
-  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Service Plans", item: `${site.url}/service-plans` },
-    { "@type": "ListItem", position: 3, name: data.title, item: `${site.url}/service-plans/${data.slug}` }
-  ] }
+  const faqSchema = buildFaqSchema(data.faq)
+  const serviceSchema = buildServiceSchema({ name: data.title, description: data.intro, path: `/service-plans/${data.slug}`, serviceType: data.serviceCategory ?? data.eyebrow, audience: data.audience, image: data.image })
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", path: "" },
+    { name: "Service Plans", path: "/service-plans" },
+    { name: data.title, path: `/service-plans/${data.slug}` },
+  ])
   const isFirePlan = data.slug.includes("fire") || data.slug.includes("emergency")
   const isInstallationPackage = data.slug === "residential-security-packages"
   const localSearchSlugs = data.slug === "alarm-maintenance"
@@ -346,6 +410,9 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
     {!!data.pricingFactors?.length && <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title={isInstallationPackage ? "What affects the installation cost" : "What affects the service or maintenance cost"} text={isInstallationPackage ? "Property size, equipment, camera coverage, access and installation requirements all shape the final quotation." : "The cost reflects the system, site and visit requirements confirmed before work is agreed."}/><Checklist items={data.pricingFactors}/></div><aside className="dark-panel"><h3>{isInstallationPackage ? "Survey before specification" : "Existing-system review"}</h3><p>{isInstallationPackage ? "The survey confirms the areas to protect, practical device positions, recording needs and any garage, driveway or outbuilding coverage." : "Access, faults, documentation, parts availability and system condition may need to be confirmed before an ongoing agreement is accepted."}</p>{data.guide && <Link className="text-link" href={data.guide.href}>{data.guide.label} →</Link>}</aside></div></section>}
     {isFirePlan && <section className="section fire-service-push"><div className="container split-grid"><div><SectionHeading eyebrow="Fire servicing and maintenance" title="Keep inspection dates, defects and remedial work visible" text="Routine fire alarm and emergency-lighting visits create a clearer record of system condition. NOX can coordinate agreed services for single premises, landlords, HMOs and multi-site customers."/></div><aside className="dark-panel"><h3>Need a takeover inspection?</h3><p>Send the panel make, approximate device count, property type and any known faults. We will confirm the next step.</p><ContactActions primaryLabel="Request a Fire Service Survey" compact/></aside></div></section>}
     <LocalSearchLinks slugs={localSearchSlugs} title={isInstallationPackage ? "Related home security services" : "Related maintenance, monitoring and compliance services"}/>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Helpful guides" title={isInstallationPackage ? "Plan the property before choosing equipment" : "Understand the service, takeover and renewal options"} text="Useful questions and detailed answers linked to the system or ongoing support being considered."/><GuideLinks slugs={guideSlugsFor(`${data.slug} ${data.title} ${data.serviceCategory ?? ""}`)}/></div></section>
+    <AreaLinks title={`${data.title} across the NOX service area`}/>
+    <EnquiryPreparation topic={data.serviceCategory ?? data.title.toLowerCase()} commercial={data.audience !== "Residential"}/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title={isInstallationPackage ? "Residential installation feedback" : "Feedback about local servicing and support"}/><ReviewGrid names={reviewNames}/><div className="related-links"><strong>Related services:</strong>{data.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}<Link href="/blog/how-often-should-security-systems-be-serviced">Read the maintenance guide →</Link></div></div></section>
     <FaqSection faq={data.faq}/>
     <ConversionPanel title={data.ctaLabel ?? (isInstallationPackage ? "Plan a home alarm and CCTV system" : "Request the right ongoing support")} text={isInstallationPackage ? "Tell us about the property, the areas to protect and whether you are considering an alarm, CCTV, external protection or a combined installation." : "Tell us what system is installed, whether it is new or existing and what service history or known faults are available. We will confirm the correct inspection or quotation next step."} primaryLabel={data.ctaLabel ?? (isInstallationPackage ? "Get a Home Security Quote" : "Get a Maintenance Quote")} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={isInstallationPackage ? "Installation" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/>

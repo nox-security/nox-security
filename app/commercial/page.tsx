@@ -5,8 +5,9 @@ import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
   "Commercial CCTV & Security Systems | Chesterfield & Sheffield",
-  "Commercial CCTV installation, intruder alarms and integrated Fire & Security systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire for operational and multi-site premises.",
-  "/commercial"
+  "Commercial CCTV, intruder alarms and fire and security systems across Chesterfield, Sheffield and Derbyshire for offices, retail, industrial and multi-site premises.",
+  "/commercial",
+  { image: "/images/revisions/nox-commercial-cctv-installation.jpg", imageAlt: "NOX commercial fire and security installation" },
 )
 
 const routes = [

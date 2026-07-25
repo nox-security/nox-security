@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = planPages[slug]
   if (!page) return {}
-  return pageMetadata(page.metaTitle, page.metaDescription, `/service-plans/${slug}`)
+  return pageMetadata(page.metaTitle, page.metaDescription, `/service-plans/${slug}`, { image: page.image, imageAlt: page.imageAlt })
 }
 
 export default async function PlanPage({ params }: { params: Promise<{ slug: string }> }) {
