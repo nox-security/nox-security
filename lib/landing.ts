@@ -500,7 +500,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     faq: [
       { q: "Can NOX manage more than one system at the same site?", a: "Yes. Fire, CCTV, intruder and emergency-lighting services can be coordinated while each system's scope remains clear." },
       { q: "Do you support multi-site businesses?", a: "Yes, for suitable projects. Engineer visits, records and renewal planning can be coordinated across a portfolio." },
-      { q: "Are compliance packages fixed price?", a: "Pricing is confirmed to the site, system quantities and included services. Standard prices are shown only where they have been approved." }
+      { q: "Are compliance packages quoted to each site?", a: "Yes. The quotation is based on the premises, system quantities, visit frequencies and the services included in the written scope." }
     ],
     related: [
       { href: "/commercial", label: "Commercial system design" },

@@ -42,7 +42,7 @@ export default function ServicePlansPage() {
     ]}/></div></section>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant projects" title="Takeovers, upgrades and ongoing-support routes"/><CaseStudyGrid slugs={["retford-former-bank-cctv","chatsworth-estate-cctv-upgrade","telesis-hitachi-fire-intruder-system"]}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Local support backed by real installation experience"/><ReviewGrid names={["Jeremy Bunting"]}/></div></section>
-    <ConversionPanel title="Arrange servicing, monitoring or a system assessment" text="Tell us what is installed, the property or site, any known faults and the available service history. NOX will confirm the correct inspection or pricing next step." primaryLabel="Get a Maintenance Quote" audience="Residential & Commercial" serviceCategory="Servicing & Monitoring" enquiryType="Servicing" sourceLabel="servicing-final"/>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Local support backed by real installation experience"/><ReviewGrid names={["Jeremy Bunting", "Ryan Hargreaves", "Rory Stirland"]}/></div></section>
+    <ConversionPanel title="Arrange servicing, monitoring or a system assessment" text="Tell us what is installed, the property or site, any known faults and the available service history. NOX will confirm the correct inspection or quotation next step." primaryLabel="Get a Maintenance Quote" audience="Residential & Commercial" serviceCategory="Servicing & Monitoring" enquiryType="Servicing" sourceLabel="servicing-final"/>
   </>
 }

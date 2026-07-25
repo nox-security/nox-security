@@ -110,7 +110,7 @@ const pages: Record<string, CommercialPage> = {
       { href: "/services/security-system-takeover", label: "Commercial system takeovers" }
     ],
     guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" },
-    cases: ["telesis-hitachi-fire-intruder-system", "dronfield-outdoor-detectors", "buxton-industrial-security", "banana-industries-fire-security"],
+    cases: ["telesis-hitachi-fire-intruder-system", "dronfield-timber-perimeter", "buxton-industrial-security", "banana-industries-fire-security"],
     ctaLabel: "Discuss a Commercial Alarm"
   },
   "industrial-warehouse-security": {
@@ -194,7 +194,7 @@ const pages: Record<string, CommercialPage> = {
       { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }
     ],
     guide: { href: "/blog/what-is-perimeter-protection", label: "What is perimeter protection?" },
-    cases: ["dronfield-outdoor-detectors", "chesterfield-scrapyard-cctv", "buxton-industrial-security"],
+    cases: ["dronfield-timber-perimeter", "chesterfield-scrapyard-cctv", "buxton-industrial-security"],
     ctaLabel: "Discuss a Yard or Perimeter"
   },
   "multi-site-security": {
@@ -301,6 +301,13 @@ export default async function CommercialDetailPage({ params }: { params: Promise
 
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) }
   const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: page.title, description: page.intro, serviceType: page.eyebrow, provider: { "@type": "LocalBusiness", name: site.name, url: site.url }, areaServed: ["Chesterfield", "Sheffield", "Derbyshire"], url: `${site.url}/commercial/${slug}` }
+  const commercialReviewNames = slug === "cctv"
+    ? ["Jez S", "Nathan De La Rosa", "Jeremy Bunting"]
+    : slug === "fire-compliance" || slug === "integrated-fire-security"
+      ? ["Rory Stirland", "Nathan De La Rosa", "Jez S"]
+      : slug === "intruder-alarms" || slug === "yard-perimeter-security"
+        ? ["Nathan De La Rosa", "Jez S", "Rory Stirland"]
+        : ["Jez S", "Rory Stirland", "Jeremy Bunting"]
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: site.url },
     { "@type": "ListItem", position: 2, name: "Commercial Security", item: `${site.url}/commercial` },
@@ -321,7 +328,7 @@ export default async function CommercialDetailPage({ params }: { params: Promise
     <section className="section"><div className="container"><SectionHeading eyebrow="What the design needs to solve" title="System decisions linked to the operational requirement"/><FeatureGrid columns={4} items={page.details}/></div></section>
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a clearer proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Real commercial and industrial work" text="Genuine property and installation photography with confirmed service scopes."/><CaseStudyGrid slugs={page.cases}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid names={["Jez S"]}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid names={commercialReviewNames}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="Common questions" title="Answers before a commercial survey"/><div className="faq-list">{page.faq.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>
     <ConversionPanel title={page.ctaLabel} text="Tell us the site type, location, existing systems, approximate project scale and what the new system needs to achieve. NOX will guide the survey and proposal route." primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-final`}/>
   </>

@@ -27,9 +27,10 @@ const en54Highlights = [
   {
     title: "EN54 Fire Hub",
     text: "A 10.1-inch touchscreen control and indicating unit with Ethernet, Wi-Fi and dual-SIM communication options, plus compatible 24- or 72-hour standby batteries.",
-    image: "/images/image-refresh/en54-fire-hub.webp",
+    image: "/images/ajax-products/ajax-en54-firehub.webp",
     alt: "Ajax EN54 Fire Hub touchscreen control and indicating equipment",
     artwork: true,
+    position: "center",
   },
   {
     title: "Addressable detection",
@@ -37,20 +38,23 @@ const en54Highlights = [
     image: "/images/ajax-products/ajax-en54-detection.webp",
     alt: "Ajax EN54 wireless addressable fire detection devices",
     artwork: true,
+    position: "center",
   },
   {
-    title: "Manual and visual warning",
-    text: "Resettable manual call points, sounders and visual alarm devices form part of the complete warning strategy rather than being treated as isolated products.",
-    image: "/images/image-refresh/en54-manual-call-point.webp",
-    alt: "Ajax manual fire alarm call point installed at a commercial premises",
-    artwork: false,
+    title: "Manual activation",
+    text: "Resettable manual call points provide a clear way to raise the alarm and are positioned as part of the complete fire-system design.",
+    image: "/images/ManualCallPointFireAlarm.jpeg",
+    alt: "Ajax EN54 manual fire alarm call point",
+    artwork: true,
+    position: "center",
   },
   {
-    title: "Larger-site coverage",
-    text: "EN54 Fire ReX and compatible I/O modules can extend communication and integration options for warehouses, multi-building sites and more complex premises.",
+    title: "Audible and visual warning",
+    text: "Sounders and visual alarm devices are selected and positioned around the warning strategy, occupancy and layout of the premises.",
     image: "/images/image-refresh/en54-sounder-vad.webp",
-    alt: "Ajax EN54 fire system operating normally at an industrial site",
-    artwork: false,
+    alt: "Ajax EN54 sounder and visual alarm device",
+    artwork: true,
+    position: "center",
   },
 ]
 
@@ -63,7 +67,7 @@ export default function FireCompliancePage() {
 
     <section className="section en54-overview-section"><div className="container">
       <SectionHeading eyebrow="Ajax EN54 commercial fire systems" title="A wireless addressable fire platform designed as one complete system" text="Ajax EN54 brings the control equipment, detection, manual activation, sounders, visual warnings, communications and expansion devices into one coordinated commercial fire system. NOX still starts with the building and fire-safety requirement before deciding whether Ajax EN54, a wired addressable system or a conventional system is the right solution."/>
-      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className={item.artwork ? "en54-overview-media is-artwork" : "en54-overview-media"}><img src={item.image} alt={item.alt}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className={item.artwork ? "en54-overview-media is-artwork" : "en54-overview-media"}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
       <div className="section-action-row"><Link className="button button-light" href="/systems/fire-safety">Explore Fire Alarm Installation</Link><Link className="button button-outline" href="/case-studies/telesis-hitachi-fire-intruder-system">View an EN54 installation</Link></div>
     </div></section>
 
@@ -83,7 +87,7 @@ export default function FireCompliancePage() {
     </div><aside className="dark-panel"><h3>Information that helps us quote</h3><p>Property use, panel make, approximate device or fitting quantities, available drawings or records, known faults, required timescales and whether the site remains operational during work.</p><ContactActions primaryLabel="Get a Fire Compliance Quote" compact audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-information"/></aside></div></section>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Commercial fire and integrated system work" text="Genuine project photography and confirmed scopes showing fire, intruder and wider site requirements."/><CaseStudyGrid slugs={["telesis-hitachi-fire-intruder-system","tan-station-fire-security-brimington","banana-industries-fire-security"]}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear installation, handover and local support"/><ReviewGrid names={["Rory Stirland"]}/></div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear installation, handover and local support"/><ReviewGrid names={["Rory Stirland", "Nathan De La Rosa", "Jez S"]}/></div></section>
     <ConversionPanel title="Discuss a fire installation, service or takeover" text="Tell us about the premises, existing equipment and the work required. NOX will guide the enquiry into the correct installation, servicing, repair or annual-support next step." primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-final"/>
   </>
 }

@@ -25,6 +25,6 @@ export default function QuotePage() {
 
     <TrustStrip variant="general"/>
 
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Residential and commercial customers" text="Genuine feedback about communication, advice, workmanship and handover."/><ReviewGrid names={["Ryan Hargreaves", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read More Reviews</Link></div></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Residential and commercial customers" text="Genuine feedback about communication, advice, workmanship and handover."/><ReviewGrid names={["Jeremy Bunting", "Ryan Hargreaves", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read More Reviews</Link></div></div></section>
   </>
 }

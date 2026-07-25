@@ -19,7 +19,7 @@ export default function ServicesHubPage() {
     <TrustStrip variant="general"/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Residential and mixed properties" title="Security systems, CCTV, Ajax alarms and ongoing support"/><div className="local-search-link-grid">{residential.map(page => <Link href={`/services/${page.slug}`} key={page.slug}><span>{page.audience}</span><strong>{page.title}</strong><small>{page.location}</small></Link>)}</div></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial and compliance services" title="Fire, CCTV, emergency lighting and planned support"/><div className="local-search-link-grid">{commercial.map(page => <Link href={`/services/${page.slug}`} key={`${page.slug}-commercial`}><span>{page.audience}</span><strong>{page.title}</strong><small>{page.location}</small></Link>)}</div></div></section>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Real feedback about surveys, installation and aftercare"/><ReviewGrid names={["Jeremy Bunting"]}/></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Real feedback about surveys, installation and aftercare"/><ReviewGrid names={["Jeremy Bunting", "Rory Stirland", "Nathan De La Rosa"]}/></div></section>
     <ConversionPanel title="Start with one clear enquiry" text="Tell us the property type, location and whether you need a new system, servicing, monitoring, compliance support or a takeover. NOX will confirm the right next step."/>
   </>
 }

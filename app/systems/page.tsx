@@ -99,7 +99,7 @@ export default function SystemsPage() {
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Real NOX work" title="Residential and commercial installations in the field"/><CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder","bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","retford-former-bank-cctv"]}/></div></section>
     <LocalSearchLinks slugs={["security-systems-chesterfield","cctv-installation-chesterfield","ajax-alarm-installer-chesterfield","commercial-fire-security-systems"]} title="Related services in your area"/>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Professional advice, installation and aftercare"/><ReviewGrid names={["Ryan Hargreaves", "Jez S"]}/></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Professional advice, installation and aftercare"/><ReviewGrid names={["Ryan Hargreaves", "Nathan De La Rosa", "Rory Stirland"]}/></div></section>
     <ConversionPanel title="Tell us whether the property is residential or commercial" text="NOX will identify the right next step for a new installation, existing system, service plan or takeover."/>
   </>
 }

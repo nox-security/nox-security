@@ -2187,3 +2187,30 @@ p { color: var(--muted); }
   .system-visual-gallery, .commercial-proof-grid { grid-template-columns: 1fr; }
   .system-visual-card img, .commercial-proof-grid img { height: 290px; }
 }
+
+
+/* v4.5 reviews, guides, projects and fire imagery refinement */
+.quote-only-panel h3 { margin: 10px 0 14px; font-size: clamp(25px, 2.3vw, 34px); }
+.quote-only-panel p { margin-bottom: 24px; }
+.guide-local-section { margin-top: 42px; padding: 32px; border: 1px solid var(--line-strong); border-radius: 20px; background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.015)); }
+.guide-local-section h2 { margin-top: 0; }
+.en54-overview-card { box-shadow: 0 24px 70px rgba(0,0,0,.26); }
+.en54-overview-media { aspect-ratio: 4 / 3; background: linear-gradient(145deg, #0c0c0c, #050505); }
+.en54-overview-media img { object-position: center; }
+.en54-overview-media:not(.is-artwork) img { transform: scale(1.015); }
+.fire-installation-grid .media-route-card { box-shadow: 0 24px 70px rgba(0,0,0,.2); }
+.workmanship-gallery figure,
+.workmanship-gallery .workmanship-feature { grid-column: span 4; min-height: 340px; aspect-ratio: 4 / 3; }
+.workmanship-gallery img { object-position: center; }
+.workmanship-gallery figure:nth-child(2) img { object-position: center 42%; }
+.workmanship-gallery figure:nth-child(3) img { object-position: center 50%; }
+.workmanship-gallery figure:nth-child(4) img { object-position: center 48%; }
+@media (max-width: 980px) {
+  .workmanship-gallery figure,
+  .workmanship-gallery .workmanship-feature { grid-column: span 6; min-height: 330px; }
+}
+@media (max-width: 640px) {
+  .guide-local-section { padding: 24px; }
+  .workmanship-gallery figure,
+  .workmanship-gallery .workmanship-feature { grid-column: span 12; min-height: 320px; }
+}

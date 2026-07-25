@@ -40,7 +40,7 @@ export default function AboutPage() {
     </div></div></section>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Real work" title="Residential and commercial installations by NOX" text="A selection of confirmed projects across homes, showrooms, industrial sites, estates and commercial premises."/><CaseStudyGrid limit={6}/><div className="button-row"><Link className="button button-outline" href="/case-studies">View All Case Studies</Link></div></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer reviews" title="What customers say about the NOX experience"/><ReviewGrid names={["Ryan Hargreaves", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read More Reviews</Link></div></div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer reviews" title="What customers say about the NOX experience"/><ReviewGrid names={["Sasha Brailsford", "Jez S", "Rory Stirland"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read More Reviews</Link></div></div></section>
     <ConversionPanel title="Discuss your property with NOX" text="Tell us what you want to protect or which system needs attention. We will review the details and confirm the survey, quotation or servicing next step."/>
   </>
 }

@@ -293,8 +293,8 @@ export const caseStudies: CaseStudy[] = [
     title: "External Ajax detection at a Dronfield industrial site",
     location: "Dronfield, Derbyshire",
     category: "Industrial perimeter protection",
-    image: "/images/resent-installation/B563DA1D-D64B-4DF3-8058-BC6E01154EC3.png",
-    alt: "External Ajax detection protecting an industrial timber site in Dronfield",
+    image: "/images/image-refresh/intruder-outdoor-false-alarm.webp",
+    alt: "Ajax outdoor detector used to create an earlier perimeter warning layer",
     summary: "Five outdoor Ajax detectors and external sirens creating an earlier warning layer around a working industrial site.",
     story: "The Dronfield site needed protection around its external approaches rather than relying only on detection inside the building. NOX designed a perimeter layer using five outdoor Ajax detectors and external sirens around the key routes into the premises.",
     requirement: "Provide external warning around a working industrial site with valuable stock and several vulnerable approaches.",
@@ -787,7 +787,7 @@ export const systemPages: Record<string, ServicePageData> = {
     videos: [
       { title: "Ajax fire protection", text: "See how Ajax control equipment and line devices can form part of a connected commercial fire system.", youtubeId: "XZDNd3ud-ck" }
     ],
-    ctaLabel: "Request Fire Alarm Pricing",
+    ctaLabel: "Request a Fire Alarm Quote",
     audience: "Commercial",
     serviceCategory: "Fire Alarm Installation",
     enquiryType: "Installation",
@@ -957,7 +957,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { href: "/systems/home-cctv", label: "Home CCTV" },
       { href: "/service-plans/residential-security-packages", label: "Residential security packages" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "dronfield-outdoor-detectors", "buxton-industrial-security"],
+    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "dronfield-timber-perimeter", "buxton-industrial-security"],
     ctaLabel: "Protect a Garage or Outbuilding",
     audience: "Residential",
     serviceCategory: "Garage and outbuilding security",
@@ -979,9 +979,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "NOX provides planned Intruder Alarm Servicing for its own installations and suitable wired, wireless and hybrid systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     image: "/images/revisions/intruder-maintenance-system-takeover.jpg",
     imageAlt: "Engineer carrying out intruder alarm maintenance and system takeover work",
-    residentialPrice: "£225 per year",
-    commercialPrice: "From £295 per year",
-    priceNote: "Final commercial pricing depends on system size, access, device count and condition.",
     included: ["Annual engineer service", "Full system health check", "Device testing", "Sensor cleaning", "Battery health checks", "Firmware updates where supported", "Service record or certificate", "Defect and recommendation reporting"],
     suitableFor: ["NOX-installed alarms", "Suitable existing systems", "Homes and landlords", "Retail and offices", "Warehouses and industrial sites", "Commercial portfolios"],
     process: [
@@ -1011,9 +1008,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "Add professional alarm handling to a suitable intruder alarm, with keyholder contact, system supervision and visual or image verification where available.",
     image: "/images/revisions/intruder-alarm-monitoring-centre.jpg",
     imageAlt: "Professional monitoring operator supporting intruder alarm signals and keyholder contact",
-    residentialPrice: "£595 per year",
-    commercialPrice: "From £695 per year",
-    priceNote: "Compatibility, signalling equipment and the agreed monitoring setup are confirmed before activation.",
     included: ["Professional alarm monitoring", "Alarm signalling", "Keyholder contact", "System supervision where supported", "Visual or image verification where available", "Agreed escalation procedures", "Monitoring setup and testing", "Annual renewal"],
     suitableFor: ["Homes", "Landlords", "Retail and offices", "Warehouses", "Industrial sites", "Commercial portfolios"],
     process: [
@@ -1043,9 +1037,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "NOX provides CCTV maintenance for its own installations and suitable existing systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire, checking cameras, recording, playback and remote access.",
     image: "/images/image-refresh/commercial-cctv-buxton-wide.webp",
     imageAlt: "Commercial CCTV recorder and live views checked during planned maintenance",
-    residentialPrice: "£225 per year",
-    commercialPrice: "From £295 per year",
-    priceNote: "Final commercial pricing depends on camera count, access, recorder configuration and site size.",
     included: ["Annual engineer maintenance", "Camera cleaning", "Recorder health check", "Hard-drive health review", "Playback test", "Firmware updates where supported", "Remote-viewing check", "Service report"],
     suitableFor: ["Home CCTV", "Retail and hospitality", "Showrooms", "Garages and yards", "Industrial CCTV", "Multi-camera commercial sites"],
     process: [
@@ -1075,7 +1066,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "NOX provides planned Fire Alarm Servicing for commercial premises, landlords, HMOs and property portfolios across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     image: "/images/image-refresh/fire-system-takeover-panel.webp",
     imageAlt: "Commercial fire alarm panel inspected during planned maintenance",
-    priceNote: "Pricing is quoted to the property, system type, device quantity, service frequency and access requirements.",
     included: ["Panel and system checks", "Device testing within the agreed scope", "Sounder and function checks", "Logbook and record review where available", "Defect reporting", "Service records", "Remedial quotation where requested", "Planned renewal scheduling"],
     suitableFor: ["Retail", "Offices", "Hospitality", "Warehouses", "HMOs and landlords", "Property portfolios"],
     process: [
@@ -1105,7 +1095,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "NOX provides Emergency Lighting Testing and Servicing for commercial premises, landlords, HMOs and multi-site properties across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     image: "/images/image-refresh/emergency-lighting-modern.webp",
     imageAlt: "Illuminated emergency exit sign tested during a commercial service visit",
-    priceNote: "Pricing is quoted to fitting quantities, site access, required testing and service frequency.",
     included: ["Fitting condition checks", "Functional testing", "Battery operation checks", "Identification of failed fittings", "Test records", "Defect reporting", "Remedial quotations", "Planned renewal scheduling"],
     suitableFor: ["Retail", "Offices", "Hospitality", "Warehouses", "HMOs", "Property portfolios"],
     process: [
@@ -1135,8 +1124,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "Bring the agreed intruder alarm monitoring, alarm maintenance and CCTV maintenance services under one annual arrangement with one point of contact.",
     image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
     imageAlt: "Coordinated alarm monitoring and CCTV maintenance package from NOX",
-    residentialPrice: "From £795 per year",
-    priceNote: "The exact included services, system eligibility and price are confirmed in writing. Commercial packages are quoted to site.",
     included: ["Agreed intruder alarm servicing", "Agreed professional alarm monitoring", "Agreed CCTV maintenance", "Annual system review", "One renewal date", "One point of contact", "Priority support where stated in the agreement", "Discounted labour or preferential repair pricing only where written into the package"],
     suitableFor: ["Homes with alarm and CCTV", "Landlords", "Retail", "Offices", "Commercial premises", "Customers wanting one renewal date"],
     process: [
@@ -1151,7 +1138,7 @@ export const planPages: Record<string, PlanPageData> = {
       { title: "Commercial packages", text: "Commercial arrangements are tailored around system size, camera count, monitoring and site access." }
     ],
     faq: [
-      { q: "What is included in the £795 package?", a: "It is a starting price. The exact combination of alarm servicing, professional monitoring and CCTV maintenance is confirmed in the written quotation for the property." },
+      { q: "What can a Total Security Package include?", a: "The package can combine eligible alarm servicing, professional monitoring and CCTV maintenance. The exact services, system eligibility and quotation are confirmed in writing for the property." },
       { q: "Is CCTV monitoring included?", a: "Residential CCTV monitoring is not presented as a standard separate product. Any specialist option must be specifically confirmed in writing." },
       { q: "Are all repairs included?", a: "No. Repairs, replacement equipment and parts are separate unless the agreement specifically states otherwise." }
     ],
@@ -1166,7 +1153,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "Bring agreed fire alarm servicing, emergency lighting, extinguisher servicing and fire risk assessment support into a clearer commercial service arrangement.",
     image: "/images/image-refresh/fire-risk-assessment.webp",
     imageAlt: "Fire action notice and manual call point reviewed as part of commercial fire compliance",
-    priceNote: "Packages are quoted to the property portfolio, system quantities, visit frequency and included services.",
     included: ["Agreed fire alarm servicing", "Agreed emergency lighting servicing", "Fire extinguisher servicing where included", "Fire risk assessment support where included", "Digital service records", "Defect reporting", "One renewal date where agreed", "Coordinated engineer scheduling"],
     suitableFor: ["Retail", "Offices", "Hospitality", "Warehouses", "Landlords and HMOs", "Multi-site portfolios"],
     process: [
@@ -1183,7 +1169,7 @@ export const planPages: Record<string, PlanPageData> = {
     faq: [
       { q: "Is every fire service automatically included?", a: "No. The package only includes the services and frequencies confirmed in the written quotation." },
       { q: "Can several sites share one renewal date?", a: "Yes, where agreed and operationally practical, multi-site servicing can be placed under one coordinated renewal structure." },
-      { q: "Are repairs included in the annual price?", a: "Not unless specifically stated. Defects, parts and remedial work are normally quoted separately." }
+      { q: "Are repairs included in the annual agreement?", a: "Not unless specifically stated. Defects, parts and remedial work are normally quoted separately." }
     ],
     related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/emergency-lighting-servicing", label: "Emergency lighting servicing" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessment" }]
   },
@@ -1196,7 +1182,6 @@ export const planPages: Record<string, PlanPageData> = {
     intro: "A residential package brings the agreed alarm, CCTV and optional ongoing support into one coordinated design. It is not a fixed equipment bundle: the property, coverage and customer priorities still decide what is included.",
     image: "/images/image-refresh/smart-home-package.webp",
     imageAlt: "Complete alarm, camera and smart-home security package prepared for a residential installation",
-    priceNote: "Installation and annual support are quoted separately so the customer can see the equipment, labour and recurring services clearly.",
     included: ["Property-led Ajax alarm design", "Home CCTV where required", "Garage, gate or outbuilding options", "Perimeter detection where suitable", "App and user setup", "Clear installation handover", "Optional alarm monitoring", "Optional alarm and CCTV maintenance"],
     suitableFor: ["Homes wanting alarm and CCTV together", "Larger properties", "Garages and outbuildings", "Driveways and gated approaches", "Renovations", "Customers replacing several older systems"],
     process: [
@@ -1252,7 +1237,7 @@ Object.assign(systemPages["emergency-lighting"], {
     { title: "Installation and testing", text: "The agreed fittings and circuits are installed, labelled where required and tested before handover." },
     { title: "Records and recurring tests", text: "The customer receives clear next steps for routine checks, annual duration testing and remedial support." }
   ],
-  ctaLabel: "Request Emergency Lighting Pricing",
+  ctaLabel: "Request an Emergency Lighting Quote",
   audience: "Commercial",
   serviceCategory: "Emergency lighting installation",
   enquiryType: "Installation",
@@ -1305,7 +1290,7 @@ Object.assign(planPages["alarm-monitoring"], {
   metaTitle: "Alarm Monitoring Chesterfield & Derbyshire | NOX",
   metaDescription: "Professional intruder alarm monitoring across Chesterfield and Derbyshire with alarm signalling, keyholder communication, system supervision and suitable takeover assessments.",
   intro: "Professional monitoring is different from receiving an app notification. A suitable alarm sends agreed events through a monitored signalling route so keyholders can be contacted under the confirmed response plan.",
-  ctaLabel: "Request Monitoring Pricing",
+  ctaLabel: "Request a Monitoring Quote",
   audience: "Residential & Commercial",
   serviceCategory: "Intruder alarm monitoring",
   enquiryType: "Monitoring",
@@ -1329,7 +1314,7 @@ Object.assign(planPages["cctv-maintenance"], {
 Object.assign(planPages["total-security"], {
   eyebrow: "Total Security Plans",
   title: "Coordinated alarm, monitoring and CCTV support under one plan",
-  ctaLabel: "Request Total Security Plan Pricing",
+  ctaLabel: "Request a Total Security Quote",
   audience: "Residential & Commercial",
   serviceCategory: "Total Security Plan",
   enquiryType: "Servicing",

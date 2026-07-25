@@ -9,6 +9,7 @@ export type BlogPost = {
   excerpt: string
   image: string
   imageAlt: string
+  imagePosition?: string
   sections: BlogSection[]
   related: { href: string; label: string }[]
   faq?: { q: string; a: string }[]
@@ -142,7 +143,7 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ],
-    related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire Alarm Servicing" }, { href: "/service-plans/emergency-lighting-servicing", label: "Emergency Lighting Servicing" }, { href: "/get-quote", label: "Request Fire-Service Pricing" }]
+    related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire Alarm Servicing" }, { href: "/service-plans/emergency-lighting-servicing", label: "Emergency Lighting Servicing" }, { href: "/get-quote", label: "Request a Fire Service Quote" }]
   },
   {
     slug: "how-often-should-a-commercial-fire-alarm-be-serviced",
@@ -187,14 +188,21 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "What to expect when changing fire alarm maintenance provider, including access, records, faults, parts availability, inspection and remedial work.",
     category: "Fire Alarm Guides",
     excerpt: "Often yes, but a responsible takeover depends on system access, condition, documentation, compatibility and available parts.",
-    image: "/images/revisions/fire-safety-logbook.jpg",
-    imageAlt: "Fire safety logbook and system information reviewed during a takeover",
+    image: "/images/image-refresh/fire-system-takeover-panel.webp",
+    imageAlt: "Existing conventional fire alarm control panel assessed before a maintenance takeover",
+    imagePosition: "center 56%",
     sections: [
       { heading: "The direct answer", paragraphs: ["A new company can often take over servicing of an existing fire alarm, but it should not accept responsibility blindly. The first step is an assessment of the panel, devices, access, records, faults and whether the equipment can still be supported.", "A takeover is not the same as saying every existing defect is included in an annual service price. The initial condition and any required remedials should be recorded separately."] },
       { heading: "Information that helps", paragraphs: ["The more accurate the existing information, the easier it is to plan the assessment."], points: ["Panel manufacturer and model", "Approximate zones or loops", "Device and sounder quantities", "Engineer or user access available", "Previous service certificates", "Fire safety logbook", "Known faults, disabled devices or false alarms", "Drawings, cause-and-effect or interface information where relevant"] },
       { heading: "What the assessment considers", paragraphs: ["The engineer needs to decide whether the system can be accessed, tested, repaired and maintained with reasonable confidence. Missing codes, obsolete panels, undocumented alterations, damaged wiring and unavailable parts can change the route.", "The outcome may be straightforward takeover, takeover after remedials, a phased upgrade or replacement. A clear recommendation should explain why each option is being proposed."] },
       { heading: "Changing provider without losing records", paragraphs: ["Keep copies of existing certificates, logbooks, drawings, fault history and any open remedial quotations. The responsible person remains better informed when records move with the building rather than staying with the previous provider.", "Where a system serves several buildings or sites, create an asset list and renewal schedule before the transfer so important dates are not missed."] },
-      { heading: "How NOX handles takeovers", paragraphs: ["NOX asks for available system information first, then confirms whether a takeover assessment is required. Suitable systems can move into planned servicing after access, condition and outstanding defects are understood."] }
+      { heading: "How NOX handles takeovers", paragraphs: ["NOX asks for available system information first, then confirms whether a takeover assessment is required. Suitable systems can move into planned servicing after access, condition and outstanding defects are understood.", "For premises in Chesterfield and across Derbyshire, photographs of the panel, the site address, building use, approximate device quantities and the latest service record are normally enough to establish the correct first step. Larger, altered or poorly documented systems are more likely to need an on-site takeover inspection before a maintenance quotation is finalised."] },
+      { heading: "What should be confirmed before changing fire alarm company?", paragraphs: ["Confirm who holds the panel and engineer access details, where the fire alarm logbook and previous certificates are kept, whether any faults or disabled devices remain open, and when the next planned service is due. The new provider should explain the initial assessment, recurring service scope, exclusions and remedial route in writing.", "Changing provider should not interrupt weekly user testing, record keeping or the building's existing fire-safety arrangements. The responsible person remains responsible for making sure defects and overdue actions are addressed through the appropriate route."] }
+    ],
+    faq: [
+      { q: "Can NOX take over an existing fire alarm in Chesterfield or Derbyshire?", a: "Often yes. NOX first checks the panel type, access, system condition, records, known faults and parts support, then confirms whether the system can move directly into servicing or needs a takeover inspection and remedial work." },
+      { q: "Do I need the previous fire alarm company’s permission to change provider?", a: "The building manager or responsible person can appoint a different competent provider, but system access details, records, contracts and any monitoring arrangements should be checked before the transfer." },
+      { q: "Will a takeover service include existing faults?", a: "Not automatically. Existing faults, missing devices, access problems and repairs should be identified and quoted separately from the recurring service scope unless the written quotation states otherwise." }
     ],
     related: [{ href: "/services/fire-alarm-repairs-takeovers", label: "Fire Alarm Repairs & Takeovers" }, { href: "/service-plans/fire-alarm-servicing", label: "Fire Alarm Servicing" }, { href: "/case-studies/telesis-hitachi-fire-intruder-system", label: "Industrial fire project" }]
   },
@@ -223,16 +231,23 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "The site, building, system and access information that helps produce a clearer commercial fire alarm installation or servicing quotation.",
     category: "Fire Alarm Guides",
     excerpt: "Property use, plans, fire information, existing equipment, device quantities, faults and access all help NOX define the correct survey and quotation route.",
-    image: "/images/revisions/fire-safety-logbook.jpg",
-    imageAlt: "Fire safety information and plans used to prepare a quotation",
+    image: "/images/image-refresh/fire-risk-assessment.webp",
+    imageAlt: "Fire action information and manual call point reviewed when preparing a fire alarm quotation",
+    imagePosition: "center 54%",
     sections: [
       { heading: "The direct answer", paragraphs: ["A useful fire alarm quotation needs enough information to define whether the enquiry is a new installation, replacement, service, repair or takeover. The building use, approximate size, existing panel, available fire information and known faults are the best starting points.", "A site survey is normally required for a designed installation, but accurate information beforehand reduces wasted visits and helps the right engineer prepare."] },
       { heading: "For a new installation", paragraphs: ["Provide the address, property type, number of floors or buildings, operating hours, current construction stage and any available fire-risk assessment, strategy, plans or specification."], points: ["Building use and occupancy", "Floor plans and escape routes", "Fire strategy or risk-assessment information", "Existing or proposed compartments and zones", "Ceiling types and access", "Other trades and project programme", "Need for conventional, addressable or wireless comparison", "Required handover date"] },
-      { heading: "For servicing or takeover", paragraphs: ["Photographs of the panel and labels, approximate device quantities, previous certificates, the logbook, known faults and available access details help define the first visit.", "Do not hide faults to obtain a lower annual price. The system condition and any remedial work should be separated from the recurring service agreement."] },
+      { heading: "For servicing or takeover", paragraphs: ["Photographs of the panel and labels, approximate device quantities, previous certificates, the logbook, known faults and available access details help define the first visit.", "Do not hide faults to obtain a lower annual service quotation. The system condition and any remedial work should be separated from the recurring service agreement."] },
       { heading: "For emergency lighting", paragraphs: ["Include approximate fitting quantities, monthly or annual test requirement, previous records, failed fittings, access height, opening hours and whether replacement or new installation is required."] },
-      { heading: "What happens next", paragraphs: ["NOX reviews the information and confirms whether a survey, takeover inspection, service visit or remote quotation stage is appropriate. The final quotation should state the system scope, exclusions, documentation and future maintenance route clearly."] }
+      { heading: "What happens next", paragraphs: ["NOX reviews the information and confirms whether a survey, takeover inspection, service visit or remote quotation stage is appropriate. The final quotation should state the system scope, exclusions, documentation and future maintenance route clearly.", "For commercial premises in Chesterfield and across Derbyshire, sending clear panel photographs and basic building information first can help separate a new installation enquiry from a service, repair or takeover request. A designed installation will still normally need the premises to be surveyed before the final equipment and labour scope is agreed."] },
+      { heading: "A useful fire alarm quote should be clear about the whole project", paragraphs: ["The quotation should identify the system type being proposed, the areas or buildings covered, the control equipment, detection and warning devices, installation assumptions, access requirements, commissioning, handover information and any exclusions.", "Where an existing alarm is being altered or replaced, the proposal should also explain what equipment will remain, what will be removed, how faults or undocumented wiring will be handled and whether temporary arrangements or phased work may be required."], points: ["New installation, replacement, servicing or takeover route", "Building use, floors, zones and operating conditions", "Panel, detector, call-point, sounder and visual-warning scope", "Access equipment, ceilings, cable routes and working hours", "Testing, commissioning, records and user handover", "Ongoing servicing and separately quoted remedial work"] }
     ],
-    related: [{ href: "/systems/fire-safety", label: "Request Fire Alarm Pricing" }, { href: "/service-plans/fire-alarm-servicing", label: "Arrange Fire Alarm Servicing" }, { href: "/systems/emergency-lighting", label: "Emergency Lighting Installation" }]
+    faq: [
+      { q: "Can I get a fire alarm quote from photographs?", a: "Photographs and system information can establish the likely route, but a new designed installation or complex alteration will normally need a site survey before the final quotation is confirmed." },
+      { q: "What photographs should I send for a fire alarm quote?", a: "Send the control panel and labels, any fault display, a representative detector, call point and sounder, the fire alarm logbook or latest certificate, and photographs showing the type and scale of the premises." },
+      { q: "Does NOX provide fire alarm quotations in Chesterfield and Derbyshire?", a: "Yes. NOX handles commercial fire alarm installation, servicing, repairs and suitable takeovers across Chesterfield, Derbyshire and surrounding areas, with the first step based on the building and existing system information." }
+    ],
+    related: [{ href: "/systems/fire-safety", label: "Request a Fire Alarm Quote" }, { href: "/service-plans/fire-alarm-servicing", label: "Arrange Fire Alarm Servicing" }, { href: "/systems/emergency-lighting", label: "Emergency Lighting Installation" }]
   },
   {
     slug: "how-often-should-emergency-lighting-be-tested",
@@ -376,7 +391,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "What monitoring does not automatically mean", paragraphs: ["Professional monitoring follows the signalling, keyholder and escalation arrangements agreed for the individual system. It should not be treated as a guarantee that somebody will attend every activation."] },
       { heading: "Choosing the route", paragraphs: ["Consider who needs to know about an alarm, whether phones can be unavailable, who holds keys, how quickly contacts change and whether the property is residential, commercial or multi-site.", "NOX can assess monitoring compatibility for new Ajax systems and suitable existing alarms, subject to maintenance, communication and takeover requirements."] }
     ],
-    related: [{ href: "/service-plans/alarm-monitoring", label: "Request Monitoring Pricing" }, { href: "/service-plans/alarm-maintenance", label: "Intruder Alarm Servicing" }, { href: "/systems/intrusion-alarms", label: "Ajax Intruder Alarms" }]
+    related: [{ href: "/service-plans/alarm-monitoring", label: "Request a Monitoring Quote" }, { href: "/service-plans/alarm-maintenance", label: "Intruder Alarm Servicing" }, { href: "/systems/intrusion-alarms", label: "Ajax Intruder Alarms" }]
   }
 
 ]
