@@ -117,7 +117,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
     {!!project.gallery?.length && <section className="section section-alt"><div className="container">
       <SectionHeading eyebrow="Real installation photography" title="The project from premises to equipment and handover" text="Genuine NOX images showing the building, system components and completed installation where available."/>
-      <div className="project-gallery">{project.gallery.map((image, index) => <figure key={image.src} className={index === 0 ? "project-gallery-feature" : ""}><img src={image.src} alt={image.alt}/></figure>)}</div>
+      <div className="project-gallery">{project.gallery.map((image, index) => <figure key={image.src} className={index === 0 ? "project-gallery-feature" : ""}><img src={image.src} alt={image.alt}/>{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div>
     </div></section>}
 
     <section className="section"><div className="container">

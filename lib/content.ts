@@ -119,7 +119,7 @@ export type CaseStudy = {
   requirement: string
   delivery: string
   systems: string[]
-  gallery?: { src: string; alt: string }[]
+  gallery?: { src: string; alt: string; caption?: string }[]
   metaTitle?: string
   metaDescription?: string
   searchKeywords?: string[]
@@ -465,24 +465,34 @@ export const caseStudies: CaseStudy[] = [
     title: "Intruder and nine-camera CCTV installation",
     location: "Derbyshire",
     category: "Commercial alarm & CCTV",
-    image: "/images/resent-installation/7A22DFA9-C5DE-4E26-8B68-52E8E3CAB865.png",
-    alt: "Ajax intruder alarm and CCTV installation for Peak Electronic",
-    summary: "A combined Ajax intruder and nine-camera CCTV installation for Peak Electronic.",
-    metaTitle: "Commercial CCTV & Intruder Alarm Derbyshire | NOX",
-    metaDescription: "Ajax intruder protection and a nine-camera CCTV system installed for Peak Electronic, creating one joined-up commercial security solution.",
-    story: "Ajax intruder protection and nine CCTV cameras were brought together for Peak Electronic, giving the commercial property one joined-up security approach with recording and live viewing.",
-    requirement: "Provide intruder protection and nine CCTV cameras for Peak Electronic.",
-    delivery: "NOX installed the Ajax intruder system and nine-camera CCTV system within the agreed project.",
-    systems: ["Ajax intruder system", "Nine CCTV cameras", "Commercial installation"],
-    searchKeywords: ["commercial CCTV Derbyshire", "Ajax intruder alarm business", "nine camera CCTV system"],
-    designPriorities: [
-      "Combine Ajax intruder protection with nine CCTV cameras so detection, recording and user control form one clear commercial security project.",
-      "Plan camera views around the premises and the areas that need live or recorded visibility rather than selecting positions from equipment quantity alone.",
-      "Configure the alarm, CCTV recording and customer handover around the people responsible for operating the systems.",
+    image: "/images/v4-13-10/peak-electronic/main.jpg",
+    alt: "Peak Electronic premises protected by a NOX intruder alarm and nine-camera CCTV system",
+    summary: "A coordinated Ajax intruder alarm and nine-camera CCTV installation for Peak Electronic, replacing an older security setup with clearer control, recording and live viewing.",
+    metaTitle: "Peak Electronic CCTV & Intruder Alarm | NOX",
+    metaDescription: "Ajax intruder protection and a nine-camera CCTV system installed for Peak Electronic, including upgraded control, external cameras, recording and live viewing.",
+    story: "Peak Electronic had older CCTV and alarm equipment that no longer reflected the level of control and coverage required across the premises. NOX assessed the existing setup, installed a modern Ajax intruder system and delivered nine-camera CCTV coverage with a clearer recording and live-viewing arrangement.",
+    requirement: "Upgrade the existing commercial security setup with reliable intruder protection, nine-camera CCTV coverage and straightforward day-to-day control for the team.",
+    delivery: "NOX installed the Ajax intruder system, upgraded the customer controls, routed the required cabling through the premises and commissioned a nine-camera CCTV system with live and recorded viewing.",
+    systems: ["Ajax commercial intruder alarm", "Nine-camera CCTV system", "External CCTV coverage", "Live viewing and recording", "Commercial system upgrade"],
+    gallery: [
+      { src: "/images/v4-13-10/peak-electronic/legacy-cctv.jpg", alt: "Older Xvision CCTV recorder and camera equipment at Peak Electronic before the security upgrade", caption: "The existing Xvision recording equipment was assessed before the new nine-camera system was commissioned." },
+      { src: "/images/v4-13-10/peak-electronic/roof-space-installation.jpg", alt: "NOX engineer routing security cabling through the roof space at Peak Electronic", caption: "Cabling was routed through the roof space to support the camera layout while keeping the installation practical and serviceable." },
+      { src: "/images/v4-13-10/peak-electronic/ajax-keypad-upgrade.jpg", alt: "New Ajax keypad installed beside the previous alarm control at Peak Electronic", caption: "A modern Ajax keypad introduced clearer everyday control alongside the existing legacy alarm position." },
+      { src: "/images/v4-13-10/peak-electronic/external-camera-gate.jpg", alt: "External CCTV cameras protecting a gate and approach at Peak Electronic", caption: "External cameras were positioned around vulnerable approaches and access routes rather than relying on broad overview images." },
+      { src: "/images/v4-13-10/peak-electronic/front-camera-siren.jpg", alt: "NOX external siren and CCTV camera installed at the front corner of Peak Electronic", caption: "The front elevation combines visible deterrence with recorded coverage of the main approach." },
+      { src: "/images/v4-13-10/peak-electronic/front-security-detail.jpg", alt: "Close view of a NOX siren and external CCTV camera at Peak Electronic", caption: "Equipment positions were selected around the building structure, signage and the areas requiring useful identification detail." },
+      { src: "/images/v4-13-10/peak-electronic/nine-camera-live-view.jpg", alt: "Nine-camera CCTV live view displayed inside Peak Electronic", caption: "The completed system gives the team one clear live view across the car park, entrances, road, gates and rear areas." }
     ],
-    outcome: "Peak Electronic received a coordinated Ajax intruder system and nine-camera CCTV installation with recording and live viewing included in the agreed project.",
-    localContext: "Combined commercial alarm and CCTV projects in Derbyshire work best when entrances, staff routes, valuable areas, external approaches, network and response requirements are considered together during the survey.",
+    searchKeywords: ["Peak Electronic security", "commercial CCTV Derbyshire", "Ajax intruder alarm business", "nine camera CCTV system"],
+    designPriorities: [
+      "Replace the limitations of the older alarm and CCTV arrangement with a clearer joined-up system for detection, recording and everyday control.",
+      "Plan nine camera views around entrances, vehicle areas, gates, rear approaches and the evidence the business would need after an event.",
+      "Route the installation around the existing building and roof space, then complete a practical handover covering the Ajax controls, live view and recorded playback.",
+    ],
+    outcome: "Peak Electronic received a modern Ajax intruder alarm and nine-camera CCTV system with upgraded user control, external coverage, recording and a clear multi-camera live view for the team.",
+    localContext: "Commercial system upgrades across Derbyshire often begin with a mixture of older recorders, inherited alarm controls and cabling that may still be useful. A proper survey identifies what can be retained, what needs replacing and how new equipment can be installed without unnecessary disruption.",
     faq: [
+      { q: "Can an older commercial CCTV system be upgraded rather than completely rewired?", a: "Sometimes. Existing cable routes, cameras, recorder technology, power, network and image quality must be assessed before deciding what can be retained or reused." },
       { q: "Why combine CCTV and an intruder alarm for a business?", a: "The alarm provides detection and warning while CCTV provides live and recorded visibility. Planning them together can improve coverage, verification and user handover." },
       { q: "Can NOX maintain the systems after installation?", a: "Yes. Suitable CCTV and intruder systems can move into planned maintenance, monitoring or future upgrade support under a clearly defined service scope." },
     ]
@@ -492,26 +502,34 @@ export const caseStudies: CaseStudy[] = [
     title: "Residential CCTV and intruder protection",
     location: "Sheffield, South Yorkshire",
     category: "Residential security",
-    image: "/images/resent-installation/B17CAA16-7E26-4342-BD6F-B777359E2BEB.png",
-    alt: "Residential CCTV and Ajax intruder alarm installed in Sheffield",
-    summary: "A combined CCTV and intruder installation for a residential property in Sheffield.",
-    metaTitle: "Home CCTV & Intruder Alarm Sheffield | NOX",
-    metaDescription: "Residential CCTV and intruder protection installed at a Sheffield home with straightforward everyday control and professional handover.",
-    story: "A Sheffield home received both CCTV and intruder protection, planned as one residential project and configured for straightforward everyday control.",
-    requirement: "Provide CCTV and intruder protection for the residential property.",
-    delivery: "NOX installed the confirmed CCTV and intruder alarm systems and completed the customer handover.",
-    systems: ["Residential CCTV", "Intruder alarm", "Sheffield installation"],
-    searchKeywords: ["home CCTV Sheffield", "intruder alarm Sheffield", "residential security South Yorkshire"],
-    designPriorities: [
-      "Plan CCTV and intruder protection around one Sheffield home so entrances, external views and internal detection support the same customer requirement.",
-      "Keep normal control straightforward through a clear user setup and practical handover.",
-      "Position equipment around the property itself rather than applying a standard residential kit regardless of layout.",
+    image: "/images/v4-13-10/sheffield-residential/main.jpg",
+    alt: "NOX van outside a Sheffield home during a residential CCTV and Ajax intruder alarm installation",
+    summary: "A coordinated residential CCTV and Ajax intruder alarm installation for a Sheffield home, covering the main approach, entrances and everyday app-based control.",
+    metaTitle: "Home CCTV & Ajax Intruder Alarm Sheffield | NOX",
+    metaDescription: "Residential CCTV and Ajax intruder protection installed at a Sheffield home, including external cameras, door protection, an external siren and app-based control.",
+    story: "This Sheffield home required CCTV and intruder protection to work together around the front approach, driveway and main access points. NOX installed external cameras alongside an Ajax alarm system, using a visible external siren, door protection and a centrally connected hub for straightforward everyday control.",
+    requirement: "Protect the home, driveway and principal access points with coordinated CCTV and intruder detection while keeping the system simple for the household to use.",
+    delivery: "NOX installed the external CCTV coverage, Ajax control hub, door protection and external warning siren, then configured the system and completed the homeowner handover.",
+    systems: ["Residential CCTV", "Ajax intruder alarm", "External cameras", "Door protection", "External warning siren", "Sheffield installation"],
+    gallery: [
+      { src: "/images/v4-13-10/sheffield-residential/front-cameras-siren.jpg", alt: "Two black external CCTV cameras and a NOX siren installed on the Sheffield home", caption: "The front elevation combines camera coverage of the approach with a clearly visible external alarm siren." },
+      { src: "/images/v4-13-10/sheffield-residential/ajax-siren.jpg", alt: "White Ajax external siren installed on the stone exterior of the Sheffield property", caption: "The external siren provides local warning and visible deterrence without overpowering the appearance of the property." },
+      { src: "/images/v4-13-10/sheffield-residential/ajax-hub.jpg", alt: "Black Ajax alarm hub connected inside the Sheffield home", caption: "The Ajax hub provides the central communication and app connection for the residential alarm system." },
+      { src: "/images/v4-13-10/sheffield-residential/engineer-siren-install.jpg", alt: "NOX engineer installing the external alarm siren above the CCTV cameras at a Sheffield home", caption: "The siren and cameras were positioned around the front approach while keeping the finished installation tidy." },
+      { src: "/images/v4-13-10/sheffield-residential/door-protection.jpg", alt: "Black Ajax door contact installed on the main entrance door of the Sheffield home", caption: "Door protection adds an immediate alert at the main entrance before relying on movement detection deeper inside the property." }
     ],
-    outcome: "The Sheffield property received coordinated residential CCTV and intruder protection, configured and handed over for straightforward everyday use.",
-    localContext: "Home security in Sheffield varies considerably between terraces, semis, detached homes and properties with garages or side access. A survey helps identify the right camera views, alarm zones, communication range and control method.",
+    searchKeywords: ["home CCTV Sheffield", "Ajax intruder alarm Sheffield", "residential security South Yorkshire", "house alarm and CCTV Sheffield"],
+    designPriorities: [
+      "Plan CCTV and intruder protection around the same Sheffield home so the driveway, front approach and principal entrance are covered as complementary security layers.",
+      "Use external cameras, door protection and a visible siren in positions that provide useful performance without making the property look over-equipped.",
+      "Connect the Ajax system through one central hub and complete a clear handover so alerts, arming and normal day-to-day use remain straightforward for the household.",
+    ],
+    outcome: "The Sheffield property received coordinated residential CCTV and Ajax intruder protection, including external camera coverage, door protection, a connected hub and a professionally positioned warning siren.",
+    localContext: "Home security in Sheffield varies considerably between terraces, semis, detached homes and properties with garages or side access. A survey helps identify the right camera views, alarm zones, communication range and control method without adding equipment that does not improve the finished system.",
     faq: [
-      { q: "Do Sheffield homes need both CCTV and an intruder alarm?", a: "Not every property needs both, but they serve different purposes. The survey considers the risks, entrances, external areas, budget and preferred response before recommending one or both systems." },
+      { q: "Do Sheffield homes need both CCTV and an intruder alarm?", a: "Not every property needs both, but they serve different purposes. CCTV provides live and recorded visibility, while the alarm provides detection and warning around protected doors and internal areas." },
       { q: "Can a home security system send alerts to a phone?", a: "Yes. Suitable alarm and CCTV systems can provide app notifications, subject to the selected equipment, internet or cellular connection, permissions and configuration." },
+      { q: "Can CCTV cameras and the alarm siren be installed neatly on the same elevation?", a: "Yes. Positions can be planned around the property finish, cable routes and required coverage so the equipment remains effective without looking cluttered." },
     ]
   },
   {
