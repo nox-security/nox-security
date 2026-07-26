@@ -1386,8 +1386,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Total Security Package | Alarm Monitoring & CCTV Maintenance",
     metaDescription: "A coordinated annual security package for residential and commercial customers across Chesterfield and Derbyshire, with monitoring, servicing and one renewal date.",
     intro: "Bring the agreed intruder alarm monitoring, alarm maintenance and CCTV maintenance services under one annual arrangement with one point of contact.",
-    image: "/images/v4-10/servicing-monitoring-hero.jpeg",
-    imageAlt: "NOX Fire and Security van supporting a coordinated servicing, monitoring and maintenance plan",
+    image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
+    imageAlt: "Coordinated alarm monitoring and CCTV maintenance package from NOX",
     included: ["Agreed intruder alarm servicing", "Agreed professional alarm monitoring", "Agreed CCTV maintenance", "Annual system review", "One renewal date", "One point of contact", "Priority support where stated in the agreement", "Discounted labour or preferential repair pricing only where written into the package"],
     suitableFor: ["Homes with alarm and CCTV", "Landlords", "Retail", "Offices", "Commercial premises", "Customers wanting one renewal date"],
     process: [
