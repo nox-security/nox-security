@@ -151,6 +151,7 @@ export const supportFooterItems: NavItem[] = [
   { label: "Contact", href: "/contact" },
   { label: "Reviews", href: "/reviews" },
   { label: "Areas We Cover", href: "/areas-we-serve" },
+  { label: "Official Ajax Partner", href: "/ajax-authorised-installer" },
 ]
 
 // Retained exports keep older components stable while the footer and header

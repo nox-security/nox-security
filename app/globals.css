@@ -2307,3 +2307,48 @@ p { color: var(--muted); }
   line-height: 1.5;
   font-weight: 650;
 }
+
+/* v4.13.19 official Ajax partner landing page */
+.ajax-partner-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 720px;
+  margin: 26px 0 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  background: rgba(255,255,255,.045);
+}
+.ajax-partner-hero-badge img { width: 205px; max-height: 55px; object-fit: contain; flex: 0 0 auto; }
+.ajax-partner-hero-badge span { color: #bcbcbc; font-size: 14px; line-height: 1.55; }
+.ajax-partner-status-section { background: linear-gradient(180deg, #080808, #050505); }
+.ajax-partner-status-grid { align-items: stretch; }
+.ajax-partner-logo-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(34px, 5vw, 64px);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 24px;
+  background: radial-gradient(circle at top right, rgba(255,255,255,.09), transparent 42%), linear-gradient(145deg,#121212,#060606);
+  box-shadow: 0 28px 80px rgba(0,0,0,.3);
+}
+.ajax-partner-logo-card > img { width: min(100%, 310px); max-height: 85px; object-fit: contain; object-position: left center; margin-bottom: 42px; }
+.ajax-partner-logo-card > span { color: #777; font-size: 11px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+.ajax-partner-logo-card h2 { margin: 12px 0 14px; font-size: clamp(30px, 4vw, 48px); }
+.ajax-partner-logo-card p { color: #aaa; font-size: 17px; }
+.ajax-partner-logo-card .button { align-self: flex-start; margin-top: 22px; }
+.ajax-partner-mini-grid { margin-top: 34px; }
+.ajax-partner-media-grid .media-route-card > img { min-height: 330px; }
+.ajax-support-grid { align-items: start; }
+.home-ajax-partner-mark a { display: inline-flex; transition: opacity .2s ease, transform .2s ease; }
+.home-ajax-partner-mark a:hover { opacity: .82; transform: translateY(-2px); }
+
+@media (max-width: 760px) {
+  .ajax-partner-hero-badge { align-items: flex-start; flex-direction: column; }
+  .ajax-partner-hero-badge img { width: 180px; }
+  .ajax-partner-logo-card > img { width: 230px; }
+  .ajax-partner-media-grid .media-route-card > img { min-height: 270px; }
+}

@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/services",
     "/areas-we-serve",
+    "/ajax-authorised-installer",
     "/about-us",
     "/contact",
     "/get-quote",
@@ -57,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/fire-alarm-servicing-chesterfield",
     "/systems/intrusion-alarms",
     "/services/intruder-alarm-installation-chesterfield",
+    "/ajax-authorised-installer",
   ])
 
   return urls.map(path => ({

@@ -68,7 +68,9 @@ export default function HomePage() {
           <Link href="/service-plans">Servicing &amp; Monitoring →</Link>
         </div>
         <div className="home-ajax-partner-mark">
-          <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" />
+          <Link href="/ajax-authorised-installer" aria-label="Official Ajax Partner and Ajax Authorised Installation Company">
+            <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" />
+          </Link>
         </div>
       </div>
     </section>
