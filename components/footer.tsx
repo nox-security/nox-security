@@ -58,7 +58,7 @@ export default function Footer() {
         <Link href="/areas/hope-valley">Hope Valley</Link>
         <Link href="/areas/ashover">Ashover</Link>
         <Link href="/areas/buxton">Buxton</Link>
-        <Link href="/areas/rotherham">Rotherham</Link>
+        <Link href="/areas/hathersage">Hathersage</Link>
         <Link href="/areas/derby">Derby</Link>
       </div>
       <div className="footer-bottom">

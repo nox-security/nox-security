@@ -73,8 +73,8 @@ export default function HomePage() {
       </div>
     </section>
 
-    <ReviewSummaryStrip label="5 Star Google Reviews" />
-    <TrustStrip variant="general" reviewTitle="5 Star Google Reviews" />
+    <ReviewSummaryStrip label="5 Star Reviews" />
+    <TrustStrip variant="general" reviewTitle="5 Star Reviews" />
 
     <section className="section premium-client-section"><div className="container">
       <SectionHeading eyebrow="Residential CCTV & Security" title="Professional CCTV, Ajax alarms and external protection for the property" text="NOX starts with the views, access points and external areas that matter, then recommends the right combination of CCTV, intruder detection and perimeter protection." />

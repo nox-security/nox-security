@@ -54,9 +54,9 @@ const pages: Record<string, FireProjectPage> = {
     intro: "NOX helps organisations plan fire alarm installation, takeover, servicing and remedial work across several premises in Chesterfield, Sheffield, Derbyshire and the wider operating area. Each building keeps its own fire strategy, records and system requirements, while the estate receives a clearer programme, reporting structure and route for prioritising work.",
     metaTitle: "Multi-Site Fire Alarm Systems & Servicing | NOX",
     metaDescription: "Multi-site fire alarm installation, servicing, takeovers and remedial programmes across Chesterfield, Sheffield and Derbyshire with clear site records and coordinated reporting.",
-    image: "/images/revisions/telesis-en54-fire-hub-normal.jpg",
-    imageAlt: "Ajax EN54 fire alarm control panel used within a coordinated multi-site fire programme",
-    imagePosition: "center 42%",
+    image: "/images/projects/bottle-thyme-vehicles.jpg",
+    imageAlt: "NOX Fire and Security vehicles supporting a coordinated multi-site fire alarm programme",
+    imagePosition: "center 50%",
     requirementTitle: "Consistency across the estate without treating every building as identical",
     requirementText: "A useful multi-site programme standardises the information, reporting and service route where practical, but still respects the occupancy, layout, fire strategy, existing panel, device quantities and operational restrictions at each address. The goal is clearer control of the estate, not a copied specification that ignores individual sites.",
     included: [
