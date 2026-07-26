@@ -288,7 +288,8 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     "perimeter-protection": [
       { src: "/images/image-refresh/home-perimeter-motioncam.webp", alt: "Ajax outdoor MotionCam at a home", caption: "External detection positioned around a garden and side approach." },
       { src: "/images/image-refresh/intruder-outdoor-false-alarm.webp", alt: "Ajax outdoor detector", caption: "Smart external detection helps provide earlier warning while reducing false alarms." },
-      { src: "/images/image-refresh/garages-outbuildings-engineer.webp", alt: "NOX engineer installing security on an outbuilding", caption: "Detached buildings and separate areas planned into the wider system." }
+      { src: "/images/image-refresh/garages-outbuildings-engineer.webp", alt: "NOX engineer installing security on an outbuilding", caption: "Detached buildings and separate areas planned into the wider system." },
+      { src: "/images/v4-12-6/perimeter-support-ajax-devices.jpg", alt: "Ajax perimeter protection devices prepared for installation", caption: "A wider perimeter setup can combine several outdoor detectors as part of one coordinated design." }
     ],
     "emergency-lighting": [
       { src: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Modern emergency exit light", caption: "Modern escape-route lighting installed and positioned around the premises." },
