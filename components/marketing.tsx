@@ -74,7 +74,7 @@ export function DualButtons({ quoteLabel = "Get a Fire & Security Quote" }: { qu
   return <ContactActions primaryLabel={quoteLabel} />
 }
 
-export function TrustStrip({ variant = "general" }: { variant?: "general" | "residential" | "commercial" | "fire" | "servicing" }) {
+export function TrustStrip({ variant = "general", reviewTitle }: { variant?: "general" | "residential" | "commercial" | "fire" | "servicing"; reviewTitle?: string }) {
   const variants = {
     general: [
       { kicker: "Local and founder-led", title: "Chesterfield based", text: "The same local team remains accountable from survey to aftercare." },
@@ -107,12 +107,12 @@ export function TrustStrip({ variant = "general" }: { variant?: "general" | "res
       { kicker: "Local support", title: "Repairs and takeovers", text: "One team for servicing, faults, upgrades and suitable system takeovers." },
     ],
   }
-  const items = variants[variant]
+  const items = variants[variant].map(item => reviewTitle && item.title === "46+ Google reviews" ? { ...item, title: reviewTitle } : item)
   return <section className="trust-strip trust-strip-premium"><div className="container trust-strip-grid">{items.map(item => <article key={item.title}><span>{item.kicker}</span><strong>{item.title}</strong><small>{item.text}</small></article>)}</div></section>
 }
 
-export function ReviewSummaryStrip() {
-  return <section className="review-summary-strip"><div className="container review-summary-inner"><div><span className="stars" aria-label="5 out of 5 stars">★★★★★</span><strong>46+ Google reviews</strong><span>Genuine feedback from residential and commercial NOX customers.</span></div><a className="text-link" href="https://g.page/r/CUdyqRh0RFeXEAE/review" target="_blank" rel="noreferrer">View Google reviews →</a></div></section>
+export function ReviewSummaryStrip({ label = "46+ Google reviews" }: { label?: string }) {
+  return <section className="review-summary-strip"><div className="container review-summary-inner"><div><span className="stars" aria-label="5 out of 5 stars">★★★★★</span><strong>{label}</strong><span>Genuine feedback from residential and commercial NOX customers.</span></div><a className="text-link" href="https://g.page/r/CUdyqRh0RFeXEAE/review" target="_blank" rel="noreferrer">View Google reviews →</a></div></section>
 }
 
 export function SectionHeading({ eyebrow, title, text }: { eyebrow?: string; title: string; text?: string }) {

@@ -29,36 +29,32 @@ const complianceRoutes = [
 
 const en54Highlights = [
   {
-    title: "EN54 Fire Hub",
-    text: "A 10.1-inch touchscreen control and indicating unit with Ethernet, Wi-Fi and dual-SIM communication options, plus compatible 24- or 72-hour standby batteries.",
-    image: "/images/ajax-products/ajax-en54-firehub.webp",
-    alt: "Ajax EN54 Fire Hub touchscreen control and indicating equipment",
-    artwork: true,
-    position: "center",
+    title: "Fire Alarm Control Panel",
+    text: "The Ajax EN54 Fire Hub controls the fire alarm system, shows alarm and fault information clearly and supports the communication and standby-power options required for the installation.",
+    image: "/images/image-refresh/en54-fire-hub.webp",
+    alt: "Ajax EN54 commercial fire alarm control panel",
+    position: "center 46%",
   },
   {
-    title: "Addressable detection",
-    text: "Wireless smoke, heat and combined detector options can be assigned to clear fire zones and selected with sounder functions where the design requires them.",
-    image: "/images/ajax-products/ajax-en54-detection.webp",
-    alt: "Ajax EN54 wireless addressable fire detection devices",
-    artwork: true,
-    position: "center",
+    title: "Smoke & Heat Detectors",
+    text: "Smoke, heat and combined fire detectors are selected around each room, ceiling condition and fire zone so the system provides the right type of detection throughout the premises.",
+    image: "/images/v4-10/fire-smoke-detector.jpeg",
+    alt: "Ajax EN54 smoke and heat detector installed on a ceiling",
+    position: "center 42%",
   },
   {
-    title: "Manual activation",
-    text: "Resettable manual call points provide a clear way to raise the alarm and are positioned as part of the complete fire-system design.",
-    image: "/images/ManualCallPointFireAlarm.jpeg",
-    alt: "Ajax EN54 manual fire alarm call point",
-    artwork: true,
-    position: "center",
+    title: "Manual Call Point",
+    text: "Manual call points are positioned on escape routes and at suitable exits so staff and occupants can raise the fire alarm quickly and clearly.",
+    image: "/images/v4-10/fire-manual-call-point.jpeg",
+    alt: "Ajax EN54 manual fire alarm call point installed beside fire safety signage",
+    position: "center 40%",
   },
   {
-    title: "Audible and visual warning",
-    text: "Sounders and visual alarm devices are selected and positioned around the warning strategy, occupancy and layout of the premises.",
-    image: "/images/image-refresh/en54-sounder-vad.webp",
-    alt: "Ajax EN54 sounder and visual alarm device",
-    artwork: true,
-    position: "center",
+    title: "Fire Alarm Sounders & Beacons",
+    text: "Fire alarm sounders and visual warning devices are selected and positioned to provide clear warning across the building, including louder or more visible areas where required.",
+    image: "/images/v4-10/fire-sounder.jpeg",
+    alt: "Ajax EN54 fire alarm sounder installed above a doorway",
+    position: "center 36%",
   },
 ]
 
@@ -76,7 +72,7 @@ export default function FireCompliancePage() {
     <TrustStrip variant="fire"/>
 
     <section className="section en54-overview-section"><div className="container">
-      <SectionHeading eyebrow="Ajax EN54 commercial fire systems" title="A wireless addressable fire platform designed as one complete system" text="Ajax EN54 brings the control equipment, detection, manual activation, sounders, visual warnings, communications and expansion devices into one coordinated commercial fire system. NOX still starts with the building and fire-safety requirement before deciding whether Ajax EN54, a wired addressable system or a conventional system is the right solution."/>
+      <SectionHeading eyebrow="Commercial fire alarm systems" title="Fire alarm control, smoke and heat detection, call points and sounders" text="A complete commercial fire alarm system brings the control panel, smoke and heat detectors, manual call points, sounders and visual warnings together as one clear design. NOX starts with the building and fire-safety requirements before recommending Ajax EN54, a wired addressable system or a conventional fire alarm."/>
       <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className={item.artwork ? "en54-overview-media is-artwork" : "en54-overview-media"}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
       <div className="section-action-row"><Link className="button button-light" href="/systems/fire-safety">Explore Fire Alarm Installation</Link><Link className="button button-outline" href="/case-studies/telesis-hitachi-fire-intruder-system">View an EN54 installation</Link></div>
     </div></section>

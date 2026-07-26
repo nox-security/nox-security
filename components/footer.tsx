@@ -53,7 +53,13 @@ export default function Footer() {
         <Link href="/areas/derbyshire">Derbyshire</Link>
         <Link href="/areas/dronfield">Dronfield</Link>
         <Link href="/areas/matlock">Matlock</Link>
+        <Link href="/areas/bakewell">Bakewell</Link>
+        <Link href="/areas/baslow">Baslow</Link>
+        <Link href="/areas/hope-valley">Hope Valley</Link>
+        <Link href="/areas/ashover">Ashover</Link>
         <Link href="/areas/buxton">Buxton</Link>
+        <Link href="/areas/rotherham">Rotherham</Link>
+        <Link href="/areas/derby">Derby</Link>
       </div>
       <div className="footer-bottom">
         <span>© 2026 NOX Fire & Security. All rights reserved.</span>

@@ -2266,3 +2266,23 @@ p { color: var(--muted); }
     height: 310px;
   }
 }
+
+/* v4.12 homepage partner proof and fire terminology refinement */
+.home-ajax-partner-mark {
+  width: fit-content;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.18);
+  opacity: .86;
+}
+.home-ajax-partner-mark img {
+  display: block;
+  width: 158px;
+  max-height: 42px;
+  object-fit: contain;
+  object-position: left center;
+}
+@media (max-width: 760px) {
+  .home-ajax-partner-mark { margin-top: 18px; padding-top: 15px; }
+  .home-ajax-partner-mark img { width: 142px; }
+}

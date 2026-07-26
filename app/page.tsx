@@ -67,11 +67,14 @@ export default function HomePage() {
           <Link href="/systems/intrusion-alarms">Intruder Alarms →</Link>
           <Link href="/service-plans">Servicing &amp; Monitoring →</Link>
         </div>
+        <div className="home-ajax-partner-mark">
+          <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" />
+        </div>
       </div>
     </section>
 
-    <ReviewSummaryStrip />
-    <TrustStrip variant="general" />
+    <ReviewSummaryStrip label="5 Star Google Reviews" />
+    <TrustStrip variant="general" reviewTitle="5 Star Google Reviews" />
 
     <section className="section premium-client-section"><div className="container">
       <SectionHeading eyebrow="Residential CCTV & Security" title="Professional CCTV, Ajax alarms and external protection for the property" text="NOX starts with the views, access points and external areas that matter, then recommends the right combination of CCTV, intruder detection and perimeter protection." />
