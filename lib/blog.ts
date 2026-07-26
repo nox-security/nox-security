@@ -382,7 +382,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Understand the difference between alarm app notifications and professional monitoring, including signalling, keyholders, supervision, maintenance and suitable systems.",
     category: "Maintenance & Monitoring Guides",
     excerpt: "An app notification goes to the user. Professional monitoring sends agreed alarm events through a monitored signalling route with a defined keyholder process.",
-    image: "/images/revisions/intruder-alarm-monitoring-centre.jpg",
+    image: "/images/v4-13-2/alarm-monitoring-operator.jpg",
     imageAlt: "Professional security monitoring operator reviewing alarm events",
     sections: [
       { heading: "The direct answer", paragraphs: ["An app alert notifies the people logged into the system. Professional monitoring sends agreed events through a monitored signalling route so an alarm receiving centre can follow the confirmed contact or keyholder process.", "Neither option should be described with vague promises. The customer needs to know which events are transmitted, who is contacted, what supervision is provided and what happens when contacts cannot be reached."] },

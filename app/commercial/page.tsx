@@ -74,8 +74,8 @@ const ongoingSupport = [
     title: "Alarm Monitoring",
     text: "Professional signalling, keyholder communication and system supervision for suitable maintained alarm systems.",
     href: "/service-plans/alarm-monitoring",
-    image: "/images/revisions/intruder-alarm-monitoring-centre.jpg",
-    alt: "Professional alarm monitoring operator handling security signals",
+    image: "/images/v4-13-2/alarm-monitoring-operator.jpg",
+    alt: "Close-up of a professional alarm monitoring operator wearing a headset",
   },
   {
     title: "Repairs & Upgrades",
