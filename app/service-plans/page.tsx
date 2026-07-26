@@ -7,20 +7,20 @@ export const metadata: Metadata = pageMetadata(
   "CCTV, Alarm & Fire Servicing | Chesterfield & Sheffield",
   "CCTV maintenance, alarm servicing and monitoring, fire alarm servicing, emergency lighting, repairs and takeovers across Chesterfield, Sheffield and Derbyshire.",
   "/service-plans",
-  { image: "/images/revisions/intruder-maintenance-system-takeover.jpg", imageAlt: "Security system servicing and maintenance" },
+  { image: "/images/v4-10/servicing-monitoring-hero.jpeg", imageAlt: "NOX servicing and monitoring visit at a commercial property" },
 )
 
 const primarySupport = [
-  { title: "Intruder Alarm Servicing", text: "Annual system health checks, device testing, batteries, communication, sirens, event history and service records.", href: "/service-plans/alarm-maintenance", image: "/images/revisions/intruder-maintenance-system-takeover.jpg", alt: "Engineer servicing and inspecting an intruder alarm system" },
+  { title: "Intruder Alarm Servicing", text: "Annual system health checks, device testing, batteries, communication, sirens, event history and service records.", href: "/service-plans/alarm-maintenance", image: "/images/v4-10/intruder-alarm-servicing.jpeg", alt: "External intruder alarm siren inspected during a service visit" },
   { title: "Alarm Monitoring", text: "Professional signalling, keyholder communication and system supervision for suitable maintained alarm systems.", href: "/service-plans/alarm-monitoring", image: "/images/revisions/intruder-alarm-monitoring-centre.jpg", alt: "Professional alarm monitoring operator handling security signals" },
-  { title: "CCTV Maintenance", text: "Camera cleaning, image checks, recorder and storage health, playback, remote access and upgrade recommendations.", href: "/service-plans/cctv-maintenance", image: "/images/image-refresh/commercial-cctv-buxton-monitor.webp", alt: "Commercial CCTV system checked for recording and playback during maintenance" },
+  { title: "CCTV Maintenance", text: "Camera cleaning, image checks, recorder and storage health, playback, remote access and upgrade recommendations.", href: "/service-plans/cctv-maintenance", image: "/images/v4-10/cctv-maintenance.jpeg", alt: "Commercial CCTV system checked for recording and playback during maintenance" },
   { title: "System Takeovers", text: "Assessment of access, faults, condition, compatibility and the practical route into ongoing support.", href: "/services/security-system-takeover", image: "/images/image-refresh/commercial-old-camera.webp", alt: "Older CCTV equipment removed during a security system takeover" },
   { title: "Repairs & Upgrades", text: "Fault assessment, selective replacement, recorder upgrades, access recovery and phased system improvement.", href: "/services/repairs-upgrades", image: "/images/image-refresh/chester-street-after.webp", alt: "Clear live CCTV views after a commercial garage system upgrade" },
 ]
 
 export default function ServicePlansPage() {
   return <>
-    <PageHero eyebrow="Servicing & Monitoring" title="Keep alarm, CCTV and fire systems useful after installation" intro="NOX supports systems installed by NOX and suitable systems installed by another company. Planned servicing, professional monitoring, faults, repairs, upgrades and takeovers are kept clear so customers understand the visit, exclusions and next steps." image="/images/revisions/intruder-maintenance-system-takeover.jpg" imageAlt="Engineer maintaining an existing security system">
+    <PageHero eyebrow="Servicing & Monitoring" title="Keep alarm, CCTV and fire systems useful after installation" intro="NOX supports systems installed by NOX and suitable systems installed by another company. Planned servicing, professional monitoring, faults, repairs, upgrades and takeovers are kept clear so customers understand the visit, exclusions and next steps." image="/images/v4-10/servicing-monitoring-hero.jpeg" imageAlt="NOX Fire and Security van outside a commercial servicing and monitoring visit" imagePosition="center 68%">
       <ContactActions primaryLabel="Get a Maintenance Quote" audience="Residential & Commercial" serviceCategory="Servicing & Monitoring" enquiryType="Servicing" sourceLabel="servicing-hub"/>
     </PageHero>
     <TrustStrip variant="servicing"/>

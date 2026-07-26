@@ -290,12 +290,6 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
       { src: "/images/image-refresh/intruder-outdoor-false-alarm.webp", alt: "Ajax outdoor detector", caption: "Smart external detection helps provide earlier warning while reducing false alarms." },
       { src: "/images/image-refresh/garages-outbuildings-engineer.webp", alt: "NOX engineer installing security on an outbuilding", caption: "Detached buildings and separate areas planned into the wider system." }
     ],
-    "fire-safety": [
-      { src: "/images/image-refresh/en54-fire-hub.webp", alt: "Ajax EN54 Fire Hub", caption: "Clear control and indication through the Ajax EN54 Fire Hub." },
-      { src: "/images/image-refresh/en54-manual-call-point.webp", alt: "Ajax EN54 manual call point", caption: "Resettable manual activation positioned around the escape strategy." },
-      { src: "/images/image-refresh/en54-sounder-vad.webp", alt: "Ajax EN54 sounder VAD", caption: "Audible and visual warning devices selected as part of the system design." },
-      { src: "/images/image-refresh/green-manual-call-point.webp", alt: "Green manual release point", caption: "Specialist manual controls can be coordinated where the wider fire strategy requires them." }
-    ],
     "emergency-lighting": [
       { src: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Modern emergency exit light", caption: "Modern escape-route lighting installed and positioned around the premises." },
       { src: "/images/image-refresh/emergency-lighting-existing.webp", alt: "Existing emergency exit light", caption: "Existing fittings can be tested, reported and replaced where required." }

@@ -2232,3 +2232,21 @@ p { color: var(--muted); }
 @media (max-width: 760px) {
   .home-hero-camera img { object-position: center 30%; }
 }
+
+
+/* v4.10 servicing and fire imagery refinement */
+.page-hero-media img[src*="servicing-monitoring-hero"] { object-position: center 68%; }
+.page-hero-media img[src*="intruder-alarm-servicing"] { object-position: center 56%; }
+.page-hero-media img[src*="cctv-maintenance"] { object-position: center 48%; }
+.page-hero-media img[src*="fire-alarm-servicing"] { object-position: center 42%; }
+.page-hero-media img[src*="fire-alarm-installation-hero"] { object-position: center 48%; }
+.product-detail-photo img[src*="fire-manual-call-point"],
+.product-detail-photo img[src*="fire-sounder"],
+.product-detail-photo img[src*="fire-smoke-detector"] { object-fit: cover; object-position: center; }
+@media (max-width: 760px) {
+  .page-hero-media img[src*="servicing-monitoring-hero"] { object-position: center 62%; }
+  .page-hero-media img[src*="intruder-alarm-servicing"] { object-position: center 54%; }
+  .page-hero-media img[src*="cctv-maintenance"] { object-position: center 45%; }
+  .page-hero-media img[src*="fire-alarm-servicing"] { object-position: center 40%; }
+  .page-hero-media img[src*="fire-alarm-installation-hero"] { object-position: center 45%; }
+}

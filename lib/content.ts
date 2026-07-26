@@ -1015,8 +1015,8 @@ export const systemPages: Record<string, ServicePageData> = {
     metaTitle: "Commercial Fire Alarm Installation | Chesterfield & Sheffield",
     metaDescription: "Commercial fire alarm installation across Chesterfield, Sheffield and Derbyshire, including conventional, addressable and suitable Ajax EN54 systems.",
     intro: "NOX designs and installs commercial fire alarm systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire. Conventional, addressable and suitable Ajax EN54 wireless solutions are specified around the building, fire strategy, zones, warning coverage, connectivity, standby power and future servicing.",
-    image: "/images/image-refresh/en54-fire-hub.webp",
-    imageAlt: "Ajax EN54 Fire Hub installed as part of a commercial fire alarm system",
+    image: "/images/v4-10/fire-alarm-installation-hero.jpeg",
+    imageAlt: "Ajax EN54 fire alarm control panel installed beside a fire alarm zone plan and manual call point",
     problemTitle: "A commercial fire alarm is a complete life-safety system",
     problemText: "Control equipment, detection, manual activation, sounders, visual alarm devices, fire zones, communications, standby power and records must work together as one design. NOX reviews the premises and available fire information before recommending Ajax EN54, a wired addressable system or a conventional solution.",
     benefits: ["New commercial fire alarm installations", "Suitable Ajax EN54 wireless addressable systems", "10.1-inch touchscreen EN54 Fire Hub", "Smoke, heat, sounder and VAD device options", "Manual call points and clearly defined fire zones", "Fire ReX and I/O options for larger sites", "Conventional and wired addressable alternatives", "Commissioning, handover and future servicing route"],
@@ -1044,12 +1044,9 @@ export const systemPages: Record<string, ServicePageData> = {
     platformTitle: "Ajax EN54 devices selected as one coordinated fire system",
     platformText: "The Fire Hub, addressable detection, manual call points, sounders, visual alarm devices, range extension and integration modules are selected around the complete fire-system design. NOX also continues to support suitable conventional and wired addressable systems.",
     products: [
-      { name: "EN54 Fire Hub Jeweller", description: "Wireless control and indicating equipment with a 10.1-inch touchscreen, multiple communication channels and compatible 24- or 72-hour standby batteries.", image: "/images/image-refresh/en54-fire-hub.webp", imageAlt: "Ajax EN54 Fire Hub touchscreen product image" },
-      { name: "Smoke and heat detection", description: "Wireless addressable smoke and heat detectors, including versions with integrated sounders, selected around each space and fire zone.", image: "/images/ajax-products/ajax-en54-detection.webp", imageAlt: "Ajax EN54 smoke heat and warning devices" },
-      { name: "Manual call points", description: "Resettable manual activation devices positioned and assigned within the agreed fire-zone and evacuation strategy.", image: "/images/image-refresh/en54-manual-call-point.webp", imageAlt: "Ajax manual fire alarm call point installed at a commercial premises" },
-      { name: "Sounders and visual alarms", description: "Dedicated sounder, VAD and combined sounder/VAD options provide audible and visual warning where the design requires them.", image: "/images/image-refresh/en54-sounder-vad.webp", imageAlt: "Ajax EN54 sounder and visual alarm device" },
-      { name: "Range extension and I/O", description: "EN54 Fire ReX and compatible I/O modules support larger sites, difficult building layouts and agreed third-party interfaces.", image: "/images/revisions/telesis-en54-fire-hub-normal.jpg", imageAlt: "Ajax EN54 fire system operating normally at an industrial premises" },
-      { name: "Conventional and addressable options", description: "Where a wireless EN54 solution is not the right fit, NOX can specify or support suitable conventional and wired addressable fire alarm systems.", image: "/images/image-refresh/fire-system-takeover-panel.webp", imageAlt: "Traditional commercial fire alarm control panel" }
+      { name: "Manual call point", description: "Resettable manual activation positioned on escape routes and assigned to the correct fire zone as part of the agreed design.", image: "/images/v4-10/fire-manual-call-point.jpeg", imageAlt: "Ajax EN54 manual fire alarm call point installed beside fire safety signage" },
+      { name: "Fire alarm sounder", description: "Audible warning equipment selected and positioned to support the required alarm coverage throughout the premises.", image: "/images/v4-10/fire-sounder.jpeg", imageAlt: "Ajax EN54 fire alarm sounder installed above a doorway" },
+      { name: "Smoke detector", description: "Addressable smoke detection selected around room use, ceiling conditions, fire zones and the wider cause-and-effect strategy.", image: "/images/v4-10/fire-smoke-detector.jpeg", imageAlt: "Ajax EN54 smoke detector installed on a ceiling" }
     ],
     videos: [
       { title: "Ajax fire protection", text: "See how Ajax control equipment and line devices can form part of a connected commercial fire system.", youtubeId: "XZDNd3ud-ck" }
@@ -1244,8 +1241,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Intruder Alarm Servicing Chesterfield & Sheffield | NOX",
     metaDescription: "Intruder Alarm Servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire, including device tests, battery checks, communication, sirens and service records.",
     intro: "NOX provides planned Intruder Alarm Servicing for its own installations and suitable wired, wireless and hybrid systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
-    image: "/images/revisions/intruder-maintenance-system-takeover.jpg",
-    imageAlt: "Engineer carrying out intruder alarm maintenance and system takeover work",
+    image: "/images/v4-10/intruder-alarm-servicing.jpeg",
+    imageAlt: "Intruder alarm external siren inspected during a residential service visit",
     included: ["Annual engineer service", "Full system health check", "Device testing", "Sensor cleaning", "Battery health checks", "Firmware updates where supported", "Service record or certificate", "Defect and recommendation reporting"],
     suitableFor: ["NOX-installed alarms", "Suitable existing systems", "Homes and landlords", "Retail and offices", "Warehouses and industrial sites", "Commercial portfolios"],
     process: [
@@ -1302,8 +1299,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "CCTV Maintenance Chesterfield & Sheffield | NOX",
     metaDescription: "CCTV maintenance across Chesterfield, Sheffield, Derbyshire and South Yorkshire, including camera cleaning, recorder and hard-drive checks, playback and remote-viewing tests.",
     intro: "NOX provides CCTV maintenance for its own installations and suitable existing systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire, checking cameras, recording, playback and remote access.",
-    image: "/images/image-refresh/commercial-cctv-buxton-wide.webp",
-    imageAlt: "Commercial CCTV recorder and live views checked during planned maintenance",
+    image: "/images/v4-10/cctv-maintenance.jpeg",
+    imageAlt: "Older external CCTV camera assessed during a maintenance visit",
     included: ["Annual engineer maintenance", "Camera cleaning", "Recorder health check", "Hard-drive health review", "Playback test", "Firmware updates where supported", "Remote-viewing check", "Service report"],
     suitableFor: ["Home CCTV", "Retail and hospitality", "Showrooms", "Garages and yards", "Industrial CCTV", "Multi-camera commercial sites"],
     process: [
@@ -1331,8 +1328,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Fire Alarm Servicing Chesterfield & Sheffield | NOX",
     metaDescription: "Fire Alarm Servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire for commercial premises, landlords and portfolios, with test records and defect reporting.",
     intro: "NOX provides planned Fire Alarm Servicing for commercial premises, landlords, HMOs and property portfolios across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
-    image: "/images/image-refresh/fire-system-takeover-panel.webp",
-    imageAlt: "Commercial fire alarm panel inspected during planned maintenance",
+    image: "/images/v4-10/fire-alarm-servicing.jpeg",
+    imageAlt: "Commercial fire alarm control panel inspected during planned servicing",
     included: ["Panel and system checks", "Device testing within the agreed scope", "Sounder and function checks", "Logbook and record review where available", "Defect reporting", "Service records", "Remedial quotation where requested", "Planned renewal scheduling"],
     suitableFor: ["Retail", "Offices", "Hospitality", "Warehouses", "HMOs and landlords", "Property portfolios"],
     process: [

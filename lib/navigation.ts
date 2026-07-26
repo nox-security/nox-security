@@ -93,7 +93,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
     id: "servicing",
     label: "Servicing & Monitoring",
     href: "/service-plans",
-    featured: { label: "Servicing & Monitoring Overview", href: "/service-plans" },
+    featured: { label: "Servicing & Monitoring", href: "/service-plans" },
     groups: [
       {
         items: [
