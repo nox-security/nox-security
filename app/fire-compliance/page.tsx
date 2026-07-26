@@ -73,7 +73,7 @@ export default function FireCompliancePage() {
 
     <section className="section en54-overview-section"><div className="container">
       <SectionHeading eyebrow="Commercial fire alarm systems" title="Fire alarm control, smoke and heat detection, call points and sounders" text="A complete commercial fire alarm system brings the control panel, smoke and heat detectors, manual call points, sounders and visual warnings together as one clear design. NOX starts with the building and fire-safety requirements before recommending Ajax EN54, a wired addressable system or a conventional fire alarm."/>
-      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className={item.artwork ? "en54-overview-media is-artwork" : "en54-overview-media"}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className="en54-overview-media"><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
       <div className="section-action-row"><Link className="button button-light" href="/systems/fire-safety">Explore Fire Alarm Installation</Link><Link className="button button-outline" href="/case-studies/telesis-hitachi-fire-intruder-system">View an EN54 installation</Link></div>
     </div></section>
 
