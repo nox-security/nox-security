@@ -210,7 +210,7 @@ export default function AjaxAuthorisedInstallerPage() {
           </div>
           <ContactActions primaryLabel="Discuss an Ajax System" audience="Residential & Commercial" serviceCategory="Ajax Systems" enquiryType="Installation" sourceLabel="ajax-authorised-installer-hero"/>
         </div>
-        <figure className="page-hero-media ajax-founder-hero-media"><img src="/images/v4-13-20/ajax-founder-meeting.jpg" alt="NOX Fire & Security team with Alex Konotopskyi, founder of Ajax Systems" style={{ objectPosition: "center 34%" }}/><figcaption>The NOX team with Alex Konotopskyi, founder of Ajax Systems.</figcaption></figure>
+        <figure className="page-hero-media ajax-founder-hero-media"><img src="/images/v4-13-20/ajax-founder-meeting.jpg" alt="Joseph Robb and James Rigby of NOX Fire & Security with Alex Konotopskyi, founder of Ajax Systems" style={{ objectPosition: "center 34%" }}/><figcaption>Joseph Robb and James Rigby with Alex Konotopskyi, founder of Ajax Systems.</figcaption></figure>
       </div>
     </section>
 
@@ -218,14 +218,14 @@ export default function AjaxAuthorisedInstallerPage() {
 
     <section className="section ajax-founder-intro-section"><div className="container split-grid ajax-founder-intro-grid">
       <div>
-        <SectionHeading eyebrow="Meeting the founder of Ajax Systems" title="A first-hand introduction to the global company behind the technology" text="At an industry event, the NOX team had the opportunity to meet Alex Konotopskyi, founder of Ajax Systems and Chairman of its Board. The photograph records that meeting and places the NOX team alongside the person who established one of the best-known professional security technology brands in the market."/>
+        <SectionHeading eyebrow="Meeting the founder of Ajax Systems" title="A first-hand introduction to the global company behind the technology" text="At an industry event, Joseph and James had the opportunity to meet Alex Konotopskyi, founder of Ajax Systems and Chairman of its Board. The photograph records that first-hand meeting with the person who established one of the best-known professional security technology brands in the market."/>
         <p className="lead-small">Ajax is a global security systems company. NOX installs its products locally as an Ajax Authorised Installation Company, combining the technology with property-specific surveys, professional configuration, clear handover and ongoing support across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
       </div>
       <aside className="dark-panel ajax-founder-intro-panel">
         <span className="micro-label">About Alex Konotopskyi</span>
         <h3>Founder of Ajax Systems</h3>
-        <p>Alex Konotopskyi founded Ajax Systems and serves as Chairman of its Board. He is pictured with the NOX team in front of the Ajax professional product range.</p>
-        <p>Meeting him first-hand was a memorable moment for our team and a genuine part of our experience with the Ajax brand.</p>
+        <p>Alex Konotopskyi founded Ajax Systems and serves as Chairman of its Board. He is pictured with Joseph and James in front of the Ajax professional product range.</p>
+        <p>Meeting him first-hand was a memorable moment for Joseph and James and part of their experience with the Ajax brand.</p>
       </aside>
     </div></section>
 

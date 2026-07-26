@@ -74,7 +74,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     process: [
       { title: "Property survey", text: "We assess entry routes, vulnerable areas, bedrooms, garages, outbuildings and daily use." },
       { title: "Tailored design", text: "Devices are selected and positioned around the real property requirement." },
-      { title: "Clean installation", text: "The system is fitted, tested and configured by the NOX team." },
+      { title: "Clean installation", text: "The system is fitted, tested and configured by NOX." },
       { title: "Support", text: "Users, night mode, notifications, monitoring and servicing are explained at handover." }
     ],
     faq: [

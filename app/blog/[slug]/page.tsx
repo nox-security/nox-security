@@ -58,7 +58,7 @@ function localGuideContent(category: string, title: string) {
     heading: `${topic} — local support across Chesterfield and Derbyshire`,
     paragraphs: [
       "The right maintenance, monitoring, repair or takeover route depends on the system make, condition, access details, available records and known faults.",
-      "NOX supports suitable residential and commercial systems across Chesterfield and Derbyshire. Sending photographs, approximate equipment quantities and a brief fault or service history helps the team confirm the most useful first visit."
+      "NOX supports suitable residential and commercial systems across Chesterfield and Derbyshire. Sending photographs, approximate equipment quantities and a brief fault or service history helps NOX confirm the most useful first visit."
     ],
     faq: [
       { q: "Does NOX provide system servicing and takeover support in Chesterfield and Derbyshire?", a: "Yes, subject to the system type, access, condition and parts support. An initial inspection may be needed before ongoing support is confirmed." },

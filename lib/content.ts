@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
       { src: "/images/projects/bottle-thyme-bellbox.jpg", alt: "NOX Fire and Security warning device at Bottle and Thyme", caption: "A visible NOX warning device adds a clear security presence without dominating the frontage of the venue." },
       { src: "/images/projects/bottle-thyme-nvr.jpg", alt: "Commercial CCTV recorder installed at Bottle and Thyme", caption: "The recorder provides the central route for storing and reviewing footage from the installed camera system." },
       { src: "/images/projects/bottle-thyme-monitor-wide.jpg", alt: "Bottle and Thyme CCTV live-view monitor", caption: "The live-view display was arranged so the customer could check the relevant areas quickly during day-to-day operation." },
-      { src: "/images/projects/bottle-thyme-vehicles.jpg", alt: "NOX Fire and Security vehicles outside a Chesterfield commercial project", caption: "The installation was delivered locally by the NOX team and completed around the practical requirements of the working Chesterfield venue." }
+      { src: "/images/projects/bottle-thyme-vehicles.jpg", alt: "NOX Fire and Security vehicles outside a Chesterfield commercial project", caption: "The installation was delivered locally by NOX and completed around the practical requirements of the working Chesterfield venue." }
     ],
     metaTitle: "Commercial CCTV Installation Chesterfield | Hospitality Project",
     metaDescription: "Commercial CCTV installed at Bottle & Thyme in Chesterfield, with recorded coverage, an NVR, live viewing and a practical handover for a busy hospitality venue.",
@@ -684,7 +684,7 @@ export const areas = {
   chesterfield: {
     name: "Chesterfield", county: "Derbyshire",
     intro: "Local alarm, CCTV and fire safety support from NOX's Chesterfield base, covering homes, businesses, yards and larger multi-system sites.",
-    focus: "Chesterfield customers can arrange a security survey, installation, system takeover or annual service directly with the local NOX team.",
+    focus: "Chesterfield customers can arrange a security survey, installation, system takeover or annual service directly with NOX Fire & Security.",
     commercial: "Commercial support includes CCTV, intruder alarms, fire alarm work, emergency lighting, monitoring and maintenance for shops, offices, garages, industrial units and hospitality venues.",
     nearby: "Hasland, Brimington, Wingerworth, Clay Cross and Staveley"
   },

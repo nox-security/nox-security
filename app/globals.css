@@ -2446,3 +2446,48 @@ p { color: var(--muted); }
   .ajax-certificate-feature::before { background-size: 145% auto; background-position: center 22%; }
   .ajax-intruder-premium-image img { object-position: center 45% !important; }
 }
+
+/* v4.13.26 About NOX director-led story and mobile readability */
+.about-page .about-long-copy { display: grid; gap: 20px; }
+.about-page .about-long-copy p { margin: 0; }
+.about-page .founder-profile h2 { font-size: clamp(32px, 3.4vw, 48px); }
+.about-page .founder-remit { margin: 0 0 24px; padding: 0 0 20px; border-bottom: 1px solid var(--line); color: #f2f2f2; font-size: 15px; font-weight: 800; line-height: 1.5; letter-spacing: .015em; }
+.about-page .founder-profile p:last-child { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .about-page .section { padding: 64px 0; }
+  .about-page .section-heading { margin-bottom: 34px; }
+  .about-page .about-origin-grid { gap: 34px; }
+  .about-page .founder-profile-image,
+  .about-page .founder-profile-image img { min-height: 500px; height: 500px; }
+}
+
+@media (max-width: 640px) {
+  .about-page { scroll-padding-bottom: 90px; }
+  .about-page .about-hero-premium { padding: 52px 0 36px; }
+  .about-page .about-hero-grid { gap: 28px; }
+  .about-page .about-brand-panel { min-height: 410px; padding: 26px; }
+  .about-page .about-brand-panel blockquote { font-size: clamp(31px, 10vw, 43px); }
+  .about-page .section { padding: 52px 0; }
+  .about-page .section-heading { margin-bottom: 27px; }
+  .about-page .section-heading > p { font-size: 16px; line-height: 1.65; }
+  .about-page .about-origin-grid { gap: 24px; }
+  .about-page .about-long-copy { gap: 17px; }
+  .about-page .about-long-copy p { font-size: 16px; line-height: 1.68; }
+  .about-page .journey-editorial article,
+  .about-page .journey-editorial-detailed article { grid-template-columns: 44px 1fr; gap: 12px; padding: 24px 0; }
+  .about-page .journey-editorial h3 { font-size: clamp(24px, 8vw, 32px); }
+  .about-page .journey-editorial p { font-size: 15.5px; line-height: 1.65; }
+  .about-page .founder-profile-grid { gap: 18px; }
+  .about-page .founder-profile-image,
+  .about-page .founder-profile-image img { min-height: 380px; height: 380px; }
+  .about-page .founder-profile > div:last-child { padding: 25px; }
+  .about-page .team-role { margin-bottom: 10px; }
+  .about-page .founder-profile h2 { margin-bottom: 16px; font-size: clamp(30px, 9vw, 39px); }
+  .about-page .founder-remit { margin-bottom: 20px; padding-bottom: 17px; font-size: 14px; }
+  .about-page .founder-profile p { margin-bottom: 16px; font-size: 15.5px; line-height: 1.65; }
+  .about-page .about-editorial-columns article { min-height: auto; padding: 28px; }
+  .about-page .about-editorial-columns article > span { margin-bottom: 30px; }
+  .about-page .about-editorial-columns h3 { font-size: 27px; }
+  .about-page .conversion-panel { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+}

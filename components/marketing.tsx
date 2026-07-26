@@ -77,7 +77,7 @@ export function DualButtons({ quoteLabel = "Get a Fire & Security Quote" }: { qu
 export function TrustStrip({ variant = "general", reviewTitle }: { variant?: "general" | "residential" | "commercial" | "fire" | "servicing"; reviewTitle?: string }) {
   const variants = {
     general: [
-      { kicker: "Local and founder-led", title: "Chesterfield based", text: "The same local team remains accountable from survey to aftercare." },
+      { kicker: "Local and director-led", title: "Chesterfield based", text: "The same local business remains accountable from survey to aftercare." },
       { kicker: "Preferred smart platform", title: "Ajax authorised", text: "Modern alarm, detection and video options selected around the property." },
       { kicker: "Proven customer experience", title: "46+ Google reviews", text: "Genuine feedback about advice, installation quality and local support." },
       { kicker: "Ongoing support", title: "Servicing and monitoring", text: "Support for NOX installations and suitable existing systems." },
@@ -231,7 +231,7 @@ export function EnquiryPreparation({ topic = "fire or security system", commerci
 
 export function ConversionPanel({
   title = "Tell NOX what you need",
-  text = "Share the property, site or existing-system details and the NOX team will confirm the right survey, service or quotation next step.",
+  text = "Share the property, site or existing-system details and NOX will confirm the right survey, service or quotation next step.",
   primaryLabel = "Get a Quote",
   audience,
   serviceCategory,

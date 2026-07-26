@@ -46,7 +46,7 @@ export default function Footer() {
         <div>
           <h3>Contact</h3>
           <a href={site.phoneHref}>{site.phone}</a>
-          <a href={site.whatsapp}>WhatsApp the team</a>
+          <a href={site.whatsapp}>WhatsApp NOX</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
           <span>{site.base}</span>
           <Link href="/get-quote">Website enquiry</Link>

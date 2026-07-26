@@ -42,7 +42,7 @@ export default function CTASection() {
             </a>
           </div>
 
-          <p className="text-sm text-gray-400 pt-4">Local support from the NOX team during normal business hours</p>
+          <p className="text-sm text-gray-400 pt-4">Local support from NOX during normal business hours</p>
         </div>
       </div>
     </section>
