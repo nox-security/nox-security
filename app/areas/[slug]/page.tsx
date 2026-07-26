@@ -9,11 +9,11 @@ import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib
 export function generateStaticParams() { return Object.keys(areas).map(slug => ({ slug })) }
 
 const areaProjects: Record<string, string[]> = {
-  chesterfield: ["bottle-and-thyme-commercial-cctv-chesterfield", "tan-station-fire-security-brimington", "chesterfield-home-ajax-cctv-intruder"],
-  sheffield: ["sheffield-residential-security", "peak-electronic-security", "telesis-hitachi-fire-intruder-system"],
+  chesterfield: ["bottle-and-thyme-commercial-cctv-chesterfield", "buxton-industrial-security", "chesterfield-home-ajax-cctv-intruder"],
+  sheffield: ["sheffield-residential-security", "telesis-hitachi-fire-intruder-system"],
   derbyshire: ["telesis-hitachi-fire-intruder-system", "banana-industries-fire-security", "chatsworth-estate-cctv-upgrade"],
   dronfield: ["dronfield-timber-perimeter"],
-  buxton: ["buxton-industrial-security"],
+  buxton: ["peak-electronic-security"],
   retford: ["retford-former-bank-cctv"],
 }
 
