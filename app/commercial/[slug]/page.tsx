@@ -26,6 +26,9 @@ type CommercialPage = {
   cases: string[]
   ctaLabel: string
   visuals?: { src: string; alt: string; caption: string; product?: boolean }[]
+  visualEyebrow?: string
+  visualTitle?: string
+  visualText?: string
   platformTitle?: string
   platformText?: string
   products?: { name: string; description: string; image: string; imageAlt: string }[]
@@ -137,17 +140,17 @@ const pages: Record<string, CommercialPage> = {
     ctaLabel: "Discuss an Intruder Alarm"
   },
   "industrial-warehouse-security": {
-    title: "Industrial and warehouse security for larger operational sites",
-    eyebrow: "Industrial & warehouse security",
-    intro: "NOX plans CCTV, intruder and perimeter protection around several buildings, loading areas, stock, machinery, vehicle routes, boundaries and the way the site operates. Fire requirements can be coordinated through the separate Fire & Compliance route.",
-    metaTitle: "Industrial & Warehouse Security Derbyshire | NOX",
-    metaDescription: "Industrial and warehouse CCTV, intruder alarms, perimeter protection and ongoing support across Chesterfield, Sheffield and Derbyshire.",
-    image: "/images/revisions/nox-commercial-cctv-installation.jpg",
-    alt: "NOX commercial security installation at an industrial unit",
+    title: "Industrial & office security for larger operational sites",
+    eyebrow: "Industrial & office security",
+    intro: "NOX plans CCTV, intruder and perimeter protection around several buildings, loading areas, stock, machinery, office access, vehicle routes, boundaries and the way the site operates. Fire requirements can be coordinated through the separate Fire & Compliance route.",
+    metaTitle: "Industrial & Office Security Derbyshire | NOX",
+    metaDescription: "Industrial and office CCTV, intruder alarms, perimeter protection and ongoing support across Chesterfield, Sheffield and Derbyshire.",
+    image: "/images/revisions/commercial-cctv-industrial-building.jpg",
+    alt: "Commercial CCTV and security installation at an industrial or office premises",
     requirementTitle: "Larger sites need a joined-up plan for buildings, external areas and operations",
     requirementText: "Warehouses and industrial sites often combine long cable routes, several structures, vehicle movements, loading zones, high mounting positions, limited network coverage and out-of-hours risks. The design must be coordinated before equipment is selected.",
-    included: ["Warehouse and production-area CCTV", "Loading-bay and vehicle-route coverage", "Internal and external intruder detection", "Yard and boundary protection", "Recorder and network design", "Several buildings and phased projects", "Monitoring and keyholder routes", "Maintenance and system takeovers"],
-    propertyTypes: ["Warehouses", "Manufacturing", "Industrial units", "Distribution", "Engineering sites", "Storage yards", "Workshops", "Multi-building premises"],
+    included: ["Warehouse, industrial and office CCTV", "Loading-bay and vehicle-route coverage", "Internal and external intruder detection", "Yard and boundary protection", "Reception, office and staff-access control planning", "Recorder and network design", "Several buildings and phased projects", "Monitoring and keyholder routes", "Maintenance and system takeovers"],
+    propertyTypes: ["Warehouses", "Manufacturing", "Industrial units", "Distribution", "Engineering sites", "Storage yards", "Offices", "Multi-building premises"],
     process: [
       { title: "Site-wide survey", text: "Buildings, boundaries, routes, operations, existing systems, networks and access equipment are reviewed together." },
       { title: "Risk and coverage plan", text: "CCTV views, alarm areas, perimeter layers, recording and communication are mapped to actual site priorities." },
@@ -157,7 +160,9 @@ const pages: Record<string, CommercialPage> = {
     details: [
       { title: "Several buildings", text: "Each building may need separate power, network or radio consideration while remaining part of one operational system." },
       { title: "External areas", text: "Yards, gates, loading zones and boundaries can use CCTV, lighting and suitable external detection as complementary layers." },
+      { title: "Office and staff areas", text: "Reception, offices, stores and restricted rooms can need a different level of visibility, user access and alarm control than the operational floor." },
       { title: "Recording and evidence", text: "Larger camera counts require deliberate storage, playback, user permissions and incident-search planning." },
+      { title: "Network and reliability", text: "Long cable routes, wireless bridges, outbuildings and bandwidth requirements need to be confirmed before equipment is selected." },
       { title: "Long-term support", text: "Maintenance, faults, upgrades and multi-site records are planned so the site remains supportable after handover." }
     ],
     pricingFactors: ["Site size and number of buildings", "Camera and detector quantities", "Cable, fibre or wireless links", "Network and recorder capacity", "Height access and equipment", "Operational and health-and-safety constraints", "Monitoring requirements", "Phased or out-of-hours work"],
@@ -176,7 +181,24 @@ const pages: Record<string, CommercialPage> = {
     ],
     guide: { href: "/blog/how-many-cameras-does-a-commercial-site-need", label: "How many cameras does a commercial site need?" },
     cases: ["telesis-hitachi-fire-intruder-system", "buxton-industrial-security", "chesterfield-scrapyard-cctv"],
-    ctaLabel: "Discuss an Industrial Site"
+    ctaLabel: "Discuss an Industrial Site",
+    visualEyebrow: "Industrial & office security in detail",
+    visualTitle: "Coverage for offices, working areas, yards and multi-building sites",
+    visualText: "The system is designed around evidence quality, staff use, visitor access, loading zones, stock areas and the practical realities of larger sites.",
+    visuals: [
+      { src: "/images/revisions/commercial-cctv-industrial-building.jpg", alt: "Commercial CCTV cameras on an industrial building", caption: "External cameras positioned around a larger industrial or office building." },
+      { src: "/images/revisions/nox-commercial-installation-engineer.jpg", alt: "NOX engineer carrying out a commercial installation", caption: "Installation planned around access, equipment height and the operating environment." },
+      { src: "/images/revisions/buxton-commercial-cctv-monitor.jpg", alt: "Commercial CCTV live view at a business premises", caption: "Live views and playback arranged around the areas managers need to review." },
+      { src: "/images/image-refresh/cctv-vehicle-detection.webp", alt: "Vehicle detection analytics for CCTV", caption: "Vehicle routes, loading areas and yards can be supported with suitable analytics." }
+    ],
+    platformTitle: "System options for industrial and office security",
+    platformText: "A larger site often combines several camera types, internal and external detection, user control and remote access rather than relying on one device or one simple layout.",
+    products: [
+      { name: "Commercial CCTV", description: "A mix of fixed, dome or PTZ cameras can be selected around offices, entrances, loading bays, production areas and external routes.", image: "/images/image-refresh/ajax-commercial-ptz.webp", imageAlt: "Ajax PTZ camera for commercial coverage" },
+      { name: "Intruder detection", description: "Internal movement detection can protect offices, stores, corridors and working areas around opening hours and occupancy.", image: "/images/ajax-products/ajax-motioncam.webp", imageAlt: "Ajax MotionCam device used on commercial intruder systems" },
+      { name: "Perimeter layers", description: "Suitable external detection can protect exposed approaches, yard edges and building perimeters where earlier warning is needed.", image: "/images/ajax-products/ajax-dualcurtain.webp", imageAlt: "Ajax DualCurtain Outdoor device for perimeter protection" },
+      { name: "User control", description: "Managers, staff and keyholders can be given structured access through keypads, tags and app permissions that reflect the operating routine.", image: "/images/ajax-products/ajax-keypad-plus.webp", imageAlt: "Ajax KeyPad Plus for user access and system control" }
+    ]
   },
   "yard-perimeter-security": {
     title: "Yard and perimeter protection for commercial and industrial sites",
@@ -226,8 +248,8 @@ const pages: Record<string, CommercialPage> = {
     intro: "NOX supports suitable businesses and property portfolios that need consistent CCTV, intruder, fire or servicing arrangements across several locations. The project focuses on standards, user access, rollout, records and a practical route for ongoing support.",
     metaTitle: "Multi-Site Security Systems Derbyshire & Sheffield | NOX",
     metaDescription: "Multi-site CCTV, intruder, fire and maintenance planning across Chesterfield, Sheffield and Derbyshire with coordinated surveys, rollout, users, records and service schedules.",
-    image: "/images/projects/bottle-thyme-vehicles.jpg",
-    alt: "NOX Fire and Security vehicles supporting a commercial project",
+    image: "/images/revisions/stonefirst-commercial-installation.jpg",
+    alt: "NOX commercial security project supporting a multi-site rollout",
     requirementTitle: "Consistency matters, but every site still needs its own survey",
     requirementText: "A common platform, user structure and reporting approach can simplify a portfolio, but building layouts, networks, existing equipment, opening hours and local risks remain different. NOX creates a repeatable standard without pretending every site is identical.",
     included: ["Portfolio and site inventory", "Common design standards", "Site-specific surveys", "User and permission planning", "Phased rollout", "Remote viewing and administration", "Coordinated servicing", "One point of contact and clear records"],
@@ -241,7 +263,9 @@ const pages: Record<string, CommercialPage> = {
     details: [
       { title: "Common user experience", text: "Where suitable, platforms and permission structures can be standardised so managers do not learn a different system at every site." },
       { title: "Site-specific exceptions", text: "Network, fire, access and property differences are recorded rather than hidden inside a one-size-fits-all specification." },
+      { title: "Rollout planning", text: "Open sites, priority branches, legacy equipment and contractor access can all affect the order in which work is delivered." },
       { title: "Phased investment", text: "Priority sites, failed equipment and new openings can be addressed first while the wider plan remains visible." },
+      { title: "Central administration", text: "Managers often need a practical way to view sites, add users, review faults and keep service records organised." },
       { title: "Service coordination", text: "Visit dates, asset information, defects and recurring support can be managed under a clearer portfolio schedule." }
     ],
     pricingFactors: ["Number and location of sites", "Systems and assets at each premises", "Survey and rollout schedule", "Common platform or mixed legacy equipment", "Network and remote-access requirements", "User and reporting structure", "Service frequencies", "Travel and access arrangements"],
@@ -260,7 +284,24 @@ const pages: Record<string, CommercialPage> = {
     ],
     guide: { href: "/blog/what-information-is-needed-for-a-fire-alarm-quote", label: "Information that helps prepare a site quotation" },
     cases: ["telesis-hitachi-fire-intruder-system", "retford-former-bank-cctv", "bottle-and-thyme-commercial-cctv-chesterfield"],
-    ctaLabel: "Request a Multi-Site Proposal"
+    ctaLabel: "Request a Multi-Site Proposal",
+    visualEyebrow: "Multi-site security in practice",
+    visualTitle: "Consistent standards across several sites without losing local detail",
+    visualText: "Portfolio security still has to work at ground level. These images reflect rollout, installation standards, camera coverage and user-facing equipment across live commercial sites.",
+    visuals: [
+      { src: "/images/revisions/stonefirst-commercial-installation.jpg", alt: "Commercial installation project supporting a multi-site rollout", caption: "A repeatable installation standard helps create more consistent delivery across the estate." },
+      { src: "/images/revisions/continue-arcade-cctv-live-view.jpg", alt: "Commercial CCTV live view from a branch site", caption: "Managers still need site-by-site live views and evidence quality that suit the property." },
+      { src: "/images/revisions/tan-station-ajax-keypad.jpg", alt: "Ajax keypad installed on a commercial site", caption: "Structured user access and day-to-day operation matter just as much as the hardware standard." },
+      { src: "/images/revisions/nox-commercial-installation-engineer.jpg", alt: "NOX engineer carrying out a commercial installation", caption: "A coordinated rollout still needs practical local installation planning, access and handover." }
+    ],
+    platformTitle: "What a multi-site plan usually needs",
+    platformText: "The right portfolio structure is usually a mix of common equipment standards, clear user access, consistent records and sensible support arrangements rather than simply copying one site to every location.",
+    products: [
+      { name: "Shared CCTV platform", description: "Where suitable, several sites can be aligned around common cameras, recorders and viewing methods so management is simpler.", image: "/images/ajax-products/ajax-cctv-system.webp", imageAlt: "Ajax CCTV system used as part of a multi-site platform" },
+      { name: "Structured alarm control", description: "Managers and keyholders can be given site-specific or portfolio-wide permissions using a more consistent alarm platform.", image: "/images/ajax-products/ajax-hub.webp", imageAlt: "Ajax Hub used within a multi-site intruder system" },
+      { name: "Remote oversight", description: "Suitable systems can support remote checks, event review and site-by-site administration without removing the need for local surveys and maintenance.", image: "/images/v4-13-2/alarm-monitoring-operator.jpg", imageAlt: "Monitoring operator for remote support and oversight" },
+      { name: "Coordinated support", description: "The practical value often comes from clear records, scheduled servicing and one route for faults, users and upgrades across the estate.", image: "/images/v4-10/servicing-monitoring-hero.jpeg", imageAlt: "NOX van at a commercial site during servicing and support" }
+    ]
   },
   "integrated-fire-security": {
     title: "Integrated fire and security projects for commercial premises",
@@ -282,8 +323,10 @@ const pages: Record<string, CommercialPage> = {
     ],
     details: [
       { title: "Clear accountability", text: "The customer has one local project contact while each system retains the correct technical and documentary scope." },
+      { title: "Shared enabling work", text: "Cable routes, access equipment, working-at-height activity and other enabling work can be coordinated so the project runs more smoothly." },
       { title: "Efficient site access", text: "Surveys, access equipment, cable routes and operational constraints can be coordinated across the project." },
       { title: "Consistent handover", text: "Users receive a clearer overview of controls, records, apps, contacts and future service dates." },
+      { title: "Future servicing", text: "Fire servicing, emergency-lighting testing, alarm monitoring and CCTV maintenance can be arranged as clear follow-on services." },
       { title: "Recurring support", text: "Installation can lead into fire servicing, emergency-lighting testing, alarm monitoring and CCTV maintenance without hiding the separate costs." }
     ],
     pricingFactors: ["Number and type of systems", "Building size and fire information", "Camera and alarm device quantities", "Shared and separate cable routes", "Existing equipment", "Programme and operational constraints", "Commissioning and documentation", "Ongoing service requirements"],
@@ -302,7 +345,24 @@ const pages: Record<string, CommercialPage> = {
     ],
     guide: { href: "/blog/can-fire-alarm-and-emergency-lighting-visits-be-combined", label: "Can fire and emergency-lighting visits be combined?" },
     cases: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
-    ctaLabel: "Discuss an Integrated Project"
+    ctaLabel: "Discuss an Integrated Project",
+    visualEyebrow: "Integrated project examples",
+    visualTitle: "Fire, CCTV and intruder planned as one coordinated commercial project",
+    visualText: "The systems remain separate in scope, but the on-site delivery, cable routes, access and handover can be organised through one clearer project plan.",
+    visuals: [
+      { src: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Commercial property with integrated fire and security systems", caption: "Integrated projects often start with a clear site-wide plan for fire, CCTV and intrusion." },
+      { src: "/images/projects/tan-station-fire-first-fix.jpg", alt: "First-fix fire alarm work at a commercial premises", caption: "Early-stage fire work can be coordinated with wider security cabling and installation access." },
+      { src: "/images/projects/tan-station-camera-internal-1.jpg", alt: "Internal CCTV camera at a commercial premises", caption: "Internal camera coverage can be aligned with entrance routes, reception and daily operation." },
+      { src: "/images/projects/tan-station-camera-external-1.jpg", alt: "External CCTV camera at a commercial premises", caption: "External security coverage and the fire route can be delivered through one coordinated programme." }
+    ],
+    platformTitle: "Systems often included in an integrated project",
+    platformText: "The customer benefits from one clearer project route, while each system still keeps its own correct design, records and service requirements.",
+    products: [
+      { name: "Fire alarm control and detection", description: "Commercial fire alarm design is based on the premises, circulation, zoning, cause and effect, records and future servicing requirements.", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", imageAlt: "Fire alarm control panel and zone plan" },
+      { name: "Commercial CCTV", description: "Camera coverage is planned around entrances, working areas, yards, evidence quality and the live views managers need each day.", image: "/images/image-refresh/ajax-commercial-domes.webp", imageAlt: "Commercial dome cameras" },
+      { name: "Commercial intruder alarms", description: "Detection, keypads, user permissions and monitoring are configured around how the premises opens, closes and operates.", image: "/images/v4-12-9/residential-intruder-main.jpg", imageAlt: "Ajax detector used for intruder protection" },
+      { name: "Emergency lighting coordination", description: "Where required, emergency-lighting installation or servicing can be coordinated alongside the wider project with clear separate scope.", image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg", imageAlt: "Emergency exit light during servicing" }
+    ]
   }
 }
 
@@ -351,7 +411,7 @@ export default async function CommercialDetailPage({ params }: { params: Promise
       <ContactActions primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}`}/>
     </PageHero>
     <TrustStrip variant="commercial"/>
-    {!!page.visuals?.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial intruder system in detail" title="Control, verification, external protection and everyday operation" text="The equipment is selected around staff access, opening hours, valuable areas, external routes and the response required when an event occurs."/><div className="system-visual-gallery">{page.visuals.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
+    {!!page.visuals?.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow={page.visualEyebrow || "System visuals"} title={page.visualTitle || "Project and product detail"} text={page.visualText || "Relevant visuals that help show how the system is planned and used."}/><div className="system-visual-gallery">{page.visuals.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
     {slug === "cctv" && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial CCTV in practice" title="Modern cameras, live views and intelligent event detection" text="The system is selected around evidence quality, operating conditions, coverage and the way staff need to review footage."/><div className="commercial-proof-grid"><figure><img src="/images/image-refresh/ajax-commercial-ptz.webp" alt="Ajax commercial PTZ camera"/><figcaption>Premium commercial camera coverage for larger operational areas.</figcaption></figure><figure><img src="/images/image-refresh/ajax-commercial-domes.webp" alt="Ajax commercial dome cameras"/><figcaption>Discreet dome cameras for entrances, circulation and working areas.</figcaption></figure><figure><img src="/images/image-refresh/cctv-person-detection.webp" alt="CCTV person detection analytics"/><figcaption>Intelligent person detection helps surface relevant activity.</figcaption></figure><figure><img src="/images/image-refresh/cctv-vehicle-detection.webp" alt="CCTV vehicle detection analytics"/><figcaption>Vehicle detection supports driveways, yards and loading areas.</figcaption></figure></div></div></section>}
 
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Site requirement" title={page.requirementTitle} text={page.requirementText}/><Checklist items={page.included}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={page.propertyTypes}/><ContactActions primaryLabel={page.ctaLabel} compact audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-property-types`}/></aside></div></section>
