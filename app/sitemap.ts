@@ -5,11 +5,13 @@ import { site } from "@/lib/site"
 import { landingPageList } from "@/lib/landing"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const releaseDate = new Date("2026-07-25T00:00:00.000Z")
+  const releaseDate = new Date("2026-07-26T00:00:00.000Z")
   const core = [
     "",
     "/residential",
     "/fire-compliance",
+    "/fire-compliance/multi-site-fire-alarm-systems",
+    "/fire-compliance/integrated-fire-cctv-systems",
     "/commercial",
     "/commercial/cctv",
     "/commercial/intruder-alarms",
@@ -47,6 +49,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/commercial-cctv-sheffield",
     "/services/cctv-installation-derbyshire",
     "/fire-compliance",
+    "/fire-compliance/multi-site-fire-alarm-systems",
+    "/fire-compliance/integrated-fire-cctv-systems",
     "/systems/fire-safety",
     "/service-plans/fire-alarm-servicing",
     "/services/fire-alarm-installation-chesterfield",

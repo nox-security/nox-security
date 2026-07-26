@@ -2250,3 +2250,19 @@ p { color: var(--muted); }
   .page-hero-media img[src*="fire-alarm-servicing"] { object-position: center 40%; }
   .page-hero-media img[src*="fire-alarm-installation-hero"] { object-position: center 45%; }
 }
+
+/* v4.11 balanced Fire & Compliance routes */
+.fire-balanced-grid .media-route-card > img {
+  aspect-ratio: 16 / 10;
+}
+.fire-project-proof-grid figure {
+  min-width: 0;
+}
+.fire-project-proof-grid img {
+  object-position: center 46%;
+}
+@media (max-width: 760px) {
+  .fire-project-proof-grid img {
+    height: 310px;
+  }
+}

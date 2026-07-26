@@ -6,23 +6,25 @@ import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
   "Commercial Fire Alarm Installation & Servicing | Chesterfield",
-  "Commercial fire alarm installation, servicing, repairs, takeovers and emergency lighting across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+  "Commercial fire alarm installation, servicing, multi-site fire programmes, integrated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield and Derbyshire.",
   "/fire-compliance",
   { image: "/images/image-refresh/en54-fire-hub.webp", imageAlt: "Ajax EN54 commercial fire alarm control equipment" },
 )
 
-const installationRoutes = [
-  { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless Ajax EN54 systems designed around the building, fire strategy and future maintenance route.", href: "/systems/fire-safety", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm panel, zone plan and manual call point installed at a commercial property", artwork: true },
-  { title: "Emergency Lighting Installation", text: "New fittings, replacement projects and upgrades planned around escape routes, final exits and the property layout.", href: "/systems/emergency-lighting", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Commercial emergency lighting installation and escape-route lighting", artwork: false },
+const fireSystemRoutes = [
+  { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless Ajax EN54 systems designed around the building, fire strategy and future maintenance route.", href: "/systems/fire-safety", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm panel, zone plan and manual call point installed at a commercial property", position: "center 48%" },
+  { title: "Fire Alarm Servicing", text: "Planned inspection and testing, service records, defect reporting and clear remedial quotations for suitable existing systems.", href: "/service-plans/fire-alarm-servicing", image: "/images/v4-10/fire-alarm-servicing.jpeg", alt: "Commercial fire alarm control panel during planned servicing", position: "center 40%" },
+  { title: "Fire Alarm Repairs & Takeovers", text: "Assessment of faults, panel access, documentation, supportability and the sensible repair, takeover or replacement route.", href: "/services/fire-alarm-repairs-takeovers", image: "/images/revisions/telesis-en54-fire-hub-alarm.jpg", alt: "Ajax EN54 Fire Hub showing an active alarm during system testing", position: "center 42%" },
+  { title: "Multi-Site Fire Alarm Systems", text: "Installation, takeover, servicing and remedial programmes organised across several premises with clearer site records and reporting.", href: "/fire-compliance/multi-site-fire-alarm-systems", image: "/images/revisions/telesis-en54-fire-hub-normal.jpg", alt: "Ajax EN54 fire alarm control panel used within a coordinated multi-site fire programme", position: "center 42%" },
+  { title: "Integrated Fire & CCTV Systems", text: "Fire alarm and CCTV projects coordinated through one survey and installation route while both systems keep clear designs, records and maintenance scopes.", href: "/fire-compliance/integrated-fire-cctv-systems", image: "/images/projects/retford-camera-fire-bell.jpg", alt: "Commercial CCTV camera positioned beside fire alarm warning equipment", position: "center 34%" },
 ]
 
-const ongoingRoutes = [
-  { title: "Fire Alarm Servicing", text: "Planned inspection and testing, service records, defect reporting, existing-system takeovers and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/v4-10/fire-alarm-servicing.jpeg", alt: "Commercial fire alarm control panel during planned servicing" },
-  { title: "Fire Alarm Repairs & Takeovers", text: "Assessment of faults, panel access, documentation, supportability and the sensible repair or replacement route.", href: "/services/fire-alarm-repairs-takeovers", image: "/images/revisions/telesis-en54-fire-hub-alarm.jpg", alt: "Ajax EN54 Fire Hub showing an active alarm during system testing" },
-  { title: "Emergency Lighting Testing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedial work.", href: "/service-plans/emergency-lighting-servicing", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Emergency exit light checked during commercial testing and servicing" },
-  { title: "Fire Risk Assessments", text: "A structured review of fire risks and priorities, coordinated through a competent specialist partner where required.", href: "/systems/fire-risk-assessment", image: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire action notice and manual call point reviewed during a fire risk assessment" },
-  { title: "Fire Extinguisher Servicing", text: "Inspection and servicing coordinated through a competent specialist, with defects and replacement needs recorded clearly.", href: "/services/fire-extinguisher-servicing", image: "/images/fire-servicing.jpeg", alt: "Engineer carrying out commercial fire extinguisher servicing" },
-  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire safety logbook and plans used for coordinated compliance support" },
+const complianceRoutes = [
+  { title: "Emergency Lighting Installation", text: "New fittings, replacement projects and upgrades planned around escape routes, final exits and the property layout.", href: "/systems/emergency-lighting", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Commercial emergency lighting installation and escape-route lighting", position: "center" },
+  { title: "Emergency Lighting Testing & Servicing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedial work.", href: "/service-plans/emergency-lighting-servicing", image: "/images/image-refresh/emergency-lighting-existing.webp", alt: "Existing emergency lighting checked during planned testing and servicing", position: "center" },
+  { title: "Fire Risk Assessments", text: "A structured review of fire risks and priorities, coordinated through a competent specialist partner where required.", href: "/systems/fire-risk-assessment", image: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire action notice and manual call point reviewed during a fire risk assessment", position: "center" },
+  { title: "Fire Extinguisher Servicing", text: "Inspection and servicing coordinated through a competent specialist, with defects and replacement needs recorded clearly.", href: "/services/fire-extinguisher-servicing", image: "/images/fire-servicing.jpeg", alt: "Engineer carrying out commercial fire extinguisher servicing", position: "center" },
+  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire safety logbook and records used for coordinated compliance support", position: "center" },
 ]
 
 const en54Highlights = [
@@ -61,14 +63,14 @@ const en54Highlights = [
 ]
 
 export default function FireCompliancePage() {
-  const description = "Commercial fire alarm installation, servicing, repairs, takeovers and emergency-lighting support across Chesterfield, Sheffield and Derbyshire."
+  const description = "Commercial fire alarm installation, servicing, multi-site fire programmes, integrated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield and Derbyshire."
   const structuredData = [
-    serviceSchema({ name: "Commercial fire alarm installation and servicing", description, path: "/fire-compliance", serviceType: ["Fire alarm installation", "Fire alarm servicing", "Emergency lighting", "Fire alarm takeovers"], audience: "Commercial", image: "/images/image-refresh/en54-fire-hub.webp" }),
+    serviceSchema({ name: "Commercial fire alarm installation and servicing", description, path: "/fire-compliance", serviceType: ["Fire alarm installation", "Fire alarm servicing", "Multi-site fire alarm systems", "Integrated fire and CCTV systems", "Emergency lighting", "Fire alarm takeovers"], audience: "Commercial", image: "/images/image-refresh/en54-fire-hub.webp" }),
     webPageSchema({ name: "Fire & Compliance", description, path: "/fire-compliance", image: "/images/image-refresh/en54-fire-hub.webp" }),
   ]
   return <>
     {structuredData.map((data, index) => <JsonLd data={data} key={index}/>)}
-    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, emergency lighting and coordinated compliance support across Chesterfield, Sheffield and Derbyshire. Each service is kept clear so customers can see the initial project, recurring work and any remedials separately." image="/images/image-refresh/en54-fire-hub.webp" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
+    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, multi-site fire programmes, coordinated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield and Derbyshire. Each service keeps a clear scope, quotation and route into future support." image="/images/image-refresh/en54-fire-hub.webp" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
       <ContactActions primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-hub"/>
     </PageHero>
     <TrustStrip variant="fire"/>
@@ -80,13 +82,13 @@ export default function FireCompliancePage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="New projects" title="Installation and replacement work designed around the premises" text="The building, occupancy, fire information, existing equipment, access and future service route are considered before a system or fitting schedule is proposed."/>
-      <div className="fire-installation-grid">{installationRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><div className={item.artwork ? "fire-route-media is-artwork" : "fire-route-media"}><img src={item.image} alt={item.alt}/></div><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
+      <SectionHeading eyebrow="Fire alarm systems" title="Five clear routes from a single premises to a wider estate" text="Installation, servicing, takeovers, multi-site programmes and coordinated Fire and CCTV projects each have a distinct scope. The right route depends on the building, existing equipment, responsible people and the outcome the business needs."/>
+      <div className="feature-grid columns-3 media-route-grid fire-balanced-grid">{fireSystemRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
     </div></section>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Ongoing compliance" title="Servicing, repairs and annual support for existing systems" text="NOX supports suitable existing fire alarms and emergency lighting, including systems installed by another provider, subject to access, condition, records and parts availability."/>
-      <div className="feature-grid columns-3 media-route-grid fire-support-grid">{ongoingRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
+      <SectionHeading eyebrow="Compliance support" title="Five supporting services kept clear and easy to coordinate" text="Emergency lighting, risk assessment, extinguisher servicing and annual planning remain separate professional scopes while staying easier for the customer to organise through one local Fire & Security team."/>
+      <div className="feature-grid columns-3 media-route-grid fire-balanced-grid">{complianceRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
     </div></section>
 
     <section className="section section-alt"><div className="container split-grid"><div>

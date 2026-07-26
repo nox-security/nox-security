@@ -51,6 +51,8 @@ export const headerNavMenus: HeaderNavMenu[] = [
           { label: "Fire Alarm Installation", href: "/systems/fire-safety" },
           { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
           { label: "Fire Alarm Repairs & Takeovers", href: "/services/fire-alarm-repairs-takeovers" },
+          { label: "Multi-Site Fire Alarm Systems", href: "/fire-compliance/multi-site-fire-alarm-systems" },
+          { label: "Integrated Fire & CCTV Systems", href: "/fire-compliance/integrated-fire-cctv-systems" },
         ],
       },
       {
@@ -126,6 +128,8 @@ export const fireFooterItems: NavItem[] = [
   { label: "Fire & Compliance", href: "/fire-compliance" },
   { label: "Fire Alarm Installation", href: "/systems/fire-safety" },
   { label: "Fire Alarm Servicing", href: "/service-plans/fire-alarm-servicing" },
+  { label: "Multi-Site Fire Alarm Systems", href: "/fire-compliance/multi-site-fire-alarm-systems" },
+  { label: "Integrated Fire & CCTV Systems", href: "/fire-compliance/integrated-fire-cctv-systems" },
   { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
   { label: "Fire Compliance Plans", href: "/service-plans/fire-compliance" },
 ]
