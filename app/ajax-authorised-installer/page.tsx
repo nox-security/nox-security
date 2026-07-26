@@ -23,8 +23,8 @@ export const metadata: Metadata = pageMetadata(
   pageDescription,
   pagePath,
   {
-    image: "/images/v4-13-10/peak-electronic/main.jpg",
-    imageAlt: "Ajax alarm, CCTV and NOX external siren installed at a commercial property",
+    image: "/images/v4-13-20/ajax-founder-meeting.jpg",
+    imageAlt: "NOX Fire & Security team with Aleksandr (Alex) Konotopskyi, founder of Ajax Systems and Chairman of its Supervisory Board",
   },
 )
 
@@ -175,13 +175,13 @@ export default function AjaxAuthorisedInstallerPage() {
       path: pagePath,
       serviceType: ["Ajax intruder alarm installation", "Ajax CCTV installation", "Ajax EN54 fire alarm installation", "Ajax system upgrades and takeovers"],
       audience: "Residential and Commercial",
-      image: "/images/v4-13-10/peak-electronic/main.jpg",
+      image: "/images/v4-13-20/ajax-founder-meeting.jpg",
     }),
     webPageSchema({
       name: "Official Ajax Partner and Ajax Authorised Installer",
       description: pageDescription,
       path: pagePath,
-      image: "/images/v4-13-10/peak-electronic/main.jpg",
+      image: "/images/v4-13-20/ajax-founder-meeting.jpg",
     }),
     breadcrumbSchema([
       { name: "Home", path: "/" },
@@ -206,11 +206,24 @@ export default function AjaxAuthorisedInstallerPage() {
           </div>
           <ContactActions primaryLabel="Discuss an Ajax System" audience="Residential & Commercial" serviceCategory="Ajax Systems" enquiryType="Installation" sourceLabel="ajax-authorised-installer-hero"/>
         </div>
-        <div className="page-hero-media"><img src="/images/v4-13-10/peak-electronic/main.jpg" alt="Ajax alarm and CCTV installed by NOX at a commercial property" style={{ objectPosition: "center 45%" }}/></div>
+        <figure className="page-hero-media ajax-founder-hero-media"><img src="/images/v4-13-20/ajax-founder-meeting.jpg" alt="NOX Fire & Security team with Aleksandr (Alex) Konotopskyi, founder of Ajax Systems and Chairman of its Supervisory Board" style={{ objectPosition: "center 34%" }}/><figcaption>The NOX team with Aleksandr (Alex) Konotopskyi, founder of Ajax Systems and Chairman of its Supervisory Board.</figcaption></figure>
       </div>
     </section>
 
     <TrustStrip variant="general"/>
+
+    <section className="section ajax-founder-intro-section"><div className="container split-grid ajax-founder-intro-grid">
+      <div>
+        <SectionHeading eyebrow="Meeting the Ajax leadership team" title="A partnership built around the people, technology and standards behind Ajax" text="At an Ajax industry event, the NOX team had the opportunity to meet Aleksandr (Alex) Konotopskyi, founder of Ajax Systems and Chairman of its Supervisory Board. It gave us a closer view of the thinking, ambition and product direction behind the Ajax platform, including its alarm, CCTV and EN54 fire technologies."/>
+        <p className="lead-small">For NOX, the value of the relationship goes beyond displaying a partner logo. Meeting the person who created Ajax reinforced why we chose the platform for suitable residential and commercial work: strong technology still needs correct surveying, professional configuration, clear handover and dependable local aftercare.</p>
+      </div>
+      <aside className="dark-panel ajax-founder-intro-panel">
+        <span className="micro-label">Ajax Systems leadership</span>
+        <h3>Aleksandr (Alex) Konotopskyi</h3>
+        <p>Founder of Ajax Systems and Chairman of its Supervisory Board, pictured with the NOX team in front of the Ajax professional product range.</p>
+        <p>The meeting reflects our direct engagement with the manufacturer behind the systems we specify and install across residential, commercial and fire-safety projects.</p>
+      </aside>
+    </div></section>
 
     <section className="section ajax-partner-status-section"><div className="container split-grid ajax-partner-status-grid">
       <div>

@@ -2352,3 +2352,28 @@ p { color: var(--muted); }
   .ajax-partner-logo-card > img { width: 230px; }
   .ajax-partner-media-grid .media-route-card > img { min-height: 270px; }
 }
+
+/* v4.13.20 Ajax founder meeting hero and introduction */
+.ajax-founder-hero-media { position: relative; overflow: hidden; }
+.ajax-founder-hero-media figcaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  padding: 12px 15px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 12px;
+  background: rgba(5,5,5,.82);
+  backdrop-filter: blur(10px);
+  color: #f1f1f1;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+.ajax-founder-intro-section { background: #0a0a0a; }
+.ajax-founder-intro-grid { align-items: start; }
+.ajax-founder-intro-panel h3 { margin: 10px 0 12px; font-size: clamp(28px, 4vw, 42px); }
+.ajax-founder-intro-panel p + p { margin-top: 18px; }
+@media (max-width: 760px) {
+  .ajax-founder-hero-media figcaption { left: 12px; right: 12px; bottom: 12px; font-size: 12px; }
+}
