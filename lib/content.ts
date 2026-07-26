@@ -1357,8 +1357,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Emergency Lighting Testing Derbyshire & Sheffield | NOX",
     metaDescription: "Emergency Lighting Testing and Servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire with fitting checks, records, defect reporting and remedial quotations.",
     intro: "NOX provides Emergency Lighting Testing and Servicing for commercial premises, landlords, HMOs and multi-site properties across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
-    image: "/images/image-refresh/emergency-lighting-modern.webp",
-    imageAlt: "Illuminated emergency exit sign tested during a commercial service visit",
+    image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg",
+    imageAlt: "Emergency exit light tested during planned servicing",
     included: ["Fitting condition checks", "Functional testing", "Battery operation checks", "Identification of failed fittings", "Test records", "Defect reporting", "Remedial quotations", "Planned renewal scheduling"],
     suitableFor: ["Retail", "Offices", "Hospitality", "Warehouses", "HMOs", "Property portfolios"],
     process: [
