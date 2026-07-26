@@ -10,6 +10,8 @@ export const site = {
   base: "Chesterfield, Derbyshire",
   formId: "8FchnjOrpZ4ufh1TiW8k",
   googleReviews: "https://g.page/r/CUdyqRh0RFeXEAE/review",
+  instagram: "https://www.instagram.com/noxsecuritychesterfield/",
+  instagramHandle: "@noxsecuritychesterfield",
   defaultSocialImage: "/images/nox-og-v3.jpg",
 }
 

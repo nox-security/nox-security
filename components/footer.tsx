@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Instagram } from "lucide-react"
 import { commercialFooterItems, fireFooterItems, residentialFooterItems, supportFooterItems } from "@/lib/navigation"
 import { site } from "@/lib/site"
 
@@ -22,6 +23,10 @@ export default function Footer() {
           </Link>
           <p>Residential security, commercial Fire & Security and ongoing support across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
           <p className="muted">Designed properly · Installed properly · Supported properly</p>
+          <a className="footer-social-link" href={site.instagram} target="_blank" rel="noreferrer" aria-label={`Follow NOX Fire & Security on Instagram ${site.instagramHandle}`}>
+            <span className="footer-social-icon"><Instagram size={18} strokeWidth={1.8}/></span>
+            <span><strong>Follow NOX on Instagram</strong><small>{site.instagramHandle}</small></span>
+          </a>
         </div>
         <div>
           <h3>Residential</h3>

@@ -47,6 +47,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         name: site.name,
         url: site.url,
         logo: { "@type": "ImageObject", url: `${site.url}/images/nox-logo-light.jpeg` },
+        sameAs: [site.instagram],
         email: site.email,
         telephone: "+447882959297",
         contactPoint: {
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         email: site.email,
         image: `${site.url}/images/nox-og-v3.jpg`,
         logo: `${site.url}/images/nox-logo-light.jpeg`,
+        sameAs: [site.instagram],
         parentOrganization: { "@id": organisationId },
         address: {
           "@type": "PostalAddress",
