@@ -25,6 +25,10 @@ type CommercialPage = {
   guide: { href: string; label: string }
   cases: string[]
   ctaLabel: string
+  visuals?: { src: string; alt: string; caption: string; product?: boolean }[]
+  platformTitle?: string
+  platformText?: string
+  products?: { name: string; description: string; image: string; imageAlt: string }[]
 }
 
 const pages: Record<string, CommercialPage> = {
@@ -77,8 +81,8 @@ const pages: Record<string, CommercialPage> = {
     intro: "NOX provides Commercial Intruder Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire, designing internal, external and perimeter protection around access, staff use, opening hours and monitoring requirements.",
     metaTitle: "Commercial Intruder Alarm Installation | Chesterfield & Sheffield",
     metaDescription: "Commercial Intruder Alarm Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire with internal detection, perimeter protection, monitoring and maintenance.",
-    image: "/images/revisions/tan-station-ajax-keypad.jpg",
-    alt: "NOX branded Ajax keypad installed at a commercial premises",
+    image: "/images/v4-12-9/residential-intruder-main.jpg",
+    alt: "Black Ajax outdoor detector used for commercial intruder protection",
     requirementTitle: "The alarm must reflect how the premises opens, closes and operates",
     requirementText: "Staff routes, delivery doors, offices, stock, workshops, yards, pets, machinery, shift patterns and out-of-hours access all affect detection, arming areas, user control and the response plan.",
     included: ["Door and window protection", "Internal movement detection", "Photo verification where suitable", "External and perimeter detection", "Keypads, tags and user permissions", "App control and event history", "Professional monitoring options", "Maintenance and takeover support"],
@@ -112,6 +116,24 @@ const pages: Record<string, CommercialPage> = {
     ],
     guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" },
     cases: ["telesis-hitachi-fire-intruder-system", "dronfield-timber-perimeter", "buxton-industrial-security", "banana-industries-fire-security"],
+    visuals: [
+      { src: "/images/image-refresh/intruder-entry-exit-delay.webp", alt: "Ajax door protection supporting commercial entry and exit routines", caption: "Entry and exit protection configured around staff access, opening and closing procedures." },
+      { src: "/images/image-refresh/intruder-app-alerts.webp", alt: "Ajax alarm event displayed on a smartphone", caption: "Clear event information helps authorised users understand which area or device has activated." },
+      { src: "/images/image-refresh/intruder-keypad-touchscreen.webp", alt: "Ajax touchscreen keypad for commercial alarm control", caption: "Visual keypad control supports areas, individual users and straightforward daily operation." },
+      { src: "/images/image-refresh/intruder-scheduled-arming.webp", alt: "Ajax scheduled arming for commercial premises", caption: "Schedules and scenarios can support consistent protection around trading hours and staff routines." }
+    ],
+    platformTitle: "Commercial Ajax protection designed around the site",
+    platformText: "The same Ajax platform used for high-quality residential systems can be configured for shops, offices, hospitality, warehouses and industrial premises. Device choice, areas, permissions, signalling and external protection are planned around how the business operates.",
+    products: [
+      { name: "Ajax Hub and system control", description: "The control centre, communication route and user setup are configured around the premises, staff responsibilities and required response.", image: "/images/image-refresh/intruder-simple-control.webp", imageAlt: "Ajax hub providing commercial intruder alarm control" },
+      { name: "MotionCam photo verification", description: "Motion detection with image verification can help keyholders or monitoring staff understand what caused an alarm before deciding the next step.", image: "/images/image-refresh/intruder-motioncam-verification.webp", imageAlt: "Ajax MotionCam detector with photo verification" },
+      { name: "Door and window protection", description: "Opening detectors protect entrance doors, staff doors, stock rooms, offices and other access points that matter to the business.", image: "/images/image-refresh/intruder-doorprotect.webp", imageAlt: "Ajax DoorProtect installed on a commercial door" },
+      { name: "Touchscreen keypad control", description: "Clear visual controls, areas and individual permissions make opening, closing and managing several parts of the site easier for authorised staff.", image: "/images/image-refresh/intruder-keypad-touchscreen.webp", imageAlt: "Ajax touchscreen keypad with clear commercial controls" },
+      { name: "Outdoor and perimeter detection", description: "Suitable external detectors can add earlier warning around yards, approaches, loading areas or exposed routes after environmental risks are assessed.", image: "/images/image-refresh/intruder-outdoor-false-alarm.webp", imageAlt: "Ajax outdoor detector with photo verification" },
+      { name: "App alerts and event history", description: "Authorised users can receive clear notifications and review the relevant area or event without giving every employee unnecessary access.", image: "/images/image-refresh/intruder-app-alerts.webp", imageAlt: "Ajax commercial alarm alert on a smartphone" },
+      { name: "Scheduled arming and scenarios", description: "Suitable systems can follow schedules and automation rules around opening hours, shifts or specific areas while keeping manual control available.", image: "/images/image-refresh/intruder-scheduled-arming.webp", imageAlt: "Ajax scheduled arming notification for a business" },
+      { name: "NOX external siren", description: "A professionally positioned external siren provides visible deterrence and a clear local warning as part of the wider intruder alarm design.", image: "/images/image-refresh/residential-bellbox.webp", imageAlt: "NOX branded Ajax external siren" }
+    ],
     ctaLabel: "Discuss an Intruder Alarm"
   },
   "industrial-warehouse-security": {
@@ -329,9 +351,11 @@ export default async function CommercialDetailPage({ params }: { params: Promise
       <ContactActions primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}`}/>
     </PageHero>
     <TrustStrip variant="commercial"/>
+    {!!page.visuals?.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial intruder system in detail" title="Control, verification, external protection and everyday operation" text="The equipment is selected around staff access, opening hours, valuable areas, external routes and the response required when an event occurs."/><div className="system-visual-gallery">{page.visuals.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
     {slug === "cctv" && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial CCTV in practice" title="Modern cameras, live views and intelligent event detection" text="The system is selected around evidence quality, operating conditions, coverage and the way staff need to review footage."/><div className="commercial-proof-grid"><figure><img src="/images/image-refresh/ajax-commercial-ptz.webp" alt="Ajax commercial PTZ camera"/><figcaption>Premium commercial camera coverage for larger operational areas.</figcaption></figure><figure><img src="/images/image-refresh/ajax-commercial-domes.webp" alt="Ajax commercial dome cameras"/><figcaption>Discreet dome cameras for entrances, circulation and working areas.</figcaption></figure><figure><img src="/images/image-refresh/cctv-person-detection.webp" alt="CCTV person detection analytics"/><figcaption>Intelligent person detection helps surface relevant activity.</figcaption></figure><figure><img src="/images/image-refresh/cctv-vehicle-detection.webp" alt="CCTV vehicle detection analytics"/><figcaption>Vehicle detection supports driveways, yards and loading areas.</figcaption></figure></div></div></section>}
 
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Site requirement" title={page.requirementTitle} text={page.requirementText}/><Checklist items={page.included}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={page.propertyTypes}/><ContactActions primaryLabel={page.ctaLabel} compact audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-property-types`}/></aside></div></section>
+    {!!page.products?.length && <section className="section ajax-product-section"><div className="container"><div className="platform-intro"><div><span className="eyebrow">Products and system options</span><h2>{page.platformTitle}</h2><p>{page.platformText}</p></div><img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" /></div><div className="product-detail-grid">{page.products.map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image product-detail-photo"><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div></div></section>}
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Project process" title="Survey, design, installation and ongoing support"/><FeatureGrid columns={4} items={page.process}/></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="What the design needs to solve" title="System decisions linked to the operational requirement"/><FeatureGrid columns={4} items={page.details}/></div></section>
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a clearer proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
