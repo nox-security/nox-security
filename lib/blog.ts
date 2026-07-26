@@ -23,8 +23,8 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A practical guide to alarm and CCTV maintenance, system health checks and annual servicing for homes and businesses across Derbyshire.",
     category: "Maintenance",
     excerpt: "Why regular servicing matters, what an engineer should check and how annual support helps prevent avoidable faults.",
-    image: "/images/editorial/blog-servicing.jpg",
-    imageAlt: "Real NOX alarm and CCTV servicing work on an existing system",
+    image: "/images/v4-10/servicing-monitoring-hero.jpeg",
+    imageAlt: "NOX Fire and Security van outside a commercial servicing and monitoring visit",
     sections: [
       {
         heading: "Servicing keeps the system useful, not just switched on",
@@ -55,8 +55,8 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Learn what to consider when planning CCTV coverage, camera positions, night viewing, recording and remote access for residential and commercial properties.",
     category: "CCTV",
     excerpt: "Camera count is only one part of the decision. Useful CCTV starts with views, lighting, recording and how the footage will be used.",
-    image: "/images/cctv-systems.png",
-    imageAlt: "Professional CCTV camera used for residential and commercial security",
+    image: "/images/revisions/property-cctv-overview.jpg",
+    imageAlt: "Professional CCTV overview image showing camera coverage for residential and commercial properties",
     sections: [
       {
         heading: "Start with what each camera needs to achieve",
@@ -119,8 +119,8 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A practical guide to coordinating fire alarm servicing, emergency lighting testing, records and remedial work for commercial properties.",
     category: "Fire safety",
     excerpt: "Commercial fire-safety support is easier to manage when servicing, records, defects and renewal dates are clearly coordinated.",
-    image: "/images/fire-servicing.jpeg",
-    imageAlt: "Commercial fire alarm servicing and emergency lighting support",
+    image: "/images/v4-10/fire-alarm-servicing.jpeg",
+    imageAlt: "Commercial fire alarm control panel inspected during planned servicing",
     sections: [
       {
         heading: "Installation is only the beginning",
@@ -188,8 +188,8 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "What to expect when changing fire alarm maintenance provider, including access, records, faults, parts availability, inspection and remedial work.",
     category: "Fire Alarm Guides",
     excerpt: "Often yes, but a responsible takeover depends on system access, condition, documentation, compatibility and available parts.",
-    image: "/images/image-refresh/fire-system-takeover-panel.webp",
-    imageAlt: "Existing conventional fire alarm control panel assessed before a maintenance takeover",
+    image: "/images/v4-12-3/fire-alarm-repairs-takeovers.jpg",
+    imageAlt: "Fire alarm interface and control equipment assessed during a takeover and repair visit",
     imagePosition: "center 56%",
     sections: [
       { heading: "The direct answer", paragraphs: ["A new company can often take over servicing of an existing fire alarm, but it should not accept responsibility blindly. The first step is an assessment of the panel, devices, access, records, faults and whether the equipment can still be supported.", "A takeover is not the same as saying every existing defect is included in an annual service price. The initial condition and any required remedials should be recorded separately."] },
@@ -256,7 +256,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A practical guide to routine emergency-lighting checks, annual duration testing, records, failed fittings and commercial servicing.",
     category: "Emergency Lighting Guides",
     excerpt: "Emergency lighting needs routine functional checks and periodic full-duration testing, with records and failed fittings dealt with clearly.",
-    image: "/images/revisions/emergency-lighting-exit-sign.jpg",
+    image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg",
     imageAlt: "Illuminated emergency exit sign checked during testing",
     sections: [
       { heading: "The direct answer", paragraphs: ["Emergency lighting should be checked routinely and receive a periodic full-duration test in line with the premises’ applicable requirements and maintenance plan. A common arrangement includes short monthly functional checks and an annual test for the full rated duration, often three hours.", "The responsible person should confirm the correct regime for the building and keep records of checks, failures and completed remedials."] },
@@ -274,7 +274,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Learn what a three-hour emergency-lighting duration test checks, how it is planned, what failures mean and why recharge time matters.",
     category: "Emergency Lighting Guides",
     excerpt: "A full-duration test checks whether emergency fittings can continue operating for their rated period, commonly three hours, rather than only switching on briefly.",
-    image: "/images/revisions/emergency-lighting-exit-sign.jpg",
+    image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg",
     imageAlt: "Emergency lighting fitting operating during a duration test",
     sections: [
       { heading: "The direct answer", paragraphs: ["A three-hour emergency-lighting test simulates a mains failure and checks whether applicable fittings continue operating for their full rated duration. It is more demanding than a short monthly function test and is intended to reveal weak batteries or fittings that cannot sustain emergency operation.", "The exact test and duration must match the system and premises requirements, but three hours is common in many UK commercial applications."] },
@@ -364,7 +364,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "How Ajax alarms, CCTV and perimeter protection can cover detached garages, workshops, gates and outbuildings, including range, power and network factors.",
     category: "Intruder Alarm Guides",
     excerpt: "Often yes, but distance, construction, communication, power and how the building is used must be assessed before equipment is selected.",
-    image: "/images/revisions/residential-cctv-installation-engineer.jpg",
+    image: "/images/image-refresh/garages-outbuildings-engineer.webp",
     imageAlt: "NOX engineer installing security at a residential outbuilding",
     sections: [
       { heading: "The direct answer", paragraphs: ["A modern alarm can often protect a detached garage, workshop or outbuilding, but the solution depends on distance, construction, radio conditions, power, access and the value or activity inside the space.", "The design may combine door protection, movement detection, MotionCam, a separate siren, CCTV or perimeter detection rather than relying on one device."] },
@@ -405,7 +405,7 @@ blogPosts.push(
     metaDescription: "Learn how perimeter protection can detect activity around gates, driveways, yards, gardens and outbuildings before an intruder reaches the main building.",
     category: "Intruder Alarm Guides",
     excerpt: "Perimeter protection uses carefully positioned external detection, cameras or both to identify activity around the property before entry to the main building.",
-    image: "/images/editorial/home-perimeter.jpg",
+    image: "/images/v4-12-6/perimeter-main-white-devices.png",
     imageAlt: "External perimeter protection installed around a property",
     sections: [
       { heading: "The direct answer", paragraphs: ["Perimeter protection is security placed around the approach to a property rather than only inside the building. It can use suitable outdoor detectors, camera verification, CCTV, gate contacts and external warning devices to identify activity around driveways, yards, gardens, garages or outbuildings.", "The design has to match the site. Public footpaths, pets, wildlife, planting, vehicles, weather and normal staff or family movement all affect where devices should be positioned."] },
@@ -423,7 +423,7 @@ blogPosts.push(
     metaDescription: "A practical guide to failed emergency lights, battery condition, obsolete fittings, repeated defects and when repair or replacement is the sensible route.",
     category: "Emergency Lighting Guides",
     excerpt: "Emergency-lighting fittings should be repaired or replaced when they fail testing, cannot provide the required duration or are no longer economical or supportable.",
-    image: "/images/revisions/emergency-lighting-exit-sign.jpg",
+    image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg",
     imageAlt: "Emergency exit lighting inspected during a service visit",
     sections: [
       { heading: "The direct answer", paragraphs: ["An emergency-lighting fitting should be replaced when it fails its functional or duration test and cannot be restored reliably, when the battery or control gear is no longer economical to repair, or when the fitting is unsuitable for the escape route and premises requirements.", "Replacement decisions should be based on recorded test results and the condition of the installation rather than age alone."] },

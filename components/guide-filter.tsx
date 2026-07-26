@@ -30,6 +30,6 @@ export default function GuideFilter() {
     <div className="content-filter" role="group" aria-label="Filter guides by topic">
       {categories.map(category => <button key={category} type="button" className={active === category ? "is-active" : ""} onClick={() => setActive(category)}>{category}</button>)}
     </div>
-    <div className="blog-grid">{list.map(post => <article className="blog-card" key={post.slug}><img src={post.image} alt={post.imageAlt}/><div><span className="micro-label">{normaliseCategory(post.category)}</span><h3>{post.title}</h3><p>{post.excerpt}</p><Link className="text-link" href={`/blog/${post.slug}`}>Read guide →</Link></div></article>)}</div>
+    <div className="blog-grid">{list.map(post => <article className="blog-card" key={post.slug}><img src={post.image} alt={post.imageAlt} style={post.imagePosition ? { objectPosition: post.imagePosition } : undefined}/><div><span className="micro-label">{normaliseCategory(post.category)}</span><h3>{post.title}</h3><p>{post.excerpt}</p><Link className="text-link" href={`/blog/${post.slug}`}>Read guide →</Link></div></article>)}</div>
   </>
 }
