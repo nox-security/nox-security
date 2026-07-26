@@ -912,12 +912,12 @@ export const systemPages: Record<string, ServicePageData> = {
     platformTitle: "An earlier warning layer around the property",
     platformText: "Ajax external detection can protect approaches, windows, doors, yards and outbuildings before an intruder reaches the internal alarm zones. Device selection and positioning are confirmed through a dedicated perimeter survey.",
     products: [
-      { name: "Curtain Outdoor", description: "Narrow curtain-style outdoor detection for windows, doorways, passages and selected boundary lines.", image: "/images/ajax-products/ajax-curtain-outdoor.webp", imageAlt: "Ajax Curtain Outdoor perimeter detector" },
-      { name: "DualCurtain Outdoor", description: "Two opposing detection curtains can cover longer boundary runs or approaches from a central mounting point where suitable.", image: "/images/ajax-products/ajax-dualcurtain.webp", imageAlt: "Ajax DualCurtain Outdoor detector" },
-      { name: "MotionCam Outdoor", description: "Outdoor motion detection with camera-assisted verification options, anti-masking features and adjustable detection on suitable Ajax systems.", image: "/images/ajax-products/ajax-motioncam.webp", imageAlt: "Official Ajax MotionCam detector product image" },
-      { name: "StreetSiren", description: "External audible and visual indication can reinforce the perimeter layer and wider intruder alarm system.", image: "/images/ajax-products/ajax-streetsiren.webp", imageAlt: "Ajax external StreetSiren" },
-      { name: "Outbuilding protection", description: "Garages, workshops, stores and detached buildings can be brought into the wider Ajax system subject to survey and communication range.", image: "/images/editorial/home-perimeter.jpg", imageAlt: "External security protecting a garage and outbuilding" },
-      { name: "Maintenance and adjustment", description: "Outdoor systems need cleaning, signal checks, battery review, firmware updates and retesting as the environment changes.", image: "/images/editorial/home-maintenance.jpg", imageAlt: "Real security system maintenance and panel inspection by NOX" }
+      { name: "Curtain Outdoor", description: "Narrow curtain-style outdoor detection for windows, doorways, passages and selected boundary lines.", image: "/images/SingleCurtain.jpeg", imageAlt: "Ajax Curtain Outdoor detector shown in a premium product setting" },
+      { name: "DualCurtain Outdoor", description: "Two opposing detection curtains can cover longer boundary runs or approaches from a central mounting point where suitable.", image: "/images/AjaxDualcurtain.jpg", imageAlt: "Ajax DualCurtain Outdoor detection pattern protecting an entrance" },
+      { name: "MotionCam Outdoor", description: "Outdoor motion detection with camera-assisted verification options, anti-masking features and adjustable detection on suitable Ajax systems.", image: "/images/image-refresh/intruder-outdoor-false-alarm.webp", imageAlt: "Ajax MotionCam Outdoor detector installed on a commercial property" },
+      { name: "StreetSiren", description: "External audible and visual indication can reinforce the perimeter layer and wider intruder alarm system.", image: "/images/image-refresh/residential-nox-siren.webp", imageAlt: "NOX branded Ajax external StreetSiren" },
+      { name: "Outbuilding protection", description: "Garages, workshops, stores and detached buildings can be brought into the wider Ajax system subject to survey and communication range.", image: "/images/image-refresh/garages-outbuildings-engineer.webp", imageAlt: "NOX engineer installing Ajax protection on an outbuilding" },
+      { name: "Maintenance and adjustment", description: "Outdoor systems need cleaning, signal checks, battery review, firmware updates and retesting as the environment changes.", image: "/images/revisions/intruder-maintenance-system-takeover.jpg", imageAlt: "Engineer carrying out maintenance and system checks on Ajax equipment" }
     ],
     videos: [{ title: "Ajax outdoor protection", text: "See how external detection can create an earlier warning layer around a property.", youtubeId: "Nm0HIK8vjso" }]
   },
@@ -1386,8 +1386,8 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Total Security Package | Alarm Monitoring & CCTV Maintenance",
     metaDescription: "A coordinated annual security package for residential and commercial customers across Chesterfield and Derbyshire, with monitoring, servicing and one renewal date.",
     intro: "Bring the agreed intruder alarm monitoring, alarm maintenance and CCTV maintenance services under one annual arrangement with one point of contact.",
-    image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
-    imageAlt: "Coordinated alarm monitoring and CCTV maintenance package from NOX",
+    image: "/images/v4-10/servicing-monitoring-hero.jpeg",
+    imageAlt: "NOX Fire and Security van supporting a coordinated servicing, monitoring and maintenance plan",
     included: ["Agreed intruder alarm servicing", "Agreed professional alarm monitoring", "Agreed CCTV maintenance", "Annual system review", "One renewal date", "One point of contact", "Priority support where stated in the agreement", "Discounted labour or preferential repair pricing only where written into the package"],
     suitableFor: ["Homes with alarm and CCTV", "Landlords", "Retail", "Offices", "Commercial premises", "Customers wanting one renewal date"],
     process: [

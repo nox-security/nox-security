@@ -15,8 +15,8 @@ const commercialSystems = [
     title: "Commercial CCTV",
     text: "Coverage objectives, evidence quality, entrances, working areas, yards, recording duration, night performance and remote access planned around the site.",
     href: "/commercial/cctv",
-    image: "/images/image-refresh/ajax-commercial-ptz.webp",
-    alt: "Ajax commercial PTZ camera for larger operational areas",
+    image: "/images/v4-10/servicing-monitoring-hero.jpeg",
+    alt: "NOX Fire and Security van outside a commercial CCTV visit",
   },
   {
     title: "Intruder Alarms",

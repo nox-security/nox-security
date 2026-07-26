@@ -2286,3 +2286,9 @@ p { color: var(--muted); }
   .home-ajax-partner-mark { margin-top: 18px; padding-top: 15px; }
   .home-ajax-partner-mark img { width: 142px; }
 }
+
+/* v4.12.4 commercial CCTV and perimeter imagery refinement */
+.media-route-card > img[src*="servicing-monitoring-hero"] { object-position: center 68%; }
+@media (max-width: 760px) {
+  .media-route-card > img[src*="servicing-monitoring-hero"] { object-position: center 62%; }
+}
