@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const urls = Array.from(new Set([
     ...core,
     ...Object.keys(systemPages).map(slug => `/systems/${slug}`),
-    ...Object.keys(planPages).map(slug => `/service-plans/${slug}`),
+    ...Object.keys(planPages).filter(slug => slug !== "residential-security-packages").map(slug => `/service-plans/${slug}`),
     ...Object.keys(areas).map(slug => `/areas/${slug}`),
     ...blogPosts.map(post => `/blog/${post.slug}`),
     ...caseStudies.map(project => `/case-studies/${project.slug}`),

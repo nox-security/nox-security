@@ -33,7 +33,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
           { label: "Ajax Intruder Alarms", href: "/systems/intrusion-alarms" },
           { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
           { label: "Smart Security", href: "/systems/smart-home-cctv" },
-          { label: "Residential Security Packages", href: "/service-plans/residential-security-packages" },
+          { label: "Intruder Alarm Servicing", href: "/service-plans/alarm-maintenance" },
           { label: "Existing System Takeovers", href: "/services/security-system-takeover" },
         ],
       },

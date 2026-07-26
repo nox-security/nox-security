@@ -971,32 +971,34 @@ export const systemPages: Record<string, ServicePageData> = {
     title: "Smart-home CCTV for convenient everyday monitoring",
     metaTitle: "Smart Home CCTV Installation Chesterfield | Eufy Systems",
     metaDescription: "Smart Home CCTV installation in Chesterfield, Sheffield and Derbyshire, including Eufy cameras, video doorbells, floodlight cameras and app setup.",
-    intro: "Smart-home CCTV is the simpler, app-led route for customers who want useful notifications, live viewing, doorbells, floodlight cameras or solar-powered coverage without a full recorder-based system. NOX installs and configures suitable smart cameras while keeping professional residential CCTV available for continuous recording and broader whole-property coverage.",
+    intro: "Smart-home CCTV is the simpler, app-led route for customers who want useful notifications, live viewing, video doorbells, floodlight cameras or solar-powered coverage without a full recorder-based system. NOX installs and configures suitable smart cameras, then considers garages, outbuildings, entrances and future alarm or perimeter protection so the wider property plan remains clear without pretending separate platforms are one system.",
     image: "/images/image-refresh/smart-home-eufy-installed.webp",
     imageAlt: "Eufy dual-lens smart-home CCTV camera professionally installed on a residential property",
     problemTitle: "Convenient smart cameras still need the right position, power strategy and app setup",
     problemText: "A wireless camera is only useful when the view, detection zone, mounting height, charging or solar exposure and notification settings all suit the property. NOX surveys the requirement and explains when a smart camera is suitable and when a professional NVR system is the better route.",
-    benefits: ["Solar and battery camera options", "Floodlight cameras", "App alerts and live viewing", "Professional positioning", "HomeBase and network setup", "Lower-disruption installation", "Clear customer handover", "Upgrade path to professional CCTV"],
+    benefits: ["Solar and battery camera options", "Floodlight cameras and video doorbells", "App alerts and live viewing", "Professional positioning", "HomeBase and network setup", "Garages and outbuilding options", "Clear customer handover", "Future alarm, perimeter or professional CCTV route"],
     suitableFor: ["Homes and bungalows", "Garages and gardens", "Rear access and side passages", "Properties with limited cable routes", "Customers wanting app-led viewing", "Selected outbuildings"],
     process: [
-      { title: "Property review", text: "We review the entrances, approaches, Wi-Fi coverage, available sunlight and the image the customer needs." },
+      { title: "Whole-property review", text: "We review entrances, approaches, garages, outbuildings, Wi-Fi coverage, available sunlight and the image the customer needs." },
       { title: "Honest system choice", text: "NOX explains whether smart cameras will meet the requirement or whether a recorder-based Ajax or Hikvision system is more appropriate." },
-      { title: "Installation and setup", text: "Cameras, solar panels or floodlights are positioned and the supporting app or HomeBase is configured." },
-      { title: "Handover", text: "Notifications, live view, charging expectations, privacy zones and everyday operation are demonstrated." }
+      { title: "Installation and setup", text: "Cameras, solar panels, doorbells or floodlights are positioned and the supporting app or HomeBase is configured." },
+      { title: "Handover and future plan", text: "Notifications, live view, charging expectations, privacy zones and the route into future alarm, perimeter or professional CCTV work are explained." }
     ],
     details: [
       { title: "Solar camera positioning", text: "Solar exposure and the required camera view both matter. Panels and cameras are positioned to balance charging performance with useful coverage." },
       { title: "Floodlight cameras", text: "A combined light and camera can suit entrances, gardens and external working areas where active illumination is useful." },
       { title: "When to choose an NVR", text: "For continuous recording, larger properties, multiple users or commercial evidence requirements, NOX will normally recommend a professional recorder-based CCTV system." },
-      { title: "One local installer", text: "Customers can start with smart-home CCTV and return to NOX for alarms, perimeter protection, servicing or a future professional CCTV upgrade." }
+      { title: "Coordinated property planning", text: "Smart cameras can be planned alongside separately scoped Ajax alarms, perimeter detection, garages and outbuildings without creating unnecessary duplication." },
+      { title: "Future expansion", text: "Likely camera positions, external areas and upgrade routes can be considered from the start even when the work is delivered in phases." }
     ],
     faq: [
       { q: "Do you install Eufy cameras?", a: "Yes. NOX can install and configure suitable Eufy solar, battery and floodlight cameras where they match the property and customer requirement." },
       { q: "What is the difference between smart-home CCTV and professional residential CCTV?", a: "Smart-home CCTV is app-led and suited to simpler solar, battery, doorbell or floodlight-camera requirements. Professional residential CCTV uses fixed cameras with a dedicated recorder for stronger whole-property coverage, continuous or scheduled recording and more capable playback." },
       { q: "Can you improve my existing smart-camera layout?", a: "Yes. NOX can review positioning, detection zones, network coverage and app setup, although compatibility and account access need to be confirmed." },
-      { q: "Can smart cameras work with an Ajax alarm?", a: "They remain separate platforms in most cases. NOX can explain the practical options and recommend a more integrated Ajax CCTV route when one-app control is important." }
+      { q: "Can smart cameras work with an Ajax alarm?", a: "They remain separate platforms in most cases. NOX can explain the practical options and recommend a more integrated Ajax CCTV route when one-app control is important." },
+      { q: "Can I start with smart cameras and add an alarm or perimeter protection later?", a: "Yes. The initial survey can consider future alarm devices, external detection, garages, outbuildings and professional CCTV routes so later work is easier to plan." }
     ],
-    related: [{ href: "/systems/cctv", label: "Professional recorder-based CCTV" }, { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" }, { href: "/residential", label: "Residential security" }],
+    related: [{ href: "/systems/cctv", label: "Professional recorder-based CCTV" }, { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" }, { href: "/systems/perimeter-protection", label: "Perimeter protection" }, { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }],
     caseStudySlugs: ["eufy-smart-home-cctv-chesterfield", "chesterfield-home-ajax-cctv-intruder"],
     platformTitle: "App-connected security without presenting it as a budget option",
     platformText: "Smart-home security can combine Eufy cameras, solar products, floodlight cameras, video doorbells and local recording around convenient everyday control.",
@@ -1163,7 +1165,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" },
       { href: "/systems/smart-home-cctv", label: "Smart Security" },
       { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
-      { href: "/service-plans/residential-security-packages", label: "Residential alarm and CCTV packages" }
+      { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }
     ],
     caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "sheffield-residential-security", "eufy-smart-home-cctv-chesterfield"],
     platformTitle: "Home CCTV selected around the views that matter",
@@ -1219,7 +1221,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { href: "/systems/perimeter-protection", label: "Perimeter protection" },
       { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" },
       { href: "/systems/home-cctv", label: "Home CCTV" },
-      { href: "/service-plans/residential-security-packages", label: "Residential security packages" }
+      { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }
     ],
     caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "dronfield-timber-perimeter", "buxton-industrial-security"],
     ctaLabel: "Protect a Garage or Outbuilding",

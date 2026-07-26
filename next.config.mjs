@@ -12,6 +12,7 @@ const nextConfig = {
         permanent: true,
       },
       { source: '/service-plans/intruder-maintenance', destination: '/service-plans/alarm-maintenance', permanent: true },
+      { source: '/service-plans/residential-security-packages', destination: '/service-plans/alarm-maintenance', permanent: true },
       { source: '/service-plans/intruder-monitoring', destination: '/service-plans/alarm-monitoring', permanent: true },
       { source: '/service-plans/emergency-lighting', destination: '/service-plans/emergency-lighting-servicing', permanent: true },
       { source: '/systems/smart-automation', destination: '/systems/intrusion-alarms', permanent: true },

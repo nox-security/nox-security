@@ -16,7 +16,7 @@ const residentialSystems = [
   { title: "Perimeter Protection", text: "Suitable external detection for approaches, gates, boundaries and areas where earlier warning is useful.", href: "/systems/perimeter-protection", image: "/images/image-refresh/home-perimeter-motioncam.webp", alt: "External Ajax perimeter detector installed at a property" },
   { title: "Garages & Outbuildings", text: "Protection for detached garages, workshops, garden rooms, gated approaches and properties with several buildings.", href: "/systems/garages-outbuildings", image: "/images/image-refresh/garages-outbuildings-engineer.webp", alt: "NOX engineer installing security on a home with external areas" },
   { title: "Smart Security", text: "Eufy cameras, video doorbells, solar or battery products and app-led security for customers prioritising convenience and subscription-free options.", href: "/systems/smart-home-cctv", image: "/images/image-refresh/smart-home-eufy-installed.webp", alt: "Eufy smart security camera installed at a home" },
-  { title: "Alarm & CCTV Packages", text: "Coordinate the alarm, cameras, perimeter and optional annual support around one whole-property design.", href: "/service-plans/residential-security-packages", image: "/images/image-refresh/smart-home-package.webp", alt: "NOX van outside a completed residential security installation" },
+  { title: "Intruder Alarm Servicing", text: "Planned checks for Ajax and suitable wired, wireless or hybrid alarm systems, including devices, batteries, sirens, communication and service records.", href: "/service-plans/alarm-maintenance", image: "/images/v4-10/intruder-alarm-servicing.jpeg", alt: "Intruder alarm siren inspected during a planned service visit" },
 ]
 
 export default function ResidentialPage() {
