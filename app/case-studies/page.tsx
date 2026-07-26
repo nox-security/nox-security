@@ -12,12 +12,12 @@ export const metadata: Metadata = pageMetadata(
 )
 
 const workmanshipImages = [
-  { src: "/images/revisions/commercial-cctv-industrial-building.jpg", alt: "Commercial CCTV installed on an industrial building" },
-  { src: "/images/revisions/telesis-en54-fire-hub-normal.jpg", alt: "Ajax EN54 fire alarm control equipment commissioned at an industrial premises" },
-  { src: "/images/image-refresh/intruder-outdoor-false-alarm.webp", alt: "Ajax outdoor detector installed for perimeter protection" },
-  { src: "/images/revisions/continue-arcade-cctv-live-view.jpg", alt: "Commercial multi-camera CCTV live view at Continue Arcade" },
-  { src: "/images/revisions/residential-cctv-installation-engineer.jpg", alt: "NOX engineer installing residential CCTV" },
-  { src: "/images/revisions/professional-vigi-cctv-camera.jpg", alt: "Professional VIGI CCTV camera installed by NOX" },
+  { src: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm control panel, zone plan and manual call point installed by NOX" },
+  { src: "/images/v4-13-9/dronfield-perimeter/ajax-detector-closeup.jpg", alt: "Ajax outdoor detector installed for industrial perimeter protection near Dronfield" },
+  { src: "/images/v4-13-10/peak-electronic/nine-camera-live-view.jpg", alt: "Completed nine-camera commercial CCTV live view at Peak Electronic in Buxton" },
+  { src: "/images/v4-13-15/chatsworth-estate/ajax-camera-stone-wall.jpg", alt: "Ajax 8MP CCTV camera installed on a stone estate building at Chatsworth" },
+  { src: "/images/v4-13-10/sheffield-residential/engineer-siren-install.jpg", alt: "NOX engineer installing an Ajax external siren at a Sheffield home" },
+  { src: "/images/v4-13-9/kitchen-showroom/ajax-keypad.jpg", alt: "Ajax keypad installed as part of a commercial kitchen showroom security system" },
 ]
 
 export default function CaseStudiesPage() {
