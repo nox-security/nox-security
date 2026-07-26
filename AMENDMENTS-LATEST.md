@@ -9,4 +9,4 @@
 - Expanded the homepage project stories to four confirmed installations and increased the wider case-study grid.
 - Rewrote case-study stories in a natural, location-led NOX social style with relevant local Fire & Security search wording.
 - Replaced the Contact-page residential house image with a relevant NOX/Ajax product and team image.
-- Refined trust messaging around founder-led local service, Ajax technology, residential design, commercial Fire & Security and verified reviews.
+- Refined trust messaging around Chesterfield roots and local accountability, Ajax technology, residential design, commercial Fire & Security and verified reviews.

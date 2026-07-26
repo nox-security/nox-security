@@ -105,7 +105,7 @@ export default function HomePage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Why NOX" title="Designed properly. Installed properly. Supported properly." text="NOX is a director-led local Fire & Security company. The advice, quotation, installation standard and ongoing support remain connected, so customers know who is accountable for the finished system."/>
+      <SectionHeading eyebrow="Why NOX" title="Designed properly. Installed properly. Supported properly." text="NOX is a Chesterfield-based Fire & Security company combining local accountability with the experience and standards required for commercial, industrial and larger-scale projects. Advice, quotation, installation and ongoing support remain connected throughout."/>
       <FeatureGrid columns={3} items={[
         { title: "Property before products", text: "Entrances, routines, risks, appearance, existing equipment and future support are understood before the final device list is selected." },
         { title: "A quotation with reasons", text: "Important cameras, detectors, panels and service options are explained around the job they need to do rather than hidden inside a fixed package." },

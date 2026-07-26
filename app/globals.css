@@ -2447,7 +2447,7 @@ p { color: var(--muted); }
   .ajax-intruder-premium-image img { object-position: center 45% !important; }
 }
 
-/* v4.13.26 About NOX director-led story and mobile readability */
+/* v4.13.27 About NOX local roots and commercial capability */
 .about-page .about-long-copy { display: grid; gap: 20px; }
 .about-page .about-long-copy p { margin: 0; }
 .about-page .founder-profile h2 { font-size: clamp(32px, 3.4vw, 48px); }
