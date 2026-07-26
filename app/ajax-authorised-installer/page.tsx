@@ -51,26 +51,30 @@ const intruderProducts = [
   {
     name: "Ajax hubs and communication",
     description: "The hub manages the system, connected devices, users, alarms and communication. The correct model is selected around the property, internet options, mobile backup and the level of photo verification required.",
-    image: "/images/ajax-products/ajax-hub.webp",
-    alt: "Ajax security hub used for professional intruder alarm systems",
+    image: "/images/image-refresh/intruder-simple-control.webp",
+    alt: "Premium Ajax hub and app control imagery used on the residential intruder alarm page",
+    position: "center 48%",
   },
   {
     name: "MotionCam photo verification",
     description: "MotionCam devices can provide visual confirmation when an alarm is triggered, helping users and monitoring teams understand what caused the event without turning the alarm into continuous indoor CCTV.",
-    image: "/images/ajax-products/ajax-motioncam.webp",
-    alt: "Ajax MotionCam detector with alarm photo verification",
+    image: "/images/image-refresh/intruder-motioncam-verification.webp",
+    alt: "Ajax MotionCam photo verification shown in premium residential intruder alarm imagery",
+    position: "center 48%",
   },
   {
     name: "Door, window and perimeter protection",
     description: "Opening contacts, internal detectors, curtain protection and suitable outdoor detection can be layered around entrances, driveways, yards, garages and external approaches.",
-    image: "/images/ajax-products/ajax-dualcurtain.webp",
-    alt: "Ajax outdoor perimeter detector for driveways and site boundaries",
+    image: "/images/image-refresh/intruder-doorprotect.webp",
+    alt: "Ajax door and window protection shown in premium residential intruder alarm imagery",
+    position: "center 48%",
   },
   {
     name: "Keypads, sirens and user control",
     description: "Keypads, tags, app permissions and external sirens are configured around the people using the property, opening and closing routines, night modes and agreed response procedures.",
-    image: "/images/ajax-products/ajax-keypad-plus.webp",
-    alt: "Ajax keypad for professional alarm control and user access",
+    image: "/images/image-refresh/intruder-keypad-touchscreen.webp",
+    alt: "Ajax touchscreen keypad shown in premium residential intruder alarm imagery",
+    position: "center 48%",
   },
 ]
 
@@ -229,8 +233,8 @@ export default function AjaxAuthorisedInstallerPage() {
       <div>
         <SectionHeading eyebrow="Our Ajax authorisation" title="Official Ajax authorisation with local NOX responsibility" text="The Ajax Authorised Installation Company mark confirms NOX as an officially recognised Ajax installation business. For the customer, that status is supported by a property-led survey, a clear quotation, professional installation, app setup, handover and a direct route back to NOX for future support."/>
         <div className="feature-grid columns-2 ajax-partner-mini-grid">
-          <article className="feature-card"><span className="feature-number">01</span><h3>Product knowledge and correct setup</h3><p>Ajax equipment is configured around the intended users, rooms, zones, permissions, alerts, communication channels and the response expected when an event occurs.</p></article>
-          <article className="feature-card"><span className="feature-number">02</span><h3>Genuine local project experience</h3><p>NOX has installed Ajax alarms, perimeter detection, cameras and EN54 fire equipment across homes, showrooms, industrial sites, offices and rural estates.</p></article>
+          <article className="feature-card ajax-certificate-feature ajax-certificate-feature-intrusion"><span className="feature-number">01</span><h3>Product knowledge and correct setup</h3><p>Ajax equipment is configured around the intended users, rooms, zones, permissions, alerts, communication channels and the response expected when an event occurs.</p><span className="ajax-certificate-proof">Ajax Academy · Baseline Intrusion</span></article>
+          <article className="feature-card ajax-certificate-feature ajax-certificate-feature-video"><span className="feature-number">02</span><h3>Genuine local project experience</h3><p>NOX has installed Ajax alarms, perimeter detection, cameras and EN54 fire equipment across homes, showrooms, industrial sites, offices and rural estates.</p><span className="ajax-certificate-proof">Ajax Academy · Video Surveillance</span></article>
         </div>
       </div>
       <aside className="ajax-partner-logo-card">
@@ -242,13 +246,6 @@ export default function AjaxAuthorisedInstallerPage() {
       </aside>
     </div></section>
 
-    <section className="section section-alt ajax-training-section"><div className="container">
-      <SectionHeading eyebrow="Ajax Academy training" title="Specialist training in intrusion and video surveillance" text="NOX combines authorised installer status with role-specific Ajax Academy training. These certificates provide supporting evidence of the product knowledge used when surveying, configuring and handing over Ajax systems."/>
-      <div className="ajax-certificate-grid">
-        <figure className="ajax-certificate-card"><img src="/images/v4-13-21/ajax-certificates/james-rigby-intrusion.jpg" alt="Ajax Academy Baseline Intrusion specialist certificate awarded to James Rigby of NOX Fire and Security"/><figcaption><strong>James Rigby</strong><span>Ajax Academy — Baseline Intrusion</span></figcaption></figure>
-        <figure className="ajax-certificate-card"><img src="/images/v4-13-21/ajax-certificates/joseph-robb-video-surveillance.jpg" alt="Ajax Academy Video Surveillance specialist certificate awarded to Joseph Robb of NOX Fire and Security"/><figcaption><strong>Joseph Robb</strong><span>Ajax Academy — Video Surveillance</span></figcaption></figure>
-      </div>
-    </div></section>
 
     <section className="section section-alt"><div className="container">
       <SectionHeading eyebrow="Why Ajax systems?" title="Modern security technology is most effective when the design starts with the property" text="Ajax gives NOX a broad professional platform for intrusion, video, fire and suitable automation. The system still succeeds or fails on the survey, device positions, communication, user setup and ongoing support."/>
@@ -260,7 +257,7 @@ export default function AjaxAuthorisedInstallerPage() {
         <div><span className="eyebrow">Ajax intruder alarms</span><h2>Smart intruder protection for homes, businesses and larger sites</h2><p>NOX combines the correct hub, opening protection, movement detection, photo verification, external detection, keypads and sirens around the way the property is entered, occupied, armed and responded to.</p></div>
         <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/>
       </div>
-      <div className="product-detail-grid">{intruderProducts.map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image product-detail-artwork"><img src={product.image} alt={product.alt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div>
+      <div className="product-detail-grid">{intruderProducts.map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image product-detail-photo ajax-intruder-premium-image"><img src={product.image} alt={product.alt} style={{ objectPosition: product.position }}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div>
       <div className="section-action-row"><Link className="button button-light" href="/systems/intrusion-alarms">Explore Ajax Intruder Alarms</Link><Link className="button button-outline" href="/systems/perimeter-protection">Explore Perimeter Protection</Link></div>
     </div></section>
 
