@@ -4,7 +4,7 @@ import { useEffect } from "react"
 
 declare global {
   interface Window {
-    dataLayer?: Record<string, unknown>[]
+    dataLayer?: unknown[]
     gtag?: (...args: unknown[]) => void
   }
 }
@@ -14,8 +14,16 @@ function classifyLink(link: HTMLAnchorElement) {
   const href = link.getAttribute("href") ?? ""
   if (href.startsWith("tel:")) return "phone"
   if (href.includes("wa.me") || href.includes("whatsapp")) return "whatsapp"
+  if (href.startsWith("mailto:")) return "email"
   if (href.startsWith("/get-quote") || href.startsWith("/book-security-survey")) return "quote"
   return null
+}
+
+const eventNames: Record<string, string> = {
+  phone: "phone_click",
+  whatsapp: "whatsapp_click",
+  email: "email_click",
+  quote: "quote_click",
 }
 
 export default function CtaTracking() {
@@ -29,21 +37,22 @@ export default function CtaTracking() {
       if (!ctaType) return
 
       const payload = {
-        event: "nox_lead_intent",
         cta_type: ctaType,
         cta_text: link.textContent?.trim() ?? "",
         source_page: link.dataset.sourcePage ?? window.location.pathname,
         destination: link.getAttribute("href") ?? "",
       }
 
-      window.dataLayer = window.dataLayer ?? []
-      window.dataLayer.push(payload)
-      window.gtag?.("event", "generate_lead_intent", {
-        cta_type: payload.cta_type,
-        cta_text: payload.cta_text,
-        source_page: payload.source_page,
-        destination: payload.destination,
-      })
+      if (ctaType === "quote") {
+        sessionStorage.setItem("nox_quote_context", JSON.stringify({
+          source_page: payload.source_page,
+          cta_text: payload.cta_text,
+          recorded_at: new Date().toISOString(),
+        }))
+      }
+
+      if (localStorage.getItem("nox_analytics_consent") !== "granted" || !window.gtag) return
+      window.gtag("event", eventNames[ctaType] ?? "lead_intent", { ...payload, transport_type: "beacon" })
     }
 
     document.addEventListener("click", handleClick)

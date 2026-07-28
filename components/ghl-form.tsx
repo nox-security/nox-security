@@ -32,6 +32,13 @@ export default function GHLForm({ compact = false }: { compact?: boolean }) {
     }
 
     const current = new URL(window.location.href)
+    if (!sessionStorage.getItem("nox_quote_context")) {
+      sessionStorage.setItem("nox_quote_context", JSON.stringify({
+        source_page: current.pathname,
+        cta_text: "Website Enquiry form",
+        recorded_at: new Date().toISOString(),
+      }))
+    }
     const context = new URLSearchParams(current.search)
     const referrer = document.referrer
     context.set("page_url", current.href)

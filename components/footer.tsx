@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Instagram } from "lucide-react"
 import { commercialFooterItems, fireFooterItems, residentialFooterItems, supportFooterItems } from "@/lib/navigation"
 import { site } from "@/lib/site"
+import { CookieSettingsButton } from "@/components/cookie-consent"
 
 export default function Footer() {
   return (
@@ -69,7 +70,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 NOX Fire & Security. All rights reserved.</span>
-        <div><Link href="/privacy-policy">Privacy</Link><Link href="/terms-conditions">Terms</Link><Link href="/cookie-policy">Cookies</Link></div>
+        <div><Link href="/privacy-policy">Privacy</Link><Link href="/terms-conditions">Terms</Link><Link href="/cookie-policy">Cookies</Link><CookieSettingsButton/></div>
       </div>
     </footer>
   )

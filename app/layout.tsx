@@ -1,9 +1,12 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import MobileConversionBar from "@/components/mobile-conversion-bar"
 import CtaTracking from "@/components/cta-tracking"
+import Analytics from "@/components/analytics"
+import CookieConsent from "@/components/cookie-consent"
 import { JsonLd } from "@/components/marketing"
 import { site } from "@/lib/site"
 import { localBusinessId, organisationId, websiteId } from "@/lib/schema"
@@ -120,11 +123,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-GB">
       <body>
         <JsonLd data={organisationGraph}/>
+        <Suspense fallback={null}><Analytics/></Suspense>
         <CtaTracking/>
         <Header/>
         <main id="main-content">{children}</main>
         <Footer/>
         <MobileConversionBar/>
+        <CookieConsent/>
       </body>
     </html>
   )

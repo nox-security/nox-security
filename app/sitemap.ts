@@ -5,7 +5,7 @@ import { site } from "@/lib/site"
 import { landingPageList } from "@/lib/landing"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const releaseDate = new Date("2026-07-26T00:00:00.000Z")
+  const releaseDate = new Date("2026-07-28T00:00:00.000Z")
   const core = [
     "",
     "/residential",
