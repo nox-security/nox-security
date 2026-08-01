@@ -16,7 +16,7 @@ const isPreview = process.env.VERCEL_ENV === "preview"
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "Fire Alarms, CCTV & Security Systems | NOX", template: "%s | NOX Fire & Security" },
-  description: "Commercial and premium residential Fire Alarms, CCTV, intruder systems and emergency lighting across Chesterfield, Derbyshire, Derby, Sheffield and the Peak District.",
+  description: "Commercial and professionally installed residential Fire Alarms, CCTV, intruder systems and emergency lighting across Chesterfield, Derbyshire, Derby, Sheffield and the Peak District.",
   applicationName: site.name,
   category: "Fire and security systems",
   icons: { icon: "/images/nox-logo-light.jpeg" },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     url: site.url,
     title: "NOX Fire & Security",
-    description: "Commercial and premium residential Fire Alarms, CCTV, intruder systems and emergency lighting across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
+    description: "Commercial and professionally installed residential Fire Alarms, CCTV, intruder systems and emergency lighting across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
     images: [{ url: site.defaultSocialImage, width: 1200, height: 630, alt: "NOX Fire & Security local installations" }],
   },
   twitter: {

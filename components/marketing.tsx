@@ -277,13 +277,13 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
       { src: "/images/image-refresh/home-cctv-live-view.webp", alt: "Home CCTV live view", caption: "Several useful property views brought together for recording and playback." },
       { src: "/images/image-refresh/home-cctv-vigi-installed.webp", alt: "Professional VIGI home CCTV camera", caption: "A professional fixed camera installed for dependable coverage." },
       { src: "/images/image-refresh/home-cctv-camera-close.webp", alt: "Home CCTV camera close view", caption: "Careful positioning around the roofline and the required view." },
-      { src: "/images/image-refresh/ajax-black-camera-range.webp", alt: "Black Ajax CCTV camera range", caption: "Premium camera options for customers wanting a darker, discreet finish.", product: true }
+      { src: "/images/image-refresh/ajax-black-camera-range.webp", alt: "Black Ajax CCTV camera range", caption: "Camera options for customers wanting a darker, discreet finish.", product: true }
     ],
     "smart-home-cctv": [
       { src: "/images/image-refresh/smart-home-eufy-installed.webp", alt: "Eufy smart security camera installed", caption: "Dual-lens app-connected security for everyday remote viewing." },
       { src: "/images/image-refresh/eufy-floodlight-camera.webp", alt: "Eufy floodlight camera", caption: "Lighting and video combined around an entrance or garden." },
       { src: "/images/image-refresh/eufy-solar-security-camera.webp", alt: "Solar smart security camera", caption: "Solar-powered coverage for suitable positions with limited cabling." },
-      { src: "/images/image-refresh/ajax-video-doorbell.webp", alt: "Ajax video doorbell", caption: "A premium video doorbell for alerts, conversation and entry-point awareness." }
+      { src: "/images/image-refresh/ajax-video-doorbell.webp", alt: "Ajax video doorbell", caption: "A connected video doorbell for alerts, conversation and entry-point awareness." }
     ],
     "perimeter-protection": [
       { src: "/images/image-refresh/home-perimeter-motioncam.webp", alt: "Ajax outdoor MotionCam at a home", caption: "External detection positioned around a garden and side approach." },

@@ -51,7 +51,7 @@ export default function ServiceAreas() {
               Areas We Cover
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Based in Chesterfield, NOX Fire &amp; Security installs smart intruder alarms, CCTV systems, fire alarms and commercial security systems across Chesterfield, Sheffield, Derbyshire and surrounding areas. The core service area includes the Peak District, South and West Sheffield, Derby and the premium villages and rural locations surrounding Chesterfield.
+              Based in Chesterfield, NOX Fire &amp; Security installs smart intruder alarms, CCTV systems, fire alarms and commercial security systems across Chesterfield, Sheffield, Derbyshire and surrounding areas. The core service area includes the Peak District, South and West Sheffield, Derby and the well-connected villages and rural locations surrounding Chesterfield.
             </p>
           </div>
 

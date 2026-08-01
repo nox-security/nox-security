@@ -78,7 +78,7 @@ export default function FireCompliancePage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Fire alarm systems" title="Five clear routes from a single premises to a wider estate" text="Installation, servicing, takeovers, multi-site programmes and coordinated Fire and CCTV projects each have a distinct scope. The right route depends on the building, existing equipment, responsible people and the outcome the business needs."/>
+      <SectionHeading eyebrow="Fire alarm systems" title="Five ways we can support a single premises or wider estate" text="Installation, servicing, takeovers, multi-site programmes and coordinated Fire and CCTV projects each have a distinct scope. The right route depends on the building, existing equipment, responsible people and the outcome the business needs."/>
       <div className="feature-grid columns-3 media-route-grid fire-balanced-grid">{fireSystemRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
     </div></section>
 

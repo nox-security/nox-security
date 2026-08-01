@@ -349,7 +349,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     audience: "Commercial",
     serviceType: "Fire alarm servicing",
     problemTitle: "Servicing keeps the condition, records and next actions visible",
-    problemText: "Routine testing helps identify device, panel, battery, warning or documentation issues and gives the responsible person a clearer route for remedial work and the next planned visit.",
+    problemText: "Routine testing helps identify device, panel, battery, warning or documentation issues and gives the responsible person a clear next step for remedial work and the next planned visit.",
     included: ["Planned engineer visits", "Panel and device testing", "Warning-device checks", "Battery and fault review", "Service records", "Defect and recommendation reporting", "Takeover inspections where required"],
     process: [
       { title: "System review", text: "The panel, approximate device count, records and known issues are confirmed." },
@@ -488,7 +488,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     location: "Chesterfield, Sheffield & Derbyshire",
     audience: "Commercial",
     serviceType: "Commercial Fire and Security systems",
-    problemTitle: "Commercial customers need a clear route from installation into ongoing support",
+    problemTitle: "Commercial customers need ongoing support to follow naturally after installation",
     problemText: "The systems may be different, but the customer benefits when surveys, records, service dates, identified defects and future upgrades remain connected through one local team.",
     included: ["Commercial fire alarm installation", "Commercial CCTV", "Commercial intruder alarms", "Emergency lighting", "Fire alarm and CCTV servicing", "Monitoring and compliance packages"],
     process: [

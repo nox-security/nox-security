@@ -83,7 +83,7 @@ export default function Products() {
             <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised" className="h-4" />
             Ajax Authorised · Hikvision & Other CCTV Systems
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Premium Security Products</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Professional Security Products</h2>
           <p className="text-lg text-gray-300 leading-relaxed">
             We only install equipment we trust. Ajax is our preferred platform for smart intruder, fire and automation systems, with Hikvision, Ajax and other professional CCTV options specified around the property.
           </p>

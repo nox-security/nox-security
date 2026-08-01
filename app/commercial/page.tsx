@@ -87,7 +87,7 @@ export default function CommercialPage() {
     <TrustStrip variant="commercial"/>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Installations & larger projects" title="From a single commercial installation to a coordinated multi-site project" text="Commercial CCTV, intruder protection, industrial security, multi-site systems and integrated projects each have a clear route from survey and system design through installation, handover and ongoing support."/>
+      <SectionHeading eyebrow="Installations & larger projects" title="From a single commercial installation to a coordinated multi-site project" text="Commercial CCTV, intruder protection, industrial security, multi-site systems and integrated projects move from survey and system design through installation, handover and ongoing support."/>
       <div className="feature-grid columns-3 media-route-grid commercial-media-grid">
         {commercialSystems.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>

@@ -52,28 +52,28 @@ const intruderProducts = [
     name: "Ajax hubs and communication",
     description: "The hub manages the system, connected devices, users, alarms and communication. The correct model is selected around the property, internet options, mobile backup and the level of photo verification required.",
     image: "/images/image-refresh/intruder-simple-control.webp",
-    alt: "Premium Ajax hub and app control imagery used on the residential intruder alarm page",
+    alt: "Ajax hub and app control imagery used on the residential intruder alarm page",
     position: "center 48%",
   },
   {
     name: "MotionCam photo verification",
     description: "MotionCam devices can provide visual confirmation when an alarm is triggered, helping users and monitoring teams understand what caused the event without turning the alarm into continuous indoor CCTV.",
     image: "/images/image-refresh/intruder-motioncam-verification.webp",
-    alt: "Ajax MotionCam photo verification shown in premium residential intruder alarm imagery",
+    alt: "Ajax MotionCam photo verification shown in residential intruder alarm imagery",
     position: "center 48%",
   },
   {
     name: "Door, window and perimeter protection",
     description: "Opening contacts, internal detectors, curtain protection and suitable outdoor detection can be layered around entrances, driveways, yards, garages and external approaches.",
     image: "/images/image-refresh/intruder-doorprotect.webp",
-    alt: "Ajax door and window protection shown in premium residential intruder alarm imagery",
+    alt: "Ajax door and window protection shown in residential intruder alarm imagery",
     position: "center 48%",
   },
   {
     name: "Keypads, sirens and user control",
     description: "Keypads, tags, app permissions and external sirens are configured around the people using the property, opening and closing routines, night modes and agreed response procedures.",
     image: "/images/image-refresh/intruder-keypad-touchscreen.webp",
-    alt: "Ajax touchscreen keypad shown in premium residential intruder alarm imagery",
+    alt: "Ajax touchscreen keypad shown in residential intruder alarm imagery",
     position: "center 48%",
   },
 ]
@@ -280,7 +280,7 @@ export default function AjaxAuthorisedInstallerPage() {
     </div></section>
 
     <section className="section"><div className="container split-grid ajax-support-grid">
-      <div><SectionHeading eyebrow="After installation" title="Monitoring, servicing, takeovers and long-term Ajax support" text="An Ajax system should not become unsupported after handover. NOX provides a clear route for suitable monitoring, planned intruder servicing, CCTV maintenance, faults, device additions, user changes and existing-system takeover assessments."/><div className="related-links"><Link href="/service-plans/alarm-monitoring">Ajax alarm monitoring →</Link><Link href="/service-plans/alarm-maintenance">Intruder alarm servicing →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link><Link href="/services/security-system-takeover">Ajax system takeovers →</Link></div></div>
+      <div><SectionHeading eyebrow="After installation" title="Monitoring, servicing, takeovers and long-term Ajax support" text="An Ajax system should not become unsupported after handover. NOX supports suitable monitoring, planned intruder servicing, CCTV maintenance, faults, device additions, user changes and existing-system takeover assessments."/><div className="related-links"><Link href="/service-plans/alarm-monitoring">Ajax alarm monitoring →</Link><Link href="/service-plans/alarm-maintenance">Intruder alarm servicing →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link><Link href="/services/security-system-takeover">Ajax system takeovers →</Link></div></div>
       <aside className="dark-panel"><h3>Already have an Ajax system?</h3><p>Share the hub model, property postcode, administrator-access position, devices installed, known faults and the support you need. NOX can confirm whether a takeover, service, repair or upgrade survey is the correct next step.</p><ContactActions primaryLabel="Discuss an Existing Ajax System" compact audience="Residential & Commercial" serviceCategory="Ajax Systems" enquiryType="Takeover" sourceLabel="ajax-authorised-installer-support"/></aside>
     </div></section>
 

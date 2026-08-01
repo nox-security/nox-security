@@ -187,7 +187,7 @@ export const caseStudies: CaseStudy[] = [
     designPriorities: [
       "Treat the arcade as several activity zones, covering entrances, gaming areas and customer routes rather than relying on a small number of broad overview images.",
       "Account for bright screens, changing light levels and regular movement when selecting camera angles and checking the useful detail in the recorded image.",
-      "Give the management team one practical multi-camera view and a clear route to recorded footage after the system was commissioned.",
+      "Give the management team one practical multi-camera view and straightforward access to recorded footage after the system was commissioned.",
     ],
     outcome: "Continue Arcade received a commissioned Ajax CCTV system with recorded coverage across the key venue areas, a clear multi-camera display and a practical handover suited to the way the Derby leisure premises operates.",
     localContext: "Commercial CCTV for leisure venues in Derby needs to balance customer experience with reliable evidence across entrances, tills, gaming or activity zones and routes between rooms. Screen glare, changing occupancy and the position of the live-view monitor should all be considered during the survey.",
@@ -206,7 +206,7 @@ export const caseStudies: CaseStudy[] = [
     alt: "The Tan Station in Brimington during a NOX Fire and Security installation",
     summary: "A coordinated Brimington fit-out combining fire-alarm first-fix work with discreet black CCTV selected around the finished commercial design.",
     story: "The Tan Station was being created as a modern customer-facing premises with a strong black interior and exterior finish. Leaving fire and security planning until the end would have risked exposed routes, awkward device positions and equipment that looked disconnected from the completed fit-out. NOX became involved during the project, completed the fire-alarm first fix and installed black internal and external CCTV in positions selected around the layout, finishes and intended use of each area.",
-    requirement: "Coordinate the fire-alarm infrastructure and commercial CCTV during the active fit-out, while keeping visible security equipment consistent with the premium black design of the premises.",
+    requirement: "Coordinate the fire-alarm infrastructure and commercial CCTV during the active fit-out, while keeping visible security equipment consistent with the black design of the premises.",
     delivery: "NOX completed the fire-alarm first-fix cabling, installed black internal and external cameras, coordinated positions around the evolving fit-out and kept the fire and CCTV scopes clearly defined throughout the work.",
     systems: ["Commercial CCTV", "Black turret cameras", "Fire alarm first fix", "Commercial fit-out coordination"],
     gallery: [
@@ -216,10 +216,10 @@ export const caseStudies: CaseStudy[] = [
       { src: "/images/projects/tan-station-camera-internal-2.jpg", alt: "Discreet black CCTV camera inside The Tan Station", caption: "The internal camera finish reduced visual contrast while retaining a clear view across the protected commercial area." },
       { src: "/images/projects/tan-station-camera-external-2.jpg", alt: "Commercial CCTV camera installed on the black exterior of The Tan Station", caption: "The external camera colour and mounting position were chosen to complement the finished elevation rather than appear as a late addition." },
       { src: "/images/revisions/tan-station-black-cctv-camera.jpg", alt: "Black CCTV camera installed inside The Tan Station", caption: "Close coordination between the installation and fit-out helped keep the visible result clean and consistent across the premises." },
-      { src: "/images/revisions/tan-station-ajax-keypad.jpg", alt: "NOX branded Ajax keypad installed at The Tan Station", caption: "The finished control point gives authorised users a clear route to everyday alarm operation within the completed commercial interior." }
+      { src: "/images/revisions/tan-station-ajax-keypad.jpg", alt: "NOX branded Ajax keypad installed at The Tan Station", caption: "The finished control point gives authorised users straightforward everyday alarm operation within the completed commercial interior." }
     ],
     metaTitle: "Commercial Fire & CCTV Installation Brimington | Fit-Out",
-    metaDescription: "Fire-alarm first fix and black CCTV installed at The Tan Station in Brimington, coordinated around a premium commercial fit-out by NOX Fire & Security.",
+    metaDescription: "Fire-alarm first fix and black CCTV installed at The Tan Station in Brimington, coordinated around a design-led commercial fit-out by NOX Fire & Security.",
     searchKeywords: ["commercial CCTV Brimington", "fire alarm first fix Chesterfield", "security for commercial fit-outs", "black CCTV cameras Derbyshire", "commercial fire and security Chesterfield"],
     designPriorities: [
       "Introduce fire-alarm first-fix work early enough to coordinate cable routes, ceilings and future device positions with the other trades on site.",
@@ -249,7 +249,7 @@ export const caseStudies: CaseStudy[] = [
     gallery: [
       { src: "/images/revisions/telesis-en54-fire-hub-normal.jpg", alt: "Ajax EN54 Fire Hub showing normal system operation at Telesis", caption: "The Fire Hub provides a clear normal-status view so responsible users can confirm that the system is operating correctly." },
       { src: "/images/revisions/telesis-en54-fire-hub-alarm.jpg", alt: "Ajax EN54 Fire Hub showing an evacuation alarm during testing", caption: "Evacuation operation was tested and displayed clearly at the control equipment before the system was handed over." },
-      { src: "/images/image-refresh/en54-manual-call-point.webp", alt: "Fire alarm manual call point installed at the Telesis industrial premises", caption: "Manual call points provide a clear route for occupants to raise the fire alarm from the agreed positions around the industrial building." },
+      { src: "/images/image-refresh/en54-manual-call-point.webp", alt: "Fire alarm manual call point installed at the Telesis industrial premises", caption: "Manual call points allow occupants to raise the fire alarm from the agreed positions around the industrial building." },
       { src: "/images/revisions/telesis-nox-alarm-sounder.jpg", alt: "NOX branded external intruder alarm sounder at Telesis", caption: "The commercial intruder system remains a separate security layer, with a visible external warning device at the premises." },
       { src: "/images/revisions/telesis-fire-visual-indicator.jpg", alt: "Visual fire alarm indicator operating during the Telesis test", caption: "Visual warning was checked as part of the commissioning process so the installed alarm response could be confirmed on site." },
       { src: "/images/image-refresh/green-manual-call-point.webp", alt: "Close view of a manual fire call point at Telesis", caption: "Device positions and functions were reviewed during handover so the team understood activation, indication and the correct response route." }
@@ -562,11 +562,11 @@ export const caseStudies: CaseStudy[] = [
     category: "Retail & showroom security",
     image: "/images/v4-13-9/kitchen-showroom/main.jpg",
     alt: "NOX Fire and Security vehicles outside a Chesterfield kitchen showroom protected by CCTV and an intruder alarm",
-    summary: "Ajax intruder protection and commercial CCTV installed for a premium Chesterfield kitchen showroom, balancing security with a clean customer-facing finish.",
+    summary: "Ajax intruder protection and commercial CCTV installed for a Chesterfield kitchen showroom, balancing security with a clean customer-facing finish.",
     metaTitle: "Kitchen Showroom CCTV & Intruder Alarm Chesterfield",
-    metaDescription: "Ajax intruder alarm and commercial CCTV installed for a premium kitchen showroom in Chesterfield, with discreet controls, visible deterrence and staff handover.",
-    story: "The kitchen showroom needed reliable security around a customer-facing premises containing displays, stock and daily public access. A basic alarm-only approach would not have provided recorded visibility, while poorly positioned equipment could have distracted from the premium showroom finish. NOX coordinated commercial CCTV with Ajax intruder protection, selected black visible equipment for the property, installed the keypad and external siren, and configured the system around the way staff open, close and manage the premises.",
-    requirement: "Protect the showroom entrances, customer areas and business assets with coordinated CCTV and intruder detection while preserving the clean visual standard expected inside a premium retail environment.",
+    metaDescription: "Ajax intruder alarm and commercial CCTV installed for a kitchen showroom in Chesterfield, with discreet controls, visible deterrence and staff handover.",
+    story: "The kitchen showroom needed reliable security around a customer-facing premises containing displays, stock and daily public access. A basic alarm-only approach would not have provided recorded visibility, while poorly positioned equipment could have distracted from the showroom finish. NOX coordinated commercial CCTV with Ajax intruder protection, selected black visible equipment for the property, installed the keypad and external siren, and configured the system around the way staff open, close and manage the premises.",
+    requirement: "Protect the showroom entrances, customer areas and business assets with coordinated CCTV and intruder detection while preserving the clean visual standard expected inside a design-led retail environment.",
     delivery: "NOX installed and configured the Ajax intruder alarm and commercial CCTV, introduced a clear internal keypad and external NOX siren, checked the system operation and completed the staff handover.",
     systems: ["Ajax intruder alarm", "Commercial CCTV", "Black Ajax keypad", "Retail showroom security"],
     gallery: [
@@ -581,7 +581,7 @@ export const caseStudies: CaseStudy[] = [
       "Coordinate CCTV and intruder detection around staff opening and closing routines, customer movement and the areas where recorded evidence would be most useful.",
       "Use considered black control and warning equipment and complete a clear handover so the team could operate both systems confidently after installation.",
     ],
-    outcome: "The Chesterfield kitchen showroom received coordinated Ajax intruder protection and commercial CCTV, with black visible equipment, clear staff controls and a finished installation suited to a premium retail environment.",
+    outcome: "The Chesterfield kitchen showroom received coordinated Ajax intruder protection and commercial CCTV, with black visible equipment, clear staff controls and a finished installation suited to a design-led retail environment.",
     localContext: "Retail and showroom security in Chesterfield needs to balance recorded evidence, deterrence and reliable detection with the appearance and daily operation of the premises. Public areas, valuable displays, stock, tills, rear access and staff opening procedures should all be reviewed during the survey.",
     faq: [
       { q: "Can CCTV and alarm equipment be discreet in a showroom?", a: "Yes. Equipment colour, position and cable routes can be planned around the interior, while still keeping the required coverage and detector performance." },
@@ -690,7 +690,7 @@ export const areas = {
   },
   sheffield: {
     name: "Sheffield", county: "South Yorkshire",
-    intro: "Premium residential and commercial security systems across Sheffield, with particular focus on Dore, Totley, Ecclesall, Fulwood, Ranmoor and the wider South and West Sheffield area.",
+    intro: "Residential and commercial security systems across Sheffield, with particular focus on Dore, Totley, Ecclesall, Fulwood, Ranmoor and the wider South and West Sheffield area.",
     focus: "NOX surveys the property first, then designs the alarm, CCTV or fire solution around larger homes, driveways, outbuildings, working areas and the way the site is used.",
     commercial: "Sheffield businesses can combine commercial CCTV, intruder protection, monitoring, servicing and fire safety support through one local contractor.",
     nearby: "Dore, Totley, Ecclesall, Fulwood, Ranmoor and surrounding South and West Sheffield districts"
@@ -782,7 +782,7 @@ export const areas = {
   doncaster: {
     name: "Doncaster", county: "South Yorkshire",
     intro: "Commercial and larger residential fire and security projects across Doncaster and surrounding areas.",
-    focus: "NOX can provide a clear route from survey and quotation through installation, handover, monitoring and planned maintenance.",
+    focus: "NOX can manage the work from survey and quotation through installation, handover, monitoring and planned maintenance.",
     commercial: "Joined-up commercial support can cover CCTV, intruder alarms, fire alarms, emergency lighting and recurring service arrangements.",
     nearby: "Balby, Bessacarr, Armthorpe and South Yorkshire"
   },
@@ -959,7 +959,7 @@ export const systemPages: Record<string, ServicePageData> = {
     metaDescription: "Perimeter alarm systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire for driveways, gates, boundaries, garages, yards and outbuildings.",
     intro: "External protection is a separate security layer for driveways, side access, yards, boundaries, windows, doors and outbuildings. NOX designs it around the approach routes and environment rather than copying the internal alarm system outside.",
     image: "/images/v4-12-6/perimeter-main-white-devices.png",
-    imageAlt: "Ajax perimeter protection devices shown in a premium product presentation",
+    imageAlt: "Ajax perimeter protection devices presented together for residential security",
     problemTitle: "Outdoor detection needs precise design and testing",
     problemText: "Sunlight, vegetation, animals, traffic, gates, paths, installation height and the direction of travel can all influence performance. The survey identifies where an early warning layer adds value and which device pattern suits each approach.",
     benefits: ["Curtain Outdoor narrow-beam detection", "MotionCam Outdoor photo verification", "High-mount outdoor detection options", "Driveway and side-access coverage", "External sirens and app alerts", "Protection for yards and outbuildings", "Integration with Ajax intruder alarms", "Ongoing maintenance and adjustment"],
@@ -987,7 +987,7 @@ export const systemPages: Record<string, ServicePageData> = {
     platformTitle: "An earlier warning layer around the property",
     platformText: "Ajax external detection can protect approaches, windows, doors, yards and outbuildings before an intruder reaches the internal alarm zones. Device selection and positioning are confirmed through a dedicated perimeter survey.",
     products: [
-      { name: "Curtain Outdoor", description: "Narrow curtain-style outdoor detection for windows, doorways, passages and selected boundary lines.", image: "/images/SingleCurtain.jpeg", imageAlt: "Ajax Curtain Outdoor detector shown in a premium product setting" },
+      { name: "Curtain Outdoor", description: "Narrow curtain-style outdoor detection for windows, doorways, passages and selected boundary lines.", image: "/images/SingleCurtain.jpeg", imageAlt: "Ajax Curtain Outdoor detector shown in a product setting" },
       { name: "DualCurtain Outdoor", description: "Two opposing detection curtains can cover longer boundary runs or approaches from a central mounting point where suitable.", image: "/images/AjaxDualcurtain.jpg", imageAlt: "Ajax DualCurtain Outdoor detection pattern protecting an entrance" },
       { name: "MotionCam Outdoor", description: "Outdoor motion detection with camera-assisted verification options, anti-masking features and adjustable detection on suitable Ajax systems.", image: "/images/image-refresh/intruder-outdoor-false-alarm.webp", imageAlt: "Ajax MotionCam Outdoor detector installed on a commercial property" },
       { name: "StreetSiren", description: "External audible and visual indication can reinforce the perimeter layer and wider intruder alarm system.", image: "/images/image-refresh/residential-nox-siren.webp", imageAlt: "NOX branded Ajax external StreetSiren" },
@@ -1081,7 +1081,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "Dual-lens smart camera", description: "Fixed and tracking views can cover a wider area while keeping control and notifications inside the app.", image: "/images/image-refresh/smart-home-eufy-installed.webp", imageAlt: "Eufy dual-lens smart security camera installed on a home" },
       { name: "Floodlight camera", description: "Lighting, video and app alerts can be combined at entrances, rear gardens and external approaches.", image: "/images/image-refresh/eufy-floodlight-camera.webp", imageAlt: "Eufy floodlight camera installed above a residential door" },
       { name: "Solar-powered camera", description: "A solar option can support suitable locations where a conventional cable route is not practical.", image: "/images/image-refresh/smart-home-solar-camera.webp", imageAlt: "Solar-powered smart security camera installed on brickwork" },
-      { name: "Ajax video doorbell", description: "A premium connected doorbell adds live conversation, notifications and entry-point video within the wider security journey.", image: "/images/image-refresh/ajax-video-doorbell.webp", imageAlt: "Black Ajax video doorbell installed beside a home entrance" },
+      { name: "Ajax video doorbell", description: "A connected doorbell adds live conversation, notifications and entry-point video within the wider security system.", image: "/images/image-refresh/ajax-video-doorbell.webp", imageAlt: "Black Ajax video doorbell installed beside a home entrance" },
       { name: "Coordinated smart-home package", description: "Cameras, lighting, door contacts, motion detection and a NOX external warning device can be planned as one clear package.", image: "/images/image-refresh/smart-home-package.webp", imageAlt: "Smart-home security equipment prepared as one coordinated package" }
     ],
   },
@@ -1248,9 +1248,9 @@ export const systemPages: Record<string, ServicePageData> = {
     products: [
       { name: "Full-property live view", description: "A recorder-based system brings the key entrances, driveways, gardens and external areas into one clear live and recorded view.", image: "/images/image-refresh/home-cctv-live-view.webp", imageAlt: "Residential CCTV live view covering several external areas" },
       { name: "Discreet installed cameras", description: "Camera position and finish are planned around useful coverage and the appearance of the property.", image: "/images/image-refresh/home-cctv-installed-white.webp", imageAlt: "White home CCTV camera installed beneath a roofline" },
-      { name: "Premium camera options", description: "Ajax, Hikvision, VIGI and other suitable professional camera options are selected around image quality, recording and the site.", image: "/images/image-refresh/ajax-black-camera-range.webp", imageAlt: "Premium black Ajax CCTV camera range" },
+      { name: "Professional camera options", description: "Ajax, Hikvision, VIGI and other suitable professional camera options are selected around image quality, recording and the site.", image: "/images/image-refresh/ajax-black-camera-range.webp", imageAlt: "Black Ajax CCTV camera range" },
       { name: "Close identification views", description: "Specific cameras can be positioned for entrances, vehicles and vulnerable approaches where useful detail matters.", image: "/images/image-refresh/home-cctv-camera-close.webp", imageAlt: "Close view of a professionally installed home CCTV camera" },
-      { name: "Black Ajax home camera", description: "A darker camera finish can sit discreetly beneath rooflines and around premium residential exteriors.", image: "/images/image-refresh/ajax-home-camera-black.webp", imageAlt: "Black Ajax home CCTV camera installed beneath a roofline" }
+      { name: "Black Ajax home camera", description: "A darker camera finish can sit discreetly beneath rooflines and around modern residential exteriors.", image: "/images/image-refresh/ajax-home-camera-black.webp", imageAlt: "Black Ajax home CCTV camera installed beneath a roofline" }
     ],
     ctaLabel: "Get a Home CCTV Recommendation",
     audience: "Residential",

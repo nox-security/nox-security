@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Plan for maintenance and future access",
         paragraphs: [
-          "Camera cleaning, recorder health, playback and remote access should remain easy to check after installation. A service plan can keep these areas under review and provide a clearer route for support if equipment or access changes later."
+          "Camera cleaning, recorder health, playback and remote access should remain easy to check after installation. A service plan can keep these areas under review and make support easier if equipment or access changes later."
         ]
       }
     ],

@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
   "Areas We Cover | Chesterfield, Sheffield, Derbyshire & Peak District",
-  "Premium fire alarm, CCTV and intruder system services from Chesterfield across Derbyshire, Derby, South and West Sheffield and the Peak District.",
+  "Fire alarm, CCTV and intruder system services from Chesterfield across Derbyshire, Derby, South and West Sheffield and the Peak District.",
   "/areas-we-serve",
   { image: "/images/hero-house.webp", imageAlt: "NOX fire and security service area across Derbyshire and Sheffield" },
 )
@@ -18,7 +18,7 @@ const priorityClusters = [
     title: "South & West Sheffield",
     href: "/areas/sheffield",
     places: "Dore · Totley · Ecclesall · Fulwood · Ranmoor",
-    text: "Premium residential systems, larger homes, driveways, outbuildings and commercial premises across the parts of Sheffield closest to the NOX core service area.",
+    text: "Residential systems for larger homes, driveways and outbuildings, alongside commercial premises across the parts of Sheffield closest to the NOX core service area.",
   },
   {
     title: "The Peak District",
@@ -27,10 +27,10 @@ const priorityClusters = [
     text: "Rural homes, farms, hospitality, estates and detached buildings where careful design, reliable communication and perimeter coverage matter.",
   },
   {
-    title: "Derby & Premium Villages",
+    title: "Derby & Surrounding Villages",
     href: "/areas/derby",
     places: "Derby · Duffield · Quarndon · Belper",
-    text: "Commercial security, fire compliance and premium residential projects across Derby and the surrounding villages that fit the NOX project scope.",
+    text: "Commercial security, fire compliance and professionally installed residential projects across Derby and the surrounding villages that fit the NOX project scope.",
   },
   {
     title: "Chesterfield & North Derbyshire",
@@ -53,7 +53,7 @@ export default function AreasPage() {
     <PageHero
       eyebrow="Core service area"
       title="Built in Chesterfield. Focused across Derbyshire, Sheffield, Derby and the Peak District."
-      intro="NOX provides premium residential and commercial fire and security systems across a deliberately focused service area. The priority is dependable surveys, professional delivery and ongoing support—not an unrealistic list of every town in the region."
+      intro="NOX provides residential and commercial fire and security systems across a deliberately focused service area. The priority is dependable surveys, professional delivery and ongoing support—not an unrealistic list of every town in the region."
       image="/images/hero-house.webp"
       imageAlt="Derbyshire property within the NOX Fire and Security service area"
     />
@@ -68,7 +68,7 @@ export default function AreasPage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Priority corridors" title="Residential, rural and commercial areas matched to the right type of work" text="The location strategy is built around premium homes, farms, rural estates, warehouses, offices, hospitality, retail and multi-site organisations within realistic reach of Chesterfield."/>
+      <SectionHeading eyebrow="Priority corridors" title="Residential, rural and commercial areas matched to the right type of work" text="The location strategy is built around larger homes, farms, rural estates, warehouses, offices, hospitality, retail and multi-site organisations within realistic reach of Chesterfield."/>
       <div className="location-priority-grid">{priorityClusters.map(cluster => <Link className="location-priority-card" href={cluster.href} key={cluster.title}>
         <span>{cluster.places}</span>
         <h3>{cluster.title}</h3>

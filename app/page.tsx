@@ -6,13 +6,13 @@ import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
   "Fire Alarms, CCTV & Security Systems | Derbyshire & Sheffield",
-  "Commercial and premium residential Fire Alarms, CCTV and intruder systems across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
+  "Commercial and professionally installed residential Fire Alarms, CCTV and intruder systems across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
   "/",
   { image: "/images/image-refresh/homepage-hero-cameras.jpg", imageAlt: "NOX CCTV camera range product hero image" },
 )
 
 const journeyRoutes = [
-  { number: "01", eyebrow: "Residential", title: "Protect My Home", text: "Premium CCTV, Ajax alarms, perimeter detection and smart security designed around the home, driveway, garage and outbuildings.", href: "/residential", link: "Explore Home Security" },
+  { number: "01", eyebrow: "Residential", title: "Protect My Home", text: "CCTV, Ajax alarms, perimeter detection and smart security designed around the home, driveway, garage and outbuildings.", href: "/residential", link: "Explore Home Security" },
   { number: "02", eyebrow: "Commercial", title: "Protect My Business", text: "Commercial CCTV, intruder protection, industrial security and coordinated systems for working premises and larger projects.", href: "/commercial", link: "Explore Commercial Security" },
   { number: "03", eyebrow: "Life safety", title: "Fire Alarms & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and clearer annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
   { number: "04", eyebrow: "Existing systems", title: "Existing System Support", text: "Servicing, monitoring, takeovers, fault finding, upgrades and ongoing packages for systems already installed.", href: "/service-plans", link: "Get Support for an Existing System" },
@@ -21,7 +21,7 @@ const journeyRoutes = [
 const residentialRoutes = [
   { title: "Home CCTV", text: "Recorder-based CCTV for driveways, doors, gardens, garages and outbuildings, with clear playback and remote viewing.", href: "/systems/home-cctv", image: "/images/image-refresh/home-cctv-live-view.webp", alt: "Residential CCTV live view showing full-property coverage" },
   { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/v4-12-9/residential-intruder-main.jpg", alt: "Black Ajax outdoor detector shown as the main image for residential intruder alarms" },
-  { title: "Perimeter Protection", text: "Protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected system.", href: "/systems/perimeter-protection", image: "/images/v4-12-6/perimeter-main-white-devices.png", alt: "Ajax perimeter protection devices shown in a premium product presentation" },
+  { title: "Perimeter Protection", text: "Protection for gates, driveways, detached garages, workshops and separate buildings, planned as one connected system.", href: "/systems/perimeter-protection", image: "/images/v4-12-6/perimeter-main-white-devices.png", alt: "Ajax perimeter protection devices presented together for residential security" },
   { title: "Smart Home Security", text: "App-led cameras, video doorbells, floodlight cameras and subscription-free options designed around convenient everyday use.", href: "/systems/smart-home-cctv", image: "/images/image-refresh/smart-home-eufy-installed.webp", alt: "Eufy dual-lens smart security camera installed at a home" },
 ]
 
@@ -47,7 +47,7 @@ const supportRoutes = [
 export default function HomePage() {
   const serviceStructuredData = serviceSchema({
     name: "Fire Alarms, CCTV and intruder system installation and servicing",
-    description: "Commercial and premium residential Fire Alarm, CCTV, intruder and emergency-lighting services across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
+    description: "Commercial and professionally installed residential Fire Alarm, CCTV, intruder and emergency-lighting services across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
     path: "/",
     serviceType: ["CCTV installation", "Fire alarm installation and servicing", "Intruder alarm installation", "Emergency lighting", "Monitoring and maintenance"],
     image: "/images/image-refresh/homepage-hero-cameras.jpg",
@@ -69,7 +69,7 @@ export default function HomePage() {
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derby · South Yorkshire</span></div>
         <h1>Fire Alarms, CCTV &amp; Intruder Systems</h1>
-        <p className="lead">Commercial and premium residential Fire Alarms, CCTV and Intruder Systems designed, installed and maintained across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
+        <p className="lead">Commercial and professionally installed residential Fire Alarms, CCTV and Intruder Systems across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
         <div className="button-row home-audience-actions home-contact-actions">
           <Link className="button button-light" href="/get-quote#quote-form">Book a Site Survey</Link>
           <a className="button button-outline" href={site.phoneHref}>Call</a>
@@ -93,7 +93,7 @@ export default function HomePage() {
     <TrustStrip variant="general" reviewTitle="46+ Google Reviews" />
 
     <section className="section home-customer-journeys"><div className="container">
-      <SectionHeading eyebrow="Choose the right starting point" title="A clearer route from first visit to the right NOX service" text="Start with the property or situation. Each overview page explains the options, while direct service links remain available for customers who already know what they need."/>
+      <SectionHeading eyebrow="Choose the right starting point" title="Start with the property or support you need" text="Start with the property or situation. Each overview page explains the options, while direct service links remain available for customers who already know what they need."/>
       <div className="home-journey-grid">
         {journeyRoutes.map(item => <article className="home-journey-card" key={item.title}><span className="home-journey-number">{item.number}</span><span className="eyebrow">{item.eyebrow}</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>{item.link} →</Link></article>)}
       </div>

@@ -22,7 +22,7 @@ export default function Footer() {
           <Link href="/" aria-label="NOX Fire & Security home">
             <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
           </Link>
-          <p>Premium residential and commercial Fire & Security installation and support across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
+          <p>Residential and commercial Fire & Security installation and support across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
           <p className="muted">Local accountability · Commercial capability · Ongoing support</p>
           <a className="footer-instagram-link" href="https://www.instagram.com/noxsecuritychesterfield" target="_blank" rel="noopener noreferrer" aria-label="Open NOX Fire & Security on Instagram at @noxsecuritychesterfield">
             <span className="footer-instagram-icon" aria-hidden="true"><Instagram size={17} strokeWidth={1.65}/></span>

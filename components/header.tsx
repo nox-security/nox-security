@@ -110,6 +110,7 @@ export default function Header() {
     if (!open) return
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = "hidden"
+    document.body.classList.add("mobile-navigation-open")
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false)
@@ -119,6 +120,7 @@ export default function Header() {
     window.addEventListener("keydown", handleKeyDown)
     return () => {
       document.body.style.overflow = previousOverflow
+      document.body.classList.remove("mobile-navigation-open")
       window.removeEventListener("keydown", handleKeyDown)
     }
   }, [open])
@@ -130,8 +132,12 @@ export default function Header() {
 
   const toggleMobileNavigation = () => {
     setOpen(current => {
-      if (current) setOpenMobileSection(null)
-      return !current
+      if (current) {
+        setOpenMobileSection(null)
+        return false
+      }
+      setOpenMobileSection(activeMenuId ?? "home")
+      return true
     })
   }
 
@@ -174,7 +180,8 @@ export default function Header() {
           aria-expanded={open}
           onClick={toggleMobileNavigation}
         >
-          <span></span><span></span><span></span>
+          <b className="menu-button-label">{open ? "Close" : "Menu"}</b>
+          <span className="menu-button-icon" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
       </div>
 
@@ -183,8 +190,8 @@ export default function Header() {
       {renderMobileNav && (
         <nav id="mobile-navigation" className={`mobile-nav mobile-accordion-nav ${open ? "is-visible" : "is-closing"}`} aria-label="Mobile navigation" aria-hidden={!open}>
           <div className="mobile-nav-intro">
-            <span>NOX Fire & Security</span>
-            <small>Choose the route that best matches the property or support required.</small>
+            <span>Navigation</span>
+            <small>Choose an area, then select the service you need.</small>
           </div>
 
           {headerNavMenus.map(menu => {
