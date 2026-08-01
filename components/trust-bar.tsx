@@ -45,7 +45,7 @@ export default function TrustBar() {
             <CheckCircle2 className="h-6 w-6 text-white" />
             <div>
               <div className="text-sm font-medium text-white">Free Standard Install</div>
-              <div className="text-xs text-gray-400">selected service plans</div>
+              <div className="text-xs text-gray-400">selected support plans</div>
             </div>
           </div>
           <div className="hidden md:block w-px h-8 bg-white/10"></div>

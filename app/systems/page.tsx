@@ -45,7 +45,7 @@ const commercialSystems = [
   {
     title: "Commercial Fire Alarm Systems",
     text: "New Ajax EN54 and suitable traditional fire-alarm installations, followed by testing, servicing, records and coordinated compliance support.",
-    href: "/commercial/fire-compliance",
+    href: "/fire-compliance",
     image: "/images/revisions/ajax-en54-fire-control-panel.jpg",
     alt: "Ajax EN54 commercial fire alarm system"
   },
@@ -74,7 +74,7 @@ const commercialSystems = [
 
 export default function SystemsPage() {
   return <>
-    <PageHero eyebrow="System design" title="CCTV, Fire Alarm and Intruder Alarm Systems" intro="Start with the system you need — CCTV, Fire Alarm, Intruder Alarm or perimeter protection — then see how the design changes for residential and commercial properties. Monitoring, maintenance and compliance support remain available through the Servicing & Monitoring section." image="/images/revisions/nox-engineer-cctv-wiring.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
+    <PageHero eyebrow="System design" title="CCTV, Fire Alarm and Intruder Alarm Systems" intro="Start with the system you need — CCTV, Fire Alarm, Intruder Alarm or perimeter protection — then see how the design changes for residential and commercial properties. Monitoring, maintenance, takeovers and compliance support remain available through Existing System Support." image="/images/revisions/nox-engineer-cctv-wiring.jpg" imageAlt="Professional Ajax security technology and real NOX installation work"/>
     <TrustStrip variant="general"/>
 
     <section className="section"><div className="container">
@@ -96,7 +96,7 @@ export default function SystemsPage() {
     <section className="section ongoing-support-bridge"><div className="container split-grid"><div>
       <SectionHeading eyebrow="After installation" title="Move into the right service plan, monitoring or compliance package" text="Recurring support is kept separate from the new-system design so the customer can see exactly what they are buying. Residential customers can combine alarm, monitoring and CCTV maintenance; commercial customers can add Fire servicing, emergency lighting and coordinated compliance support."/>
       <div className="related-links"><Link href="/service-plans/alarm-maintenance">Alarm maintenance →</Link><Link href="/service-plans/alarm-monitoring">Alarm monitoring →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link><Link href="/service-plans/fire-alarm-servicing">Fire alarm servicing →</Link><Link href="/service-plans/fire-compliance">Fire Compliance Package →</Link></div>
-    </div><aside className="dark-panel"><span className="eyebrow">Packages and annual support</span><h3>One point of contact after handover</h3><p>Where the confirmed scope allows, services can be coordinated under one renewal structure with clearer records, planned engineer visits and direct support for repairs or upgrades.</p><Link className="button button-light" href="/service-plans">Compare All Service Plans</Link></aside></div></section>
+    </div><aside className="dark-panel"><span className="eyebrow">Packages and annual support</span><h3>One point of contact after handover</h3><p>Where the confirmed scope allows, services can be coordinated under one renewal structure with clearer records, planned engineer visits and direct support for repairs or upgrades.</p><Link className="button button-light" href="/service-plans">Explore Existing System Support</Link></aside></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Real NOX work" title="Residential and commercial installations in the field"/><CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder","bottle-and-thyme-commercial-cctv-chesterfield","tan-station-fire-security-brimington","retford-former-bank-cctv"]}/></div></section>
     <LocalSearchLinks slugs={["security-systems-chesterfield","cctv-installation-chesterfield","ajax-alarm-installer-chesterfield","commercial-fire-security-systems"]} title="Related services in your area"/>

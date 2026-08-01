@@ -11,6 +11,13 @@ export const metadata: Metadata = pageMetadata(
   { image: "/images/image-refresh/homepage-hero-cameras.jpg", imageAlt: "NOX CCTV camera range product hero image" },
 )
 
+const journeyRoutes = [
+  { number: "01", eyebrow: "Residential", title: "Protect My Home", text: "Premium CCTV, Ajax alarms, perimeter detection and smart security designed around the home, driveway, garage and outbuildings.", href: "/residential", link: "Explore Home Security" },
+  { number: "02", eyebrow: "Commercial", title: "Protect My Business", text: "Commercial CCTV, intruder protection, industrial security and coordinated systems for working premises and larger projects.", href: "/commercial", link: "Explore Commercial Security" },
+  { number: "03", eyebrow: "Life safety", title: "Fire & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and clearer annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
+  { number: "04", eyebrow: "Existing systems", title: "Existing System Support", text: "Servicing, monitoring, takeovers, fault finding, upgrades and ongoing packages for systems already installed.", href: "/service-plans", link: "Get Support for an Existing System" },
+]
+
 const residentialRoutes = [
   { title: "Home CCTV", text: "Recorder-based CCTV for driveways, doors, gardens, garages and outbuildings, with clear playback and remote viewing.", href: "/systems/home-cctv", image: "/images/image-refresh/home-cctv-live-view.webp", alt: "Residential CCTV live view showing full-property coverage" },
   { title: "Ajax Intruder Alarms", text: "MotionCam, door protection, keypads, sirens, app control and external detection selected around the home.", href: "/systems/intrusion-alarms", image: "/images/v4-12-9/residential-intruder-main.jpg", alt: "Black Ajax outdoor detector shown as the main image for residential intruder alarms" },
@@ -30,10 +37,17 @@ const commercialRoutes = [
   { title: "Industrial & Multi-Site Security", text: "Several buildings, yards, loading areas and operational requirements planned as one coordinated security project.", href: "/commercial/industrial-warehouse-security", image: "/images/revisions/nox-commercial-cctv-installation.jpg", alt: "NOX engineer and van during an industrial security installation" },
 ]
 
+const supportRoutes = [
+  { title: "Servicing & Maintenance", text: "Planned alarm, CCTV, fire-alarm and emergency-lighting visits with clear testing, records and recommendations.", href: "/service-plans#servicing-maintenance", image: "/images/v4-10/servicing-monitoring-hero.jpeg", alt: "NOX servicing visit supporting an existing Fire and Security system" },
+  { title: "Monitoring", text: "Professional alarm signalling, keyholder contact and agreed escalation for suitable maintained systems.", href: "/service-plans/alarm-monitoring", image: "/images/v4-13-2/alarm-monitoring-operator.jpg", alt: "Professional alarm monitoring operator handling security signals" },
+  { title: "System Takeovers & Upgrades", text: "Existing systems assessed for access, faults, condition, repair, selective upgrades or replacement where appropriate.", href: "/services/security-system-takeover", image: "/images/image-refresh/commercial-old-camera.webp", alt: "Existing CCTV equipment assessed during a system takeover" },
+  { title: "Ongoing Support Packages", text: "Bring suitable monitoring, alarm servicing, CCTV maintenance and planned visits under one clearer support arrangement.", href: "/service-plans/total-security", image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg", alt: "Coordinated monitoring and maintenance support package from NOX" },
+]
+
 export default function HomePage() {
   const serviceStructuredData = serviceSchema({
     name: "CCTV, fire alarm and intruder alarm installation and servicing",
-    description: "Professional CCTV, fire alarm, intruder alarm and emergency-lighting services for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+    description: "Professional CCTV, fire alarm, intruder alarm and emergency-lighting services for homes and businesses across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire.",
     path: "/",
     serviceType: ["CCTV installation", "Fire alarm installation and servicing", "Intruder alarm installation", "Emergency lighting", "Monitoring and maintenance"],
     image: "/images/image-refresh/homepage-hero-cameras.jpg",
@@ -53,19 +67,19 @@ export default function HomePage() {
       </div>
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
-        <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derbyshire</span></div>
+        <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derby · South Yorkshire</span></div>
         <h1>Fire Alarm, CCTV &amp; Intruder Systems</h1>
-        <p className="lead">Professional CCTV, Fire Alarms and Intruder Systems designed, installed and maintained for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
+        <p className="lead">Professional CCTV, Fire Alarms and Intruder Systems designed, installed and maintained for homes and businesses across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire.</p>
         <div className="button-row home-audience-actions home-contact-actions">
-          <Link className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>
+          <Link className="button button-light" href="/get-quote#quote-form">Book a Free Site Survey</Link>
           <a className="button button-outline" href={site.phoneHref}>Call</a>
           <a className="button button-outline" href={site.whatsapp}>WhatsApp</a>
         </div>
         <div className="hero-secondary-actions home-journey-links" aria-label="Choose a service route">
-          <Link href="/systems/home-cctv">Home CCTV →</Link>
-          <Link href="/fire-compliance">Fire Alarm Systems →</Link>
-          <Link href="/systems/intrusion-alarms">Intruder Alarms →</Link>
-          <Link href="/service-plans">Servicing &amp; Monitoring →</Link>
+          <Link href="/residential">Protect My Home →</Link>
+          <Link href="/commercial">Protect My Business →</Link>
+          <Link href="/fire-compliance">Fire &amp; Compliance →</Link>
+          <Link href="/service-plans">Existing System Support →</Link>
         </div>
         <div className="home-ajax-partner-mark">
           <Link href="/ajax-authorised-installer" aria-label="Official Ajax Partner and Ajax Authorised Installation Company">
@@ -75,19 +89,26 @@ export default function HomePage() {
       </div>
     </section>
 
-    <ReviewSummaryStrip label="5 Star Reviews" />
-    <TrustStrip variant="general" reviewTitle="5 Star Reviews" />
+    <ReviewSummaryStrip label="46+ Google Reviews" />
+    <TrustStrip variant="general" reviewTitle="46+ Google Reviews" />
+
+    <section className="section home-customer-journeys"><div className="container">
+      <SectionHeading eyebrow="Choose the right starting point" title="A clearer route from first visit to the right NOX service" text="Start with the property or situation. Each overview page explains the options, while direct service links remain available for customers who already know what they need."/>
+      <div className="home-journey-grid">
+        {journeyRoutes.map(item => <article className="home-journey-card" key={item.title}><span className="home-journey-number">{item.number}</span><span className="eyebrow">{item.eyebrow}</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>{item.link} →</Link></article>)}
+      </div>
+    </div></section>
 
     <section className="section premium-client-section"><div className="container">
       <SectionHeading eyebrow="Residential CCTV & Security" title="Professional CCTV, Ajax alarms and external protection for the property" text="NOX starts with the views, access points and external areas that matter, then recommends the right combination of CCTV, intruder detection and perimeter protection." />
       <div className="system-route-grid residential-system-grid">
         {residentialRoutes.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>
-      <div className="button-row"><Link className="button button-dark" href="/residential">Explore Residential Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Residential&enquiry_type=Installation#quote-form">Get a Home Security Quote</Link></div>
+      <div className="button-row"><Link className="button button-dark" href="/residential">Explore Home Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Residential&enquiry_type=Installation#quote-form">Book a Free Home Security Survey</Link></div>
     </div></section>
 
     <section className="section section-alt fire-home-section"><div className="container">
-      <div className="split-grid fire-home-intro"><div><SectionHeading eyebrow="Fire & Compliance" title="Installation, servicing and ongoing compliance support" text="New fire alarms, planned servicing, repairs, takeovers, emergency lighting and coordinated annual support for commercial premises."/></div><aside className="dark-panel"><h3>Discuss your fire requirements</h3><p>Tell us about the premises, existing system and work required. Risk assessments and extinguisher servicing can be coordinated through competent specialist partners where needed.</p><Link className="button button-light" href="/get-quote?customer_type=Commercial&service_category=Fire%20%26%20Compliance#quote-form">Discuss Your Fire Requirements</Link></aside></div>
+      <div className="split-grid fire-home-intro"><div><SectionHeading eyebrow="Fire & Compliance" title="Installation, servicing and ongoing compliance support" text="New fire alarms, planned servicing, repairs, takeovers, emergency lighting and coordinated annual support for commercial premises."/></div><aside className="dark-panel"><h3>Discuss your fire requirements</h3><p>Tell us about the premises, existing system and work required. Risk assessments and extinguisher servicing can be coordinated through competent specialist partners where needed.</p><Link className="button button-light" href="/get-quote?customer_type=Commercial&service_category=Fire%20%26%20Compliance#quote-form">Arrange a Fire Alarm Survey</Link></aside></div>
       <div className="feature-grid columns-3 fire-route-grid media-route-grid">{fireRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>View service →</Link></div></article>)}</div>
       <div className="button-row"><Link className="button button-outline" href="/fire-compliance">Explore Fire & Compliance</Link></div>
     </div></section>
@@ -95,7 +116,13 @@ export default function HomePage() {
     <section className="section"><div className="container">
       <SectionHeading eyebrow="Commercial CCTV & Security" title="CCTV, intruder protection and coordinated systems for working sites" text="Commercial CCTV is planned around evidence quality, operations, access, several buildings and ongoing support, with intruder protection added where the site requires it."/>
       <div className="feature-grid columns-3 media-route-grid commercial-media-grid">{commercialRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
-      <div className="button-row"><Link className="button button-dark" href="/commercial">Explore Commercial Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Book a Site Survey</Link></div>
+      <div className="button-row"><Link className="button button-dark" href="/commercial">Explore Commercial Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Discuss Your Project</Link></div>
+    </div></section>
+
+    <section className="section section-alt home-support-section"><div className="container">
+      <SectionHeading eyebrow="Existing System Support" title="Servicing, monitoring and upgrades that create a clearer long-term support route" text="Customers with an existing system can start here without needing to know whether the answer is maintenance, monitoring, a takeover, a repair or a phased upgrade."/>
+      <div className="feature-grid columns-4 media-route-grid support-media-grid">{supportRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore support →</Link></div></article>)}</div>
+      <div className="button-row"><Link className="button button-light" href="/service-plans">Explore Existing System Support</Link><Link className="button button-outline" href="/get-quote?enquiry_type=Takeover#quote-form">Get Support for an Existing System</Link></div>
     </div></section>
 
     <section className="section project-story-section"><div className="container">
@@ -119,6 +146,6 @@ export default function HomePage() {
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Feedback from residential and commercial customers" text="Genuine feedback about advice, workmanship, communication and handover."/><ReviewGrid names={["Ryan Hargreaves", "Rory Stirland", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read Customer Reviews</Link></div></div></section>
 
-    <ConversionPanel title="Tell us about the property, site or existing system" text="Use one clear enquiry for a new installation, servicing, monitoring, a fault or a takeover. NOX will guide the right next step." primaryLabel="Get a Quote" sourceLabel="homepage"/>
+    <ConversionPanel title="Tell us about the property, site or existing system" text="Use one clear enquiry for a new installation, servicing, monitoring, a fault or a takeover. NOX will guide the right next step." primaryLabel="Request a Quotation" sourceLabel="homepage"/>
   </>
 }

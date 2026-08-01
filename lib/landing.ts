@@ -120,7 +120,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     related: [
       { href: "/systems/intrusion-alarms", label: "Explore Ajax alarm systems" },
       { href: "/residential", label: "Residential security design" },
-      { href: "/service-plans/total-security", label: "Total Security Package" },
+      { href: "/service-plans/total-security", label: "Ongoing Support Package" },
       { href: "/case-studies/chesterfield-home-ajax-cctv-intruder", label: "Chesterfield Ajax case study" }
     ],
     caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "sheffield-residential-security", "dronfield-timber-perimeter"],
@@ -150,7 +150,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     faq: [
       { q: "Do you cover both homes and businesses?", a: "Yes. Residential work focuses on intruder alarms, CCTV and smart-home security. Commercial work includes CCTV, intruder alarms, fire alarms, emergency lighting and compliance support." },
       { q: "Can all systems be maintained by NOX?", a: "NOX can maintain its own installations and many suitable existing systems, subject to an initial review, access and parts availability." },
-      { q: "Do you provide one annual package?", a: "Eligible services can be coordinated under a Total Security or Fire Compliance package where the written scope confirms what is included." }
+      { q: "Do you provide one annual package?", a: "Eligible services can be coordinated under an Ongoing Support or Fire Compliance package where the written scope confirms what is included." }
     ],
     related: [
       { href: "/residential", label: "Residential security" },
@@ -255,12 +255,12 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     faq: [
       { q: "Can you service an alarm installed by another company?", a: "Often yes. The make, condition, access and parts availability are reviewed first, and an initial inspection may be required." },
       { q: "Are replacement parts included?", a: "Parts, batteries and repairs are separate unless the written quotation or package specifically includes them." },
-      { q: "Can servicing be combined with monitoring?", a: "Yes. Compatible systems can move into monitoring and a wider Total Security Package where the scope is confirmed." }
+      { q: "Can servicing be combined with monitoring?", a: "Yes. Compatible systems can move into monitoring and a wider Ongoing Support Package where the scope is confirmed." }
     ],
     related: [
       { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance plan" },
       { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" },
-      { href: "/service-plans/total-security", label: "Total Security Package" },
+      { href: "/service-plans/total-security", label: "Ongoing Support Package" },
       { href: "/areas/chesterfield", label: "Chesterfield coverage" }
     ],
     caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "peak-electronic-security"],
@@ -328,7 +328,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { q: "Do you also provide emergency lighting?", a: "Yes. Emergency-lighting installation and testing can be coordinated as a separate confirmed scope." }
     ],
     related: [
-      { href: "/commercial/fire-compliance", label: "Commercial fire alarm systems" },
+      { href: "/fire-compliance", label: "Commercial fire alarm systems" },
       { href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" },
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" },
       { href: "/systems/emergency-lighting", label: "Emergency lighting" }
@@ -366,7 +366,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing plan" },
       { href: "/service-plans/emergency-lighting-servicing", label: "Emergency lighting servicing" },
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" },
-      { href: "/commercial/fire-compliance", label: "New fire alarm installation" }
+      { href: "/fire-compliance", label: "New fire alarm installation" }
     ],
     caseStudySlugs: ["tan-station-fire-security-brimington", "banana-industries-fire-security"],
     searchKeywords: ["fire alarm servicing Chesterfield", "fire alarm maintenance Chesterfield", "commercial fire alarm service", "fire compliance Chesterfield"]
@@ -434,7 +434,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     ],
     related: [
       { href: "/systems/fire-risk-assessment", label: "Fire risk assessment service" },
-      { href: "/commercial/fire-compliance", label: "Commercial fire systems" },
+      { href: "/fire-compliance", label: "Commercial fire systems" },
       { href: "/systems/emergency-lighting", label: "Emergency lighting" },
       { href: "/areas/chesterfield", label: "Chesterfield coverage" }
     ],
@@ -480,7 +480,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     slug: "commercial-fire-security-systems",
     eyebrow: "Commercial Fire & Security systems",
     title: "Joined-up Fire, CCTV and intruder support for commercial premises",
-    metaTitle: "Commercial Fire & Security Systems | Installation & Service Plans",
+    metaTitle: "Commercial Fire & Security Systems | Installation & Support",
     metaDescription: "Commercial fire alarms, CCTV, intruder systems, emergency lighting, monitoring, maintenance and compliance packages across Chesterfield, Sheffield and Derbyshire.",
     intro: "NOX supports commercial premises from new fire, CCTV and intruder installations through to ongoing servicing, monitoring, emergency lighting and coordinated compliance packages.",
     image: "/images/projects/tan-station-exterior.jpg",
@@ -504,9 +504,9 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
     ],
     related: [
       { href: "/commercial", label: "Commercial system design" },
-      { href: "/commercial/fire-compliance", label: "Commercial fire systems" },
+      { href: "/fire-compliance", label: "Commercial fire systems" },
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" },
-      { href: "/service-plans", label: "All service plans" }
+      { href: "/service-plans", label: "Existing system support" }
     ],
     caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "tan-station-fire-security-brimington", "retford-former-bank-cctv", "buxton-industrial-security"],
     searchKeywords: ["commercial fire and security systems", "commercial security company", "fire CCTV intruder systems", "commercial compliance packages"]

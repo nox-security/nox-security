@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
   "Home CCTV & Ajax Alarm Installation | Chesterfield & Sheffield",
-  "Home CCTV, Ajax intruder alarms and perimeter protection installed across Chesterfield, Sheffield and Derbyshire, with servicing and monitoring available.",
+  "Home CCTV, Ajax intruder alarms and perimeter protection installed across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with servicing and monitoring available.",
   "/residential",
   { image: "/images/image-refresh/home-cctv-live-view.webp", imageAlt: "Residential CCTV and Ajax alarm installation" },
 )
@@ -16,18 +16,18 @@ const residentialSystems = [
   { title: "Perimeter Protection", text: "Suitable external detection for approaches, gates, boundaries and areas where earlier warning is useful.", href: "/systems/perimeter-protection", image: "/images/v4-12-6/perimeter-main-white-devices.png", alt: "Ajax perimeter protection devices shown in a premium product presentation" },
   { title: "Garages & Outbuildings", text: "Protection for detached garages, workshops, garden rooms, gated approaches and properties with several buildings.", href: "/systems/garages-outbuildings", image: "/images/image-refresh/garages-outbuildings-engineer.webp", alt: "NOX engineer installing security on a home with external areas" },
   { title: "Smart Security", text: "Eufy cameras, video doorbells, solar or battery products and app-led security for customers prioritising convenience and subscription-free options.", href: "/systems/smart-home-cctv", image: "/images/image-refresh/smart-home-eufy-installed.webp", alt: "Eufy smart security camera installed at a home" },
-  { title: "Intruder Alarm Servicing", text: "Planned checks for Ajax and suitable wired, wireless or hybrid alarm systems, including devices, batteries, sirens, communication and service records.", href: "/service-plans/alarm-maintenance", image: "/images/v4-10/intruder-alarm-servicing.jpeg", alt: "Intruder alarm siren inspected during a planned service visit" },
+  { title: "Support for an Existing Home System", text: "Servicing, monitoring, takeovers, faults and sensible upgrades for suitable alarms and CCTV already installed at the property.", href: "/service-plans#home-system-support", image: "/images/image-refresh/commercial-old-camera.webp", alt: "Existing home security equipment assessed for servicing, takeover or upgrade" },
 ]
 
 export default function ResidentialPage() {
   return <>
-    <PageHero eyebrow="Residential Security" title="Ajax alarms, home CCTV and perimeter protection designed around the property" intro="NOX protects semi-detached homes, family houses, larger properties, renovations, rural sites, garages, gates and outbuildings across Chesterfield, Sheffield and Derbyshire. The system is shaped around the property and daily routine rather than the customer being forced into a fixed kit." image="/images/image-refresh/homepage-hero-nox-property.webp" imageAlt="Residential property protected by NOX Fire and Security">
-      <ContactActions primaryLabel="Get a Home Security Quote" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-hub"/>
+    <PageHero eyebrow="Protect My Home" title="Premium home security designed around the property" intro="NOX designs professionally installed CCTV, Ajax alarms, perimeter protection and smart security for family homes, larger properties, rural sites, driveways, garages and outbuildings across Chesterfield, Sheffield, Derbyshire and South Yorkshire. The property, routine and level of protection decide the system rather than a fixed package." image="/images/image-refresh/homepage-hero-nox-property.webp" imageAlt="Residential property protected by NOX Fire and Security">
+      <ContactActions primaryLabel="Book a Free Home Security Survey" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-hub"/>
     </PageHero>
     <TrustStrip variant="residential"/>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Residential systems" title="Choose the requirement first, then the technology" text="Intruder alarms, CCTV, perimeter detection and smart cameras solve different parts of the property. NOX can design one system or combine several without unnecessary duplication."/>
+      <SectionHeading eyebrow="Home security routes" title="Choose the requirement first, then the technology" text="Intruder alarms, CCTV, perimeter detection and smart cameras solve different parts of the property. NOX can design one system or combine several without unnecessary duplication."/>
       <div className="system-route-grid residential-system-grid">{residentialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}</div>
     </div></section>
 
@@ -41,13 +41,13 @@ export default function ResidentialPage() {
     <section className="section"><div className="container split-grid"><div>
       <SectionHeading eyebrow="Existing systems" title="Takeovers, faults and sensible upgrades" text="NOX can assess suitable wired, wireless, hybrid and CCTV systems installed by another company. The inspection identifies access, condition, compatibility and whether service, repair, selective upgrade or replacement is the sensible next step."/>
       <div className="related-links"><Link href="/services/security-system-takeover">Residential system takeovers →</Link><Link href="/services/repairs-upgrades">Repairs & upgrades →</Link><Link href="/service-plans/alarm-maintenance">Intruder alarm servicing →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link></div>
-    </div><aside className="dark-panel"><h3>Ongoing support after installation</h3><p>Professional monitoring, annual alarm servicing, CCTV maintenance and coordinated Total Security Plans remain optional and are shown separately from the installation quotation.</p><Link className="button button-light" href="/service-plans">Explore Servicing & Monitoring</Link></aside></div></section>
+    </div><aside className="dark-panel"><h3>Ongoing support after installation</h3><p>Professional monitoring, annual alarm servicing, CCTV maintenance and coordinated ongoing support packages remain optional and are shown separately from the installation quotation.</p><Link className="button button-light" href="/service-plans#home-system-support">Get Support for an Existing Home System</Link></aside></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Residential projects" title="Real NOX installations across the region" text="Genuine homes, equipment and installation photography show how NOX approaches different residential requirements."/><CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder","sheffield-residential-security","eufy-smart-home-cctv-chesterfield"]}/></div></section>
 
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Residential guides" title="Questions to answer before choosing a system"/><div className="related-links"><Link href="/blog/how-much-does-an-ajax-alarm-cost">How much does an Ajax alarm cost? →</Link><Link href="/blog/how-many-cctv-cameras-does-a-house-need">How many CCTV cameras does a house need? →</Link><Link href="/blog/can-an-alarm-protect-a-garage-or-outbuilding">Can an alarm protect a garage or outbuilding? →</Link><Link href="/blog/app-alerts-versus-professional-alarm-monitoring">App alerts versus professional monitoring →</Link></div></div><aside className="dark-panel"><h3>Start with the property</h3><p>Tell us about the entrances, driveway, vehicles, external buildings, current equipment and how you want to use the system.</p><ContactActions primaryLabel="Discuss My Property" compact audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-guide-bridge"/></aside></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear advice, tidy work and a proper handover"/><ReviewGrid names={["Ryan Hargreaves", "Sasha Brailsford", "Jeremy Bunting"]}/></div></section>
-    <ConversionPanel title="Plan the right security for your home" text="Tell us what you want to protect and whether you are considering an alarm, CCTV, a garage or outbuilding, smart security or an existing-system takeover." primaryLabel="Get a Home Security Quote" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-final"/>
+    <ConversionPanel title="Plan the right security for your home" text="Tell us what you want to protect and whether you are considering an alarm, CCTV, a garage or outbuilding, smart security or an existing-system takeover." primaryLabel="Book a Free Home Security Survey" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-final"/>
   </>
 }

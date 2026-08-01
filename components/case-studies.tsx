@@ -70,8 +70,8 @@ export default function CaseStudies() {
                     <div className="text-gray-300 mt-1">{study.result}</div>
                   </div>
                 </div>
-                <Link href="/contact" className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all cursor-pointer text-white">
-                  Get Started <ArrowRight className="h-4 w-4" />
+                <Link href="/get-quote#quote-form" className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all cursor-pointer text-white">
+                  Discuss a Similar Project <ArrowRight className="h-4 w-4" />
                 </Link>
               </CardContent>
             </Card>

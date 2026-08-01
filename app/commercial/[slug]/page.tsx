@@ -280,7 +280,7 @@ const pages: Record<string, CommercialPage> = {
       { href: "/commercial/cctv", label: "Commercial CCTV" },
       { href: "/commercial/integrated-fire-security", label: "Integrated Fire & Security" },
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" },
-      { href: "/service-plans/total-security", label: "Total Security Plans" }
+      { href: "/service-plans/total-security", label: "Ongoing Support Packages" }
     ],
     guide: { href: "/blog/what-information-is-needed-for-a-fire-alarm-quote", label: "Information that helps prepare a site quotation" },
     cases: ["telesis-hitachi-fire-intruder-system", "retford-former-bank-cctv", "bottle-and-thyme-commercial-cctv-chesterfield"],

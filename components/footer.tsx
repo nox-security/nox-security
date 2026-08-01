@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Instagram } from "lucide-react"
-import { commercialFooterItems, fireFooterItems, residentialFooterItems, supportFooterItems } from "@/lib/navigation"
+import { commercialFooterItems, companyFooterItems, fireFooterItems, residentialFooterItems, supportFooterItems } from "@/lib/navigation"
 import { site } from "@/lib/site"
 import { CookieSettingsButton } from "@/components/cookie-consent"
 
@@ -9,12 +9,12 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-conversion">
         <div>
-          <span className="eyebrow">Start with the property or site</span>
-          <h2>Tell NOX what you need and we will guide the right survey, service or takeover route.</h2>
-          <p>Residential alarms and CCTV, commercial Fire & Security, planned servicing, monitoring, repairs and annual support.</p>
+          <span className="eyebrow">Start with the property, site or existing system</span>
+          <h2>Tell NOX what needs protecting, installing or supporting.</h2>
+          <p>New residential and commercial systems, fire compliance, planned maintenance, monitoring, takeovers and larger multi-site projects.</p>
         </div>
         <div className="button-row">
-          <Link className="button button-light" href="/get-quote">Get a Quote</Link>
+          <Link className="button button-light" href="/get-quote">Request a Quotation</Link>
         </div>
       </div>
       <div className="footer-grid footer-grid-clusters">
@@ -22,8 +22,8 @@ export default function Footer() {
           <Link href="/" aria-label="NOX Fire & Security home">
             <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
           </Link>
-          <p>Residential security, commercial Fire & Security and ongoing support across Chesterfield, Sheffield, Derbyshire and surrounding areas.</p>
-          <p className="muted">Designed properly · Installed properly · Supported properly</p>
+          <p>Professional Fire & Security installation and support across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
+          <p className="muted">Local accountability · Commercial capability · Ongoing support</p>
           <a className="footer-instagram-link" href="https://www.instagram.com/noxsecuritychesterfield" target="_blank" rel="noopener noreferrer" aria-label="Open NOX Fire & Security on Instagram at @noxsecuritychesterfield">
             <span className="footer-instagram-icon" aria-hidden="true"><Instagram size={17} strokeWidth={1.65}/></span>
             <span className="footer-instagram-copy"><small>Instagram</small><strong>@noxsecuritychesterfield</strong></span>
@@ -31,18 +31,20 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          <h3>Residential</h3>
+          <h3>Protect My Home</h3>
           {residentialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
           <h3>Fire & Compliance</h3>
           {fireFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-          <h3 className="footer-subheading">Commercial Security</h3>
-          {commercialFooterItems.slice(0, 3).map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+          <h3 className="footer-subheading">Protect My Business</h3>
+          {commercialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
-          <h3>Support & Company</h3>
+          <h3>Existing System Support</h3>
           {supportFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+          <h3 className="footer-subheading">Company</h3>
+          {companyFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
           <h3>Contact</h3>
@@ -51,6 +53,10 @@ export default function Footer() {
           <a href={`mailto:${site.email}`}>{site.email}</a>
           <span>{site.base}</span>
           <Link href="/get-quote">Website enquiry</Link>
+          <h3 className="footer-subheading">Commercial Projects</h3>
+          <Link href="/commercial/cctv">Commercial CCTV</Link>
+          <Link href="/commercial/multi-site-security">Multi-Site Security</Link>
+          <Link href="/commercial/integrated-fire-security">Integrated Fire & Security</Link>
         </div>
       </div>
       <div className="footer-local-links">
@@ -58,6 +64,7 @@ export default function Footer() {
         <Link href="/areas/chesterfield">Chesterfield</Link>
         <Link href="/areas/sheffield">Sheffield</Link>
         <Link href="/areas/derbyshire">Derbyshire</Link>
+        <Link href="/areas/derby">Derby</Link>
         <Link href="/areas/dronfield">Dronfield</Link>
         <Link href="/areas/matlock">Matlock</Link>
         <Link href="/areas/bakewell">Bakewell</Link>
@@ -66,7 +73,6 @@ export default function Footer() {
         <Link href="/areas/ashover">Ashover</Link>
         <Link href="/areas/buxton">Buxton</Link>
         <Link href="/areas/hathersage">Hathersage</Link>
-        <Link href="/areas/derby">Derby</Link>
       </div>
       <div className="footer-bottom">
         <span>© 2026 NOX Fire & Security. All rights reserved.</span>

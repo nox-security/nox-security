@@ -79,14 +79,14 @@ export function TrustStrip({ variant = "general", reviewTitle }: { variant?: "ge
     general: [
       { kicker: "Built in Chesterfield", title: "Local accountability", text: "The same business remains involved from survey and quotation through to installation and aftercare." },
       { kicker: "Preferred smart platform", title: "Ajax authorised", text: "Modern alarm, detection and video options selected around the property." },
-      { kicker: "Proven customer experience", title: "46+ Google reviews", text: "Genuine feedback about advice, installation quality and local support." },
+      { kicker: "Proven customer experience", title: "46+ Google Reviews", text: "Genuine feedback about advice, installation quality and local support." },
       { kicker: "Ongoing support", title: "Servicing and monitoring", text: "Support for NOX installations and suitable existing systems." },
     ],
     residential: [
       { kicker: "Home security", title: "Designed around the property", text: "Alarm, CCTV and external protection selected around the home and daily routine." },
       { kicker: "Preferred smart platform", title: "Ajax authorised", text: "MotionCam, keypads, sirens, app control and external detection where suitable." },
       { kicker: "Careful workmanship", title: "Tidy installation", text: "Positions and cable routes are planned around performance and the finish of the property." },
-      { kicker: "Local proof", title: "46+ Google reviews", text: "Feedback from homeowners and businesses across the local area." },
+      { kicker: "Local proof", title: "46+ Google Reviews", text: "Feedback from homeowners and businesses across the local area." },
     ],
     commercial: [
       { kicker: "Site-specific design", title: "Planned around operations", text: "Coverage, access, evidence and user requirements are agreed before installation." },
@@ -107,11 +107,11 @@ export function TrustStrip({ variant = "general", reviewTitle }: { variant?: "ge
       { kicker: "Local support", title: "Repairs and takeovers", text: "One team for servicing, faults, upgrades and suitable system takeovers." },
     ],
   }
-  const items = variants[variant].map(item => reviewTitle && item.title === "46+ Google reviews" ? { ...item, title: reviewTitle } : item)
+  const items = variants[variant].map(item => reviewTitle && item.title === "46+ Google Reviews" ? { ...item, title: reviewTitle } : item)
   return <section className="trust-strip trust-strip-premium"><div className="container trust-strip-grid">{items.map(item => <article key={item.title}><span>{item.kicker}</span><strong>{item.title}</strong><small>{item.text}</small></article>)}</div></section>
 }
 
-export function ReviewSummaryStrip({ label = "46+ Google reviews" }: { label?: string }) {
+export function ReviewSummaryStrip({ label = "46+ Google Reviews" }: { label?: string }) {
   return <section className="review-summary-strip"><div className="container review-summary-inner"><div><span className="stars" aria-label="5 out of 5 stars">★★★★★</span><strong>{label}</strong><span>Genuine feedback from residential and commercial NOX customers.</span></div><a className="text-link" href="https://g.page/r/CUdyqRh0RFeXEAE/review" target="_blank" rel="noreferrer">View Google reviews →</a></div></section>
 }
 
@@ -264,8 +264,8 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
   const aftercareLinks = data.slug === "fire-safety"
     ? [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" }, { href: "/service-plans/emergency-lighting-servicing", label: "Emergency lighting servicing" }]
     : data.slug === "cctv"
-      ? [{ href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/service-plans/total-security", label: "Total Security Package" }]
-      : [{ href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/total-security", label: "Total Security Package" }]
+      ? [{ href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/service-plans/total-security", label: "Ongoing Support Package" }]
+      : [{ href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/total-security", label: "Ongoing Support Package" }]
   const serviceVisuals: Record<string, { src: string; alt: string; caption: string; product?: boolean }[]> = {
     "intrusion-alarms": [
       { src: "/images/image-refresh/intruder-entry-exit-delay.webp", alt: "Ajax door contact supporting entry and exit delays", caption: "Entry and exit protection configured around the way the property is used." },
@@ -353,7 +353,7 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
   const serviceSchema = buildServiceSchema({ name: data.title, description: data.intro, path: `/service-plans/${data.slug}`, serviceType: data.serviceCategory ?? data.eyebrow, audience: data.audience, image: data.image })
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", path: "" },
-    { name: "Service Plans", path: "/service-plans" },
+    { name: "Existing System Support", path: "/service-plans" },
     { name: data.title, path: `/service-plans/${data.slug}` },
   ])
   const isFirePlan = data.slug.includes("fire") || data.slug.includes("emergency")
@@ -384,7 +384,7 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
 
   return <>
     <JsonLd data={faqSchema}/><JsonLd data={serviceSchema}/><JsonLd data={breadcrumbSchema}/>
-    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Plans", href: "/service-plans" }, { label: data.title }]} />
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Existing System Support", href: "/service-plans" }, { label: data.title }]} />
     <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt}>
       <ContactActions primaryLabel={data.ctaLabel ?? (isInstallationPackage ? "Get a Home Security Quote" : "Get a Maintenance Quote")} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={isInstallationPackage ? "Installation" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/>
     </PageHero>

@@ -97,7 +97,7 @@ export default function Services() {
                   <p className="text-gray-400 leading-relaxed min-h-[48px]">{service.description}</p>
                   <Link href={service.link} className="w-full block pt-2">
                     <Button variant="outline" className="w-full font-semibold bg-transparent text-white border-white hover:bg-white hover:text-black">
-                      Get Started
+                      View {service.title}
                     </Button>
                   </Link>
                 </CardContent>

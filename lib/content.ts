@@ -698,7 +698,7 @@ export const areas = {
   derbyshire: {
     name: "Derbyshire", county: "Derbyshire",
     intro: "Professional fire and security installation, maintenance and takeovers across Derbyshire's towns, villages, rural properties and commercial sites.",
-    focus: "Coverage includes modern alarm systems, CCTV, perimeter protection, fire alarms, emergency lighting and ongoing service plans.",
+    focus: "Coverage includes modern alarm systems, CCTV, perimeter protection, fire alarms, emergency lighting and ongoing support plans.",
     commercial: "For larger Derbyshire sites, NOX can coordinate multiple systems, planned servicing and a clearer annual renewal structure.",
     nearby: "Chesterfield, Matlock, Bakewell, Buxton, Dronfield and the Peak District"
   },
@@ -776,7 +776,7 @@ export const areas = {
     name: "Rotherham", county: "South Yorkshire",
     intro: "Security surveys, CCTV and alarm installation for homes, commercial units and industrial sites across Rotherham.",
     focus: "Systems are planned around access points, vehicle areas, boundaries and operating routines, with app control and monitoring options where suitable.",
-    commercial: "NOX supports retail, offices, workshops, warehouses and yards with installation, takeovers and annual service plans.",
+    commercial: "NOX supports retail, offices, workshops, warehouses and yards with installation, takeovers and annual support plans.",
     nearby: "Wickersley, Maltby, Brinsworth and Sheffield"
   },
   doncaster: {
@@ -1338,7 +1338,7 @@ export const planPages: Record<string, PlanPageData> = {
       { q: "Are replacement batteries and parts included?", a: "Unless specifically stated in the quotation, replacement parts, batteries and remedial work are charged separately." },
       { q: "Can maintenance be combined with monitoring?", a: "Yes. Monitoring and maintenance can be combined within a confirmed annual package." }
     ],
-    related: [{ href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/total-security", label: "Total Security Package" }, { href: "/systems/intrusion-alarms", label: "New intruder alarms" }]
+    related: [{ href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/total-security", label: "Ongoing Support Package" }, { href: "/systems/intrusion-alarms", label: "New intruder alarms" }]
   },
   "alarm-monitoring": {
     slug: "alarm-monitoring",
@@ -1367,7 +1367,7 @@ export const planPages: Record<string, PlanPageData> = {
       { q: "Can an existing alarm be monitored?", a: "Possibly. The system and signalling route must first be checked for compatibility and condition." },
       { q: "Is maintenance included?", a: "Maintenance is separate unless the confirmed package specifically includes it." }
     ],
-    related: [{ href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/total-security", label: "Total Security Package" }, { href: "/systems/intrusion-alarms", label: "Intruder alarm installation" }]
+    related: [{ href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/total-security", label: "Ongoing Support Package" }, { href: "/systems/intrusion-alarms", label: "Intruder alarm installation" }]
   },
   "cctv-maintenance": {
     slug: "cctv-maintenance",
@@ -1396,7 +1396,7 @@ export const planPages: Record<string, PlanPageData> = {
       { q: "Are replacement hard drives included?", a: "No, unless specifically included in the written quotation. Parts and repair work are normally separate." },
       { q: "Is residential CCTV monitoring included?", a: "Residential CCTV monitoring is not listed as a standard separate product. Any specialist option would need to be specifically confirmed in writing." }
     ],
-    related: [{ href: "/systems/cctv", label: "CCTV installation" }, { href: "/service-plans/total-security", label: "Total Security Package" }, { href: "/case-studies", label: "CCTV case studies" }]
+    related: [{ href: "/systems/cctv", label: "CCTV installation" }, { href: "/service-plans/total-security", label: "Ongoing Support Package" }, { href: "/case-studies", label: "CCTV case studies" }]
   },
   "fire-alarm-servicing": {
     slug: "fire-alarm-servicing",
@@ -1458,15 +1458,15 @@ export const planPages: Record<string, PlanPageData> = {
   },
   "total-security": {
     slug: "total-security",
-    eyebrow: "Total Security Package",
-    title: "One annual package for alarm monitoring, servicing and CCTV maintenance",
-    metaTitle: "Total Security Package | Alarm Monitoring & CCTV Maintenance",
-    metaDescription: "A coordinated annual security package for residential and commercial customers across Chesterfield and Derbyshire, with monitoring, servicing and one renewal date.",
-    intro: "Bring the agreed intruder alarm monitoring, alarm maintenance and CCTV maintenance services under one annual arrangement with one point of contact.",
+    eyebrow: "Ongoing Support Package",
+    title: "Ongoing monitoring, maintenance and planned support under one clear arrangement",
+    metaTitle: "Ongoing Security Support Packages | Monitoring & Maintenance",
+    metaDescription: "Ongoing support packages across Chesterfield, Sheffield and Derbyshire combining suitable monitoring, alarm servicing, CCTV maintenance, planned visits and clear renewals.",
+    intro: "Bring suitable alarm monitoring, intruder servicing, CCTV maintenance, planned visits and selected fire-alarm support under one clear arrangement with consolidated dates and one point of contact.",
     image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
     imageAlt: "Coordinated alarm monitoring and CCTV maintenance package from NOX",
-    included: ["Agreed intruder alarm servicing", "Agreed professional alarm monitoring", "Agreed CCTV maintenance", "Annual system review", "One renewal date", "One point of contact", "Priority support where stated in the agreement", "Discounted labour or preferential repair pricing only where written into the package"],
-    suitableFor: ["Homes with alarm and CCTV", "Landlords", "Retail", "Offices", "Commercial premises", "Customers wanting one renewal date"],
+    included: ["Agreed intruder alarm servicing", "Agreed professional alarm monitoring", "Agreed CCTV maintenance", "Fire alarm servicing where appropriate and confirmed", "Planned service visits", "Consolidated service and renewal dates where practical", "One point of contact", "Clear inclusions, exclusions and remedial quotations"],
+    suitableFor: ["Homes with alarm and CCTV", "Landlords and property managers", "Retail and hospitality", "Offices", "Commercial and industrial premises", "Multi-site customers wanting coordinated support"],
     process: [
       { title: "Review the systems", text: "We confirm the alarm, CCTV, monitoring compatibility and current system condition." },
       { title: "Confirm the package", text: "The included services, exclusions, renewal price and any initial takeover work are stated in writing." },
@@ -1476,10 +1476,10 @@ export const planPages: Record<string, PlanPageData> = {
     details: [
       { title: "One point of contact", text: "The package reduces separate renewal dates and fragmented support across the agreed security systems." },
       { title: "Clear boundaries", text: "Replacement parts, repairs and specialist services remain excluded unless the written agreement specifically includes them." },
-      { title: "Commercial packages", text: "Commercial arrangements are tailored around system size, camera count, monitoring and site access." }
+      { title: "Commercial and multi-site support", text: "Commercial arrangements are tailored around system size, camera count, monitoring, fire-service requirements, access and the number of premises." }
     ],
     faq: [
-      { q: "What can a Total Security Package include?", a: "The package can combine eligible alarm servicing, professional monitoring and CCTV maintenance. The exact services, system eligibility and quotation are confirmed in writing for the property." },
+      { q: "What can an Ongoing Support Package include?", a: "The package can combine eligible alarm servicing, professional monitoring, CCTV maintenance, planned visits and selected fire-alarm servicing where appropriate. The exact services and exclusions are confirmed in writing." },
       { q: "Is CCTV monitoring included?", a: "Residential CCTV monitoring is not presented as a standard separate product. Any specialist option must be specifically confirmed in writing." },
       { q: "Are all repairs included?", a: "No. Repairs, replacement equipment and parts are separate unless the agreement specifically states otherwise." }
     ],
@@ -1547,7 +1547,7 @@ export const planPages: Record<string, PlanPageData> = {
       { href: "/systems/intrusion-alarms", label: "Ajax intruder alarms" },
       { href: "/systems/home-cctv", label: "Home CCTV" },
       { href: "/systems/perimeter-protection", label: "Perimeter protection" },
-      { href: "/service-plans/total-security", label: "Total Security Plan" }
+      { href: "/service-plans/total-security", label: "Ongoing Support Package" }
     ],
     ctaLabel: "Discuss My Property",
     audience: "Residential",
@@ -1653,11 +1653,11 @@ Object.assign(planPages["cctv-maintenance"], {
 } satisfies Partial<PlanPageData>)
 
 Object.assign(planPages["total-security"], {
-  eyebrow: "Total Security Plans",
-  title: "Coordinated alarm, monitoring and CCTV support under one plan",
-  ctaLabel: "Request a Total Security Quote",
+  eyebrow: "Ongoing Support Packages",
+  title: "Ongoing monitoring, maintenance and planned support under one clear arrangement",
+  ctaLabel: "Request an Ongoing Support Quote",
   audience: "Residential & Commercial",
-  serviceCategory: "Total Security Plan",
+  serviceCategory: "Ongoing Support Package",
   enquiryType: "Servicing",
   pricingFactors: ["Systems included in the plan", "Alarm monitoring compatibility", "Alarm device and CCTV camera quantities", "Site access and number of properties", "Initial takeover or remedial work", "Agreed service frequency and exclusions"]
 } satisfies Partial<PlanPageData>)

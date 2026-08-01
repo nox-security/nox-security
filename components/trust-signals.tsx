@@ -33,7 +33,7 @@ const signals = [
     },
     {
         icon: BadgeCheck,
-        title: "5-Star Rated",
+        title: "46+ Google Reviews",
         desc: "Genuine Google reviews from homeowners and businesses across Derbyshire.",
     },
 ]

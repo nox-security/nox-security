@@ -6,7 +6,7 @@ import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
   "Commercial Fire Alarm Installation & Servicing | Chesterfield",
-  "Commercial fire alarm installation, servicing, multi-site fire programmes, integrated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield and Derbyshire.",
+  "Commercial fire alarm installation, servicing, multi-site fire programmes, integrated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire.",
   "/fire-compliance",
   { image: "/images/image-refresh/en54-fire-hub.webp", imageAlt: "Ajax EN54 commercial fire alarm control equipment" },
 )
@@ -59,15 +59,15 @@ const en54Highlights = [
 ]
 
 export default function FireCompliancePage() {
-  const description = "Commercial fire alarm installation, servicing, multi-site fire programmes, integrated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield and Derbyshire."
+  const description = "Commercial fire alarm installation, servicing, multi-site fire programmes, integrated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire."
   const structuredData = [
     serviceSchema({ name: "Commercial fire alarm installation and servicing", description, path: "/fire-compliance", serviceType: ["Fire alarm installation", "Fire alarm servicing", "Multi-site fire alarm systems", "Integrated fire and CCTV systems", "Emergency lighting", "Fire alarm takeovers"], audience: "Commercial", image: "/images/image-refresh/en54-fire-hub.webp" }),
     webPageSchema({ name: "Fire & Compliance", description, path: "/fire-compliance", image: "/images/image-refresh/en54-fire-hub.webp" }),
   ]
   return <>
     {structuredData.map((data, index) => <JsonLd data={data} key={index}/>)}
-    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, multi-site fire programmes, coordinated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield and Derbyshire. Each service keeps a clear scope, quotation and route into future support." image="/images/image-refresh/en54-fire-hub.webp" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
-      <ContactActions primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-hub"/>
+    <PageHero eyebrow="Fire & Compliance" title="Commercial fire systems supported from first design through ongoing servicing" intro="NOX provides fire alarm installation, servicing, repairs, multi-site fire programmes, coordinated fire and CCTV projects, emergency lighting and compliance support across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire. Each service keeps a clear scope, quotation and route into future support." image="/images/image-refresh/en54-fire-hub.webp" imageAlt="Ajax EN54 fire alarm control equipment installed by NOX">
+      <ContactActions primaryLabel="Arrange a Fire Alarm Survey" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-hub"/>
     </PageHero>
     <TrustStrip variant="fire"/>
 
@@ -94,6 +94,6 @@ export default function FireCompliancePage() {
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Commercial fire and integrated system work" text="Genuine project photography and confirmed scopes showing fire, intruder and wider site requirements."/><CaseStudyGrid slugs={["telesis-hitachi-fire-intruder-system","tan-station-fire-security-brimington","banana-industries-fire-security"]}/></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear installation, handover and local support"/><ReviewGrid names={["Rory Stirland", "Nathan De La Rosa", "Jez S"]}/></div></section>
-    <ConversionPanel title="Discuss a fire installation, service or takeover" text="Tell us about the premises, existing equipment and the work required. NOX will guide the enquiry into the correct installation, servicing, repair or annual-support next step." primaryLabel="Discuss Your Fire Requirements" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-final"/>
+    <ConversionPanel title="Discuss a fire installation, service or takeover" text="Tell us about the premises, existing equipment and the work required. NOX will guide the enquiry into the correct installation, servicing, repair or annual-support next step." primaryLabel="Arrange a Fire Alarm Survey" audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-final"/>
   </>
 }

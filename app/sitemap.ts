@@ -5,7 +5,7 @@ import { site } from "@/lib/site"
 import { landingPageList } from "@/lib/landing"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const releaseDate = new Date("2026-07-28T00:00:00.000Z")
+  const releaseDate = new Date("2026-08-01T00:00:00.000Z")
   const core = [
     "",
     "/residential",
@@ -59,6 +59,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/systems/intrusion-alarms",
     "/services/intruder-alarm-installation-chesterfield",
     "/ajax-authorised-installer",
+    "/commercial/multi-site-security",
+    "/commercial/integrated-fire-security",
+    "/service-plans",
+    "/service-plans/total-security",
+    "/services/security-system-takeover",
+    "/services/repairs-upgrades",
+    "/systems/emergency-lighting",
+    "/service-plans/emergency-lighting-servicing",
   ])
 
   return urls.map(path => ({

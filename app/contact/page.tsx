@@ -22,10 +22,10 @@ export default function ContactPage() {
 
     <section className="section"><div className="container contact-information-grid">
       <article className="feature-card"><span className="eyebrow">Opening hours</span><h2>When to contact us</h2><p><strong>Monday–Friday:</strong> 8:00am–6:00pm</p><p><strong>Saturday:</strong> 9:00am–4:00pm</p><p>Messages received outside these hours are reviewed during the next opening period.</p></article>
-      <article className="feature-card"><span className="eyebrow">Existing customers</span><h2>Service and fault support</h2><p>Share the site address, system type, panel or recorder make and a short description of the issue. Photographs of a fault display can also help us understand the next step.</p><Link className="text-link" href="/service-plans">View Servicing & Monitoring →</Link></article>
+      <article className="feature-card"><span className="eyebrow">Existing customers</span><h2>Service and fault support</h2><p>Share the site address, system type, panel or recorder make and a short description of the issue. Photographs of a fault display can also help us understand the next step.</p><Link className="text-link" href="/service-plans">View Existing System Support →</Link></article>
       <article className="feature-card"><span className="eyebrow">Service area</span><h2>Chesterfield, Sheffield and Derbyshire</h2><p>NOX covers the core local area, with wider travel for suitable commercial, industrial, multi-site and larger residential projects.</p><Link className="text-link" href="/areas-we-serve">View Areas We Cover →</Link></article>
     </div></section>
 
-    <section className="conversion-panel"><div className="container conversion-panel-grid"><div><span className="eyebrow">New enquiry</span><h2>Ready to request a quotation?</h2><p>Use the short Website Enquiry form and tell us about the property, location and work required.</p></div><div className="button-row"><Link className="button button-dark" href="/get-quote#quote-form">Get a Quote</Link></div></div></section>
+    <section className="conversion-panel"><div className="container conversion-panel-grid"><div><span className="eyebrow">New enquiry</span><h2>Ready to request a quotation?</h2><p>Use the short Website Enquiry form and tell us about the property, location and work required.</p></div><div className="button-row"><Link className="button button-dark" href="/get-quote#quote-form">Request a Quotation</Link></div></div></section>
   </>
 }

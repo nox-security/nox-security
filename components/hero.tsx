@@ -124,7 +124,7 @@ export default function Hero() {
               <div className="p-2 rounded-full bg-white/10 border border-white/20">
                 <Award className="h-5 w-5 text-white" />
               </div>
-              <span className="text-gray-200 font-medium text-base">Free install with selected service plans</span>
+              <span className="text-gray-200 font-medium text-base">Free install with selected support plans</span>
             </div>
           </div>
         </div>

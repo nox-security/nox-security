@@ -62,7 +62,7 @@ export default function AjaxEcosystem() {
                                     <h3 className="text-lg font-bold mb-2">{cat.label}</h3>
                                     <p className="text-gray-400 text-sm leading-relaxed mb-3">{cat.desc}</p>
                                     <div className="flex items-center justify-center gap-1 text-sm font-semibold text-white group-hover:gap-2 transition-all">
-                                        Learn More <ArrowRight className="h-3 w-3" />
+                                        Explore {cat.label} <ArrowRight className="h-3 w-3" />
                                     </div>
                                 </div>
                             </Link>

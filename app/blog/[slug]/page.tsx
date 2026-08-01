@@ -15,7 +15,7 @@ function guideContext(category: string) {
   if (value.includes("emergency")) return { label: "Book Emergency Lighting Testing", service: "Emergency Lighting", audience: "Commercial" as const }
   if (value.includes("cctv")) return { label: "Get a CCTV Recommendation", service: "CCTV", audience: "Residential & Commercial" as const }
   if (value.includes("intruder")) return { label: "Plan My Ajax Alarm", service: "Intruder Alarms", audience: "Residential & Commercial" as const }
-  return { label: "Discuss My Existing System", service: "Servicing & Monitoring", audience: "Residential & Commercial" as const }
+  return { label: "Discuss My Existing System", service: "Existing System Support", audience: "Residential & Commercial" as const }
 }
 
 function localGuideContent(category: string, title: string) {
