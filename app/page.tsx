@@ -5,8 +5,8 @@ import { pageMetadata, site } from "@/lib/site"
 import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
-  "CCTV, Fire Alarm & Security Systems | Derbyshire & South Yorkshire",
-  "CCTV, fire alarm and intruder alarm installation and servicing across Chesterfield, Sheffield, Derbyshire and South Yorkshire for homes and businesses.",
+  "Fire Alarms, CCTV & Security Systems | Derbyshire & Sheffield",
+  "Commercial and premium residential Fire Alarms, CCTV and intruder systems across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
   "/",
   { image: "/images/image-refresh/homepage-hero-cameras.jpg", imageAlt: "NOX CCTV camera range product hero image" },
 )
@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata(
 const journeyRoutes = [
   { number: "01", eyebrow: "Residential", title: "Protect My Home", text: "Premium CCTV, Ajax alarms, perimeter detection and smart security designed around the home, driveway, garage and outbuildings.", href: "/residential", link: "Explore Home Security" },
   { number: "02", eyebrow: "Commercial", title: "Protect My Business", text: "Commercial CCTV, intruder protection, industrial security and coordinated systems for working premises and larger projects.", href: "/commercial", link: "Explore Commercial Security" },
-  { number: "03", eyebrow: "Life safety", title: "Fire & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and clearer annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
+  { number: "03", eyebrow: "Life safety", title: "Fire Alarms & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and clearer annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
   { number: "04", eyebrow: "Existing systems", title: "Existing System Support", text: "Servicing, monitoring, takeovers, fault finding, upgrades and ongoing packages for systems already installed.", href: "/service-plans", link: "Get Support for an Existing System" },
 ]
 
@@ -46,8 +46,8 @@ const supportRoutes = [
 
 export default function HomePage() {
   const serviceStructuredData = serviceSchema({
-    name: "CCTV, fire alarm and intruder alarm installation and servicing",
-    description: "Professional CCTV, fire alarm, intruder alarm and emergency-lighting services for homes and businesses across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire.",
+    name: "Fire Alarms, CCTV and intruder system installation and servicing",
+    description: "Commercial and premium residential Fire Alarm, CCTV, intruder and emergency-lighting services across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.",
     path: "/",
     serviceType: ["CCTV installation", "Fire alarm installation and servicing", "Intruder alarm installation", "Emergency lighting", "Monitoring and maintenance"],
     image: "/images/image-refresh/homepage-hero-cameras.jpg",
@@ -68,18 +68,18 @@ export default function HomePage() {
       <div className="nox-mark-watermark" aria-hidden="true"><img src="/images/revisions/nox-padlock-watermark.jpg" alt="" /></div>
       <div className="container home-hero-content">
         <div className="premium-kicker"><span>NOX Fire & Security</span><span>Chesterfield · Sheffield · Derby · South Yorkshire</span></div>
-        <h1>Fire Alarm, CCTV &amp; Intruder Systems</h1>
-        <p className="lead">Professional CCTV, Fire Alarms and Intruder Systems designed, installed and maintained for homes and businesses across Chesterfield, Sheffield, Derbyshire, Derby and South Yorkshire.</p>
+        <h1>Fire Alarms, CCTV &amp; Intruder Systems</h1>
+        <p className="lead">Commercial and premium residential Fire Alarms, CCTV and Intruder Systems designed, installed and maintained across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
         <div className="button-row home-audience-actions home-contact-actions">
-          <Link className="button button-light" href="/get-quote#quote-form">Book a Free Site Survey</Link>
+          <Link className="button button-light" href="/get-quote#quote-form">Book a Site Survey</Link>
           <a className="button button-outline" href={site.phoneHref}>Call</a>
           <a className="button button-outline" href={site.whatsapp}>WhatsApp</a>
         </div>
         <div className="hero-secondary-actions home-journey-links" aria-label="Choose a service route">
-          <Link href="/residential">Protect My Home →</Link>
-          <Link href="/commercial">Protect My Business →</Link>
-          <Link href="/fire-compliance">Fire &amp; Compliance →</Link>
-          <Link href="/service-plans">Existing System Support →</Link>
+          <Link href="/residential">Protect My Home</Link>
+          <Link href="/commercial">Protect My Business</Link>
+          <Link href="/fire-compliance">Fire Alarms &amp; Compliance</Link>
+          <Link href="/service-plans">Existing System Support</Link>
         </div>
         <div className="home-ajax-partner-mark">
           <Link href="/ajax-authorised-installer" aria-label="Official Ajax Partner and Ajax Authorised Installation Company">
@@ -104,7 +104,7 @@ export default function HomePage() {
       <div className="system-route-grid residential-system-grid">
         {residentialRoutes.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>
-      <div className="button-row"><Link className="button button-dark" href="/residential">Explore Home Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Residential&enquiry_type=Installation#quote-form">Book a Free Home Security Survey</Link></div>
+      <div className="button-row"><Link className="button button-dark" href="/residential">Explore Home Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Residential&enquiry_type=Installation#quote-form">Book a Home Security Survey</Link></div>
     </div></section>
 
     <section className="section section-alt fire-home-section"><div className="container">

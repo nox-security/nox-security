@@ -690,10 +690,10 @@ export const areas = {
   },
   sheffield: {
     name: "Sheffield", county: "South Yorkshire",
-    intro: "Residential and commercial security systems across Sheffield, from home alarms and driveway CCTV to joined-up protection for offices, retail and industrial premises.",
-    focus: "NOX surveys the property first, then designs the alarm, CCTV or fire solution around access points, working areas and the way the site is used.",
+    intro: "Premium residential and commercial security systems across Sheffield, with particular focus on Dore, Totley, Ecclesall, Fulwood, Ranmoor and the wider South and West Sheffield area.",
+    focus: "NOX surveys the property first, then designs the alarm, CCTV or fire solution around larger homes, driveways, outbuildings, working areas and the way the site is used.",
     commercial: "Sheffield businesses can combine commercial CCTV, intruder protection, monitoring, servicing and fire safety support through one local contractor.",
-    nearby: "Dore, Totley, Ecclesall, Handsworth and surrounding Sheffield districts"
+    nearby: "Dore, Totley, Ecclesall, Fulwood, Ranmoor and surrounding South and West Sheffield districts"
   },
   derbyshire: {
     name: "Derbyshire", county: "Derbyshire",
@@ -861,7 +861,7 @@ export const areas = {
     intro: "Commercial CCTV, intruder alarms, fire alarms and larger residential security projects across Derby and surrounding business areas.",
     focus: "NOX has delivered a multi-camera Ajax CCTV installation at Continue Arcade in Derby and supports suitable installations, upgrades and service work across the city.",
     commercial: "Offices, retail, leisure, industrial and multi-site customers can arrange surveys for CCTV, alarms, fire safety, monitoring and planned maintenance.",
-    nearby: "Pride Park, Chaddesden, Mickleover, Allestree and surrounding Derby districts"
+    nearby: "Pride Park, Mickleover, Allestree, Duffield, Quarndon and surrounding Derby districts"
   },
   nottingham: {
     name: "Nottingham", county: "Nottinghamshire",

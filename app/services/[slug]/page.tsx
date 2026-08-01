@@ -22,7 +22,7 @@ function contextFor(slug: string, serviceType: string, audience: "Residential" |
   if (value.includes("repair") || value.includes("upgrade")) return { label: "Report a System Fault", type: "Repair" as const }
   if (value.includes("cctv")) return { label: audience === "Residential" ? "Get a Home CCTV Recommendation" : "Plan a CCTV System", type: "Installation" as const }
   if (value.includes("alarm") || value.includes("security")) return { label: audience === "Residential" ? "Plan My Ajax Alarm" : "Book a Site Survey", type: "Installation" as const }
-  return { label: "Get a Quote", type: "General" as const }
+  return { label: "Discuss Your Requirements", type: "General" as const }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

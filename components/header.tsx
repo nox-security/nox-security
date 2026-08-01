@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
 import { usePathname } from "next/navigation"
+import { getPageCtaContext } from "@/lib/cta-context"
 import { headerDirectNavItems, headerNavMenus, type HeaderNavMenu } from "@/lib/navigation"
 
 function matchesPrefix(pathname: string, prefix: string) {
@@ -18,6 +19,10 @@ function isCurrentLink(pathname: string, href: string) {
   return pathname === linkPath(href)
 }
 
+function LinkCue() {
+  return <span className="nav-link-cue" aria-hidden="true"><span /></span>
+}
+
 function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; active: boolean; pathname: string }) {
   return (
     <div className={`nav-dropdown header-nav-dropdown header-nav-dropdown-${menu.id} ${active ? "is-active" : ""}`}>
@@ -29,23 +34,43 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
         <span>{menu.label}</span>
         <span className="nav-chevron" aria-hidden="true" />
       </Link>
+
       <div className={`dropdown-panel header-dropdown-panel header-dropdown-panel-${menu.id}`}>
-        {menu.featured && (
-          <Link className={`header-dropdown-featured ${isCurrentLink(pathname, menu.featured.href) ? "is-current" : ""}`} aria-current={isCurrentLink(pathname, menu.featured.href) ? "page" : undefined} href={menu.featured.href}>
-            <span>{menu.featured.label}</span>
-            <span aria-hidden="true">→</span>
-          </Link>
-        )}
         <div className={`header-dropdown-groups header-dropdown-groups-${menu.id}`}>
           {menu.groups.map((group, groupIndex) => (
             <div className="header-dropdown-group" key={`${menu.id}-${groupIndex}`}>
               {group.heading && <span className="header-dropdown-heading">{group.heading}</span>}
-              {group.items.map(item => (
-                <Link className={isCurrentLink(pathname, item.href) ? "is-current" : undefined} aria-current={isCurrentLink(pathname, item.href) ? "page" : undefined} key={`${menu.id}-${item.label}-${item.href}`} href={item.href}>{item.label}<span aria-hidden="true">→</span></Link>
-              ))}
+              {group.items.map(item => {
+                const current = isCurrentLink(pathname, item.href)
+                return (
+                  <Link
+                    className={current ? "is-current" : undefined}
+                    aria-current={current ? "page" : undefined}
+                    key={`${menu.id}-${item.label}-${item.href}`}
+                    href={item.href}
+                  >
+                    <span>{item.label}</span>
+                    <LinkCue />
+                  </Link>
+                )
+              })}
             </div>
           ))}
         </div>
+
+        {menu.featured && (
+          <Link
+            className={`header-dropdown-featured ${isCurrentLink(pathname, menu.featured.href) ? "is-current" : ""}`}
+            aria-current={isCurrentLink(pathname, menu.featured.href) ? "page" : undefined}
+            href={menu.featured.href}
+          >
+            <span>
+              <small>Overview</small>
+              <strong>{menu.featured.label}</strong>
+            </span>
+            <LinkCue />
+          </Link>
+        )}
       </div>
     </div>
   )
@@ -54,7 +79,9 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
 export default function Header() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [renderMobileNav, setRenderMobileNav] = useState(false)
   const [openMobileSection, setOpenMobileSection] = useState<string | null>(null)
+  const cta = getPageCtaContext(pathname)
 
   const activeMenuId = useMemo(() => {
     const matches = headerNavMenus.flatMap(menu =>
@@ -69,6 +96,32 @@ export default function Header() {
     setOpen(false)
     setOpenMobileSection(null)
   }, [pathname])
+
+  useEffect(() => {
+    if (open) {
+      setRenderMobileNav(true)
+      return
+    }
+    const timeout = window.setTimeout(() => setRenderMobileNav(false), 340)
+    return () => window.clearTimeout(timeout)
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false)
+        setOpenMobileSection(null)
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [open])
 
   const closeMobileNavigation = () => {
     setOpen(false)
@@ -87,7 +140,7 @@ export default function Header() {
   }
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -103,13 +156,20 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <Link className="button button-light button-small header-quote-button" href="/get-quote#quote-form">Get a Quote</Link>
+          <Link
+            className="button button-light button-small header-quote-button"
+            href={cta.href}
+            data-cta="quote"
+            data-source-page={`header:${pathname}`}
+          >
+            {cta.compactLabel}
+          </Link>
         </div>
 
         <button
-          className="menu-button"
+          className={`menu-button ${open ? "is-open" : ""}`}
           type="button"
-          aria-label="Toggle navigation"
+          aria-label={open ? "Close navigation" : "Open navigation"}
           aria-controls="mobile-navigation"
           aria-expanded={open}
           onClick={toggleMobileNavigation}
@@ -118,8 +178,15 @@ export default function Header() {
         </button>
       </div>
 
-      {open && (
-        <nav id="mobile-navigation" className="mobile-nav mobile-accordion-nav" aria-label="Mobile navigation">
+      {renderMobileNav && <button className={`mobile-nav-backdrop ${open ? "is-visible" : "is-closing"}`} type="button" aria-label="Close navigation" tabIndex={open ? 0 : -1} onClick={closeMobileNavigation} />}
+
+      {renderMobileNav && (
+        <nav id="mobile-navigation" className={`mobile-nav mobile-accordion-nav ${open ? "is-visible" : "is-closing"}`} aria-label="Mobile navigation" aria-hidden={!open}>
+          <div className="mobile-nav-intro">
+            <span>NOX Fire & Security</span>
+            <small>Choose the route that best matches the property or support required.</small>
+          </div>
+
           {headerNavMenus.map(menu => {
             const isOpen = openMobileSection === menu.id
             const isActive = activeMenuId === menu.id
@@ -138,21 +205,38 @@ export default function Header() {
                 </button>
                 <div id={panelId} className="mobile-nav-accordion-panel">
                   <div className="mobile-nav-accordion-inner">
-                    {menu.featured && (
-                      <Link className={`mobile-nav-featured ${isCurrentLink(pathname, menu.featured.href) ? "is-current" : ""}`} aria-current={isCurrentLink(pathname, menu.featured.href) ? "page" : undefined} onClick={closeMobileNavigation} href={menu.featured.href}>
-                        <span>{menu.featured.label}</span><span aria-hidden="true">→</span>
-                      </Link>
-                    )}
                     {menu.groups.map((group, groupIndex) => (
                       <div className="mobile-nav-subgroup" key={`${menu.id}-mobile-${groupIndex}`}>
                         {group.heading && <span className="mobile-nav-subheading">{group.heading}</span>}
-                        {group.items.map(item => (
-                          <Link className={isCurrentLink(pathname, item.href) ? "is-current" : undefined} aria-current={isCurrentLink(pathname, item.href) ? "page" : undefined} onClick={closeMobileNavigation} key={`${menu.id}-${item.label}-${item.href}`} href={item.href}>
-                            <span>{item.label}</span><span aria-hidden="true">→</span>
-                          </Link>
-                        ))}
+                        {group.items.map(item => {
+                          const current = isCurrentLink(pathname, item.href)
+                          return (
+                            <Link
+                              className={current ? "is-current" : undefined}
+                              aria-current={current ? "page" : undefined}
+                              onClick={closeMobileNavigation}
+                              key={`${menu.id}-${item.label}-${item.href}`}
+                              href={item.href}
+                            >
+                              <span>{item.label}</span>
+                              <LinkCue />
+                            </Link>
+                          )
+                        })}
                       </div>
                     ))}
+
+                    {menu.featured && (
+                      <Link
+                        className={`mobile-nav-featured ${isCurrentLink(pathname, menu.featured.href) ? "is-current" : ""}`}
+                        aria-current={isCurrentLink(pathname, menu.featured.href) ? "page" : undefined}
+                        onClick={closeMobileNavigation}
+                        href={menu.featured.href}
+                      >
+                        <span><small>Overview</small><strong>{menu.featured.label}</strong></span>
+                        <LinkCue />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -167,7 +251,15 @@ export default function Header() {
           </div>
 
           <div className="mobile-nav-actions">
-            <Link onClick={closeMobileNavigation} className="button button-light" href="/get-quote#quote-form">Get a Quote</Link>
+            <Link
+              onClick={closeMobileNavigation}
+              className="button button-light"
+              href={cta.href}
+              data-cta="quote"
+              data-source-page={`mobile-menu:${pathname}`}
+            >
+              {cta.fullLabel}
+            </Link>
           </div>
         </nav>
       )}

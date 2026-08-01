@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata(
 export default function ContactPage() {
   return <>
     <PageHero eyebrow="Contact NOX" title="Speak directly to NOX Fire & Security" intro="Use the contact details below for an existing system, a fault, service support or a general question. For a new quotation, the short enquiry form gives NOX the details needed to respond properly." image="/images/projects/bottle-thyme-vehicles.jpg" imageAlt="NOX Fire and Security vehicles outside a commercial project in Chesterfield">
-      <div className="button-row"><Link className="button button-light" href="/get-quote#quote-form">Get a Quote</Link><a className="button button-whatsapp" href={site.whatsapp}>WhatsApp NOX</a><a className="button button-outline" href={site.phoneHref}>Call {site.phone}</a></div>
+      <div className="button-row"><Link className="button button-light" href="/get-quote#quote-form">Request a Quotation</Link><a className="button button-whatsapp" href={site.whatsapp}>WhatsApp NOX</a><a className="button button-outline" href={site.phoneHref}>Call {site.phone}</a></div>
     </PageHero>
 
     <section className="direct-contact-section"><div className="container"><SectionHeading eyebrow="Direct contact" title="Telephone, WhatsApp and email" text="Speak to NOX about a current system, planned service, fault, takeover or general Fire & Security question."/><div className="direct-contact-grid"><a href={site.phoneHref}><span>Telephone</span><strong>{site.phone}</strong></a><a href={site.whatsapp}><span>WhatsApp</span><strong>Message NOX</strong></a><a href={`mailto:${site.email}`}><span>Email</span><strong>{site.email}</strong></a></div></div></section>

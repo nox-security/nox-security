@@ -22,7 +22,7 @@ const residentialSystems = [
 export default function ResidentialPage() {
   return <>
     <PageHero eyebrow="Protect My Home" title="Premium home security designed around the property" intro="NOX designs professionally installed CCTV, Ajax alarms, perimeter protection and smart security for family homes, larger properties, rural sites, driveways, garages and outbuildings across Chesterfield, Sheffield, Derbyshire and South Yorkshire. The property, routine and level of protection decide the system rather than a fixed package." image="/images/image-refresh/homepage-hero-nox-property.webp" imageAlt="Residential property protected by NOX Fire and Security">
-      <ContactActions primaryLabel="Book a Free Home Security Survey" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-hub"/>
+      <ContactActions primaryLabel="Book a Home Security Survey" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-hub"/>
     </PageHero>
     <TrustStrip variant="residential"/>
 
@@ -48,6 +48,6 @@ export default function ResidentialPage() {
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Residential guides" title="Questions to answer before choosing a system"/><div className="related-links"><Link href="/blog/how-much-does-an-ajax-alarm-cost">How much does an Ajax alarm cost? →</Link><Link href="/blog/how-many-cctv-cameras-does-a-house-need">How many CCTV cameras does a house need? →</Link><Link href="/blog/can-an-alarm-protect-a-garage-or-outbuilding">Can an alarm protect a garage or outbuilding? →</Link><Link href="/blog/app-alerts-versus-professional-alarm-monitoring">App alerts versus professional monitoring →</Link></div></div><aside className="dark-panel"><h3>Start with the property</h3><p>Tell us about the entrances, driveway, vehicles, external buildings, current equipment and how you want to use the system.</p><ContactActions primaryLabel="Discuss My Property" compact audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-guide-bridge"/></aside></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear advice, tidy work and a proper handover"/><ReviewGrid names={["Ryan Hargreaves", "Sasha Brailsford", "Jeremy Bunting"]}/></div></section>
-    <ConversionPanel title="Plan the right security for your home" text="Tell us what you want to protect and whether you are considering an alarm, CCTV, a garage or outbuilding, smart security or an existing-system takeover." primaryLabel="Book a Free Home Security Survey" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-final"/>
+    <ConversionPanel title="Plan the right security for your home" text="Tell us what you want to protect and whether you are considering an alarm, CCTV, a garage or outbuilding, smart security or an existing-system takeover." primaryLabel="Book a Home Security Survey" audience="Residential" serviceCategory="Residential Security" enquiryType="Installation" sourceLabel="residential-final"/>
   </>
 }

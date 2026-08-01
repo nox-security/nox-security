@@ -65,7 +65,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     {structuredData.map((data, index) => <JsonLd data={data} key={index}/>)}
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Areas We Serve", href: "/areas-we-serve" }, { label: area.name }]}/>
     <PageHero eyebrow={`${area.name}, ${area.county}`} title={`CCTV, intruder alarms and fire systems in ${area.name}`} intro={area.intro} image="/images/hero-house.webp" imageAlt={`Home and business security systems in ${area.name}`}>
-      <ContactActions primaryLabel={`Get a Quote in ${area.name}`} serviceCategory="Fire and security systems" enquiryType="General" sourceLabel={`area-${slug}`}/>
+      <ContactActions primaryLabel={`Book a Survey in ${area.name}`} serviceCategory="Fire and security systems" enquiryType="General" sourceLabel={`area-${slug}`}/>
     </PageHero>
     <TrustStrip variant="general"/>
 
@@ -95,6 +95,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Local advice, workmanship and ongoing support"/><ReviewGrid names={slug === "chesterfield" ? ["Jez S", "Ryan Hargreaves", "Rory Stirland"] : slug === "sheffield" ? ["Sasha Brailsford", "Nathan De La Rosa", "Jeremy Bunting"] : ["Jeremy Bunting", "Jez S", "Rory Stirland"]}/></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Common questions" title={`Fire and security services in ${area.name}`}/><div className="faq-list">{faqs.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>
-    <ConversionPanel title={`Request a tailored quote in ${area.name}`} text="Tell NOX about the property, existing equipment, system required and preferred timescale. The team will confirm the correct survey, servicing or quotation route." primaryLabel={`Get a Quote in ${area.name}`} serviceCategory="Fire and security systems" enquiryType="General" sourceLabel={`area-${slug}-final`}/>
+    <ConversionPanel title={`Request a tailored quote in ${area.name}`} text="Tell NOX about the property, existing equipment, system required and preferred timescale. The team will confirm the correct survey, servicing or quotation route." primaryLabel={`Book a Survey in ${area.name}`} serviceCategory="Fire and security systems" enquiryType="General" sourceLabel={`area-${slug}-final`}/>
   </>
 }

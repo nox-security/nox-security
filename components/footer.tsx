@@ -22,7 +22,7 @@ export default function Footer() {
           <Link href="/" aria-label="NOX Fire & Security home">
             <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
           </Link>
-          <p>Professional Fire & Security installation and support across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
+          <p>Premium residential and commercial Fire & Security installation and support across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
           <p className="muted">Local accountability · Commercial capability · Ongoing support</p>
           <a className="footer-instagram-link" href="https://www.instagram.com/noxsecuritychesterfield" target="_blank" rel="noopener noreferrer" aria-label="Open NOX Fire & Security on Instagram at @noxsecuritychesterfield">
             <span className="footer-instagram-icon" aria-hidden="true"><Instagram size={17} strokeWidth={1.65}/></span>
@@ -35,7 +35,7 @@ export default function Footer() {
           {residentialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
-          <h3>Fire & Compliance</h3>
+          <h3>Fire Alarms &amp; Compliance</h3>
           {fireFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           <h3 className="footer-subheading">Protect My Business</h3>
           {commercialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
@@ -63,8 +63,11 @@ export default function Footer() {
         <span>Primary areas:</span>
         <Link href="/areas/chesterfield">Chesterfield</Link>
         <Link href="/areas/sheffield">Sheffield</Link>
+        <Link href="/areas/sheffield">Dore &amp; Totley</Link>
+        <Link href="/areas/sheffield">Ecclesall, Fulwood &amp; Ranmoor</Link>
         <Link href="/areas/derbyshire">Derbyshire</Link>
         <Link href="/areas/derby">Derby</Link>
+        <Link href="/areas/derby">Duffield &amp; Quarndon</Link>
         <Link href="/areas/dronfield">Dronfield</Link>
         <Link href="/areas/matlock">Matlock</Link>
         <Link href="/areas/bakewell">Bakewell</Link>

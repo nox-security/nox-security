@@ -2,20 +2,23 @@ import { MapPin } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-const coreAreas = [
-  { name: "Chesterfield", slug: "chesterfield", note: "Our base" },
-  { name: "Sheffield", slug: "sheffield" },
-  { name: "Dronfield", slug: "dronfield" },
-  { name: "Eckington", slug: "eckington" },
-  { name: "Clay Cross", slug: "clay-cross" },
-  { name: "Bolsover", slug: "bolsover" },
-  { name: "Rotherham", slug: "rotherham" },
-  { name: "Alfreton", slug: "alfreton" },
-  { name: "Mansfield", slug: "mansfield" },
-  { name: "Ripley", slug: "ripley" },
-]
+type ServiceArea = { name: string; slug: string; note?: string }
 
-const derbyshireAreas = [
+const coreAreas: ServiceArea[] = [
+  { name: "Chesterfield", slug: "chesterfield" },
+  { name: "Sheffield", slug: "sheffield" },
+  { name: "Derbyshire", slug: "derbyshire" },
+  { name: "Derby", slug: "derby" },
+  { name: "Dronfield", slug: "dronfield" },
+  { name: "Matlock", slug: "matlock" },
+  { name: "Bakewell", slug: "bakewell" },
+  { name: "Baslow", slug: "baslow" },
+  { name: "Hope Valley", slug: "hope-valley" },
+  { name: "Ashover", slug: "ashover" },
+  { name: "Hathersage", slug: "hathersage" },
+  { name: "Buxton", slug: "buxton" },
+]
+const derbyshireAreas: ServiceArea[] = [
   { name: "Matlock", slug: "matlock" },
   { name: "Bakewell", slug: "bakewell" },
   { name: "Baslow", slug: "baslow" },
@@ -27,17 +30,12 @@ const derbyshireAreas = [
   { name: "Ashbourne", slug: "ashbourne" },
 ]
 
-const widerAreas = [
-  { name: "Derby", slug: "derby" },
-  { name: "Nottingham", slug: "nottingham" },
-  { name: "Doncaster", slug: "doncaster" },
-  { name: "Retford", slug: "retford" },
-  { name: "Newark-on-Trent", slug: "newark-on-trent" },
-  { name: "Ilkeston", slug: "ilkeston" },
-  { name: "Sutton-in-Ashfield", slug: "sutton-in-ashfield" },
-  { name: "Long Eaton", slug: "long-eaton" },
+const widerAreas: ServiceArea[] = [
+  { name: "Dore & Totley", slug: "sheffield" },
+  { name: "Ecclesall, Fulwood & Ranmoor", slug: "sheffield" },
+  { name: "Duffield & Quarndon", slug: "derby" },
+  { name: "Farms & Rural Estates", slug: "derbyshire" },
 ]
-
 export default function ServiceAreas() {
   return (
     <section id="areas" className="py-20 bg-black text-white">
@@ -53,7 +51,7 @@ export default function ServiceAreas() {
               Areas We Cover
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Based in Chesterfield, NOX Fire &amp; Security installs smart intruder alarms, CCTV systems, fire alarms and commercial security systems across Chesterfield, Sheffield, Derbyshire and surrounding areas. We also cover the Peak District, Amber Valley, Erewash and selected South Yorkshire and Nottinghamshire locations for suitable commercial and larger residential projects.
+              Based in Chesterfield, NOX Fire &amp; Security installs smart intruder alarms, CCTV systems, fire alarms and commercial security systems across Chesterfield, Sheffield, Derbyshire and surrounding areas. The core service area includes the Peak District, South and West Sheffield, Derby and the premium villages and rural locations surrounding Chesterfield.
             </p>
           </div>
 
@@ -104,7 +102,7 @@ export default function ServiceAreas() {
             </div>
           </div>
 
-          {/* Tier 3 — Wider */}
+          {/* Tier 3 — Priority corridors */}
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-2 h-2 rounded-full bg-gray-600"></div>
@@ -113,7 +111,7 @@ export default function ServiceAreas() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
               {widerAreas.map((area) => (
                 <Link
-                  key={area.slug}
+                  key={area.name}
                   href={`/areas/${area.slug}`}
                   className="group bg-white/5 border border-white/10 rounded-lg p-3 hover:border-white/30 transition-all"
                 >
