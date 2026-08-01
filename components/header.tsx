@@ -136,7 +136,7 @@ export default function Header() {
         setOpenMobileSection(null)
         return false
       }
-      setOpenMobileSection(activeMenuId ?? "home")
+      setOpenMobileSection(null)
       return true
     })
   }
@@ -180,7 +180,6 @@ export default function Header() {
           aria-expanded={open}
           onClick={toggleMobileNavigation}
         >
-          <b className="menu-button-label">{open ? "Close" : "Menu"}</b>
           <span className="menu-button-icon" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
       </div>
@@ -189,11 +188,6 @@ export default function Header() {
 
       {renderMobileNav && (
         <nav id="mobile-navigation" className={`mobile-nav mobile-accordion-nav ${open ? "is-visible" : "is-closing"}`} aria-label="Mobile navigation" aria-hidden={!open}>
-          <div className="mobile-nav-intro">
-            <span>Navigation</span>
-            <small>Choose an area, then select the service you need.</small>
-          </div>
-
           {headerNavMenus.map(menu => {
             const isOpen = openMobileSection === menu.id
             const isActive = activeMenuId === menu.id
