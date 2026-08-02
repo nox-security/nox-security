@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CaseStudyGrid, ContactActions, ConversionPanel, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { CaseStudyGrid, ContactActions, ConversionPanel, JsonLd, OngoingSupportStrip, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata } from "@/lib/site"
 import { serviceSchema, webPageSchema } from "@/lib/schema"
 
@@ -14,8 +14,9 @@ export const metadata: Metadata = pageMetadata(
 const fireSystemRoutes = [
   { title: "Fire Alarm Installation", text: "New conventional, addressable and suitable wireless Ajax EN54 systems designed around the building, fire strategy and future maintenance route.", href: "/systems/fire-safety", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm panel, zone plan and manual call point installed at a commercial property", position: "center 48%" },
   { title: "Fire Alarm Servicing", text: "Planned inspection and testing, service records, defect reporting and clear remedial quotations for suitable existing systems.", href: "/service-plans/fire-alarm-servicing", image: "/images/v4-10/fire-alarm-servicing.jpeg", alt: "Commercial fire alarm control panel during planned servicing", position: "center 40%" },
+  { title: "Fire Alarm Monitoring", text: "Professional signalling, nominated contacts and agreed escalation for suitable maintained commercial fire systems.", href: "/service-plans/fire-alarm-monitoring", image: "/images/revisions/intruder-alarm-monitoring-centre.jpg", alt: "Professional monitoring centre receiving alarm signals", position: "center 50%" },
   { title: "Fire Alarm Repairs & Takeovers", text: "Assessment of faults, panel access, documentation, supportability and the sensible repair, takeover or replacement route.", href: "/services/fire-alarm-repairs-takeovers", image: "/images/v4-12-3/fire-alarm-repairs-takeovers.jpg", alt: "Fire alarm equipment base and cabling during a repair or takeover assessment", position: "center 55%" },
-  { title: "Multi-Site Fire Alarm Systems", text: "Installation, takeover, servicing and remedial programmes organised across several premises with clearer site records and reporting.", href: "/fire-compliance/multi-site-fire-alarm-systems", image: "/images/projects/bottle-thyme-vehicles.jpg", alt: "NOX Fire and Security vehicles supporting a coordinated multi-site fire alarm programme", position: "center 50%" },
+  { title: "Multi-Site Fire Alarm Systems", text: "Installation, takeover, servicing and remedial programmes organised across several premises with consistent site records and reporting.", href: "/fire-compliance/multi-site-fire-alarm-systems", image: "/images/projects/bottle-thyme-vehicles.jpg", alt: "NOX Fire and Security vehicles supporting a coordinated multi-site fire alarm programme", position: "center 50%" },
   { title: "Integrated Fire & CCTV Systems", text: "Fire alarm and CCTV projects coordinated through one survey and installation route while both systems keep clear designs, records and maintenance scopes.", href: "/fire-compliance/integrated-fire-cctv-systems", image: "/images/projects/retford-camera-fire-bell.jpg", alt: "Commercial CCTV camera positioned beside fire alarm warning equipment", position: "center 34%" },
 ]
 
@@ -24,7 +25,7 @@ const complianceRoutes = [
   { title: "Emergency Lighting Testing & Servicing", text: "Functional checks, annual duration testing, failed-fitting reports, records and coordinated remedial work.", href: "/service-plans/emergency-lighting-servicing", image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg", alt: "Emergency exit light tested during planned servicing", position: "center 36%" },
   { title: "Fire Risk Assessments", text: "A structured review of fire risks and priorities, coordinated through a competent specialist partner where required.", href: "/systems/fire-risk-assessment", image: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire action notice and manual call point reviewed during a fire risk assessment", position: "center" },
   { title: "Fire Extinguisher Servicing", text: "Inspection and servicing coordinated through a competent specialist, with defects and replacement needs recorded clearly.", href: "/services/fire-extinguisher-servicing", image: "/images/v4-12-3/fire-extinguisher-servicing.jpg", alt: "Fire extinguishers positioned in a commercial premises for servicing and compliance support", position: "center 58%" },
-  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one clearer annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire safety logbook and records used for coordinated compliance support", position: "center" },
+  { title: "Fire Compliance Plans", text: "Bring agreed fire alarm, emergency-lighting and other fire-safety services into one coordinated annual arrangement.", href: "/service-plans/fire-compliance", image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire safety logbook and records used for coordinated compliance support", position: "center" },
 ]
 
 const en54Highlights = [
@@ -78,12 +79,12 @@ export default function FireCompliancePage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Fire alarm systems" title="Five ways we can support a single premises or wider estate" text="Installation, servicing, takeovers, multi-site programmes and coordinated Fire and CCTV projects each have a distinct scope. The right route depends on the building, existing equipment, responsible people and the outcome the business needs."/>
+      <SectionHeading eyebrow="Fire alarm systems" title="Installation, monitoring and support for a single premises or wider estate" text="Installation, monitoring, servicing, takeovers, multi-site programmes and coordinated Fire and CCTV projects each have a distinct scope. The right route depends on the building, existing equipment, responsible people and the outcome the business needs."/>
       <div className="feature-grid columns-3 media-route-grid fire-balanced-grid">{fireSystemRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
     </div></section>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Compliance support" title="Five supporting services kept clear and easy to coordinate" text="Emergency lighting, risk assessment, extinguisher servicing and annual planning remain separate professional scopes while staying easier for the customer to organise through one local Fire & Security team."/>
+      <SectionHeading eyebrow="Compliance support" title="Five supporting services kept clear and easy to coordinate" text="Emergency lighting, risk assessment, extinguisher servicing and annual planning remain separate professional scopes while staying easier for the customer to organise through one local Fire & Security provider."/>
       <div className="feature-grid columns-3 media-route-grid fire-balanced-grid">{complianceRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>
     </div></section>
 
@@ -91,6 +92,8 @@ export default function FireCompliancePage() {
       <SectionHeading eyebrow="Clear service scopes" title="Installation, servicing and repairs need different information" text="Whether you need a new system, an annual service or help with an existing fault, each service has a clear scope so you understand what is included and what happens next."/>
       <div className="related-links"><Link href="/blog/how-often-should-a-commercial-fire-alarm-be-serviced">How often should a commercial fire alarm be serviced? →</Link><Link href="/blog/can-a-new-company-take-over-an-existing-fire-alarm">Can a new company take over an existing fire alarm? →</Link><Link href="/blog/can-fire-alarm-and-emergency-lighting-visits-be-combined">Can visits be combined? →</Link></div>
     </div><aside className="dark-panel"><h3>Information that helps us quote</h3><p>Property use, panel make, approximate device or fitting quantities, available drawings or records, known faults, required timescales and whether the site remains operational during work.</p><ContactActions primaryLabel="Get a Fire Compliance Quote" compact audience="Commercial" serviceCategory="Fire & Compliance" enquiryType="General" sourceLabel="fire-compliance-information"/></aside></div></section>
+
+    <OngoingSupportStrip context="fire"/>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Commercial fire and integrated system work" text="Genuine project photography and confirmed scopes showing fire, intruder and wider site requirements."/><CaseStudyGrid slugs={["telesis-hitachi-fire-intruder-system","tan-station-fire-security-brimington","banana-industries-fire-security"]}/></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear installation, handover and local support"/><ReviewGrid names={["Rory Stirland", "Nathan De La Rosa", "Jez S"]}/></div></section>

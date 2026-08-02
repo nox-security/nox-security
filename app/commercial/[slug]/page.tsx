@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { AreaLinks, GuideLinks, Breadcrumbs, CaseStudyGrid, Checklist, ContactActions, ConversionPanel, EnquiryPreparation, FeatureGrid, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip, guideSlugsFor } from "@/components/marketing"
+import { AreaLinks, GuideLinks, Breadcrumbs, CaseStudyGrid, Checklist, CompleteSystem, ContactActions, ConversionPanel, EnquiryPreparation, FeatureGrid, JsonLd, OngoingSupportStrip, PageHero, ReviewGrid, SectionHeading, TrustStrip, guideSlugsFor } from "@/components/marketing"
 import { pageMetadata } from "@/lib/site"
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema"
 
@@ -266,7 +266,7 @@ const pages: Record<string, CommercialPage> = {
       { title: "Rollout planning", text: "Open sites, priority branches, legacy equipment and contractor access can all affect the order in which work is delivered." },
       { title: "Phased investment", text: "Priority sites, failed equipment and new openings can be addressed first while the wider plan remains visible." },
       { title: "Central administration", text: "Managers often need a practical way to view sites, add users, review faults and keep service records organised." },
-      { title: "Service coordination", text: "Visit dates, asset information, defects and recurring support can be managed under a clearer portfolio schedule." }
+      { title: "Service coordination", text: "Visit dates, asset information, defects and recurring support can be managed under one portfolio schedule." }
     ],
     pricingFactors: ["Number and location of sites", "Systems and assets at each premises", "Survey and rollout schedule", "Common platform or mixed legacy equipment", "Network and remote-access requirements", "User and reporting structure", "Service frequencies", "Travel and access arrangements"],
     faq: [
@@ -306,7 +306,7 @@ const pages: Record<string, CommercialPage> = {
   "integrated-fire-security": {
     title: "Integrated fire and security projects for commercial premises",
     eyebrow: "Integrated Fire & Security",
-    intro: "NOX can coordinate commercial fire alarms, CCTV, intruder protection and ongoing support through one project team. The systems remain correctly separated in design, commissioning and records while the customer benefits from clearer planning and accountability.",
+    intro: "NOX can coordinate commercial fire alarms, CCTV, intruder protection and ongoing support through one project team. The systems remain correctly separated in design, commissioning and records while the customer benefits from coordinated planning and accountability.",
     metaTitle: "Integrated Fire & Security Projects Derbyshire | NOX",
     metaDescription: "Coordinated commercial fire alarm, CCTV and intruder projects across Chesterfield, Sheffield and Derbyshire with clear system scopes, installation planning and ongoing support.",
     image: "/images/revisions/telesis-hitachi-exterior.jpg",
@@ -325,7 +325,7 @@ const pages: Record<string, CommercialPage> = {
       { title: "Clear accountability", text: "The customer has one local project contact while each system retains the correct technical and documentary scope." },
       { title: "Shared enabling work", text: "Cable routes, access equipment, working-at-height activity and other enabling work can be coordinated so the project runs more smoothly." },
       { title: "Efficient site access", text: "Surveys, access equipment, cable routes and operational constraints can be coordinated across the project." },
-      { title: "Consistent handover", text: "Users receive a clearer overview of controls, records, apps, contacts and future service dates." },
+      { title: "Consistent handover", text: "Users receive a consistent overview of controls, records, apps, contacts and future service dates." },
       { title: "Future servicing", text: "Fire servicing, emergency-lighting testing, alarm monitoring and CCTV maintenance can be arranged as clear follow-on services." },
       { title: "Recurring support", text: "Installation can lead into fire servicing, emergency-lighting testing, alarm monitoring and CCTV maintenance without hiding the separate costs." }
     ],
@@ -348,7 +348,7 @@ const pages: Record<string, CommercialPage> = {
     ctaLabel: "Discuss an Integrated Project",
     visualEyebrow: "Integrated project examples",
     visualTitle: "Fire, CCTV and intruder planned as one coordinated commercial project",
-    visualText: "The systems remain separate in scope, but the on-site delivery, cable routes, access and handover can be organised through one clearer project plan.",
+    visualText: "The systems remain separate in scope, but the on-site delivery, cable routes, access and handover can be organised through one coordinated project plan.",
     visuals: [
       { src: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Commercial property with integrated fire and security systems", caption: "Integrated projects often start with a clear site-wide plan for fire, CCTV and intrusion." },
       { src: "/images/projects/tan-station-fire-first-fix.jpg", alt: "First-fix fire alarm work at a commercial premises", caption: "Early-stage fire work can be coordinated with wider security cabling and installation access." },
@@ -356,7 +356,7 @@ const pages: Record<string, CommercialPage> = {
       { src: "/images/projects/tan-station-camera-external-1.jpg", alt: "External CCTV camera at a commercial premises", caption: "External security coverage and the fire route can be delivered through one coordinated programme." }
     ],
     platformTitle: "Systems often included in an integrated project",
-    platformText: "The customer benefits from one clearer project route, while each system still keeps its own correct design, records and service requirements.",
+    platformText: "The customer benefits from one coordinated project route, while each system still keeps its own correct design, records and service requirements.",
     products: [
       { name: "Fire alarm control and detection", description: "Commercial fire alarm design is based on the premises, circulation, zoning, cause and effect, records and future servicing requirements.", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", imageAlt: "Fire alarm control panel and zone plan" },
       { name: "Commercial CCTV", description: "Camera coverage is planned around entrances, working areas, yards, evidence quality and the live views managers need each day.", image: "/images/image-refresh/ajax-commercial-domes.webp", imageAlt: "Commercial dome cameras" },
@@ -364,6 +364,39 @@ const pages: Record<string, CommercialPage> = {
       { name: "Emergency lighting coordination", description: "Where required, emergency-lighting installation or servicing can be coordinated alongside the wider project with clear separate scope.", image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg", imageAlt: "Emergency exit light during servicing" }
     ]
   }
+}
+
+const commercialConnectedServices: Record<string, { title: string; text: string; href: string }[]> = {
+  cctv: [
+    { title: "Intruder Detection", text: "Add internal and external detection around vulnerable areas and operating routines.", href: "/commercial/intruder-alarms" },
+    { title: "Perimeter Protection", text: "Detect activity around yards, compounds and approaches before it reaches the building.", href: "/commercial/yard-perimeter-security" },
+    { title: "CCTV Maintenance", text: "Keep cameras, recording, storage and remote access checked over time.", href: "/service-plans/cctv-maintenance" },
+  ],
+  "intruder-alarms": [
+    { title: "Alarm Monitoring", text: "Add professional signal handling and an agreed escalation route.", href: "/service-plans/alarm-monitoring" },
+    { title: "Commercial CCTV", text: "Add recorded views and evidence around entrances, stock and operational areas.", href: "/commercial/cctv" },
+    { title: "Perimeter Protection", text: "Create earlier warning around external approaches and boundaries.", href: "/commercial/yard-perimeter-security" },
+  ],
+  "industrial-warehouse-security": [
+    { title: "Commercial CCTV", text: "Plan evidence and oversight across loading areas, yards and working zones.", href: "/commercial/cctv" },
+    { title: "Alarm Monitoring", text: "Add professional signal handling outside operating hours.", href: "/service-plans/alarm-monitoring" },
+    { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, perimeter, fire and continued support.", href: "/commercial/integrated-fire-security" },
+  ],
+  "yard-perimeter-security": [
+    { title: "Commercial CCTV", text: "Verify activity around the boundary with useful recorded views.", href: "/commercial/cctv" },
+    { title: "Commercial Intruder Alarms", text: "Connect outdoor warning with internal protection and controlled arming areas.", href: "/commercial/intruder-alarms" },
+    { title: "Alarm Monitoring", text: "Add an agreed professional response route where suitable.", href: "/service-plans/alarm-monitoring" },
+  ],
+  "multi-site-security": [
+    { title: "Integrated Site Security", text: "Create a consistent protection and support strategy across several premises.", href: "/commercial/integrated-fire-security" },
+    { title: "Ongoing Support Packages", text: "Coordinate maintenance, monitoring and renewal dates across the estate.", href: "/service-plans/total-security" },
+    { title: "Fire Compliance Packages", text: "Bring agreed fire-system and emergency-lighting visits into one programme.", href: "/service-plans/fire-compliance" },
+  ],
+  "integrated-fire-security": [
+    { title: "Intruder Alarm Monitoring", text: "Add agreed signal handling and escalation outside operating hours.", href: "/service-plans/alarm-monitoring" },
+    { title: "Fire Alarm Monitoring", text: "Connect suitable maintained fire systems to professional signalling.", href: "/service-plans/fire-alarm-monitoring" },
+    { title: "Ongoing Support Packages", text: "Coordinate planned servicing, maintenance and future changes under one arrangement.", href: "/service-plans/total-security" },
+  ],
 }
 
 export function generateStaticParams() {
@@ -418,9 +451,11 @@ export default async function CommercialDetailPage({ params }: { params: Promise
     {!!page.products?.length && <section className="section ajax-product-section"><div className="container"><div className="platform-intro"><div><span className="eyebrow">Products and system options</span><h2>{page.platformTitle}</h2><p>{page.platformText}</p></div><img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" /></div><div className="product-detail-grid">{page.products.map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image product-detail-photo"><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div></div></section>}
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Project process" title="Survey, design, installation and ongoing support"/><FeatureGrid columns={4} items={page.process}/></div></section>
     <section className="section"><div className="container"><SectionHeading eyebrow="What the design needs to solve" title="System decisions linked to the operational requirement"/><FeatureGrid columns={4} items={page.details}/></div></section>
-    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a clearer proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
+    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a well-defined proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
+    <OngoingSupportStrip context="commercial"/>
+    <CompleteSystem items={commercialConnectedServices[slug] ?? []}/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Real commercial and industrial work" text="Genuine property and installation photography with confirmed service scopes."/><CaseStudyGrid slugs={page.cases}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial guides" title={`Plan ${page.eyebrow.toLowerCase()} with clearer information`} text="Detailed answers for decision-makers comparing systems, preparing a site survey or planning ongoing servicing."/><GuideLinks slugs={guideSlugsFor(`${slug} ${page.eyebrow}`)}/></div></section>
+    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial guides" title={`Plan ${page.eyebrow.toLowerCase()} with practical information`} text="Detailed answers for decision-makers comparing systems, preparing a site survey or planning ongoing servicing."/><GuideLinks slugs={guideSlugsFor(`${slug} ${page.eyebrow}`)}/></div></section>
     <AreaLinks title={`${page.eyebrow} across Chesterfield, Sheffield and Derbyshire`}/>
     <EnquiryPreparation topic={page.eyebrow.toLowerCase()} commercial/>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid names={commercialReviewNames}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>

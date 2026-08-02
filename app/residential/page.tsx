@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
+import { CaseStudyGrid, ContactActions, ConversionPanel, FeatureGrid, OngoingSupportStrip, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
@@ -26,7 +26,7 @@ export default function ResidentialPage() {
     </PageHero>
     <TrustStrip variant="residential"/>
 
-    <section className="section"><div className="container">
+    <section className="section" id="home-security-packages"><div className="container">
       <SectionHeading eyebrow="Home security routes" title="Choose the requirement first, then the technology" text="Intruder alarms, CCTV, perimeter detection and smart cameras solve different parts of the property. NOX can design one system or combine several without unnecessary duplication."/>
       <div className="system-route-grid residential-system-grid">{residentialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}</div>
     </div></section>
@@ -42,6 +42,8 @@ export default function ResidentialPage() {
       <SectionHeading eyebrow="Existing systems" title="Takeovers, faults and sensible upgrades" text="NOX can assess suitable wired, wireless, hybrid and CCTV systems installed by another company. The inspection identifies access, condition, compatibility and whether service, repair, selective upgrade or replacement is the sensible next step."/>
       <div className="related-links"><Link href="/services/security-system-takeover">Residential system takeovers →</Link><Link href="/services/repairs-upgrades">Repairs & upgrades →</Link><Link href="/service-plans/alarm-maintenance">Intruder alarm servicing →</Link><Link href="/service-plans/cctv-maintenance">CCTV maintenance →</Link></div>
     </div><aside className="dark-panel"><h3>Ongoing support after installation</h3><p>Professional monitoring, annual alarm servicing, CCTV maintenance and coordinated ongoing support packages remain optional and are shown separately from the installation quotation.</p><Link className="button button-light" href="/service-plans#home-system-support">Get Support for an Existing Home System</Link></aside></div></section>
+
+    <OngoingSupportStrip context="home"/>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Residential projects" title="Real NOX installations across the region" text="Genuine homes, equipment and installation photography show how NOX approaches different residential requirements."/><CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder","sheffield-residential-security","eufy-smart-home-cctv-chesterfield"]}/></div></section>
 

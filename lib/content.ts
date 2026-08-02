@@ -1369,6 +1369,47 @@ export const planPages: Record<string, PlanPageData> = {
     ],
     related: [{ href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/total-security", label: "Ongoing Support Package" }, { href: "/systems/intrusion-alarms", label: "Intruder alarm installation" }]
   },
+  "fire-alarm-monitoring": {
+    slug: "fire-alarm-monitoring",
+    eyebrow: "Fire alarm monitoring",
+    title: "Fire Alarm Monitoring for Commercial Premises",
+    metaTitle: "Fire Alarm Monitoring Chesterfield, Sheffield & Derbyshire | NOX",
+    metaDescription: "Fire alarm monitoring for suitable commercial systems across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District, with agreed signalling, keyholder and escalation arrangements.",
+    intro: "NOX can connect suitable commercial fire alarm systems to professional monitoring, with the signalling route, nominated contacts and agreed escalation confirmed around the premises and maintained system.",
+    image: "/images/revisions/intruder-alarm-monitoring-centre.jpg",
+    imageAlt: "Professional monitoring centre receiving and handling alarm signals",
+    included: ["Compatibility and signalling review", "Professional monitoring setup", "Agreed alarm-event handling", "Keyholder and contact arrangements", "Escalation route confirmed in writing", "Signal testing before activation", "Contact-detail review", "Monitoring coordinated with planned maintenance"],
+    suitableFor: ["Commercial premises", "Retail and hospitality", "Offices", "Warehouses and industrial units", "Landlords and managed property", "Suitable multi-site portfolios"],
+    process: [
+      { title: "Review the fire system", text: "The panel, signalling options, premises, maintenance status and required outcome are checked before a monitoring route is proposed." },
+      { title: "Agree the response", text: "Nominated contacts, keyholders and the escalation sequence are confirmed so responsibilities are understood before activation." },
+      { title: "Connect and test", text: "The signalling path and agreed alarm events are commissioned and tested before the service is treated as active." },
+      { title: "Maintain and review", text: "Monitoring sits alongside planned servicing, current contact details and continued system support." }
+    ],
+    details: [
+      { title: "When the premises is unattended", text: "Professional monitoring gives suitable sites a defined route for alarm signals when nobody is present to see the panel or receive an app notification." },
+      { title: "Agreed escalation", text: "The monitoring arrangement follows the contacts and actions confirmed for the site. The exact response is agreed during the survey and setup process." },
+      { title: "Monitoring and maintenance together", text: "Reliable signalling depends on a suitable, maintained fire system. Service visits, defects and monitoring responsibilities should remain connected." }
+    ],
+    faq: [
+      { q: "What happens when the monitored fire alarm activates?", a: "The agreed alarm signal is received through the professional monitoring route and handled using the nominated contacts and escalation procedure confirmed for the premises." },
+      { q: "Can any existing fire alarm be monitored?", a: "Not automatically. The panel, signalling options, system condition, records and maintenance arrangements need to be reviewed first." },
+      { q: "Is fire-service attendance guaranteed?", a: "No general attendance promise is made. The exact signalling and response arrangement is confirmed in writing for the specific system and premises." },
+      { q: "How is professional monitoring different from an app alert?", a: "An app alert depends on the user seeing and acting on a notification. Professional monitoring provides a defined signal-handling and escalation process using the agreed contacts." },
+      { q: "Does monitoring replace fire alarm servicing?", a: "No. Monitoring and planned servicing have different purposes and should work together where the system and premises are suitable." }
+    ],
+    related: [
+      { href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" },
+      { href: "/systems/fire-safety", label: "Fire alarm installation" },
+      { href: "/service-plans/fire-compliance", label: "Fire compliance packages" }
+    ],
+    ctaLabel: "Discuss Fire Alarm Monitoring",
+    audience: "Commercial",
+    serviceCategory: "Fire Alarm Monitoring",
+    enquiryType: "Monitoring",
+    pricingFactors: ["Fire panel and signalling compatibility", "Premises and system risk profile", "Number of sites", "Required contacts and escalation", "Existing maintenance status", "Any enabling or remedial work"],
+    guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" }
+  },
   "cctv-maintenance": {
     slug: "cctv-maintenance",
     eyebrow: "CCTV maintenance",
@@ -1491,7 +1532,7 @@ export const planPages: Record<string, PlanPageData> = {
     title: "Coordinated fire alarm, emergency lighting and compliance support",
     metaTitle: "Fire Compliance Package Chesterfield | Commercial Annual Servicing",
     metaDescription: "Tailored fire compliance packages across Chesterfield, Sheffield and Derbyshire, coordinating fire alarm servicing, emergency lighting and agreed fire safety services.",
-    intro: "Bring agreed fire alarm servicing, emergency lighting, extinguisher servicing and fire risk assessment support into a clearer commercial service arrangement.",
+    intro: "Bring agreed fire alarm servicing, emergency lighting, extinguisher servicing and fire risk assessment support into a coordinated commercial service arrangement.",
     image: "/images/image-refresh/fire-risk-assessment.webp",
     imageAlt: "Fire action notice and manual call point reviewed as part of commercial fire compliance",
     included: ["Agreed fire alarm servicing", "Agreed emergency lighting servicing", "Fire extinguisher servicing where included", "Fire risk assessment support where included", "Digital service records", "Defect reporting", "One renewal date where agreed", "Coordinated engineer scheduling"],

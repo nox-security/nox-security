@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CaseStudyGrid, ConversionPanel, FeatureGrid, JsonLd, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip } from "@/components/marketing"
+import { CaseStudyGrid, ConversionPanel, FeatureGrid, JsonLd, OngoingSupportStrip, ReviewGrid, ReviewSummaryStrip, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
 import { serviceSchema, webPageSchema } from "@/lib/schema"
 
@@ -14,8 +14,8 @@ export const metadata: Metadata = pageMetadata(
 const journeyRoutes = [
   { number: "01", eyebrow: "Residential", title: "Protect My Home", text: "CCTV, Ajax alarms, perimeter detection and smart security designed around the home, driveway, garage and outbuildings.", href: "/residential", link: "Explore Home Security" },
   { number: "02", eyebrow: "Commercial", title: "Protect My Business", text: "Commercial CCTV, intruder protection, industrial security and coordinated systems for working premises and larger projects.", href: "/commercial", link: "Explore Commercial Security" },
-  { number: "03", eyebrow: "Life safety", title: "Fire Alarms & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and clearer annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
-  { number: "04", eyebrow: "Existing systems", title: "Existing System Support", text: "Servicing, monitoring, takeovers, fault finding, upgrades and ongoing packages for systems already installed.", href: "/service-plans", link: "Get Support for an Existing System" },
+  { number: "03", eyebrow: "Life safety", title: "Fire Alarms & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and coordinated annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
+  { number: "04", eyebrow: "Continued support", title: "Maintain & Monitor", text: "Monitoring, servicing, takeovers, fault support and planned maintenance for new or existing systems.", href: "/service-plans", link: "Explore Service & Monitoring" },
 ]
 
 const residentialRoutes = [
@@ -28,6 +28,7 @@ const residentialRoutes = [
 const fireRoutes = [
   { title: "Fire Alarm Installation", text: "Conventional, addressable and suitable wireless systems designed around the premises and future servicing.", href: "/systems/fire-safety", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm control panel installed beside a fire alarm zone plan and manual call point" },
   { title: "Fire Alarm Servicing", text: "Planned testing, existing-system takeovers, records, defect reporting and clear remedial quotations.", href: "/service-plans/fire-alarm-servicing", image: "/images/v4-10/fire-alarm-servicing.jpeg", alt: "Commercial fire alarm control panel inspected during planned servicing" },
+  { title: "Fire Alarm Monitoring", text: "Professional signalling and agreed escalation for suitable maintained commercial fire systems.", href: "/service-plans/fire-alarm-monitoring", image: "/images/revisions/intruder-alarm-monitoring-centre.jpg", alt: "Professional monitoring centre receiving alarm signals" },
   { title: "Emergency Lighting", text: "New installations, testing, annual duration checks, failed-fitting reports and coordinated remedials.", href: "/systems/emergency-lighting", image: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Emergency exit lighting installed at a commercial premises" },
 ]
 
@@ -39,9 +40,9 @@ const commercialRoutes = [
 
 const supportRoutes = [
   { title: "Servicing & Maintenance", text: "Planned alarm, CCTV, fire-alarm and emergency-lighting visits with clear testing, records and recommendations.", href: "/service-plans#servicing-maintenance", image: "/images/v4-10/servicing-monitoring-hero.jpeg", alt: "NOX servicing visit supporting an existing Fire and Security system" },
-  { title: "Monitoring", text: "Professional alarm signalling, keyholder contact and agreed escalation for suitable maintained systems.", href: "/service-plans/alarm-monitoring", image: "/images/v4-13-2/alarm-monitoring-operator.jpg", alt: "Professional alarm monitoring operator handling security signals" },
+  { title: "Intruder Alarm Monitoring", text: "Professional alarm signalling, keyholder contact and agreed escalation for suitable maintained systems.", href: "/service-plans/alarm-monitoring", image: "/images/v4-13-2/alarm-monitoring-operator.jpg", alt: "Professional alarm monitoring operator handling security signals" },
   { title: "System Takeovers & Upgrades", text: "Existing systems assessed for access, faults, condition, repair, selective upgrades or replacement where appropriate.", href: "/services/security-system-takeover", image: "/images/image-refresh/commercial-old-camera.webp", alt: "Existing CCTV equipment assessed during a system takeover" },
-  { title: "Ongoing Support Packages", text: "Bring suitable monitoring, alarm servicing, CCTV maintenance and planned visits under one clearer support arrangement.", href: "/service-plans/total-security", image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg", alt: "Coordinated monitoring and maintenance support package from NOX" },
+  { title: "Ongoing Support Packages", text: "Bring suitable monitoring, alarm servicing, CCTV maintenance and planned visits under one support arrangement.", href: "/service-plans/total-security", image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg", alt: "Coordinated monitoring and maintenance support package from NOX" },
 ]
 
 export default function HomePage() {
@@ -79,7 +80,7 @@ export default function HomePage() {
           <Link href="/residential">Protect My Home</Link>
           <Link href="/commercial">Protect My Business</Link>
           <Link href="/fire-compliance">Fire Alarms &amp; Compliance</Link>
-          <Link href="/service-plans">Existing System Support</Link>
+          <Link href="/service-plans">Service &amp; Monitoring</Link>
         </div>
         <div className="home-ajax-partner-mark">
           <Link href="/ajax-authorised-installer" aria-label="Official Ajax Partner and Ajax Authorised Installation Company">
@@ -109,7 +110,7 @@ export default function HomePage() {
 
     <section className="section section-alt fire-home-section"><div className="container">
       <div className="split-grid fire-home-intro"><div><SectionHeading eyebrow="Fire & Compliance" title="Installation, servicing and ongoing compliance support" text="New fire alarms, planned servicing, repairs, takeovers, emergency lighting and coordinated annual support for commercial premises."/></div><aside className="dark-panel"><h3>Discuss your fire requirements</h3><p>Tell us about the premises, existing system and work required. Risk assessments and extinguisher servicing can be coordinated through competent specialist partners where needed.</p><Link className="button button-light" href="/get-quote?customer_type=Commercial&service_category=Fire%20%26%20Compliance#quote-form">Arrange a Fire Alarm Survey</Link></aside></div>
-      <div className="feature-grid columns-3 fire-route-grid media-route-grid">{fireRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>View service →</Link></div></article>)}</div>
+      <div className="feature-grid columns-4 fire-route-grid media-route-grid">{fireRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>View service →</Link></div></article>)}</div>
       <div className="button-row"><Link className="button button-outline" href="/fire-compliance">Explore Fire & Compliance</Link></div>
     </div></section>
 
@@ -120,10 +121,17 @@ export default function HomePage() {
     </div></section>
 
     <section className="section section-alt home-support-section"><div className="container">
-      <SectionHeading eyebrow="Existing System Support" title="Servicing, monitoring and upgrades that create a clearer long-term support route" text="Customers with an existing system can start here without needing to know whether the answer is maintenance, monitoring, a takeover, a repair or a phased upgrade."/>
+      <SectionHeading eyebrow="Service & Monitoring" title="Keep systems working, monitored and ready for future changes" text="Start here for monitoring, maintenance, takeovers, fault support or a planned upgrade. NOX will confirm the next step around the system and property."/>
       <div className="feature-grid columns-4 media-route-grid support-media-grid">{supportRoutes.map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore support →</Link></div></article>)}</div>
-      <div className="button-row"><Link className="button button-light" href="/service-plans">Explore Existing System Support</Link><Link className="button button-outline" href="/get-quote?enquiry_type=Takeover#quote-form">Get Support for an Existing System</Link></div>
+      <div className="button-row"><Link className="button button-light" href="/service-plans">Explore Service &amp; Monitoring</Link><Link className="button button-outline" href="/get-quote?enquiry_type=Takeover#quote-form">Get Support for an Existing System</Link></div>
     </div></section>
+
+    <OngoingSupportStrip context="commercial"/>
+
+    <section className="section integrated-home-route"><div className="container split-grid"><div>
+      <SectionHeading eyebrow="Larger commercial projects" title="One coordinated strategy for fire, CCTV, intruder and continued support" text="Businesses do not need separate providers and renewal dates for every system. NOX can plan surveillance, detection, fire systems, monitoring and maintenance around the site or wider property portfolio."/>
+      <div className="button-row"><Link className="button button-dark" href="/commercial/integrated-fire-security">Explore Integrated Site Security</Link><Link className="button button-outline" href="/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form">Discuss a Commercial Project</Link></div>
+    </div><aside className="dark-panel"><h3>More than an installation</h3><p>Monitoring, planned maintenance and future expansion can be considered while the system is being designed, then continued after handover through the same local point of contact.</p><Link className="text-link" href="/service-plans/total-security">View ongoing support packages →</Link></aside></div></section>
 
     <section className="section project-story-section"><div className="container">
       <SectionHeading eyebrow="Selected Projects" title="Real properties, real equipment and real NOX workmanship" text="A selection of residential, hospitality, industrial and fire projects using genuine installation photography."/>
@@ -146,6 +154,6 @@ export default function HomePage() {
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Feedback from residential and commercial customers" text="Genuine feedback about advice, workmanship, communication and handover."/><ReviewGrid names={["Ryan Hargreaves", "Rory Stirland", "Jez S"]}/><div className="button-row"><Link className="button button-outline" href="/reviews">Read Customer Reviews</Link></div></div></section>
 
-    <ConversionPanel title="Tell us about the property, site or existing system" text="Use one clear enquiry for a new installation, servicing, monitoring, a fault or a takeover. NOX will guide the right next step." primaryLabel="Request a Quotation" sourceLabel="homepage"/>
+    <ConversionPanel title="Tell us about the property, site or existing system" text="Use one clear enquiry for a new installation, servicing, monitoring, a fault or a takeover. NOX will guide the right next step." primaryLabel="Book a Site Survey" sourceLabel="homepage"/>
   </>
 }

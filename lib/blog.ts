@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ],
-    related: [{ href: "/service-plans", label: "View Existing System Support" }, { href: "/get-quote", label: "Request a Maintenance Quote" }]
+    related: [{ href: "/service-plans", label: "View Service & Monitoring" }, { href: "/get-quote", label: "Request a Maintenance Quote" }]
   },
   {
     slug: "choosing-cctv-for-home-or-business",

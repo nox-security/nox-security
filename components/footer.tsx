@@ -14,7 +14,7 @@ export default function Footer() {
           <p>New residential and commercial systems, fire compliance, planned maintenance, monitoring, takeovers and larger multi-site projects.</p>
         </div>
         <div className="button-row">
-          <Link className="button button-light" href="/get-quote">Request a Quotation</Link>
+          <Link className="button button-light" href="/get-quote">Book a Site Survey</Link>
         </div>
       </div>
       <div className="footer-grid footer-grid-clusters">
@@ -41,7 +41,7 @@ export default function Footer() {
           {commercialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
-          <h3>Existing System Support</h3>
+          <h3>Service &amp; Monitoring</h3>
           {supportFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           <h3 className="footer-subheading">Company</h3>
           {companyFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}

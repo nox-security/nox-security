@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
 import { usePathname } from "next/navigation"
-import { getPageCtaContext } from "@/lib/cta-context"
 import { headerDirectNavItems, headerNavMenus, type HeaderNavMenu } from "@/lib/navigation"
 
 function matchesPrefix(pathname: string, prefix: string) {
@@ -19,10 +18,6 @@ function isCurrentLink(pathname: string, href: string) {
   return pathname === linkPath(href)
 }
 
-function LinkCue() {
-  return <span className="nav-link-cue" aria-hidden="true"><span /></span>
-}
-
 function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; active: boolean; pathname: string }) {
   return (
     <div className={`nav-dropdown header-nav-dropdown header-nav-dropdown-${menu.id} ${active ? "is-active" : ""}`}>
@@ -32,45 +27,44 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
         aria-current={pathname === menu.href ? "page" : undefined}
       >
         <span>{menu.label}</span>
-        <span className="nav-chevron" aria-hidden="true" />
+        <span className="nav-indicator" aria-hidden="true" />
       </Link>
 
       <div className={`dropdown-panel header-dropdown-panel header-dropdown-panel-${menu.id}`}>
-        <div className={`header-dropdown-groups header-dropdown-groups-${menu.id}`}>
-          {menu.groups.map((group, groupIndex) => (
-            <div className="header-dropdown-group" key={`${menu.id}-${groupIndex}`}>
-              {group.heading && <span className="header-dropdown-heading">{group.heading}</span>}
-              {group.items.map(item => {
-                const current = isCurrentLink(pathname, item.href)
-                return (
-                  <Link
-                    className={current ? "is-current" : undefined}
-                    aria-current={current ? "page" : undefined}
-                    key={`${menu.id}-${item.label}-${item.href}`}
-                    href={item.href}
-                  >
-                    <span>{item.label}</span>
-                    <LinkCue />
-                  </Link>
-                )
-              })}
-            </div>
-          ))}
+        <div className="mega-menu-intro">
+          <span>{menu.label}</span>
+          <h2>{menu.heading}</h2>
+          <p>{menu.intro}</p>
+          <Link className="mega-menu-overview" href={menu.href}>{menu.overviewLabel}</Link>
         </div>
 
-        {menu.featured && (
-          <Link
-            className={`header-dropdown-featured ${isCurrentLink(pathname, menu.featured.href) ? "is-current" : ""}`}
-            aria-current={isCurrentLink(pathname, menu.featured.href) ? "page" : undefined}
-            href={menu.featured.href}
-          >
-            <span>
-              <small>Overview</small>
-              <strong>{menu.featured.label}</strong>
-            </span>
-            <LinkCue />
+        <div className="mega-menu-routes">
+          {menu.routes.map(item => {
+            const current = isCurrentLink(pathname, item.href)
+            return (
+              <Link
+                className={`mega-menu-route ${current ? "is-current" : ""}`}
+                aria-current={current ? "page" : undefined}
+                key={`${menu.id}-${item.label}`}
+                href={item.href}
+              >
+                <strong>{item.label}</strong>
+                <span>{item.description}</span>
+              </Link>
+            )
+          })}
+        </div>
+
+        <aside className="mega-menu-aside">
+          <Link className="mega-menu-visual" href={menu.routes[0].href}>
+            <img src={menu.image} alt={menu.imageAlt}/>
+            <span>{menu.imageLabel}</span>
           </Link>
-        )}
+          <div className="mega-menu-secondary" aria-label={`${menu.label} related services`}>
+            {menu.secondary.map(item => <Link key={`${menu.id}-${item.label}`} href={item.href}>{item.label}</Link>)}
+          </div>
+          <Link className="button button-light mega-menu-cta" href={menu.cta.href} data-cta="quote" data-source-page={`navigation:${menu.id}`}>{menu.cta.label}</Link>
+        </aside>
       </div>
     </div>
   )
@@ -81,7 +75,6 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const [renderMobileNav, setRenderMobileNav] = useState(false)
   const [openMobileSection, setOpenMobileSection] = useState<string | null>(null)
-  const cta = getPageCtaContext(pathname)
 
   const activeMenuId = useMemo(() => {
     const matches = headerNavMenus.flatMap(menu =>
@@ -132,12 +125,8 @@ export default function Header() {
 
   const toggleMobileNavigation = () => {
     setOpen(current => {
-      if (current) {
-        setOpenMobileSection(null)
-        return false
-      }
-      setOpenMobileSection(null)
-      return true
+      if (current) setOpenMobileSection(null)
+      return !current
     })
   }
 
@@ -164,11 +153,11 @@ export default function Header() {
         <div className="header-actions">
           <Link
             className="button button-light button-small header-quote-button"
-            href={cta.href}
+            href="/get-quote#quote-form"
             data-cta="quote"
             data-source-page={`header:${pathname}`}
           >
-            {cta.compactLabel}
+            Book a Site Survey
           </Link>
         </div>
 
@@ -205,39 +194,36 @@ export default function Header() {
                   <span className="mobile-nav-chevron" aria-hidden="true" />
                 </button>
                 <div id={panelId} className="mobile-nav-accordion-panel">
-                  <div className="mobile-nav-accordion-inner">
-                    {menu.groups.map((group, groupIndex) => (
-                      <div className="mobile-nav-subgroup" key={`${menu.id}-mobile-${groupIndex}`}>
-                        {group.heading && <span className="mobile-nav-subheading">{group.heading}</span>}
-                        {group.items.map(item => {
-                          const current = isCurrentLink(pathname, item.href)
-                          return (
-                            <Link
-                              className={current ? "is-current" : undefined}
-                              aria-current={current ? "page" : undefined}
-                              onClick={closeMobileNavigation}
-                              key={`${menu.id}-${item.label}-${item.href}`}
-                              href={item.href}
-                            >
-                              <span>{item.label}</span>
-                              <LinkCue />
-                            </Link>
-                          )
-                        })}
-                      </div>
-                    ))}
-
-                    {menu.featured && (
-                      <Link
-                        className={`mobile-nav-featured ${isCurrentLink(pathname, menu.featured.href) ? "is-current" : ""}`}
-                        aria-current={isCurrentLink(pathname, menu.featured.href) ? "page" : undefined}
-                        onClick={closeMobileNavigation}
-                        href={menu.featured.href}
-                      >
-                        <span><small>Overview</small><strong>{menu.featured.label}</strong></span>
-                        <LinkCue />
-                      </Link>
-                    )}
+                  <div className="mobile-nav-accordion-inner mobile-mega-menu">
+                    <div className="mobile-mega-intro">
+                      <h2>{menu.heading}</h2>
+                      <p>{menu.intro}</p>
+                    </div>
+                    <div className="mobile-mega-visual"><img src={menu.image} alt={menu.imageAlt}/><span>{menu.imageLabel}</span></div>
+                    <div className="mobile-mega-routes">
+                      {menu.routes.map(item => {
+                        const current = isCurrentLink(pathname, item.href)
+                        return (
+                          <Link
+                            className={current ? "is-current" : undefined}
+                            aria-current={current ? "page" : undefined}
+                            onClick={closeMobileNavigation}
+                            key={`${menu.id}-${item.label}`}
+                            href={item.href}
+                          >
+                            <strong>{item.label}</strong>
+                            <span>{item.description}</span>
+                          </Link>
+                        )
+                      })}
+                    </div>
+                    <div className="mobile-mega-secondary">
+                      {menu.secondary.map(item => <Link onClick={closeMobileNavigation} key={`${menu.id}-secondary-${item.label}`} href={item.href}>{item.label}</Link>)}
+                    </div>
+                    <div className="mobile-mega-actions">
+                      <Link onClick={closeMobileNavigation} className="mobile-mega-overview" href={menu.href}>{menu.overviewLabel}</Link>
+                      <Link onClick={closeMobileNavigation} className="button button-light" href={menu.cta.href} data-cta="quote" data-source-page={`mobile-navigation:${menu.id}`}>{menu.cta.label}</Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -255,11 +241,11 @@ export default function Header() {
             <Link
               onClick={closeMobileNavigation}
               className="button button-light"
-              href={cta.href}
+              href="/get-quote#quote-form"
               data-cta="quote"
               data-source-page={`mobile-menu:${pathname}`}
             >
-              {cta.fullLabel}
+              Book a Site Survey
             </Link>
           </div>
         </nav>

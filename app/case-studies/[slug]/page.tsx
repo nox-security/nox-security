@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { caseStudies } from "@/lib/content"
-import { Breadcrumbs, ContactActions, ConversionPanel, JsonLd, SectionHeading, TrustStrip } from "@/components/marketing"
+import { Breadcrumbs, CompleteSystem, ContactActions, ConversionPanel, JsonLd, OngoingSupportStrip, SectionHeading, TrustStrip } from "@/components/marketing"
 import { pageMetadata, site } from "@/lib/site"
 
 export function generateStaticParams() {
@@ -16,6 +16,40 @@ function relatedRoute(project: (typeof caseStudies)[number]) {
   if (value.includes("residential") || value.includes("home") || value.includes("eufy")) return { service: { href: "/residential", label: "Residential Security" }, guide: { href: "/blog/how-many-cctv-cameras-does-a-house-need", label: "How many CCTV cameras does a house need?" }, cta: "Discuss My Property" }
   if (value.includes("perimeter")) return { service: { href: "/commercial/yard-perimeter-security", label: "Yard & Perimeter Protection" }, guide: { href: "/blog/can-an-alarm-protect-a-garage-or-outbuilding", label: "Can an alarm protect a garage or outbuilding?" }, cta: "Discuss Perimeter Protection" }
   return { service: { href: "/commercial", label: "Commercial Security" }, guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" }, cta: "Discuss a Similar Project" }
+}
+
+function projectConnectedServices(project: (typeof caseStudies)[number]) {
+  const value = `${project.category} ${project.systems.join(" ")} ${project.title}`.toLowerCase()
+
+  if (value.includes("fire")) return [
+    { title: "Fire Alarm Monitoring", text: "Add professional signalling and an agreed escalation route where the maintained system and premises are suitable.", href: "/service-plans/fire-alarm-monitoring" },
+    { title: "Fire Alarm Servicing", text: "Keep testing, records, defects and planned service dates connected after installation.", href: "/service-plans/fire-alarm-servicing" },
+    { title: "Fire Compliance Packages", text: "Coordinate fire alarm, emergency-lighting and agreed compliance visits under one plan.", href: "/service-plans/fire-compliance" },
+  ]
+
+  if (value.includes("perimeter") || value.includes("yard")) return [
+    { title: "CCTV", text: "Add recorded views around the approaches and areas protected by outdoor detection.", href: "/commercial/cctv" },
+    { title: "Intruder Alarm Monitoring", text: "Connect suitable alarm events to professional signal handling and agreed escalation.", href: "/service-plans/alarm-monitoring" },
+    { title: "Integrated Site Security", text: "Bring perimeter detection, CCTV, intruder protection and support into one site plan.", href: "/commercial/integrated-fire-security" },
+  ]
+
+  if (value.includes("cctv") && (value.includes("commercial") || value.includes("industrial") || value.includes("warehouse") || value.includes("hospitality") || value.includes("estate") || value.includes("farm"))) return [
+    { title: "CCTV Maintenance", text: "Keep image quality, recording, storage and remote access checked over time.", href: "/service-plans/cctv-maintenance" },
+    { title: "Intruder Detection", text: "Add proactive detection around entrances, internal areas and vulnerable parts of the site.", href: "/commercial/intruder-alarms" },
+    { title: "Perimeter Protection", text: "Provide earlier warning around yards, approaches and external boundaries.", href: "/commercial/yard-perimeter-security" },
+  ]
+
+  if (value.includes("residential") || value.includes("home") || value.includes("eufy")) return [
+    { title: "Intruder Alarm Monitoring", text: "Move beyond app alerts with professional signal handling and agreed escalation.", href: "/service-plans/alarm-monitoring" },
+    { title: "Home CCTV", text: "Add useful recorded views around entrances, driveways and external areas.", href: "/systems/home-cctv" },
+    { title: "Perimeter Protection", text: "Create earlier warning around driveways, gardens, garages and outbuildings.", href: "/systems/perimeter-protection" },
+  ]
+
+  return [
+    { title: "Planned Maintenance", text: "Keep the installed system tested, documented and ready for future changes.", href: "/service-plans" },
+    { title: "System Monitoring", text: "Review suitable professional monitoring and agreed response options.", href: "/service-plans/alarm-monitoring" },
+    { title: "Integrated Site Security", text: "Coordinate fire, CCTV, intruder and ongoing support around one site strategy.", href: "/commercial/integrated-fire-security" },
+  ]
 }
 
 
@@ -50,6 +84,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const related = relatedRoute(project)
   const area = projectArea(project)
   const caseFaqs = project.faq ?? []
+  const connectedServices = projectConnectedServices(project)
+  const supportContext = `${project.category} ${project.systems.join(" ")}`.toLowerCase().includes("fire") ? "fire" : `${project.category} ${project.systems.join(" ")}`.toLowerCase().includes("residential") ? "home" : "commercial"
 
   const schema = {
     "@context": "https://schema.org",
@@ -126,6 +162,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     </div></section>
 
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Completed outcome" title={`What was delivered at ${project.location}`} text={project.outcome ?? project.delivery}/><p className="lead-small">{project.localContext ?? `A similar project in ${project.location} should begin with a site survey covering access, existing equipment, required coverage and ongoing support.`}</p><div className="related-links"><Link href={area.href}>{area.label} →</Link><Link href={related.service.href}>{related.service.label} →</Link><Link href={related.guide.href}>{related.guide.label} →</Link><Link href="/case-studies">More NOX projects →</Link></div></div><aside className="dark-panel"><h3>Preparing a similar quotation</h3><p>Share the property type, postcode, entrances or areas to cover, existing system details, known faults, approximate scale and preferred timescale. Photographs or plans can help define the correct survey.</p><ContactActions primaryLabel={related.cta} compact serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-outcome`}/></aside></div></section>
+
+    <OngoingSupportStrip context={supportContext}/>
+    <CompleteSystem items={connectedServices}/>
 
     {!!caseFaqs.length && <section className="section"><div className="container"><SectionHeading eyebrow="Project questions" title={`Questions about similar ${project.category.toLowerCase()} work`}/><div className="faq-list">{caseFaqs.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>}
 

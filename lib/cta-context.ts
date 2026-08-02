@@ -31,12 +31,14 @@ export function getPageCtaContext(pathname: string): PageCtaContext {
     path.includes("fire-extinguisher")
 
   if (fireRoute) {
+    const monitoring = path.includes("monitoring")
+    const servicing = path.includes("servic")
     return {
-      compactLabel: "Fire Survey",
-      fullLabel: "Arrange a Fire Survey",
-      href: quoteHref("Fire Alarms & Compliance", path.includes("servic") ? "Servicing" : "Installation", "Commercial"),
+      compactLabel: monitoring ? "Fire Monitoring" : servicing ? "Fire Service" : "Fire Survey",
+      fullLabel: monitoring ? "Discuss Fire Alarm Monitoring" : servicing ? "Request a Fire Service Visit" : "Arrange a Fire Survey",
+      href: quoteHref("Fire Alarms & Compliance", monitoring ? "Monitoring" : servicing ? "Servicing" : "Installation", "Commercial"),
       serviceCategory: "Fire Alarms & Compliance",
-      enquiryType: path.includes("servic") ? "Servicing" : "Installation",
+      enquiryType: monitoring ? "Monitoring" : servicing ? "Servicing" : "Installation",
     }
   }
 

@@ -51,14 +51,14 @@ const pages: Record<string, FireProjectPage> = {
   "multi-site-fire-alarm-systems": {
     title: "Multi-Site Fire Alarm Systems & Servicing",
     eyebrow: "Multi-site fire alarm programmes",
-    intro: "NOX helps organisations plan fire alarm installation, takeover, servicing and remedial work across several premises in Chesterfield, Sheffield, Derbyshire and the wider operating area. Each building keeps its own fire strategy, records and system requirements, while the estate receives a clearer programme, reporting structure and route for prioritising work.",
+    intro: "NOX helps organisations plan fire alarm installation, takeover, servicing and remedial work across several premises in Chesterfield, Sheffield, Derbyshire and the wider operating area. Each building keeps its own fire strategy, records and system requirements, while the estate receives a coordinated programme, reporting structure and way to prioritise work.",
     metaTitle: "Multi-Site Fire Alarm Systems & Servicing | NOX",
     metaDescription: "Multi-site fire alarm installation, servicing, takeovers and remedial programmes across Chesterfield, Sheffield and Derbyshire with clear site records and coordinated reporting.",
     image: "/images/projects/bottle-thyme-vehicles.jpg",
     imageAlt: "NOX Fire and Security vehicles supporting a coordinated multi-site fire alarm programme",
     imagePosition: "center 50%",
     requirementTitle: "Consistency across the estate without treating every building as identical",
-    requirementText: "A useful multi-site programme standardises the information, reporting and service route where practical, but still respects the occupancy, layout, fire strategy, existing panel, device quantities and operational restrictions at each address. The goal is clearer control of the estate, not a copied specification that ignores individual sites.",
+    requirementText: "A useful multi-site programme standardises the information, reporting and service route where practical, but still respects the occupancy, layout, fire strategy, existing panel, device quantities and operational restrictions at each address. The goal is better control of the estate, not a copied specification that ignores individual sites.",
     included: [
       "Estate-level discovery and site schedule",
       "Individual premises surveys and system records",
@@ -104,7 +104,7 @@ const pages: Record<string, FireProjectPage> = {
     proof: [
       { image: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Industrial premises receiving a NOX fire alarm installation", caption: "Industrial premises with operational access, warning and evacuation requirements.", position: "center 72%" },
       { image: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm panel and zone plan", caption: "Modern addressable control, clear zoning and a usable handover at each site.", position: "center 48%" },
-      { image: "/images/v4-10/fire-alarm-servicing.jpeg", alt: "Existing commercial fire alarm panel during servicing", caption: "Suitable existing systems can be inspected, serviced and brought into a clearer support programme.", position: "center 40%" },
+      { image: "/images/v4-10/fire-alarm-servicing.jpeg", alt: "Existing commercial fire alarm panel during servicing", caption: "Suitable existing systems can be inspected, serviced and brought into a planned support programme.", position: "center 40%" },
       { image: "/images/revisions/fire-safety-logbook.jpg", alt: "Fire alarm records and logbook", caption: "Records, service outcomes and remedial priorities remain visible to the people managing the estate.", position: "center" },
     ],
     faq: [
@@ -263,6 +263,12 @@ export default async function FireProjectDetailPage({ params }: { params: Promis
 
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Quotation factors" title="What affects the project scope and price" text="A useful proposal separates known requirements from assumptions and makes clear where a site survey or records review is still needed."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare the enquiry</h3><p>Share property addresses, system photographs, available drawings or records, known faults, project timescales, operating hours and the outcome the business needs.</p><Link className="text-link" href="/blog/what-information-is-needed-for-a-fire-alarm-quote">What information is needed for a fire alarm quote? →</Link></aside></div></section>
 
+    <OngoingSupportStrip context="fire"/>
+    <CompleteSystem items={[
+      { title: "Fire Alarm Monitoring", text: "Add professional signalling and agreed escalation for suitable maintained fire systems.", href: "/service-plans/fire-alarm-monitoring" },
+      { title: "Planned Fire Alarm Servicing", text: "Keep inspections, records, defects and remedial actions visible across the programme.", href: "/service-plans/fire-alarm-servicing" },
+      { title: "Fire Compliance Packages", text: "Coordinate agreed fire-alarm, emergency-lighting and wider compliance support.", href: "/service-plans/fire-compliance" },
+    ]}/>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Relevant NOX work" title="Commercial fire, CCTV and coordinated installation projects" text="These projects show the equipment, site conditions and installation standards that support the wider service approach. They are not presented as one customer's multi-site estate unless the case study states that directly."/><CaseStudyGrid slugs={page.cases}/></div></section>
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Planning guides" title="Useful answers before a site survey or programme review" text="Prepare the right system information, understand the separate service requirements and make the first conversation more productive."/><GuideLinks slugs={page.guides}/></div></section>

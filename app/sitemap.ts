@@ -5,7 +5,7 @@ import { site } from "@/lib/site"
 import { landingPageList } from "@/lib/landing"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const releaseDate = new Date("2026-08-01T00:00:00.000Z")
+  const releaseDate = new Date("2026-08-02T00:00:00.000Z")
   const core = [
     "",
     "/residential",
@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/fire-compliance/integrated-fire-cctv-systems",
     "/systems/fire-safety",
     "/service-plans/fire-alarm-servicing",
+    "/service-plans/fire-alarm-monitoring",
     "/services/fire-alarm-installation-chesterfield",
     "/services/fire-alarm-servicing-chesterfield",
     "/systems/intrusion-alarms",
