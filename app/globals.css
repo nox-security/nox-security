@@ -4745,3 +4745,76 @@ p { color: var(--muted); }
     padding: 14px 4px 0;
   }
 }
+
+
+/* v4.13.37 dropdown legibility correction
+   Keep the simplified journeys, but stack route descriptions beneath their
+   titles so every option remains readable at normal laptop widths. */
+@media (min-width: 1181px) {
+  .header-dropdown-panel,
+  .header-dropdown-panel-home,
+  .header-dropdown-panel-business,
+  .header-dropdown-panel-fire,
+  .header-dropdown-panel-support {
+    width: min(940px, calc(100vw - 54px));
+    grid-template-columns: 220px minmax(330px, 1fr) 205px;
+    gap: 27px;
+    padding: 26px 28px 27px;
+  }
+
+  .header-dropdown-panel .mega-menu-intro h2 {
+    font-size: clamp(26px, 1.85vw, 31px);
+    line-height: 1.04;
+  }
+
+  .header-dropdown-panel .mega-menu-routes {
+    min-width: 0;
+  }
+
+  .header-dropdown-panel .mega-menu-route {
+    min-width: 0;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    padding: 13px 15px 13px 16px;
+  }
+
+  .header-dropdown-panel .mega-menu-route strong,
+  .header-dropdown-panel .mega-menu-route span {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .header-dropdown-panel .mega-menu-route strong {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .header-dropdown-panel .mega-menu-route span {
+    font-size: 10.5px;
+    line-height: 1.42;
+  }
+
+  .header-dropdown-panel .mega-menu-aside {
+    gap: 12px;
+  }
+
+  .header-dropdown-panel .mega-menu-visual {
+    height: 128px;
+  }
+
+  .header-dropdown-panel .mega-menu-secondary a {
+    padding: 6px 0;
+    font-size: 9.5px;
+  }
+
+  .header-dropdown-panel .mega-menu-cta {
+    min-height: 42px;
+  }
+}

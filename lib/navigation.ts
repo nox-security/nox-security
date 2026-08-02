@@ -157,7 +157,6 @@ export const headerNavMenus: HeaderNavMenu[] = [
 export const headerDirectNavItems: NavItem[] = [
   { label: "Projects", href: "/case-studies" },
   { label: "About", href: "/about-us" },
-  { label: "Contact", href: "/contact" },
 ]
 
 export const residentialFooterItems: NavItem[] = [
