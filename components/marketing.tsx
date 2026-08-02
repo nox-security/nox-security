@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { areas, caseStudies, verifiedReviews, type PlanPageData, type ServicePageData, type VerifiedReview } from "@/lib/content"
+import { areas, caseStudies, verifiedReviews, type LinkItem, type PlanPageData, type ServicePageData, type VerifiedReview } from "@/lib/content"
 import { blogPosts } from "@/lib/blog"
 import { site } from "@/lib/site"
 import { localLandingPages } from "@/lib/landing"
