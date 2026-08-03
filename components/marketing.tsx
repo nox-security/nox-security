@@ -530,7 +530,7 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     <JsonLd data={serviceSchema} />
     <JsonLd data={breadcrumbSchema} />
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Systems", href: "/systems" }, { label: data.title }]} />
-    <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt}>
+    <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt} imagePosition={data.imagePosition}>
       <ContactActions primaryLabel={data.ctaLabel ?? "Request a Quotation"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/>
     </PageHero>
     <TrustStrip variant={data.audience === "Residential" ? "residential" : data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment" ? "fire" : "commercial"} />
@@ -598,7 +598,7 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
   return <>
     <JsonLd data={faqSchema}/><JsonLd data={serviceSchema}/><JsonLd data={breadcrumbSchema}/>
     <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service & Monitoring", href: "/service-plans" }, { label: data.title }]} />
-    <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt}>
+    <PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro} image={data.image} imageAlt={data.imageAlt} imagePosition={data.imagePosition}>
       <ContactActions primaryLabel={data.ctaLabel ?? (isInstallationPackage ? "Get a Home Security Quote" : "Get a Maintenance Quote")} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={isInstallationPackage ? "Installation" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/>
     </PageHero>
     <TrustStrip variant={trustVariant}/>

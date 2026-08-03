@@ -13,6 +13,7 @@ export type ServicePageData = {
   intro: string
   image: string
   imageAlt: string
+  imagePosition?: string
   problemTitle: string
   problemText: string
   benefits: string[]
@@ -44,6 +45,7 @@ export type PlanPageData = {
   intro: string
   image: string
   imageAlt: string
+  imagePosition?: string
   residentialPrice?: string
   commercialPrice?: string
   priceNote?: string
