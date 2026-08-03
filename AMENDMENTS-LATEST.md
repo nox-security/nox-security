@@ -1,5 +1,10 @@
 # Latest amendments
 
+- Replaced the repeated homepage customer-route block with a premium four-stage NOX journey: survey, design, installation and ongoing support.
+- Kept Protect My Home, Protect My Business, Fire Alarms & Compliance and Service & Monitoring as the single direct route set within the homepage hero.
+- Removed the duplicated homepage journey paragraph and repeated route descriptions.
+- Restored the industrial Dronfield perimeter project image with the NOX van as the main Yard & Perimeter Protection hero.
+
 - Removed “Premium” from the homepage title while retaining premium residential positioning in supporting proof points.
 - Replaced the residential audience image with a real NOX residential installation.
 - Rebuilt the broad six-card services section into clearer Residential, Commercial and ongoing-support routes.

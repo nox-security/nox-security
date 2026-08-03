@@ -11,11 +11,11 @@ export const metadata: Metadata = pageMetadata(
   { image: "/images/image-refresh/homepage-hero-cameras.jpg", imageAlt: "NOX CCTV camera range product hero image" },
 )
 
-const journeyRoutes = [
-  { number: "01", eyebrow: "Residential", title: "Protect My Home", text: "CCTV, Ajax alarms, perimeter detection and smart security designed around the home, driveway, garage and outbuildings.", href: "/residential", link: "Explore Home Security" },
-  { number: "02", eyebrow: "Commercial", title: "Protect My Business", text: "Commercial CCTV, intruder protection, industrial security and coordinated systems for working premises and larger projects.", href: "/commercial", link: "Explore Commercial Security" },
-  { number: "03", eyebrow: "Life safety", title: "Fire Alarms & Compliance", text: "Fire alarm installation and servicing, emergency lighting, risk-assessment support and coordinated annual compliance planning.", href: "/fire-compliance", link: "Explore Fire & Compliance" },
-  { number: "04", eyebrow: "Continued support", title: "Maintain & Monitor", text: "Monitoring, servicing, takeovers, fault support and planned maintenance for new or existing systems.", href: "/service-plans", link: "Explore Service & Monitoring" },
+const deliveryJourney = [
+  { number: "01", eyebrow: "Understand", title: "Survey the property", text: "We start with the premises, access points, existing equipment, risks and the way the system needs to be used." },
+  { number: "02", eyebrow: "Design", title: "Build the right system", text: "CCTV, intruder, fire and support options are brought into one clear proposal with the reasons behind the design." },
+  { number: "03", eyebrow: "Deliver", title: "Install and hand over", text: "Equipment placement, cable routes, testing, user setup and practical handover are treated as part of the finished job." },
+  { number: "04", eyebrow: "Continue", title: "Maintain, monitor and expand", text: "Servicing, monitoring, repairs and future additions remain connected through the same local point of contact." },
 ]
 
 const residentialRoutes = [
@@ -93,10 +93,13 @@ export default function HomePage() {
     <ReviewSummaryStrip label="46+ Google Reviews" />
     <TrustStrip variant="general" reviewTitle="46+ Google Reviews" />
 
-    <section className="section home-customer-journeys"><div className="container">
-      <SectionHeading eyebrow="Choose the right starting point" title="Start with the property or support you need" text="Start with the property or situation. Each overview page explains the options, while direct service links remain available for customers who already know what they need."/>
-      <div className="home-journey-grid">
-        {journeyRoutes.map(item => <article className="home-journey-card" key={item.title}><span className="home-journey-number">{item.number}</span><span className="eyebrow">{item.eyebrow}</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>{item.link} →</Link></article>)}
+    <section className="section home-delivery-journey"><div className="container">
+      <div className="home-delivery-header">
+        <div><span className="eyebrow">The NOX approach</span><h2>One clear journey from survey to ongoing support</h2></div>
+        <Link className="text-link" href="/about-us">How NOX works →</Link>
+      </div>
+      <div className="home-delivery-grid">
+        {deliveryJourney.map(item => <article className="home-delivery-step" key={item.title}><div className="home-delivery-step-top"><span className="home-delivery-number">{item.number}</span><span className="eyebrow">{item.eyebrow}</span></div><h3>{item.title}</h3><p>{item.text}</p></article>)}
       </div>
     </div></section>
 
