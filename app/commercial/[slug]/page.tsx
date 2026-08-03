@@ -371,30 +371,36 @@ const commercialConnectedServices: Record<string, { title: string; text: string;
     { title: "Intruder Detection", text: "Add internal and external detection around vulnerable areas and operating routines.", href: "/commercial/intruder-alarms" },
     { title: "Perimeter Protection", text: "Detect activity around yards, compounds and approaches before it reaches the building.", href: "/commercial/yard-perimeter-security" },
     { title: "CCTV Maintenance", text: "Keep cameras, recording, storage and remote access checked over time.", href: "/service-plans/cctv-maintenance" },
+    { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, perimeter, fire and continued support under one site strategy.", href: "/commercial/integrated-fire-security" },
   ],
   "intruder-alarms": [
     { title: "Alarm Monitoring", text: "Add professional signal handling and an agreed escalation route.", href: "/service-plans/alarm-monitoring" },
+    { title: "Alarm Maintenance", text: "Keep devices, communication, batteries and system health checked over time.", href: "/service-plans/alarm-maintenance" },
     { title: "Commercial CCTV", text: "Add recorded views and evidence around entrances, stock and operational areas.", href: "/commercial/cctv" },
     { title: "Perimeter Protection", text: "Create earlier warning around external approaches and boundaries.", href: "/commercial/yard-perimeter-security" },
   ],
   "industrial-warehouse-security": [
     { title: "Commercial CCTV", text: "Plan evidence and oversight across loading areas, yards and working zones.", href: "/commercial/cctv" },
     { title: "Alarm Monitoring", text: "Add professional signal handling outside operating hours.", href: "/service-plans/alarm-monitoring" },
+    { title: "Planned Maintenance", text: "Coordinate recurring inspections, faults and renewal dates across the site.", href: "/service-plans/total-security" },
     { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, perimeter, fire and continued support.", href: "/commercial/integrated-fire-security" },
   ],
   "yard-perimeter-security": [
     { title: "Commercial CCTV", text: "Verify activity around the boundary with useful recorded views.", href: "/commercial/cctv" },
     { title: "Commercial Intruder Alarms", text: "Connect outdoor warning with internal protection and controlled arming areas.", href: "/commercial/intruder-alarms" },
     { title: "Alarm Monitoring", text: "Add an agreed professional response route where suitable.", href: "/service-plans/alarm-monitoring" },
+    { title: "Integrated Site Security", text: "Coordinate perimeter, CCTV, intruder and ongoing support around the whole site.", href: "/commercial/integrated-fire-security" },
   ],
   "multi-site-security": [
     { title: "Integrated Site Security", text: "Create a consistent protection and support strategy across several premises.", href: "/commercial/integrated-fire-security" },
     { title: "Ongoing Support Packages", text: "Coordinate maintenance, monitoring and renewal dates across the estate.", href: "/service-plans/total-security" },
+    { title: "System Takeovers", text: "Assess inherited sites, access, records and supportability before standardising the estate.", href: "/services/security-system-takeover" },
     { title: "Fire Compliance Packages", text: "Bring agreed fire-system and emergency-lighting visits into one programme.", href: "/service-plans/fire-compliance" },
   ],
   "integrated-fire-security": [
     { title: "Intruder Alarm Monitoring", text: "Add agreed signal handling and escalation outside operating hours.", href: "/service-plans/alarm-monitoring" },
     { title: "Fire Alarm Monitoring", text: "Connect suitable maintained fire systems to professional signalling.", href: "/service-plans/fire-alarm-monitoring" },
+    { title: "Fire Compliance Packages", text: "Coordinate fire servicing, lighting tests and annual dates within the wider site plan.", href: "/service-plans/fire-compliance" },
     { title: "Ongoing Support Packages", text: "Coordinate planned servicing, maintenance and future changes under one arrangement.", href: "/service-plans/total-security" },
   ],
 }

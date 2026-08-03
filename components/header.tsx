@@ -39,6 +39,7 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
         </div>
 
         <div className="mega-menu-routes">
+          <span className="mega-menu-column-label">Core services</span>
           {menu.routes.map(item => {
             const current = isCurrentLink(pathname, item.href)
             return (
@@ -56,14 +57,15 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
         </div>
 
         <aside className="mega-menu-aside">
+          <span className="mega-menu-column-label">Support & next steps</span>
+          <div className="mega-menu-secondary" aria-label={`${menu.label} related services`}>
+            {menu.secondary.map(item => <Link key={`${menu.id}-${item.label}`} href={item.href}>{item.label}</Link>)}
+          </div>
           <Link className="mega-menu-visual" href={menu.routes[0].href}>
             <img src={menu.image} alt={menu.imageAlt}/>
             <span>{menu.imageLabel}</span>
           </Link>
-          <div className="mega-menu-secondary" aria-label={`${menu.label} related services`}>
-            {menu.secondary.map(item => <Link key={`${menu.id}-${item.label}`} href={item.href}>{item.label}</Link>)}
-          </div>
-          <Link className="button button-light mega-menu-cta" href={menu.cta.href} data-cta="quote" data-source-page={`navigation:${menu.id}`}>{menu.cta.label}</Link>
+          <Link className="button button-light mega-menu-cta premium-cta" href={menu.cta.href} data-cta="quote" data-source-page={`navigation:${menu.id}`}>{menu.cta.label}</Link>
         </aside>
       </div>
     </div>
@@ -135,7 +137,7 @@ export default function Header() {
   }
 
   return (
-    <header className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.39" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -144,7 +146,7 @@ export default function Header() {
 
         <nav className="desktop-nav header-primary-nav" aria-label="Main navigation">
           {headerNavMenus.map(menu => <DesktopDropdown key={menu.id} menu={menu} active={activeMenuId === menu.id} pathname={pathname} />)}
-          {headerDirectNavItems.map(item => {
+          {headerDirectNavItems.filter(item => item.href !== "/contact").map(item => {
             const active = matchesPrefix(pathname, item.href)
             return <Link className={active ? "is-active" : undefined} aria-current={active ? "page" : undefined} key={item.href} href={item.href}>{item.label}</Link>
           })}
@@ -152,7 +154,7 @@ export default function Header() {
 
         <div className="header-actions">
           <Link
-            className="button button-light button-small header-quote-button"
+            className="button button-light button-small header-quote-button premium-cta"
             href="/get-quote#quote-form"
             data-cta="quote"
             data-source-page={`header:${pathname}`}
@@ -222,7 +224,7 @@ export default function Header() {
                     </div>
                     <div className="mobile-mega-actions">
                       <Link onClick={closeMobileNavigation} className="mobile-mega-overview" href={menu.href}>{menu.overviewLabel}</Link>
-                      <Link onClick={closeMobileNavigation} className="button button-light" href={menu.cta.href} data-cta="quote" data-source-page={`mobile-navigation:${menu.id}`}>{menu.cta.label}</Link>
+                      <Link onClick={closeMobileNavigation} className="button button-light premium-cta" href={menu.cta.href} data-cta="quote" data-source-page={`mobile-navigation:${menu.id}`}>{menu.cta.label}</Link>
                     </div>
                   </div>
                 </div>
@@ -231,7 +233,7 @@ export default function Header() {
           })}
 
           <div className="mobile-nav-direct-links">
-            {headerDirectNavItems.map(item => {
+            {headerDirectNavItems.filter(item => item.href !== "/contact").map(item => {
               const active = matchesPrefix(pathname, item.href)
               return <Link className={active ? "is-active" : undefined} aria-current={active ? "page" : undefined} onClick={closeMobileNavigation} key={item.href} href={item.href}>{item.label}</Link>
             })}
@@ -240,7 +242,7 @@ export default function Header() {
           <div className="mobile-nav-actions">
             <Link
               onClick={closeMobileNavigation}
-              className="button button-light"
+              className="button button-light premium-cta"
               href="/get-quote#quote-form"
               data-cta="quote"
               data-source-page={`mobile-menu:${pathname}`}

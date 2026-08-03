@@ -276,34 +276,39 @@ export function CompleteSystem({ items, title = "Complete the system" }: { items
   if (!items.length) return null
   return <section className="section section-alt complete-system-section"><div className="container">
     <SectionHeading eyebrow="Related services" title={title} text="Choose the next service that strengthens the same system, site or maintenance plan."/>
-    <div className="complete-system-grid">{items.slice(0, 3).map(item => <Link href={item.href} key={item.href}><h3>{item.title}</h3><p>{item.text}</p><span>View service</span></Link>)}</div>
+    <div className="complete-system-grid">{items.slice(0, 4).map(item => <Link href={item.href} key={item.href}><h3>{item.title}</h3><p>{item.text}</p><span>View service</span></Link>)}</div>
   </div></section>
 }
 
 function connectedServicesForSystem(slug: string): ConnectedService[] {
   const routes: Record<string, ConnectedService[]> = {
     "fire-safety": [
+      { title: "Fire Alarm Servicing", text: "Keep inspection dates, records, defects and remedial actions visible after handover.", href: "/service-plans/fire-alarm-servicing" },
       { title: "Fire Alarm Monitoring", text: "Add professional signalling and an agreed response route where the system and premises are suitable.", href: "/service-plans/fire-alarm-monitoring" },
-      { title: "Planned Fire Alarm Servicing", text: "Keep inspection dates, records, defects and remedial actions visible after handover.", href: "/service-plans/fire-alarm-servicing" },
+      { title: "Fire Compliance Packages", text: "Coordinate agreed servicing, monitoring, lighting and annual dates under one arrangement.", href: "/service-plans/fire-compliance" },
       { title: "Emergency Lighting", text: "Coordinate escape-lighting installation and testing alongside the wider fire-safety plan.", href: "/systems/emergency-lighting" },
     ],
     "emergency-lighting": [
       { title: "Fire Alarm Servicing", text: "Coordinate fire-alarm and emergency-lighting visits where practical.", href: "/service-plans/fire-alarm-servicing" },
       { title: "Fire Alarm Monitoring", text: "Explore professional signalling for suitable commercial fire systems.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Fire Compliance Packages", text: "Bring agreed testing, servicing and records into one planned arrangement.", href: "/service-plans/fire-compliance" },
+      { title: "Lighting Servicing", text: "Keep monthly checks, annual duration tests, defects and remedial actions visible.", href: "/service-plans/emergency-lighting-servicing" },
     ],
     "cctv": [
       { title: "Intruder Detection", text: "Add detection around doors, internal areas and vulnerable parts of the site.", href: "/commercial/intruder-alarms" },
       { title: "Perimeter Protection", text: "Detect activity around yards, approaches and external boundaries before an incident reaches the building.", href: "/commercial/yard-perimeter-security" },
       { title: "CCTV Maintenance", text: "Keep image quality, recording, storage and remote access checked over time.", href: "/service-plans/cctv-maintenance" },
+      { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, fire and ongoing support under one site strategy.", href: "/commercial/integrated-fire-security" },
     ],
     "home-cctv": [
       { title: "Smart Intruder Alarms", text: "Connect camera coverage with internal detection and user control.", href: "/systems/intrusion-alarms" },
       { title: "Perimeter Protection", text: "Add earlier warning around driveways, gardens and outbuildings.", href: "/systems/perimeter-protection" },
+      { title: "Alarm Monitoring", text: "Add a professional response route beyond app notifications.", href: "/service-plans/alarm-monitoring" },
       { title: "CCTV Maintenance", text: "Keep cameras, recording and app access working as expected.", href: "/service-plans/cctv-maintenance" },
     ],
     "intrusion-alarms": [
       { title: "Alarm Monitoring", text: "Move beyond app alerts with professional signal handling and agreed escalation.", href: "/service-plans/alarm-monitoring" },
+      { title: "Alarm Maintenance", text: "Keep devices, batteries, communication and system health checked over time.", href: "/service-plans/alarm-maintenance" },
       { title: "CCTV", text: "Add useful recorded views around entrances, driveways and key areas.", href: "/systems/home-cctv" },
       { title: "Perimeter Protection", text: "Create earlier warning before activity reaches the building.", href: "/systems/perimeter-protection" },
     ],
@@ -311,21 +316,25 @@ function connectedServicesForSystem(slug: string): ConnectedService[] {
       { title: "CCTV", text: "Verify activity around the protected approach with recorded views.", href: "/systems/cctv" },
       { title: "Intruder Alarms", text: "Connect outdoor warning with internal detection and controlled arming areas.", href: "/systems/intrusion-alarms" },
       { title: "Alarm Monitoring", text: "Add professional signal handling where the system is suitable.", href: "/service-plans/alarm-monitoring" },
+      { title: "Ongoing Support", text: "Keep perimeter devices, communication and wider alarm health checked over time.", href: "/service-plans/total-security" },
     ],
     "smart-home-cctv": [
       { title: "Smart Intruder Alarms", text: "Bring detection, user control and alerts into the same home-security plan.", href: "/systems/intrusion-alarms" },
       { title: "Home CCTV", text: "Compare app-led cameras with professionally recorded CCTV.", href: "/systems/home-cctv" },
       { title: "Alarm Monitoring", text: "Explore professional support beyond app notifications.", href: "/service-plans/alarm-monitoring" },
+      { title: "CCTV Maintenance", text: "Keep cameras, recording and app access working as expected.", href: "/service-plans/cctv-maintenance" },
     ],
     "fire-risk-assessment": [
       { title: "Fire Alarm Installation", text: "Turn identified alarm requirements into a properly planned system.", href: "/systems/fire-safety" },
       { title: "Fire Alarm Servicing", text: "Keep testing, records and defects visible after the system is in use.", href: "/service-plans/fire-alarm-servicing" },
+      { title: "Fire Alarm Monitoring", text: "Add professional signalling where the maintained system and premises are suitable.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Fire Compliance Packages", text: "Coordinate agreed fire-safety services and annual dates.", href: "/service-plans/fire-compliance" },
     ],
     "garages-outbuildings": [
       { title: "Intruder Alarms", text: "Connect detached areas to the wider alarm system.", href: "/systems/intrusion-alarms" },
       { title: "Home CCTV", text: "Add recorded views around vehicles, doors and approaches.", href: "/systems/home-cctv" },
       { title: "Perimeter Protection", text: "Provide earlier warning around separate buildings and boundaries.", href: "/systems/perimeter-protection" },
+      { title: "Alarm Monitoring", text: "Add a professional response route when detached buildings are unattended.", href: "/service-plans/alarm-monitoring" },
     ],
   }
   return routes[slug] ?? []
@@ -336,19 +345,23 @@ function connectedServicesForPlan(slug: string): ConnectedService[] {
     "alarm-monitoring": [
       { title: "Alarm Maintenance", text: "Keep the monitored system tested, healthy and supported.", href: "/service-plans/alarm-maintenance" },
       { title: "Intruder Alarm Installation", text: "Plan a suitable new alarm around the property and response required.", href: "/systems/intrusion-alarms" },
+      { title: "System Takeovers", text: "Assess access, faults and supportability before bringing an existing alarm into monitoring.", href: "/services/security-system-takeover" },
       { title: "Ongoing Support Packages", text: "Combine monitoring, planned servicing and selected maintenance under one arrangement.", href: "/service-plans/total-security" },
     ],
     "fire-alarm-monitoring": [
       { title: "Fire Alarm Servicing", text: "Keep the monitored fire system inspected, recorded and maintained.", href: "/service-plans/fire-alarm-servicing" },
       { title: "Emergency Lighting", text: "Coordinate wider life-safety installation and testing requirements.", href: "/systems/emergency-lighting" },
+      { title: "Repairs & Takeovers", text: "Assess existing equipment, faults, records and monitoring suitability before support begins.", href: "/services/security-system-takeover" },
       { title: "Fire Compliance Packages", text: "Bring agreed fire services, dates and records into one plan.", href: "/service-plans/fire-compliance" },
     ],
     "fire-alarm-servicing": [
       { title: "Fire Alarm Monitoring", text: "Add professional signalling and an agreed escalation route where suitable.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Emergency Lighting Servicing", text: "Coordinate testing visits where practical.", href: "/service-plans/emergency-lighting-servicing" },
+      { title: "Repairs & Takeovers", text: "Assess faults, records and existing equipment before accepting ongoing support.", href: "/services/security-system-takeover" },
       { title: "Fire Compliance Packages", text: "Combine agreed fire-safety services and renewal dates.", href: "/service-plans/fire-compliance" },
     ],
     "emergency-lighting-servicing": [
+      { title: "Emergency Lighting Installation", text: "Replace, extend or redesign the system where servicing identifies limitations.", href: "/systems/emergency-lighting" },
       { title: "Fire Alarm Servicing", text: "Coordinate alarm and emergency-lighting visits.", href: "/service-plans/fire-alarm-servicing" },
       { title: "Fire Alarm Monitoring", text: "Explore monitoring for suitable maintained fire systems.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Fire Compliance Packages", text: "Bring agreed testing and service dates together.", href: "/service-plans/fire-compliance" },
@@ -357,14 +370,17 @@ function connectedServicesForPlan(slug: string): ConnectedService[] {
       { title: "Commercial CCTV", text: "Upgrade or extend the system where maintenance identifies limitations.", href: "/commercial/cctv" },
       { title: "Intruder Detection", text: "Add proactive detection around the site.", href: "/commercial/intruder-alarms" },
       { title: "System Takeovers", text: "Assess access, condition and support for an existing installation.", href: "/services/security-system-takeover" },
+      { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, perimeter and continued support across the wider site.", href: "/commercial/integrated-fire-security" },
     ],
     "alarm-maintenance": [
       { title: "Alarm Monitoring", text: "Add professional signal handling to a suitable maintained system.", href: "/service-plans/alarm-monitoring" },
       { title: "Intruder Alarm Installation", text: "Replace or expand equipment where the existing system no longer fits.", href: "/systems/intrusion-alarms" },
       { title: "System Takeovers", text: "Assess access, faults and supportability before accepting ongoing responsibility.", href: "/services/security-system-takeover" },
+      { title: "Ongoing Support Packages", text: "Combine planned servicing, monitoring and selected maintenance under one arrangement.", href: "/service-plans/total-security" },
     ],
     "total-security": [
       { title: "Integrated Site Security", text: "Plan fire, CCTV, intruder and continued support as one commercial strategy.", href: "/commercial/integrated-fire-security" },
+      { title: "Multi-Site Security", text: "Standardise systems, permissions, maintenance and reporting across several premises.", href: "/commercial/multi-site-security" },
       { title: "Fire Compliance Packages", text: "Coordinate agreed fire-safety services and annual dates.", href: "/service-plans/fire-compliance" },
       { title: "System Takeovers", text: "Bring suitable existing systems into a supported arrangement.", href: "/services/security-system-takeover" },
     ],
@@ -372,53 +388,85 @@ function connectedServicesForPlan(slug: string): ConnectedService[] {
       { title: "Fire Alarm Monitoring", text: "Add professional signalling where the premises and maintained system are suitable.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Fire Alarm Servicing", text: "Keep inspection dates, records and defects under planned control.", href: "/service-plans/fire-alarm-servicing" },
       { title: "Emergency Lighting", text: "Coordinate installation, testing and remedial work.", href: "/systems/emergency-lighting" },
+      { title: "Lighting Servicing", text: "Keep monthly checks, annual duration tests and remedial actions within the same programme.", href: "/service-plans/emergency-lighting-servicing" },
     ],
   }
   return routes[slug] ?? []
 }
 
 function ServiceJourney({ slug }: { slug: string }) {
-  const content: Record<string, { eyebrow: string; title: string; text: string; links: LinkItem[] }> = {
+  type JourneyLink = LinkItem & { text: string }
+  const content: Record<string, { eyebrow: string; title: string; text: string; links: JourneyLink[] }> = {
     "fire-safety": {
       eyebrow: "After installation",
-      title: "Protect the system after installation",
-      text: "A fire alarm needs ongoing inspection, testing and clear responsibility after handover. NOX can combine the installation with planned servicing, professional monitoring, emergency-lighting support and a coordinated annual compliance package.",
-      links: [{ href: "/service-plans/fire-alarm-monitoring", label: "Explore Fire Monitoring" }, { href: "/service-plans/fire-compliance", label: "View Fire Compliance Packages" }],
+      title: "Turn the installation into a supported fire-safety plan",
+      text: "A fire alarm should lead naturally into planned servicing, professional monitoring where suitable, emergency-lighting support and one clear compliance package.",
+      links: [
+        { href: "/service-plans/fire-alarm-servicing", label: "Fire Alarm Servicing", text: "Planned testing, records, defects and remedial support." },
+        { href: "/service-plans/fire-alarm-monitoring", label: "Fire Alarm Monitoring", text: "Professional signalling and agreed escalation where suitable." },
+        { href: "/service-plans/fire-compliance", label: "Fire Compliance Packages", text: "Coordinate agreed services and annual dates under one plan." },
+        { href: "/systems/emergency-lighting", label: "Emergency Lighting", text: "Connect escape-lighting installation and testing to the wider plan." },
+      ],
     },
     "emergency-lighting": {
       eyebrow: "Coordinated maintenance",
-      title: "Bring your fire-safety maintenance together",
-      text: "Combine emergency-lighting testing with planned fire alarm servicing, monitoring and agreed compliance support through one local provider.",
-      links: [{ href: "/service-plans/fire-compliance", label: "View Fire Maintenance Packages" }, { href: "/service-plans/fire-alarm-monitoring", label: "Discuss Fire Monitoring" }],
+      title: "Bring emergency lighting and fire-alarm support together",
+      text: "Move from installation into annual testing, fire alarm servicing, monitoring and a coordinated maintenance package without splitting the responsibility across different providers.",
+      links: [
+        { href: "/service-plans/emergency-lighting-servicing", label: "Lighting Servicing", text: "Monthly checks, annual duration testing and remedial reporting." },
+        { href: "/service-plans/fire-alarm-servicing", label: "Fire Alarm Servicing", text: "Coordinate fire-alarm and lighting visits where practical." },
+        { href: "/service-plans/fire-alarm-monitoring", label: "Fire Alarm Monitoring", text: "Explore signalling for suitable maintained commercial systems." },
+        { href: "/service-plans/fire-compliance", label: "Maintenance Packages", text: "Bring agreed testing, records and renewal dates together." },
+      ],
     },
     "intrusion-alarms": {
       eyebrow: "Long-term protection",
-      title: "Strengthen the system beyond the alarm",
-      text: "Add professional monitoring, planned maintenance, CCTV or perimeter detection to create a more complete protection strategy around the property.",
-      links: [{ href: "/service-plans/alarm-monitoring", label: "Explore Monitoring & Maintenance" }, { href: "/commercial/integrated-fire-security", label: "Build an Integrated System" }],
+      title: "Build monitoring and maintenance into the alarm journey",
+      text: "The alarm can then connect to professional monitoring, planned servicing, CCTV and perimeter protection so the property has one joined-up protection strategy.",
+      links: [
+        { href: "/service-plans/alarm-monitoring", label: "Alarm Monitoring", text: "Professional signal handling and agreed escalation beyond app alerts." },
+        { href: "/service-plans/alarm-maintenance", label: "Alarm Maintenance", text: "Planned testing, battery checks, faults and system-health support." },
+        { href: "/systems/home-cctv", label: "CCTV & Video", text: "Add recorded views around entrances, driveways and key areas." },
+        { href: "/systems/perimeter-protection", label: "Perimeter Protection", text: "Create earlier warning before activity reaches the building." },
+      ],
     },
     "cctv": {
       eyebrow: "Connected protection",
-      title: "Move from recording incidents to detecting them",
-      text: "Combine CCTV with intruder detection, perimeter protection and ongoing maintenance to create a more proactive system around the site.",
-      links: [{ href: "/commercial/integrated-fire-security", label: "Explore Integrated Security" }, { href: "/service-plans/cctv-maintenance", label: "View Maintenance Options" }],
+      title: "Move from recording incidents to preventing them",
+      text: "Commercial CCTV should lead into intruder detection, perimeter protection, planned maintenance and an integrated site strategy where the risk requires more than cameras alone.",
+      links: [
+        { href: "/commercial/intruder-alarms", label: "Intruder Detection", text: "Add proactive internal and external detection around the site." },
+        { href: "/commercial/yard-perimeter-security", label: "Perimeter Protection", text: "Detect activity around approaches, yards and boundaries earlier." },
+        { href: "/service-plans/cctv-maintenance", label: "CCTV Maintenance", text: "Keep image quality, recording, storage and remote access checked." },
+        { href: "/commercial/integrated-fire-security", label: "Integrated Site Security", text: "Coordinate CCTV, intruder, fire and ongoing support under one plan." },
+      ],
     },
     "home-cctv": {
       eyebrow: "Connected protection",
-      title: "Move from recording incidents to detecting them",
-      text: "Connect CCTV with intruder detection, perimeter protection and ongoing maintenance to create a more complete system around the home.",
-      links: [{ href: "/systems/intrusion-alarms", label: "Explore Intruder Protection" }, { href: "/service-plans/cctv-maintenance", label: "View Maintenance Options" }],
+      title: "Connect CCTV to detection and continued support",
+      text: "Home CCTV becomes more useful when it links naturally to an intruder alarm, perimeter protection, professional monitoring and planned maintenance.",
+      links: [
+        { href: "/systems/intrusion-alarms", label: "Ajax Intruder Alarms", text: "Add internal detection, sirens and simple everyday control." },
+        { href: "/systems/perimeter-protection", label: "Perimeter Protection", text: "Create earlier warning around driveways, gardens and outbuildings." },
+        { href: "/service-plans/alarm-monitoring", label: "Alarm Monitoring", text: "Add a professional response route beyond phone notifications." },
+        { href: "/service-plans/cctv-maintenance", label: "CCTV Maintenance", text: "Keep cameras, recording and remote access working properly." },
+      ],
     },
     "perimeter-protection": {
       eyebrow: "Earlier warning",
       title: "Connect the perimeter to the wider response",
-      text: "Pair outdoor detection with CCTV, the intruder alarm and professional monitoring so activity around the approach leads into a defined response.",
-      links: [{ href: "/systems/cctv", label: "Explore CCTV" }, { href: "/service-plans/alarm-monitoring", label: "Discuss Monitoring" }],
+      text: "Pair outdoor detection with CCTV, the intruder alarm, professional monitoring and ongoing support so activity around the approach leads into a defined response.",
+      links: [
+        { href: "/systems/home-cctv", label: "CCTV Verification", text: "Add recorded views around the protected approach." },
+        { href: "/systems/intrusion-alarms", label: "Intruder Alarms", text: "Connect external warning with internal detection and user control." },
+        { href: "/service-plans/alarm-monitoring", label: "Alarm Monitoring", text: "Add professional signal handling where the system is suitable." },
+        { href: "/service-plans/total-security", label: "Ongoing Support", text: "Coordinate monitoring, servicing and selected maintenance." },
+      ],
     },
   }
   const item = content[slug]
   if (!item) return null
-  return <section className="section service-journey-section"><div className="container service-journey-grid"><div><span className="eyebrow">{item.eyebrow}</span><h2>{item.title}</h2><p>{item.text}</p></div><div className="service-journey-actions">{item.links.map((link, index) => <Link className={index === 0 ? "button button-light" : "button button-outline"} href={link.href} key={link.href}>{link.label}</Link>)}</div></div></section>
+  return <section className="section service-journey-section"><div className="container"><div className="service-journey-intro"><span className="eyebrow">{item.eyebrow}</span><h2>{item.title}</h2><p>{item.text}</p></div><div className="service-journey-actions">{item.links.map((link, index) => <Link href={link.href} key={link.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{link.label}</strong><p>{link.text}</p><small>Explore service</small></Link>)}</div></div></section>
 }
 
 export function ServiceLanding({ data }: { data: ServicePageData }) {
