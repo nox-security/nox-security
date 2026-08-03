@@ -1347,8 +1347,9 @@ export const planPages: Record<string, PlanPageData> = {
     metaTitle: "Alarm Monitoring Derbyshire | Professional Keyholder Contact",
     metaDescription: "Professional alarm monitoring across Chesterfield, Sheffield and Derbyshire, including alarm handling, keyholder contact and agreed escalation procedures.",
     intro: "Add professional alarm handling to a suitable intruder alarm, with keyholder contact, system supervision and visual or image verification where available.",
-    image: "/images/v4-13-2/alarm-monitoring-operator.jpg",
-    imageAlt: "Professional monitoring operator supporting intruder alarm signals and keyholder contact",
+    image: "/images/v4-13-41/intruder-monitoring-main.webp",
+    imageAlt: "Professional security monitoring centre handling intruder alarm signals, CCTV verification and keyholder escalation",
+    imagePosition: "center 44%",
     included: ["Professional alarm monitoring", "Alarm signalling", "Keyholder contact", "System supervision where supported", "Visual or image verification where available", "Agreed escalation procedures", "Monitoring setup and testing", "Annual renewal"],
     suitableFor: ["Homes", "Landlords", "Retail and offices", "Warehouses", "Industrial sites", "Commercial portfolios"],
     process: [

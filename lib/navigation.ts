@@ -140,7 +140,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
       { label: "Emergency-lighting testing", href: "/service-plans/emergency-lighting-servicing" },
       { label: "Ongoing support packages", href: "/service-plans/total-security" },
     ],
-    image: "/images/v4-13-2/alarm-monitoring-operator.jpg",
+    image: "/images/v4-13-41/intruder-monitoring-main.webp",
     imageAlt: "Professional alarm monitoring operator handling signals",
     imageLabel: "Monitoring and planned support",
     cta: { label: "Discuss Ongoing Support", href: "/get-quote?enquiry_type=Monitoring&service_category=Service%20%26%20Monitoring#quote-form" },
