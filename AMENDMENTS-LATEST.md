@@ -1,5 +1,9 @@
 # Latest amendments
 
+- Replaced the browser/search favicon with the supplied shield-only NOX mark for sharper rendering at small sizes.
+- Added dedicated Safari/Apple, Chrome/Android and 16/32/48/96 px browser icons plus a multi-resolution favicon.
+- Corrected the webmanifest favicon paths and removed the full-logo JPEG from browser icon metadata.
+
 - Replaced the repeated homepage customer-route block with a premium four-stage NOX journey: survey, design, installation and ongoing support.
 - Kept Protect My Home, Protect My Business, Fire Alarms & Compliance and Service & Monitoring as the single direct route set within the homepage hero.
 - Removed the duplicated homepage journey paragraph and repeated route descriptions.
