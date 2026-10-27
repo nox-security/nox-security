@@ -5,33 +5,40 @@ import { pageMetadata } from "@/lib/site"
 import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
-  "Fire Alarms, CCTV & Intruder Systems | Chesterfield & Sheffield",
-  "Fire alarm installation, fire alarm maintenance, CCTV and intruder alarm systems for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+  "Fire Alarm Installation, CCTV & Security | Chesterfield & Sheffield",
+  "Fire alarm installation, servicing and maintenance, CCTV, intruder alarms and emergency lighting across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
   "/",
-  { image: "/images/image-refresh/homepage-hero-nox-property.webp", imageAlt: "NOX Fire & Security van at a protected commercial property" },
+  { image: "/images/image-refresh/homepage-hero-cameras.jpg", imageAlt: "Premium black CCTV camera range used by NOX Fire & Security" },
 )
 
 const coreServices = [
   {
-    title: "Fire Alarms",
-    text: "Fire alarm installation, servicing, maintenance and remedial work for commercial and residential properties.",
-    href: "/fire-compliance",
-    image: "/images/FireProtect.jpeg",
-    alt: "Ajax fire alarm detector",
+    title: "Fire Alarm Installation",
+    text: "Commercial fire alarm installation, servicing and maintenance, with clear handover and ongoing support.",
+    href: "/systems/fire-safety",
+    image: "/images/v4-10/fire-alarm-installation-hero.jpeg",
+    alt: "Ajax EN54 fire alarm control panel installed beside a fire alarm zone plan and manual call point",
   },
   {
     title: "CCTV Systems",
-    text: "High-definition CCTV installation for homes and businesses, with remote access and professional monitoring.",
+    text: "Commercial and home CCTV installation with high-definition recording, remote access and monitoring options.",
     href: "/systems/cctv",
-    image: "/images/image-refresh/home-cctv-installed-white.webp",
-    alt: "Professional CCTV camera installation",
+    image: "/images/image-refresh/home-cctv-live-view.webp",
+    alt: "Residential CCTV live view showing full-property camera coverage",
   },
   {
     title: "Intruder Alarms",
-    text: "Wireless and wired intruder alarm systems for homes and businesses, with app control and professional monitoring.",
+    text: "Ajax intruder alarm systems for homes and businesses, with app control, external detection and monitoring.",
     href: "/systems/intrusion-alarms",
     image: "/images/v4-12-9/residential-intruder-main.jpg",
-    alt: "Ajax intruder alarm detector",
+    alt: "Black Ajax outdoor detector installed for perimeter intruder protection",
+  },
+  {
+    title: "Emergency Lighting",
+    text: "Emergency lighting installation, testing, annual duration checks and remedial work for commercial premises.",
+    href: "/systems/emergency-lighting",
+    image: "/images/image-refresh/emergency-lighting-modern.webp",
+    alt: "Emergency exit lighting installed at a commercial premises",
   },
 ]
 
@@ -53,24 +60,24 @@ function ProofIcon({ type }: { type: string }) {
 
 export default function HomePage() {
   const serviceStructuredData = serviceSchema({
-    name: "Fire alarms, CCTV and intruder systems",
-    description: "Fire alarm installation, servicing and maintenance, CCTV and intruder alarm systems for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+    name: "Fire alarm installation, CCTV, intruder alarms and emergency lighting",
+    description: "Fire alarm installation, servicing and maintenance, CCTV, intruder alarms and emergency lighting for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
     path: "/",
-    serviceType: ["Fire alarm installation", "Fire alarm servicing and maintenance", "CCTV installation", "Intruder alarm installation", "Monitoring and maintenance"],
-    image: "/images/image-refresh/homepage-hero-nox-property.webp",
+    serviceType: ["Fire alarm installation", "Fire alarm servicing and maintenance", "CCTV installation", "Intruder alarm installation", "Emergency lighting installation and testing", "Monitoring and maintenance"],
+    image: "/images/image-refresh/homepage-hero-cameras.jpg",
   })
   const homepageStructuredData = webPageSchema({
     name: "NOX Fire & Security",
-    description: "Complete Fire & Security solutions for homes and businesses across Chesterfield, Derbyshire and South Yorkshire.",
+    description: "Complete Fire & Security solutions including fire alarm installation and maintenance, CCTV, intruder alarms and emergency lighting across Chesterfield, Derbyshire and South Yorkshire.",
     path: "/",
-    image: "/images/image-refresh/homepage-hero-nox-property.webp",
+    image: "/images/image-refresh/homepage-hero-cameras.jpg",
   })
 
   return <>
     <JsonLd data={serviceStructuredData}/><JsonLd data={homepageStructuredData}/>
 
     <section className="ref-home-hero">
-      <div className="ref-home-hero-media"><img src="/images/image-refresh/homepage-hero-nox-property.webp" alt="NOX Fire & Security van outside a protected property"/></div>
+      <div className="ref-home-hero-media"><img src="/images/image-refresh/homepage-hero-cameras.jpg" alt="Premium black CCTV camera range used by NOX Fire & Security"/></div>
       <div className="ref-home-hero-overlay"/>
       <div className="container ref-home-hero-copy">
         <p className="ref-home-kicker">Protecting homes<br/>and businesses across<br/>Chesterfield, Derbyshire<br/>and South Yorkshire</p>
