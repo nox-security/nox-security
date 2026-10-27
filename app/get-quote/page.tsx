@@ -15,7 +15,7 @@ export default function QuotePage() {
     <section className="quote-hero-premium premium-enquiry-hero">
       <div className="container quote-hero-grid">
         <div><span className="eyebrow">Start your NOX enquiry</span><h1>Get a Fire & Security quote</h1><p className="lead">Tell us about the property, site or existing system. A few clear details are enough for NOX to understand the requirement and contact you directly.</p></div>
-        <div className="quote-hero-proof"><span className="micro-label">NOX Fire & Security</span><strong>Designed properly. Installed properly. Supported properly.</strong><span>Residential security · Fire & compliance · Commercial security</span></div>
+        <div className="quote-hero-proof"><span className="micro-label">NOX Fire & Security</span><strong>Designed with purpose. Installed professionally. Supported long-term.</strong><span>Residential security · Fire & compliance · Commercial security</span></div>
       </div>
     </section>
 

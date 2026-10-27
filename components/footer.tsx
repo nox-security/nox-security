@@ -9,12 +9,12 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-conversion">
         <div>
-          <span className="eyebrow">Start with the property, site or existing system</span>
-          <h2>Tell NOX what needs protecting, installing or supporting.</h2>
-          <p>New residential and commercial systems, fire compliance, planned maintenance, monitoring, takeovers and larger multi-site projects.</p>
+          <span className="eyebrow">Fire · CCTV · Intruder</span>
+          <h2>Start your NOX project.</h2>
+          <p>New installations, existing-system support, maintenance, monitoring and larger commercial or multi-site requirements.</p>
         </div>
         <div className="button-row">
-          <Link className="button button-light" href="/get-quote">Book a Site Survey</Link>
+          <Link className="button button-light" href="/get-quote">Get a Quote</Link>
         </div>
       </div>
       <div className="footer-grid footer-grid-clusters">
@@ -22,7 +22,7 @@ export default function Footer() {
           <Link href="/" aria-label="NOX Fire & Security home">
             <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" width="275" height="110" />
           </Link>
-          <p>Fire alarm installation, servicing and maintenance, commercial CCTV and professionally installed home CCTV and intruder systems across Chesterfield, Sheffield, Derbyshire, Derby and the Peak District.</p>
+          <p>Chesterfield-based fire and security installation, servicing and maintenance for homes, commercial premises and larger projects across Derbyshire, Sheffield, South Yorkshire and Derby, with wider UK project coverage where required.</p>
           <p className="muted">Local accountability · Commercial capability · Ongoing support</p>
           <a className="footer-instagram-link" href="https://www.instagram.com/noxsecuritychesterfield" target="_blank" rel="noopener noreferrer" aria-label="Open NOX Fire & Security on Instagram at @noxsecuritychesterfield">
             <span className="footer-instagram-icon" aria-hidden="true"><Instagram size={17} strokeWidth={1.65}/></span>
@@ -33,15 +33,15 @@ export default function Footer() {
         <div>
           <h3>Fire Alarms &amp; Compliance</h3>
           {fireFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-          <h3 className="footer-subheading">Protect My Business</h3>
+          <h3 className="footer-subheading">Commercial</h3>
           {commercialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
-          <h3>Protect My Home</h3>
+          <h3>Residential</h3>
           {residentialFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div>
-          <h3>Service &amp; Monitoring</h3>
+          <h3>Support</h3>
           {supportFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           <h3 className="footer-subheading">Company</h3>
           {companyFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
@@ -60,22 +60,13 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-local-links">
-        <span>Primary areas:</span>
+        <span>Core regions:</span>
         <Link href="/areas/chesterfield">Chesterfield</Link>
         <Link href="/areas/sheffield">Sheffield</Link>
-        <Link href="/areas/sheffield">Dore &amp; Totley</Link>
-        <Link href="/areas/sheffield">Ecclesall, Fulwood &amp; Ranmoor</Link>
+        <Link href="/areas/sheffield">South Yorkshire</Link>
         <Link href="/areas/derbyshire">Derbyshire</Link>
         <Link href="/areas/derby">Derby</Link>
-        <Link href="/areas/derby">Duffield &amp; Quarndon</Link>
-        <Link href="/areas/dronfield">Dronfield</Link>
-        <Link href="/areas/matlock">Matlock</Link>
-        <Link href="/areas/bakewell">Bakewell</Link>
-        <Link href="/areas/baslow">Baslow</Link>
-        <Link href="/areas/hope-valley">Hope Valley</Link>
-        <Link href="/areas/ashover">Ashover</Link>
-        <Link href="/areas/buxton">Buxton</Link>
-        <Link href="/areas/hathersage">Hathersage</Link>
+        <Link href="/areas/bakewell">Peak District</Link>
       </div>
       <div className="footer-bottom">
         <span>© 2026 NOX Fire & Security. All rights reserved.</span>

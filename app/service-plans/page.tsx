@@ -54,7 +54,7 @@ export default function ServicePlansPage() {
     </div><aside className="dark-panel"><h3>Keep contacts and systems current</h3><p>Monitoring works best when the alarm remains maintained and keyholder information stays accurate. These responsibilities are explained clearly rather than hidden inside a package.</p><ContactActions primaryLabel="Request a Monitoring Quote" compact audience="Residential & Commercial" serviceCategory="Alarm Monitoring" enquiryType="Monitoring" sourceLabel="support-monitoring-route"/></aside></div></section>
 
     <section className="section"><div className="container">
-      <SectionHeading eyebrow="Ongoing Support Packages" title="A natural route for customers who want suitable systems looked after properly" text="Eligible alarm monitoring, intruder servicing, CCTV maintenance, planned visits and selected fire services can be coordinated under one support arrangement. The written proposal confirms what is included, what remains separate and how renewals are managed."/>
+      <SectionHeading eyebrow="Ongoing Support Packages" title="A clear route for customers who want suitable systems professionally supported" text="Eligible alarm monitoring, intruder servicing, CCTV maintenance, planned visits and selected fire services can be coordinated under one support arrangement. The written proposal confirms what is included, what remains separate and how renewals are managed."/>
       <FeatureGrid columns={4} items={[
         { title: "Planned visits", text: "Service frequencies and access are arranged around the property, systems and operating requirements." },
         { title: "Consolidated dates", text: "Suitable visits and renewals can be aligned where practical without mixing the technical service records." },

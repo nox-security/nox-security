@@ -32,7 +32,7 @@ const reasons = [
   {
     icon: Star,
     title: "Quality Equipment Only",
-    description: "Ajax alarms, professional CCTV and fire safety equipment specified properly around the building — not chosen because it is cheapest.",
+    description: "Ajax alarms, professional CCTV and fire safety equipment specified around the building — not chosen because it is cheapest.",
   },
 ]
 
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Why Choose NOX?</h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Local, honest, professional — protecting homes and businesses across Chesterfield, Sheffield, and Derbyshire properly.
+            Local, honest, professional — protecting homes and businesses across Chesterfield, Sheffield and Derbyshire with clear accountability.
           </p>
         </div>
 

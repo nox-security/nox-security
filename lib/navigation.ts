@@ -86,7 +86,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
     image: "/images/v4-13-15/chatsworth-estate/main.jpg",
     imageAlt: "NOX CCTV upgrade at a large rural estate",
     imageLabel: "Commercial and estate security",
-    cta: { label: "Book a Site Survey", href: "/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form" },
+    cta: { label: "Get a Quote", href: "/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form" },
     activePrefixes: ["/commercial"],
   },
   {
@@ -111,7 +111,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
     image: "/images/v4-12-9/residential-intruder-main.jpg",
     imageAlt: "Ajax security detector installed at a residential property",
     imageLabel: "Residential security",
-    cta: { label: "Book a Home Survey", href: "/get-quote?customer_type=Residential&enquiry_type=Installation#quote-form" },
+    cta: { label: "Get a Quote", href: "/get-quote?customer_type=Residential&enquiry_type=Installation#quote-form" },
     activePrefixes: [
       "/residential",
       "/systems/home-cctv",
@@ -123,11 +123,11 @@ export const headerNavMenus: HeaderNavMenu[] = [
   },
   {
     id: "support",
-    label: "Service & Monitoring",
+    label: "Support",
     href: "/service-plans",
     heading: "Keep every system supported",
     intro: "Choose monitoring, planned maintenance, repairs or a takeover without searching through separate departments.",
-    overviewLabel: "Service & monitoring overview",
+    overviewLabel: "Support overview",
     routes: [
       { label: "Fire Alarm Service & Maintenance", href: "/service-plans/fire-alarm-servicing", description: "Planned servicing, testing, records and remedial support for suitable fire alarm systems." },
       { label: "Fire Alarm Monitoring", href: "/service-plans/fire-alarm-monitoring", description: "Professional signalling for suitable maintained fire systems." },

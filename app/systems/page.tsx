@@ -86,7 +86,7 @@ export default function SystemsPage() {
     </div></section>
 
     <section className="section section-alt"><div className="container">
-      <SectionHeading eyebrow="Residential systems" title="Home CCTV and intruder protection designed around the property" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. A well-designed system is considered and installed properly, whether it protects a semi-detached home, a larger detached property or several external areas."/>
+      <SectionHeading eyebrow="Residential systems" title="Home CCTV and intruder protection designed around the property" text="NOX works with semi-detached houses, family homes, larger detached properties, rural sites, garages, gates and outbuildings. A well-designed system is considered and installed professionally, whether it protects a semi-detached home, a larger detached property or several external areas."/>
       <div className="system-route-grid residential-system-grid">
         {residentialSystems.map(item => <article className="system-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div><span className="eyebrow">Residential system</span><h2>{item.title}</h2><p>{item.text}</p><Link className="text-link" href={item.href}>Explore {item.title} →</Link></div></article>)}
       </div>

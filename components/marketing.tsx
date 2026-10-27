@@ -81,14 +81,14 @@ export function TrustStrip({ variant = "general", reviewTitle }: { variant?: "ge
     general: [
       { kicker: "Built in Chesterfield", title: "Local accountability", text: "The same business remains involved from survey and quotation through to installation and aftercare." },
       { kicker: "Preferred smart platform", title: "Ajax authorised", text: "Modern alarm, detection and video options selected around the property." },
-      { kicker: "Proven customer experience", title: "46+ Google Reviews", text: "Genuine feedback about advice, installation quality and local support." },
+      { kicker: "Proven customer experience", title: "5-Star Google Reviews", text: "Genuine feedback about advice, installation quality and local support." },
       { kicker: "Ongoing support", title: "Servicing and monitoring", text: "Support for NOX installations and suitable existing systems." },
     ],
     residential: [
       { kicker: "Home security", title: "Designed around the property", text: "Alarm, CCTV and external protection selected around the home and daily routine." },
       { kicker: "Preferred smart platform", title: "Ajax authorised", text: "MotionCam, keypads, sirens, app control and external detection where suitable." },
       { kicker: "Careful workmanship", title: "Tidy installation", text: "Positions and cable routes are planned around performance and the finish of the property." },
-      { kicker: "Local proof", title: "46+ Google Reviews", text: "Feedback from homeowners and businesses across the local area." },
+      { kicker: "Local proof", title: "5-Star Google Reviews", text: "Feedback from homeowners and businesses across the local area." },
     ],
     commercial: [
       { kicker: "Site-specific design", title: "Planned around operations", text: "Coverage, access, evidence and user requirements are agreed before installation." },
@@ -109,11 +109,11 @@ export function TrustStrip({ variant = "general", reviewTitle }: { variant?: "ge
       { kicker: "Local support", title: "Repairs and takeovers", text: "One team for servicing, faults, upgrades and suitable system takeovers." },
     ],
   }
-  const items = variants[variant].map(item => reviewTitle && item.title === "46+ Google Reviews" ? { ...item, title: reviewTitle } : item)
+  const items = variants[variant].map(item => reviewTitle && item.title === "5-Star Google Reviews" ? { ...item, title: reviewTitle } : item)
   return <section className="trust-strip trust-strip-premium"><div className="container trust-strip-grid">{items.map(item => <article key={item.title}><span>{item.kicker}</span><strong>{item.title}</strong><small>{item.text}</small></article>)}</div></section>
 }
 
-export function ReviewSummaryStrip({ label = "46+ Google Reviews" }: { label?: string }) {
+export function ReviewSummaryStrip({ label = "5-Star Google Reviews" }: { label?: string }) {
   return <section className="review-summary-strip"><div className="container review-summary-inner"><div><span className="stars" aria-label="5 out of 5 stars">★★★★★</span><strong>{label}</strong><span>Genuine feedback from residential and commercial NOX customers.</span></div><a className="text-link" href="https://g.page/r/CUdyqRh0RFeXEAE/review" target="_blank" rel="noreferrer">View Google reviews →</a></div></section>
 }
 
@@ -325,7 +325,7 @@ function connectedServicesForSystem(slug: string): ConnectedService[] {
       { title: "CCTV Maintenance", text: "Keep cameras, recording and app access working as expected.", href: "/service-plans/cctv-maintenance" },
     ],
     "fire-risk-assessment": [
-      { title: "Fire Alarm Installation", text: "Turn identified alarm requirements into a properly planned system.", href: "/systems/fire-safety" },
+      { title: "Fire Alarm Installation", text: "Turn identified alarm requirements into a professionally planned system.", href: "/systems/fire-safety" },
       { title: "Fire Alarm Service & Maintenance", text: "Keep testing, records and defects visible after the system is in use.", href: "/service-plans/fire-alarm-servicing" },
       { title: "Fire Alarm Monitoring", text: "Add professional signalling where the maintained system and premises are suitable.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Fire Compliance Packages", text: "Coordinate agreed fire-safety services and annual dates.", href: "/service-plans/fire-compliance" },
@@ -449,7 +449,7 @@ function ServiceJourney({ slug }: { slug: string }) {
         { href: "/systems/intrusion-alarms", label: "Ajax Intruder Alarms", text: "Add internal detection, sirens and simple everyday control." },
         { href: "/systems/perimeter-protection", label: "Perimeter Protection", text: "Create earlier warning around driveways, gardens and outbuildings." },
         { href: "/service-plans/alarm-monitoring", label: "Alarm Monitoring", text: "Add a professional response route beyond phone notifications." },
-        { href: "/service-plans/cctv-maintenance", label: "CCTV Maintenance", text: "Keep cameras, recording and remote access working properly." },
+        { href: "/service-plans/cctv-maintenance", label: "CCTV Maintenance", text: "Keep cameras, recording and remote access working reliably." },
       ],
     },
     "perimeter-protection": {
@@ -549,7 +549,7 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Helpful guides" title={`Plan ${data.title.toLowerCase()} with practical information`} text="Practical answers covering specification, installation, maintenance and existing-system decisions before you request a survey or quotation."/><GuideLinks slugs={guideSlugsFor(`${data.slug} ${data.title} ${data.serviceCategory ?? ""}`)}/></div></section>
     <AreaLinks title={`${data.title} across Chesterfield, Sheffield and Derbyshire`}/>
     <EnquiryPreparation topic={data.serviceCategory ?? data.title.toLowerCase()} commercial={data.audience !== "Residential"}/>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Trusted for clear advice, tidy work and proper handover"/><ReviewGrid names={data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment"
+    <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Trusted for clear advice, tidy work and professional handover"/><ReviewGrid names={data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment"
       ? ["Rory Stirland", "Nathan De La Rosa", "Jez S"]
       : data.slug === "cctv" || data.slug === "home-cctv" || data.slug === "smart-home-cctv"
         ? ["Jez S", "Jeremy Bunting", "Nathan De La Rosa"]

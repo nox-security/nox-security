@@ -114,7 +114,7 @@ export function getPageCtaContext(pathname: string): PageCtaContext {
   }
 
   return {
-    compactLabel: "Site Survey",
+    compactLabel: "Get a Quote",
     fullLabel: "Book a Site Survey",
     href: quoteHref("Fire & Security", "General"),
     serviceCategory: "Fire & Security",

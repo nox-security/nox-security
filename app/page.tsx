@@ -16,8 +16,8 @@ const coreServices = [
     title: "Fire Alarms",
     text: "Commercial fire alarm installation, servicing and maintenance, with a clear route into emergency lighting and fire risk assessment support.",
     href: "/systems/fire-safety",
-    image: "/images/v4-10/fire-alarm-installation-hero.jpeg",
-    alt: "Ajax EN54 fire alarm control panel installed beside a fire alarm zone plan and manual call point",
+    image: "/images/image-refresh/en54-fire-hub.webp",
+    alt: "Ajax EN54 commercial fire alarm control equipment used on the NOX Fire & Compliance overview",
     links: [
       { href: "/systems/fire-safety", label: "Installation" },
       { href: "/service-plans/fire-alarm-servicing", label: "Servicing" },
@@ -146,15 +146,17 @@ export default function HomePage() {
       </div>
     </section>
 
-    <section className="ref-area-band">
-      <div className="ref-area-media"><img src="/images/chesterfield-coverage.png" alt="NOX service coverage centred around Chesterfield"/></div>
-      <div className="ref-area-overlay"/>
-      <div className="container ref-area-content">
-        <div className="ref-area-copy">
-          <p className="ref-section-kicker">Our service areas <span/></p>
-          <h2>Chesterfield Based.<br/>Regional Coverage.</h2>
-          <p>Based in Chesterfield, we install and maintain fire alarms, CCTV and intruder systems across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District — supporting homes, commercial premises, warehouses, hospitality, rural estates and multi-site properties.</p>
-          <Link className="ref-area-link" href="/areas-we-serve">Explore all service areas <span aria-hidden="true">→</span></Link>
+
+    <section className="home-story-band">
+      <div className="container home-story-grid">
+        <div>
+          <p className="ref-section-kicker">Built in Chesterfield <span/></p>
+          <h2>Director-led. Proven on real projects.</h2>
+        </div>
+        <div className="home-story-copy">
+          <p>NOX was founded by Joseph Robb and James Rigby to keep survey, installation and ongoing support connected under one accountable team. Our project portfolio now spans homes, commercial premises, industrial sites, rural estates and multi-site work.</p>
+          <p>Chesterfield remains our base and core service area, with wider UK project coverage available for suitable commercial and multi-site requirements.</p>
+          <div className="home-story-links"><Link href="/about-us">About NOX →</Link><Link href="/case-studies">View Our Projects →</Link></div>
         </div>
       </div>
     </section>
@@ -163,10 +165,10 @@ export default function HomePage() {
       <div className="container ref-final-cta-grid">
         <div>
           <p className="ref-section-kicker">Fire · CCTV · Intruder <span/></p>
-          <h2>Installation &amp; Ongoing Support</h2>
-          <p>New systems, servicing, maintenance and monitoring — planned around your property, site and existing equipment.</p>
+          <h2>Start Your NOX Project</h2>
+          <p>One enquiry route for a new installation, an existing system, planned servicing, maintenance or monitoring.</p>
         </div>
-        <Link className="ref-final-link" href="/get-quote#quote-form">Start Your Enquiry <span aria-hidden="true">→</span></Link>
+        <Link className="ref-final-link" href="/get-quote#quote-form">Start Your Project <span aria-hidden="true">→</span></Link>
       </div>
     </section>
   </>

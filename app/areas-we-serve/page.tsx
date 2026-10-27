@@ -52,8 +52,8 @@ export default function AreasPage() {
   return <>
     <PageHero
       eyebrow="Service areas"
-      title="Fire & security coverage from Chesterfield across our core regions"
-      intro="NOX provides fire alarm installation and servicing, CCTV, intruder systems and ongoing support across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District. We focus on realistic travel, reliable surveys and long-term support rather than listing every postcode in the Midlands."
+      title="Chesterfield based. Regional coverage. Wider project capability."
+      intro="NOX provides fire alarm installation and servicing, CCTV, intruder systems and ongoing support across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District. From our Chesterfield base, we combine dependable regional coverage with the capability to support larger commercial and multi-site projects further afield."
       image="/images/chesterfield-coverage.png"
       imageAlt="Map showing NOX Fire and Security coverage around Chesterfield, Derbyshire and South Yorkshire"
     />
@@ -78,9 +78,9 @@ export default function AreasPage() {
     </div></section>
 
     <section className="section"><div className="container split-grid"><div>
-      <SectionHeading eyebrow="Outside the core area?" title="Send the postcode and project scope" text="For larger fire alarm, CCTV, industrial security and multi-site projects, NOX can consider work outside the normal survey area where the project scale, access and ongoing support make the travel practical."/>
-      <Link className="button button-outline" href="/get-quote?service_category=Area%20Check#quote-form">Check Your Postcode</Link>
-    </div><aside className="dark-panel"><h3>Commercial and multi-site projects</h3><p>Larger projects are assessed around system scale, programme, travel and the ongoing support required — not simply the nearest town boundary.</p><Link className="button button-light" href="/commercial">Explore Commercial Security</Link></aside></div></section>
+      <SectionHeading eyebrow="Wider project coverage" title="Built locally. Equipped for larger projects." text="Our day-to-day work is centred on Chesterfield, Derbyshire, Sheffield and South Yorkshire. For larger commercial, industrial and multi-site requirements, NOX can support projects across a wider UK footprint where one coordinated fire and security partner adds value."/>
+      <Link className="button button-outline" href="/get-quote?service_category=Commercial%20Project#quote-form">Discuss a Wider Project</Link>
+    </div><aside className="dark-panel"><h3>Commercial and multi-site work</h3><p>Project coverage is considered around system scale, programme, site access and the ongoing support required, giving larger customers one clear route from survey through delivery and maintenance.</p><Link className="button button-light" href="/commercial">Explore Commercial Security</Link></aside></div></section>
 
     <section className="section section-alt area-continuity-section"><div className="container">
       <details className="area-continuity-details">
@@ -93,6 +93,6 @@ export default function AreasPage() {
       </details>
     </div></section>
 
-    <ConversionPanel primaryLabel="Book a Site Survey"/>
+    <ConversionPanel title="Start your NOX project" text="One enquiry route for local installations, ongoing support and larger commercial or multi-site requirements." primaryLabel="Start Your Enquiry"/>
   </>
 }

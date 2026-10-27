@@ -24,7 +24,7 @@ export default function Hero() {
                   Professional Fire & Security Systems Designed Around Your Property
                 </h1>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium">
-                  Designed properly. Installed properly. Supported properly.
+                  Designed with purpose. Installed professionally. Supported long-term.
                 </p>
               </div>
 
@@ -174,7 +174,7 @@ export default function Hero() {
             <div className="hidden md:block w-px h-12 bg-white/10"></div>
             <div className="text-center">
               <div className="text-white font-bold text-xl">Sarah W. — Derbyshire</div>
-              <div className="text-gray-400 text-sm max-w-sm">"Clear quote, no hidden extras. Engineers arrived on time and left no mess. A proper job from start to finish."</div>
+              <div className="text-gray-400 text-sm max-w-sm">"Clear quote, no hidden extras. Engineers arrived on time and left no mess. A professional job from start to finish."</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-white/10"></div>
             <Link href="/reviews" className="flex-shrink-0">

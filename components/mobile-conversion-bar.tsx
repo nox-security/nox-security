@@ -17,7 +17,7 @@ export default function MobileConversionBar() {
         data-cta="quote"
         data-source-page={`mobile-bar:${pathname}`}
       >
-        <span>{context.fullLabel}</span>
+        <span>{context.compactLabel}</span>
       </Link>
       <a href={site.whatsapp} data-cta="whatsapp" data-source-page={`mobile-bar:${pathname}`}>WhatsApp</a>
       <a href={site.phoneHref} data-cta="phone" data-source-page={`mobile-bar:${pathname}`}>Call</a>

@@ -18,7 +18,7 @@ const signals = [
     },
     {
         icon: Wrench,
-        title: "Installed Properly",
+        title: "Professional Installation",
         desc: "Clean installations, attention to detail and systems designed to work reliably from day one.",
     },
     {
@@ -33,7 +33,7 @@ const signals = [
     },
     {
         icon: BadgeCheck,
-        title: "46+ Google Reviews",
+        title: "5-Star Google Reviews",
         desc: "Genuine Google reviews from homeowners and businesses across Derbyshire.",
     },
 ]
@@ -44,7 +44,7 @@ export default function TrustSignals() {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-10">
                     <h2 className="text-2xl md:text-3xl font-bold mb-2">Why Customers Choose NOX</h2>
-                    <p className="text-gray-400">Straight advice, proper installation and systems built around the way your property actually works.</p>
+                    <p className="text-gray-400">Straight advice, professional installation and systems built around the way your property actually works.</p>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                     {signals.slice(0, 4).map((s, i) => {

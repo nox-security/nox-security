@@ -21,7 +21,7 @@ const services = [
   {
     icon: Camera,
     title: "CCTV",
-    description: "Clear CCTV coverage for homes and businesses, using reliable cameras, smart detection and properly planned camera positions.",
+    description: "Clear CCTV coverage for homes and businesses, using reliable cameras, smart detection and carefully planned camera positions.",
     image: "/images/cctv-systems-image.png",
     link: "/systems/cctv"
   },
