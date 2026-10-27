@@ -5932,3 +5932,31 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
   .site-footer-streamlined .footer-grid-streamlined{grid-template-columns:1fr}
   .site-footer-streamlined .footer-brand{grid-column:auto}
 }
+
+
+/* v4.13.63 header + footer hierarchy refinement */
+.mobile-nav-accordion-heading{display:grid;grid-template-columns:1fr 48px;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-nav-category-link{min-height:50px;display:flex;align-items:center;padding:11px 5px;color:#fff;text-decoration:none;font-size:15px;font-weight:800}
+.mobile-nav-category-link:hover,.mobile-nav-category-link:focus-visible{color:#d8d8d8;outline:none}
+.mobile-nav-accordion-heading .mobile-nav-accordion-trigger{width:48px;min-height:50px;padding:0;justify-content:center}
+.site-footer-streamlined .footer-grid-streamlined{grid-template-columns:1.35fr repeat(5,minmax(0,.82fr));gap:34px}
+.site-footer-streamlined .footer-brand{max-width:330px}
+.site-footer-streamlined .footer-brand-logo{margin-bottom:16px}
+.site-footer-streamlined .footer-brand-contact{display:flex;flex-direction:column;gap:3px;margin:0 0 18px}
+.site-footer-streamlined .footer-brand-contact a,.site-footer-streamlined .footer-brand-contact span{display:block;margin:0;color:#c6c6c6;font-size:13px;line-height:1.55}
+.site-footer-streamlined .footer-brand-contact a:hover{color:#fff}
+.site-footer-streamlined .footer-brand p{display:none}
+.footer-company-links{display:none}
+@media(max-width:1180px){
+  .site-footer-streamlined .footer-grid-streamlined{grid-template-columns:1.35fr repeat(3,minmax(0,1fr));gap:34px 28px}
+  .site-footer-streamlined .footer-brand{grid-row:span 2}
+}
+@media(max-width:760px){
+  .site-footer-streamlined .footer-grid-streamlined{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
+  .site-footer-streamlined .footer-brand{grid-column:1/-1;grid-row:auto;max-width:none}
+  .site-footer-streamlined .footer-brand-contact{margin-bottom:16px}
+}
+@media(max-width:430px){
+  .site-footer-streamlined .footer-grid-streamlined{grid-template-columns:1fr}
+  .site-footer-streamlined .footer-brand{grid-column:auto}
+}

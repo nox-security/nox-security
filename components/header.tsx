@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
 import { usePathname } from "next/navigation"
-import { headerDirectNavItems, headerNavMenus, type HeaderNavMenu } from "@/lib/navigation"
+import { headerNavMenus, type HeaderNavMenu } from "@/lib/navigation"
 
 function matchesPrefix(pathname: string, prefix: string) {
   return pathname === prefix || pathname.startsWith(`${prefix}/`)
@@ -137,7 +137,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.62" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.63" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -146,10 +146,6 @@ export default function Header() {
 
         <nav className="desktop-nav header-primary-nav" aria-label="Main navigation">
           {headerNavMenus.map(menu => <DesktopDropdown key={menu.id} menu={menu} active={activeMenuId === menu.id} pathname={pathname} />)}
-          {headerDirectNavItems.filter(item => item.href !== "/contact").map(item => {
-            const active = matchesPrefix(pathname, item.href)
-            return <Link className={active ? "is-active" : undefined} aria-current={active ? "page" : undefined} key={item.href} href={item.href}>{item.label}</Link>
-          })}
         </nav>
 
         <div className="header-actions">
@@ -185,16 +181,26 @@ export default function Header() {
             const panelId = `mobile-${menu.id}-panel`
             return (
               <div className={`mobile-nav-accordion ${isOpen ? "is-open" : ""} ${isActive ? "is-active" : ""}`} key={menu.id}>
-                <button
-                  type="button"
-                  className="mobile-nav-accordion-trigger"
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={() => toggleMobileSection(menu.id)}
-                >
-                  <span>{menu.label}</span>
-                  <span className="mobile-nav-chevron" aria-hidden="true" />
-                </button>
+                <div className="mobile-nav-accordion-heading">
+                  <Link
+                    className="mobile-nav-category-link"
+                    href={menu.href}
+                    onClick={closeMobileNavigation}
+                    aria-current={pathname === menu.href ? "page" : undefined}
+                  >
+                    {menu.label}
+                  </Link>
+                  <button
+                    type="button"
+                    className="mobile-nav-accordion-trigger"
+                    aria-label={`${isOpen ? "Hide" : "Show"} ${menu.label} options`}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => toggleMobileSection(menu.id)}
+                  >
+                    <span className="mobile-nav-chevron" aria-hidden="true" />
+                  </button>
+                </div>
                 <div id={panelId} className="mobile-nav-accordion-panel">
                   <div className="mobile-nav-accordion-inner mobile-mega-menu">
                     <div className="mobile-mega-intro">
@@ -223,7 +229,6 @@ export default function Header() {
                       {menu.secondary.map(item => <Link onClick={closeMobileNavigation} key={`${menu.id}-secondary-${item.label}`} href={item.href}>{item.label}</Link>)}
                     </div>
                     <div className="mobile-mega-actions">
-                      <Link onClick={closeMobileNavigation} className="mobile-mega-overview" href={menu.href}>{menu.overviewLabel}</Link>
                       <Link onClick={closeMobileNavigation} className="button button-light premium-cta" href={menu.cta.href} data-cta="quote" data-source-page={`mobile-navigation:${menu.id}`}>{menu.cta.label}</Link>
                     </div>
                   </div>
@@ -231,13 +236,6 @@ export default function Header() {
               </div>
             )
           })}
-
-          <div className="mobile-nav-direct-links">
-            {headerDirectNavItems.filter(item => item.href !== "/contact").map(item => {
-              const active = matchesPrefix(pathname, item.href)
-              return <Link className={active ? "is-active" : undefined} aria-current={active ? "page" : undefined} onClick={closeMobileNavigation} key={item.href} href={item.href}>{item.label}</Link>
-            })}
-          </div>
 
           <div className="mobile-nav-actions">
             <Link

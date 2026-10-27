@@ -124,11 +124,6 @@ export const headerNavMenus: HeaderNavMenu[] = [
   },
 ]
 
-export const headerDirectNavItems: NavItem[] = [
-  { label: "Projects", href: "/case-studies" },
-  { label: "Why NOX", href: "/about-us" },
-]
-
 /* Footer navigation deliberately shows only the main customer routes.
    Deeper SEO pages remain live and connected from their parent overview pages. */
 export const fireFooterItems: NavItem[] = [

@@ -12,7 +12,6 @@ export default function Footer() {
           <Link href="/" aria-label="NOX Fire & Security home" className="footer-brand-logo">
             <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" />
           </Link>
-          <p>Chesterfield-based fire and security specialists delivering residential, commercial and multi-site projects with ongoing support available after installation.</p>
           <div className="footer-brand-contact">
             <a href={site.phoneHref}>{site.phone}</a>
             <a href={`mailto:${site.email}`}>{site.email}</a>
@@ -44,11 +43,11 @@ export default function Footer() {
           <h3>Support</h3>
           {supportFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
-      </div>
 
-      <div className="footer-company-links">
-        <span>Company</span>
-        {companyFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+        <div className="footer-nav-column">
+          <h3>Company</h3>
+          {companyFooterItems.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+        </div>
       </div>
 
       <div className="footer-bottom footer-bottom-streamlined">
