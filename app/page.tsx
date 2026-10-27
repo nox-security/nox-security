@@ -101,6 +101,26 @@ export default function HomePage() {
       </div>
     </section>
 
+    <section className="home-trust-band" aria-label="NOX customer reviews and authorised installer status">
+      <div className="container home-trust-band-inner">
+        <Link className="home-trust-proof home-trust-proof-google" href="/reviews">
+          <img src="/icons/google-reviews icon.svg" alt="Google Reviews"/>
+          <div>
+            <span className="home-trust-stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <strong>5.0 Google Rating</strong>
+          </div>
+        </Link>
+        <span className="home-trust-divider" aria-hidden="true"/>
+        <Link className="home-trust-proof home-trust-proof-ajax" href="/ajax-authorised-installer">
+          <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/>
+          <div>
+            <strong>Official Ajax Partner</strong>
+            <small>Authorised Installation Company</small>
+          </div>
+        </Link>
+      </div>
+    </section>
+
     <section className="ref-service-strip" aria-label="Core NOX services">
       <div className="container ref-service-grid">
         {coreServices.map(service => <article className="ref-service-card" key={service.title}>

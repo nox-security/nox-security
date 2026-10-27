@@ -5726,3 +5726,37 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
   .ref-home-actions .ref-home-button{width:100%}
   .ref-final-link{margin-top:24px}
 }
+
+
+/* v4.13.57 homepage trust band */
+.home-trust-band{background:linear-gradient(180deg,#08090a 0%,#050505 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.12);color:#fff}
+.home-trust-band-inner{min-height:118px;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:34px}
+.home-trust-proof{display:flex;align-items:center;gap:20px;min-width:0;color:#fff;text-decoration:none;transition:opacity .2s ease,transform .2s ease}
+.home-trust-proof:hover{opacity:.84;transform:translateY(-1px)}
+.home-trust-proof-google{justify-content:flex-end;text-align:right}
+.home-trust-proof-google>img{width:46px;height:46px;object-fit:contain;flex:0 0 auto}
+.home-trust-stars{display:block;margin-bottom:3px;color:#fbc007;font-size:15px;line-height:1;letter-spacing:.08em}
+.home-trust-proof strong{display:block;font-size:14px;line-height:1.25;letter-spacing:.02em}
+.home-trust-proof small{display:block;margin-top:3px;color:#92979c;font-size:10px;font-weight:750;letter-spacing:.14em;text-transform:uppercase}
+.home-trust-divider{width:1px;height:54px;background:rgba(255,255,255,.16)}
+.home-trust-proof-ajax{justify-content:flex-start}
+.home-trust-proof-ajax>img{width:150px;max-height:50px;object-fit:contain;object-position:left center;flex:0 0 auto}
+.home-trust-proof-ajax>div{padding-left:2px}
+@media (max-width:760px){
+  .home-trust-band-inner{min-height:102px;grid-template-columns:1fr 1px 1fr;gap:12px;padding-top:14px;padding-bottom:14px}
+  .home-trust-proof{gap:9px}
+  .home-trust-proof-google{justify-content:flex-start;text-align:left}
+  .home-trust-proof-google>img{width:31px;height:31px}
+  .home-trust-stars{font-size:10px;letter-spacing:.03em}
+  .home-trust-proof strong{font-size:10px;line-height:1.25}
+  .home-trust-proof small{font-size:7px;line-height:1.35;letter-spacing:.09em}
+  .home-trust-divider{height:46px}
+  .home-trust-proof-ajax{display:block}
+  .home-trust-proof-ajax>img{width:104px;max-height:34px;margin-bottom:4px}
+  .home-trust-proof-ajax>div{padding-left:0}
+}
+@media (max-width:390px){
+  .home-trust-band-inner{gap:9px}
+  .home-trust-proof-google>img{width:28px;height:28px}
+  .home-trust-proof-ajax>img{width:96px}
+}
