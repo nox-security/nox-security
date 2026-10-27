@@ -5795,3 +5795,140 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
 .ref-home-call strong{color:#fff;font-weight:850;letter-spacing:.06em}
 .ref-home-call:hover{color:#fff}
 @media (max-width:760px){.ref-home-call{margin-top:12px;font-size:11px}}
+
+/* v4.13.62 streamlined navigation + premium footer */
+@media (min-width:1181px){
+  .site-header .header-dropdown-panel,
+  .site-header .header-dropdown-panel-home,
+  .site-header .header-dropdown-panel-business,
+  .site-header .header-dropdown-panel-fire,
+  .site-header .header-dropdown-panel-support{
+    width:min(840px,calc(100vw - 48px))!important;
+    grid-template-columns:190px minmax(320px,1fr) 180px!important;
+    gap:20px!important;
+    padding:22px 23px 23px!important;
+  }
+  .site-header .header-dropdown-panel .mega-menu-intro h2{
+    max-width:185px!important;
+    font-size:25px!important;
+  }
+  .site-header .header-dropdown-panel .mega-menu-intro p{
+    max-width:185px!important;
+    font-size:11.5px!important;
+  }
+  .site-header .header-dropdown-panel .mega-menu-route{
+    min-height:62px!important;
+    padding:12px 14px!important;
+  }
+  .site-header .header-dropdown-panel .mega-menu-route strong{
+    font-size:13.5px!important;
+    margin-bottom:4px!important;
+  }
+  .site-header .header-dropdown-panel .mega-menu-route span{
+    font-size:10px!important;
+    line-height:1.38!important;
+  }
+  .site-header .header-primary-nav{gap:20px}
+}
+
+.site-footer-streamlined{padding-bottom:28px}
+.site-footer-streamlined .footer-grid-streamlined{
+  max-width:1320px;
+  grid-template-columns:1.45fr repeat(4,minmax(0,.86fr));
+  gap:38px;
+  padding:54px 28px 38px;
+}
+.site-footer-streamlined .footer-brand{max-width:380px}
+.site-footer-streamlined .footer-brand-logo{display:inline-block;margin-bottom:20px}
+.site-footer-streamlined .footer-brand-logo img{
+  display:block;
+  width:205px;
+  max-width:100%;
+  height:auto!important;
+  object-fit:contain;
+}
+.site-footer-streamlined .footer-brand p{
+  max-width:355px;
+  margin:0 0 20px;
+  color:#aaa;
+  font-size:13.5px;
+  line-height:1.65;
+}
+.site-footer-streamlined .footer-brand-contact{margin-bottom:18px}
+.site-footer-streamlined .footer-brand-contact a,
+.site-footer-streamlined .footer-brand-contact span{
+  margin-bottom:7px;
+  color:#c4c4c4;
+  font-size:13px;
+}
+.site-footer-streamlined .footer-nav-column h3{
+  margin:0 0 16px;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.site-footer-streamlined .footer-nav-column a{
+  margin-bottom:9px;
+  color:#a8a8a8;
+  font-size:13px;
+  line-height:1.4;
+}
+.site-footer-streamlined .footer-nav-column a:hover{color:#fff}
+.footer-company-links{
+  max-width:1320px;
+  margin:0 auto;
+  padding:18px 28px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px 22px;
+}
+.footer-company-links>span{
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.footer-company-links a{
+  color:#949494;
+  font-size:12.5px;
+}
+.footer-company-links a:hover{color:#fff}
+.site-footer-streamlined .footer-bottom-streamlined{
+  max-width:1320px;
+  padding:18px 28px 0;
+}
+
+@media(max-width:1100px){
+  .site-footer-streamlined .footer-grid-streamlined{
+    grid-template-columns:1.4fr repeat(2,minmax(0,1fr));
+    gap:34px;
+  }
+  .site-footer-streamlined .footer-brand{grid-row:span 2}
+}
+@media(max-width:760px){
+  .site-footer-streamlined .footer-grid-streamlined{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:30px 22px;
+    padding:42px 20px 30px;
+  }
+  .site-footer-streamlined .footer-brand{
+    grid-column:1/-1;
+    grid-row:auto;
+    max-width:none;
+  }
+  .site-footer-streamlined .footer-brand-logo img{width:178px}
+  .footer-company-links{
+    padding:18px 20px;
+    gap:10px 16px;
+  }
+  .footer-company-links>span{width:100%}
+  .site-footer-streamlined .footer-bottom-streamlined{padding:18px 20px 0}
+}
+@media(max-width:430px){
+  .site-footer-streamlined .footer-grid-streamlined{grid-template-columns:1fr}
+  .site-footer-streamlined .footer-brand{grid-column:auto}
+}

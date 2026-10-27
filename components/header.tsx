@@ -137,7 +137,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.61" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.62" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -159,7 +159,7 @@ export default function Header() {
             data-cta="quote"
             data-source-page={`header:${pathname}`}
           >
-            Get a Quote
+            Book Site Survey
           </Link>
         </div>
 
@@ -247,7 +247,7 @@ export default function Header() {
               data-cta="quote"
               data-source-page={`mobile-menu:${pathname}`}
             >
-              Get a Quote
+              Book Site Survey
             </Link>
           </div>
         </nav>

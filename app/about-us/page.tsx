@@ -3,7 +3,7 @@ import { ContactActions, ConversionPanel, SectionHeading, TrustStrip } from "@/c
 import { pageMetadata } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata(
-  "About NOX Fire & Security | Built in Chesterfield",
+  "Why NOX Fire & Security | Chesterfield Fire & Security",
   "Meet NOX Fire & Security, a Chesterfield-based fire and security company delivering residential, commercial, industrial and multi-site projects with professional installation and ongoing support.",
   "/about-us",
   { image: "/images/projects/logo-nox-fire-security.jpg", imageAlt: "NOX Fire and Security logo" },
@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata(
 
 export default function AboutPage() {
   return <div className="about-page">
-    <section className="about-hero-premium about-hero-editorial"><div className="container about-hero-grid"><div><span className="eyebrow">About NOX</span><h1>Built in Chesterfield. Professional standards at every scale.</h1><p className="lead">NOX is a Chesterfield-based fire and security company delivering carefully planned systems for homes, commercial premises, industrial sites and larger multi-site projects.</p><ContactActions primaryLabel="Discuss Your Requirements" /></div><div className="about-brand-panel"><img src="/images/projects/logo-nox-fire-security.jpg" alt="NOX Fire & Security logo mark"/><span>Chesterfield · Sheffield · Derbyshire</span><blockquote>Designed with purpose.<br/>Installed professionally.<br/>Supported long-term.</blockquote></div></div></section>
+    <section className="about-hero-premium about-hero-editorial"><div className="container about-hero-grid"><div><span className="eyebrow">Why NOX</span><h1>Built in Chesterfield. Professional standards at every scale.</h1><p className="lead">NOX is a Chesterfield-based fire and security company delivering carefully planned systems for homes, commercial premises, industrial sites and larger multi-site projects.</p><ContactActions primaryLabel="Discuss Your Requirements" /></div><div className="about-brand-panel"><img src="/images/projects/logo-nox-fire-security.jpg" alt="NOX Fire & Security logo mark"/><span>Chesterfield · Sheffield · Derbyshire</span><blockquote>Designed with purpose.<br/>Installed professionally.<br/>Supported long-term.</blockquote></div></div></section>
     <TrustStrip variant="general"/>
 
     <section className="section about-story-section"><div className="container about-origin-grid">
