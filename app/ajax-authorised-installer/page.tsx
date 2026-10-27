@@ -16,15 +16,15 @@ import { pageMetadata } from "@/lib/site"
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema"
 
 const pagePath = "/ajax-authorised-installer"
-const pageDescription = "Official Ajax partner and Ajax Authorised Installation Company for EN54 commercial fire alarm systems, CCTV and intruder alarms across Chesterfield, Sheffield, Derbyshire and South Yorkshire."
+const pageDescription = "Ajax Authorised Installation Company for EN54 commercial fire alarm systems, CCTV and intruder alarms across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District."
 
 export const metadata: Metadata = pageMetadata(
   "Ajax Authorised Installer Chesterfield & Sheffield | NOX",
   pageDescription,
   pagePath,
   {
-    image: "/images/v4-13-20/ajax-founder-meeting.jpg",
-    imageAlt: "NOX Fire & Security team with Alex Konotopskyi, founder of Ajax Systems",
+    image: "/images/ajax-products/ajax-cctv-system.webp",
+    imageAlt: "Ajax professional security technology installed and supported by NOX Fire & Security",
   },
 )
 
@@ -151,7 +151,7 @@ const faqs = [
   },
   {
     q: "Where does NOX install Ajax alarms?",
-    a: "NOX installs Ajax alarms across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with wider travel for suitable commercial, industrial, multi-site and larger residential projects.",
+    a: "NOX installs Ajax systems across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District, with wider travel for suitable commercial, industrial, multi-site and larger residential projects.",
   },
   {
     q: "Can Ajax intruder alarms and CCTV work together?",
@@ -179,13 +179,13 @@ export default function AjaxAuthorisedInstallerPage() {
       path: pagePath,
       serviceType: ["Ajax EN54 fire alarm installation", "Ajax fire alarm servicing and maintenance", "Ajax commercial CCTV installation", "Ajax home CCTV installation", "Ajax intruder alarm installation", "Ajax system upgrades and takeovers"],
       audience: "Residential and Commercial",
-      image: "/images/v4-13-20/ajax-founder-meeting.jpg",
+      image: "/images/ajax-products/ajax-cctv-system.webp",
     }),
     webPageSchema({
       name: "Official Ajax Partner and Ajax Authorised Installer",
       description: pageDescription,
       path: pagePath,
-      image: "/images/v4-13-20/ajax-founder-meeting.jpg",
+      image: "/images/ajax-products/ajax-cctv-system.webp",
     }),
     breadcrumbSchema([
       { name: "Home", path: "/" },
@@ -203,49 +203,39 @@ export default function AjaxAuthorisedInstallerPage() {
         <div className="page-hero-copy">
           <span className="eyebrow">Official Ajax Partner</span>
           <h1>Official Ajax partner for alarms, CCTV and EN54 fire systems</h1>
-          <p className="lead">NOX is an Ajax Authorised Installation Company providing suitable EN54 commercial fire alarm systems, professional CCTV and Ajax intruder alarms across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
-          <div className="ajax-partner-hero-badge">
-            <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company official partner logo"/>
-            <span>Official partner status supported by genuine NOX installations, local handover and ongoing system support.</span>
-          </div>
+          <p className="lead">NOX is an Ajax Authorised Installation Company providing suitable EN54 commercial fire alarm systems, professional CCTV and Ajax intruder alarms across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District.</p>
           <ContactActions primaryLabel="Discuss an Ajax System" audience="Residential & Commercial" serviceCategory="Ajax Systems" enquiryType="Installation" sourceLabel="ajax-authorised-installer-hero"/>
         </div>
-        <figure className="page-hero-media ajax-founder-hero-media"><img src="/images/v4-13-20/ajax-founder-meeting.jpg" alt="Joseph Robb and James Rigby of NOX Fire & Security with Alex Konotopskyi, founder of Ajax Systems" style={{ objectPosition: "center 34%" }}/><figcaption>Joseph Robb and James Rigby with Alex Konotopskyi, founder of Ajax Systems.</figcaption></figure>
+        <aside className="page-hero-media ajax-authorisation-hero-card">
+          <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company"/>
+          <span className="micro-label">NOX Fire & Security</span>
+          <h2>Authorised Ajax installation, configured around the property</h2>
+          <p>Ajax provides the professional security platform and product ecosystem. NOX remains responsible for the survey, system design, installation, commissioning, handover and ongoing local support.</p>
+          <div className="ajax-authorisation-tags"><span>EN54 Fire</span><span>CCTV</span><span>Intruder</span><span>Perimeter</span></div>
+        </aside>
       </div>
     </section>
 
     <TrustStrip variant="general"/>
 
-    <section className="section ajax-founder-intro-section"><div className="container split-grid ajax-founder-intro-grid">
-      <div>
-        <SectionHeading eyebrow="Meeting the founder of Ajax Systems" title="A first-hand introduction to the global company behind the technology" text="At an industry event, Joseph and James had the opportunity to meet Alex Konotopskyi, founder of Ajax Systems and Chairman of its Board. The photograph records that first-hand meeting with the person who established one of the best-known professional security technology brands in the market."/>
-        <p className="lead-small">Ajax is a global security systems company. NOX installs its products locally as an Ajax Authorised Installation Company, combining the technology with property-specific surveys, professional configuration, clear handover and ongoing support across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
-      </div>
-      <aside className="dark-panel ajax-founder-intro-panel">
-        <span className="micro-label">About Alex Konotopskyi</span>
-        <h3>Founder of Ajax Systems</h3>
-        <p>Alex Konotopskyi founded Ajax Systems and serves as Chairman of its Board. He is pictured with Joseph and James in front of the Ajax professional product range.</p>
-        <p>Meeting him first-hand was a memorable moment for Joseph and James and part of their experience with the Ajax brand.</p>
-      </aside>
-    </div></section>
-
     <section className="section ajax-partner-status-section"><div className="container split-grid ajax-partner-status-grid">
       <div>
-        <SectionHeading eyebrow="Our Ajax authorisation" title="Official Ajax authorisation with local NOX responsibility" text="The Ajax Authorised Installation Company mark confirms NOX as an officially recognised Ajax installation business. For the customer, that status is supported by a property-led survey, a clear quotation, professional installation, app setup, handover and a direct route back to NOX for future support."/>
+        <SectionHeading eyebrow="How our Ajax partnership works" title="Ajax technology with NOX design, installation and local accountability" text="NOX is an Ajax Authorised Installation Company. That gives us a recognised professional route into the Ajax ecosystem, product training and technical knowledge, while the responsibility for your survey, design, installation, commissioning, handover and ongoing support remains with NOX."/>
         <div className="feature-grid columns-2 ajax-partner-mini-grid">
-          <article className="feature-card ajax-certificate-feature ajax-certificate-feature-intrusion"><span className="feature-number">01</span><h3>Product knowledge and correct setup</h3><p>Ajax equipment is configured around the intended users, rooms, zones, permissions, alerts, communication channels and the response expected when an event occurs.</p><span className="ajax-certificate-proof">Ajax Academy · Baseline Intrusion</span></article>
-          <article className="feature-card ajax-certificate-feature ajax-certificate-feature-video"><span className="feature-number">02</span><h3>Genuine local project experience</h3><p>NOX has installed Ajax alarms, perimeter detection, cameras and EN54 fire equipment across homes, showrooms, industrial sites, offices and rural estates.</p><span className="ajax-certificate-proof">Ajax Academy · Video Surveillance</span></article>
+          <article className="feature-card ajax-certificate-feature"><span className="feature-number">01</span><h3>Official authorised status</h3><p>NOX is recognised within the Ajax professional installer network and uses genuine Ajax equipment selected around the property and required outcome.</p></article>
+          <article className="feature-card ajax-certificate-feature ajax-certificate-feature-intrusion"><span className="feature-number">02</span><h3>Training and product knowledge</h3><p>Ajax Academy training supports correct setup across intrusion and video systems, backed by continued product and platform development from Ajax.</p><span className="ajax-certificate-proof">Ajax Academy · Intrusion & Video</span></article>
+          <article className="feature-card ajax-certificate-feature"><span className="feature-number">03</span><h3>NOX designs the finished system</h3><p>We survey the building, choose device positions, configure users and communications, commission the system and explain the finished setup at handover.</p></article>
+          <article className="feature-card ajax-certificate-feature"><span className="feature-number">04</span><h3>Local support after installation</h3><p>Monitoring, servicing, CCTV maintenance, additions, faults and takeover support stay connected to the same local NOX service route after installation.</p></article>
         </div>
       </div>
       <aside className="ajax-partner-logo-card">
         <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Official Ajax Authorised Installation Company logo"/>
-        <span>NOX Fire & Security</span>
+        <span>Official installer status</span>
         <h2>Ajax Authorised Installation Company</h2>
-        <p>Preferred smart-security platform for suitable residential and commercial projects.</p>
+        <p>Professional Ajax systems installed around the property — not sold as a generic equipment bundle.</p>
         <Link className="button button-light" href="/case-studies">View Real Ajax Projects</Link>
       </aside>
     </div></section>
-
 
     <section className="section section-alt"><div className="container">
       <SectionHeading eyebrow="Why Ajax systems?" title="Modern security technology is most effective when the design starts with the property" text="Ajax gives NOX a broad professional platform for fire, video, intrusion and suitable automation. The system still succeeds or fails on the survey, device positions, communication, user setup and ongoing support."/>
@@ -285,7 +275,7 @@ export default function AjaxAuthorisedInstallerPage() {
     </div></section>
 
     <section className="section section-alt"><div className="container split-grid ajax-local-search-grid">
-      <div><SectionHeading eyebrow="Local Ajax installation and support" title="Ajax systems across Chesterfield, Sheffield, Derbyshire and South Yorkshire" text="Customers searching locally for Ajax alarms, Ajax CCTV, perimeter protection or Ajax EN54 fire systems can use this page as the starting point, then move directly into the relevant NOX service, area or real-project page."/><div className="related-links"><Link href="/systems/fire-safety">Ajax EN54 fire alarms →</Link><Link href="/service-plans/fire-alarm-servicing">Fire alarm service & maintenance →</Link><Link href="/commercial/cctv">Ajax commercial CCTV →</Link><Link href="/systems/home-cctv">Home CCTV →</Link><Link href="/systems/intrusion-alarms">Ajax intruder alarms →</Link><Link href="/systems/perimeter-protection">Ajax perimeter protection →</Link></div></div>
+      <div><SectionHeading eyebrow="Local Ajax installation and support" title="Ajax systems across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District" text="Customers searching locally for Ajax alarms, Ajax CCTV, perimeter protection or Ajax EN54 fire systems can use this page as the starting point, then move directly into the relevant NOX service, area or real-project page."/><div className="related-links"><Link href="/systems/fire-safety">Ajax EN54 fire alarms →</Link><Link href="/service-plans/fire-alarm-servicing">Fire alarm service & maintenance →</Link><Link href="/commercial/cctv">Ajax commercial CCTV →</Link><Link href="/systems/home-cctv">Home CCTV →</Link><Link href="/systems/intrusion-alarms">Ajax intruder alarms →</Link><Link href="/systems/perimeter-protection">Ajax perimeter protection →</Link></div></div>
       <aside className="dark-panel"><h3>Looking for a local Ajax installer?</h3><p>Share the property postcode, whether it is residential or commercial, the areas that need protecting and whether you are considering alarms, cameras, fire detection or support for an existing Ajax system.</p><ContactActions primaryLabel="Book an Ajax Survey" compact audience="Residential & Commercial" serviceCategory="Ajax Systems" enquiryType="Installation" sourceLabel="ajax-authorised-installer-local"/></aside>
     </div></section>
 

@@ -5729,13 +5729,12 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
 
 
 /* v4.13.57 homepage trust band */
-.home-trust-band{background:linear-gradient(180deg,#08090a 0%,#050505 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.12);color:#fff}
+.home-trust-band{background:#050505;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.12);color:#fff}
 .home-trust-band-inner{min-height:118px;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:34px}
 .home-trust-proof{display:flex;align-items:center;gap:20px;min-width:0;color:#fff;text-decoration:none;transition:opacity .2s ease,transform .2s ease}
 .home-trust-proof:hover{opacity:.84;transform:translateY(-1px)}
 .home-trust-proof-google{justify-content:flex-end;text-align:right}
-.home-trust-proof-google>img{width:46px;height:46px;object-fit:contain;flex:0 0 auto}
-.home-trust-stars{display:block;margin-bottom:3px;color:#fbc007;font-size:15px;line-height:1;letter-spacing:.08em}
+.home-trust-stars{display:block;margin-bottom:5px;color:#fff;font-size:15px;line-height:1;letter-spacing:.12em}
 .home-trust-proof strong{display:block;font-size:14px;line-height:1.25;letter-spacing:.02em}
 .home-trust-proof small{display:block;margin-top:3px;color:#92979c;font-size:10px;font-weight:750;letter-spacing:.14em;text-transform:uppercase}
 .home-trust-divider{width:1px;height:54px;background:rgba(255,255,255,.16)}
@@ -5746,7 +5745,6 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
   .home-trust-band-inner{min-height:102px;grid-template-columns:1fr 1px 1fr;gap:12px;padding-top:14px;padding-bottom:14px}
   .home-trust-proof{gap:9px}
   .home-trust-proof-google{justify-content:flex-start;text-align:left}
-  .home-trust-proof-google>img{width:31px;height:31px}
   .home-trust-stars{font-size:10px;letter-spacing:.03em}
   .home-trust-proof strong{font-size:10px;line-height:1.25}
   .home-trust-proof small{font-size:7px;line-height:1.35;letter-spacing:.09em}
@@ -5757,6 +5755,20 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
 }
 @media (max-width:390px){
   .home-trust-band-inner{gap:9px}
-  .home-trust-proof-google>img{width:28px;height:28px}
   .home-trust-proof-ajax>img{width:96px}
+}
+
+
+/* v4.13.59 trust, Ajax partnership and service-area refinement */
+.ajax-authorisation-hero-card{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:48px;background:radial-gradient(circle at 78% 18%,rgba(255,255,255,.08),transparent 30%),linear-gradient(145deg,#0b0d10,#050505)}
+.ajax-authorisation-hero-card::after{box-shadow:inset 0 0 90px rgba(0,0,0,.22)}
+.ajax-authorisation-hero-card>img{width:min(100%,330px);height:auto;max-height:100px;object-fit:contain;object-position:left center;margin-bottom:38px}
+.ajax-authorisation-hero-card h2{margin:12px 0 16px;font-size:clamp(30px,3.2vw,46px);line-height:1.02;letter-spacing:-.045em}
+.ajax-authorisation-hero-card p{max-width:520px;margin:0;color:#b7bcc1;font-size:16px;line-height:1.6}
+.ajax-authorisation-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.ajax-authorisation-tags span{padding:8px 11px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#f5f5f5;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:760px){
+  .ajax-authorisation-hero-card{padding:30px;min-height:390px}
+  .ajax-authorisation-hero-card>img{width:240px;margin-bottom:26px}
+  .ajax-authorisation-hero-card p{font-size:14px}
 }

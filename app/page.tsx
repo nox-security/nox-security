@@ -6,7 +6,7 @@ import { serviceSchema, webPageSchema } from "@/lib/schema"
 
 export const metadata: Metadata = pageMetadata(
   "Fire Alarm Installation, CCTV & Security | Chesterfield & Sheffield",
-  "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
+  "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District.",
   "/",
   { image: "/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp", imageAlt: "NOX Fire & Security van parked outside a commercial unit" },
 )
@@ -72,14 +72,14 @@ function ProofIcon({ type }: { type: string }) {
 export default function HomePage() {
   const serviceStructuredData = serviceSchema({
     name: "Fire alarm installation, CCTV and intruder alarms",
-    description: "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with emergency lighting, monitoring and risk-assessment support available through the relevant service pages.",
+    description: "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District, with emergency lighting, monitoring and risk-assessment support available through the relevant service pages.",
     path: "/",
     serviceType: ["Fire alarm installation", "Fire alarm servicing and maintenance", "Emergency lighting", "Fire risk assessments", "CCTV installation", "CCTV maintenance", "Intruder alarm installation", "Alarm monitoring"],
     image: "/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp",
   })
   const homepageStructuredData = webPageSchema({
     name: "NOX Fire & Security",
-    description: "Complete Fire & Security solutions including fire alarm installation and maintenance, CCTV and intruder alarms across Chesterfield, Derbyshire and South Yorkshire.",
+    description: "Complete Fire & Security solutions including fire alarm installation and maintenance, CCTV and intruder alarms across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District.",
     path: "/",
     image: "/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp",
   })
@@ -94,7 +94,7 @@ export default function HomePage() {
         <p className="ref-home-kicker">Protecting homes<br/>and businesses across<br/>Chesterfield, Derbyshire<br/>and South Yorkshire</p>
         <span className="ref-home-rule" aria-hidden="true"/>
         <h1>Complete<br/><span>Fire &amp; Security</span><br/>Solutions</h1>
-        <p className="ref-home-lead">Fire alarm installation, fire alarm maintenance, CCTV and intruder alarm systems for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
+        <p className="ref-home-lead">Fire alarm installation, fire alarm maintenance, CCTV and intruder alarm systems across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District.</p>
         <div className="ref-home-actions">
           <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Get a Quote <span aria-hidden="true">→</span></Link>
         </div>
@@ -104,10 +104,9 @@ export default function HomePage() {
     <section className="home-trust-band" aria-label="NOX customer reviews and authorised installer status">
       <div className="container home-trust-band-inner">
         <Link className="home-trust-proof home-trust-proof-google" href="/reviews">
-          <img src="/icons/google-reviews icon.svg" alt="Google Reviews"/>
           <div>
             <span className="home-trust-stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <strong>5.0 Google Rating</strong>
+            <strong>5-Star Google Reviews</strong>
           </div>
         </Link>
         <span className="home-trust-divider" aria-hidden="true"/>
@@ -154,7 +153,7 @@ export default function HomePage() {
         <div className="ref-area-copy">
           <p className="ref-section-kicker">Our service areas <span/></p>
           <h2>Chesterfield Based.<br/>Regional Coverage.</h2>
-          <p>Based in Chesterfield, we provide fire and security solutions across Derbyshire, South Yorkshire, Sheffield, Mansfield, Doncaster, Newark, Wirksworth, Ripley and surrounding areas.</p>
+          <p>Based in Chesterfield, we install and maintain fire alarms, CCTV and intruder systems across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District — supporting homes, commercial premises, warehouses, hospitality, rural estates and multi-site properties.</p>
           <Link className="ref-area-link" href="/areas-we-serve">Explore all service areas <span aria-hidden="true">→</span></Link>
         </div>
       </div>
