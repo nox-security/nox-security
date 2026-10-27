@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata(
   "Fire Alarm Installation, CCTV & Security | Chesterfield & Sheffield",
   "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
   "/",
-  { image: "/images/v4-13-52/homepage-hero-nox-unit-van-desktop.webp", imageAlt: "NOX Fire & Security van parked outside a commercial unit" },
+  { image: "/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp", imageAlt: "NOX Fire & Security van parked outside a commercial unit" },
 )
 
 const coreServices = [
@@ -18,6 +18,12 @@ const coreServices = [
     href: "/systems/fire-safety",
     image: "/images/v4-10/fire-alarm-installation-hero.jpeg",
     alt: "Ajax EN54 fire alarm control panel installed beside a fire alarm zone plan and manual call point",
+    links: [
+      { href: "/systems/fire-safety", label: "Installation" },
+      { href: "/service-plans/fire-alarm-servicing", label: "Servicing" },
+      { href: "/systems/emergency-lighting", label: "Emergency Lighting" },
+      { href: "/systems/fire-risk-assessment", label: "Risk Assessments" },
+    ],
   },
   {
     title: "CCTV Systems",
@@ -25,6 +31,12 @@ const coreServices = [
     href: "/systems/cctv",
     image: "/images/image-refresh/home-cctv-live-view.webp",
     alt: "Residential CCTV live view showing full-property camera coverage",
+    links: [
+      { href: "/systems/cctv", label: "Commercial CCTV" },
+      { href: "/systems/home-cctv", label: "Home CCTV" },
+      { href: "/service-plans/cctv-maintenance", label: "Maintenance" },
+      { href: "/service-plans/alarm-monitoring", label: "Monitoring" },
+    ],
   },
   {
     title: "Intruder Alarms",
@@ -32,15 +44,21 @@ const coreServices = [
     href: "/systems/intrusion-alarms",
     image: "/images/v4-12-9/residential-intruder-main.jpg",
     alt: "Black Ajax outdoor detector installed for perimeter intruder protection",
+    links: [
+      { href: "/systems/intrusion-alarms", label: "Installation" },
+      { href: "/service-plans/alarm-maintenance", label: "Maintenance" },
+      { href: "/service-plans/alarm-monitoring", label: "Monitoring" },
+      { href: "/systems/residential-security-packages", label: "Home Security" },
+    ],
   },
 ]
 
 const proofPoints = [
-  ["installation", "Expert", "Installation"],
+  ["installation", "Specialist", "Installation"],
   ["support", "Ongoing", "Support"],
   ["compliance", "Compliance", "Focused"],
   ["monitoring", "24/7", "Monitoring"],
-  ["property", "Residential", "& Commercial"],
+  ["property", "Homes", "& Business"],
 ] as const
 
 function ProofIcon({ type }: { type: string }) {
@@ -57,20 +75,20 @@ export default function HomePage() {
     description: "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with emergency lighting, monitoring and risk-assessment support available through the relevant service pages.",
     path: "/",
     serviceType: ["Fire alarm installation", "Fire alarm servicing and maintenance", "Emergency lighting", "Fire risk assessments", "CCTV installation", "CCTV maintenance", "Intruder alarm installation", "Alarm monitoring"],
-    image: "/images/v4-13-52/homepage-hero-nox-unit-van-desktop.webp",
+    image: "/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp",
   })
   const homepageStructuredData = webPageSchema({
     name: "NOX Fire & Security",
     description: "Complete Fire & Security solutions including fire alarm installation and maintenance, CCTV and intruder alarms across Chesterfield, Derbyshire and South Yorkshire.",
     path: "/",
-    image: "/images/v4-13-52/homepage-hero-nox-unit-van-desktop.webp",
+    image: "/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp",
   })
 
   return <>
     <JsonLd data={serviceStructuredData}/><JsonLd data={homepageStructuredData}/>
 
     <section className="ref-home-hero">
-      <div className="ref-home-hero-media"><picture><source media="(max-width: 760px)" srcSet="/images/v4-13-52/homepage-hero-nox-unit-van-mobile.webp" /><img src="/images/v4-13-52/homepage-hero-nox-unit-van-desktop.webp" alt="NOX Fire & Security van parked outside a commercial unit"/></picture></div>
+      <div className="ref-home-hero-media"><picture><source media="(max-width: 760px)" srcSet="/images/v4-13-53/homepage-hero-nox-unit-van-mobile.webp" /><img src="/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp" alt="NOX Fire & Security van parked outside a commercial unit"/></picture></div>
       <div className="ref-home-hero-overlay"/>
       <div className="container ref-home-hero-copy">
         <p className="ref-home-kicker">Protecting homes<br/>and businesses across<br/>Chesterfield, Derbyshire<br/>and South Yorkshire</p>
@@ -86,15 +104,18 @@ export default function HomePage() {
 
     <section className="ref-service-strip" aria-label="Core NOX services">
       <div className="container ref-service-grid">
-        {coreServices.map(service => <Link className="ref-service-card" href={service.href} key={service.title}>
-          <div className="ref-service-image"><img src={service.image} alt={service.alt}/></div>
+        {coreServices.map(service => <article className="ref-service-card" key={service.title}>
+          <Link className="ref-service-image" href={service.href}><img src={service.image} alt={service.alt}/></Link>
           <div className="ref-service-body">
             <span className="ref-service-rule" aria-hidden="true"/>
-            <h2>{service.title}</h2>
+            <h2><Link href={service.href}>{service.title}</Link></h2>
             <p>{service.text}</p>
-            <span className="ref-service-arrow" aria-hidden="true">→</span>
+            <div className="ref-service-links">
+              {service.links.map(link => <Link key={link.href} href={link.href} className="ref-service-link">{link.label}</Link>)}
+            </div>
+            <Link className="ref-service-arrow" href={service.href} aria-label={`Explore ${service.title}`}>→</Link>
           </div>
-        </Link>)}
+        </article>)}
       </div>
     </section>
 
@@ -113,21 +134,21 @@ export default function HomePage() {
       <div className="container ref-area-content">
         <div className="ref-area-copy">
           <p className="ref-section-kicker">Our service areas <span/></p>
-          <h2>Local Experts.<br/>Wider Coverage.</h2>
+          <h2>Chesterfield Based.<br/>Regional Coverage.</h2>
           <p>Based in Chesterfield, we provide fire and security solutions across Derbyshire, South Yorkshire, Sheffield, Mansfield, Doncaster, Newark, Wirksworth, Ripley and surrounding areas.</p>
+          <Link className="ref-area-link" href="/areas-we-serve">Explore all service areas <span aria-hidden="true">→</span></Link>
         </div>
-        <Link className="ref-home-button ref-home-button-secondary ref-area-button" href="/areas-we-serve">View All Areas <span aria-hidden="true">→</span></Link>
       </div>
     </section>
 
     <section className="ref-final-cta">
       <div className="container ref-final-cta-grid">
         <div>
-          <p className="ref-section-kicker">Get in touch today <span/></p>
-          <h2>Book a Free Site Survey</h2>
-          <p>We’ll assess your property and recommend the right fire and security solution for your needs.</p>
+          <p className="ref-section-kicker">Start your enquiry <span/></p>
+          <h2>Discuss Your Property or Project</h2>
+          <p>Tell us what you need and we’ll guide you to the right fire, CCTV or intruder solution for your property.</p>
         </div>
-        <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Book a Site Survey <span aria-hidden="true">→</span></Link>
+        <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Start Your Enquiry <span aria-hidden="true">→</span></Link>
       </div>
     </section>
   </>
