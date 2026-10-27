@@ -96,8 +96,7 @@ export default function HomePage() {
         <h1>Complete<br/><span>Fire &amp; Security</span><br/>Solutions</h1>
         <p className="ref-home-lead">Fire alarm installation, fire alarm maintenance, CCTV and intruder alarm systems for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire.</p>
         <div className="ref-home-actions">
-          <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Book a Site Survey <span aria-hidden="true">→</span></Link>
-          <Link className="ref-home-button ref-home-button-secondary" href="/get-quote#quote-form">Get a Quote <span aria-hidden="true">→</span></Link>
+          <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Get a Quote <span aria-hidden="true">→</span></Link>
         </div>
       </div>
     </section>
@@ -144,11 +143,11 @@ export default function HomePage() {
     <section className="ref-final-cta">
       <div className="container ref-final-cta-grid">
         <div>
-          <p className="ref-section-kicker">Installation &amp; ongoing support <span/></p>
-          <h2>Discuss Your Fire &amp; Security Requirements</h2>
-          <p>From a new installation to servicing, maintenance and monitoring, we’ll help you choose the right next step for your property or site.</p>
+          <p className="ref-section-kicker">Fire · CCTV · Intruder <span/></p>
+          <h2>Installation &amp; Ongoing Support</h2>
+          <p>New systems, servicing, maintenance and monitoring — planned around your property, site and existing equipment.</p>
         </div>
-        <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Discuss Your Requirements <span aria-hidden="true">→</span></Link>
+        <Link className="ref-final-link" href="/get-quote#quote-form">Start Your Enquiry <span aria-hidden="true">→</span></Link>
       </div>
     </section>
   </>
