@@ -53,22 +53,6 @@ const coreServices = [
   },
 ]
 
-const proofPoints = [
-  ["installation", "Specialist", "Installation"],
-  ["support", "Ongoing", "Support"],
-  ["compliance", "Compliance", "Focused"],
-  ["monitoring", "24/7", "Monitoring"],
-  ["property", "Homes", "& Business"],
-] as const
-
-function ProofIcon({ type }: { type: string }) {
-  if (type === "installation") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
-  if (type === "support") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-2.8 8-7 10-4.2-2-7-5.4-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg>
-  if (type === "compliance") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v5h5M10 12h6M10 16h6"/></svg>
-  if (type === "monitoring") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.7-6 10-6 10 6 10 6-3.7 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10l8-6 8 6v10H4z"/><path d="M9 20v-6h6v6"/></svg>
-}
-
 export default function HomePage() {
   const serviceStructuredData = serviceSchema({
     name: "Fire alarm installation, CCTV and intruder alarms",
@@ -96,8 +80,9 @@ export default function HomePage() {
         <h1>Complete<br/><span>Fire &amp; Security</span><br/>Solutions</h1>
         <p className="ref-home-lead">Fire alarm installation, fire alarm maintenance, CCTV and intruder alarm systems across Chesterfield, Sheffield, South Yorkshire, Derbyshire, Derby and the Peak District.</p>
         <div className="ref-home-actions">
-          <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Get a Quote <span aria-hidden="true">→</span></Link>
+          <Link className="ref-home-button ref-home-button-primary" href="/book-security-survey">Book Your Site Survey <span aria-hidden="true">→</span></Link>
         </div>
+        <a className="ref-home-call" href="tel:07882959297">Call NOX <strong>07882 959297</strong></a>
       </div>
     </section>
 
@@ -137,29 +122,8 @@ export default function HomePage() {
       </div>
     </section>
 
-    <section className="ref-proof-strip" aria-label="NOX service standards">
-      <div className="container ref-proof-grid">
-        {proofPoints.map(([type, line1, line2]) => <div className="ref-proof-item" key={type}>
-          <ProofIcon type={type}/>
-          <strong>{line1}<br/>{line2}</strong>
-        </div>)}
-      </div>
-    </section>
 
 
-    <section className="home-story-band">
-      <div className="container home-story-grid">
-        <div>
-          <p className="ref-section-kicker">Built in Chesterfield <span/></p>
-          <h2>Director-led. Proven on real projects.</h2>
-        </div>
-        <div className="home-story-copy">
-          <p>NOX was founded by Joseph Robb and James Rigby to keep survey, installation and ongoing support connected under one accountable team. Our project portfolio now spans homes, commercial premises, industrial sites, rural estates and multi-site work.</p>
-          <p>Chesterfield remains our base and core service area, with wider UK project coverage available for suitable commercial and multi-site requirements.</p>
-          <div className="home-story-links"><Link href="/about-us">About NOX →</Link><Link href="/case-studies">View Our Projects →</Link></div>
-        </div>
-      </div>
-    </section>
 
     <section className="ref-final-cta">
       <div className="container ref-final-cta-grid">
