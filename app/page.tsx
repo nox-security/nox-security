@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata(
   "Fire Alarm Installation, CCTV & Security | Chesterfield & Sheffield",
   "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms across Chesterfield, Sheffield, Derbyshire and South Yorkshire.",
   "/",
-  { image: "/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp", imageAlt: "NOX Fire & Security van parked outside a commercial unit" },
+  { image: "/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp", imageAlt: "NOX Fire & Security van parked outside a commercial unit" },
 )
 
 const coreServices = [
@@ -75,20 +75,20 @@ export default function HomePage() {
     description: "Fire alarm installation, servicing and maintenance, CCTV and intruder alarms for homes and businesses across Chesterfield, Sheffield, Derbyshire and South Yorkshire, with emergency lighting, monitoring and risk-assessment support available through the relevant service pages.",
     path: "/",
     serviceType: ["Fire alarm installation", "Fire alarm servicing and maintenance", "Emergency lighting", "Fire risk assessments", "CCTV installation", "CCTV maintenance", "Intruder alarm installation", "Alarm monitoring"],
-    image: "/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp",
+    image: "/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp",
   })
   const homepageStructuredData = webPageSchema({
     name: "NOX Fire & Security",
     description: "Complete Fire & Security solutions including fire alarm installation and maintenance, CCTV and intruder alarms across Chesterfield, Derbyshire and South Yorkshire.",
     path: "/",
-    image: "/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp",
+    image: "/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp",
   })
 
   return <>
     <JsonLd data={serviceStructuredData}/><JsonLd data={homepageStructuredData}/>
 
     <section className="ref-home-hero">
-      <div className="ref-home-hero-media"><picture><source media="(max-width: 760px)" srcSet="/images/v4-13-53/homepage-hero-nox-unit-van-mobile.webp" /><img src="/images/v4-13-53/homepage-hero-nox-unit-van-desktop.webp" alt="NOX Fire & Security van parked outside a commercial unit"/></picture></div>
+      <div className="ref-home-hero-media"><picture><source media="(max-width: 760px)" srcSet="/images/v4-13-54/homepage-hero-nox-unit-van-mobile.webp" /><img src="/images/v4-13-54/homepage-hero-nox-unit-van-desktop.webp" alt="NOX Fire & Security van parked outside a commercial unit"/></picture></div>
       <div className="ref-home-hero-overlay"/>
       <div className="container ref-home-hero-copy">
         <p className="ref-home-kicker">Protecting homes<br/>and businesses across<br/>Chesterfield, Derbyshire<br/>and South Yorkshire</p>
@@ -144,11 +144,11 @@ export default function HomePage() {
     <section className="ref-final-cta">
       <div className="container ref-final-cta-grid">
         <div>
-          <p className="ref-section-kicker">Start your enquiry <span/></p>
-          <h2>Discuss Your Property or Project</h2>
-          <p>Tell us what you need and we’ll guide you to the right fire, CCTV or intruder solution for your property.</p>
+          <p className="ref-section-kicker">Installation &amp; ongoing support <span/></p>
+          <h2>Discuss Your Fire &amp; Security Requirements</h2>
+          <p>From a new installation to servicing, maintenance and monitoring, we’ll help you choose the right next step for your property or site.</p>
         </div>
-        <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Start Your Enquiry <span aria-hidden="true">→</span></Link>
+        <Link className="ref-home-button ref-home-button-primary" href="/get-quote#quote-form">Discuss Your Requirements <span aria-hidden="true">→</span></Link>
       </div>
     </section>
   </>
