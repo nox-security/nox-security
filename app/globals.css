@@ -6017,3 +6017,26 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
   .ref-home-call strong{font-size:17px}
   .site-footer-streamlined .footer-brand-contact .footer-phone-contact strong{font-size:22px}
 }
+
+
+/* v4.13.68 mobile navigation overview simplification */
+.mobile-nav-accordion.is-active::before{display:none!important}
+.mobile-nav-accordion-heading .mobile-nav-category-trigger{position:relative;padding-right:38px}
+.mobile-nav-accordion-heading .mobile-nav-category-trigger::after{content:"";position:absolute;right:10px;top:50%;width:8px;height:8px;border-right:1.5px solid rgba(255,255,255,.58);border-bottom:1.5px solid rgba(255,255,255,.58);transform:translateY(-65%) rotate(45deg);transition:transform .22s ease,border-color .18s ease}
+.mobile-nav-accordion.is-open .mobile-nav-category-trigger::after{transform:translateY(-30%) rotate(225deg);border-color:#fff}
+.mobile-mega-intro,.mobile-mega-visual,.mobile-overview-route{display:none!important}
+.mobile-mega-overview-card{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;margin:10px 4px 14px;padding:10px;border:1px solid rgba(255,255,255,.10);border-radius:10px;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.018));color:#fff;text-decoration:none;transition:border-color .18s ease,background .18s ease,transform .18s ease}
+.mobile-mega-overview-card:hover,.mobile-mega-overview-card:focus-visible,.mobile-mega-overview-card.is-current{border-color:rgba(255,255,255,.22);background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.025));outline:none}
+.mobile-mega-overview-image{height:92px;border-radius:7px;overflow:hidden;background:#111}
+.mobile-mega-overview-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.78) brightness(.82)}
+.mobile-mega-overview-copy{min-width:0}
+.mobile-mega-overview-copy>span{display:block;margin:0 0 6px;color:rgba(255,255,255,.52);font-size:9px;font-weight:850;letter-spacing:.18em;text-transform:uppercase}
+.mobile-mega-overview-copy strong{display:block;color:#fff;font-size:17px;line-height:1.2;font-weight:800;letter-spacing:-.02em}
+.mobile-mega-overview-copy p{margin:6px 0 0;color:rgba(255,255,255,.54);font-size:11px;line-height:1.45}
+.mobile-mega-routes{border-top:1px solid rgba(255,255,255,.075)!important}
+@media(max-width:430px){
+  .mobile-mega-overview-card{grid-template-columns:104px minmax(0,1fr);gap:13px;padding:8px}
+  .mobile-mega-overview-image{height:84px}
+  .mobile-mega-overview-copy strong{font-size:16px}
+  .mobile-mega-overview-copy p{font-size:10.5px}
+}

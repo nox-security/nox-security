@@ -137,7 +137,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.67" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.68" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -195,21 +195,22 @@ export default function Header() {
                 </div>
                 <div id={panelId} className="mobile-nav-accordion-panel">
                   <div className="mobile-nav-accordion-inner mobile-mega-menu">
-                    <div className="mobile-mega-intro">
-                      <h2>{menu.heading}</h2>
-                      <p>{menu.intro}</p>
-                    </div>
-                    <div className="mobile-mega-visual"><img src={menu.image} alt={menu.imageAlt}/><span>{menu.imageLabel}</span></div>
+                    <Link
+                      className={`mobile-mega-overview-card ${pathname === menu.href ? "is-current" : ""}`}
+                      aria-current={pathname === menu.href ? "page" : undefined}
+                      onClick={closeMobileNavigation}
+                      href={menu.href}
+                    >
+                      <div className="mobile-mega-overview-image">
+                        <img src={menu.image} alt={menu.imageAlt}/>
+                      </div>
+                      <div className="mobile-mega-overview-copy">
+                        <span>Overview</span>
+                        <strong>{menu.heading}</strong>
+                        <p>{menu.intro}</p>
+                      </div>
+                    </Link>
                     <div className="mobile-mega-routes">
-                      <Link
-                        className={pathname === menu.href ? "is-current mobile-overview-route" : "mobile-overview-route"}
-                        aria-current={pathname === menu.href ? "page" : undefined}
-                        onClick={closeMobileNavigation}
-                        href={menu.href}
-                      >
-                        <strong>{menu.overviewLabel}</strong>
-                        <span>Start here for the full overview and connected service options.</span>
-                      </Link>
                       {menu.routes.map(item => {
                         const current = isCurrentLink(pathname, item.href)
                         return (
