@@ -127,12 +127,8 @@ export default function Header() {
 
   const toggleMobileNavigation = () => {
     setOpen(current => {
-      if (current) {
-        setOpenMobileSection(null)
-        return false
-      }
-      setOpenMobileSection(activeMenuId)
-      return true
+      setOpenMobileSection(null)
+      return !current
     })
   }
 
@@ -141,7 +137,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.64" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.67" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -186,24 +182,15 @@ export default function Header() {
             return (
               <div className={`mobile-nav-accordion ${isOpen ? "is-open" : ""} ${isActive ? "is-active" : ""}`} key={menu.id}>
                 <div className="mobile-nav-accordion-heading">
-                  <Link
-                    className="mobile-nav-category-link"
-                    href={menu.href}
-                    onClick={closeMobileNavigation}
-                    aria-current={pathname === menu.href ? "page" : undefined}
-                  >
-                    {menu.label}
-                  </Link>
                   <button
                     type="button"
-                    className="mobile-nav-accordion-trigger"
-                    aria-label={`${isOpen ? "Hide" : "Show"} ${menu.label} services`}
+                    className="mobile-nav-accordion-trigger mobile-nav-category-trigger"
+                    aria-label={`${isOpen ? "Close" : "Open"} ${menu.label} navigation`}
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggleMobileSection(menu.id)}
                   >
-                    <span className="mobile-nav-menu-label">Services</span>
-                    <svg className="mobile-nav-menu-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5 10 12.5 15 7.5"/></svg>
+                    <span>{menu.label}</span>
                   </button>
                 </div>
                 <div id={panelId} className="mobile-nav-accordion-panel">
@@ -214,6 +201,15 @@ export default function Header() {
                     </div>
                     <div className="mobile-mega-visual"><img src={menu.image} alt={menu.imageAlt}/><span>{menu.imageLabel}</span></div>
                     <div className="mobile-mega-routes">
+                      <Link
+                        className={pathname === menu.href ? "is-current mobile-overview-route" : "mobile-overview-route"}
+                        aria-current={pathname === menu.href ? "page" : undefined}
+                        onClick={closeMobileNavigation}
+                        href={menu.href}
+                      >
+                        <strong>{menu.overviewLabel}</strong>
+                        <span>Start here for the full overview and connected service options.</span>
+                      </Link>
                       {menu.routes.map(item => {
                         const current = isCurrentLink(pathname, item.href)
                         return (

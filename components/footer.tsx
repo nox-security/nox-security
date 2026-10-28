@@ -13,7 +13,7 @@ export default function Footer() {
             <img src="/images/nox-logo-light.jpeg" alt="NOX Fire & Security" />
           </Link>
           <div className="footer-brand-contact">
-            <a href={site.phoneHref}>{site.phone}</a>
+            <a className="footer-phone-contact" href={site.phoneHref}><small>Call NOX</small><strong>{site.phone}</strong></a>
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <span>{site.base}</span>
           </div>
