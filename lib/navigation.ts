@@ -82,9 +82,9 @@ export const headerNavMenus: HeaderNavMenu[] = [
       { label: "Monitoring & Maintenance", href: "/service-plans" },
       { label: "Existing-System Takeovers", href: "/services/security-system-takeover" },
     ],
-    image: "/images/v4-13-15/chatsworth-estate/main.jpg",
-    imageAlt: "NOX CCTV upgrade at a large rural estate",
-    imageLabel: "Commercial & estate security",
+    image: "/images/revisions/nox-commercial-cctv-installation.jpg",
+    imageAlt: "NOX engineer installing commercial CCTV at an industrial unit",
+    imageLabel: "Commercial security systems",
     cta: { label: "Book Site Survey", href: "/get-quote?customer_type=Commercial&enquiry_type=Installation#quote-form" },
     activePrefixes: [
       "/commercial",

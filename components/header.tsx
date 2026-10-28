@@ -31,12 +31,20 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
       </Link>
 
       <div className={`dropdown-panel header-dropdown-panel header-dropdown-panel-${menu.id}`}>
-        <div className="mega-menu-intro">
-          <span>{menu.label}</span>
-          <h2>{menu.heading}</h2>
-          <p>{menu.intro}</p>
-          <Link className="mega-menu-overview" href={menu.href}>{menu.overviewLabel}</Link>
-        </div>
+        <Link
+          className={`desktop-mega-overview-card ${pathname === menu.href ? "is-current" : ""}`}
+          aria-current={pathname === menu.href ? "page" : undefined}
+          href={menu.href}
+        >
+          <div className="desktop-mega-overview-image">
+            <img src={menu.image} alt={menu.imageAlt}/>
+          </div>
+          <div className="desktop-mega-overview-copy">
+            <span>Overview</span>
+            <h2>{menu.heading}</h2>
+            <p>{menu.intro}</p>
+          </div>
+        </Link>
 
         <div className="mega-menu-routes">
           <span className="mega-menu-column-label">Core services</span>
@@ -61,10 +69,6 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
           <div className="mega-menu-secondary" aria-label={`${menu.label} related services`}>
             {menu.secondary.map(item => <Link key={`${menu.id}-${item.label}`} href={item.href}>{item.label}</Link>)}
           </div>
-          <Link className="mega-menu-visual" href={menu.routes[0].href}>
-            <img src={menu.image} alt={menu.imageAlt}/>
-            <span>{menu.imageLabel}</span>
-          </Link>
           <Link className="button button-light mega-menu-cta premium-cta" href={menu.cta.href} data-cta="quote" data-source-page={`navigation:${menu.id}`}>{menu.cta.label}</Link>
         </aside>
       </div>
@@ -137,7 +141,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.68" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.69" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">

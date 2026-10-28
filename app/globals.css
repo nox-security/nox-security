@@ -6040,3 +6040,46 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
   .mobile-mega-overview-copy strong{font-size:16px}
   .mobile-mega-overview-copy p{font-size:10.5px}
 }
+
+
+/* v4.13.69 desktop overview-first navigation */
+@media (min-width:1181px){
+  .site-header .header-dropdown-panel,
+  .site-header .header-dropdown-panel-home,
+  .site-header .header-dropdown-panel-business,
+  .site-header .header-dropdown-panel-fire,
+  .site-header .header-dropdown-panel-support{
+    width:min(860px,calc(100vw - 48px))!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1.45fr) minmax(220px,.72fr)!important;
+    gap:20px!important;
+    padding:20px 22px 22px!important;
+  }
+  .desktop-mega-overview-card{
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:190px minmax(0,1fr);
+    gap:20px;
+    align-items:center;
+    padding:10px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:12px;
+    background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+    color:#fff;
+    text-decoration:none;
+    transition:border-color .18s ease,background .18s ease;
+  }
+  .desktop-mega-overview-card:hover,.desktop-mega-overview-card:focus-visible,.desktop-mega-overview-card.is-current{
+    border-color:rgba(255,255,255,.24);
+    background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.028));
+    outline:none;
+  }
+  .desktop-mega-overview-image{height:106px;border-radius:8px;overflow:hidden;background:#111}
+  .desktop-mega-overview-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.84)}
+  .desktop-mega-overview-copy>span{display:block;margin-bottom:7px;color:rgba(255,255,255,.48);font-size:9px;font-weight:850;letter-spacing:.18em;text-transform:uppercase}
+  .desktop-mega-overview-copy h2{margin:0 0 7px!important;max-width:none!important;font-size:24px!important;line-height:1.05!important;letter-spacing:-.035em}
+  .desktop-mega-overview-copy p{margin:0;max-width:520px!important;color:rgba(255,255,255,.58);font-size:11.5px!important;line-height:1.5!important}
+  .site-header .header-dropdown-panel .mega-menu-routes{grid-column:1;min-width:0!important}
+  .site-header .header-dropdown-panel .mega-menu-aside{grid-column:2;min-width:0!important;align-self:stretch!important}
+  .site-header .header-dropdown-panel .mega-menu-cta{margin-top:auto!important}
+}
