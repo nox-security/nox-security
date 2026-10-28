@@ -21,14 +21,14 @@ function isCurrentLink(pathname: string, href: string) {
 function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; active: boolean; pathname: string }) {
   return (
     <div className={`nav-dropdown header-nav-dropdown header-nav-dropdown-${menu.id} ${active ? "is-active" : ""}`}>
-      <Link
-        href={menu.href}
+      <button
+        type="button"
         className="header-nav-trigger"
-        aria-current={pathname === menu.href ? "page" : undefined}
+        aria-label={`Open ${menu.label} navigation`}
       >
         <span>{menu.label}</span>
         <span className="nav-indicator" aria-hidden="true" />
-      </Link>
+      </button>
 
       <div className={`dropdown-panel header-dropdown-panel header-dropdown-panel-${menu.id}`}>
         <Link
@@ -37,7 +37,7 @@ function DesktopDropdown({ menu, active, pathname }: { menu: HeaderNavMenu; acti
           href={menu.href}
         >
           <div className="desktop-mega-overview-image">
-            <img src={menu.image} alt={menu.imageAlt}/>
+            <img src={menu.image} alt={menu.imageAlt} width={200} height={132} />
           </div>
           <div className="desktop-mega-overview-copy">
             <span>Overview</span>
@@ -141,7 +141,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.69" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.71" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
