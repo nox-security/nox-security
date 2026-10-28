@@ -127,8 +127,12 @@ export default function Header() {
 
   const toggleMobileNavigation = () => {
     setOpen(current => {
-      if (current) setOpenMobileSection(null)
-      return !current
+      if (current) {
+        setOpenMobileSection(null)
+        return false
+      }
+      setOpenMobileSection(activeMenuId)
+      return true
     })
   }
 
@@ -137,7 +141,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.63" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.64" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -193,12 +197,13 @@ export default function Header() {
                   <button
                     type="button"
                     className="mobile-nav-accordion-trigger"
-                    aria-label={`${isOpen ? "Hide" : "Show"} ${menu.label} options`}
+                    aria-label={`${isOpen ? "Hide" : "Show"} ${menu.label} services`}
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggleMobileSection(menu.id)}
                   >
-                    <span className="mobile-nav-chevron" aria-hidden="true" />
+                    <span className="mobile-nav-menu-label">Services</span>
+                    <svg className="mobile-nav-menu-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5 10 12.5 15 7.5"/></svg>
                   </button>
                 </div>
                 <div id={panelId} className="mobile-nav-accordion-panel">

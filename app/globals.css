@@ -5960,3 +5960,35 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
   .site-footer-streamlined .footer-grid-streamlined{grid-template-columns:1fr}
   .site-footer-streamlined .footer-brand{grid-column:auto}
 }
+
+
+/* v4.13.64 mobile navigation + premium hierarchy refinements */
+@media (min-width:1321px){
+  .site-header .header-primary-nav{flex:1;justify-content:center;gap:clamp(52px,5.5vw,92px);font-size:14px;font-weight:760;letter-spacing:.025em}
+  .site-header .header-nav-trigger{font-size:14px}
+}
+@media (max-width:1320px) and (min-width:1181px){
+  .site-header .header-primary-nav{flex:1;justify-content:center;gap:clamp(26px,3.2vw,44px);font-size:12.5px;font-weight:740}
+  .site-header .header-nav-trigger{font-size:12.5px}
+}
+.mobile-nav-accordion-heading{grid-template-columns:minmax(0,1fr) auto}
+.mobile-nav-category-link{padding-right:14px;font-size:16px;letter-spacing:.01em}
+.mobile-nav-accordion-heading .mobile-nav-accordion-trigger{width:auto;min-width:104px;min-height:50px;padding:0 8px 0 14px;display:flex;align-items:center;justify-content:flex-end;gap:8px;color:#cfcfcf;background:transparent;border:0}
+.mobile-nav-menu-label{font-size:10px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+.mobile-nav-menu-chevron{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:transform .24s ease}
+.mobile-nav-accordion.is-open .mobile-nav-menu-chevron{transform:rotate(180deg)}
+.mobile-nav-accordion-heading .mobile-nav-chevron{display:none!important}
+.site-footer-streamlined .footer-brand-logo{margin-bottom:9px}
+.site-footer-streamlined .footer-brand-contact{gap:2px;margin-top:-2px}
+.site-footer-streamlined .footer-brand-contact a:first-child{color:#fff;font-size:18px;font-weight:780;line-height:1.25;letter-spacing:.015em;margin-bottom:2px}
+.site-footer-streamlined .footer-brand-contact a:nth-child(2),
+.site-footer-streamlined .footer-brand-contact span{font-size:13px;color:#bdbdbd}
+.ref-final-cta{position:relative;border-top:0}
+.ref-final-cta::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;background:#fff}
+@media(max-width:760px){
+  .mobile-nav-category-link{font-size:16px}
+  .mobile-nav-accordion-heading .mobile-nav-accordion-trigger{min-width:100px}
+  .site-footer-streamlined .footer-brand-logo{margin-bottom:8px}
+  .site-footer-streamlined .footer-brand-contact a:first-child{font-size:19px}
+  .ref-final-cta::before{height:6px}
+}

@@ -101,7 +101,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
     routes: [
       { label: "Home CCTV", href: "/systems/home-cctv", description: "Recorded coverage for entrances, driveways, gardens, garages and outbuildings." },
       { label: "Ajax Home Alarms", href: "/systems/intrusion-alarms", description: "Smart intruder detection, app control, sirens and visual verification where suitable." },
-      { label: "Complete Home Security", href: "/systems/residential-security-packages", description: "Coordinate alarm, CCTV, perimeter protection and future support around one property." },
+      { label: "Smart Home Security", href: "/systems/smart-home-cctv", description: "App-led cameras, video doorbells and smart security for homes wanting a simpler connected route." },
     ],
     secondary: [
       { label: "Perimeter & Outbuildings", href: "/systems/perimeter-protection" },
@@ -149,7 +149,7 @@ export const residentialFooterItems: NavItem[] = [
   { label: "Residential Overview", href: "/residential" },
   { label: "Home CCTV", href: "/systems/home-cctv" },
   { label: "Ajax Home Alarms", href: "/systems/intrusion-alarms" },
-  { label: "Complete Home Security", href: "/systems/residential-security-packages" },
+  { label: "Smart Home Security", href: "/systems/smart-home-cctv" },
   { label: "Monitoring & Servicing", href: "/service-plans#home-system-support" },
 ]
 

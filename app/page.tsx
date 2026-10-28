@@ -48,7 +48,7 @@ const coreServices = [
       { href: "/systems/intrusion-alarms", label: "Installation" },
       { href: "/service-plans/alarm-maintenance", label: "Maintenance" },
       { href: "/service-plans/alarm-monitoring", label: "Monitoring" },
-      { href: "/systems/residential-security-packages", label: "Home Security" },
+      { href: "/systems/smart-home-cctv", label: "Smart Home Security" },
     ],
   },
 ]
