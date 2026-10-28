@@ -5964,7 +5964,7 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
 
 /* v4.13.64 mobile navigation + premium hierarchy refinements */
 @media (min-width:1321px){
-  .site-header .header-primary-nav{flex:1;justify-content:center;gap:clamp(52px,5.5vw,92px);font-size:14px;font-weight:760;letter-spacing:.025em}
+  .site-header .header-primary-nav{flex:1;justify-content:center;gap:clamp(38px,4vw,64px);font-size:14px;font-weight:760;letter-spacing:.025em}
   .site-header .header-nav-trigger{font-size:14px}
 }
 @media (max-width:1320px) and (min-width:1181px){

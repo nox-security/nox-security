@@ -116,7 +116,6 @@ export default function HomePage() {
             <div className="ref-service-links">
               {service.links.map(link => <Link key={link.href} href={link.href} className="ref-service-link">{link.label}</Link>)}
             </div>
-            <Link className="ref-service-arrow" href={service.href} aria-label={`Explore ${service.title}`}>→</Link>
           </div>
         </article>)}
       </div>
@@ -132,7 +131,7 @@ export default function HomePage() {
           <h2>Start Your NOX Project</h2>
           <p>One enquiry route for a new installation, an existing system, planned servicing, maintenance or monitoring.</p>
         </div>
-        <Link className="ref-final-link" href="/get-quote#quote-form">Start Your Project <span aria-hidden="true">→</span></Link>
+        <Link className="ref-final-link" href="/get-quote#quote-form">Start Your Project</Link>
       </div>
     </section>
   </>
