@@ -133,6 +133,443 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    "slug": "david-malin-kitchens-sheffield-ajax-fire-cctv-intruder",
+    "title": "Integrated Ajax Fire & Security for David Malin Kitchens",
+    "location": "Sheffield, South Yorkshire",
+    "category": "Integrated Fire & Security",
+    "image": "/images/projects/david-project-hero.webp",
+    "alt": "David Malin Kitchens and Bedrooms premises in Sheffield protected by NOX Fire & Security",
+    "summary": "A coordinated Ajax EN54 fire alarm, intruder alarm and CCTV installation for David Malin Kitchens in Sheffield, with discreet black security equipment and a large office CCTV display.",
+    "story": "At David Malin Kitchens in Sheffield, NOX delivered a coordinated fire and security upgrade across the commercial premises. The project brought together an Ajax EN54 fire alarm, an Ajax intruder alarm and CCTV, allowing the customer to work with one installation team rather than separate suppliers for each system. Black-finish security equipment was chosen for a consistent appearance, and CCTV views were brought onto a 50-inch display in the office. The project photographs show the site, installation work, existing fire equipment, the new Ajax fire control panel, CCTV and alarm devices.",
+    "requirement": "Provide an integrated approach to fire detection, intrusion security and CCTV at the kitchen and bedroom business, with straightforward control, clear camera visibility and a coordinated installation.",
+    "delivery": "NOX installed an Ajax EN54 fire alarm, Ajax intruder protection and CCTV, including black-finish equipment and an office CCTV viewing display. The work was coordinated as one commercial fire and security project.",
+    "systems": [
+      "Ajax EN54 fire alarm",
+      "Ajax intruder alarm",
+      "Commercial CCTV",
+      "Black-finish Ajax equipment",
+      "50-inch office CCTV display"
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/sheffield-david-malin-exterior.webp",
+        "alt": "Exterior of David Malin Kitchens and Bedrooms in Sheffield",
+        "caption": "The commercial premises in Sheffield, where NOX coordinated the fire and security work."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-ajax-en54-panel.webp",
+        "alt": "Ajax EN54 fire alarm control panel installed at David Malin Kitchens",
+        "caption": "The Ajax EN54 control panel photographed during the installation and commissioning work."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-original-fire-panel.webp",
+        "alt": "Original conventional fire alarm panel documented before the Ajax upgrade",
+        "caption": "The existing fire alarm equipment was documented as part of the project."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-black-cctv.webp",
+        "alt": "Black CCTV camera installed on the David Malin Kitchens exterior",
+        "caption": "A black CCTV camera installed against the light-coloured industrial cladding."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-camera-position.webp",
+        "alt": "External CCTV installation position on the commercial premises",
+        "caption": "Camera and cable routing around the building exterior."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-engineer-installation.webp",
+        "alt": "NOX engineer installing CCTV at David Malin Kitchens",
+        "caption": "NOX installation work at the Sheffield premises."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-black-ajax-keypad.webp",
+        "alt": "Black Ajax security keypad fitted to the commercial premises",
+        "caption": "A discreet black Ajax keypad used as part of the intruder alarm installation."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-cctv-office-display.webp",
+        "alt": "CCTV camera feeds displayed on a wall-mounted screen",
+        "caption": "The office CCTV viewing display brings multiple camera feeds into one location."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-cctv-display-detail.webp",
+        "alt": "Close-up of the commercial CCTV multi-camera display",
+        "caption": "Live multi-camera views on the customer viewing screen."
+      },
+      {
+        "src": "/images/projects/sheffield-david-malin-cctv-recorder.webp",
+        "alt": "CCTV recorder installed within an office cabinet",
+        "caption": "CCTV recording equipment positioned within office cabinetry."
+      }
+    ],
+    "metaTitle": "David Malin Kitchens Sheffield | Ajax EN54, CCTV & Intruder | NOX",
+    "metaDescription": "See the NOX installation at David Malin Kitchens in Sheffield: Ajax EN54 fire alarm, intruder security and CCTV with a 50-inch office display.",
+    "searchKeywords": [
+      "Ajax EN54 fire alarm Sheffield",
+      "commercial fire alarm Sheffield",
+      "commercial CCTV Sheffield",
+      "integrated fire and security Sheffield",
+      "Ajax intruder alarm Sheffield"
+    ],
+    "designPriorities": [
+      "Coordinate fire detection, CCTV and intruder protection around one occupied commercial premises and one delivery team.",
+      "Use discreet black security equipment where visible, while placing cameras and controls for practical daily use.",
+      "Provide a clear office CCTV viewing point and a joined-up handover for the separate fire and security systems."
+    ],
+    "outcome": "A coordinated Ajax EN54 fire, intruder and CCTV installation for David Malin Kitchens, delivered through one NOX project with black-finish equipment and an office CCTV display.",
+    "localContext": "Commercial showrooms, workshops and industrial units in Sheffield may need both life-safety systems and security for stock, premises and access routes. Each system retains its own design and maintenance requirements.",
+    "faq": [
+      {
+        "q": "Can NOX install fire alarms, CCTV and intruder alarms as one project?",
+        "a": "Yes. NOX can coordinate the survey and installation while keeping the fire alarm design, security requirements, testing and future servicing clearly defined."
+      },
+      {
+        "q": "Can CCTV be viewed on a large office screen?",
+        "a": "Suitable recorder-based CCTV systems can provide a multi-camera live view on an office display, as included in this project."
+      },
+      {
+        "q": "Can black CCTV and intruder devices be used in a commercial building?",
+        "a": "Yes, selected cameras and Ajax security devices are available in black. Product selection depends on the environment and the required system specification."
+      }
+    ]
+  },
+  {
+    slug: "chesterfield-bungalow-renovation-ajax-intruder-cctv",
+    title: "Ajax intruder alarm and CCTV for a Chesterfield bungalow renovation",
+    location: "Chesterfield, Derbyshire",
+    category: "Residential Security",
+    image: "/images/projects/chesterfield-bungalow-hero.webp",
+    alt: "NOX Fire & Security vehicles at a bungalow renovation in Chesterfield",
+    summary: "An Ajax intruder alarm and CCTV installation at a bungalow undergoing renovation in Chesterfield, bringing smart alarm controls and camera coverage into the property improvement project.",
+    story: "This Chesterfield bungalow was undergoing renovation, creating an opportunity to plan security alongside the work to the property. NOX installed an Ajax intruder alarm and CCTV equipment, with a discreet internal keypad, door protection and a central Ajax hub. External camera positioning was considered around the building and its approaches. The photographs show both the visible finished devices and the equipment installed out of sight.",
+    requirement: "Introduce a modern intruder alarm and CCTV during the bungalow renovation, with straightforward everyday control and camera positions suited to the property.",
+    delivery: "NOX fitted Ajax intruder alarm components including a keypad, door contact and hub, together with CCTV camera equipment and associated network hardware.",
+    systems: ["Residential intruder alarm", "Ajax keypad and door protection", "Home CCTV", "Ajax hub and network equipment"],
+    gallery: [
+      { src: "/images/projects/chesterfield-bungalow-bungalow-exterior.webp", alt: "NOX vans outside a bungalow undergoing renovation in Chesterfield", caption: "NOX attending the Chesterfield bungalow renovation to deliver the intruder alarm and CCTV work." },
+      { src: "/images/projects/chesterfield-bungalow-ajax-cctv-external.webp", alt: "Black Ajax CCTV camera mounted on the brickwork of the Chesterfield bungalow", caption: "External camera positioned beneath the timber canopy, with the NOX vehicle in the background." },
+      { src: "/images/projects/chesterfield-bungalow-ajax-keypad.webp", alt: "Illuminated white Ajax alarm keypad installed inside the bungalow", caption: "Wall-mounted Ajax keypad provides a clean and accessible control point." },
+      { src: "/images/projects/chesterfield-bungalow-ajax-door-contact.webp", alt: "Black Ajax door contact fitted to a timber door", caption: "A black door contact adds discreet opening detection to the timber doorway." },
+      { src: "/images/projects/chesterfield-bungalow-ajax-hub.webp", alt: "White Ajax security hub mounted in the bungalow loft", caption: "The central Ajax hub is installed in the loft area, away from the main living spaces." },
+      { src: "/images/projects/chesterfield-bungalow-network-switch.webp", alt: "Network switch and cables mounted in the bungalow loft", caption: "Network equipment installed within the loft as part of the CCTV infrastructure." },
+      { src: "/images/projects/chesterfield-bungalow-old-external-siren.webp", alt: "Older exterior alarm siren on the brick bungalow wall", caption: "The property's existing exterior alarm equipment photographed during the project." }
+    ],
+    metaTitle: "Bungalow CCTV & Ajax Alarm Installation Chesterfield | NOX",
+    metaDescription: "See an Ajax intruder alarm and CCTV installation for a bungalow renovation in Chesterfield, with keypad, door contact, hub and camera photographs.",
+    searchKeywords: ["bungalow security Chesterfield", "Ajax alarm installation Chesterfield", "home CCTV installation Chesterfield", "intruder alarm bungalow Derbyshire"],
+    designPriorities: [
+      "Coordinate security equipment with the renovation rather than leaving devices and cable routes as an afterthought.",
+      "Position the internal keypad and door protection for convenient use without dominating the finished rooms.",
+      "Plan external camera coverage and the associated network equipment around the building layout."
+    ],
+    outcome: "The Chesterfield bungalow has a modern Ajax intruder alarm installation alongside CCTV equipment, with the visible devices selected and positioned around the renovation.",
+    localContext: "Bungalow renovations in Chesterfield are a useful time to plan alarm control points, door contacts, CCTV positions and equipment locations before decorative finishes are finalised.",
+    faq: [
+      { q: "Can CCTV and an intruder alarm be fitted during a bungalow renovation?", a: "Yes. A renovation provides a good opportunity to agree camera positions, alarm devices, power and network arrangements while other work is being completed." },
+      { q: "Can an Ajax keypad and door contacts be installed discreetly?", a: "Yes. Device colour and position can be chosen to suit the door and interior, subject to the practical requirements of the alarm design." },
+      { q: "Does a bungalow need both CCTV and an intruder alarm?", a: "They do different jobs. CCTV provides recorded views of selected areas, while an intruder alarm detects events at protected openings or spaces. The right combination depends on the property and its risks." }
+    ]
+  },
+  {
+    slug: "sheffield-industrial-unit-ajax-cctv-installation",
+    title: "Ajax CCTV installation for a Sheffield industrial unit",
+    location: "Sheffield, South Yorkshire",
+    category: "Industrial CCTV",
+    image: "/images/projects/sheffield-industrial-hero.webp",
+    alt: "NOX Fire & Security van outside an industrial unit in Sheffield during a CCTV installation",
+    summary: "Commercial Ajax CCTV installed at a Sheffield industrial unit, with black cameras positioned around the building and installation work documented on site.",
+    story: "An industrial unit in Sheffield needed a CCTV installation suited to the scale and layout of its warehouse and external elevations. NOX worked on site to position black Ajax cameras around selected areas of the building. The photographs document the industrial premises, camera mounting positions and installation work, including access at height. Camera angles were considered in relation to the unit's structure and areas requiring visibility.",
+    requirement: "Install commercial CCTV for a large industrial unit, with suitable camera locations around the warehouse and building exterior.",
+    delivery: "NOX installed black Ajax CCTV cameras at selected internal and external positions on the industrial unit, coordinating camera locations and mounting work around the building fabric.",
+    systems: ["Commercial CCTV", "Ajax CCTV cameras", "Industrial unit surveillance", "Internal and external camera positions"],
+    gallery: [
+      { src: "/images/projects/sheffield-industrial-industrial-unit-exterior.webp", alt: "Industrial unit in Sheffield with NOX van outside during CCTV work", caption: "The industrial premises and NOX installation vehicle on site in Sheffield." },
+      { src: "/images/projects/sheffield-industrial-warehouse-interior.webp", alt: "Wide interior of Sheffield industrial warehouse with high roof and open floor", caption: "The large warehouse layout informed the placement of internal CCTV cameras." },
+      { src: "/images/projects/sheffield-industrial-ajax-camera-interior.webp", alt: "Black Ajax CCTV camera mounted inside an industrial building", caption: "Close-up of an Ajax camera installed within the industrial unit." },
+      { src: "/images/projects/sheffield-industrial-ajax-camera-exterior.webp", alt: "Black Ajax CCTV camera on the white external cladding of a Sheffield industrial unit", caption: "Black camera mounted to the building exterior alongside the structural column." },
+      { src: "/images/projects/sheffield-industrial-warehouse-wide.webp", alt: "High-level view of Sheffield industrial warehouse during fit-out", caption: "A wider view of the warehouse and its high-level installation environment." },
+      { src: "/images/projects/sheffield-industrial-ajax-camera-exterior-detail.webp", alt: "Detail of Ajax camera mounted to industrial unit cladding", caption: "A close look at the camera and its position on the external cladding." },
+      { src: "/images/projects/sheffield-industrial-engineer-installation.webp", alt: "NOX engineer on a ladder installing CCTV at a Sheffield industrial unit", caption: "NOX engineer carrying out high-level installation work on the unit exterior." },
+      { src: "/images/projects/sheffield-industrial-ajax-camera-close-up.webp", alt: "Black Ajax camera mounted on the Sheffield warehouse exterior", caption: "The black Ajax camera provides a discreet finish against the industrial building." },
+      { src: "/images/projects/sheffield-industrial-ajax-camera-finish.webp", alt: "Close-up of black Ajax camera fitted to industrial wall cladding", caption: "A close-up of the installed camera and its mounting position." }
+    ],
+    metaTitle: "Industrial CCTV Installation Sheffield | Ajax Cameras | NOX",
+    metaDescription: "Ajax commercial CCTV installation at a Sheffield industrial unit. See genuine NOX installation photos, warehouse camera positions and external cameras.",
+    searchKeywords: ["industrial CCTV Sheffield", "warehouse CCTV installation Sheffield", "commercial Ajax cameras Sheffield", "industrial security South Yorkshire"],
+    designPriorities: [
+      "Select camera positions around the industrial unit's high ceilings, structural steelwork and external elevations.",
+      "Consider the views needed across the warehouse and building approaches before finalising camera placement.",
+      "Coordinate high-level mounting and installation access safely around other activity on the premises."
+    ],
+    outcome: "The Sheffield industrial unit received an Ajax CCTV installation with black cameras mounted at selected points inside and outside the building.",
+    localContext: "Industrial CCTV projects in Sheffield often involve high-level camera mounting, wide internal spaces, loading access and large external elevations. Camera choice and position should follow the site's actual visibility and recording requirements.",
+    faq: [
+      { q: "Can Ajax CCTV cameras be installed in an industrial warehouse?", a: "Yes. Suitable Ajax CCTV equipment can be positioned inside or outside industrial buildings, subject to site conditions, camera specification and the intended recorded views." },
+      { q: "How many CCTV cameras does an industrial unit need?", a: "The quantity depends on entrances, loading areas, warehouse layout, external approaches, blind spots and the level of detail required. A survey is needed before recommending a count." },
+      { q: "Can commercial CCTV be installed high on industrial cladding?", a: "Camera mounting is possible where the building structure, fixings, access and installation requirements are suitable. Positions should also allow future maintenance." }
+    ]
+  },
+  {
+    slug: "steve-foster-cranes-derby-hikvision-cctv-monitoring",
+    title: "Hikvision CCTV & 24/7 monitoring for Steve Foster Cranes",
+    location: "Derby, Derbyshire",
+    category: "Industrial CCTV",
+    image: "/images/projects/derby-steve-foster-cranes-nox-site.webp",
+    alt: "NOX Fire & Security on site at Steve Foster Cranes in Derby installing commercial CCTV",
+    summary: "Hikvision industrial CCTV with dual-lens PTZ cameras, optical zoom, ANPR and facial recognition features, supported by Farsight 24/7 monitoring after reported fuel theft.",
+    story: "Following reported fuel theft at Steve Foster Cranes in Derby, NOX was brought in to strengthen CCTV security across the crane yard and industrial premises. The site has a large open vehicle yard, workshops, access routes and valuable plant and machinery, requiring a system designed for both wide-area awareness and closer inspection of activity. The installation includes Hikvision CCTV with dual-lens PTZ cameras and optical zoom, alongside entrance-focused ANPR and facial recognition capabilities. The system is supported by 24/7 monitoring through Farsight. The project photographs show the actual yard, NOX installation work, and the Hikvision cameras fitted on site.",
+    requirement: "Improve security after reported fuel theft, providing monitored CCTV coverage for the industrial yard, access routes and high-value equipment, with additional attention to vehicles and people entering the site.",
+    delivery: "NOX installed Hikvision CCTV equipment, including dual-lens PTZ cameras with optical zoom, and arranged Farsight 24/7 monitoring. The project also includes ANPR and facial recognition functionality for entrance-focused security.",
+    systems: ["Hikvision commercial CCTV", "Dual-lens PTZ cameras", "Optical zoom", "ANPR entrance monitoring", "Facial recognition functionality", "Farsight 24/7 CCTV monitoring"],
+    gallery: [
+      { src: "/images/projects/derby-steve-foster-cranes-yard-overview.webp", alt: "Wide view of the Steve Foster Cranes industrial yard in Derby", caption: "The open crane yard and workshop buildings require carefully planned camera views across vehicle movements and site approaches." },
+      { src: "/images/projects/derby-steve-foster-cranes-hikvision-ptz-installed.webp", alt: "Hikvision dual-lens PTZ CCTV camera installed on industrial cladding", caption: "The installed Hikvision PTZ unit combines wide-area viewing with a movable optical-zoom camera." },
+      { src: "/images/projects/derby-steve-foster-cranes-hikvision-ptz-front.webp", alt: "Close-up of Hikvision dual-lens PTZ camera installed by NOX", caption: "Close-up of the Hikvision dual-lens PTZ camera used on the industrial site." },
+      { src: "/images/projects/derby-steve-foster-cranes-hikvision-ptz-side.webp", alt: "Angled view of Hikvision dual-lens PTZ camera and wall bracket", caption: "The PTZ camera is mounted on the workshop exterior for elevated coverage." },
+      { src: "/images/projects/derby-steve-foster-cranes-hikvision-bullet-one.webp", alt: "Hikvision fixed bullet CCTV camera mounted on a yard column", caption: "A fixed Hikvision camera provides an additional defined view within the wider site CCTV design." },
+      { src: "/images/projects/derby-steve-foster-cranes-hikvision-bullet-two.webp", alt: "Side view of Hikvision bullet CCTV camera at Steve Foster Cranes", caption: "Fixed-camera detail from the site installation." },
+      { src: "/images/projects/derby-steve-foster-cranes-camera-wiring.webp", alt: "NOX installer preparing CCTV cabling on an industrial wall", caption: "Preparing the camera connection as part of the installation work." },
+      { src: "/images/projects/derby-steve-foster-cranes-access-platform.webp", alt: "NOX engineer using an access platform at Steve Foster Cranes", caption: "High-level installation access at the crane yard." },
+      { src: "/images/projects/derby-steve-foster-cranes-yard-crane.webp", alt: "Industrial crane and access platform in Steve Foster Cranes yard", caption: "The scale of the working yard informed the need for PTZ zoom and monitored coverage." }
+    ],
+    metaTitle: "Steve Foster Cranes Derby | Hikvision CCTV & Farsight Monitoring | NOX",
+    metaDescription: "NOX installed Hikvision dual-lens PTZ CCTV with optical zoom, ANPR and facial recognition features at Steve Foster Cranes in Derby, with Farsight 24/7 monitoring.",
+    searchKeywords: ["Hikvision CCTV Derby", "industrial CCTV installation Derby", "crane yard security Derby", "Farsight CCTV monitoring", "ANPR CCTV Derby", "PTZ CCTV industrial site"],
+    designPriorities: [
+      "Respond to the site's reported fuel theft with CCTV designed around the yard, entrances and valuable machinery.",
+      "Combine fixed camera views with dual-lens PTZ and optical zoom for wider coverage and closer inspection of activity.",
+      "Support the installed CCTV with Farsight 24/7 monitoring and entrance-focused ANPR and facial recognition features."
+    ],
+    outcome: "Steve Foster Cranes now has a Hikvision CCTV installation with PTZ optical zoom and 24/7 Farsight monitoring, strengthening the site's security following the reported fuel theft.",
+    localContext: "Commercial yards and plant depots in Derby can require CCTV designs that account for large open spaces, valuable equipment, vehicle access and the practical needs of monitoring teams.",
+    faq: [
+      { q: "What is the benefit of a dual-lens PTZ camera for an industrial yard?", a: "A dual-lens PTZ arrangement can combine a wider overview with a camera that moves and uses optical zoom to examine selected activity more closely, depending on the specific model and configuration." },
+      { q: "Can industrial CCTV be monitored 24 hours a day?", a: "Yes. Eligible CCTV systems can be connected to a professional monitoring provider such as Farsight, with monitoring procedures agreed for the site." },
+      { q: "Can ANPR be used at a commercial site entrance?", a: "ANPR can help capture and identify vehicle registration plates at suitable entrance positions. Its effectiveness depends on camera placement, lighting, speed and system configuration. Facial recognition also requires appropriate data-protection safeguards." }
+    ]
+  },
+  {
+    "slug": "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv",
+    "title": "Ajax Fire Alarm & Hikvision PTZ CCTV at a Rotherham Scrapyard",
+    "location": "Rotherham, South Yorkshire",
+    "category": "Industrial Fire & CCTV",
+    "image": "/images/projects/rotherham-project-hero.webp",
+    "alt": "NOX Fire & Security van outside an industrial scrapyard premises in Rotherham",
+    "summary": "Ajax fire alarm and Hikvision PTZ CCTV with monitoring for a busy Rotherham scrapyard and vehicle-parts site.",
+    "story": "NOX worked at a busy scrapyard in Rotherham, where the working yard, vehicle storage and industrial buildings call for both fire detection and a practical security view across the site. The project combined an Ajax fire alarm with Hikvision PTZ CCTV and monitoring. Elevated camera positions help provide views over working areas, vehicle movements and the wider yard, while the fire alarm forms a separate life-safety system. The project photographs show the real premises, yard activity, Ajax equipment and installed Hikvision PTZ camera.",
+    "requirement": "Provide fire alarm protection and monitored CCTV for an operational scrapyard with industrial buildings, vehicle movements and large external storage areas.",
+    "delivery": "NOX installed Ajax fire alarm equipment and Hikvision PTZ CCTV, with monitoring arranged for the site. Camera positioning was planned around elevated views across the working yard.",
+    "systems": [
+      "Ajax fire alarm",
+      "Hikvision PTZ CCTV",
+      "Commercial CCTV monitoring",
+      "Industrial yard coverage"
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/rotherham-scrapyard-nox-site.webp",
+        "alt": "NOX van beside an industrial scrapyard building in Rotherham",
+        "caption": "The Rotherham industrial site and NOX installation vehicle."
+      },
+      {
+        "src": "/images/projects/rotherham-scrapyard-yard-overview.webp",
+        "alt": "Elevated view across the Rotherham scrapyard and vehicle-parts storage",
+        "caption": "The active vehicle-parts yard with vehicles, forklift and operational storage."
+      },
+      {
+        "src": "/images/projects/rotherham-scrapyard-hikvision-ptz.webp",
+        "alt": "Hikvision PTZ camera installed high above the scrapyard",
+        "caption": "An elevated Hikvision PTZ camera positioned to cover the wider working yard."
+      },
+      {
+        "src": "/images/projects/rotherham-scrapyard-ajax-equipment.webp",
+        "alt": "White Ajax equipment mounted within the scrapyard building",
+        "caption": "Ajax equipment installed inside the premises as part of the site project."
+      }
+    ],
+    "metaTitle": "Rotherham Scrapyard | Ajax Fire & Hikvision PTZ CCTV | NOX",
+    "metaDescription": "NOX installed Ajax fire alarm equipment, Hikvision PTZ CCTV and monitoring for a scrapyard in Rotherham, South Yorkshire. See the project photos.",
+    "searchKeywords": [
+      "scrapyard CCTV Rotherham",
+      "Hikvision PTZ CCTV Rotherham",
+      "commercial fire alarm Rotherham",
+      "industrial CCTV monitoring South Yorkshire"
+    ],
+    "designPriorities": [
+      "Plan fire detection and CCTV around the different risks of the industrial buildings and active outdoor yard.",
+      "Position Hikvision PTZ CCTV for practical views of large working areas and vehicle activity.",
+      "Coordinate CCTV monitoring and future support without confusing security monitoring with fire alarm compliance."
+    ],
+    "outcome": "An Ajax fire alarm and monitored Hikvision PTZ CCTV installation for the Rotherham scrapyard, with the camera system positioned for the scale of the working yard.",
+    "localContext": "Scrapyards and industrial yards around Rotherham need CCTV planned for changing stock, machinery, vehicles and access routes, while fire alarm requirements depend on the buildings and their fire strategy.",
+    "faq": [
+      {
+        "q": "Why use PTZ CCTV at a scrapyard?",
+        "a": "A PTZ camera can move and zoom to inspect selected areas across a larger yard. Fixed cameras may also be required for consistent recorded views of entrances and key routes."
+      },
+      {
+        "q": "Can CCTV and fire alarms be installed at the same industrial premises?",
+        "a": "Yes. They serve different purposes and require separate system design, testing and maintenance, but installation and ongoing support can be coordinated."
+      },
+      {
+        "q": "Can a scrapyard CCTV system be monitored?",
+        "a": "Suitable CCTV systems can be connected to a monitoring provider with site-specific procedures and agreed escalation arrangements."
+      }
+    ]
+  },
+  {
+    "slug": "chesterfield-residential-ajax-perimeter-protection",
+    "title": "Ajax Perimeter Protection for a Chesterfield Home",
+    "location": "Chesterfield, Derbyshire",
+    "category": "Residential Perimeter Security",
+    "image": "/images/projects/chesterfield-project-hero.webp",
+    "alt": "NOX Fire & Security vehicle at a detached residential property in Chesterfield",
+    "summary": "Residential Ajax perimeter detection for a detached Chesterfield home, using outdoor MotionCam technology to add an early-warning security layer around the property.",
+    "story": "At this detached home in Chesterfield, NOX planned Ajax perimeter protection around the exterior of the property. The project uses outdoor detection with photo-verification capability, providing a security layer that can identify activity around protected approaches before someone enters the building. The installation photographs show an outdoor Ajax detector, the property, NOX on site and Ajax equipment being prepared. The white device finish keeps the external installation visually discreet.",
+    "requirement": "Add a practical early-warning perimeter security layer to a detached family home, with external detection positioned around the property's approaches.",
+    "delivery": "NOX installed Ajax outdoor perimeter detection and prepared the supporting Ajax security equipment for the residential system.",
+    "systems": [
+      "Ajax outdoor perimeter detection",
+      "MotionCam photo verification",
+      "Residential intruder security"
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/chesterfield-residential-nox-property.webp",
+        "alt": "NOX van outside the detached Chesterfield home",
+        "caption": "The Chesterfield property with NOX attending for residential security work."
+      },
+      {
+        "src": "/images/projects/chesterfield-residential-ajax-outdoor-detector.webp",
+        "alt": "White Ajax outdoor MotionCam detector at a Chesterfield home",
+        "caption": "A fitted Ajax outdoor detector providing early-warning protection around the property."
+      },
+      {
+        "src": "/images/projects/chesterfield-residential-ajax-equipment-preparation.webp",
+        "alt": "NOX engineer preparing Ajax alarm components inside the home",
+        "caption": "Preparing Ajax security devices before final placement and configuration."
+      },
+      {
+        "src": "/images/projects/chesterfield-residential-ajax-motioncam-equipment.webp",
+        "alt": "Ajax outdoor and internal detection equipment arranged before installation",
+        "caption": "Ajax detection equipment prepared as part of the residential project."
+      },
+      {
+        "src": "/images/projects/chesterfield-residential-ajax-cctv-equipment.webp",
+        "alt": "Ajax camera and recorder boxes laid out at the property",
+        "caption": "Ajax CCTV equipment photographed during project preparation."
+      },
+      {
+        "src": "/images/projects/chesterfield-residential-nox-property-alternative.webp",
+        "alt": "Alternative view of NOX van at the Chesterfield residential property",
+        "caption": "NOX at the residential property during the security installation."
+      }
+    ],
+    "metaTitle": "Ajax Perimeter Security Chesterfield | Residential NOX Project",
+    "metaDescription": "See a residential Ajax perimeter protection installation in Chesterfield, including outdoor MotionCam detection and real NOX installation photos.",
+    "searchKeywords": [
+      "Ajax perimeter protection Chesterfield",
+      "Ajax MotionCam Outdoor Chesterfield",
+      "residential intruder alarm Chesterfield",
+      "home perimeter security Derbyshire"
+    ],
+    "designPriorities": [
+      "Identify the exterior approach routes where an earlier security alert is more useful than relying on internal detection alone.",
+      "Position white Ajax outdoor devices neatly against the building and configure detection for the property layout.",
+      "Prepare the wider Ajax security system around practical user controls and photographic verification."
+    ],
+    "outcome": "A residential Ajax perimeter protection installation that adds an early-warning detection layer around the Chesterfield home.",
+    "localContext": "Detached homes in Chesterfield often have several external approaches, gardens and outbuildings. Outdoor detection should be positioned and configured around the actual layout, nearby movement and everyday use.",
+    "faq": [
+      {
+        "q": "What is Ajax perimeter protection?",
+        "a": "It uses suitable outdoor detectors to identify activity around selected approaches before an intruder reaches the inside of the property."
+      },
+      {
+        "q": "Do Ajax outdoor detectors take photographs?",
+        "a": "Selected MotionCam Outdoor models support photo verification, subject to the model, hub, settings and user permissions."
+      },
+      {
+        "q": "Can perimeter detection work alongside CCTV?",
+        "a": "Yes. CCTV and intruder detection can complement one another, but each should be planned for the property and the coverage required."
+      }
+    ]
+  },
+  {
+    "slug": "bakewell-residential-ajax-perimeter-protection",
+    "title": "Discreet Ajax Perimeter Protection for a Bakewell Home",
+    "location": "Bakewell, Derbyshire",
+    "category": "Residential Perimeter Security",
+    "image": "/images/projects/bakewell-project-hero.webp",
+    "alt": "NOX Fire & Security van outside a stone-built detached home in Bakewell",
+    "summary": "Ajax MotionCam Outdoor perimeter detectors fitted to a stone-built Bakewell home, protecting selected garden and patio approaches with photo-verification capability.",
+    "story": "This stone-built residential property in Bakewell required perimeter security that would suit the appearance of the home and the surrounding outdoor areas. NOX fitted white Ajax MotionCam Outdoor detectors around selected garden and patio approaches. The devices provide external motion detection with photo-verification capability, creating an additional early-warning layer while blending into the property as neatly as possible. The photographs show the property and the actual installed devices from several angles.",
+    "requirement": "Introduce outdoor security detection around the garden, patio and external approaches without a visually intrusive installation on the natural stone property.",
+    "delivery": "NOX installed white Ajax MotionCam Outdoor perimeter detectors, carefully positioned against the stone exterior for the selected approaches.",
+    "systems": [
+      "Ajax MotionCam Outdoor",
+      "Perimeter intruder detection",
+      "Photo-verification capability",
+      "Residential security"
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/bakewell-residential-nox-stone-house.webp",
+        "alt": "Stone-built Bakewell property with NOX van during security installation",
+        "caption": "The Bakewell property, where the external detection was planned around the building and gardens."
+      },
+      {
+        "src": "/images/projects/bakewell-residential-ajax-patio-detector.webp",
+        "alt": "White Ajax MotionCam Outdoor detector overlooking the patio",
+        "caption": "A perimeter detector positioned around the patio and garden approach."
+      },
+      {
+        "src": "/images/projects/bakewell-residential-ajax-garden-detector.webp",
+        "alt": "Ajax outdoor motion detector on a natural stone corner",
+        "caption": "The white detector sits against the stone exterior beside the garden path."
+      },
+      {
+        "src": "/images/projects/bakewell-residential-ajax-motioncam-closeup.webp",
+        "alt": "Close-up of white Ajax MotionCam Outdoor detector installed on stone",
+        "caption": "A discreet external Ajax detector with the photo-verification camera visible above the sensor."
+      },
+      {
+        "src": "/images/projects/bakewell-residential-ajax-detector-side.webp",
+        "alt": "Side angle showing the Ajax outdoor detector and mounting bracket",
+        "caption": "The fitted detector and mounting position on the property exterior."
+      }
+    ],
+    "metaTitle": "Ajax Perimeter Protection Bakewell | Residential Security | NOX",
+    "metaDescription": "NOX installed discreet Ajax MotionCam Outdoor perimeter detection at a stone-built home in Bakewell, Derbyshire. View the genuine installation photos.",
+    "searchKeywords": [
+      "Ajax perimeter protection Bakewell",
+      "home security Bakewell",
+      "Ajax MotionCam Outdoor Derbyshire",
+      "residential intruder alarm Peak District"
+    ],
+    "designPriorities": [
+      "Identify the garden, patio and external approaches that benefit from earlier warning.",
+      "Select detector positions that suit the stone exterior while maintaining useful coverage.",
+      "Configure photo-verification-capable Ajax devices around the property and its everyday outdoor movement."
+    ],
+    "outcome": "White Ajax outdoor perimeter detectors installed around selected external approaches of the Bakewell home, creating an early-warning security layer.",
+    "localContext": "Homes around Bakewell and the Peak District can have stone exteriors, gardens and varied external approaches. Perimeter devices should be selected for both detection performance and the character of the building.",
+    "faq": [
+      {
+        "q": "Can Ajax outdoor detectors be installed on a stone-built home?",
+        "a": "Yes, where the fixing position, coverage, mounting height and surrounding environment are suitable. The correct position should be assessed on site."
+      },
+      {
+        "q": "Will outdoor perimeter detection replace an internal intruder alarm?",
+        "a": "Outdoor detection is normally an additional layer rather than a direct replacement for suitable internal and opening protection."
+      },
+      {
+        "q": "Does MotionCam Outdoor provide photo verification?",
+        "a": "Compatible Ajax MotionCam Outdoor models can provide images to support alarm verification, depending on the exact model and configuration."
+      }
+    ]
+  },
+  {
     slug: "bottle-and-thyme-commercial-cctv-chesterfield",
     title: "Commercial CCTV installation at Bottle & Thyme",
     location: "Chesterfield, Derbyshire",
@@ -935,7 +1372,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Can you maintain an older alarm?", a: "Yes. NOX can inspect many traditional wired, wireless and hybrid systems, subject to condition, access, parts availability and compatibility." }
     ],
     related: [{ href: "/services/intruder-alarm-installation-chesterfield", label: "Intruder Alarm Installation in Chesterfield" }, { href: "/systems/perimeter-protection", label: "Perimeter protection" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "peak-electronic-security", "sheffield-residential-security"],
+    caseStudySlugs: ["chesterfield-residential-ajax-perimeter-protection", "bakewell-residential-ajax-perimeter-protection", "chesterfield-bungalow-renovation-ajax-intruder-cctv"],
     platformTitle: "Rule Your Space with Ajax",
     platformText: "Ajax brings the alarm, visual verification, sirens, user controls, automation and selected video devices into one connected platform where suitable. NOX handles the survey, design, installation, configuration and ongoing support.",
     products: [
@@ -985,7 +1422,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Does external detection need maintenance?", a: "Yes. Outdoor devices benefit from periodic testing, cleaning, battery checks, firmware review and adjustment if the environment changes." }
     ],
     related: [{ href: "/systems/intrusion-alarms", label: "Intruder alarms" }, { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }],
-    caseStudySlugs: ["dronfield-timber-perimeter", "chesterfield-home-ajax-cctv-intruder"],
+    caseStudySlugs: ["chesterfield-residential-ajax-perimeter-protection", "bakewell-residential-ajax-perimeter-protection", "dronfield-timber-perimeter"],
     platformTitle: "An earlier warning layer around the property",
     platformText: "Ajax external detection can protect approaches, windows, doors, yards and outbuildings before an intruder reaches the internal alarm zones. Device selection and positioning are confirmed through a dedicated perimeter survey.",
     products: [
@@ -1030,7 +1467,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Do commercial systems need a survey?", a: "A survey is strongly recommended so views, lighting, cabling, network capacity, recorder channels and storage can be assessed properly." }
     ],
     related: [{ href: "/services/cctv-installation-chesterfield", label: "CCTV installation in Chesterfield" }, { href: "/commercial/cctv", label: "Commercial CCTV installation" }, { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/areas/sheffield", label: "CCTV and security in Sheffield" }],
-    caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "retford-former-bank-cctv", "tan-station-fire-security-brimington", "chesterfield-scrapyard-cctv"],
+    caseStudySlugs: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "sheffield-industrial-unit-ajax-cctv-installation", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "bottle-and-thyme-commercial-cctv-chesterfield"],
     platformTitle: "Ajax CCTV inside the wider security platform",
     platformText: "For suitable projects, Ajax cameras and NVR recording can sit alongside the intruder alarm in one platform. NOX also continues to specify Hikvision ColourVu and other professional CCTV where they are the better technical fit.",
     products: [
@@ -1119,7 +1556,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Can NOX service the system after installation?", a: "Yes. The future inspection and servicing route is planned from the installation stage, with defects and remedial work recorded separately." }
     ],
     related: [{ href: "/service-plans/fire-alarm-servicing", label: "Fire alarm servicing" }, { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/systems/fire-risk-assessment", label: "Fire risk assessments" }],
-    caseStudySlugs: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "telesis-hitachi-fire-intruder-system"],
     platformTitle: "Ajax EN54 devices selected as one coordinated fire system",
     platformText: "The Fire Hub, addressable detection, manual call points, sounders, visual alarm devices, range extension and integration modules are selected around the complete fire-system design. NOX also continues to support suitable conventional and wired addressable systems.",
     products: [
@@ -1244,7 +1681,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
       { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "sheffield-residential-security", "eufy-smart-home-cctv-chesterfield"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "chesterfield-home-ajax-cctv-intruder", "eufy-smart-home-cctv-chesterfield"],
     platformTitle: "Home CCTV selected around the views that matter",
     platformText: "The strongest result normally combines real installation positions, dependable recording and clear app or monitor access rather than relying on one camera style.",
     products: [

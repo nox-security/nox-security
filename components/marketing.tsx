@@ -151,7 +151,7 @@ export function VideoShowcase({ videos, title = "See the technology in action", 
 export function CaseStudyGrid({ limit, slugs }: { limit?: number; slugs?: string[] }) {
   let list = slugs?.length ? caseStudies.filter(item => slugs.includes(item.slug)) : caseStudies
   if (typeof limit === "number") list = list.slice(0, limit)
-  return <div className="case-grid">{list.map(item => <article id={item.slug} className="case-card" key={item.slug}><img src={item.image} alt={item.alt} /><div className="case-card-body"><span className="micro-label">{item.category} · {item.location}</span><h3>{item.title}</h3><p>{item.story ?? item.summary}</p><div className="case-scope"><strong>Installed by NOX</strong><span>{item.systems.join(" · ")}</span></div><Link href={`/case-studies/${item.slug}`}>Read the project story →</Link></div></article>)}</div>
+  return <div className="case-grid">{list.map(item => <article id={item.slug} className="case-card" key={item.slug}><img src={item.image} alt={item.alt} /><div className="case-card-body"><span className="micro-label">{item.category} · {item.location}</span><h3>{item.title}</h3><p>{item.summary}</p><div className="case-scope"><strong>Installed by NOX</strong><span>{item.systems.join(" · ")}</span></div><Link href={`/case-studies/${item.slug}`}>Read the project story →</Link></div></article>)}</div>
 }
 
 export function CaseStudyDetails() {

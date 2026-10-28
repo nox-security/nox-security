@@ -21,6 +21,12 @@ function relatedRoute(project: (typeof caseStudies)[number]) {
 function projectConnectedServices(project: (typeof caseStudies)[number]) {
   const value = `${project.category} ${project.systems.join(" ")} ${project.title}`.toLowerCase()
 
+  if (value.includes("fire") && value.includes("cctv")) return [
+    { title: "Fire Alarm Servicing", text: "Keep fire alarm testing, maintenance and defect records in order after installation.", href: "/service-plans/fire-alarm-servicing" },
+    { title: "Commercial CCTV", text: "Explore camera systems for business premises, workshops and external yards.", href: "/commercial/cctv" },
+    { title: "Monitoring & Support", text: "Discuss suitable CCTV monitoring, maintenance and ongoing support arrangements.", href: "/service-plans" },
+  ]
+
   if (value.includes("fire")) return [
     { title: "Fire Alarm Monitoring", text: "Add professional signalling and an agreed escalation route where the maintained system and premises are suitable.", href: "/service-plans/fire-alarm-monitoring" },
     { title: "Fire Alarm Service & Maintenance", text: "Keep testing, records, defects and planned service dates connected after installation.", href: "/service-plans/fire-alarm-servicing" },
@@ -61,7 +67,8 @@ function projectArea(project: (typeof caseStudies)[number]) {
   if (location.includes("buxton")) return { href: "/areas/buxton", label: "Fire and security services in Buxton" }
   if (location.includes("retford")) return { href: "/areas/retford", label: "Fire and security services in Retford" }
   if (location.includes("derby,")) return { href: "/areas/derby", label: "Fire and security services in Derby" }
-  if (location.includes("chatsworth")) return { href: "/areas/bakewell", label: "Fire and security services around Chatsworth and Bakewell" }
+  if (location.includes("bakewell") || location.includes("chatsworth")) return { href: "/areas/bakewell", label: "Fire and security services around Chatsworth and Bakewell" }
+  if (location.includes("rotherham")) return { href: "/areas/rotherham", label: "Fire and security services in Rotherham" }
   return { href: "/areas/derbyshire", label: "Fire and security services across Derbyshire" }
 }
 

@@ -12,12 +12,12 @@ export const metadata: Metadata = pageMetadata(
 )
 
 const workmanshipImages = [
-  { src: "/images/v4-10/fire-alarm-installation-hero.jpeg", alt: "Ajax EN54 fire alarm control panel, zone plan and manual call point installed by NOX" },
-  { src: "/images/v4-13-9/dronfield-perimeter/ajax-detector-closeup.jpg", alt: "Ajax outdoor detector installed for industrial perimeter protection near Dronfield" },
-  { src: "/images/v4-13-10/peak-electronic/nine-camera-live-view.jpg", alt: "Completed nine-camera commercial CCTV live view at Peak Electronic in Buxton" },
-  { src: "/images/v4-13-15/chatsworth-estate/ajax-camera-stone-wall.jpg", alt: "Ajax 8MP CCTV camera installed on a stone estate building at Chatsworth" },
-  { src: "/images/v4-13-10/sheffield-residential/engineer-siren-install.jpg", alt: "NOX engineer installing an Ajax external siren at a Sheffield home" },
-  { src: "/images/v4-13-9/kitchen-showroom/ajax-keypad.jpg", alt: "Ajax keypad installed as part of a commercial kitchen showroom security system" },
+  { src: "/images/projects/sheffield-david-malin-ajax-en54-panel.webp", alt: "Ajax EN54 fire alarm panel installed at David Malin Kitchens in Sheffield" },
+  { src: "/images/projects/derby-steve-foster-cranes-hikvision-ptz-front.webp", alt: "Hikvision dual-lens PTZ CCTV at Steve Foster Cranes in Derby" },
+  { src: "/images/projects/rotherham-scrapyard-hikvision-ptz.webp", alt: "Hikvision PTZ CCTV at a Rotherham scrapyard" },
+  { src: "/images/projects/sheffield-industrial-ajax-camera-close-up.webp", alt: "Commercial CCTV installed on a Sheffield industrial unit" },
+  { src: "/images/projects/bakewell-residential-ajax-motioncam-closeup.webp", alt: "Ajax MotionCam Outdoor perimeter protection installed at a Bakewell home" },
+  { src: "/images/projects/chesterfield-residential-ajax-outdoor-detector.webp", alt: "Ajax perimeter detector at a residential property in Chesterfield" },
 ]
 
 export default function CaseStudiesPage() {

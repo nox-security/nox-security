@@ -25,6 +25,6 @@ export default function ProjectFilter() {
     <div className="content-filter" role="group" aria-label="Filter projects by category">
       {categories.map(category => <button key={category} type="button" className={active === category ? "is-active" : ""} onClick={() => setActive(category)}>{category}</button>)}
     </div>
-    <div className="case-grid project-filter-grid">{list.map(project => <article className="case-card" key={project.slug}><img src={project.image} alt={project.alt}/><div className="case-card-body"><span className="micro-label">{projectCategory(project.category, project.slug, project.systems)} · {project.location}</span><h3>{project.title}</h3><p>{project.story ?? project.summary}</p><div className="case-scope"><strong>Delivered by NOX</strong><span>{project.systems.join(" · ")}</span></div><Link href={`/case-studies/${project.slug}`}>Read the project story →</Link></div></article>)}</div>
+    <div className="case-grid project-filter-grid">{list.map(project => <article className="case-card" key={project.slug}><img src={project.image} alt={project.alt}/><div className="case-card-body"><span className="micro-label">{projectCategory(project.category, project.slug, project.systems)} · {project.location}</span><h3>{project.title}</h3><p>{project.summary}</p><div className="case-scope"><strong>Delivered by NOX</strong><span>{project.systems.join(" · ")}</span></div><Link href={`/case-studies/${project.slug}`}>Read the project story →</Link></div></article>)}</div>
   </>
 }

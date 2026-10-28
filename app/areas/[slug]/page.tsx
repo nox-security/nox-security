@@ -9,11 +9,14 @@ import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib
 export function generateStaticParams() { return Object.keys(areas).map(slug => ({ slug })) }
 
 const areaProjects: Record<string, string[]> = {
-  chesterfield: ["bottle-and-thyme-commercial-cctv-chesterfield", "buxton-industrial-security", "chesterfield-home-ajax-cctv-intruder"],
-  sheffield: ["sheffield-residential-security", "telesis-hitachi-fire-intruder-system"],
+  chesterfield: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "chesterfield-residential-ajax-perimeter-protection", "chesterfield-home-ajax-cctv-intruder"],
+  sheffield: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "sheffield-industrial-unit-ajax-cctv-installation", "telesis-hitachi-fire-intruder-system"],
+  rotherham: ["rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv"],
+  bakewell: ["bakewell-residential-ajax-perimeter-protection"],
   derbyshire: ["telesis-hitachi-fire-intruder-system", "banana-industries-fire-security", "chatsworth-estate-cctv-upgrade"],
   dronfield: ["dronfield-timber-perimeter"],
   buxton: ["peak-electronic-security"],
+  derby: ["steve-foster-cranes-derby-hikvision-cctv-monitoring"],
   retford: ["retford-former-bank-cctv"],
 }
 
