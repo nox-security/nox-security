@@ -137,15 +137,23 @@ export function ProductShowcase({ data }: { data: ServicePageData }) {
       <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" />
     </div>
     <div className="product-detail-grid">{data.products.map(product => {
-      const isProductArtwork = product.image.includes("/images/ajax-products/")
+      const isProductArtwork = product.image.includes("/images/ajax-products/") || (data.slug === "fire-safety" && product.name === "Smoke detector") || data.slug === "home-cctv"
       return <article className="product-detail-card" key={product.name}><div className={`product-detail-image ${isProductArtwork ? "product-detail-artwork" : "product-detail-photo"}`}><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>
     })}</div>
   </div></section>
 }
 
 export function CaseStudyGrid({ limit, slugs }: { limit?: number; slugs?: string[] }) {
-  let list = orderCaseStudies(slugs?.length ? caseStudies.filter(item => slugs.includes(item.slug)) : caseStudies)
-  if (typeof limit === "number") list = list.slice(0, limit)
+  const preferred = orderCaseStudies(slugs?.length ? caseStudies.filter(item => slugs.includes(item.slug)) : caseStudies)
+  // Consistent three-card grids throughout service and overview pages. Supplement
+  // short project lists with relevant NOX work, never with duplicate projects.
+  const category = preferred[0]?.category ?? ""
+  const isResidential = /residential|home/i.test(category)
+  const fallback = orderCaseStudies(caseStudies).filter(item =>
+    !preferred.some(selected => selected.slug === item.slug) &&
+    (isResidential ? /residential|home/i.test(item.category) : /commercial|fire|industrial/i.test(item.category))
+  )
+  const list = [...preferred, ...fallback].slice(0, Math.min(limit ?? 3, 3))
   return <div className="case-grid">{list.map(item => <article id={item.slug} className="case-card" key={item.slug}><img src={item.image} alt={item.alt} /><div className="case-card-body"><span className="micro-label">{item.category} · {item.location}</span><h3>{item.title}</h3><p>{item.summary}</p><div className="case-scope"><strong>Installed by NOX</strong><span>{item.systems.join(" · ")}</span></div><Link href={`/case-studies/${item.slug}`}>Read the project story →</Link></div></article>)}</div>
 }
 
@@ -482,7 +490,6 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     "home-cctv": [
       { src: "/images/image-refresh/home-cctv-live-view.webp", alt: "Home CCTV live view", caption: "Several useful property views brought together for recording and playback." },
       { src: "/images/image-refresh/home-cctv-vigi-installed.webp", alt: "Professional VIGI home CCTV camera", caption: "A professional fixed camera installed for dependable coverage." },
-      { src: "/images/image-refresh/home-cctv-camera-close.webp", alt: "Home CCTV camera close view", caption: "Careful positioning around the roofline and the required view." },
       { src: "/images/image-refresh/ajax-black-camera-range.webp", alt: "Black Ajax CCTV camera range", caption: "Camera options for customers wanting a darker, discreet finish.", product: true }
     ],
     "smart-home-cctv": [
@@ -501,9 +508,7 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
       { src: "/images/image-refresh/emergency-lighting-modern.webp", alt: "Modern emergency exit light", caption: "Modern escape-route lighting installed and positioned around the premises." },
       { src: "/images/image-refresh/emergency-lighting-existing.webp", alt: "Existing emergency exit light", caption: "Existing fittings can be tested, reported and replaced where required." }
     ],
-    "fire-risk-assessment": [
-      { src: "/images/image-refresh/fire-risk-assessment.webp", alt: "Fire action notice and manual call point", caption: "A practical review of the building, fire arrangements and clear priorities for the responsible person." }
-    ]
+    "fire-risk-assessment": []
   }
   const visualGallery = serviceVisuals[data.slug] ?? []
 
@@ -529,7 +534,8 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
       <ContactActions primaryLabel={data.ctaLabel ?? "Request a Quotation"} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/>
     </PageHero>
     <TrustStrip variant={data.audience === "Residential" ? "residential" : data.slug === "fire-safety" || data.slug === "emergency-lighting" || data.slug === "fire-risk-assessment" ? "fire" : "commercial"} />
-    {!!visualGallery.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="System in detail" title="Equipment and installations matched to the requirement" text="A selection of the real equipment, installed positions and customer-facing features used across suitable NOX projects."/><div className="system-visual-gallery">{visualGallery.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
+    {data.slug === "fire-risk-assessment" && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Fire risk assessment process" title="Understand the risks, receive clear findings and plan the next steps" text="A fire risk assessment considers the premises, occupancy, escape arrangements, fire precautions and management measures. Findings are documented with prioritised recommendations for the responsible person."/><div className="feature-grid columns-3"><article className="feature-card"><span className="feature-number">01</span><h3>Arrange the assessment</h3><p>Tell us the property type, location, occupancy and any available fire-safety records.</p></article><article className="feature-card"><span className="feature-number">02</span><h3>Review and report</h3><p>A competent assessor reviews the agreed scope and provides findings and recommended actions.</p></article><article className="feature-card"><span className="feature-number">03</span><h3>Act on priorities</h3><p>Use the report to plan next steps. NOX can separately quote for relevant fire alarm and emergency-lighting work.</p></article></div></div></section>}
+    {!!visualGallery.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="System in detail" title="Equipment and installations matched to the requirement" text="A selection of the real equipment, installed positions and customer-facing features used across suitable NOX projects."/><div className="system-visual-gallery">{visualGallery.map(item => <figure className={`system-visual-card ${item.product || data.slug === "home-cctv" ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Designed around the property" title={data.problemTitle} text={data.problemText}/><Checklist items={data.benefits}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={data.suitableFor}/><ContactActions primaryLabel={data.ctaLabel ?? "Discuss This System"} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/></aside></div></section>
     <ProductShowcase data={data}/>
     
@@ -592,6 +598,13 @@ export function PlanLanding({ data }: { data: PlanPageData }) {
       <ContactActions primaryLabel={data.ctaLabel ?? (isInstallationPackage ? "Get a Home Security Quote" : "Get a Maintenance Quote")} audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={isInstallationPackage ? "Installation" : (data.enquiryType ?? "Servicing")} sourceLabel={data.slug}/>
     </PageHero>
     <TrustStrip variant={trustVariant}/>
+    {data.slug === "fire-alarm-servicing" && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Fire alarm systems and servicing" title="Modern fire systems, existing panels and maintenance equipment" text="Examples of the fire alarm equipment NOX works with, from Ajax EN54 systems to suitable established panels and devices."/><div className="system-visual-gallery servicing-equipment-gallery">
+      <figure className="system-visual-card"><img src="/images/2026-10-client-updates/servicing-fire-panel.webp" alt="Ajax EN54 fire alarm panel installed on site"/><figcaption>Ajax EN54 fire alarm control equipment installed on site.</figcaption></figure>
+      <figure className="system-visual-card"><img src="/images/2026-10-client-updates/servicing-existing-panel.webp" alt="Existing fire alarm panel inspected during maintenance"/><figcaption>Existing commercial fire alarm equipment and system inspection.</figcaption></figure>
+      <figure className="system-visual-card"><img src="/images/2026-10-client-updates/servicing-panel-status.webp" alt="Fire alarm control panel status and diagnostics"/><figcaption>System status and fault information during an inspection.</figcaption></figure>
+      <figure className="system-visual-card"><img src="/images/2026-10-client-updates/servicing-ajax-equipment.webp" alt="Ajax EN54 fire alarm devices and call points"/><figcaption>Ajax detectors, manual call points and control equipment.</figcaption></figure>
+    </div></div></section>}
+
 
     {isInstallationPackage ? <>
       <section className="section"><div className="container plan-intro-grid"><div><SectionHeading eyebrow="Installation package" title="What the new system can include" text="Build the installation around the property, then add monitoring or annual servicing only where it is useful."/><Checklist items={data.included}/></div><aside className="price-panel"><span className="eyebrow">Property-led quotation</span><h3>Alarm, CCTV and external protection</h3><p>The quotation reflects the property, number of cameras and devices, garage or outbuilding coverage, access and installation requirements.</p><ContactActions primaryLabel={data.ctaLabel ?? "Get a Home Security Quote"} compact audience="Residential" serviceCategory={data.serviceCategory ?? data.title} enquiryType="Installation" sourceLabel={data.slug}/></aside></div></section>

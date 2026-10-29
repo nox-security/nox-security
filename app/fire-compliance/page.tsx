@@ -76,7 +76,7 @@ export default function FireCompliancePage() {
 
     <section className="section en54-overview-section"><div className="container">
       <SectionHeading eyebrow="Fire alarm equipment" title="Control panels, detectors, call points and sounders" text="See the main components of a commercial fire alarm system. Equipment and positioning are specified around the building and its fire-safety requirements."/>
-      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className="en54-overview-media"><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className={`en54-overview-media ${item.title === "Smoke & Heat Detectors" ? "is-detector" : ""}`}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
       <div className="section-action-row"><Link className="button button-light" href="/systems/fire-safety">Explore Fire Alarm Installation</Link><Link className="button button-outline" href="/case-studies/david-malin-kitchens-sheffield-ajax-fire-cctv-intruder">View a NOX installation</Link></div>
     </div></section>
 

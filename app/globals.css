@@ -6168,3 +6168,10 @@ body:has(.ref-home-hero) .footer-grid{padding-top:56px}
 /* v4.13.75 project-directory progressive disclosure */
 .project-show-more {display:flex;justify-content:center;margin:30px 0 0}
 .project-show-more .button {min-width:240px}
+
+/* v4.13.80 — detector and product imagery remains fully visible and centred */
+.en54-overview-media.is-detector { background: #0a0a0a; }
+.en54-overview-media.is-detector img { object-fit: contain; object-position: center center !important; padding: 12px; transform: none !important; }
+.system-visual-card.is-product img { object-fit: contain; object-position: center center; padding: 14px; }
+.product-detail-artwork img { object-fit: contain !important; object-position: center center !important; padding: 14px; }
+.servicing-equipment-gallery img { object-position: center 40%; }

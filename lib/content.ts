@@ -1619,10 +1619,10 @@ export const systemPages: Record<string, ServicePageData> = {
     metaTitle: "Fire Risk Assessment Chesterfield & Derbyshire",
     metaDescription: "Arrange a fire risk assessment in Chesterfield, Sheffield and Derbyshire for commercial premises, landlords, HMOs and property portfolios.",
     intro: "Arrange fire risk assessment support for commercial premises, landlords, HMOs and multi-site properties, coordinated through a competent specialist where required, with findings and priorities presented clearly.",
-    image: "/images/revisions/telesis-hitachi-exterior.jpg",
-    imageAlt: "Commercial premises considered during a fire risk assessment",
-    problemTitle: "A useful assessment should make responsibilities and priorities clearer",
-    problemText: "The assessment should reflect the building, occupancy, activities and available fire safety arrangements. NOX coordinates the assessment through a competent specialist where required and can separately support relevant fire alarm, emergency lighting and remedial work.",
+    image: "/images/2026-10-client-updates/fra-fire-equipment.webp",
+    imageAlt: "Fire alarm call points, detectors and fire safety logbook arranged for a commercial fire safety project",
+    problemTitle: "Know your fire risks and what action is required",
+    problemText: "A fire risk assessment reviews the building, occupancy, escape arrangements and existing fire precautions. Receive documented findings and prioritised recommendations, with separate quotations available for any relevant fire alarm or emergency-lighting improvements.",
     benefits: ["Commercial premises", "Landlords and HMOs", "Hospitality", "Warehouses and industrial units", "Multi-site portfolios", "Clear findings and priorities", "Separate remedial quotations", "Ongoing fire service options"],
     suitableFor: ["Shops", "Offices", "Hospitality", "HMOs", "Industrial premises", "Property portfolios"],
     process: [
@@ -1642,8 +1642,11 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Can NOX help with actions identified in the report?", a: "NOX can support relevant fire alarm, emergency lighting and agreed fire safety work within its service scope." },
       { q: "Who carries out the fire risk assessment?", a: "NOX coordinates the assessment through a competent specialist where required and keeps any later installation or remedial quotation separate." }
     ],
+    ctaLabel: "Arrange a Fire Risk Assessment",
+    enquiryType: "General",
+    serviceCategory: "Fire Risk Assessment",
     related: [{ href: "/systems/fire-safety", label: "Fire alarm systems" }, { href: "/systems/emergency-lighting", label: "Emergency lighting" }, { href: "/service-plans/fire-compliance", label: "Fire compliance packages" }],
-    caseStudySlugs: ["banana-industries-fire-security"]
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "banana-industries-fire-security"]
   },
   "home-cctv": {
     slug: "home-cctv",
@@ -1691,7 +1694,6 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "Full-property live view", description: "A recorder-based system brings the key entrances, driveways, gardens and external areas into one clear live and recorded view.", image: "/images/image-refresh/home-cctv-live-view.webp", imageAlt: "Residential CCTV live view covering several external areas" },
       { name: "Discreet installed cameras", description: "Camera position and finish are planned around useful coverage and the appearance of the property.", image: "/images/image-refresh/home-cctv-installed-white.webp", imageAlt: "White home CCTV camera installed beneath a roofline" },
       { name: "Professional camera options", description: "Ajax, Hikvision, VIGI and other suitable professional camera options are selected around image quality, recording and the site.", image: "/images/image-refresh/ajax-black-camera-range.webp", imageAlt: "Black Ajax CCTV camera range" },
-      { name: "Close identification views", description: "Specific cameras can be positioned for entrances, vehicles and vulnerable approaches where useful detail matters.", image: "/images/image-refresh/home-cctv-camera-close.webp", imageAlt: "Close view of a professionally installed home CCTV camera" },
       { name: "Black Ajax home camera", description: "A darker camera finish can sit discreetly beneath rooflines and around modern residential exteriors.", image: "/images/image-refresh/ajax-home-camera-black.webp", imageAlt: "Black Ajax home CCTV camera installed beneath a roofline" }
     ],
     ctaLabel: "Get a Home CCTV Recommendation",

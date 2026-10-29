@@ -41,8 +41,8 @@ const pages: Record<string, CommercialPage> = {
     intro: "NOX provides Commercial CCTV Installation for shops, hospitality, offices, warehouses, yards, garages and industrial premises across Chesterfield, Sheffield, Derbyshire and South Yorkshire. Coverage, evidence quality, night performance, storage and remote access are planned around the site.",
     metaTitle: "Commercial CCTV Installation Sheffield & Derbyshire | NOX",
     metaDescription: "Commercial CCTV Installation across Chesterfield, Sheffield, Derbyshire and South Yorkshire with site-specific cameras, NVR recording, remote viewing, upgrades and maintenance.",
-    image: "/images/resent-installation/E6B4D998-0805-4B7E-8532-CC491C881B57.jpeg",
-    alt: "Coordinated alarm monitoring and CCTV maintenance package from NOX",
+    image: "/images/2026-10-client-updates/commercial-cctv-main.webp",
+    alt: "Commercial CCTV monitor showing four live camera views at an industrial premises",
     requirementTitle: "Each camera needs a clear operational or evidence purpose",
     requirementText: "Entrances, exits, tills, vehicle routes, loading areas, stock, working zones and external yards need different views. Mounting position, lighting, network, recording duration and who needs access all affect the system design.",
     included: ["Site-specific coverage design", "High-resolution camera options", "Night image and lighting review", "NVR recording and storage planning", "Live viewing and remote access", "User permissions and playback handover", "Existing-system upgrades", "Planned CCTV maintenance"],
@@ -309,8 +309,8 @@ const pages: Record<string, CommercialPage> = {
     intro: "NOX can coordinate commercial fire alarms, CCTV, intruder protection and ongoing support through one project team. The systems remain correctly separated in design, commissioning and records while the customer benefits from coordinated planning and accountability.",
     metaTitle: "Commercial CCTV & Fire Protection | Derbyshire | NOX",
     metaDescription: "CCTV and fire protection for commercial premises across Chesterfield, Sheffield and Derbyshire, with coordinated installation, servicing and intruder options.",
-    image: "/images/revisions/telesis-hitachi-exterior.jpg",
-    alt: "Commercial premises with integrated fire and security systems installed by NOX",
+    image: "/images/2026-10-client-updates/integrated-ajax-fire.webp",
+    alt: "Ajax EN54 fire alarm equipment installed at commercial premises with fire extinguisher",
     requirementTitle: "One project team does not mean one blurred system scope",
     requirementText: "Fire, CCTV and intruder systems answer different requirements. NOX coordinates surveys, access, installation sequencing and customer communication while keeping fire design, commissioning, security operation and future service records clear.",
     included: ["Commercial fire alarm installation", "Commercial CCTV", "Commercial intruder alarms", "Emergency lighting coordination", "Shared project planning", "Clear system-by-system quotations", "Handover and user training", "Ongoing fire and security support"],
@@ -350,16 +350,16 @@ const pages: Record<string, CommercialPage> = {
     visualTitle: "Fire, CCTV and intruder planned as one coordinated commercial project",
     visualText: "The systems remain separate in scope, but the on-site delivery, cable routes, access and handover can be organised through one coordinated project plan.",
     visuals: [
-      { src: "/images/revisions/telesis-hitachi-exterior.jpg", alt: "Commercial property with integrated fire and security systems", caption: "Integrated projects often start with a clear site-wide plan for fire, CCTV and intrusion." },
-      { src: "/images/projects/tan-station-fire-first-fix.jpg", alt: "First-fix fire alarm work at a commercial premises", caption: "Early-stage fire work can be coordinated with wider security cabling and installation access." },
-      { src: "/images/projects/tan-station-camera-internal-1.jpg", alt: "Internal CCTV camera at a commercial premises", caption: "Internal camera coverage can be aligned with entrance routes, reception and daily operation." },
-      { src: "/images/projects/tan-station-camera-external-1.jpg", alt: "External CCTV camera at a commercial premises", caption: "External security coverage and the fire route can be delivered through one coordinated programme." }
+      { src: "/images/2026-10-client-updates/integrated-ajax-fire.webp", alt: "Commercial property with integrated fire and security systems", caption: "Integrated projects often start with a clear site-wide plan for fire, CCTV and intrusion." },
+      { src: "/images/2026-10-client-updates/integrated-panel-backplate.webp", alt: "First-fix fire alarm work at a commercial premises", caption: "Early-stage fire work can be coordinated with wider security cabling and installation access." },
+      { src: "/images/2026-10-client-updates/integrated-ajax-dome.webp", alt: "Internal CCTV camera at a commercial premises", caption: "Internal camera coverage can be aligned with entrance routes, reception and daily operation." },
+      { src: "/images/2026-10-client-updates/integrated-ptz-installed.webp", alt: "External CCTV camera at a commercial premises", caption: "External security coverage and the fire route can be delivered through one coordinated programme." }
     ],
     platformTitle: "Systems often included in an integrated project",
     platformText: "The customer benefits from one coordinated project route, while each system still keeps its own correct design, records and service requirements.",
     products: [
-      { name: "Fire alarm control and detection", description: "Commercial fire alarm design is based on the premises, circulation, zoning, cause and effect, records and future servicing requirements.", image: "/images/v4-10/fire-alarm-installation-hero.jpeg", imageAlt: "Fire alarm control panel and zone plan" },
-      { name: "Commercial CCTV", description: "Camera coverage is planned around entrances, working areas, yards, evidence quality and the live views managers need each day.", image: "/images/image-refresh/ajax-commercial-domes.webp", imageAlt: "Commercial dome cameras" },
+      { name: "Fire alarm control and detection", description: "Commercial fire alarm design is based on the premises, circulation, zoning, cause and effect, records and future servicing requirements.", image: "/images/2026-10-client-updates/integrated-ajax-fire.webp", imageAlt: "Fire alarm control panel and zone plan" },
+      { name: "Commercial CCTV", description: "Camera coverage is planned around entrances, working areas, yards, evidence quality and the live views managers need each day.", image: "/images/2026-10-client-updates/integrated-ajax-dome.webp", imageAlt: "Commercial dome cameras" },
       { name: "Commercial intruder alarms", description: "Detection, keypads, user permissions and monitoring are configured around how the premises opens, closes and operates.", image: "/images/v4-12-9/residential-intruder-main.jpg", imageAlt: "Ajax detector used for intruder protection" },
       { name: "Emergency lighting coordination", description: "Where required, emergency-lighting installation or servicing can be coordinated alongside the wider project with clear separate scope.", image: "/images/v4-12-3/emergency-lighting-testing-servicing.jpg", imageAlt: "Emergency exit light during servicing" }
     ]
@@ -455,10 +455,10 @@ export default async function CommercialDetailPage({ params }: { params: Promise
     {slug === "cctv" && <section className="section section-alt"><div className="container">
       <SectionHeading eyebrow="Commercial CCTV equipment" title="Cameras and intelligent detection for commercial sites" text="A selection of camera types and detection features used to plan coverage, evidence and recording around the premises."/>
       <div className="commercial-proof-grid">
-        <figure><img src="/images/image-refresh/ajax-commercial-ptz.webp" alt="Ajax commercial PTZ CCTV camera"/><figcaption>PTZ cameras for larger operational areas and yards.</figcaption></figure>
-        <figure><img src="/images/image-refresh/ajax-commercial-domes.webp" alt="Ajax commercial dome CCTV cameras"/><figcaption>Discreet dome cameras for entrances and working areas.</figcaption></figure>
-        <figure><img src="/images/image-refresh/cctv-person-detection.webp" alt="CCTV person detection analytics"/><figcaption>Person detection can help identify relevant events.</figcaption></figure>
-        <figure><img src="/images/image-refresh/cctv-vehicle-detection.webp" alt="CCTV vehicle detection analytics"/><figcaption>Vehicle detection for driveways, loading areas and yards.</figcaption></figure>
+        <figure><img src="/images/2026-10-client-updates/commercial-ptz-installed.webp" alt="Hikvision PTZ CCTV camera installed on an industrial building"/><figcaption>PTZ cameras for larger operational areas and yards.</figcaption></figure>
+        <figure><img src="/images/2026-10-client-updates/commercial-ajax-dome.webp" alt="Black Ajax dome CCTV camera"/><figcaption>Discreet dome cameras for entrances and working areas.</figcaption></figure>
+        <figure><img src="/images/2026-10-client-updates/commercial-ptz-close.webp" alt="Installed Hikvision PTZ camera on commercial premises"/><figcaption>Installed PTZ camera providing flexible coverage of commercial areas.</figcaption></figure>
+        <figure><img src="/images/2026-10-client-updates/commercial-ptz-side.webp" alt="Hikvision commercial PTZ camera with additional fixed lens"/><figcaption>Additional PTZ coverage for larger yards and industrial premises.</figcaption></figure>
       </div>
     </div></section>}
 
