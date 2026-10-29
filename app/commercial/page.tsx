@@ -105,7 +105,7 @@ export default function CommercialPage() {
 
     <section className="section"><div className="container">
       <SectionHeading eyebrow="Servicing & support" title="Connect existing and newly installed systems to planned support" text="Suitable existing and newly installed systems can move into planned servicing, monitoring, repairs, phased upgrades and takeover support without being forced into an unnecessary replacement."/>
-      <div className="complete-system-grid">{ongoingSupport.map(item => <Link href={item.href} key={item.title}><h3>{item.title}</h3><p>{item.text}</p><span>View service</span></Link>)}</div>
+      <div className="feature-grid columns-3 media-route-grid commercial-media-grid">{ongoingSupport.map(item => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt}/><div className="media-route-card-body"><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>View service →</Link></div></article>)}</div>
     </div></section>
 
     

@@ -33,42 +33,36 @@ const products = [
     category: "Intruder",
     description: "Wireless touch keypad with encrypted protection. Arm & disarm with PIN, card, or key fob.",
     image: "ajax-products/ajax-keypad-plus.webp",
-    link: "https://youtu.be/VN6aPF8a3Gc?si=TkpUGd717Sj5GlWE"
   },
   {
     name: "Ajax Camera",
     category: "CCTV",
     description: "Professional-grade Ajax IP camera with night vision and smart motion detection. App-integrated.",
     image: "ajax-products/ajax-camera.webp",
-    link: "https://youtu.be/Mwxe-dN9QeM?si=ornNrce-emvseoNH"
   },
   {
     name: "Ajax DoorBell",
     category: "CCTV",
     description: "HD video doorbell with two-way audio. See and speak with visitors from anywhere via the Ajax app.",
     image: "ajax-products/ajax-doorbell.webp",
-    link: "https://youtu.be/pbD3b2awVG0?si=mOupU2K4S7X0A4wl"
   },
   {
     name: "Hikvision Dome",
     category: "CCTV",
     description: "Professional Hikvision CCTV options including dome, turret and ColourVu cameras with full-colour night vision and smart human and vehicle detection.",
     image: "HikvisionDome.jpg",
-    link: "https://youtu.be/Mwxe-dN9QeM?si=ornNrce-emvseoNH"
   },
   {
     name: "Ajax LightSwitch",
     category: "Automation",
     description: "Smart touch light switch integrated into your Ajax system. Remote control and automation scenarios.",
     image: "ajax-products/ajax-lightswitch.webp",
-    link: "https://youtu.be/hdz927FypAE?si=HYIHZ4dn4z3FDafE"
   },
   {
     name: "Ajax WaterStop",
     category: "Automation",
     description: "Wireless remotely controlled water shutoff valve that can help limit water damage when used with Ajax leak detection.",
     image: "ajax-products/ajax-waterstop.webp",
-    link: "https://youtu.be/a8jo0k222Qk?si=67RB5H7Zdx5ZQq4X"
   },
 ]
 
@@ -103,20 +97,7 @@ export default function Products() {
                 <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">{product.category}</div>
                 <h3 className="text-sm font-bold leading-snug">{product.name}</h3>
                 <p className="text-gray-400 text-xs leading-relaxed">{product.description}</p>
-                {product.link ? (
-                  <a
-                    href={product.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full h-9 px-3 py-2 rounded-md border border-white/20 bg-transparent text-white text-xs font-semibold hover:bg-white hover:text-black transition-colors mt-1"
-                  >
-                    View Video
-                  </a>
-                ) : (
-                  <Button variant="outline" size="sm" className="w-full text-xs font-semibold bg-transparent border-white/20">
-                    View Details
-                  </Button>
-                )}
+                <Link href={product.category === "CCTV" ? "/systems/cctv" : product.category === "Automation" ? "/systems" : "/systems/intrusion-alarms"} className="inline-flex items-center justify-center w-full h-9 px-3 py-2 rounded-md border border-white/20 bg-transparent text-white text-xs font-semibold hover:bg-white hover:text-black transition-colors mt-1">Explore System</Link>
               </CardContent>
             </Card>
           ))}

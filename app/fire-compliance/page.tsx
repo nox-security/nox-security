@@ -74,6 +74,12 @@ export default function FireCompliancePage() {
 
     
 
+    <section className="section en54-overview-section"><div className="container">
+      <SectionHeading eyebrow="Fire alarm equipment" title="Control panels, detectors, call points and sounders" text="See the main components of a commercial fire alarm system. Equipment and positioning are specified around the building and its fire-safety requirements."/>
+      <div className="en54-overview-grid">{en54Highlights.map(item => <article className="en54-overview-card" key={item.title}><div className="en54-overview-media"><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/></div><div className="en54-overview-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+      <div className="section-action-row"><Link className="button button-light" href="/systems/fire-safety">Explore Fire Alarm Installation</Link><Link className="button button-outline" href="/case-studies/david-malin-kitchens-sheffield-ajax-fire-cctv-intruder">View a NOX installation</Link></div>
+    </div></section>
+
     <section className="section section-alt"><div className="container">
       <SectionHeading eyebrow="Fire alarm systems" title="Installation, servicing, monitoring and repairs" text="Installation, monitoring, servicing, takeovers, multi-site programmes and coordinated Fire and CCTV projects each have a distinct scope. The right route depends on the building, existing equipment, responsible people and the outcome the business needs."/>
       <div className="feature-grid columns-3 media-route-grid fire-balanced-grid">{fireSystemRoutes.slice(0,4).map((item, index) => <article className="feature-card media-route-card" key={item.title}><img src={item.image} alt={item.alt} style={{ objectPosition: item.position }}/><div className="media-route-card-body"><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="text-link" href={item.href}>Explore service →</Link></div></article>)}</div>

@@ -2,7 +2,6 @@ export type LinkItem = { href: string; label: string }
 export type TextItem = { title: string; text: string }
 export type FAQItem = { q: string; a: string }
 export type ProductItem = { name: string; description: string; image: string; imageAlt: string }
-export type VideoItem = { title: string; text: string; youtubeId: string }
 
 export type ServicePageData = {
   slug: string
@@ -24,7 +23,6 @@ export type ServicePageData = {
   related: LinkItem[]
   caseStudySlugs: string[]
   products?: ProductItem[]
-  videos?: VideoItem[]
   platformTitle?: string
   platformText?: string
   ctaLabel?: string
@@ -1398,10 +1396,6 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "Scheduled arming", description: "Suitable Ajax systems can follow schedules and scenarios so protection remains consistent without relying on memory.", image: "/images/image-refresh/intruder-scheduled-arming.webp", imageAlt: "Ajax scheduled arming notification" },
       { name: "NOX external siren", description: "A professionally positioned external siren adds a visible deterrent and clear local warning.", image: "/images/image-refresh/residential-bellbox.webp", imageAlt: "NOX branded Ajax external siren" }
     ],
-    videos: [
-      { title: "Ajax intruder protection", text: "See how the Ajax platform brings detection, control and app management together.", youtubeId: "9ffQhBwXUDg" },
-      { title: "Perimeter protection", text: "See how external detection can add an earlier layer around the building.", youtubeId: "Nm0HIK8vjso" }
-    ]
   },
   "perimeter-protection": {
     slug: "perimeter-protection",
@@ -1446,7 +1440,6 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "Outbuilding protection", description: "Garages, workshops, stores and detached buildings can be brought into the wider Ajax system subject to survey and communication range.", image: "/images/image-refresh/garages-outbuildings-engineer.webp", imageAlt: "NOX engineer installing Ajax protection on an outbuilding" },
       { name: "Maintenance and adjustment", description: "Outdoor systems need cleaning, signal checks, battery review, firmware updates and retesting as the environment changes.", image: "/images/revisions/intruder-maintenance-system-takeover.jpg", imageAlt: "Engineer carrying out maintenance and system checks on Ajax equipment" }
     ],
-    videos: [{ title: "Ajax outdoor protection", text: "See how external detection can create an earlier warning layer around a property.", youtubeId: "Nm0HIK8vjso" }]
   },
   cctv: {
     slug: "cctv",
@@ -1576,9 +1569,6 @@ export const systemPages: Record<string, ServicePageData> = {
       { name: "Manual call point", description: "Resettable manual activation positioned on escape routes and assigned to the correct fire zone as part of the agreed design.", image: "/images/v4-10/fire-manual-call-point.jpeg", imageAlt: "Ajax EN54 manual fire alarm call point installed beside fire safety signage" },
       { name: "Fire alarm sounder", description: "Audible warning equipment selected and positioned to support the required alarm coverage throughout the premises.", image: "/images/v4-10/fire-sounder.jpeg", imageAlt: "Ajax EN54 fire alarm sounder installed above a doorway" },
       { name: "Smoke detector", description: "Addressable smoke detection selected around room use, ceiling conditions, fire zones and the wider cause-and-effect strategy.", image: "/images/v4-10/fire-smoke-detector.jpeg", imageAlt: "Ajax EN54 smoke detector installed on a ceiling" }
-    ],
-    videos: [
-      { title: "Ajax fire protection", text: "See how Ajax control equipment and line devices can form part of a connected commercial fire system.", youtubeId: "XZDNd3ud-ck" }
     ],
     ctaLabel: "Request a Fire Alarm Quote",
     audience: "Commercial",

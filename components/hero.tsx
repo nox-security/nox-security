@@ -1,13 +1,10 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Shield, Clock, Award, X, CheckCircle2, Zap, Building2, Phone, MessageCircle, Star } from "lucide-react"
+import { Shield, Clock, Award, CheckCircle2, Zap, Building2, Phone, MessageCircle, Star } from "lucide-react"
 
 export default function Hero() {
-  const [videoOpen, setVideoOpen] = useState(false)
-
   return (
     <>
       <section className="relative bg-black text-white py-16 md:py-28">
@@ -70,17 +67,11 @@ export default function Hero() {
 
             </div>
 
-            {/* Hero Image/Video */}
+            {/* Hero Image */}
             <div className="relative">
               <div
-                className="aspect-[4/3] rounded-lg overflow-hidden bg-gray-90 relative group cursor-pointer"
-                onClick={() => setVideoOpen(true)}
+                className="aspect-[4/3] rounded-lg overflow-hidden bg-gray-900 relative"
               >
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors z-10">
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/50 group-hover:scale-110 transition-transform">
-                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-                  </div>
-                </div>
                 <img
                   src="/images/House-Full-HD-1024x602.webp"
                   alt="Professional Security Installation by NOX Fire & Security Chesterfield"
@@ -129,28 +120,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Video Modal */}
-        {videoOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-            <div className="relative w-full max-w-4xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl">
-              <button
-                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors"
-                onClick={() => setVideoOpen(false)}
-              >
-                <X className="h-6 w-6" />
-              </button>
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/9ffQhBwXUDg?autoplay=1"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* Reviews Under Hero */}

@@ -136,16 +136,11 @@ export function ProductShowcase({ data }: { data: ServicePageData }) {
       <div><span className="eyebrow">Products and system options</span><h2>{data.platformTitle ?? "Equipment selected around the property"}</h2><p>{data.platformText}</p></div>
       <img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" />
     </div>
-    <div className="product-detail-grid">{data.products.slice(0, 4).map(product => {
+    <div className="product-detail-grid">{data.products.map(product => {
       const isProductArtwork = product.image.includes("/images/ajax-products/")
       return <article className="product-detail-card" key={product.name}><div className={`product-detail-image ${isProductArtwork ? "product-detail-artwork" : "product-detail-photo"}`}><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>
     })}</div>
   </div></section>
-}
-
-export function VideoShowcase({ videos, title = "See the technology in action", eyebrow = "Product videos" }: { videos?: { title: string; text: string; youtubeId?: string; videoUrl?: string }[]; title?: string; eyebrow?: string }) {
-  if (!videos?.length) return null
-  return <section className="section section-alt video-showcase"><div className="container"><SectionHeading eyebrow={eyebrow} title={title} text="Explore the Ajax platform and individual products in motion. Final device selection still follows the property survey and the way the site will be used."/><div className={`video-grid video-columns-${Math.min(videos.length, 3)}`}>{videos.map((video, index) => <article className="video-card" key={video.youtubeId ?? video.videoUrl ?? index}><div className="video-frame">{video.youtubeId ? <iframe src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`} title={video.title} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <video controls playsInline preload="metadata" aria-label={video.title}><source src={video.videoUrl} type="video/mp4"/></video>}</div><div><h3>{video.title}</h3><p>{video.text}</p></div></article>)}</div></div></section>
 }
 
 export function CaseStudyGrid({ limit, slugs }: { limit?: number; slugs?: string[] }) {
@@ -537,7 +532,6 @@ export function ServiceLanding({ data }: { data: ServicePageData }) {
     {!!visualGallery.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="System in detail" title="Equipment and installations matched to the requirement" text="A selection of the real equipment, installed positions and customer-facing features used across suitable NOX projects."/><div className="system-visual-gallery">{visualGallery.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Designed around the property" title={data.problemTitle} text={data.problemText}/><Checklist items={data.benefits}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={data.suitableFor}/><ContactActions primaryLabel={data.ctaLabel ?? "Discuss This System"} compact audience={data.audience} serviceCategory={data.serviceCategory ?? data.title} enquiryType={data.enquiryType ?? "Installation"} sourceLabel={data.slug}/></aside></div></section>
     <ProductShowcase data={data}/>
-    <VideoShowcase videos={data.videos}/>
     
     
     {!!data.pricingFactors?.length && <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the final quotation" text="The correct price depends on the property, system and work required. NOX confirms the scope before presenting equipment and installation costs."/><Checklist items={data.pricingFactors}/></div><aside className="dark-panel"><h3>Pricing based on the real requirement</h3><p>The quotation reflects the survey, existing equipment, access and performance needed for the property.</p>{data.guide && <Link className="text-link" href={data.guide.href}>{data.guide.label} →</Link>}</aside></div></section>}
