@@ -126,7 +126,7 @@ export default function HomePage() {
 
     <section className="section section-alt home-featured-projects"><div className="container">
       <div className="home-featured-projects-head"><SectionHeading eyebrow="Selected NOX work" title="Fire & Security Projects" text="From integrated commercial systems to discreet protection for homes. Explore genuine projects and the services behind them."/><Link className="text-link" href="/case-studies">View all projects →</Link></div>
-      <CaseStudyGrid slugs={["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "steve-foster-cranes-derby-hikvision-cctv-monitoring", "chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection"]}/>
+      <CaseStudyGrid limit={4} slugs={["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "steve-foster-cranes-derby-hikvision-cctv-monitoring", "chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection"]}/>
     </div></section>
 
     <section className="ref-final-cta">

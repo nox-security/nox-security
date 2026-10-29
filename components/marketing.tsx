@@ -153,7 +153,7 @@ export function CaseStudyGrid({ limit, slugs }: { limit?: number; slugs?: string
     !preferred.some(selected => selected.slug === item.slug) &&
     (isResidential ? /residential|home/i.test(item.category) : /commercial|fire|industrial/i.test(item.category))
   )
-  const list = [...preferred, ...fallback].slice(0, Math.min(limit ?? 3, 3))
+  const list = [...preferred, ...fallback].slice(0, limit ?? 3)
   return <div className="case-grid">{list.map(item => <article id={item.slug} className="case-card" key={item.slug}><img src={item.image} alt={item.alt} /><div className="case-card-body"><span className="micro-label">{item.category} · {item.location}</span><h3>{item.title}</h3><p>{item.summary}</p><div className="case-scope"><strong>Installed by NOX</strong><span>{item.systems.join(" · ")}</span></div><Link href={`/case-studies/${item.slug}`}>Read the project story →</Link></div></article>)}</div>
 }
 
