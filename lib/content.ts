@@ -327,9 +327,9 @@ export const caseStudies: CaseStudy[] = [
     category: "Industrial CCTV",
     image: "/images/projects/derby-steve-foster-cranes-nox-site.webp",
     alt: "NOX Fire & Security on site at Steve Foster Cranes in Derby installing commercial CCTV",
-    summary: "Hikvision industrial CCTV with dual-lens PTZ cameras, optical zoom, ANPR and facial recognition features, supported by Farsight 24/7 monitoring after reported fuel theft.",
-    story: "Following reported fuel theft at Steve Foster Cranes in Derby, NOX was brought in to strengthen CCTV security across the crane yard and industrial premises. The site has a large open vehicle yard, workshops, access routes and valuable plant and machinery, requiring a system designed for both wide-area awareness and closer inspection of activity. The installation includes Hikvision CCTV with dual-lens PTZ cameras and optical zoom, alongside entrance-focused ANPR and facial recognition capabilities. The system is supported by 24/7 monitoring through Farsight. The project photographs show the actual yard, NOX installation work, and the Hikvision cameras fitted on site.",
-    requirement: "Improve security after reported fuel theft, providing monitored CCTV coverage for the industrial yard, access routes and high-value equipment, with additional attention to vehicles and people entering the site.",
+    summary: "Hikvision industrial CCTV with dual-lens PTZ cameras, optical zoom, ANPR and facial recognition features, supported by Farsight 24/7 monitoring.",
+    story: "NOX installed a commercial CCTV system at Steve Foster Cranes in Derby, designed to provide effective coverage across the crane yard and industrial premises. The site has a large open vehicle yard, workshops, access routes and valuable plant and machinery, requiring a system designed for both wide-area awareness and closer inspection of activity. The installation includes Hikvision CCTV with dual-lens PTZ cameras and optical zoom, alongside entrance-focused ANPR and facial recognition capabilities. The system is supported by 24/7 monitoring through Farsight. The project photographs show the actual yard, NOX installation work, and the Hikvision cameras fitted on site.",
+    requirement: "Provide monitored CCTV coverage for the industrial yard, access routes and high-value equipment, with additional attention to vehicles and people entering the site.",
     delivery: "NOX installed Hikvision CCTV equipment, including dual-lens PTZ cameras with optical zoom, and arranged Farsight 24/7 monitoring. The project also includes ANPR and facial recognition functionality for entrance-focused security.",
     systems: ["Hikvision commercial CCTV", "Dual-lens PTZ cameras", "Optical zoom", "ANPR entrance monitoring", "Facial recognition functionality", "Farsight 24/7 CCTV monitoring"],
     gallery: [
@@ -347,11 +347,11 @@ export const caseStudies: CaseStudy[] = [
     metaDescription: "NOX installed Hikvision dual-lens PTZ CCTV with optical zoom, ANPR and facial recognition features at Steve Foster Cranes in Derby, with Farsight 24/7 monitoring.",
     searchKeywords: ["Hikvision CCTV Derby", "industrial CCTV installation Derby", "crane yard security Derby", "Farsight CCTV monitoring", "ANPR CCTV Derby", "PTZ CCTV industrial site"],
     designPriorities: [
-      "Respond to the site's reported fuel theft with CCTV designed around the yard, entrances and valuable machinery.",
+      "Design CCTV coverage around the yard, entrances and valuable machinery.",
       "Combine fixed camera views with dual-lens PTZ and optical zoom for wider coverage and closer inspection of activity.",
       "Support the installed CCTV with Farsight 24/7 monitoring and entrance-focused ANPR and facial recognition features."
     ],
-    outcome: "Steve Foster Cranes now has a Hikvision CCTV installation with PTZ optical zoom and 24/7 Farsight monitoring, strengthening the site's security following the reported fuel theft.",
+    outcome: "Steve Foster Cranes now has a Hikvision CCTV installation with PTZ optical zoom and 24/7 Farsight monitoring, providing greater visibility across the industrial site.",
     localContext: "Commercial yards and plant depots in Derby can require CCTV designs that account for large open spaces, valuable equipment, vehicle access and the practical needs of monitoring teams.",
     faq: [
       { q: "What is the benefit of a dual-lens PTZ camera for an industrial yard?", a: "A dual-lens PTZ arrangement can combine a wider overview with a camera that moves and uses optical zoom to examine selected activity more closely, depending on the specific model and configuration." },

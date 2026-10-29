@@ -7,7 +7,7 @@ All seven customer-supplied projects now have individual `/case-studies/[slug]` 
 1. David Malin Kitchens, Sheffield — Ajax EN54 fire alarm, intruder alarm and CCTV, including a 50-inch office display. **Note:** the customer called it "David Marlin's Kitchens", but the photograph clearly reads "David Malin Kitchens & Bedrooms". The photographed business spelling is used on the public website.
 2. Chesterfield bungalow renovation — Ajax intruder and CCTV (carried forward from v4.13.72).
 3. Sheffield industrial unit — commercial Ajax CCTV (carried forward from v4.13.72).
-4. Steve Foster Cranes, Derby — Hikvision dual-lens PTZ, ANPR, facial recognition capabilities and 24/7 Farsight monitoring following reported fuel theft (carried forward from v4.13.73).
+4. Steve Foster Cranes, Derby — Hikvision dual-lens PTZ, ANPR, facial recognition capabilities and 24/7 Farsight monitoring (carried forward from v4.13.73).
 5. Rotherham scrapyard — Ajax fire alarm, Hikvision PTZ CCTV and monitoring. Distinct from the existing Chesterfield/Brimington scrapyard case study.
 6. Chesterfield residential property — Ajax outdoor perimeter detection and equipment preparation; does not claim the photographed CCTV boxes prove final camera installation.
 7. Bakewell residential property — Ajax MotionCam Outdoor perimeter protection.

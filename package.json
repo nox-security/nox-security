@@ -1,6 +1,6 @@
 {
   "name": "nox-security-v3-marketing-system",
-  "version": "4.13.77",
+  "version": "4.13.79",
   "private": true,
   "scripts": {
     "build": "next build",

@@ -141,7 +141,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.75" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.79" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -244,7 +244,7 @@ export default function Header() {
             )
           })}
 
-          <Link className={`mobile-nav-projects-link ${pathname.startsWith("/case-studies") ? "is-active" : ""}`} href="/case-studies" onClick={closeMobileNavigation} aria-current={pathname === "/case-studies" ? "page" : undefined}>Projects <span aria-hidden="true">→</span></Link>
+          <Link className={`mobile-nav-projects-link ${pathname.startsWith("/case-studies") ? "is-active" : ""}`} href="/case-studies" onClick={closeMobileNavigation} aria-current={pathname === "/case-studies" ? "page" : undefined}>Projects</Link>
 
           <div className="mobile-nav-actions">
             <Link
