@@ -31,20 +31,20 @@ export type HeaderNavMenu = {
 export const headerNavMenus: HeaderNavMenu[] = [
   {
     id: "fire",
-    label: "Fire",
+    label: "Fire Safety",
     href: "/fire-compliance",
-    heading: "Fire alarms & compliance",
+    heading: "Fire safety & compliance",
     intro: "Install, maintain and monitor commercial fire systems through one connected route.",
-    overviewLabel: "Fire & Compliance Overview",
+    overviewLabel: "Fire Safety Overview",
     routes: [
       { label: "Fire Alarm Installation", href: "/systems/fire-safety", description: "New systems, extensions and upgrades planned around the building and required fire strategy." },
       { label: "Service & Maintenance", href: "/service-plans/fire-alarm-servicing", description: "Planned testing, service records, defect reporting and ongoing maintenance." },
       { label: "Fire Alarm Monitoring", href: "/service-plans/fire-alarm-monitoring", description: "Professional signalling with agreed contacts and escalation for suitable systems." },
-      { label: "Emergency Lighting", href: "/systems/emergency-lighting", description: "Installation, testing and planned support kept within the wider fire-compliance journey." },
+      { label: "Fire Risk Assessments", href: "/systems/fire-risk-assessment", description: "Identify fire-safety risks, required improvements and priorities for the responsible person." },
     ],
     secondary: [
       { label: "Repairs & Takeovers", href: "/services/fire-alarm-repairs-takeovers" },
-      { label: "Fire Risk Assessments", href: "/systems/fire-risk-assessment" },
+      { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
       { label: "Fire Compliance Plans", href: "/service-plans/fire-compliance" },
       { label: "Extinguisher Servicing", href: "/services/fire-extinguisher-servicing" },
     ],
@@ -75,10 +75,10 @@ export const headerNavMenus: HeaderNavMenu[] = [
     routes: [
       { label: "Commercial CCTV", href: "/commercial/cctv", description: "Professional surveillance for offices, retail, industrial sites, yards and larger premises." },
       { label: "Intruder & Perimeter", href: "/commercial/intruder-alarms", description: "Internal and external detection designed around access, risk and site boundaries." },
-      { label: "Integrated & Multi-Site", href: "/commercial/integrated-fire-security", description: "Coordinate fire, CCTV, intruder and wider site requirements under one project route." },
+      { label: "CCTV & Fire Protection", href: "/commercial/integrated-fire-security", description: "CCTV, fire alarms and intruder protection planned together at one commercial premises." },
     ],
     secondary: [
-      { label: "Multi-Site Security", href: "/commercial/multi-site-security" },
+      { label: "Multiple Business Locations", href: "/commercial/multi-site-security" },
       { label: "Monitoring & Maintenance", href: "/service-plans" },
       { label: "Existing-System Takeovers", href: "/services/security-system-takeover" },
     ],
@@ -119,7 +119,7 @@ export const headerNavMenus: HeaderNavMenu[] = [
       "/systems/perimeter-protection",
       "/systems/smart-home-cctv",
       "/systems/garages-outbuildings",
-      "/systems/residential-security-packages",
+      "/service-plans/residential-security-packages",
     ],
   },
 ]
@@ -127,13 +127,14 @@ export const headerNavMenus: HeaderNavMenu[] = [
 /* Footer navigation deliberately shows only the main customer routes.
    Deeper SEO pages remain live and connected from their parent overview pages. */
 export const fireFooterItems: NavItem[] = [
-  { label: "Fire & Compliance Overview", href: "/fire-compliance" },
+  { label: "Fire Safety Overview", href: "/fire-compliance" },
   { label: "Fire Alarm Installation", href: "/systems/fire-safety" },
   { label: "Service & Maintenance", href: "/service-plans/fire-alarm-servicing" },
   { label: "Fire Alarm Monitoring", href: "/service-plans/fire-alarm-monitoring" },
   { label: "Repairs & Takeovers", href: "/services/fire-alarm-repairs-takeovers" },
   { label: "Fire Risk Assessments", href: "/systems/fire-risk-assessment" },
-  { label: "Emergency Lighting & Compliance", href: "/service-plans/fire-compliance" },
+  { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
+  { label: "Fire Compliance Plans", href: "/service-plans/fire-compliance" },
   { label: "Extinguisher Servicing", href: "/services/fire-extinguisher-servicing" },
 ]
 
@@ -141,7 +142,7 @@ export const commercialFooterItems: NavItem[] = [
   { label: "Commercial Overview", href: "/commercial" },
   { label: "Commercial CCTV", href: "/commercial/cctv" },
   { label: "Intruder & Perimeter", href: "/commercial/intruder-alarms" },
-  { label: "Integrated & Multi-Site", href: "/commercial/integrated-fire-security" },
+  { label: "CCTV & Fire Protection", href: "/commercial/integrated-fire-security" },
   { label: "Monitoring & Maintenance", href: "/service-plans" },
 ]
 
@@ -180,15 +181,15 @@ export const systemNavGroups: NavGroup[] = [
     { label: "Perimeter Protection", href: "/systems/perimeter-protection" },
     { label: "Smart Home Security", href: "/systems/smart-home-cctv" },
     { label: "Garages & Outbuildings", href: "/systems/garages-outbuildings" },
-    { label: "Residential Security Packages", href: "/systems/residential-security-packages" },
+    { label: "Residential Security Packages", href: "/service-plans/residential-security-packages" },
   ] },
   { heading: "Commercial", items: [
     { label: "Commercial CCTV", href: "/commercial/cctv" },
     { label: "Commercial Intruder Alarms", href: "/commercial/intruder-alarms" },
     { label: "Industrial & Office Security", href: "/commercial/industrial-warehouse-security" },
     { label: "Yard & Perimeter Security", href: "/commercial/yard-perimeter-security" },
-    { label: "Multi-Site Security", href: "/commercial/multi-site-security" },
-    { label: "Integrated Fire & Security", href: "/commercial/integrated-fire-security" },
+    { label: "Security Across Multiple Sites", href: "/commercial/multi-site-security" },
+    { label: "CCTV & Fire Protection", href: "/commercial/integrated-fire-security" },
   ] },
 ]
 export const servicePlanNavGroups: NavGroup[] = [
@@ -202,8 +203,8 @@ export const servicePlanNavGroups: NavGroup[] = [
     { label: "Ongoing Support Packages", href: "/service-plans/total-security" },
   ] },
   { heading: "Fire Compliance", items: [
-    { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
     { label: "Fire Risk Assessments", href: "/systems/fire-risk-assessment" },
+    { label: "Emergency Lighting", href: "/systems/emergency-lighting" },
     { label: "Fire Extinguisher Servicing", href: "/services/fire-extinguisher-servicing" },
     { label: "Fire Compliance Plans", href: "/service-plans/fire-compliance" },
     { label: "Multi-Site Fire Alarm Systems", href: "/fire-compliance/multi-site-fire-alarm-systems" },

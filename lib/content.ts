@@ -131,6 +131,19 @@ export type CaseStudy = {
   faq?: FAQItem[]
 }
 
+/** Editorial order for featured projects, without excluding the wider portfolio. */
+export const priorityProjectSlugs = [
+  "david-malin-kitchens-sheffield-ajax-fire-cctv-intruder",
+  "steve-foster-cranes-derby-hikvision-cctv-monitoring",
+  "chesterfield-bungalow-renovation-ajax-intruder-cctv",
+  "bakewell-residential-ajax-perimeter-protection",
+] as const
+
+export function orderCaseStudies<T extends { slug: string }>(items: T[]): T[] {
+  const priority = new Map<string, number>(priorityProjectSlugs.map((slug, index): [string, number] => [slug, index]))
+  return [...items].sort((a, b) => (priority.get(a.slug) ?? 100) - (priority.get(b.slug) ?? 100))
+}
+
 export const caseStudies: CaseStudy[] = [
   {
     "slug": "david-malin-kitchens-sheffield-ajax-fire-cctv-intruder",
@@ -1372,7 +1385,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Can you maintain an older alarm?", a: "Yes. NOX can inspect many traditional wired, wireless and hybrid systems, subject to condition, access, parts availability and compatibility." }
     ],
     related: [{ href: "/services/intruder-alarm-installation-chesterfield", label: "Intruder Alarm Installation in Chesterfield" }, { href: "/systems/perimeter-protection", label: "Perimeter protection" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }, { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }],
-    caseStudySlugs: ["chesterfield-residential-ajax-perimeter-protection", "bakewell-residential-ajax-perimeter-protection", "chesterfield-bungalow-renovation-ajax-intruder-cctv"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-residential-ajax-perimeter-protection"],
     platformTitle: "Rule Your Space with Ajax",
     platformText: "Ajax brings the alarm, visual verification, sirens, user controls, automation and selected video devices into one connected platform where suitable. NOX handles the survey, design, installation, configuration and ongoing support.",
     products: [
@@ -1422,7 +1435,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Does external detection need maintenance?", a: "Yes. Outdoor devices benefit from periodic testing, cleaning, battery checks, firmware review and adjustment if the environment changes." }
     ],
     related: [{ href: "/systems/intrusion-alarms", label: "Intruder alarms" }, { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" }, { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }],
-    caseStudySlugs: ["chesterfield-residential-ajax-perimeter-protection", "bakewell-residential-ajax-perimeter-protection", "dronfield-timber-perimeter"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-residential-ajax-perimeter-protection", "dronfield-timber-perimeter"],
     platformTitle: "An earlier warning layer around the property",
     platformText: "Ajax external detection can protect approaches, windows, doors, yards and outbuildings before an intruder reaches the internal alarm zones. Device selection and positioning are confirmed through a dedicated perimeter survey.",
     products: [
@@ -1467,7 +1480,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { q: "Do commercial systems need a survey?", a: "A survey is strongly recommended so views, lighting, cabling, network capacity, recorder channels and storage can be assessed properly." }
     ],
     related: [{ href: "/services/cctv-installation-chesterfield", label: "CCTV installation in Chesterfield" }, { href: "/commercial/cctv", label: "Commercial CCTV installation" }, { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" }, { href: "/areas/sheffield", label: "CCTV and security in Sheffield" }],
-    caseStudySlugs: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "sheffield-industrial-unit-ajax-cctv-installation", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "bottle-and-thyme-commercial-cctv-chesterfield"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "steve-foster-cranes-derby-hikvision-cctv-monitoring", "sheffield-industrial-unit-ajax-cctv-installation", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv"],
     platformTitle: "Ajax CCTV inside the wider security platform",
     platformText: "For suitable projects, Ajax cameras and NVR recording can sit alongside the intruder alarm in one platform. NOX also continues to specify Hikvision ColourVu and other professional CCTV where they are the better technical fit.",
     products: [
@@ -1681,7 +1694,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
       { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }
     ],
-    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "chesterfield-home-ajax-cctv-intruder", "eufy-smart-home-cctv-chesterfield"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-home-ajax-cctv-intruder"],
     platformTitle: "Home CCTV selected around the views that matter",
     platformText: "The strongest result normally combines real installation positions, dependable recording and clear app or monitor access rather than relying on one camera style.",
     products: [
@@ -1737,7 +1750,7 @@ export const systemPages: Record<string, ServicePageData> = {
       { href: "/systems/home-cctv", label: "Home CCTV" },
       { href: "/service-plans/alarm-maintenance", label: "Intruder alarm servicing" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "dronfield-timber-perimeter", "buxton-industrial-security"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-home-ajax-cctv-intruder", "dronfield-timber-perimeter"],
     ctaLabel: "Protect a Garage or Outbuilding",
     audience: "Residential",
     serviceCategory: "Garage and outbuilding security",

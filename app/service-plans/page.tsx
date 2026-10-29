@@ -48,32 +48,14 @@ export default function ServicePlansPage() {
       <div className="related-links"><Link href="/services/security-system-takeover">System takeover assessments →</Link><Link href="/services/repairs-upgrades">Repairs & phased upgrades →</Link><Link href="/blog/taking-over-an-existing-security-system">Guide to taking over an existing system →</Link></div>
     </div><aside className="dark-panel"><h3>Residential and commercial systems</h3><p>NOX can assess suitable intruder alarms, CCTV, fire alarms and connected equipment installed by another company. Access, condition and parts support are confirmed before ongoing responsibility is accepted.</p><ContactActions primaryLabel="Discuss a System Takeover" compact audience="Residential & Commercial" serviceCategory="Existing System Support" enquiryType="Takeover" sourceLabel="support-takeover-route"/></aside></div></section>
 
-    <section className="section section-alt"><div className="container split-grid"><div>
-      <SectionHeading eyebrow="Monitoring" title="Defined signal handling when the premises is unattended" text="Suitable intruder alarms and commercial fire systems can connect to professional monitoring with agreed contacts and escalation. Compatibility, signalling, system condition and planned maintenance are confirmed before activation."/>
-      <div className="related-links"><Link href="/service-plans/fire-alarm-monitoring">Fire alarm monitoring →</Link><Link href="/service-plans/alarm-monitoring">Intruder alarm monitoring →</Link><Link href="/blog/app-alerts-versus-professional-alarm-monitoring">App alerts versus professional monitoring →</Link></div>
-    </div><aside className="dark-panel"><h3>Keep contacts and systems current</h3><p>Monitoring works best when the alarm remains maintained and keyholder information stays accurate. These responsibilities are explained clearly rather than hidden inside a package.</p><ContactActions primaryLabel="Request a Monitoring Quote" compact audience="Residential & Commercial" serviceCategory="Alarm Monitoring" enquiryType="Monitoring" sourceLabel="support-monitoring-route"/></aside></div></section>
+    
 
-    <section className="section"><div className="container">
-      <SectionHeading eyebrow="Ongoing Support Packages" title="A clear route for customers who want suitable systems professionally supported" text="Eligible alarm monitoring, intruder servicing, CCTV maintenance, planned visits and selected fire services can be coordinated under one support arrangement. The written proposal confirms what is included, what remains separate and how renewals are managed."/>
-      <FeatureGrid columns={4} items={[
-        { title: "Planned visits", text: "Service frequencies and access are arranged around the property, systems and operating requirements." },
-        { title: "Consolidated dates", text: "Suitable visits and renewals can be aligned where practical without mixing the technical service records." },
-        { title: "One point of contact", text: "Questions, faults, quotations and future upgrades remain easier to coordinate across the agreed systems." },
-        { title: "Clear scope", text: "Included systems, exclusions, parts, repairs and response routes are confirmed before the agreement begins." },
-      ]}/>
-      <div className="button-row"><Link className="button button-light" href="/service-plans/total-security">Explore Ongoing Support Packages</Link><Link className="button button-outline" href="/service-plans/fire-compliance">Explore Fire Compliance Plans</Link></div>
-    </div></section>
+    
 
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Before ongoing support" title="Condition, access and responsibilities are made clear first"/><FeatureGrid columns={4} items={[
-      { title: "System make and age", text: "Panels, devices, cameras, recorders, communication routes and parts support need to be understood." },
-      { title: "Access and ownership", text: "Engineer codes, app accounts, recorder passwords and available documentation affect the takeover route." },
-      { title: "Faults and remedials", text: "Known issues, disabled devices, storage faults and battery condition are separated from routine service work." },
-      { title: "Written agreement", text: "Included visits, exclusions, parts, response route and renewal terms are confirmed before ongoing support starts." },
-    ]}/></div></section>
+    
 
-    <OngoingSupportStrip context="security"/>
 
-    <section className="section"><div className="container"><SectionHeading eyebrow="Relevant projects" title="Takeovers, upgrades and systems moving into ongoing support" text="Real NOX projects showing older equipment, phased improvements and installations designed with future servicing in mind."/><CaseStudyGrid slugs={["retford-former-bank-cctv","chatsworth-estate-cctv-upgrade","telesis-hitachi-fire-intruder-system"]}/></div></section>
+    <section className="section"><div className="container"><SectionHeading eyebrow="Relevant projects" title="Takeovers, upgrades and systems moving into ongoing support" text="Real NOX projects showing older equipment, phased improvements and installations designed with future servicing in mind."/><CaseStudyGrid slugs={["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder","steve-foster-cranes-derby-hikvision-cctv-monitoring","retford-former-bank-cctv"]}/></div></section>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Local support backed by real installation experience"/><ReviewGrid names={["Jeremy Bunting", "Ryan Hargreaves", "Rory Stirland"]}/></div></section>
     <ConversionPanel title="Discuss monitoring, maintenance or an existing system" text="Tell us what is installed, the property or site, any known faults, available access and the outcome required. NOX will confirm the correct inspection, service, monitoring or takeover next step." primaryLabel="Discuss an Existing System" audience="Residential & Commercial" serviceCategory="Existing System Support" enquiryType="Takeover" sourceLabel="existing-system-support-final"/>
   </>

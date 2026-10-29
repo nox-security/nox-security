@@ -62,12 +62,11 @@ export default async function LocalServicePage({ params }: { params: Promise<{ s
     </PageHero>
     <TrustStrip variant={page.serviceType.toLowerCase().includes("fire") || page.serviceType.toLowerCase().includes("emergency") ? "fire" : page.audience === "Commercial" ? "commercial" : "servicing"}/>
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="What the service needs to solve" title={page.problemTitle} text={page.problemText}/><Checklist items={page.included}/></div><aside className="dark-panel"><span className="eyebrow">Service area</span><h3>{page.location}</h3><p>The property, existing equipment, access, system condition and required outcome are reviewed before NOX confirms the survey, inspection or quotation route.</p><ContactActions primaryLabel={context.label} compact audience={page.audience} serviceCategory={page.serviceType} enquiryType={context.type} sourceLabel={`${page.slug}-local-route`}/></aside></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="How the work moves forward" title="Enquiry, assessment, delivery and ongoing support"/><FeatureGrid items={page.process} columns={4}/></div></section>
+    
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Genuine installation and takeover experience" text="Real work connected to the system, property type or service being researched."/><CaseStudyGrid slugs={page.caseStudySlugs}/></div></section>
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Related routes" title="Continue into the right system, plan or guide"/><div className="related-links">{page.related.map(item => <Link href={item.href} key={item.href}>{item.label} →</Link>)}</div></div><aside className="dark-panel"><h3>What affects the quotation</h3><p>Property or site size, equipment quantities, existing faults, access, cable routes, required recording or monitoring, several buildings and remedial work can all change the scope.</p></aside></div></section>
-    <section className="section"><div className="container"><SectionHeading eyebrow="Helpful local guides" title={`Research ${page.serviceType.toLowerCase()} before the next step`} text={`Detailed answers for customers comparing options in ${page.location}, including installation, maintenance and suitable existing-system support.`}/><GuideLinks slugs={guideSlugsFor(`${page.slug} ${page.serviceType}`)}/></div></section>
-    <AreaLinks title={`Fire and security services near ${page.location}`}/>
-    <EnquiryPreparation topic={page.serviceType.toLowerCase()} commercial={page.audience !== "Residential"}/>
+    
+
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Advice, workmanship and local support"/><ReviewGrid names={page.serviceType.toLowerCase().includes("fire") || page.serviceType.toLowerCase().includes("emergency")
       ? ["Rory Stirland", "Nathan De La Rosa", "Jez S"]
       : page.serviceType.toLowerCase().includes("cctv")

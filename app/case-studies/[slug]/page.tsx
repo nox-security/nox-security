@@ -36,7 +36,7 @@ function projectConnectedServices(project: (typeof caseStudies)[number]) {
   if (value.includes("perimeter") || value.includes("yard")) return [
     { title: "CCTV", text: "Add recorded views around the approaches and areas protected by outdoor detection.", href: "/commercial/cctv" },
     { title: "Intruder Alarm Monitoring", text: "Connect suitable alarm events to professional signal handling and agreed escalation.", href: "/service-plans/alarm-monitoring" },
-    { title: "Integrated Site Security", text: "Bring perimeter detection, CCTV, intruder protection and support into one site plan.", href: "/commercial/integrated-fire-security" },
+    { title: "CCTV & Fire Protection", text: "Bring perimeter detection, CCTV, intruder protection and support into one site plan.", href: "/commercial/integrated-fire-security" },
   ]
 
   if (value.includes("cctv") && (value.includes("commercial") || value.includes("industrial") || value.includes("warehouse") || value.includes("hospitality") || value.includes("estate") || value.includes("farm"))) return [
@@ -54,7 +54,7 @@ function projectConnectedServices(project: (typeof caseStudies)[number]) {
   return [
     { title: "Planned Maintenance", text: "Keep the installed system tested, documented and ready for future changes.", href: "/service-plans" },
     { title: "System Monitoring", text: "Review suitable professional monitoring and agreed response options.", href: "/service-plans/alarm-monitoring" },
-    { title: "Integrated Site Security", text: "Coordinate fire, CCTV, intruder and ongoing support around one site strategy.", href: "/commercial/integrated-fire-security" },
+    { title: "CCTV & Fire Protection", text: "Coordinate fire, CCTV, intruder and ongoing support around one site strategy.", href: "/commercial/integrated-fire-security" },
   ]
 }
 
@@ -163,14 +163,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <div className="project-gallery">{project.gallery.map((image, index) => <figure key={image.src} className={index === 0 ? "project-gallery-feature" : ""}><img src={image.src} alt={image.alt}/>{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div>
     </div></section>}
 
-    <section className="section"><div className="container">
-      <SectionHeading eyebrow="Design and delivery" title={`How NOX approached this ${project.category.toLowerCase()} project`} text="The installed equipment matters, but the positions, property layout, operating routine and handover determine whether the finished system is genuinely useful."/>
-      <div className="feature-grid columns-3">{(project.designPriorities ?? [project.requirement, project.delivery, "Plan clear handover and ongoing support around the people using the property."]).map((item, index) => <article className="feature-card" key={item}><span className="feature-number">{String(index + 1).padStart(2, "0")}</span><h3>{index === 0 ? "Coverage and requirement" : index === 1 ? "Installation planning" : "Control and handover"}</h3><p>{item}</p></article>)}</div>
-    </div></section>
+    
 
     <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Completed outcome" title={`What was delivered at ${project.location}`} text={project.outcome ?? project.delivery}/><p className="lead-small">{project.localContext ?? `A similar project in ${project.location} should begin with a site survey covering access, existing equipment, required coverage and ongoing support.`}</p><div className="related-links"><Link href={area.href}>{area.label} →</Link><Link href={related.service.href}>{related.service.label} →</Link><Link href={related.guide.href}>{related.guide.label} →</Link><Link href="/case-studies">More NOX projects →</Link></div></div><aside className="dark-panel"><h3>Preparing a similar quotation</h3><p>Share the property type, postcode, entrances or areas to cover, existing system details, known faults, approximate scale and preferred timescale. Photographs or plans can help define the correct survey.</p><ContactActions primaryLabel={related.cta} compact serviceCategory={project.category} enquiryType="Installation" sourceLabel={`${project.slug}-outcome`}/></aside></div></section>
 
-    <OngoingSupportStrip context={supportContext}/>
     <CompleteSystem items={connectedServices}/>
 
     {!!caseFaqs.length && <section className="section"><div className="container"><SectionHeading eyebrow="Project questions" title={`Questions about similar ${project.category.toLowerCase()} work`}/><div className="faq-list">{caseFaqs.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>}

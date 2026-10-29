@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { JsonLd } from "@/components/marketing"
+import { CaseStudyGrid, JsonLd, SectionHeading } from "@/components/marketing"
 import { pageMetadata } from "@/lib/site"
 import { serviceSchema, webPageSchema } from "@/lib/schema"
 
@@ -21,8 +21,8 @@ const coreServices = [
     links: [
       { href: "/systems/fire-safety", label: "Installation" },
       { href: "/service-plans/fire-alarm-servicing", label: "Servicing" },
-      { href: "/systems/emergency-lighting", label: "Emergency Lighting" },
       { href: "/systems/fire-risk-assessment", label: "Risk Assessments" },
+      { href: "/systems/emergency-lighting", label: "Emergency Lighting" },
     ],
   },
   {
@@ -123,6 +123,11 @@ export default function HomePage() {
 
 
 
+
+    <section className="section section-alt home-featured-projects"><div className="container">
+      <div className="home-featured-projects-head"><SectionHeading eyebrow="Selected NOX work" title="Fire & security installed in the real world" text="From integrated commercial systems to discreet protection for homes. Explore genuine projects and the services behind them."/><Link className="text-link" href="/case-studies">View all projects →</Link></div>
+      <CaseStudyGrid slugs={["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "steve-foster-cranes-derby-hikvision-cctv-monitoring", "chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection"]}/>
+    </div></section>
 
     <section className="ref-final-cta">
       <div className="container ref-final-cta-grid">

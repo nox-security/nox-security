@@ -53,7 +53,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
       { href: "/areas/chesterfield", label: "Security services in Chesterfield" }
     ],
-    caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "chesterfield-scrapyard-cctv", "chesterfield-home-ajax-cctv-intruder"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bottle-and-thyme-commercial-cctv-chesterfield", "chesterfield-home-ajax-cctv-intruder"],
     searchKeywords: ["CCTV installation Chesterfield", "CCTV installer Chesterfield", "home CCTV Chesterfield", "commercial CCTV Chesterfield"]
   },
   "intruder-alarm-installation-chesterfield": {
@@ -88,7 +88,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/alarm-maintenance", label: "Alarm maintenance" },
       { href: "/areas/chesterfield", label: "Chesterfield security systems" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "peak-electronic-security", "sheffield-residential-security"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-home-ajax-cctv-intruder"],
     searchKeywords: ["intruder alarm installation Chesterfield", "house alarm Chesterfield", "wireless alarm Chesterfield", "Ajax alarm Chesterfield"]
   },
   "ajax-alarm-installer-chesterfield": {
@@ -123,7 +123,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/total-security", label: "Ongoing Support Package" },
       { href: "/case-studies/chesterfield-home-ajax-cctv-intruder", label: "Chesterfield Ajax case study" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "sheffield-residential-security", "dronfield-timber-perimeter"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-home-ajax-cctv-intruder"],
     searchKeywords: ["Ajax alarm installer Chesterfield", "Ajax authorised installer Chesterfield", "Ajax MotionCam Chesterfield", "Ajax security system Derbyshire"]
   },
   "security-systems-chesterfield": {
@@ -158,7 +158,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans", label: "Service plans" },
       { href: "/case-studies", label: "Real NOX projects" }
     ],
-    caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "chesterfield-home-ajax-cctv-intruder", "tan-station-fire-security-brimington"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "chesterfield-residential-ajax-perimeter-protection", "bottle-and-thyme-commercial-cctv-chesterfield"],
     searchKeywords: ["security systems Chesterfield", "security company Chesterfield", "fire and security Chesterfield", "CCTV and alarms Chesterfield"]
   },
   "commercial-cctv-sheffield": {
@@ -193,7 +193,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/areas/sheffield", label: "Sheffield Fire & Security" },
       { href: "/commercial", label: "Commercial system design" }
     ],
-    caseStudySlugs: ["peak-electronic-security", "sheffield-residential-security", "retford-former-bank-cctv"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "sheffield-industrial-unit-ajax-cctv-installation", "steve-foster-cranes-derby-hikvision-cctv-monitoring"],
     searchKeywords: ["commercial CCTV Sheffield", "business CCTV Sheffield", "CCTV installer Sheffield", "warehouse CCTV Sheffield"]
   },
   "cctv-installation-derbyshire": {
@@ -228,7 +228,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/cctv-maintenance", label: "CCTV servicing" },
       { href: "/case-studies/chatsworth-estate-cctv-upgrade", label: "Chatsworth Estate CCTV case study" }
     ],
-    caseStudySlugs: ["chatsworth-estate-cctv-upgrade", "buxton-industrial-security", "bottle-and-thyme-commercial-cctv-chesterfield"],
+    caseStudySlugs: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "sheffield-industrial-unit-ajax-cctv-installation", "chatsworth-estate-cctv-upgrade"],
     searchKeywords: ["CCTV installation Derbyshire", "CCTV installer Derbyshire", "home CCTV Derbyshire", "commercial CCTV Derbyshire"]
   },
   "alarm-maintenance-chesterfield": {
@@ -263,7 +263,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/total-security", label: "Ongoing Support Package" },
       { href: "/areas/chesterfield", label: "Chesterfield coverage" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "peak-electronic-security"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "chesterfield-home-ajax-cctv-intruder"],
     searchKeywords: ["alarm maintenance Chesterfield", "alarm service Chesterfield", "intruder alarm servicing Chesterfield", "Ajax alarm maintenance Chesterfield"]
   },
   "alarm-monitoring-derbyshire": {
@@ -298,7 +298,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/systems/intrusion-alarms", label: "Intruder alarm systems" },
       { href: "/areas/derbyshire", label: "Derbyshire security services" }
     ],
-    caseStudySlugs: ["chesterfield-home-ajax-cctv-intruder", "dronfield-timber-perimeter"],
+    caseStudySlugs: ["chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "chesterfield-home-ajax-cctv-intruder"],
     searchKeywords: ["alarm monitoring Derbyshire", "monitored alarm Derbyshire", "professional alarm monitoring", "keyholder alarm monitoring"]
   },
   "fire-alarm-installation-chesterfield": {
@@ -333,7 +333,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" },
       { href: "/systems/emergency-lighting", label: "Emergency lighting" }
     ],
-    caseStudySlugs: ["tan-station-fire-security-brimington", "banana-industries-fire-security"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "telesis-hitachi-fire-intruder-system", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv"],
     searchKeywords: ["fire alarm installation Chesterfield", "commercial fire alarms Chesterfield", "Ajax EN54 Chesterfield", "fire alarm company Chesterfield"]
   },
   "fire-alarm-servicing-chesterfield": {
@@ -368,7 +368,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" },
       { href: "/fire-compliance", label: "New fire alarm installation" }
     ],
-    caseStudySlugs: ["tan-station-fire-security-brimington", "banana-industries-fire-security"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "telesis-hitachi-fire-intruder-system"],
     searchKeywords: ["fire alarm servicing Chesterfield", "fire alarm maintenance Chesterfield", "commercial fire alarm service", "fire compliance Chesterfield"]
   },
   "emergency-lighting-testing-derbyshire": {
@@ -508,7 +508,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Package" },
       { href: "/service-plans", label: "Existing system support" }
     ],
-    caseStudySlugs: ["bottle-and-thyme-commercial-cctv-chesterfield", "tan-station-fire-security-brimington", "retford-former-bank-cctv", "buxton-industrial-security"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "telesis-hitachi-fire-intruder-system"],
     searchKeywords: ["commercial fire and security systems", "commercial security company", "fire CCTV intruder systems", "commercial compliance packages"]
   },
   "fire-alarm-repairs-takeovers": {
@@ -545,7 +545,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" },
       { href: "/blog/can-a-new-company-take-over-an-existing-fire-alarm", label: "Read the fire-alarm takeover guide" }
     ],
-    caseStudySlugs: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
+    caseStudySlugs: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "telesis-hitachi-fire-intruder-system"],
     searchKeywords: ["fire alarm takeover", "fire alarm repair Chesterfield", "fire alarm faults", "existing fire alarm maintenance"]
   },
   "fire-extinguisher-servicing": {
@@ -619,7 +619,7 @@ export const localLandingPages: Record<string, LocalLandingPage> = {
       { href: "/service-plans/cctv-maintenance", label: "CCTV maintenance" },
       { href: "/services/fire-alarm-repairs-takeovers", label: "Fire alarm repairs and takeovers" }
     ],
-    caseStudySlugs: ["retford-former-bank-cctv", "chatsworth-estate-cctv-upgrade", "chesterfield-kitchen-showroom"],
+    caseStudySlugs: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "retford-former-bank-cctv", "chatsworth-estate-cctv-upgrade"],
     searchKeywords: ["alarm repairs Chesterfield", "CCTV repairs Chesterfield", "security system upgrades", "fire alarm repairs"]
   }
 

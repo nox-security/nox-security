@@ -122,7 +122,7 @@ const pages: Record<string, FireProjectPage> = {
       "how-often-should-a-commercial-fire-alarm-be-serviced",
       "can-a-new-company-take-over-an-existing-fire-alarm",
     ],
-    cases: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
+    cases: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "telesis-hitachi-fire-intruder-system"],
     related: [
       { href: "/systems/fire-safety", label: "Fire Alarm Installation" },
       { href: "/service-plans/fire-alarm-servicing", label: "Fire Alarm Service & Maintenance" },
@@ -204,7 +204,7 @@ const pages: Record<string, FireProjectPage> = {
       "how-many-cameras-does-a-commercial-site-need",
       "can-fire-alarm-and-emergency-lighting-visits-be-combined",
     ],
-    cases: ["tan-station-fire-security-brimington", "retford-former-bank-cctv", "telesis-hitachi-fire-intruder-system"],
+    cases: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "telesis-hitachi-fire-intruder-system"],
     related: [
       { href: "/systems/fire-safety", label: "Fire Alarm Installation" },
       { href: "/commercial/cctv", label: "Commercial CCTV" },
@@ -257,15 +257,14 @@ export default async function FireProjectDetailPage({ params }: { params: Promis
       <Checklist items={page.included}/>
     </div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={page.suitableFor}/><ContactActions primaryLabel={page.ctaLabel} compact audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`fire-${slug}-property-types`}/></aside></div></section>
 
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Project route" title="Survey, programme, delivery and ongoing support" text="The project is organised around clear site information, separate technical scopes and a practical route into future servicing or maintenance."/><FeatureGrid columns={4} items={page.process}/></div></section>
+    
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Design priorities" title="The details that keep the project useful after installation" text="Good project coordination should improve clarity and delivery without reducing the technical standard or records required for each premises and system."/><FeatureGrid columns={4} items={page.priorities}/></div></section>
 
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Real system environments" title={page.proofTitle} text={page.proofText}/><div className="commercial-proof-grid fire-project-proof-grid">{page.proof.map(item => <figure key={item.caption}><img src={item.image} alt={item.alt} style={item.position ? { objectPosition: item.position } : undefined}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>
 
-    <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Quotation factors" title="What affects the project scope and price" text="A useful proposal separates known requirements from assumptions and makes clear where a site survey or records review is still needed."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare the enquiry</h3><p>Share property addresses, system photographs, available drawings or records, known faults, project timescales, operating hours and the outcome the business needs.</p><Link className="text-link" href="/blog/what-information-is-needed-for-a-fire-alarm-quote">What information is needed for a fire alarm quote? →</Link></aside></div></section>
+    
 
-    <OngoingSupportStrip context="fire"/>
     <CompleteSystem items={[
       { title: "Fire Alarm Monitoring", text: "Add professional signalling and agreed escalation for suitable maintained fire systems.", href: "/service-plans/fire-alarm-monitoring" },
       { title: "Planned Fire Alarm Servicing", text: "Keep inspections, records, defects and remedial actions visible across the programme.", href: "/service-plans/fire-alarm-servicing" },
@@ -273,10 +272,9 @@ export default async function FireProjectDetailPage({ params }: { params: Promis
     ]}/>
     <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Relevant NOX work" title="Commercial fire, CCTV and coordinated installation projects" text="These projects show the equipment, site conditions and installation standards that support the wider service approach. They are not presented as one customer's multi-site estate unless the case study states that directly."/><CaseStudyGrid slugs={page.cases}/></div></section>
 
-    <section className="section"><div className="container"><SectionHeading eyebrow="Planning guides" title="Useful answers before a site survey or programme review" text="Prepare the right system information, understand the separate service requirements and make the first conversation more productive."/><GuideLinks slugs={page.guides}/></div></section>
+    
 
-    <AreaLinks title={`${page.eyebrow} across Chesterfield, Sheffield and Derbyshire`}/>
-    <EnquiryPreparation topic={page.eyebrow.toLowerCase()} commercial/>
+
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Clear planning, careful installation and local support"/><ReviewGrid names={["Rory Stirland", "Nathan De La Rosa", "Jez S"]}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link href={item.href} key={item.href}>{item.label} →</Link>)}</div></div></section>
 

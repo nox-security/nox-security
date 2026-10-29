@@ -25,7 +25,7 @@ const categories = [
         icon: Zap,
         label: "Smart Automation",
         desc: "Smart lighting, water protection, and automation scenarios.",
-        href: "/systems/smart-automation",
+        href: "/systems/smart-home-cctv",
     },
 ]
 

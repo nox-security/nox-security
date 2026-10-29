@@ -75,7 +75,7 @@ const pages: Record<string, CommercialPage> = {
       { href: "/services/repairs-upgrades", label: "CCTV repairs and upgrades" }
     ],
     guide: { href: "/blog/how-many-cameras-does-a-commercial-site-need", label: "How many cameras does a commercial site need?" },
-    cases: ["continue-arcade-commercial-cctv-derby", "chesterfield-scrapyard-cctv", "buxton-industrial-security", "retford-former-bank-cctv"],
+    cases: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "sheffield-industrial-unit-ajax-cctv-installation"],
     ctaLabel: "Plan a CCTV System"
   },
   "intruder-alarms": {
@@ -118,7 +118,7 @@ const pages: Record<string, CommercialPage> = {
       { href: "/services/security-system-takeover", label: "Commercial system takeovers" }
     ],
     guide: { href: "/blog/app-alerts-versus-professional-alarm-monitoring", label: "App alerts versus professional monitoring" },
-    cases: ["telesis-hitachi-fire-intruder-system", "dronfield-timber-perimeter", "buxton-industrial-security", "banana-industries-fire-security"],
+    cases: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "telesis-hitachi-fire-intruder-system", "dronfield-timber-perimeter"],
     visuals: [
       { src: "/images/image-refresh/intruder-entry-exit-delay.webp", alt: "Ajax door protection supporting commercial entry and exit routines", caption: "Entry and exit protection configured around staff access, opening and closing procedures." },
       { src: "/images/image-refresh/intruder-app-alerts.webp", alt: "Ajax alarm event displayed on a smartphone", caption: "Clear event information helps authorised users understand which area or device has activated." },
@@ -177,10 +177,10 @@ const pages: Record<string, CommercialPage> = {
       { href: "/commercial/cctv", label: "Commercial CCTV" },
       { href: "/commercial/intruder-alarms", label: "Commercial intruder alarms" },
       { href: "/commercial/yard-perimeter-security", label: "Yard & perimeter protection" },
-      { href: "/commercial/integrated-fire-security", label: "Integrated Fire & Security" }
+      { href: "/commercial/integrated-fire-security", label: "CCTV & Fire Protection" }
     ],
     guide: { href: "/blog/how-many-cameras-does-a-commercial-site-need", label: "How many cameras does a commercial site need?" },
-    cases: ["telesis-hitachi-fire-intruder-system", "buxton-industrial-security", "chesterfield-scrapyard-cctv"],
+    cases: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "sheffield-industrial-unit-ajax-cctv-installation", "telesis-hitachi-fire-intruder-system"],
     ctaLabel: "Discuss an Industrial Site",
     visualEyebrow: "Industrial & office security in detail",
     visualTitle: "Coverage for offices, working areas, yards and multi-building sites",
@@ -239,12 +239,12 @@ const pages: Record<string, CommercialPage> = {
       { href: "/service-plans/alarm-monitoring", label: "Alarm monitoring" }
     ],
     guide: { href: "/blog/what-is-perimeter-protection", label: "What is perimeter protection?" },
-    cases: ["dronfield-timber-perimeter", "chesterfield-scrapyard-cctv", "buxton-industrial-security"],
+    cases: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "dronfield-timber-perimeter"],
     ctaLabel: "Discuss a Yard or Perimeter"
   },
   "multi-site-security": {
-    title: "Multi-site security systems and coordinated ongoing support",
-    eyebrow: "Multi-site security",
+    title: "Security for Businesses with Multiple Sites",
+    eyebrow: "Multiple business locations",
     intro: "NOX supports suitable businesses and property portfolios that need consistent CCTV, intruder, fire or servicing arrangements across several locations. The project focuses on standards, user access, rollout, records and a practical route for ongoing support.",
     metaTitle: "Multi-Site Security Systems Derbyshire & Sheffield | NOX",
     metaDescription: "Multi-site CCTV, intruder, fire and maintenance planning across Chesterfield, Sheffield and Derbyshire with coordinated surveys, rollout, users, records and service schedules.",
@@ -278,12 +278,12 @@ const pages: Record<string, CommercialPage> = {
     ],
     related: [
       { href: "/commercial/cctv", label: "Commercial CCTV" },
-      { href: "/commercial/integrated-fire-security", label: "Integrated Fire & Security" },
+      { href: "/commercial/integrated-fire-security", label: "CCTV & Fire Protection" },
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" },
       { href: "/service-plans/total-security", label: "Ongoing Support Packages" }
     ],
     guide: { href: "/blog/what-information-is-needed-for-a-fire-alarm-quote", label: "Information that helps prepare a site quotation" },
-    cases: ["telesis-hitachi-fire-intruder-system", "retford-former-bank-cctv", "bottle-and-thyme-commercial-cctv-chesterfield"],
+    cases: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "steve-foster-cranes-derby-hikvision-cctv-monitoring", "retford-former-bank-cctv"],
     ctaLabel: "Request a Multi-Site Proposal",
     visualEyebrow: "Multi-site security in practice",
     visualTitle: "Consistent standards across several sites without losing local detail",
@@ -304,11 +304,11 @@ const pages: Record<string, CommercialPage> = {
     ]
   },
   "integrated-fire-security": {
-    title: "Integrated fire and security projects for commercial premises",
-    eyebrow: "Integrated Fire & Security",
+    title: "CCTV & Fire Protection for Commercial Premises",
+    eyebrow: "CCTV & Fire Protection",
     intro: "NOX can coordinate commercial fire alarms, CCTV, intruder protection and ongoing support through one project team. The systems remain correctly separated in design, commissioning and records while the customer benefits from coordinated planning and accountability.",
-    metaTitle: "Integrated Fire & Security Projects Derbyshire | NOX",
-    metaDescription: "Coordinated commercial fire alarm, CCTV and intruder projects across Chesterfield, Sheffield and Derbyshire with clear system scopes, installation planning and ongoing support.",
+    metaTitle: "Commercial CCTV & Fire Protection | Derbyshire | NOX",
+    metaDescription: "CCTV and fire protection for commercial premises across Chesterfield, Sheffield and Derbyshire, with coordinated installation, servicing and intruder options.",
     image: "/images/revisions/telesis-hitachi-exterior.jpg",
     alt: "Commercial premises with integrated fire and security systems installed by NOX",
     requirementTitle: "One project team does not mean one blurred system scope",
@@ -344,8 +344,8 @@ const pages: Record<string, CommercialPage> = {
       { href: "/service-plans/fire-compliance", label: "Fire Compliance Plans" }
     ],
     guide: { href: "/blog/can-fire-alarm-and-emergency-lighting-visits-be-combined", label: "Can fire and emergency-lighting visits be combined?" },
-    cases: ["telesis-hitachi-fire-intruder-system", "tan-station-fire-security-brimington", "banana-industries-fire-security"],
-    ctaLabel: "Discuss an Integrated Project",
+    cases: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv", "telesis-hitachi-fire-intruder-system"],
+    ctaLabel: "Discuss CCTV & Fire Protection",
     visualEyebrow: "Integrated project examples",
     visualTitle: "Fire, CCTV and intruder planned as one coordinated commercial project",
     visualText: "The systems remain separate in scope, but the on-site delivery, cable routes, access and handover can be organised through one coordinated project plan.",
@@ -371,7 +371,7 @@ const commercialConnectedServices: Record<string, { title: string; text: string;
     { title: "Intruder Detection", text: "Add internal and external detection around vulnerable areas and operating routines.", href: "/commercial/intruder-alarms" },
     { title: "Perimeter Protection", text: "Detect activity around yards, compounds and approaches before it reaches the building.", href: "/commercial/yard-perimeter-security" },
     { title: "CCTV Maintenance", text: "Keep cameras, recording, storage and remote access checked over time.", href: "/service-plans/cctv-maintenance" },
-    { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, perimeter, fire and continued support under one site strategy.", href: "/commercial/integrated-fire-security" },
+    { title: "CCTV & Fire Protection", text: "Coordinate CCTV, intruder, perimeter, fire and continued support under one site strategy.", href: "/commercial/integrated-fire-security" },
   ],
   "intruder-alarms": [
     { title: "Alarm Monitoring", text: "Add professional signal handling and an agreed escalation route.", href: "/service-plans/alarm-monitoring" },
@@ -383,16 +383,16 @@ const commercialConnectedServices: Record<string, { title: string; text: string;
     { title: "Commercial CCTV", text: "Plan evidence and oversight across loading areas, yards and working zones.", href: "/commercial/cctv" },
     { title: "Alarm Monitoring", text: "Add professional signal handling outside operating hours.", href: "/service-plans/alarm-monitoring" },
     { title: "Planned Maintenance", text: "Coordinate recurring inspections, faults and renewal dates across the site.", href: "/service-plans/total-security" },
-    { title: "Integrated Site Security", text: "Coordinate CCTV, intruder, perimeter, fire and continued support.", href: "/commercial/integrated-fire-security" },
+    { title: "CCTV & Fire Protection", text: "Coordinate CCTV, intruder, perimeter, fire and continued support.", href: "/commercial/integrated-fire-security" },
   ],
   "yard-perimeter-security": [
     { title: "Commercial CCTV", text: "Verify activity around the boundary with useful recorded views.", href: "/commercial/cctv" },
     { title: "Commercial Intruder Alarms", text: "Connect outdoor warning with internal protection and controlled arming areas.", href: "/commercial/intruder-alarms" },
     { title: "Alarm Monitoring", text: "Add an agreed professional response route where suitable.", href: "/service-plans/alarm-monitoring" },
-    { title: "Integrated Site Security", text: "Coordinate perimeter, CCTV, intruder and ongoing support around the whole site.", href: "/commercial/integrated-fire-security" },
+    { title: "CCTV & Fire Protection", text: "Coordinate perimeter, CCTV, intruder and ongoing support around the whole site.", href: "/commercial/integrated-fire-security" },
   ],
   "multi-site-security": [
-    { title: "Integrated Site Security", text: "Create a consistent protection and support strategy across several premises.", href: "/commercial/integrated-fire-security" },
+    { title: "CCTV & Fire Protection", text: "Create a consistent protection and support strategy across several premises.", href: "/commercial/integrated-fire-security" },
     { title: "Ongoing Support Packages", text: "Coordinate maintenance, monitoring and renewal dates across the estate.", href: "/service-plans/total-security" },
     { title: "System Takeovers", text: "Assess inherited sites, access, records and supportability before standardising the estate.", href: "/services/security-system-takeover" },
     { title: "Fire Compliance Packages", text: "Bring agreed fire-system and emergency-lighting visits into one programme.", href: "/service-plans/fire-compliance" },
@@ -451,20 +451,16 @@ export default async function CommercialDetailPage({ params }: { params: Promise
     </PageHero>
     <TrustStrip variant="commercial"/>
     {!!page.visuals?.length && <section className="section section-alt"><div className="container"><SectionHeading eyebrow={page.visualEyebrow || "System visuals"} title={page.visualTitle || "Project and product detail"} text={page.visualText || "Relevant visuals that help show how the system is planned and used."}/><div className="system-visual-gallery">{page.visuals.map(item => <figure className={`system-visual-card ${item.product ? "is-product" : ""}`} key={item.src}><img src={item.src} alt={item.alt}/><figcaption>{item.caption}</figcaption></figure>)}</div></div></section>}
-    {slug === "cctv" && <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial CCTV in practice" title="Modern cameras, live views and intelligent event detection" text="The system is selected around evidence quality, operating conditions, coverage and the way staff need to review footage."/><div className="commercial-proof-grid"><figure><img src="/images/image-refresh/ajax-commercial-ptz.webp" alt="Ajax commercial PTZ camera"/><figcaption>Commercial camera coverage for larger operational areas.</figcaption></figure><figure><img src="/images/image-refresh/ajax-commercial-domes.webp" alt="Ajax commercial dome cameras"/><figcaption>Discreet dome cameras for entrances, circulation and working areas.</figcaption></figure><figure><img src="/images/image-refresh/cctv-person-detection.webp" alt="CCTV person detection analytics"/><figcaption>Intelligent person detection helps surface relevant activity.</figcaption></figure><figure><img src="/images/image-refresh/cctv-vehicle-detection.webp" alt="CCTV vehicle detection analytics"/><figcaption>Vehicle detection supports driveways, yards and loading areas.</figcaption></figure></div></div></section>}
 
     <section className="section"><div className="container split-grid"><div><SectionHeading eyebrow="Site requirement" title={page.requirementTitle} text={page.requirementText}/><Checklist items={page.included}/></div><aside className="dark-panel"><h3>Suitable for</h3><Checklist items={page.propertyTypes}/><ContactActions primaryLabel={page.ctaLabel} compact audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-property-types`}/></aside></div></section>
-    {!!page.products?.length && <section className="section ajax-product-section"><div className="container"><div className="platform-intro"><div><span className="eyebrow">Products and system options</span><h2>{page.platformTitle}</h2><p>{page.platformText}</p></div><img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" /></div><div className="product-detail-grid">{page.products.map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image product-detail-photo"><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div></div></section>}
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Project process" title="Survey, design, installation and ongoing support"/><FeatureGrid columns={4} items={page.process}/></div></section>
+    {!!page.products?.length && <section className="section ajax-product-section"><div className="container"><div className="platform-intro"><div><span className="eyebrow">Products and system options</span><h2>{page.platformTitle}</h2><p>{page.platformText}</p></div><img src="/images/logo-ajax-authorized-installation-company-en-wh.png" alt="Ajax Authorised Installation Company" /></div><div className="product-detail-grid">{page.products.slice(0, 4).map(product => <article className="product-detail-card" key={product.name}><div className="product-detail-image product-detail-photo"><img src={product.image} alt={product.imageAlt}/></div><div><h3>{product.name}</h3><p>{product.description}</p></div></article>)}</div></div></section>}
+    
     <section className="section"><div className="container"><SectionHeading eyebrow="What the design needs to solve" title="System decisions linked to the operational requirement"/><FeatureGrid columns={4} items={page.details}/></div></section>
-    <section className="section section-alt"><div className="container split-grid"><div><SectionHeading eyebrow="Pricing factors" title="What affects the commercial quotation" text="The final price reflects the site, system, access and operational requirements confirmed during the survey."/><Checklist items={page.pricingFactors}/></div><aside className="dark-panel"><h3>Prepare for the survey</h3><p>Site plans, current camera or device quantities, existing equipment, network information, known faults, required recording, operating hours and project timescales all help produce a well-defined proposal.</p><Link className="text-link" href={page.guide.href}>{page.guide.label} →</Link></aside></div></section>
-    <OngoingSupportStrip context="commercial"/>
+    
     <CompleteSystem items={commercialConnectedServices[slug] ?? []}/>
     <section className="section"><div className="container"><SectionHeading eyebrow="Relevant NOX projects" title="Real commercial and industrial work" text="Genuine property and installation photography with confirmed service scopes."/><CaseStudyGrid slugs={page.cases}/></div></section>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Commercial guides" title={`Plan ${page.eyebrow.toLowerCase()} with practical information`} text="Detailed answers for decision-makers comparing systems, preparing a site survey or planning ongoing servicing."/><GuideLinks slugs={guideSlugsFor(`${slug} ${page.eyebrow}`)}/></div></section>
-    <AreaLinks title={`${page.eyebrow} across Chesterfield, Sheffield and Derbyshire`}/>
-    <EnquiryPreparation topic={page.eyebrow.toLowerCase()} commercial/>
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Customer feedback" title="Professional planning, installation and local support"/><ReviewGrid names={commercialReviewNames}/><div className="related-links"><strong>Related services:</strong>{page.related.map(item => <Link key={item.href} href={item.href}>{item.label} →</Link>)}</div></div></section>
+    
+    
     <section className="section"><div className="container"><SectionHeading eyebrow="Common questions" title="Answers before a commercial survey"/><div className="faq-list">{page.faq.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></div></section>
     <ConversionPanel title={page.ctaLabel} text="Tell us the site type, location, existing systems, approximate project scale and what the new system needs to achieve. NOX will guide the survey and proposal route." primaryLabel={page.ctaLabel} audience="Commercial" serviceCategory={page.eyebrow} enquiryType="Installation" sourceLabel={`commercial-${slug}-final`}/>
   </>

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { GuideLinks, Breadcrumbs, ContactActions, ConversionPanel, EnquiryPreparation, FeatureGrid, JsonLd, PageHero, ReviewGrid, SectionHeading, TrustStrip } from "@/components/marketing"
-import { areas, caseStudies } from "@/lib/content"
+import { areas, caseStudies, orderCaseStudies } from "@/lib/content"
 import { pageMetadata } from "@/lib/site"
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema"
 
@@ -13,7 +13,7 @@ const areaProjects: Record<string, string[]> = {
   sheffield: ["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "sheffield-industrial-unit-ajax-cctv-installation", "telesis-hitachi-fire-intruder-system"],
   rotherham: ["rotherham-scrapyard-ajax-fire-hikvision-ptz-cctv"],
   bakewell: ["bakewell-residential-ajax-perimeter-protection"],
-  derbyshire: ["telesis-hitachi-fire-intruder-system", "banana-industries-fire-security", "chatsworth-estate-cctv-upgrade"],
+  derbyshire: ["steve-foster-cranes-derby-hikvision-cctv-monitoring", "bakewell-residential-ajax-perimeter-protection", "telesis-hitachi-fire-intruder-system", "chatsworth-estate-cctv-upgrade"],
   dronfield: ["dronfield-timber-perimeter"],
   buxton: ["peak-electronic-security"],
   derby: ["steve-foster-cranes-derby-hikvision-cctv-monitoring"],
@@ -62,7 +62,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     breadcrumbSchema([{ name: "Home", path: "" }, { name: "Areas We Serve", path: "/areas-we-serve" }, { name: area.name, path }]),
   ]
 
-  const projects = caseStudies.filter(project => (areaProjects[slug] ?? []).includes(project.slug))
+  const projects = orderCaseStudies(caseStudies.filter(project => (areaProjects[slug] ?? []).includes(project.slug)))
 
   return <>
     {structuredData.map((data, index) => <JsonLd data={data} key={index}/>)}
@@ -92,8 +92,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
     {!!projects.length && <section className="section"><div className="container"><SectionHeading eyebrow="Local proof" title={`Relevant NOX projects in and around ${area.name}`} text="Read genuine project details showing the property type, systems, customer requirement and work completed."/><div className="guide-link-grid">{projects.map(project => <Link href={`/case-studies/${project.slug}`} key={project.slug}><span>{project.category} · {project.location}</span><strong>{project.title}</strong><small>{project.summary}</small></Link>)}</div></div></section>}
 
-    <section className="section section-alt"><div className="container"><SectionHeading eyebrow="Local guides" title={`Answers for fire and security customers in ${area.name}`} text="Useful information for comparing systems, preparing a quotation and deciding whether existing equipment can be retained."/><GuideLinks slugs={guideSlugs(slug)}/></div></section>
-    <EnquiryPreparation topic="fire or security system" commercial/>
+    
+
 
     <section className="section"><div className="container"><SectionHeading eyebrow="Customer reviews" title="Local advice, workmanship and ongoing support"/><ReviewGrid names={slug === "chesterfield" ? ["Jez S", "Ryan Hargreaves", "Rory Stirland"] : slug === "sheffield" ? ["Sasha Brailsford", "Nathan De La Rosa", "Jeremy Bunting"] : ["Jeremy Bunting", "Jez S", "Rory Stirland"]}/></div></section>
 

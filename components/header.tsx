@@ -141,7 +141,7 @@ export default function Header() {
   }
 
   return (
-    <header data-build-version="4.13.74" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
+    <header data-build-version="4.13.75" className={`site-header ${open ? "mobile-menu-is-open" : ""}`}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="header-inner">
         <Link className="brand" href="/" aria-label="NOX Fire & Security home">
@@ -150,6 +150,7 @@ export default function Header() {
 
         <nav className="desktop-nav header-primary-nav" aria-label="Main navigation">
           {headerNavMenus.map(menu => <DesktopDropdown key={menu.id} menu={menu} active={activeMenuId === menu.id} pathname={pathname} />)}
+          <Link className={pathname.startsWith("/case-studies") ? "is-active" : undefined} aria-current={pathname === "/case-studies" ? "page" : undefined} href="/case-studies">Projects</Link>
         </nav>
 
         <div className="header-actions">
@@ -242,6 +243,8 @@ export default function Header() {
               </div>
             )
           })}
+
+          <Link className={`mobile-nav-projects-link ${pathname.startsWith("/case-studies") ? "is-active" : ""}`} href="/case-studies" onClick={closeMobileNavigation} aria-current={pathname === "/case-studies" ? "page" : undefined}>Projects <span aria-hidden="true">→</span></Link>
 
           <div className="mobile-nav-actions">
             <Link

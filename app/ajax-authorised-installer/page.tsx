@@ -116,7 +116,7 @@ export default function AjaxAuthorisedInstallerPage() {
 
     <section className="section"><div className="container">
       <SectionHeading eyebrow="Real Ajax projects" title="Installed by NOX across homes, commercial sites and larger properties" text="Our case studies use genuine NOX project photography and show how Ajax equipment has been applied across different properties and security requirements."/>
-      <CaseStudyGrid slugs={["chesterfield-home-ajax-cctv-intruder", "dronfield-timber-perimeter", "peak-electronic-security", "telesis-hitachi-fire-intruder-system"]}/>
+      <CaseStudyGrid slugs={["david-malin-kitchens-sheffield-ajax-fire-cctv-intruder", "chesterfield-bungalow-renovation-ajax-intruder-cctv", "bakewell-residential-ajax-perimeter-protection", "telesis-hitachi-fire-intruder-system"]}/>
       <div className="section-action-row"><Link className="button button-outline" href="/case-studies">View All NOX Projects</Link></div>
     </div></section>
 
